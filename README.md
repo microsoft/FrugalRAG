@@ -1,6 +1,6 @@
 # FrugalRAG
 
-**A Retrieval-Augmented Generation approach for efficient multi-hop question answering**
+**A novel Retrieval-Augmented-Generation framework for answering complex multi-hop question answering on a large corpus, focusing on inference-time efficiency.**
 
 [![arXiv](https://img.shields.io/badge/arXiv-2507.07634-b31b1b.svg)](https://arxiv.org/abs/2507.07634)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
@@ -383,6 +383,41 @@ Just rerun `trl vllm-serve`, sometimes it does not call `close_communicator` on 
 - **Memory Usage**: Adjust `--gpu-memory-utilization` based on your GPU memory
 - **Training Speed**: Use DeepSpeed Zero3 for large model training
 - **Inference Speed**: Use `--tensor-parallel-size` for multi-GPU inference
+
+## Intended Uses
+
+FrugalRAG codebase is best suited for training and evaluating large language models for complex multi-hop questions against a large corpus of documents. The codebase is being shared with the research community to facilitate reproduction of our results and foster further research in this area. The codebase is intended to be used by domain experts who are independently capable of evaluating the quality of outputs before acting on them. 
+
+## Out-of-Scope Uses
+FrugalRAG codebase is not well suited for scenarios outside of the scope of training a reasoning model for multi-hop question answering, for example, our codebase does not support training or fine-tuning a good retrieval index on the corpus. We do not recommend using FrugalRAG codebase in commercial or real-world applications without further testing and development. It is being released for research purposes. The codebase was not designed or evaluated for all possible downstream purposes. Developers should consider its inherent limitations as they select use cases, and evaluate and mitigate for accuracy, safety, and fairness concerns specific to each intended downstream use. Without further testing and development, FrugalRAG codebase should not be used in sensitive domains where inaccurate outputs could suggest actions that lead to injury or negatively impact an individual's legal, financial, or life opportunities. We do not recommend using FrugalRAG codebase in the context of high-risk decision making (e.g. in law enforcement, legal, finance, or healthcare). 
+
+## Best Practices
+Better performance can be achieved by leveraging the latest LLM models, curating a comprehensive domain-specific knowledge base, and involving experts to actively verify and refine the model-generated responses. We also recommend following the instructions provided in the README of  FrugalRAG codebase, as well as the hyperparameter configurations included in the paper. 
+
+We strongly encourage users to use LLMs/MLLMs that support robust Responsible AI mitigations, such as Azure Open AI (AOAI) services. Such services continually update their safety and RAI mitigations with the latest industry standards for responsible use. For more on AOAI’s best practices when employing foundations models for scripts and applications: 
+
+[Blog post on responsible AI features in AOAI that were presented at Ignite 2023](https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/announcing-new-ai-safety-amp-responsible-ai-features-in-azure/ba-p/3983686) 
+
+[Overview of Responsible AI practices for Azure OpenAI models](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/overview) 
+
+[Azure OpenAI Transparency Note](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/transparency-note) 
+
+[OpenAI’s Usage policies](https://openai.com/policies/usage-policies) 
+
+[Azure OpenAI’s Code of Conduct](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct) 
+
+Users are responsible for sourcing their datasets legally and ethically. This could include securing appropriate rights, ensuring consent for use of audio/images, and/or the anonymization of data prior to use in research.    
+
+Users are reminded to be mindful of data privacy concerns and are encouraged to review the privacy policies associated with any models and data storage solutions interfacing with FrugalRAG codebase.  
+
+It is the user’s responsibility to ensure that the use of FrugalRAG codebase complies with relevant data protection regulations and organizational guidelines. 
+
+Developers should follow transparency best practices and inform end-users they are interacting with an AI system. 
+
+## License
+
+Code in this Github repository is licensed under the [MIT License](https://github.com/microsoft/frugalrag/blob/main/LICENSE).
+The FrugalRAG codebase is released under the CDLA v2 license.
 
 ## Citation
 
