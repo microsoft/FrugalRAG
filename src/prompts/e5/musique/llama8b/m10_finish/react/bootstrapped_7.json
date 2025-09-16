@@ -1,0 +1,228 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What was the record label of the songwriter of Up on Cripple Creek?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What was the record label of the songwriter of Up on Cripple Creek?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What was the record label of the songwriter of Up on Cripple Creek?\", \"passages_this_hop\": [{\"long_text\": \"Up on Cripple Creek\\n' album Recovering with Friends 2018.\", \"score\": 0.7958984375}, {\"long_text\": \"Spike Jones\\nbased on the movie. According to David Wild's review in Rolling Stone Magazine, Elvis Costello's 1989 Album \\\"Spike\\\" was named partly in tribute to Jones.\\nSyndicated radio personality Dr. Demento regularly features Jones' music on his program of comedy and novelty tracks. Jones is mentioned in The Band's song, \\\"Up on Cripple Creek\\\". (The song's protagonist's paramour states of Jones: \\\"I can't take the way he sings, but I love to hear him talk.\\\") Novelist\", \"score\": 0.80078125}, {\"long_text\": \"Cripple Creek\\na traditional folk song\\n- \\\"Up on Cripple Creek\\\" by The Band on their self-titled album \\\"The Band\\\"\\n- \\\"Cripple Creek Ferry\\\" by Neil Young on the album \\\"After the Gold Rush\\\"\\n- \\\"Cripple Creek\\\" by Skip Spence on the album \\\"Oar\\\"\\nFilm.\\n- \\\"Cripple Creek\\\" (film), a 1952 Western film directed by Ray Nazarro\", \"score\": 0.80615234375}, {\"long_text\": \"Bobbie Sue\\nBobbie Sue is the seventh album by The Oak Ridge Boys. It was released on February 10, 1982. Its title song was a #1 country chart hit (on April 3, 1982) and a #12 hit on the Hot 100 singles chart.\\nThe album also featured cover versions of two songs, the 1959 hit \\\"So Fine\\\", a song originally by The Fiestas, and \\\"Up on Cripple Creek\\\", originally by The Band.\\nTrack listing.\\n1. \\\"\", \"score\": 0.8076171875}, {\"long_text\": \"Up on Cripple Creek\\n\\\"Up on Cripple Creek\\\" is the fifth song on The Band's eponymous second album, \\\"The Band\\\". It was released as an (edited) single on Capitol 2635 in November 1969 and reached #25 on the \\\"Billboard\\\" Hot 100. \\\"Up on Cripple Creek\\\" was written by Band guitarist Robbie Robertson, with drummer Levon Helm singing lead vocal.\\nA 1976 live performance of \\\"Up on Cripple Creek\\\" appears in the Band's concert film \\\"The Last Waltz\", \"score\": 0.82373046875}]}",
+        "next_thought": "I will now extract relevant information from the passages found, such as the record label of the songwriter of \"Up on Cripple Creek\".",
+        "next_tool_name": "AdvancedSearch",
+        "next_tool_args": {
+          "search_query": "What is the record label of the songwriter of Up on Cripple Creek?",
+          "trajectory_id": "Up on Cripple Creek"
+        }
+      },
+      {
+        "question": "What was a notable work of the Chet Holifield Federal Building designer?",
+        "answer": "Transamerica Pyramid"
+      },
+      {
+        "question": "What year saw the creation of the region where the county of Hertfordshire is located?",
+        "answer": "1994"
+      },
+      {
+        "question": "What instrument did the artiste for Vi skall fara bortom m\u00e5nen play?",
+        "answer": "violin"
+      },
+      {
+        "question": "When was the season of Greys Anatomy when Derek died filmed?",
+        "answer": "filming for the eleventh season would begin on July 25, 2014"
+      },
+      {
+        "question": "When was the university Elizabeth Harwood attended formed?",
+        "answer": "1972"
+      },
+      {
+        "question": "What is the enrollment at the university where Beneficence is located?",
+        "answer": "22,513 students"
+      },
+      {
+        "question": "In which county is the White Castle that Harold and Kumar visit?",
+        "answer": "Camden County"
+      },
+      {
+        "question": "What university is Anthony Marten's college part of?",
+        "answer": "college of the University of Cambridge"
+      },
+      {
+        "question": "What year was the end of the manufacturer of the Hudson Wasp?",
+        "answer": "1954"
+      },
+      {
+        "question": "When was the abolishment of the studio that distributed The Game?",
+        "answer": "1999"
+      },
+      {
+        "question": "Who mothered the hostess of the party where Chopin met George Sand?",
+        "answer": "Cosima Wagner"
+      },
+      {
+        "question": "What year did the maker of the CMA CGM Vela dissolve?",
+        "answer": "1999"
+      },
+      {
+        "question": "In what year did the South Korean car manufacturer that purchased the factor in 1995 dissolve?",
+        "answer": "1999"
+      },
+      {
+        "question": "When did Tito first visit the person who laid claim to Eritrea and Italian Somaliland in a letter to Franklin D. Roosevelt?",
+        "answer": "1954"
+      },
+      {
+        "question": "Where was the place where Chopin's father got a teaching position moved to?",
+        "answer": "Kazimierz Palace"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!<\/desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.<\/desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What was the record label of the songwriter of Up on Cripple Creek?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What was the record label of the songwriter of Up on Cripple Creek?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What was the record label of the songwriter of Up on Cripple Creek?\", \"passages_this_hop\": [{\"long_text\": \"Up on Cripple Creek\\n' album Recovering with Friends 2018.\", \"score\": 0.7958984375}, {\"long_text\": \"Spike Jones\\nbased on the movie. According to David Wild's review in Rolling Stone Magazine, Elvis Costello's 1989 Album \\\"Spike\\\" was named partly in tribute to Jones.\\nSyndicated radio personality Dr. Demento regularly features Jones' music on his program of comedy and novelty tracks. Jones is mentioned in The Band's song, \\\"Up on Cripple Creek\\\". (The song's protagonist's paramour states of Jones: \\\"I can't take the way he sings, but I love to hear him talk.\\\") Novelist\", \"score\": 0.80078125}, {\"long_text\": \"Cripple Creek\\na traditional folk song\\n- \\\"Up on Cripple Creek\\\" by The Band on their self-titled album \\\"The Band\\\"\\n- \\\"Cripple Creek Ferry\\\" by Neil Young on the album \\\"After the Gold Rush\\\"\\n- \\\"Cripple Creek\\\" by Skip Spence on the album \\\"Oar\\\"\\nFilm.\\n- \\\"Cripple Creek\\\" (film), a 1952 Western film directed by Ray Nazarro\", \"score\": 0.80615234375}, {\"long_text\": \"Bobbie Sue\\nBobbie Sue is the seventh album by The Oak Ridge Boys. It was released on February 10, 1982. Its title song was a #1 country chart hit (on April 3, 1982) and a #12 hit on the Hot 100 singles chart.\\nThe album also featured cover versions of two songs, the 1959 hit \\\"So Fine\\\", a song originally by The Fiestas, and \\\"Up on Cripple Creek\\\", originally by The Band.\\nTrack listing.\\n1. \\\"\", \"score\": 0.8076171875}, {\"long_text\": \"Up on Cripple Creek\\n\\\"Up on Cripple Creek\\\" is the fifth song on The Band's eponymous second album, \\\"The Band\\\". It was released as an (edited) single on Capitol 2635 in November 1969 and reached #25 on the \\\"Billboard\\\" Hot 100. \\\"Up on Cripple Creek\\\" was written by Band guitarist Robbie Robertson, with drummer Levon Helm singing lead vocal.\\nA 1976 live performance of \\\"Up on Cripple Creek\\\" appears in the Band's concert film \\\"The Last Waltz\", \"score\": 0.82373046875}]}\n\n[[ ## thought_0 ## ]]\nI will now extract relevant information from the passages found, such as the record label of the songwriter of \"Up on Cripple Creek\".\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What is the record label of the songwriter of Up on Cripple Creek?\", \"trajectory_id\": \"Up on Cripple Creek\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What is the record label of the songwriter of Up on Cripple Creek?\", \"passages_this_hop\": [{\"long_text\": \"John Denver\\nHenry John Deutschendorf Jr. (December 31, 1943\u00a0\u2013 October 12, 1997), known professionally as John Denver, was an American singer-songwriter, record producer, actor, activist, and humanitarian, whose greatest commercial success was as a solo singer. After traveling and living in numerous locations while growing up in his military family, Denver began his music career with folk music groups during the late 1960s. Starting in the 1970s, he was one of the most popular acoustic artists of the decade and\", \"score\": 0.78662109375}, {\"long_text\": \"Up! (album)\\nUp! is the fourth studio album by Canadian singer Shania Twain. It was released on November 19, 2002, by Mercury Nashville. Three versions of the album were released: a pop version (red disc), a country version (green disc), and a version in the style of Indian film music (blue disc); all three discs contain exactly the same track listing and feature distinctly identifiable picture labels (for example, Twain sports a cowboy hat on the green country disc\", \"score\": 0.78662109375}, {\"long_text\": \"Neil Diamond\\nNeil Leslie Diamond (born January 24, 1941) is an American singer-songwriter, musician and actor. With 38 songs in the Top 10 on the \\\"Billboard\\\" Adult Contemporary charts, Diamond has sold more than 100 million records worldwide, making him one of the best-selling musicians of all time. On the Hot 100 and Adult Contemporary charts, he has had ten No.\u00a01 singles: \\\"Cracklin' Rosie\\\", \\\"Song Sung Blue\\\", \\\"Longfellow Serenade\\\", \\\"\", \"score\": 0.78662109375}, {\"long_text\": \"Up on Cripple Creek\\nThe clavinet, especially in tandem with a wah-wah pedal, was a sound that became famous in the early to mid-1970s, especially in funk music.\\nThe Band performed the song on the Ed Sullivan Show in November 1969.\\nLyrics and music.\\nDrawing upon the Band's musical roots\u2014the American South, American rock and roll, and bluegrass\/country\u2014the song is sung from the point of view of a truck driver who goes to Lake Charles, Louisiana, to stay with a local girl\", \"score\": 0.7890625}, {\"long_text\": \"Up on the Ridge (song)\\n\\\"Up on the Ridge\\\" is a song co-written and recorded by American country music artist Dierks Bentley. It was released on April 12, 2010 as the lead-off single and title track from his album of the same name. The song was written by Bentley and Angelo Petraglia.\\nContent.\\nThe song is an uptempo bluegrass tune in which the narrator encourages his lover to leave the city behind with him for the night.\\nCritical reception.\\nSam\", \"score\": 0.794921875}]}\n\n[[ ## thought_1 ## ]]\nI will now extract the record label from the relevant passage.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"What is the record label of the songwriter of Up on Cripple Creek?\", \"trajectory_id\": \"Up on Cripple Creek\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"What is the record label of the songwriter of Up on Cripple Creek?\", \"passages_this_hop\": [{\"long_text\": \"Phil Vassar discography\\nThe discography of American country music singer Phil Vassar consists of seven studio albums (including one holiday album), three compilation albums, one live album and twenty-two singles. Before his signing with Arista Nashville in 1999, Vassar was a prominent songwriter, having co-written number one hits for Jo Dee Messina and Alan Jackson, and Top 5 singles for Tim McGraw and Collin Raye. As a singer, Vassar has reached number one on the country music charts twice.\", \"score\": 0.78466796875}, {\"long_text\": \"Jimmy Webb\\nJimmy Layne Webb (born August 15, 1946) is an American songwriter, composer, and singer. He has written numerous platinum-selling songs, including \\\"Up, Up and Away\\\", \\\"By the Time I Get to Phoenix\\\", \\\"Wichita Lineman\\\", \\\"Galveston\\\", \\\"The Worst That Could Happen\\\", \\\"All I Know\\\", and \\\"MacArthur Park\\\". He has had successful collaborations with Glen Campbell, Michael Feinstein, Linda Ronstadt, The 5th Dimension, Art\", \"score\": 0.78515625}, {\"long_text\": \"Up the Creek\\nUp the Creek may refer to:\\n- \\\"Up the Creek\\\" (1958 film), a British comedy film, directed by Val Guest\\n- \\\"Further Up the Creek\\\", a 1958 sequel film, also directed by Guest\\n- \\\"Up the Creek\\\" (1984 film), an American comedy film\\n- \\\"Up the Creek\\\" (song), leading theme song from the film, performed by Cheap Trick\\n- \\\"Up the Creek\\\" (web series),\", \"score\": 0.78564453125}, {\"long_text\": \"Singer-songwriter\\n.\", \"score\": 0.78564453125}, {\"long_text\": \"Up Around the Bend\\n\\\"Up Around the Bend\\\" is a song recorded by the American band Creedence Clearwater Revival, and written by the band's lead singer, guitarist, and songwriter John Fogerty. The song was composed and recorded only a few days prior to the band's April 1970 European tour and was included on the album \\\"Cosmo's Factory\\\". Released as a single, with \\\"Run Through the Jungle\\\" on the flipside, the double-sided single climbed to number four on the \\\"Billboard\\\"\", \"score\": 0.7861328125}]}\n\n[[ ## thought_2 ## ]]\nI have extracted all relevant passages and now I will try to find the record label of the songwriter of \"Up on Cripple Creek\" from the relevant passages.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"What is the record label of the songwriter of Up on Cripple Creek?\", \"trajectory_id\": \"Up on Cripple Creek\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"What is the record label of the songwriter of Up on Cripple Creek?\", \"passages_this_hop\": [{\"long_text\": \"Up the Creek (song)\\n\\\"Up the Creek\\\" is a song by American rock band Cheap Trick, released as a single in 1984 from the soundtrack of the 1984 film \\\"Up the Creek\\\". The song was written by Rick Nielsen and Randy Bishop, and produced by Spencer Proffer.\\nBackground.\\nYears after the its release, both Nielsen and drummer Bun E. Carlos have been critical of the song. Nielsen told John Krewson of \\\"The A.V. Club\\\" in 1997: \\\"Now that was a\", \"score\": 0.783203125}, {\"long_text\": \"Robbie Robertson\\nmember of the Band, and has been inducted to Canada's Walk of Fame, both with the Band and on his own. He is ranked 59th in \\\"Rolling Stone\\\" magazine\u2019s list of the 100 greatest guitarists. As a songwriter, Robertson is credited for writing \\\"The Weight\\\", \\\"The Night They Drove Old Dixie Down\\\", \\\"Up on Cripple Creek\\\", \\\"Broken Arrow\\\", \\\"Somewhere Down the Crazy River\\\", and many others. He has been inducted into the Canadian Songwriters Hall\", \"score\": 0.78369140625}, {\"long_text\": \"Light You Up\\nLight You Up is the eighth studio album release from singer-songwriter Shawn Mullins.\\nTrack listing.\\n1. California\\n2. Light You Up\\n3. Murphy's Song\\n4. No Blue Sky\\n5. The Ghost of Johnny Cash\\n6. Tinseltown\\n7. I Knew a Girl\\n8. Catoosa County\\n9. You Make It Better\\n10. Can't Remember Summer\\n11. Love Will Find a Way\", \"score\": 0.78369140625}, {\"long_text\": \"5:01\\n5:01 is the second studio album by Canadian country music artist Tim Hicks. It was released on August 5, 2014 via RGK Entertainment Group\/Open Road Recordings. The album features appearances by Blackjack Billy, Clayton Bellamy and Madeline Merlo.\\nA special edition of the album, \\\"5:01+\\\", was released on September 4, 2015, including the single \\\"Young, Alive and In Love\\\".\", \"score\": 0.7841796875}, {\"long_text\": \"ATO Records\\nATO Records (or According to Our Records) is an American independent record label based in New York City. The label was founded in 2000 by Dave Matthews and manager Coran Capshaw, and is run by Jon Salter.\\nATO's roster includes Alabama Shakes, Rodrigo Y Gabriela, Brandi Carlile, Joseph, King Gizzard and the Lizard Wizard, Hurray for the Riff Raff, Benjamin Booker, Lee Ann Womack, SOJA, Okkervil River, Blind Pilot, Old 97's, Drive-By Truckers, Primus\", \"score\": 0.7841796875}]}\n\n[[ ## thought_3 ## ]]\nI have found the relevant passage with the record label of the songwriter of Up on Cripple Creek.\n\n[[ ## tool_name_3 ## ]]\nfinish\n\n[[ ## tool_args_3 ## ]]\n{}\n\n[[ ## observation_3 ## ]]\nCompleted.",
+        "reasoning": "The record label of the songwriter of \"Up on Cripple Creek\" was found by searching relevant passages and extracting the necessary information.",
+        "answer": "Capitol Records"
+      },
+      {
+        "question": "When was the university Elizabeth Harwood attended formed?",
+        "answer": "1972"
+      },
+      {
+        "question": "What instrument did the artiste for Vi skall fara bortom m\u00e5nen play?",
+        "answer": "violin"
+      },
+      {
+        "question": "In what year did the South Korean car manufacturer that purchased the factor in 1995 dissolve?",
+        "answer": "1999"
+      },
+      {
+        "question": "What year saw the creation of the region where the county of Hertfordshire is located?",
+        "answer": "1994"
+      },
+      {
+        "question": "When was the abolishment of the studio that distributed The Game?",
+        "answer": "1999"
+      },
+      {
+        "question": "Where was the place where Chopin's father got a teaching position moved to?",
+        "answer": "Kazimierz Palace"
+      },
+      {
+        "question": "What year was the end of the manufacturer of the Hudson Wasp?",
+        "answer": "1954"
+      },
+      {
+        "question": "When did Tito first visit the person who laid claim to Eritrea and Italian Somaliland in a letter to Franklin D. Roosevelt?",
+        "answer": "1954"
+      },
+      {
+        "question": "What university is Anthony Marten's college part of?",
+        "answer": "college of the University of Cambridge"
+      },
+      {
+        "question": "What was a notable work of the Chet Holifield Federal Building designer?",
+        "answer": "Transamerica Pyramid"
+      },
+      {
+        "question": "What is the enrollment at the university where Beneficence is located?",
+        "answer": "22,513 students"
+      },
+      {
+        "question": "In which county is the White Castle that Harold and Kumar visit?",
+        "answer": "Camden County"
+      },
+      {
+        "question": "What year did the maker of the CMA CGM Vela dissolve?",
+        "answer": "1999"
+      },
+      {
+        "question": "Who mothered the hostess of the party where Chopin met George Sand?",
+        "answer": "Cosima Wagner"
+      },
+      {
+        "question": "When was the season of Greys Anatomy when Derek died filmed?",
+        "answer": "filming for the eleventh season would begin on July 25, 2014"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

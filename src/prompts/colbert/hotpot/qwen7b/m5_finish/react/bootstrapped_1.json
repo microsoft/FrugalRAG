@@ -1,0 +1,291 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "How many copies were sold of the last UK number-one single that was written by Noddy Holder and Jim Lea?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"How many copies were sold of the last UK number-one single that was written by Noddy Holder and Jim Lea?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"How many copies were sold of the last UK number-one single that was written by Noddy Holder and Jim Lea?\", \"passages_this_hop\": [{\"long_text\": \"Slade | Slade are an English glam rock band from Wolverhampton. They rose to prominence during the early 1970s with 17 consecutive top 20 hits and six number ones on the UK Singles Chart. The \\\"British Hit Singles & Albums\\\" names them as the most successful British group of the 1970s based on sales of singles. They were the first act to have three singles enter the charts at number one; all six of the band's chart-toppers were penned by Noddy Holder and Jim Lea. As of 2006, total UK sales stand at 6,520,171, and their best-selling single, \\\"Merry Xmas Everybody\\\", has sold in excess of one million copies.\", \"score\": 21.296875}, {\"long_text\": \"Merry Xmas Everybody | \\\"Merry Xmas Everybody\\\" is a song by the British rock band Slade, released as a non-album single in 1973. The song was written by lead vocalist Noddy Holder and bassist Jim Lea, and produced by Chas Chandler. It was the band's sixth and final number-one single in the UK. Earning the UK Christmas Number One slot in December 1973, the song beat another Christmas-themed song, Wizzard's \\\"I Wish It Could Be Christmas Everyday\\\", which reached fourth place. It remained in the charts for nine weeks until February 1974.\", \"score\": 21.015625}, {\"long_text\": \"The Bangin' Man | \\\"The Bangin' Man\\\" is a song by the British rock band Slade, released in 1974 as a non-album single. It was written by lead vocalist Noddy Holder and bassist Jim Lea, and produced by Chas Chandler. It reached No. 3 in the UK, remaining in the charts for seven weeks. In 1974, the song was certified UK Silver by BPI for sales over 250,000.\", \"score\": 20.34375}]}",
+        "next_thought": "From the search results, I found that Slade's 'Merry Xmas Everybody' is the last UK number-one single written by Noddy Holder and Jim Lea. The passage mentions that this single has sold in excess of one million copies.",
+        "next_tool_name": "finish",
+        "next_tool_args": {}
+      },
+      {
+        "augmented": true,
+        "question": "The designer of the Holy Trinity Church pioneered the use of what material in church building?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"The designer of the Holy Trinity Church pioneered the use of what material in church building?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"The designer of the Holy Trinity Church pioneered the use of what material in church building?\", \"passages_this_hop\": [{\"long_text\": \"Holy Trinity Platt Church | Holy Trinity Platt Church (also known as Holy Trinity Church, Rusholme), is in Platt Fields Park in Rusholme, Manchester, England. It is an active Anglican parish church in the deanery of Hulme, the archdeaconry of Manchester, and the diocese of Manchester. The church is recorded in the National Heritage List for England as a designated Grade II* listed building. It is the second \\\"pot church\\\" designed by Edmund Sharpe, so-called because the main building material used in the construction of the church is terracotta.\", \"score\": 21.796875}, {\"long_text\": \"Holy Trinity Church, Bradford | Holy Trinity Church, Bradford, was an Anglican parish church located in Leeds Road, Bradford, West Yorkshire, England. It was built in 1864\u201365 to a design by the Lancaster architect E. G. Paley at an estimated cost of \u00a33,565 (equivalent to \u00a3 in 2015 ). The church was constructed in stone, its architectural style being Decorated. It had north and south five-bay aisles, and a southeast tower. In 1871 a broach spire was added, the chancel arch was rebuilt, and the tower was underpinned because of subsidence, the architects being Paley and Austin. The church was demolished in 1966.\", \"score\": 20.953125}, {\"long_text\": \"Holy Trinity Gough Square | Trinity Church was built in the parish of St Bride's in the City of London, on the initiative of the vicar, the Reverend Thomas Dale, who felt that the parish church was inadequate for the size of the population. He first proposed a schoolroom that would double as an occasional chapel, but soon found that it would be practical to build a church, funded by subscriptions, and grants from the Church Commissioners and the Metropolitan fund for the erection of churches. The first stone was laid on 3 October 1837, and the building was consecrated on 21 June the next year. The architect was John Shaw (Junior).\", \"score\": 20.40625}]}",
+        "next_thought": "From the search results, I can see that the Holy Trinity Platt Church in Manchester, England, was designed by Edmund Sharpe and uses terracotta as the main building material. This seems to be the answer to the question.",
+        "next_tool_name": "finish",
+        "next_tool_args": {}
+      },
+      {
+        "augmented": true,
+        "question": "That Darn Cat! and Never a Dull Moment were both produced by what studio?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"That Darn Cat! and Never a Dull Moment were both produced by what studio?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"That Darn Cat! and Never a Dull Moment were both produced by what studio?\", \"passages_this_hop\": [{\"long_text\": \"Never a Dull Moment (1968 film) | Never a Dull Moment is a 1968 American comedy crime film from Walt Disney Productions starring Dick Van Dyke and Edward G. Robinson and directed by Jerry Paris. The script by AJ Carothers was based on a novel by John Godey. The supporting cast features Dorothy Provine, Henry Silva, Slim Pickens and Jack Elam.\", \"score\": 18.828125}, {\"long_text\": \"Never a Dull Moment (1950 film) | Never a Dull Moment is a 1950 American comedy film from RKO, starring Irene Dunne and Fred MacMurray. The film is based on the 1943 book \\\"Who Could Ask For Anything More?\\\" by Kay Swift. The filming took place between December 5, 1949, and February 1, 1950.\", \"score\": 18.484375}, {\"long_text\": \"Never a Dull Moment (EP) | Never a Dull Moment is the collaborative EP by rapper Willie the Kid and producer Lee Bannon. It was released on July 27, 2010 through Apphiliates Music Group and Embassy Entertainment.\", \"score\": 17.65625}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages, it seems that \"Never a Dull Moment\" from 1968 was produced by Walt Disney Productions. I will verify this information and check if \"That Darn Cat!\" was also produced by the same studio.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"That Darn Cat! production studio\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"That Darn Cat! production studio\", \"passages_this_hop\": [{\"long_text\": \"That Darn Cat! | That Darn Cat! is a 1965 American Walt Disney Productions thriller comedy film starring Hayley Mills (in her last of the six films she made for the Walt Disney Studios) and Dean Jones (starring in his first film for Disney) in a story about bank robbers, a kidnapping and a mischievous cat. The film was based on the 1963 novel \\\"Undercover Cat\\\" by Gordon and Mildred Gordon and was directed by Robert Stevenson. The title song was written by the Sherman Brothers and sung by Bobby Darin. The 1997 remake includes a cameo appearance by Dean Jones.\", \"score\": 23.3125}, {\"long_text\": \"That Darn Cat (1997 film) | That Darn Cat is a 1997 American mystery comedy film starring Christina Ricci and Doug E. Doug. It is a remake of the 1965 film \\\"That Darn Cat! \\\", which in turn was based on the book \\\"Undercover Cat\\\" by Gordon and Mildred Gordon. It is directed by British TV veteran Bob Spiers (most famous for \\\"Fawlty Towers\\\", as well as \\\"Spice World\\\") and written by Scott Alexander and Larry Karaszewski, best known for \\\"Ed Wood\\\" and the first two \\\"Problem Child\\\" films.\", \"score\": 19.546875}, {\"long_text\": \"Amblimation | Amblimation was the animation production arm of Steven Spielberg's Amblin Entertainment. The studio was shut down in 1997 and some of the Amblimation staff went on to join DreamWorks Animation. It was known for its quieter atmosphere, more subdued acting, and more atmospheric pace compared to a great deal of American animated films; these qualities usually led to underperformance at American box offices and may have factored in the decision to close the studio down. The company's mascot, Fievel Mousekewitz (\\\"An American Tail\\\"), appears in its production logo. It only made 3 films. A project to adapt the 1981 Andrew Lloyd Webber musical \\\"Cats\\\" was in the making, but was abandoned with the studio's closure.\", \"score\": 18.1875}]}",
+        "next_thought": "Both 'That Darn Cat!' and 'Never a Dull Moment' were produced by Walt Disney Productions. I can now formulate the answer.",
+        "next_tool_name": "finish",
+        "next_tool_args": {}
+      },
+      {
+        "question": "Gulfstream International Airlines later became a regional carrier based out of what airport?",
+        "answer": "Fort Lauderdale-Hollywood International Airport",
+        "dspy_uuid": "cad8e9d3-7e10-463d-bdd6-8eaf043a5e60",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What is the same of the city that  is the second largest city municipality in Italy and appeared in The 2010 Giro d'Italia?",
+        "answer": "Verona",
+        "dspy_uuid": "42b64425-9fd2-48ca-8cba-73e283e328cd",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are Smyrnium and Nymania both types of plant?",
+        "answer": "yes",
+        "dspy_uuid": "1d97ce5e-163c-4cf2-8d73-c008568f7966",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What's the present day English county of Skelton-in-Cleveland, recorded in the Domesday Book and site of a 12th-century castle?",
+        "answer": "North Yorkshire",
+        "dspy_uuid": "5397ac4f-ee0c-482c-b548-754cb8808b57",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who did Holly Dunn record \"Daddy's Hands\" for?",
+        "answer": "MTM Records",
+        "dspy_uuid": "91b5b244-68b3-46fd-bbf1-febefe5c91b4",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which artist started recording\/performing earlier David Donato or Moya Brennan?",
+        "answer": "Moya Brennan",
+        "dspy_uuid": "a235a618-8c75-4519-9f9c-97e312c339dd",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The actor who voiced Shaggy in the \"Scooby-Doo\" franchise also appeared as a radio personality on what radio network?",
+        "answer": "Clear Channel Radio",
+        "dspy_uuid": "0dd3c44e-8fe4-4906-bdb6-8cbe68f45f74",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Where is the plant, which manufactured the British Army's standard rifle from 1895 to 1957, located?",
+        "answer": "Maltby, South Yorkshire",
+        "dspy_uuid": "9593e20d-9bdb-4e20-ba19-6e792cf34e06",
+        "dspy_split": "train"
+      },
+      {
+        "question": "When considering the two peaks known as Noijin Kangsang and Masherbrum, which of them has the greatest height related to their respected ranges?",
+        "answer": "Noijin Kangsang",
+        "dspy_uuid": "6eb6d361-412e-498a-8a64-9e8a133e37e2",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are the bands Flow and Against the Current from the same country?",
+        "answer": "no",
+        "dspy_uuid": "e86c5d49-0fca-448c-8129-5ccd44393f81",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Is Liverpool found in northern or southern England?",
+        "answer": "northern England",
+        "dspy_uuid": "b10a57e7-cf80-4222-afaf-aa42dc3f6986",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was the role played in \"Sweet Charity\" by the star of Dear Diary?",
+        "answer": "Nickie",
+        "dspy_uuid": "3c51829f-3e5b-4830-8afb-2e81075da5c4",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who is the wife of Charlemagne who is a step mother to Pepin the Hunchback?",
+        "answer": "Hildegard",
+        "dspy_uuid": "b3a77db7-824d-433c-aead-73c181185800",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!<\/desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.<\/desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "How many copies were sold of the last UK number-one single that was written by Noddy Holder and Jim Lea?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"How many copies were sold of the last UK number-one single that was written by Noddy Holder and Jim Lea?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"How many copies were sold of the last UK number-one single that was written by Noddy Holder and Jim Lea?\", \"passages_this_hop\": [{\"long_text\": \"Slade | Slade are an English glam rock band from Wolverhampton. They rose to prominence during the early 1970s with 17 consecutive top 20 hits and six number ones on the UK Singles Chart. The \\\"British Hit Singles & Albums\\\" names them as the most successful British group of the 1970s based on sales of singles. They were the first act to have three singles enter the charts at number one; all six of the band's chart-toppers were penned by Noddy Holder and Jim Lea. As of 2006, total UK sales stand at 6,520,171, and their best-selling single, \\\"Merry Xmas Everybody\\\", has sold in excess of one million copies.\", \"score\": 21.296875}, {\"long_text\": \"Merry Xmas Everybody | \\\"Merry Xmas Everybody\\\" is a song by the British rock band Slade, released as a non-album single in 1973. The song was written by lead vocalist Noddy Holder and bassist Jim Lea, and produced by Chas Chandler. It was the band's sixth and final number-one single in the UK. Earning the UK Christmas Number One slot in December 1973, the song beat another Christmas-themed song, Wizzard's \\\"I Wish It Could Be Christmas Everyday\\\", which reached fourth place. It remained in the charts for nine weeks until February 1974.\", \"score\": 21.015625}, {\"long_text\": \"The Bangin' Man | \\\"The Bangin' Man\\\" is a song by the British rock band Slade, released in 1974 as a non-album single. It was written by lead vocalist Noddy Holder and bassist Jim Lea, and produced by Chas Chandler. It reached No. 3 in the UK, remaining in the charts for seven weeks. In 1974, the song was certified UK Silver by BPI for sales over 250,000.\", \"score\": 20.34375}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, I found that Slade's 'Merry Xmas Everybody' is the last UK number-one single written by Noddy Holder and Jim Lea. The passage mentions that this single has sold in excess of one million copies.\n\n[[ ## tool_name_0 ## ]]\nfinish\n\n[[ ## tool_args_0 ## ]]\n{}\n\n[[ ## observation_0 ## ]]\nCompleted.",
+        "reasoning": "The last UK number-one single that was written by Noddy Holder and Jim Lea was \"Merry Xmas Everybody\" by Slade. According to the search results, this single has sold in excess of one million copies.",
+        "answer": "In excess of one million copies."
+      },
+      {
+        "augmented": true,
+        "question": "The designer of the Holy Trinity Church pioneered the use of what material in church building?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"The designer of the Holy Trinity Church pioneered the use of what material in church building?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"The designer of the Holy Trinity Church pioneered the use of what material in church building?\", \"passages_this_hop\": [{\"long_text\": \"Holy Trinity Platt Church | Holy Trinity Platt Church (also known as Holy Trinity Church, Rusholme), is in Platt Fields Park in Rusholme, Manchester, England. It is an active Anglican parish church in the deanery of Hulme, the archdeaconry of Manchester, and the diocese of Manchester. The church is recorded in the National Heritage List for England as a designated Grade II* listed building. It is the second \\\"pot church\\\" designed by Edmund Sharpe, so-called because the main building material used in the construction of the church is terracotta.\", \"score\": 21.796875}, {\"long_text\": \"Holy Trinity Church, Bradford | Holy Trinity Church, Bradford, was an Anglican parish church located in Leeds Road, Bradford, West Yorkshire, England. It was built in 1864\u201365 to a design by the Lancaster architect E. G. Paley at an estimated cost of \u00a33,565 (equivalent to \u00a3 in 2015 ). The church was constructed in stone, its architectural style being Decorated. It had north and south five-bay aisles, and a southeast tower. In 1871 a broach spire was added, the chancel arch was rebuilt, and the tower was underpinned because of subsidence, the architects being Paley and Austin. The church was demolished in 1966.\", \"score\": 20.953125}, {\"long_text\": \"Holy Trinity Gough Square | Trinity Church was built in the parish of St Bride's in the City of London, on the initiative of the vicar, the Reverend Thomas Dale, who felt that the parish church was inadequate for the size of the population. He first proposed a schoolroom that would double as an occasional chapel, but soon found that it would be practical to build a church, funded by subscriptions, and grants from the Church Commissioners and the Metropolitan fund for the erection of churches. The first stone was laid on 3 October 1837, and the building was consecrated on 21 June the next year. The architect was John Shaw (Junior).\", \"score\": 20.40625}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, I can see that the Holy Trinity Platt Church in Manchester, England, was designed by Edmund Sharpe and uses terracotta as the main building material. This seems to be the answer to the question.\n\n[[ ## tool_name_0 ## ]]\nfinish\n\n[[ ## tool_args_0 ## ]]\n{}\n\n[[ ## observation_0 ## ]]\nCompleted.",
+        "reasoning": "The search results indicate that the Holy Trinity Platt Church in Manchester, England, was designed by Edmund Sharpe and uses terracotta as the main building material.",
+        "answer": "terracotta"
+      },
+      {
+        "augmented": true,
+        "question": "That Darn Cat! and Never a Dull Moment were both produced by what studio?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"That Darn Cat! and Never a Dull Moment were both produced by what studio?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"That Darn Cat! and Never a Dull Moment were both produced by what studio?\", \"passages_this_hop\": [{\"long_text\": \"Never a Dull Moment (1968 film) | Never a Dull Moment is a 1968 American comedy crime film from Walt Disney Productions starring Dick Van Dyke and Edward G. Robinson and directed by Jerry Paris. The script by AJ Carothers was based on a novel by John Godey. The supporting cast features Dorothy Provine, Henry Silva, Slim Pickens and Jack Elam.\", \"score\": 18.828125}, {\"long_text\": \"Never a Dull Moment (1950 film) | Never a Dull Moment is a 1950 American comedy film from RKO, starring Irene Dunne and Fred MacMurray. The film is based on the 1943 book \\\"Who Could Ask For Anything More?\\\" by Kay Swift. The filming took place between December 5, 1949, and February 1, 1950.\", \"score\": 18.484375}, {\"long_text\": \"Never a Dull Moment (EP) | Never a Dull Moment is the collaborative EP by rapper Willie the Kid and producer Lee Bannon. It was released on July 27, 2010 through Apphiliates Music Group and Embassy Entertainment.\", \"score\": 17.65625}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages, it seems that \"Never a Dull Moment\" from 1968 was produced by Walt Disney Productions. I will verify this information and check if \"That Darn Cat!\" was also produced by the same studio.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"That Darn Cat! production studio\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"That Darn Cat! production studio\", \"passages_this_hop\": [{\"long_text\": \"That Darn Cat! | That Darn Cat! is a 1965 American Walt Disney Productions thriller comedy film starring Hayley Mills (in her last of the six films she made for the Walt Disney Studios) and Dean Jones (starring in his first film for Disney) in a story about bank robbers, a kidnapping and a mischievous cat. The film was based on the 1963 novel \\\"Undercover Cat\\\" by Gordon and Mildred Gordon and was directed by Robert Stevenson. The title song was written by the Sherman Brothers and sung by Bobby Darin. The 1997 remake includes a cameo appearance by Dean Jones.\", \"score\": 23.3125}, {\"long_text\": \"That Darn Cat (1997 film) | That Darn Cat is a 1997 American mystery comedy film starring Christina Ricci and Doug E. Doug. It is a remake of the 1965 film \\\"That Darn Cat! \\\", which in turn was based on the book \\\"Undercover Cat\\\" by Gordon and Mildred Gordon. It is directed by British TV veteran Bob Spiers (most famous for \\\"Fawlty Towers\\\", as well as \\\"Spice World\\\") and written by Scott Alexander and Larry Karaszewski, best known for \\\"Ed Wood\\\" and the first two \\\"Problem Child\\\" films.\", \"score\": 19.546875}, {\"long_text\": \"Amblimation | Amblimation was the animation production arm of Steven Spielberg's Amblin Entertainment. The studio was shut down in 1997 and some of the Amblimation staff went on to join DreamWorks Animation. It was known for its quieter atmosphere, more subdued acting, and more atmospheric pace compared to a great deal of American animated films; these qualities usually led to underperformance at American box offices and may have factored in the decision to close the studio down. The company's mascot, Fievel Mousekewitz (\\\"An American Tail\\\"), appears in its production logo. It only made 3 films. A project to adapt the 1981 Andrew Lloyd Webber musical \\\"Cats\\\" was in the making, but was abandoned with the studio's closure.\", \"score\": 18.1875}]}\n\n[[ ## thought_1 ## ]]\nBoth 'That Darn Cat!' and 'Never a Dull Moment' were produced by Walt Disney Productions. I can now formulate the answer.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "I searched for information on the production studios of 'That Darn Cat!' and 'Never a Dull Moment'. Both films were produced by Walt Disney Productions.",
+        "answer": "Walt Disney Productions"
+      },
+      {
+        "question": "Are Smyrnium and Nymania both types of plant?",
+        "answer": "yes",
+        "dspy_uuid": "1d97ce5e-163c-4cf2-8d73-c008568f7966",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who did Holly Dunn record \"Daddy's Hands\" for?",
+        "answer": "MTM Records",
+        "dspy_uuid": "91b5b244-68b3-46fd-bbf1-febefe5c91b4",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who is the wife of Charlemagne who is a step mother to Pepin the Hunchback?",
+        "answer": "Hildegard",
+        "dspy_uuid": "b3a77db7-824d-433c-aead-73c181185800",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What is the same of the city that  is the second largest city municipality in Italy and appeared in The 2010 Giro d'Italia?",
+        "answer": "Verona",
+        "dspy_uuid": "42b64425-9fd2-48ca-8cba-73e283e328cd",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was the role played in \"Sweet Charity\" by the star of Dear Diary?",
+        "answer": "Nickie",
+        "dspy_uuid": "3c51829f-3e5b-4830-8afb-2e81075da5c4",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Is Liverpool found in northern or southern England?",
+        "answer": "northern England",
+        "dspy_uuid": "b10a57e7-cf80-4222-afaf-aa42dc3f6986",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Where is the plant, which manufactured the British Army's standard rifle from 1895 to 1957, located?",
+        "answer": "Maltby, South Yorkshire",
+        "dspy_uuid": "9593e20d-9bdb-4e20-ba19-6e792cf34e06",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Gulfstream International Airlines later became a regional carrier based out of what airport?",
+        "answer": "Fort Lauderdale-Hollywood International Airport",
+        "dspy_uuid": "cad8e9d3-7e10-463d-bdd6-8eaf043a5e60",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which artist started recording\/performing earlier David Donato or Moya Brennan?",
+        "answer": "Moya Brennan",
+        "dspy_uuid": "a235a618-8c75-4519-9f9c-97e312c339dd",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The actor who voiced Shaggy in the \"Scooby-Doo\" franchise also appeared as a radio personality on what radio network?",
+        "answer": "Clear Channel Radio",
+        "dspy_uuid": "0dd3c44e-8fe4-4906-bdb6-8cbe68f45f74",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are the bands Flow and Against the Current from the same country?",
+        "answer": "no",
+        "dspy_uuid": "e86c5d49-0fca-448c-8129-5ccd44393f81",
+        "dspy_split": "train"
+      },
+      {
+        "question": "When considering the two peaks known as Noijin Kangsang and Masherbrum, which of them has the greatest height related to their respected ranges?",
+        "answer": "Noijin Kangsang",
+        "dspy_uuid": "6eb6d361-412e-498a-8a64-9e8a133e37e2",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What's the present day English county of Skelton-in-Cleveland, recorded in the Domesday Book and site of a 12th-century castle?",
+        "answer": "North Yorkshire",
+        "dspy_uuid": "5397ac4f-ee0c-482c-b548-754cb8808b57",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

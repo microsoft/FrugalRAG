@@ -1,0 +1,187 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What magazine was established in 1988 by Frank Thomas and Keith White and has been associated with the Dirtbag Left?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What magazine was established in 1988 by Frank Thomas and Keith White and has been associated with the Dirtbag Left?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What magazine was established in 1988 by Frank Thomas and Keith White and has been associated with the Dirtbag Left?\", \"passages_this_hop\": [{\"long_text\": \"The Baffler | The Baffler is a magazine of cultural, political, and business analysis. Established in 1988 by editors Thomas Frank and Keith White, it was headquartered in Chicago, Illinois until 2010, when it moved to Cambridge, Massachusetts. In 2016, it moved its headquarters to New York City. The first incarnation of \\\"The Baffler\\\" had up to 12,000 subscribers.\", \"score\": 20.359375}, {\"long_text\": \"Dirt (magazine) | Dirt was an American lifestyle magazine targeting young men. The magazine was launched in 1991 by Andy Jenkins, Spike Jonze, and Mark Lewman. Lewman, who served as editor-in-chief, said of the debut issue: We're all about sports, music, movies, girls and junk food. We combine these topics with current events, celebrity quotes and true-life stories like our current profile of a Los Angeles gang member recently released from prison. We're mostly about a boy's basic concerns-with hard-edged pieces mixed in. ... Most of the stereotypes about guys are just wrong. I don't know any Bills and Teds.\", \"score\": 17.96875}, {\"long_text\": \"Dirtbag Left | Dirtbag Left is a term coined by Amber A'Lee Frost to refer to a loose group of leftist American media figures. Members include the hosts of podcast Chapo Trap House, and, ostensibly, Brace Belden. Will Menaker has referred to the term as \\\"...a nice way of describing a kind of scurrilous and funny approach to left-wing politics...\\\". Publications \\\"The Baffler\\\", \\\"Street Fight Radio\\\", and \\\"Current Affairs\\\" have also been associated with the Dirtbag Left.\", \"score\": 17.40625}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, I found that The Baffler is the magazine established in 1988 by Frank Thomas and Keith White, and it has been associated with the Dirtbag Left.\n\n[[ ## tool_name_0 ## ]]\nfinish\n\n[[ ## tool_args_0 ## ]]\n{}\n\n[[ ## observation_0 ## ]]\nCompleted.",
+        "reasoning": "The search results indicate that The Baffler is the magazine established in 1988 by Frank Thomas and Keith White, and it has been associated with the Dirtbag Left.",
+        "answer": "The Baffler"
+      },
+      {
+        "augmented": true,
+        "question": "That Darn Cat! and Never a Dull Moment were both produced by what studio?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"That Darn Cat! and Never a Dull Moment were both produced by what studio?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"That Darn Cat! and Never a Dull Moment were both produced by what studio?\", \"passages_this_hop\": [{\"long_text\": \"Never a Dull Moment (1968 film) | Never a Dull Moment is a 1968 American comedy crime film from Walt Disney Productions starring Dick Van Dyke and Edward G. Robinson and directed by Jerry Paris. The script by AJ Carothers was based on a novel by John Godey. The supporting cast features Dorothy Provine, Henry Silva, Slim Pickens and Jack Elam.\", \"score\": 18.828125}, {\"long_text\": \"Never a Dull Moment (1950 film) | Never a Dull Moment is a 1950 American comedy film from RKO, starring Irene Dunne and Fred MacMurray. The film is based on the 1943 book \\\"Who Could Ask For Anything More?\\\" by Kay Swift. The filming took place between December 5, 1949, and February 1, 1950.\", \"score\": 18.484375}, {\"long_text\": \"Never a Dull Moment (EP) | Never a Dull Moment is the collaborative EP by rapper Willie the Kid and producer Lee Bannon. It was released on July 27, 2010 through Apphiliates Music Group and Embassy Entertainment.\", \"score\": 17.65625}]}\n\n[[ ## thought_0 ## ]]\nThe first passage mentions that \"Never a Dull Moment\" from 1968 was produced by Walt Disney Productions. I will now check if \"That Darn Cat!\" was also produced by the same studio.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"That Darn Cat! production company\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"That Darn Cat! production company\", \"passages_this_hop\": [{\"long_text\": \"That Darn Cat! | That Darn Cat! is a 1965 American Walt Disney Productions thriller comedy film starring Hayley Mills (in her last of the six films she made for the Walt Disney Studios) and Dean Jones (starring in his first film for Disney) in a story about bank robbers, a kidnapping and a mischievous cat. The film was based on the 1963 novel \\\"Undercover Cat\\\" by Gordon and Mildred Gordon and was directed by Robert Stevenson. The title song was written by the Sherman Brothers and sung by Bobby Darin. The 1997 remake includes a cameo appearance by Dean Jones.\", \"score\": 23.015625}, {\"long_text\": \"That Darn Cat (1997 film) | That Darn Cat is a 1997 American mystery comedy film starring Christina Ricci and Doug E. Doug. It is a remake of the 1965 film \\\"That Darn Cat! \\\", which in turn was based on the book \\\"Undercover Cat\\\" by Gordon and Mildred Gordon. It is directed by British TV veteran Bob Spiers (most famous for \\\"Fawlty Towers\\\", as well as \\\"Spice World\\\") and written by Scott Alexander and Larry Karaszewski, best known for \\\"Ed Wood\\\" and the first two \\\"Problem Child\\\" films.\", \"score\": 21.078125}, {\"long_text\": \"Yancey's Fancy | Yancey's Fancy is a producer of artisan cheeses based in Corfu, New York, USA. The company was formerly known as Darn Good Foods, Inc. The Yancey's Fancy name was established in 1998, when John Yancey (whose family operated Heluva Good! ) and his long-time business associate Mike Wimble bought the Kutter's Cheese business and factory from Richard and Tony Kutter, who retired.\", \"score\": 19.609375}]}\n\n[[ ## thought_1 ## ]]\nThe search result for \"That Darn Cat! production company\" indicates that it was produced by Walt Disney Productions. Now, I can conclude that both \"That Darn Cat!\" and \"Never a Dull Moment\" were produced by Walt Disney Productions.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "Both \"That Darn Cat!\" and \"Never a Dull Moment\" were produced by Walt Disney Productions.",
+        "answer": "Walt Disney Productions"
+      },
+      {
+        "question": "What team does the athlete featured on the cover of the FIFA 17 video game play for?",
+        "answer": "Borussia Dortmund",
+        "dspy_uuid": "90b0f115-e4b8-4377-93a0-193301358d62",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which publication has been published by a greater number of groups, House Beautiful or Smithsonian?",
+        "answer": "House Beautiful",
+        "dspy_uuid": "5214008c-0ece-4acb-8c1b-cc5cea8c957b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which movie in a collaboration between Malcom X and Alex Haley also was nominated for an Oscar",
+        "answer": "The Autobiography of Malcolm X",
+        "dspy_uuid": "8be41107-0a31-421a-88b1-385737191902",
+        "dspy_split": "train"
+      },
+      {
+        "question": "in the 1975–76, Seattle SuperSonics lost to a team based in which US state ?",
+        "answer": "Arizona",
+        "dspy_uuid": "81a0e861-8937-4e72-b87b-04bad528857d",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What main thoroughfare in Warsaw's borough of Ursynów connects to a 6,500 km international road which coincides with the Trans-Siberian Highway?",
+        "answer": "Jana Rosoła street",
+        "dspy_uuid": "f2fbb8d7-c7db-4679-838f-a940d2f5c173",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Eleni Karinte was the first love Monastir student who was born in what year?",
+        "answer": "1881",
+        "dspy_uuid": "d8cc3f38-577b-4307-b81e-7f4be023cbc7",
+        "dspy_split": "train"
+      },
+      {
+        "question": "How many copies were sold of the last UK number-one single that was written by Noddy Holder and Jim Lea?",
+        "answer": "in excess of one million copies",
+        "dspy_uuid": "e242640d-5178-4acb-985f-5869a133bb66",
+        "dspy_split": "train"
+      },
+      {
+        "question": "what job/hobby do Andy Ram and Arnaud Clément have in common?",
+        "answer": "professional tennis",
+        "dspy_uuid": "bcc339de-e0dd-42ce-9bda-54a4215430e6",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The designer of the Holy Trinity Church pioneered the use of what material in church building?",
+        "answer": "terracotta",
+        "dspy_uuid": "15301d69-2cd9-4881-93ad-4e35b623650f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who did Holly Dunn record \"Daddy's Hands\" for?",
+        "answer": "MTM Records",
+        "dspy_uuid": "91b5b244-68b3-46fd-bbf1-febefe5c91b4",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Utterby is situated on the road that is in what English region?",
+        "answer": "East Midlands",
+        "dspy_uuid": "0d264340-f12d-463f-bef2-25435978ce72",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Apan Amar Apan was a film that had music composed by which Indian composer?",
+        "answer": "Rahul Dev Burman",
+        "dspy_uuid": "9ed47d9c-b9c6-4ed1-94de-ae1e614a281d",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What sport does 1989–90 Sacramento Kings season and Rodney McCray have in common?",
+        "answer": "basketball",
+        "dspy_uuid": "e4bada3f-b73d-48d7-a3b7-b3382bc7eb4d",
+        "dspy_split": "train"
+      },
+      {
+        "question": "what is the largest university press in the world that published Oxford Companions?",
+        "answer": "Oxford University Press",
+        "dspy_uuid": "a5666d88-09df-4e77-8fdc-628d273b7a19",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

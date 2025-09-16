@@ -1,0 +1,186 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question`.\n\nYou must decide what to do next by providing:\n\n- Thought: reasoning about the current step\n\n- Tool Name: one of the available tools\n\n- Tool Args: A valid JSON with the necessary keys.\n\nRepeat this for a few steps to gather information.\n\nYou do not need to produce a final answer — just use the tools iteratively.\nMake sure to include all required Tool Args as a valid JSON object.\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What is the same of the city that  is the second largest city municipality in Italy and appeared in The 2010 Giro d'Italia?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What is the same of the city that  is the second largest city municipality in Italy and appeared in The 2010 Giro d'Italia?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What is the same of the city that  is the second largest city municipality in Italy and appeared in The 2010 Giro d'Italia?\", \"passages_this_hop\": [{\"long_text\": \"Treviso | Treviso (] , Venetian: \\\"Trevixo\\\") is a city and \\\"comune\\\" in the Veneto region of northern Italy. It is the capital of the province of Treviso and the municipality has 82,854 inhabitants (as of November 2010): some 3,000 live within the Venetian walls (\\\"le Mura\\\") or in the historical and monumental center, some 80,000 live in the urban center proper while the city hinterland has a population of approximately 170,000. The city is home to the headquarters of clothing retailer Benetton, Sisley, Stefanel, Geox, Diadora and Lotto Sport Italia, appliance maker De'Longhi, and bicycle maker Pinarello.\", \"score\": 18.84375}, {\"long_text\": \"2006 Giro d'Italia | The 2006 Giro d'Italia was the 89th edition of the Giro d'Italia, one of cycling's Grand Tours. The Giro began in the Belgian city of Seraing with a 6.2 km individual time trial. The race came to a close with a 140 km mass-start road stage that stretched from Museo del Ghisallo to Milan. Twenty two teams entered the race that was won by the Italian Ivan Basso of the team. Second and third were the Spain José Enrique Gutiérrez and Italian Gilberto Simoni.\", \"score\": 18.84375}, {\"long_text\": \"1998 Giro d'Italia | The 1998 Giro d'Italia was the 81st edition of the Giro d'Italia, one of cycling's Grand Tours. The Giro began on May 16 with a brief 8 km prologue that navigated through the streets of the French city Nice. The race came to a close on June 7 with a mass-start stage that ended in the Italian city of Milan. Eighteen teams entered the race that was won by the Italian Marco Pantani of the Mercatone Uno–Bianchi team. Second and third were the Russian rider Pavel Tonkov and Italian Giuseppe Guerini.\", \"score\": 18.78125}]}\n\n[[ ## thought_0 ## ]]\nNow I need to find the city that is the second largest city municipality in Italy based on the retrieved passages.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"second largest city municipality in Italy\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"second largest city municipality in Italy\", \"passages_this_hop\": [{\"long_text\": \"2nd municipality of Naples | The Second Municipality (In Italian: Seconda Municipalità or Municipalità 2) is one of the ten boroughs in which the Italian city of Naples is divided. It is the littlest municipality per surface.\", \"score\": 24.9375}, {\"long_text\": \"Verona | Verona (] ; Venetian: \\\"Verona\\\" or \\\"Veròna\\\") is a city on the Adige river in Veneto, Italy, with approximately 265,000 inhabitants and one of the seven provincial capitals of the region. It is the second largest city municipality in the region and the third largest in northeast Italy. The metropolitan area of Verona covers an area of 1,426 km² and has a population of 714,274 inhabitants. It is one of the main tourist destinations in northern Italy, owing to its artistic heritage, several annual fairs, shows, and operas, such as the lyrical season in the Arena, the ancient amphitheater built by the Romans.\", \"score\": 24.78125}, {\"long_text\": \"Latina, Lazio | Latina (] ) is the capital of the province of Latina in the Lazio region, in central Italy. s of 2011 , the city has 115,895 inhabitants and is thus the second-largest city of the region, after the national capital Rome. It was founded in 1932 under the fascist administration, as Littoria, when the area surrounding it, which had been a swamp since antiquity, was drained.\", \"score\": 23.9375}]}\n\n[[ ## thought_1 ## ]]\nNext, I should identify the city that is both the second largest municipality in Italy and appeared in the 2010 Giro d'Italia.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"second largest city municipality in Italy appeared in 2010 Giro d'Italia\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"second largest city municipality in Italy appeared in 2010 Giro d'Italia\", \"passages_this_hop\": [{\"long_text\": \"1910 Giro d'Italia | The 1910 Giro d'Italia was the second edition of the Giro d'Italia, a cycling race organized and sponsored by the newspaper \\\"La Gazzetta dello Sport\\\". The race began on 18 May in Milan with a stage that stretched 388 km to Udine, finishing back in Milan on 5 June after a 277.5 km stage and a total distance covered of 2987.4 km . The race was won by the Italian rider Carlo Galetti of the Atala-Continental team, with fellow Italians Eberardo Pavesi and Luigi Ganna coming in second and third respectively.\", \"score\": 19.796875}, {\"long_text\": \"2003 Giro d'Italia | The 2003 Giro d'Italia was the 86th edition of the Giro d'Italia, one of cycling's Grand Tours. The Giro began in Lecce with a 201 km mass-start stage. The race came to a close with a 33 km individual time trial that began and ended in the Italian city of Milan. Nineteen teams entered the race that was won by the Italian Gilberto Simoni of the Saeco Macchine per Caffè team. Second and third were the Italian Stefano Garzelli and Ukrainian Yaroslav Popovych.\", \"score\": 19.390625}, {\"long_text\": \"2011 Giro d'Italia | The 2011 Giro d'Italia was the 94th Giro d'Italia, one of cycling's Grand Tours. The race started on 7 May with a team time trial in Turin to celebrate the 150th anniversary of Italian unification, when the city served as the first capital of the single state.\", \"score\": 19.3125}]}\n\n[[ ## thought_2 ## ]]\nBased on the search results, Verona is the second largest city municipality in Italy and also appeared in the 2010 Giro d'Italia.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"What is the same of the city that  is the second largest city municipality in Italy and appeared in The 2010 Giro d'Italia?\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"What is the same of the city that  is the second largest city municipality in Italy and appeared in The 2010 Giro d'Italia?\", \"passages_this_hop\": [{\"long_text\": \"Milan | Milan ( or ; Italian: \\\"Milano\\\" ] ; Lombard: Milan ] (Milanese variant)) is the city capital of the Lombardy Region in Northern Italy and is the 2nd richest city in the European Union after Paris in 2016. It is the second most populous city in Italy after Rome, with the city proper having a population of 1,369,000 (the Metropolitan City of Milan has a population of 3,219,000). Its geographical outskirt (that stretches beyond the boundaries of the Metropolitan City of Milan), has a population estimated to be about 5,270,000 in 1,891 km2 , ranking 2nd in the European Union. The wider Milan metropolitan area, popular for Greater Milan, is a polycentric metropolitan region that comprehends almost every province of Lombardy, the Piedmont province of Novara, and some parts of the province of Piacenza which counts an estimated total population of 8,123,020.\", \"score\": 18.75}, {\"long_text\": \"1991 Giro d'Italia | The 1991 Giro d'Italia was the 74th edition of the Giro d'Italia, one of cycling's Grand Tours. The Giro began on May 26 with a mass-start stage that began and ended in the Italian city of Olbia. The race came to a close in Milan on June 16. Twenty teams entered the race, which was won by the Italian Franco Chioccioli of the Del Tongo-MG Boys Maglificio team. Second and third respectively were the Italians Claudio Chiappucci and Massimiliano Lelli.\", \"score\": 18.671875}, {\"long_text\": \"2001 Giro d'Italia | The 2001 Giro d'Italia was the 84th edition of the Giro d'Italia, one of cycling's Grand Tours. The Giro began with a 7 km prologue that went from Montesilvano to Pescara. The race came to a close on June 10 with a mass-start stage that ended in the Italian city of Milan. Twenty teams entered the race that was won by the Italian Gilberto Simoni of the team. Second and third were the Spanish riders Abraham Olano and Unai Osa.\", \"score\": 18.609375}]}\n\n[[ ## thought_3 ## ]]\nThe search result provides the city name, but we need to find the specific city that is the second largest municipality in Italy and appeared in the 2010 Giro d'Italia.\n\n[[ ## tool_name_3 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_3 ## ]]\n{\"search_query\": \"second largest city municipality in Italy appeared in 2010 Giro d'Italia\"}\n\n[[ ## observation_3 ## ]]\n{\"search_query\": \"second largest city municipality in Italy appeared in 2010 Giro d'Italia\", \"passages_this_hop\": [{\"long_text\": \"2000 Giro d'Italia | The 2000 Giro d'Italia was the 83rd edition of the Giro d'Italia, one of cycling's Grand Tours. The Giro began with a 4.6 km prologue that navigated through the Italian capital Rome. The race came to a close on June 4 with a mass-start stage that ended in the Italian city of Milan. Twenty teams entered the race that was won by the Italian Stefano Garzelli of the Mercatone Uno–Albacom team. Second and third were the Italians riders Francesco Casagrande and Gilberto Simoni.\", \"score\": 19.15625}, {\"long_text\": \"1999 Giro d'Italia | The 1999 Giro d'Italia was the 82nd edition of the Giro d'Italia, one of cycling's Grand Tours. The Giro began on May 15 with a mass-start stage that stretched from Agrigento to Modica. The race came to a close on June 6 with a mass-start stage that ended in the Italian city of Milan. Eighteen teams entered the race that was won by the Italian Ivan Gotti (sub judice )of the Team Polti team. Second and third were the Italians riders Paolo Savoldelli and Gilberto Simoni.\", \"score\": 18.96875}, {\"long_text\": \"1974 Giro d'Italia | The 1974 Giro d'Italia was the 58th running of the Giro d'Italia, one of cycling's Grand Tours races. The Giro started in Vatican City, on 16 May, with a 164 km stage and concluded in Milan, on 8 June, with 257 km leg. A total of 140 riders from fourteen teams entered the 22-stage race, that was won by Belgian Eddy Merckx of the Molteni team. The second and third places were taken by Italians Gianbattista Baronchelli and Felice Gimondi, respectively. Merckx's victory in the 1974 Giro was his first step in completing the Triple Crown of Cycling – winning the Giro d'Italia, the Tour de France, and the World Championship road race in one calendar year – becoming the first rider ever to do so.\", \"score\": 18.96875}]}\n\n[[ ## thought_4 ## ]]\nI need to narrow down the search to find the city that is both the second largest municipality in Italy and appeared in the 2010 Giro d'Italia.\n\n[[ ## tool_name_4 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_4 ## ]]\n{\"search_query\": \"second largest city municipality in Italy appeared in 2010 Giro d'Italia\"}\n\n[[ ## observation_4 ## ]]\n{\"search_query\": \"second largest city municipality in Italy appeared in 2010 Giro d'Italia\", \"passages_this_hop\": [{\"long_text\": \"2011 Rally d'Italia Sardegna | The 2011 Rally d'Italia Sardegna was the fifth round of the 2011 World Rally Championship season. The rally took place over 6–8 May, and was based in Olbia, the fourth-largest town on the island of Sardinia. The rally was also the third round of the Super 2000 World Rally Championship and the second round of the WRC Academy. Sardinia returned to the WRC calendar for the first time since 2009, after the event was a part of the Intercontinental Rally Challenge in 2010.\", \"score\": 18.90625}, {\"long_text\": \"1996 Giro d'Italia | The 1996 Giro d'Italia was the 79th edition of the Giro d'Italia, one of cycling's Grand Tours. The Giro began on May 18 with a mass-start stage that began and ended in the Greek capital Athens. The race came to a close on June 9 with a mass-start stage that ended in the Italian city of Milan. Eighteen teams entered the race that was won by the Russian Pavel Tonkov of the Panaria-Vinavil team. Second and third were the Italian rider Enrico Zaina and Spanish rider Abraham Olano.\", \"score\": 18.828125}, {\"long_text\": \"2002 Giro d'Italia | The 2002 Giro d'Italia was the 85th edition of the Giro d'Italia, one of cycling's Grand Tours. The Giro began with a 6.5 km prologue that navigated through the streets of the Dutch city Groningen. The race came to a close with a mass-start stage that ended in the Italian city of Milan. Twenty-two teams entered the race that was won by the Italian Paolo Savoldelli of the Index Alexia team. Second and third were the American Tyler Hamilton and Italian Pietro Caucchioli.\", \"score\": 18.828125}]}",
+        "reasoning": "After multiple searches, the city that is the second largest city municipality in Italy and appeared in the 2010 Giro d'Italia is Verona.",
+        "answer": "Verona"
+      },
+      {
+        "question": "Which lasted longer, the Battle of Belleau Wood or the Battle of Leyte?",
+        "answer": "Battle of Leyte",
+        "dspy_uuid": "3fdb25c6-9468-40b7-9f4b-0331fb560cc9",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which building, Olympic Tower or Latting Observatory, is no longer erect?",
+        "answer": "Latting Observatory",
+        "dspy_uuid": "536b9e13-9ee8-400c-9dd7-7447af6fb7aa",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which of these Asian directors was behind the science fiction adventure film \"Snowpiercer\", Bong Joon-ho or Vincent Kok?",
+        "answer": "Bong",
+        "dspy_uuid": "68f023b9-c980-4dc7-9e40-fd18caba10f0",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What date did the American actress and singer-songwriter, known for her role as Peggy Bundy, release her first album?",
+        "answer": "April 19, 1994",
+        "dspy_uuid": "642a35e7-0d7b-4f6e-b373-aa6ab88cd9f8",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are the bands Flow and Against the Current from the same country?",
+        "answer": "no",
+        "dspy_uuid": "8d3689ab-2f05-4918-b417-34052fbf9bca",
+        "dspy_split": "train"
+      },
+      {
+        "question": "That Darn Cat! and Never a Dull Moment were both produced by what studio?",
+        "answer": "Walt Disney Productions",
+        "dspy_uuid": "805a7e7a-71f3-402a-8fa3-ca453d0e51cd",
+        "dspy_split": "train"
+      },
+      {
+        "question": "How many residents were in the resort town in which Nida Lighthouse was located? ",
+        "answer": "1,650 residents",
+        "dspy_uuid": "5af720e4-c60c-4003-b941-01fd9a4fe771",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are both Ceratophyllum and Eucomis a genus of flowering plants?",
+        "answer": "yes",
+        "dspy_uuid": "355bfdc6-4424-4419-b1b1-3e8a903cd7c7",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which major river is Buford, North Dakota nearest to?",
+        "answer": "the Missouri River",
+        "dspy_uuid": "5f42f312-200b-4dfe-870c-f81586ff8949",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which of Adelaide Metro's stations is located at the base of the Mount Lofty Ranges?",
+        "answer": "Belair railway station",
+        "dspy_uuid": "fa721a12-e10a-456a-80e7-3705c3b91f35",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What film was William Fichtner in that also had Heath Ledger in it?",
+        "answer": "The Dark Knight",
+        "dspy_uuid": "1fa83211-ac27-4d08-8373-9ce766ce03d7",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What team does the athlete featured on the cover of the FIFA 17 video game play for?",
+        "answer": "Borussia Dortmund",
+        "dspy_uuid": "7b03c577-bdee-4e87-94cc-4ce20ef8f4b2",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which dog originated in the Mountains of Romania, the Ariege Pointer or the Carpathian Shepherd Dog?",
+        "answer": "Carpathian Mountains of Romania.",
+        "dspy_uuid": "3ca6c048-3b13-4a30-8cbd-d82c7c69d7bb",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The Knicks–Nuggets was the most penalized on-court fight in the NBA since an altercation that occured in what city?",
+        "answer": "Auburn Hills",
+        "dspy_uuid": "f6e2edcb-656e-4004-8f68-f89736bbc930",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What role does Ghanashyam Nayak play in India's longest running sitcom serial?",
+        "answer": "Natwarlal Prabhashankar Undhaiwala",
+        "dspy_uuid": "fb4b3f22-0978-46f3-a020-e718159fe518",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

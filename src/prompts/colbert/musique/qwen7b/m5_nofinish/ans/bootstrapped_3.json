@@ -1,0 +1,156 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question`.\n\nYou must decide what to do next by providing:\n\n- Thought: reasoning about the current step\n\n- Tool Name: one of the available tools\n\n- Tool Args: A valid JSON with the necessary keys.\n\nRepeat this for a few steps to gather information.\n\nYou do not need to produce a final answer — just use the tools iteratively.\nMake sure to include all required Tool Args as a valid JSON object.\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What is the family of Prince George William of Great Britain's mother",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What is the family of Prince George William of Great Britain's mother\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What is the family of Prince George William of Great Britain's mother\", \"passages_this_hop\": [{\"long_text\": \"\\\"Prince George William of Great Britain\\\" | \\\"Prince George William of Great Britain Prince George William of Great Britain (13 November 1717 – 17 February 1718) was an infant member of the British royal family, second son of King George II and Caroline of Ansbach who, at the time of his birth, were the Prince and Princess of Wales. He died aged 3 months, 4 days. Prince George William was born at St James's Palace, London. His father later, The Prince George, Prince of Wales, son of George I. His mother was Caroline of Ansbach, daughter of Johann Friedrich, Margrave of Brandenburg-Ansbach. Twenty-six days after his birth,\\\"\", \"score\": 24.734375}, {\"long_text\": \"\\\"George I of Great Britain\\\" | \\\"many cultural icons such as the mathematician and philosopher Gottfried Leibniz and the composers George Frideric Händel and Agostino Steffani. Shortly after George's accession to his paternal duchy, Prince William, Duke of Gloucester, who was second-in-line to the English and Scottish thrones, died. By the terms of the English Act of Settlement 1701, George's mother, Sophia, was designated as the heir to the English throne if the then reigning monarch, William III, and his sister-in-law, Anne, died without surviving issue. The succession was so designed because Sophia was the closest Protestant relative of the British royal family. Fifty-six Catholics with\\\"\", \"score\": 23.8125}, {\"long_text\": \"\\\"Prince George William of Great Britain\\\" | \\\"he was baptised at St James's Palace by Bishop of London John Robinson. His godparents were his grandfather the King, the Duke of Newcastle (Lord Chamberlain of the King's Household) and the Duchess of St Albans (First Lady of the Bedchamber to his mother). The baptism was the catalyst for a family quarrel. The infant's parents wanted to call the baby Louis, and suggested the Queen of Prussia and the Duke of York as sponsors. The King chose the names George William, and, supposedly following custom, appointed the Lord Chamberlain, the Duke of Newcastle, as one of the baptismal sponsors\\\"\", \"score\": 23.78125}, {\"long_text\": \"\\\"William I, Elector of Hesse\\\" | \\\"Hanau, while under his mother's regency. The young prince William, together with his two younger brothers, lived with their mother, the landgravine Mary. From 1747 they were supported by Protestant relatives and moved to Denmark. There they lived with Mary's sister, Louise of Great Britain, and her family; Louise died in 1751. On 1 September 1764, William married his first cousin, Wilhelmina Caroline of Denmark and Norway (1747–1820), who was the second surviving daughter of Frederick V of Denmark and Norway. They married at Christiansborg Palace and resided for two decades mostly in Denmark. In 1785 they moved to Kassel\\\"\", \"score\": 23.140625}, {\"long_text\": \"\\\"George I of Greece\\\" | \\\"Until his accession in Greece, he was known as Prince William, the namesake of his grandfathers William, Duke of Schleswig-Holstein-Sonderburg-Glücksburg, and Prince William of Hesse-Kassel. Although he was of royal blood, his family was relatively obscure and lived a comparatively normal life by royal standards. In 1853, however, George's father was designated the heir presumptive to the childless King Frederick VII of Denmark, and the family became princes and princesses of Denmark. George's siblings were Frederick (who succeeded their father as King of Denmark), Alexandra (who became wife of King Edward VII of the United Kingdom and the mother of\\\"\", \"score\": 23.09375}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages, it seems that Prince George William of Great Britain's mother was Caroline of Ansbach. I should now find out what her family was.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What was the family of Caroline of Ansbach\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What was the family of Caroline of Ansbach\", \"passages_this_hop\": [{\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"Caroline of Ansbach Caroline of Brandenburg-Ansbach (Wilhelmina Charlotte Caroline; 1 March 1683 – 20 November 1737) was Queen of Great Britain as the wife of King George II. Her father, Margrave John Frederick of Brandenburg-Ansbach, belonged to a branch of the House of Hohenzollern and was the ruler of a small German state, the Principality of Ansbach. Caroline was orphaned at a young age and moved to the enlightened court of her guardians, King Frederick I and Queen Sophia Charlotte of Prussia. At the Prussian court, her previously limited education was widened, and she adopted the liberal outlook possessed by\\\"\", \"score\": 25.703125}, {\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"ruler of one of the smallest German states; he died of smallpox at the age of 32, when Caroline was three years old. Caroline and her only full sibling, her younger brother Margrave William Frederick, left Ansbach with their mother, who returned to her native Eisenach. In 1692, Caroline's widowed mother was pushed into an unhappy marriage with the Elector of Saxony, and she and her two children moved to the Saxon court at Dresden. Eleonore Erdmuthe was widowed again two years later, after her unfaithful husband contracted smallpox from his mistress. Eleonore remained in Saxony for another two years,\\\"\", \"score\": 25.59375}, {\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"any embarrassing scenes nor did she take lovers. She preferred her husband's mistresses to be ladies-in-waiting, as that way she believed she could keep a closer eye on them. The succession of her husband's family to the British throne was still insecure, as Queen Anne's half-brother James Stuart contested the Hanoverian claim, and Queen Anne and Caroline's grandmother-in-law Dowager Electress Sophia had fallen out. Anne refused permission for any of the Hanoverians to visit Britain in her lifetime. Caroline wrote to Leibniz, \\\"\\\"I accept the comparison which you draw, though all too flattering, between me and Queen Elizabeth as a\\\"\", \"score\": 25.078125}, {\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"14th, per fess gules and argent; 15th, plain field of gules (for right of regalia); overall an inescutcheon, argent, an eagle displayed gules (for Brandenburg). Caroline's ten pregnancies resulted in eight live births, of whom one died in infancy, and seven lived to adulthood. Caroline of Ansbach Caroline of Brandenburg-Ansbach (Wilhelmina Charlotte Caroline; 1 March 1683 – 20 November 1737) was Queen of Great Britain as the wife of King George II. Her father, Margrave John Frederick of Brandenburg-Ansbach, belonged to a branch of the House of Hohenzollern and was the ruler of a small German state, the Principality of\\\"\", \"score\": 24.8125}, {\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"actions. Caroline had absorbed the liberal opinions of her mentor, Queen Sophia Charlotte of Prussia, and supported clemency for the Jacobites (supporters of the rival Stuart claim to the throne), freedom of the press, and freedom of speech in Parliament. Over the next few years, she and her husband fought a constant battle against their eldest son, Frederick, Prince of Wales, who had been left behind in Germany when they came to England. He joined the family in 1728, by which time he was an adult, had mistresses and debts, and was fond of gambling and practical jokes. He opposed\\\"\", \"score\": 24.75}]}\n\n[[ ## thought_1 ## ]]\nThe passages indicate that Caroline of Ansbach was from the House of Hohenzollern, specifically the Margraviate of Brandenburg-Ansbach. However, to provide more detail, I will search for additional information on her family.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"House of Hohenzollern Margraviate of Brandenburg-Ansbach\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"House of Hohenzollern Margraviate of Brandenburg-Ansbach\", \"passages_this_hop\": [{\"long_text\": \"\\\"House of Hohenzollern\\\" | \\\"Europe. At Frederick V's death on 21 January 1398, his lands were partitioned between his two sons: After John III/I's death on 11 June 1420, the margraviates of Brandenburg-Ansbach and Brandenburg-Kulmbach were briefly reunited under Frederick VI/I/I. He ruled the Margraviate of Brandenburg-Ansbach after 1398. From 1420, he became Margrave of Brandenburg-Kulmbach. From 1411 Frederick VI became governor of Brandenburg and later Elector and Margrave of Brandenburg as Frederick I. Upon his death on 21 September 1440, his territories were divided among his sons: In 1427 Frederick, Elector of Brandenburg sold Nuremberg Castle and his rights as burgrave to the\\\"\", \"score\": 25.671875}, {\"long_text\": \"\\\"House of Hohenzollern\\\" | \\\"Imperial City of Nuremberg. The territories of Brandenburg-Ansbach and Brandenburg-Kulmbach remained possessions of the family, once parts of the Burgraviate of Nuremberg. On 2 December 1791, Christian II Frederick sold the sovereignty of his principalities to King Frederick William II of Prussia. On 2 December 1791, Charles Alexander sold the sovereignty of his principalities to King Frederick William II of Prussia. From 8 January 1701 the title of Elector of Brandenburg was attached to the title of King \\\"\\\"in\\\"\\\" Prussia and, from 13 September 1772, to that of King \\\"\\\"of\\\"\\\" Prussia. The Duchy of Jägerndorf (Krnov) was purchased in 1523.\\\"\", \"score\": 24.328125}, {\"long_text\": \"\\\"Principality of Ansbach\\\" | \\\"and childless, and Frederick William was his kinsman as the head of the House of Hohenzollern. The Margrave moved to England with his English second wife. Ansbach was formally annexed on 28 January 1792. Principality of Ansbach The Principality or Margraviate of (Brandenburg-)Ansbach ( or ) was a principality in the Holy Roman Empire centered on the Franconian city of Ansbach. The ruling Hohenzollern princes of the land were known as margraves, as the principality was a margraviate (but not a march). The principality was established at the death of Frederick V, Burgrave of Nuremberg, on 21 January 1398, when\\\"\", \"score\": 24.265625}, {\"long_text\": \"Brandenburg | \\\"Hohenzollern dynasty from 1415, it contained the future German capital Berlin. After 1618 the Margraviate of Brandenburg and the Duchy of Prussia were combined to form Brandenburg-Prussia, which was ruled by the same branch of the House of Hohenzollern. In 1701 the state was elevated as the Kingdom of Prussia. Franconian Nuremberg and Ansbach, Swabian Hohenzollern, the eastern European connections of Berlin, and the status of Brandenburg's ruler as prince-elector together were instrumental in the rise of that state. Brandenburg is situated in territory known in antiquity as Magna Germania, which reached to the Vistula river. By the 7th century,\\\"\", \"score\": 23.765625}, {\"long_text\": \"\\\"Christian Ernst, Margrave of Brandenburg-Bayreuth\\\" | \\\"Christian Ernst, Margrave of Brandenburg-Bayreuth Christian Ernst of Brandenburg-Bayreuth (6 August 1644 in Bayreuth – 20 May 1712 in Erlangen) was a member of the House of Hohenzollern and Margrave of Brandenburg-Bayreuth. He was the only son of Erdmann August, Hereditary Margrave (\\\"\\\"Erbmarkgraf\\\"\\\") of Brandenburg-Bayreuth, by his wife and first cousin, Sophie of Brandenburg-Ansbach. The death of his father (6 February 1651) made Christian Ernst the new heir to the margraviate of Bayreuth. At the age of ten, he succeeded his grandfather Christian as margrave when he died on 30 May 1655. His uncle Georg Albrecht acted as regent until\\\"\", \"score\": 23.59375}]}\n\n[[ ## thought_2 ## ]]\nThe search provided details about the House of Hohenzollern and the Margraviate of Brandenburg-Ansbach, but it did not directly provide information about the specific family line of Caroline of Ansbach. I will refine the search to focus on the family of Caroline of Ansbach.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"Family of Caroline of Ansbach\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"Family of Caroline of Ansbach\", \"passages_this_hop\": [{\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"until her death in 1696. The orphaned Caroline and William Frederick returned to Ansbach to stay with their elder half-brother, Margrave George Frederick II. George Frederick was a youth with little interest in parenting a girl, and so Caroline soon moved to Lützenburg outside Berlin, where she entered into the care of her new guardians, Frederick, Elector of Brandenburg, and his wife, Sophia Charlotte, who had been a friend of Eleonore Erdmuthe. Frederick and Sophia Charlotte became king and queen of Prussia in 1701. The queen was the daughter of Dowager Electress Sophia of Hanover, and the sister of George,\\\"\", \"score\": 24.890625}, {\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"In 1717, her husband was expelled from court after a family row. Caroline came to be associated with Robert Walpole, an opposition politician who was a former government minister. Walpole rejoined the government in 1720, and Caroline's husband and King George I reconciled publicly, on Walpole's advice. Over the next few years, Walpole rose to become the leading minister. Caroline became queen and electress consort upon her husband's accession in 1727. Her eldest son, Frederick, became Prince of Wales. He was a focus for the opposition, like his father before him, and Caroline's relationship with him was strained. As princess\\\"\", \"score\": 24.421875}, {\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"on the heart) rather than the separation from his mother. Further tragedy occurred in 1718, when Caroline miscarried at Richmond Lodge, her country residence. Over the next few years, Caroline had three more children: William, Mary and Louise. Leicester House became a frequent meeting place for the ministry's political opponents. Caroline struck up a friendship with politician Sir Robert Walpole, a former minister in the Whig government who led a disgruntled faction of the party. In April 1720, Walpole's wing of the Whig party reconciled with the governing wing, and Walpole and Caroline helped to effect a reconciliation between the\\\"\", \"score\": 24.390625}, {\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"wedding to George Augustus; they were married that evening in the palace chapel at Herrenhausen. By May of the following year, Caroline was pregnant, and her first child Prince Frederick was born on 20 January 1707. A few months after the birth, in July, Caroline fell seriously ill with smallpox followed by pneumonia. Her baby was kept away from her, but George Augustus remained at her side devotedly, and caught and survived the infection himself. Over the next seven years, Caroline had three more children, Anne, Amelia, and Caroline, all of whom were born in Hanover. George Augustus and Caroline\\\"\", \"score\": 24.375}, {\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"to ensure that the King and Queen could not be present at the birth. George and Caroline were horrified. Traditionally, royal births were witnessed by members of the family and senior courtiers to guard against supposititious children, and Augusta had been forced by her husband to ride in a rattling carriage for an hour and a half while heavily pregnant and in pain. With a party including two of her daughters and Lord Hervey, the Queen raced over to St. James's Palace, where Frederick had taken Augusta. Caroline was relieved to discover that Augusta had given birth to a \\\"\\\"poor,\\\"\", \"score\": 24.34375}]}\n\n[[ ## thought_3 ## ]]\nFrom the information gathered, Caroline of Ansbach's family was part of the House of Hohenzollern, specifically from the Margraviate of Brandenburg-Ansbach. To provide a clear and concise answer, I need to focus on the direct family lineage of Caroline of Ansbach.\n\n[[ ## tool_name_3 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_3 ## ]]\n{\"search_query\": \"Direct family lineage of Caroline of Ansbach\"}\n\n[[ ## observation_3 ## ]]\n{\"search_query\": \"Direct family lineage of Caroline of Ansbach\", \"passages_this_hop\": [{\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"endangering the Hanoverian succession. He had heard reports of Caroline's \\\"\\\"incomparable beauty and mental attributes\\\"\\\". He immediately took a liking to her \\\"\\\"good character\\\"\\\" and the British envoy reported that George Augustus \\\"\\\"would not think of anybody else after her\\\"\\\". For her part, Caroline was not fooled by the prince's disguise, and found her suitor attractive. He was the heir apparent of his father's Electorate of Hanover and third-in-line to the British throne of his distant cousin Queen Anne, after his grandmother Dowager Electress Sophia and his father the Elector. On 22 August 1705, Caroline arrived in Hanover for her\\\"\", \"score\": 21.34375}, {\"long_text\": \"\\\"Princess Caroline of Great Britain\\\" | \\\"Princess Caroline of Great Britain Princess Caroline of Great Britain (Caroline Elizabeth; 10 June 1713 – 28 December 1757) was the fourth child and third daughter of King George II of Great Britain and his wife Caroline of Ansbach. Princess Caroline was born at Herrenhausen Palace in Hanover, Germany, on 10 June 1713 (New Style Gregorian calendar). Her father was George Augustus, Hereditary Prince of Hanover, the eldest son of George Louis, Elector of Hanover. Her mother was Caroline of Ansbach, daughter of Johann Friedrich, Margrave of Brandenburg-Ansbach. As a granddaughter of the Elector of Hanover, she was styled Princess\\\"\", \"score\": 21.15625}, {\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"early Georgian era from utter grossness.\\\"\\\" Although modern historians tend to believe that Hervey, Wilkins and Arkell have overestimated her importance, it is nevertheless probable that Caroline of Ansbach was one of the most influential consorts in British history. Caroline County in the British Colony of Virginia was named in her honour when it was formed in 1727. The royal coat of arms of the United Kingdom are impaled with those of her father, John Frederick, Margrave of Brandenburg-Ansbach. The arms of her father were quarterly of fifteen, 1st, per fess gules and argent, within a bordure counter-changed of the\\\"\", \"score\": 21.125}, {\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"Sophia Charlotte, who became her good friend and whose views influenced Caroline all her life. As a young woman, Caroline was much sought-after as a bride. After rejecting the suit of the nominal King of Spain, Archduke Charles of Austria, she married George Augustus, the third-in-line to the British throne and heir apparent to the Electorate of Hanover. They had eight children, seven of whom grew to adulthood. Caroline moved permanently to Britain in 1714 when her husband became Prince of Wales. As Princess of Wales, she joined her husband in rallying political opposition to his father King George I.\\\"\", \"score\": 21.078125}, {\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"and as queen, Caroline was known for her political influence, which she exercised through and for Walpole. Her tenure included four regencies during her husband's stays in Hanover, and she is credited with strengthening the House of Hanover's place in Britain during a period of political instability. Caroline was widely mourned following her death in 1737, not only by the public but also by the King, who refused to remarry. Caroline was born on 1 March 1683 at Ansbach, the daughter of John Frederick, Margrave of Brandenburg-Ansbach, and his second wife, Princess Eleonore Erdmuthe of Saxe-Eisenach. Her father was the\\\"\", \"score\": 20.84375}]}\n\n[[ ## thought_4 ## ]]\nBased on the information gathered, Caroline of Ansbach's direct family lineage can be traced back to her father, John Frederick, Margrave of Brandenburg-Ansbach. I will now provide the answer based on this information.\n\n[[ ## tool_name_4 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_4 ## ]]\n{\"search_query\": \"Caroline of Ansbach's family lineage\"}\n\n[[ ## observation_4 ## ]]\n{\"search_query\": \"Caroline of Ansbach's family lineage\", \"passages_this_hop\": [{\"long_text\": \"\\\"Baroness Wilhelmine of Dörnberg\\\" | \\\"Baroness Wilhelmine of Dörnberg Baroness \\\"\\\"Wilhelmine\\\"\\\" Caroline Christiane Henriette of Dörnberg, full German name: \\\"\\\"Wilhelmine Caroline Christiane Henriette, Reichsfreiin von Dörnberg\\\"\\\" (6 March 1803, Ansbach, Kingdom of Prussia – 14 May 1835, Nuremberg, Kingdom of Bavaria) was a member of the House of Dörnberg and a Baroness of Dörnberg by birth. Through her marriage to Maximilian Karl, 6th Prince of Thurn and Taxis, Wilhelmine was also a member of the House of Thurn and Taxis. Wilhelmine was known to her family and friends as \\\"\\\"Mimi.\\\"\\\" Wilhelmine was the daughter of the former Prussian vice president and director of the chamber\\\"\", \"score\": 22.53125}, {\"long_text\": \"\\\"Caroline of Berlepsch\\\" | \\\"Caroline of Berlepsch Caroline of Berlepsch (born 9 January 1820 in Bad Hersfeld; died: 21 February 1877 in Knauthain (now part of Leipzig)) was a member of the noble \\\"\\\"von Berlepsch\\\"\\\" family and was the third wife of the Elector William II of Hesse-Kassel (1777-1847). He married her, after the death of his second wife, Countess Emilie of Reichenbach-Lessonitz, on 28 August 1843 in Wilhelmsbad (now part of Hanau). This was a morganatic marriage, because she was considered lesser nobility and therefore not befitting for a sovereign Elector. Caroline was the daughter of Baron Hermann Ludwig of Berlepsch and Melusine\\\"\", \"score\": 22.3125}, {\"long_text\": \"\\\"Princess Elizabeth of Great Britain\\\" | \\\"Princess Elizabeth of Great Britain Princess Elizabeth (Elizabeth Caroline; 10 January 1741 – 4 September 1759) was a member of the British Royal Family, a grandchild of King George II and sister of King George III. Princess Elizabeth was born at Norfolk House, St James's Square, Westminster. Her father was The Prince Frederick, Prince of Wales, eldest son of King George II and Caroline of Ansbach. Her mother was The Princess of Wales (née Augusta of Saxe-Gotha). She was christened twenty-five days later at Norfolk House, by The Bishop of Oxford, Thomas Secker — her godparents were The Margrave of\\\"\", \"score\": 22.234375}, {\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"Elector of Hanover. She was renowned for her intelligence and strong character, and her uncensored and liberal court attracted a great many scholars, including philosopher Gottfried Leibniz. Caroline was exposed to a lively intellectual environment quite different from anything she had experienced previously. Before she began her education under Sophia Charlotte's care, Caroline had received little formal education; her handwriting remained poor throughout her life. With her lively mind, Caroline developed into a scholar of considerable ability. She and Sophia Charlotte developed a strong relationship in which Caroline was treated as a surrogate daughter; the queen once declared Berlin was\\\"\", \"score\": 22.15625}, {\"long_text\": \"\\\"Anne, Princess Royal and Princess of Orange\\\" | \\\"Anne, Princess Royal and Princess of Orange Anne, Princess Royal and Princess of Orange (2 November 1709 – 12 January 1759) was the second child and eldest daughter of King George II of Great Britain and his consort Caroline of Ansbach. She was the spouse of William IV, Prince of Orange, the first hereditary stadtholder of all seven provinces of the Northern Netherlands. She was Regent of the Netherlands from 1751 until her death in 1759, exercising extensive powers on behalf of her son William V. She was known as an Anglophile, due to her English upbringing and family connections,\\\"\", \"score\": 21.984375}]}",
+        "reasoning": "Caroline of Ansbach's family was part of the House of Hohenzollern, specifically from the Margraviate of Brandenburg-Ansbach. Her father was John Frederick, Margrave of Brandenburg-Ansbach.",
+        "answer": "House of Hohenzollern"
+      },
+      {
+        "question": "What instrument did the artiste for Vi skall fara bortom månen play?",
+        "answer": "violin"
+      },
+      {
+        "question": "What was a notable work of the Chet Holifield Federal Building designer?",
+        "answer": "Transamerica Pyramid"
+      },
+      {
+        "question": "In which year did the publisher of Roald Dahl's Guide to Railway Safety cease to exist?",
+        "answer": "2001"
+      },
+      {
+        "question": "What year was the end of the manufacturer of the Hudson Wasp?",
+        "answer": "1954"
+      },
+      {
+        "question": "In what year did the South Korean car manufacturer that purchased the factor in 1995 dissolve?",
+        "answer": "1999"
+      },
+      {
+        "question": "Where did Peter and Paul Fortress' designer die?",
+        "answer": "Saint Petersburg"
+      },
+      {
+        "question": "The city where WNZK is located is in what county?",
+        "answer": "Wayne County"
+      },
+      {
+        "question": "When did the sports team having Gerónimo Berroa win their last world series?",
+        "answer": "1993"
+      },
+      {
+        "question": "what language is spoken by the actress who decided not to participate in April 15?",
+        "answer": "Hindi"
+      },
+      {
+        "question": "The alma mater of Mushtaq Minhas is an example of what kind of university?",
+        "answer": "private university"
+      },
+      {
+        "question": "What language was used by the cast member of Black Emanuelle?",
+        "answer": "Italian"
+      },
+      {
+        "question": "Jan Šindel's was born in what country?",
+        "answer": "Czech Republic"
+      },
+      {
+        "question": "In which year did the manufacturer of the Nord 1500 Griffon end?",
+        "answer": "1970"
+      },
+      {
+        "question": "Who was the founder of Titus Lucretius Tricipitinus' country of citizenship?",
+        "answer": "L. Junius Brutus"
+      },
+      {
+        "question": "When did the college Danny Manning played for start issuing engineering degrees?",
+        "answer": "1873"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

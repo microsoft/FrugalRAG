@@ -1,0 +1,225 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What was the record label of the songwriter of Up on Cripple Creek?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What was the record label of the songwriter of Up on Cripple Creek?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What was the record label of the songwriter of Up on Cripple Creek?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Up on Cripple Creek\\\" | \\\"Up on Cripple Creek \\\"\\\"Up on Cripple Creek\\\"\\\" is the fifth song on The Band's eponymous second album, \\\"\\\"The Band\\\"\\\". It was released as an (edited) single on Capitol 2635 in November 1969 and reached #25 on the \\\"\\\"Billboard\\\"\\\" Hot 100. \\\"\\\"Up on Cripple Creek\\\"\\\" was written by Band guitarist Robbie Robertson, with drummer Levon Helm singing lead vocal. A 1976 live performance of \\\"\\\"Up on Cripple Creek\\\"\\\" appears in the Band's concert film \\\"\\\"The Last Waltz\\\"\\\", as well as on the accompanying soundtrack album. In addition, live performances of the song appear on \\\"\\\"Before the Flood\\\"\\\", which records the\\\"\", \"score\": 22.96875}, {\"long_text\": \"\\\"Up on Cripple Creek\\\" | \\\"stating that the song has a \\\"\\\"New Orleans groove.\\\"\\\" Janovitz also regards the \\\"\\\"non-traditional, funky style\\\"\\\" of Garth Hudson's clavinet playing a precursor of Stevie Wonder's similar keyboard playing on \\\"\\\"Superstition.\\\"\\\" The hip hop duo Gang Starr sampled the rhythm track on their own song \\\"\\\"Beyond Comprehension.\\\"\\\" Up on Cripple Creek \\\"\\\"Up on Cripple Creek\\\"\\\" is the fifth song on The Band's eponymous second album, \\\"\\\"The Band\\\"\\\". It was released as an (edited) single on Capitol 2635 in November 1969 and reached #25 on the \\\"\\\"Billboard\\\"\\\" Hot 100. \\\"\\\"Up on Cripple Creek\\\"\\\" was written by Band guitarist Robbie Robertson, with\\\"\", \"score\": 21.75}, {\"long_text\": \"\\\"Up on Cripple Creek\\\" | \\\"Band's 1974 tour with Bob Dylan, as well as on the 2001 expanded edition of \\\"\\\"Rock of Ages\\\"\\\", originally released in 1972. \\\"\\\"Up on Cripple Creek\\\"\\\" is notable as it is one of the first instances of a Hohner clavinet being played with a wah-wah pedal. The riff can be heard after each chorus of the song. The clavinet, especially in tandem with a wah-wah pedal, was a sound that became famous in the early to mid-1970s, especially in funk music. The Band performed the song on the Ed Sullivan Show in November 1969. Drawing upon the Band's musical roots\u2014the\\\"\", \"score\": 21.234375}, {\"long_text\": \"\\\"Leo Kottke, Peter Lang & John Fahey\\\" | \\\"Lang as well as the label itself. Each guitarist plays four solo pieces. The Fahey tracks are re-recordings of four well-known Fahey songs. Kottke would later re-record \\\"\\\"Cripple Creek\\\"\\\" and \\\"\\\"Ice Miner\\\"\\\" (on \\\"\\\"Mudlark)\\\"\\\". The cover contains the names of the three guitarists in a circle in order that none is listed first. Therefore, various discographies note the title in different manners. The spine, although, reads \\\"\\\"Leo Kottke\/Peter Lang\/John Fahey\\\"\\\". The back cover contains a comical or absurd biography of each artist as well as a description of Takoma Records: \\\"\\\"Takoma Records is widely ignored as a freckle on the\\\"\", \"score\": 21.15625}, {\"long_text\": \"\\\"Gomez (band)\\\" | \\\"Beale Street and Bonnaroo Festivals in Tennessee, the Jazzfest in New Orleans and Sasquatch Festival in George, WA. A collection of A-side and B-sides and rarities titled \\\"\\\"Five Men in a Hut\\\"\\\" was released on 17 October 2006. The two-disc album consists of released and unreleased tracks recorded under the Hut\/Virgin label from 1998-2004. A DVD with music videos and interviews from their time with Hut was also released. In 2007, Gomez recorded a cover of The Band's hit \\\"\\\"Up On Cripple Creek\\\"\\\" for the tribute album \\\"\\\"\\\"\\\". Also their song \\\"\\\"How We Operate\\\"\\\" was played in the final scene\\\"\", \"score\": 21.109375}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages retrieved, I can see that the songwriter of \"Up on Cripple Creek\" is Robbie Robertson. Now, I need to find out his record label.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"record label of Robbie Robertson\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"record label of Robbie Robertson\", \"passages_this_hop\": [{\"long_text\": \"\\\"Robbie Robertson (album)\\\" | \\\"mythical place \\\"\\\"that moves around according to [the] clouds that cover [it]\\\"\\\", and imagined himself to be a wanderer who would narrate the events that would take place in this mythical locale. Robertson was signed to EMI Records by then head of A&R and longtime The Band fan Gary Gersh. Preliminary discussions and preproduction for Robertson's first solo album began in autumn 1984. Gersh then moved to Geffen Records, and convinced the label to buy out Robertson's contract with EMI. The first producer Robertson considered for production of the album was fellow Canadian Daniel Lanois. After meeting up with several\\\"\", \"score\": 26.140625}, {\"long_text\": \"\\\"Contact from the Underworld of Redboy\\\" | \\\"by the Hand (Red Alert Mix)\\\"\\\" Contact from the Underworld of Redboy Contact from the Underworld of Redboy is an album by Robbie Robertson that was released in 1998 by Capitol Records. The album is composed of music inspired by Aboriginal Canadian music (including traditional Aboriginal Canadian songs and chants) as well as modern rock, trip hop, and electronica, often integrated together, and features many guest artists. 1. \\\"\\\"The Sound Is Fading\\\"\\\" 2. \\\"\\\"The Code of Handsome Lake\\\"\\\" 3. \\\"\\\"Making a Noise\\\"\\\" 4. \\\"\\\"Unbound\\\"\\\" 5. \\\"\\\"Sacrifice\\\"\\\" 6. \\\"\\\"Rattlebone\\\"\\\" 7. \\\"\\\"Peyote Healing\\\"\\\" 8. \\\"\\\"In the Blood\\\"\\\" 9. \\\"\\\"Stomp Dance (Unity)\\\"\\\" 10.\\\"\", \"score\": 24.859375}, {\"long_text\": \"\\\"Robbie Robertson\\\" | \\\"members of the Hawks once again when they appeared as his backup band at two Woody Guthrie memorial concerts at Carnegie Hall in New York City in January 1968. Three of these performances were later released by Columbia Records on the LP \\\"\\\"A Tribute to Woody Guthrie, Vol. 1\\\"\\\" (1972). Over the course of the \\\"\\\"Basement Tapes\\\"\\\" period, the group had developed a sound of their own, and Grossman went to Los Angeles to shop the group to a major label, securing a contract with Capitol Records. The group went to New York to begin recording songs with music producer\\\"\", \"score\": 24.671875}, {\"long_text\": \"\\\"Contact from the Underworld of Redboy\\\" | \\\"Contact from the Underworld of Redboy Contact from the Underworld of Redboy is an album by Robbie Robertson that was released in 1998 by Capitol Records. The album is composed of music inspired by Aboriginal Canadian music (including traditional Aboriginal Canadian songs and chants) as well as modern rock, trip hop, and electronica, often integrated together, and features many guest artists. 1. \\\"\\\"The Sound Is Fading\\\"\\\" 2. \\\"\\\"The Code of Handsome Lake\\\"\\\" 3. \\\"\\\"Making a Noise\\\"\\\" 4. \\\"\\\"Unbound\\\"\\\" 5. \\\"\\\"Sacrifice\\\"\\\" 6. \\\"\\\"Rattlebone\\\"\\\" 7. \\\"\\\"Peyote Healing\\\"\\\" 8. \\\"\\\"In the Blood\\\"\\\" 9. \\\"\\\"Stomp Dance (Unity)\\\"\\\" 10. \\\"\\\"The Lights\\\"\\\" 11. \\\"\\\"Take Your Partner\\\"\", \"score\": 24.671875}, {\"long_text\": \"\\\"The Big Pink\\\" | \\\"The Big Pink The Big Pink are an English electronic rock band from London, consisting of multi-instrumentalists Robertson \\\"\\\"Robbie\\\"\\\" Furze, Lady Mary Charteris, Nicole Emery and Bradford Lee Conroy. Initially a duo, they signed to independent record label 4AD in 2009 and won the \\\"\\\"NME\\\"\\\" Philip Hall Radar Award for best new act. To date, they have released five singles, with their debut album \\\"\\\"A Brief History of Love\\\"\\\" released in September 2009 and its follow-up, \\\"\\\"Future This\\\"\\\" released in January 2012. Robertson \\\"\\\"Robbie\\\"\\\" Furze and Milo Cordell started working together as The Big Pink in 2008, taking their name\\\"\", \"score\": 24.59375}]}",
+        "next_thought": "I found that Robbie Robertson was signed to Capitol Records for his solo work. Therefore, the record label of the songwriter of \"Up on Cripple Creek\" is likely Capitol Records.",
+        "next_tool_name": "finish",
+        "next_tool_args": {}
+      },
+      {
+        "question": "What was a notable work of the Chet Holifield Federal Building designer?",
+        "answer": "Transamerica Pyramid"
+      },
+      {
+        "question": "What year saw the creation of the region where the county of Hertfordshire is located?",
+        "answer": "1994"
+      },
+      {
+        "question": "What instrument did the artiste for Vi skall fara bortom m\u00e5nen play?",
+        "answer": "violin"
+      },
+      {
+        "question": "When was the season of Greys Anatomy when Derek died filmed?",
+        "answer": "filming for the eleventh season would begin on July 25, 2014"
+      },
+      {
+        "question": "When was the university Elizabeth Harwood attended formed?",
+        "answer": "1972"
+      },
+      {
+        "question": "What is the enrollment at the university where Beneficence is located?",
+        "answer": "22,513 students"
+      },
+      {
+        "question": "In which county is the White Castle that Harold and Kumar visit?",
+        "answer": "Camden County"
+      },
+      {
+        "question": "What university is Anthony Marten's college part of?",
+        "answer": "college of the University of Cambridge"
+      },
+      {
+        "question": "What year was the end of the manufacturer of the Hudson Wasp?",
+        "answer": "1954"
+      },
+      {
+        "question": "When was the abolishment of the studio that distributed The Game?",
+        "answer": "1999"
+      },
+      {
+        "question": "Who mothered the hostess of the party where Chopin met George Sand?",
+        "answer": "Cosima Wagner"
+      },
+      {
+        "question": "What year did the maker of the CMA CGM Vela dissolve?",
+        "answer": "1999"
+      },
+      {
+        "question": "In what year did the South Korean car manufacturer that purchased the factor in 1995 dissolve?",
+        "answer": "1999"
+      },
+      {
+        "question": "When did Tito first visit the person who laid claim to Eritrea and Italian Somaliland in a letter to Franklin D. Roosevelt?",
+        "answer": "1954"
+      },
+      {
+        "question": "Where was the place where Chopin's father got a teaching position moved to?",
+        "answer": "Kazimierz Palace"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!<\/desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.<\/desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What was the record label of the songwriter of Up on Cripple Creek?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What was the record label of the songwriter of Up on Cripple Creek?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What was the record label of the songwriter of Up on Cripple Creek?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Up on Cripple Creek\\\" | \\\"Up on Cripple Creek \\\"\\\"Up on Cripple Creek\\\"\\\" is the fifth song on The Band's eponymous second album, \\\"\\\"The Band\\\"\\\". It was released as an (edited) single on Capitol 2635 in November 1969 and reached #25 on the \\\"\\\"Billboard\\\"\\\" Hot 100. \\\"\\\"Up on Cripple Creek\\\"\\\" was written by Band guitarist Robbie Robertson, with drummer Levon Helm singing lead vocal. A 1976 live performance of \\\"\\\"Up on Cripple Creek\\\"\\\" appears in the Band's concert film \\\"\\\"The Last Waltz\\\"\\\", as well as on the accompanying soundtrack album. In addition, live performances of the song appear on \\\"\\\"Before the Flood\\\"\\\", which records the\\\"\", \"score\": 22.96875}, {\"long_text\": \"\\\"Up on Cripple Creek\\\" | \\\"stating that the song has a \\\"\\\"New Orleans groove.\\\"\\\" Janovitz also regards the \\\"\\\"non-traditional, funky style\\\"\\\" of Garth Hudson's clavinet playing a precursor of Stevie Wonder's similar keyboard playing on \\\"\\\"Superstition.\\\"\\\" The hip hop duo Gang Starr sampled the rhythm track on their own song \\\"\\\"Beyond Comprehension.\\\"\\\" Up on Cripple Creek \\\"\\\"Up on Cripple Creek\\\"\\\" is the fifth song on The Band's eponymous second album, \\\"\\\"The Band\\\"\\\". It was released as an (edited) single on Capitol 2635 in November 1969 and reached #25 on the \\\"\\\"Billboard\\\"\\\" Hot 100. \\\"\\\"Up on Cripple Creek\\\"\\\" was written by Band guitarist Robbie Robertson, with\\\"\", \"score\": 21.75}, {\"long_text\": \"\\\"Up on Cripple Creek\\\" | \\\"Band's 1974 tour with Bob Dylan, as well as on the 2001 expanded edition of \\\"\\\"Rock of Ages\\\"\\\", originally released in 1972. \\\"\\\"Up on Cripple Creek\\\"\\\" is notable as it is one of the first instances of a Hohner clavinet being played with a wah-wah pedal. The riff can be heard after each chorus of the song. The clavinet, especially in tandem with a wah-wah pedal, was a sound that became famous in the early to mid-1970s, especially in funk music. The Band performed the song on the Ed Sullivan Show in November 1969. Drawing upon the Band's musical roots\u2014the\\\"\", \"score\": 21.234375}, {\"long_text\": \"\\\"Leo Kottke, Peter Lang & John Fahey\\\" | \\\"Lang as well as the label itself. Each guitarist plays four solo pieces. The Fahey tracks are re-recordings of four well-known Fahey songs. Kottke would later re-record \\\"\\\"Cripple Creek\\\"\\\" and \\\"\\\"Ice Miner\\\"\\\" (on \\\"\\\"Mudlark)\\\"\\\". The cover contains the names of the three guitarists in a circle in order that none is listed first. Therefore, various discographies note the title in different manners. The spine, although, reads \\\"\\\"Leo Kottke\/Peter Lang\/John Fahey\\\"\\\". The back cover contains a comical or absurd biography of each artist as well as a description of Takoma Records: \\\"\\\"Takoma Records is widely ignored as a freckle on the\\\"\", \"score\": 21.15625}, {\"long_text\": \"\\\"Gomez (band)\\\" | \\\"Beale Street and Bonnaroo Festivals in Tennessee, the Jazzfest in New Orleans and Sasquatch Festival in George, WA. A collection of A-side and B-sides and rarities titled \\\"\\\"Five Men in a Hut\\\"\\\" was released on 17 October 2006. The two-disc album consists of released and unreleased tracks recorded under the Hut\/Virgin label from 1998-2004. A DVD with music videos and interviews from their time with Hut was also released. In 2007, Gomez recorded a cover of The Band's hit \\\"\\\"Up On Cripple Creek\\\"\\\" for the tribute album \\\"\\\"\\\"\\\". Also their song \\\"\\\"How We Operate\\\"\\\" was played in the final scene\\\"\", \"score\": 21.109375}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages retrieved, I can see that the songwriter of \"Up on Cripple Creek\" is Robbie Robertson. Now, I need to find out his record label.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"record label of Robbie Robertson\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"record label of Robbie Robertson\", \"passages_this_hop\": [{\"long_text\": \"\\\"Robbie Robertson (album)\\\" | \\\"mythical place \\\"\\\"that moves around according to [the] clouds that cover [it]\\\"\\\", and imagined himself to be a wanderer who would narrate the events that would take place in this mythical locale. Robertson was signed to EMI Records by then head of A&R and longtime The Band fan Gary Gersh. Preliminary discussions and preproduction for Robertson's first solo album began in autumn 1984. Gersh then moved to Geffen Records, and convinced the label to buy out Robertson's contract with EMI. The first producer Robertson considered for production of the album was fellow Canadian Daniel Lanois. After meeting up with several\\\"\", \"score\": 26.140625}, {\"long_text\": \"\\\"Contact from the Underworld of Redboy\\\" | \\\"by the Hand (Red Alert Mix)\\\"\\\" Contact from the Underworld of Redboy Contact from the Underworld of Redboy is an album by Robbie Robertson that was released in 1998 by Capitol Records. The album is composed of music inspired by Aboriginal Canadian music (including traditional Aboriginal Canadian songs and chants) as well as modern rock, trip hop, and electronica, often integrated together, and features many guest artists. 1. \\\"\\\"The Sound Is Fading\\\"\\\" 2. \\\"\\\"The Code of Handsome Lake\\\"\\\" 3. \\\"\\\"Making a Noise\\\"\\\" 4. \\\"\\\"Unbound\\\"\\\" 5. \\\"\\\"Sacrifice\\\"\\\" 6. \\\"\\\"Rattlebone\\\"\\\" 7. \\\"\\\"Peyote Healing\\\"\\\" 8. \\\"\\\"In the Blood\\\"\\\" 9. \\\"\\\"Stomp Dance (Unity)\\\"\\\" 10.\\\"\", \"score\": 24.859375}, {\"long_text\": \"\\\"Robbie Robertson\\\" | \\\"members of the Hawks once again when they appeared as his backup band at two Woody Guthrie memorial concerts at Carnegie Hall in New York City in January 1968. Three of these performances were later released by Columbia Records on the LP \\\"\\\"A Tribute to Woody Guthrie, Vol. 1\\\"\\\" (1972). Over the course of the \\\"\\\"Basement Tapes\\\"\\\" period, the group had developed a sound of their own, and Grossman went to Los Angeles to shop the group to a major label, securing a contract with Capitol Records. The group went to New York to begin recording songs with music producer\\\"\", \"score\": 24.671875}, {\"long_text\": \"\\\"Contact from the Underworld of Redboy\\\" | \\\"Contact from the Underworld of Redboy Contact from the Underworld of Redboy is an album by Robbie Robertson that was released in 1998 by Capitol Records. The album is composed of music inspired by Aboriginal Canadian music (including traditional Aboriginal Canadian songs and chants) as well as modern rock, trip hop, and electronica, often integrated together, and features many guest artists. 1. \\\"\\\"The Sound Is Fading\\\"\\\" 2. \\\"\\\"The Code of Handsome Lake\\\"\\\" 3. \\\"\\\"Making a Noise\\\"\\\" 4. \\\"\\\"Unbound\\\"\\\" 5. \\\"\\\"Sacrifice\\\"\\\" 6. \\\"\\\"Rattlebone\\\"\\\" 7. \\\"\\\"Peyote Healing\\\"\\\" 8. \\\"\\\"In the Blood\\\"\\\" 9. \\\"\\\"Stomp Dance (Unity)\\\"\\\" 10. \\\"\\\"The Lights\\\"\\\" 11. \\\"\\\"Take Your Partner\\\"\", \"score\": 24.671875}, {\"long_text\": \"\\\"The Big Pink\\\" | \\\"The Big Pink The Big Pink are an English electronic rock band from London, consisting of multi-instrumentalists Robertson \\\"\\\"Robbie\\\"\\\" Furze, Lady Mary Charteris, Nicole Emery and Bradford Lee Conroy. Initially a duo, they signed to independent record label 4AD in 2009 and won the \\\"\\\"NME\\\"\\\" Philip Hall Radar Award for best new act. To date, they have released five singles, with their debut album \\\"\\\"A Brief History of Love\\\"\\\" released in September 2009 and its follow-up, \\\"\\\"Future This\\\"\\\" released in January 2012. Robertson \\\"\\\"Robbie\\\"\\\" Furze and Milo Cordell started working together as The Big Pink in 2008, taking their name\\\"\", \"score\": 24.59375}]}\n\n[[ ## thought_1 ## ]]\nI found that Robbie Robertson was signed to Capitol Records for his solo work. Therefore, the record label of the songwriter of \"Up on Cripple Creek\" is likely Capitol Records.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "Robbie Robertson, the songwriter of \"Up on Cripple Creek,\" was signed to Capitol Records for his solo work. Therefore, the record label of the songwriter of \"Up on Cripple Creek\" is likely Capitol Records.",
+        "answer": "Capitol Records"
+      },
+      {
+        "question": "When was the university Elizabeth Harwood attended formed?",
+        "answer": "1972"
+      },
+      {
+        "question": "What instrument did the artiste for Vi skall fara bortom m\u00e5nen play?",
+        "answer": "violin"
+      },
+      {
+        "question": "In what year did the South Korean car manufacturer that purchased the factor in 1995 dissolve?",
+        "answer": "1999"
+      },
+      {
+        "question": "What year saw the creation of the region where the county of Hertfordshire is located?",
+        "answer": "1994"
+      },
+      {
+        "question": "When was the abolishment of the studio that distributed The Game?",
+        "answer": "1999"
+      },
+      {
+        "question": "Where was the place where Chopin's father got a teaching position moved to?",
+        "answer": "Kazimierz Palace"
+      },
+      {
+        "question": "What year was the end of the manufacturer of the Hudson Wasp?",
+        "answer": "1954"
+      },
+      {
+        "question": "When did Tito first visit the person who laid claim to Eritrea and Italian Somaliland in a letter to Franklin D. Roosevelt?",
+        "answer": "1954"
+      },
+      {
+        "question": "What university is Anthony Marten's college part of?",
+        "answer": "college of the University of Cambridge"
+      },
+      {
+        "question": "What was a notable work of the Chet Holifield Federal Building designer?",
+        "answer": "Transamerica Pyramid"
+      },
+      {
+        "question": "What is the enrollment at the university where Beneficence is located?",
+        "answer": "22,513 students"
+      },
+      {
+        "question": "In which county is the White Castle that Harold and Kumar visit?",
+        "answer": "Camden County"
+      },
+      {
+        "question": "What year did the maker of the CMA CGM Vela dissolve?",
+        "answer": "1999"
+      },
+      {
+        "question": "Who mothered the hostess of the party where Chopin met George Sand?",
+        "answer": "Cosima Wagner"
+      },
+      {
+        "question": "When was the season of Greys Anatomy when Derek died filmed?",
+        "answer": "filming for the eleventh season would begin on July 25, 2014"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

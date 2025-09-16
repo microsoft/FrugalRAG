@@ -1,0 +1,156 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What year was the end of the company which made the Hudson Commodore?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What year was the end of the company which made the Hudson Commodore?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What year was the end of the company which made the Hudson Commodore?\", \"passages_this_hop\": [{\"long_text\": \"Hudson Commodore\\nyear, AMC chose to hand over the Hudson styling contract to Richard Arbib, who created a unique look for the Hudson line based on what he termed as \\\"V-Line\\\" styling. The move failed to attract new customers to Hudson, and production fell beneath the brand's disastrous 1955 model year product.\\nIn its final year, the Hudson brand was pared down to a single model, the Hudson Hornet in two trim levels, the top-level Custom and the Super. However, during the show car\", \"score\": 0.82666015625}, {\"long_text\": \"Hudson (steam automobile)\\nThe Hudson was an automobile built in Hudson, Michigan by the Bean-Chamberlain Manufacturing Company from 1901-02. It had no relationship to the Hudson Motor Car Company of Detroit, Michigan. The Hudson was a light steamer, with a vertical two-cylinder engine, single chain drive, and tiller steering.\", \"score\": 0.83349609375}, {\"long_text\": \"Hudson Commodore\\nonly nominal trim changes on the exterior of the cars in successive model years. A new a Custom Commodore convertible model debuted in mid-April 1950.\\nThird generation 1951.\\nIn 1951, Hudson introduced a new I6 engine and offered General Motors' Hydra-Matic as an optional transmission.\\nThird generation 1952.\\nIn its final year in 1952, the Commodore was split into a Six series and an Eight series. The exterior received another trim change, but by the end of 1953, the Step-Down styling\", \"score\": 0.83642578125}, {\"long_text\": \"Hudson Motor Car Company\\nThe Hudson Motor Car Company made Hudson and other brand automobiles in Detroit, Michigan, from 1909 to 1954. In 1954, Hudson merged with Nash-Kelvinator to form American Motors Corporation (AMC). The Hudson name was continued through the 1957 model year, after which it was discontinued.\\nCompany strategy.\\nThe name \\\"Hudson\\\" came from Joseph L. Hudson, a Detroit department store entrepreneur and founder of Hudson's department store, who provided the necessary capital and gave permission for the\", \"score\": 0.8369140625}, {\"long_text\": \"Hudson Commodore\\nThe Hudson Commodore is an automobile which was produced by the Hudson Motor Car Company of Detroit, Michigan between 1941 and 1952. During its time in production, the Commodore was the largest and most luxurious Hudson model.\\nFirst generation.\\nFirst generation 1941.\\nThe Commodore and the Commodore Custom names debuted in Hudson's 1941 model line. Commodore models rode exclusively on the wheelbase, while Commodore Customs rode either on the company's wheelbase for coupes, or for sedans. The Commodore was powered by Hudson's\", \"score\": 0.84423828125}]}\n\n[[ ## thought_0 ## ]]\nI will now search for relevant documents using the search query \"What year was the end of the company which made the Hudson Commodore?\" and look for the passage that mentions the end of the Hudson Motor Car Company.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What year was the end of the company which made the Hudson Commodore? and end of Hudson Motor Car Company\", \"trajectory_id\": \"0\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What year was the end of the company which made the Hudson Commodore? and end of Hudson Motor Car Company\", \"passages_this_hop\": [{\"long_text\": \"A. E. Barit\\nAbraham Edward Barit (August 30, 1890 – July 14, 1974) was an American industrialist who served as the president and CEO of the Hudson Motor Car Company from 1936 to 1954 when Hudson merged with Nash Motors to form American Motors Corporation. Barit served on the board of AMC following the merger of the two automakers.\\nCareer.\\nBarit was born to poor parents in Jersey City, New Jersey. He was briefly the secretary for the purchasing agent at the Chalmers-Detroit Motor Company.\", \"score\": 0.8388671875}, {\"long_text\": \"Hudson Commodore\\nfacelift. This included concealed running boards, modestly enlarged front grilles, and external trim arrangements. Hudson offered an optional \\\"Drive-Master\\\" vacuum assisted clutch and servo-operated transmission with three modes: \\\"automatic\\\" shifting and clutching, automated clutching only, or fully manual.\\nThe firm promoted its economy over luxury during the shortened model year that ended in January, 1942, as U.S. war production accelerated.\\nSecond generation.\\nSecond generation 1946.\\nHudson began its postwar automobile production on August 30, 1945\", \"score\": 0.8408203125}, {\"long_text\": \"Hudson Motor Car Company\\nwas formed to be the exclusive distributor of Hudson and Essex motor vehicles in Queensland. The bodies were made by Holden’s Motor Body Builders in Brisbane. (In Holden's home state of South Australia Holden's made bodies for Austin, Buick, Chevrolet, Cleveland, Dodge, Fiat, Oakland, Oldsmobile, Overland, Reo, Studebaker, and Willys Knight.) \\nIn 1927 assembly of Hudson and Essex vehicles began in Victoria by Neal's Motors of Port Melbourne. The contract to build bodies was initially given to T.J\", \"score\": 0.8427734375}, {\"long_text\": \"Hudson Motor Car Company\\n. For 1955, for the first time Hudson offered a V8 engine, a Packard-designed and -built engine rated at purchased by Hudson and Nash. All cars with the Packard V8 also used Packard's Ultramatic automatic transmission as an option costing $494 (equivalent to approximately $); the Nash 3-speed manual was also available at US$295.\\nEnd of the line.\\nThe last Hudson rolled off the Kenosha assembly line on June 25, 1957. There were no ceremonies, because at that point there was still\", \"score\": 0.8427734375}, {\"long_text\": \"Hudson Commodore\\nwas beginning to look outdated. Instead of redesigning the senior Hudsons, company President A. E. Barit pushed ahead with the firm's plan for the Jet compact.\\nBeginning in 1953, Hudson would field only the Hudson Hornet and Hudson Wasp line, and introduce the ill-fated Hudson Jet compact car line.\\n1957 showcar.\\nFollowing Hudson's merger with Nash to form American Motors Corporation (AMC) in 1954, Hudson automobile production was switched to AMC's facility in Kenosha, Wisconsin. Following a weak 1955 model\", \"score\": 0.84375}]}\n\n[[ ## thought_1 ## ]]\nI will now search for the year when Hudson automobile production was switched to AMC's facility in Kenosha, Wisconsin.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Year Hudson automobile production was switched to AMC's facility in Kenosha, Wisconsin\", \"trajectory_id\": \"1\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Year Hudson automobile production was switched to AMC's facility in Kenosha, Wisconsin\", \"passages_this_hop\": [{\"long_text\": \"Kenosha, Wisconsin\\nCar of The Year\\\" award from \\\"Motor Trend\\\". Two decades earlier, AMC's 1963 Rambler Classic had also received the award. In 1987, Renault sold its controlling interest in AMC to Chrysler Corporation, which had already contracted with AMC for the production of its M-body midsized cars at the Kenosha plant. The AMC Lakefront plant (1960–88), a smaller facility, was demolished in 1990 (a chimney-demolition ceremony that June drew 10,000 spectators) and was redeveloped into HarborPark. The area now hosts\", \"score\": 0.8486328125}, {\"long_text\": \"Kenosha Engine\\nKenosha Engine was an automobile and engine factory in Kenosha, Wisconsin. First opened for automobile production in 1902 by the Thomas B. Jeffery Company and later operated by American Motors, the Kenosha Engine Plant saw all operations halted by Chrysler and it was permanently closed in October 2010 and demolished between December 2012 and April 2013.\\nHistory.\\nThe factory was opened in 1902 by the Thomas B. Jeffery Company that evolved into Nash Motors in 1916, American Motors Corporation (AMC) in 1954, and was acquired by\", \"score\": 0.84912109375}, {\"long_text\": \"Nash Rambler\\nThe Nash Rambler is a North American automobile that was produced by the Nash Motors division of Nash-Kelvinator Corporation from 1950 to 1954 in sedan, wagon and fixed-profile convertible body styles.\\nOn May 1, 1954, Nash-Kelvinator merged with the Hudson Motor Car Company to form American Motors Corporation (AMC). The Nash Rambler was then built by AMC in Kenosha, Wisconsin until 1955.\\nThe Nash Rambler established a new segment in the automobile market and is widely acknowledged to be the\", \"score\": 0.85009765625}, {\"long_text\": \"American Motors Corporation\\n. As part of its acquisition of AMC in 1987, Chrysler Corporation took ownership of the Holmes facility and its manufacturing business, but closed the operation on September 16, 1988. The industrial facilities were cleaned of their environmental contaminants in 2005, in preparation for a new highway interchange to be built on the site.\\n- \\\"Kenosha \\\"Lakefront\\\" (Kenosha, Wisconsin) Plant\\\" – The AMC plant in downtown Kenosha along Lake Michigan was razed, and after reclamation the land was used for new development. At the\", \"score\": 0.8564453125}, {\"long_text\": \"Hudson Hornet\\nThe Hudson Hornet is a full-sized automobile which was produced by the Hudson Motor Car Company of Detroit, Michigan, between 1951 and 1954 and then by American Motors Corporation (AMC) in Kenosha, Wisconsin, and marketed under the Hudson brand between 1955 and 1957.\\nThe first-generation Hudson Hornets featured a functional \\\"step-down\\\" design with dropped floorpan and a chassis with a lower center of gravity than contemporary vehicles that helped the car handle well – a bonus for racing. The Hornet\", \"score\": 0.861328125}]}\n\n[[ ## thought_2 ## ]]\nI will now determine the year when Hudson automobile production was switched to AMC's facility in Kenosha, Wisconsin based on the previous observations.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"Year Hudson automobile production was switched to AMC's facility in Kenosha, Wisconsin\", \"trajectory_id\": \"1\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"Year Hudson automobile production was switched to AMC's facility in Kenosha, Wisconsin\", \"passages_this_hop\": [{\"long_text\": \"July 1909\\n(d. 1996); and Earl Butz, controversial U.S. Secretary of Agriculture, 1971–76; in Albion, Indiana (d. 2008)\\nJuly 3, 1909 (Saturday).\\n- The first Hudson automobile, the \\\"Model 20\\\", came off the assembly line in Detroit. The last Hudson was manufactured in 1957, after the company merged into AMC.\\n- Federal charges were filed against the manufacturers of Koca Nola, the third most popular cola after Coke and Pepsi, after a one-gallon jug of\", \"score\": 0.8330078125}, {\"long_text\": \"Renault Alliance\\nalso marketed a sports version called Renault GTA for 1987. A total of 623,573 vehicles were manufactured in Kenosha, Wisconsin. Production was discontinued after Chrysler's acquisition of AMC in 1987.\\nThe Alliance and Encore derived from AMC's 1979 partnership with Renault, which held controlling stake in AMC. The cars featured exterior styling by Robert Opron, director of Renault Styling, and interior design by AMC's Richard Teague, with both the Alliance two-door sedan and the convertible body styles uniquely developed by AMC.\\nHistory.\", \"score\": 0.8330078125}, {\"long_text\": \"Dodge\\nAvenue) continued to sell. Chrysler's then executive vice president for manufacturing, Steve Sharf, met with officials at American Motors (AMC) to use the extra capacity at an assembly plant in Kenosha, Wisconsin to build the cars. Chrysler's tooling was moved from St. Louis to Kenosha, and from 1987 until 1989 about 250,000 Chrysler and Dodge models were built by AMC at a lower cost than Chrysler could. This relationship evolved into Chrysler's purchase of AMC in 1987. Following the demise of the Dodge St. Regis R\", \"score\": 0.83349609375}, {\"long_text\": \"Hudson Hornet\\nAMC). Following the 1954 merger of the Hudson Motor Car Company and Nash-Kelvinator, Hudson's Detroit manufacturing facility was closed and production of Hudson models was shifted to Nash's Wisconsin factory. No longer built on the \\\"Step-down\\\" platform, all Hudsons were now based on the senior Nash models, but featuring distinctive Hudson styling themes.\\nSecond generation 1955.\\nThe new models were delayed to a January 1955 introduction, \\\"as American Motors engineers work out the problem of making two completely different looking automobiles\", \"score\": 0.8349609375}, {\"long_text\": \"Kenosha, Wisconsin\\nthe first automobile to use a steering wheel, rather than the then-common tiller-controlled steering. Auto executive Charles W. Nash purchased Jeffrey in 1916 and the new company became Nash Motors. In May 1954, Nash acquired Detroit-based Hudson and the new firm was named American Motors Corporation. A west side park and an elementary school are named for Charles W. Nash.\\nIn partnership with French automaker Renault, AMC manufactured several models in Kenosha in the early 1980s, including the Alliance, which won the 1983 \\\"\", \"score\": 0.8427734375}]}\n\n[[ ## thought_3 ## ]]\nI will now conclude that the year when Hudson automobile production was switched to AMC's facility in Kenosha, Wisconsin is 1954.\n\n[[ ## tool_name_3 ## ]]\nfinish\n\n[[ ## tool_args_3 ## ]]\n{}\n\n[[ ## observation_3 ## ]]\nCompleted.",
+        "reasoning": "The question asks for the year when the company that made the Hudson Commodore ended. To answer this question, I will first search for relevant documents using the search query \"What year was the end of the company which made the Hudson Commodore?\". I will then analyze the passages returned by the search to determine the year when the company ended. If I am unable to find the answer in the initial search, I will perform additional searches to gather more information.",
+        "answer": "1954"
+      },
+      {
+        "question": "Who did the members of Kassetten's performers collaborate with?",
+        "answer": "the Birthday Party"
+      },
+      {
+        "question": "Who produced the series A-Haunting We Will Go was part of?",
+        "answer": "Warner Bros."
+      },
+      {
+        "question": "Who is the mother of the director of Rogue Trader?",
+        "answer": "Melissa Stribling"
+      },
+      {
+        "question": "In which county is the White Castle that Harold and Kumar visit?",
+        "answer": "Camden County"
+      },
+      {
+        "question": "When did the country formerly known as Zaire become independent?",
+        "answer": "1960"
+      },
+      {
+        "question": "What is the family of the current leader of Saudi Arabia?",
+        "answer": "Al Saud"
+      },
+      {
+        "question": "When was the university Elizabeth Harwood attended formed?",
+        "answer": "1972"
+      },
+      {
+        "question": "During what years did Frédéric take lessons at the academy where Chopin's father once had a teaching position?",
+        "answer": "1823 to 1826"
+      },
+      {
+        "question": "What language is used by the director of Thenum Vayambum?",
+        "answer": "Hindi"
+      },
+      {
+        "question": "When did the college Danny Manning played for start issuing engineering degrees?",
+        "answer": "1873"
+      },
+      {
+        "question": "When was the abolishment of the studio that distributed The Game?",
+        "answer": "1999"
+      },
+      {
+        "question": "What year saw the creation of the region where the county of Hertfordshire is located?",
+        "answer": "1994"
+      },
+      {
+        "question": "When did the institute that gives out the Elliott Cresson Medal award open?",
+        "answer": "1824"
+      },
+      {
+        "question": "Who was thee first president of the association that wrote the code of ethics for psychology?",
+        "answer": "G. Stanley Hall"
+      },
+      {
+        "question": "When was the inception of the record label which released W?",
+        "answer": "2001"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

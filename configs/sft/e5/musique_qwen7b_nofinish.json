@@ -1,0 +1,27 @@
+{
+    "model": {
+        "model_name_or_path": "Qwen/Qwen2.5-7B-Instruct",
+        "answer_model": "Qwen/Qwen2.5-7B-Instruct",
+        "no_finish": true,
+        "max_iters": 5,
+        "max_tokens": 512,
+        "max_retries": 4
+    },
+    "data": {
+        "dataset_name": "musique",
+        "input_file": "../data/frugalrag/sft_data/e5/musique/qwen7b/m5_nofinish/train_sft.json",
+        "num_examples": 1000
+    },
+    "paths": {
+        "output_path": "../data/frugalrag/sft/e5/musique/qwen7b/m5_nofinish/",
+        "prompt_path": "src/prompts/e5/musique/qwen7b/m5_nofinish/ans/bootstrapped_1.json"
+    },
+    "sft": {
+        "epochs": 1,
+        "max_seq_len": 4096,
+        "batch_size": 4,
+        "grad_acc": 2,
+        "warmup": 20,
+        "lr": 2e-5
+    }
+}

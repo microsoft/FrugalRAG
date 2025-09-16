@@ -1,0 +1,159 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Do Rhescuporis Ii and Mcallister Hull share the same nationality?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Do Rhescuporis Ii and Mcallister Hull share the same nationality?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Do Rhescuporis Ii and Mcallister Hull share the same nationality?\", \"passages_this_hop\": [{\"long_text\": \"\\\"McAllister Hull\\\" | \\\"was Death, and Hell followed with him.” He was also the author of a 1969 textbook, \\\"\\\"The Calculus of Physics\\\"\\\". Hull was married for 65 years to Mary Muska Hull, who survived him. They had two children, John Hull and Wendy McCabe, and three grandchildren, Isaac Hull, Damaris McDonald and Ursula McCabe. In 2007 he listed his pastimes as “studying serious music, theater and art history” and said that in earlier years he had been interested in “flying light planes, mountain hiking, skydiving and building furniture.” McAllister Hull McAllister Hull (September 1, 1923 – February 9, 2011) was an American\\\"\", \"score\": 17.796875}, {\"long_text\": \"\\\"McAllister Hull\\\" | \\\"McAllister Hull McAllister Hull (September 1, 1923 – February 9, 2011) was an American theoretical physicist who took part in the creation of the atomic bomb that was dropped over Nagasaki in 1945, ending World War II. Hull was born on September 1, 1923, in Birmingham, Alabama. In his memoir, he describes how, in his boyhood, he read Isaac Asimov, Robert Heinlein, and other science-fiction writers, and discovered physics and Albert Einstein while doing school projects. In a 2004 letter to the \\\"\\\"New York Review of Books\\\"\\\", Hull wrote that his father had “tried to enlist” in General John J.\\\"\", \"score\": 17.78125}, {\"long_text\": \"\\\"McAllister Hull\\\" | \\\"technology, it was put on the market in 2009 by MacVision Technologies, a joint venture by the University of New Mexico and Select Universities Technology, Inc. Hull said in 2007 that he had never met any survivors of Hiroshima or Nagasaki. “I have had Japanese students in my courses, perhaps children of survivors, in which I discussed the bombings,” he said. “The students seemed to accept the bombings as justified by the Japanese aggression.” He moved to Charleston, South Carolina, in 2007. At the time of his death, on February 9, 2011, aged 87, he was Professor Emeritus of Physics\\\"\", \"score\": 16.328125}, {\"long_text\": \"\\\"McAllister Hull\\\" | \\\"“for more than 30 years” called Physics and Society. He had “hoped to promote closer relations between the arts and sciences at the University of New Mexico by creating a modern Aristotelian program recognizing the unity of knowledge. I came close, but ran out of time.” In his later years, when his wife began to lose her eyesight owing to macular degeneration, Hull created a device intended to improve her vision by “direct[ing] light to portions of the retina unaffected by the disease to compensate for the loss in the central vision field.” Patented and marketed as the MacVision lens\\\"\", \"score\": 16.234375}, {\"long_text\": \"\\\"McAllister Hull\\\" | \\\"the State University of New York at Buffalo, where he was the dean of graduate and professional education, and at Oregon State University. He moved to Albuquerque in 1977 to take up the position of provost at the University of New Mexico, where he also taught physics. He remained as provost until the mid 1980s, and retired from UNM in 1989. Hull played an instrumental role in the establishment of UNM’s optics program. He was also a strong supporter of the university's Peace Studies program. In 2007 he said that his greatest professional pride was a course he had taught\\\"\", \"score\": 16.171875}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages, it seems that McAllister Hull was an American. However, there is no information provided about Rhescuporis Ii's nationality. I will need to search for more information on Rhescuporis Ii.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Rhescuporis Ii nationality\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Rhescuporis Ii nationality\", \"passages_this_hop\": [{\"long_text\": \"\\\"Tiberius Julius Rhescuporis II\\\" | \\\"Tiberius Julius Rhescuporis II Tiberius Julius Rhescuporis II Philocaesar Philoromaios Eusebes, also known as Rhescuporis II (, \\\"\\\"Philocaesar Philoromaios Eusebes\\\"\\\", means \\\"\\\"lover of Caesar, lover of Rome who is the Pius one\\\"\\\", flourished 3rd century – died 227) was a prince and Roman Client King of the Bosporan Kingdom. Rhescuporis II was the first-born son to Bosporan King Sauromates II by an unnamed woman and was of Greek, Iranian and Roman ancestry. His brother was Cotys III. Rhescuporis II was named in honor of Rhescuporis I, a paternal ancestor of his and a previous Bosporan King. When Sauromates II died\\\"\", \"score\": 24.609375}, {\"long_text\": \"\\\"Rhescuporis II (Astaean)\\\" | \\\"Rhescuporis II (Astaean) Rhescuporis I was king of the Odrysian kingdom of Thrace from ca. 18 BC to ca. 13 BC, in succession to his father Cotys VII. In 48 BC, before he became king, he led a body of auxiliaries his father sent to the aid of Pompey for use in the Roman civil war against Julius Caesar. After Cotys VII's death he became king, at first under the guardianship of his uncle Rhoemetalces I, his father's younger brother. Rhescuporis died in 13 BC when he was defeated and slain in battle by Vologaeses, chief of the Thracian Bessi,\\\"\", \"score\": 23.984375}, {\"long_text\": \"\\\"Rhescuporis II\\\" | \\\"Rhescuporis II Rhescuporis II was king of half of the Odrysian kingdom of Thrace from 12 to 18, in succession to his brother Rhoemetalces I, and briefly ruler of the entire realm thereafter, usurping the other half from nephew Cotys VIII. He was a son of the earlier Thracian king Cotys VI and the younger brother of kings Cotys VII and Rhoemetalces I. The Roman Historian Tacitus describes his character as \\\"\\\"treacherous\\\"\\\". On the death of Rhoemetalces, Emperor Augustus divided Thrace into two separate kingdoms, one half for Cotys VIII to rule and the other half for Rhescuporis II. Tacitus\\\"\", \"score\": 23.828125}, {\"long_text\": \"\\\"Rhescuporis II (Astaean)\\\" | \\\"who was a leader in the revolt against the Romans in that year. He left no heir, and so was succeeded by Rhoemetalces, who fled Thrace during the revolt and was restored to power by Augustus after it was suppressed. Rhescuporis II (Astaean) Rhescuporis I was king of the Odrysian kingdom of Thrace from ca. 18 BC to ca. 13 BC, in succession to his father Cotys VII. In 48 BC, before he became king, he led a body of auxiliaries his father sent to the aid of Pompey for use in the Roman civil war against Julius Caesar. After\\\"\", \"score\": 23.234375}, {\"long_text\": \"\\\"Tiberius Julius Rhescuporis II\\\" | \\\"in 210/211, Rhescuporis II succeeded his father. He reigned as Bosporan King until his death in 227. His royal title on coins is in Greek: \\\"\\\"ΒΑΣΙΛΕΩΣ ΡΗΣΚΟΥΠΟΡΙΔΟΣ\\\"\\\" or \\\"\\\"of King Rhescuporis\\\"\\\". During his reign, Rhescuporis II co-ruled with his son Rhescuporis III from an unnamed wife. He was a contemporary to the rule of the Roman Emperors Caracalla, Macrinus, Elagabalus and Alexander Severus. Little is known of the life and reign of Rhescuporis II. In the year of his death and his son also died. Rhescuporis II was succeeded by Cotys III. Tiberius Julius Rhescuporis II Tiberius Julius Rhescuporis II\\\"\", \"score\": 23.03125}]}\n\n[[ ## thought_1 ## ]]\nThe search results indicate that Rhescuporis II was a Bosporan King, which suggests he was likely of Greek, Iranian, and Roman descent, but there is no clear indication of his nationality. McAllister Hull, on the other hand, is explicitly stated to be American. Since we don't have enough information about Rhescuporis II's nationality, I'll conclude that they do not share the same nationality.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "The search results indicate that McAllister Hull was an American, whereas Rhescuporis II was a Bosporan King, likely of Greek, Iranian, and Roman descent. There is no clear indication of Rhescuporis II's nationality. Given the available information, we can conclude that they do not share the same nationality.",
+        "answer": "no"
+      },
+      {
+        "augmented": true,
+        "question": "Does Tim Reid have the same nationality as Devon Martinus?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Does Tim Reid have the same nationality as Devon Martinus?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Does Tim Reid have the same nationality as Devon Martinus?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Christopher Reid\\\" | \\\"Christopher Reid Christopher John Reid, FRSL (born 13 May 1949) is a Hong Kong-born British poet, essayist, cartoonist, and writer. In January 2010 he won the 2009 Costa Book Award for \\\"\\\"A Scattering\\\"\\\", written as a tribute to his late wife, the actress Lucinda Gane. Beside winning the poetry category, Reid became the first poet to take the overall Costa Book of the Year since Seamus Heaney in 1999. He had been nominated for Whitbread Awards in 1996 and in 1997 (Costa Awards under their previous name). A contemporary of Martin Amis, he was educated at Tonbridge School and Exeter\\\"\", \"score\": 18.234375}, {\"long_text\": \"\\\"Tim Reid (politician)\\\" | \\\"Tim Reid (politician) Timothy Escott \\\"\\\"Tim\\\"\\\" Reid (born February 21, 1936), is a former Canadian politician, who represented the electoral district of Scarborough East in the Legislative Assembly of Ontario from 1967 to 1971. He was a member of the Ontario Liberal Party. Reid was born in Toronto, Ontario. He attended the University of Toronto and graduated with a Bachelor of Arts degree. He was a star athlete for the University of Toronto in athletics and football, setting the league scoring record (68 points) playing halfback for the football team in 1958, and in 1993 he was inducted into the\\\"\", \"score\": 18.109375}, {\"long_text\": \"\\\"Tim Reid\\\" | \\\"Tim Reid Timothy Lee Reid (born December 19, 1944) is an American actor and film director best known for his roles in prime time American television programs, such as Venus Flytrap on \\\"\\\"WKRP in Cincinnati\\\"\\\" (1978–82), Marcel \\\"\\\"Downtown\\\"\\\" Brown on \\\"\\\"Simon & Simon\\\"\\\" (1983–87), Ray Campbell on \\\"\\\"Sister, Sister\\\"\\\" (1994–99) and William Barnett on \\\"\\\"That '70s Show\\\"\\\" (2004–06). Reid starred in a CBS series, \\\"\\\"Frank's Place\\\"\\\", as a professor who inherits a Louisiana restaurant. Reid is the founder and president of Legacy Media Institute, a non-profit organization \\\"\\\"dedicated to bringing together leading professionals in the film and television industry, outstanding\\\"\", \"score\": 18.046875}, {\"long_text\": \"\\\"Dexter Reid\\\" | \\\"Dexter Reid Dexter Devon Reid Jr. (born March 18, 1981) is a former American football safety. He was drafted by the New England Patriots in the fourth round of the 2004 NFL Draft after playing his college football at the University of North Carolina. Reid is a two-time Super Bowl champion, having won a trophy with the Patriots and Indianapolis Colts in 2005 and 2007 respectively. Reid attended Granby High School in Norfolk, Virginia where he was an honorable mention All-USA Today selection, the district \\\"\\\"Player of the Year\\\"\\\" and first-team all-state selection as a senior making 62 tackles, 3\\\"\", \"score\": 17.96875}, {\"long_text\": \"\\\"Tim Reid (politician)\\\" | \\\"Fancott whilst he was at Oxford and she at the London School of Economics. They were married for 50 years until her death in 2012, and had two children. Tim Reid (politician) Timothy Escott \\\"\\\"Tim\\\"\\\" Reid (born February 21, 1936), is a former Canadian politician, who represented the electoral district of Scarborough East in the Legislative Assembly of Ontario from 1967 to 1971. He was a member of the Ontario Liberal Party. Reid was born in Toronto, Ontario. He attended the University of Toronto and graduated with a Bachelor of Arts degree. He was a star athlete for the University\\\"\", \"score\": 17.8125}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages retrieved, it seems that Tim Reid and Devon Martinus are not associated with the same person. Tim Reid appears to be a Canadian politician, while Devon Martinus is likely a former American football player. I need to find more information to confirm if they share the same nationality or not.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Tim Reid nationality Devon Martinus nationality\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Tim Reid nationality Devon Martinus nationality\", \"passages_this_hop\": [{\"long_text\": \"\\\"Tim Reid\\\" | \\\"actors, and young men and women who wish to pursue a career in the entertainment media\\\"\\\". Reid was born in Norfolk, Virginia, and raised in the Crestwood area of Chesapeake, Virginia, formerly Norfolk County, Virginia. He is the son of Augustine (née Wilkins) and William Lee Reid. He earned his Bachelor of Business Administration at Norfolk State College in 1968. Reid also became a member of Alpha Phi Alpha fraternity. After graduation, he was hired by Dupont Corporation, where he worked for three years. Reid's entertainment career also began in 1968. He and insurance salesman Tom Dreesen met at a\\\"\", \"score\": 19.953125}, {\"long_text\": \"\\\"Tim Reid\\\" | \\\"during the ceremony. During the 1980s and 1990s Reid served on the advisory board of the National Student Film Institute. Tim Reid Timothy Lee Reid (born December 19, 1944) is an American actor and film director best known for his roles in prime time American television programs, such as Venus Flytrap on \\\"\\\"WKRP in Cincinnati\\\"\\\" (1978–82), Marcel \\\"\\\"Downtown\\\"\\\" Brown on \\\"\\\"Simon & Simon\\\"\\\" (1983–87), Ray Campbell on \\\"\\\"Sister, Sister\\\"\\\" (1994–99) and William Barnett on \\\"\\\"That '70s Show\\\"\\\" (2004–06). Reid starred in a CBS series, \\\"\\\"Frank's Place\\\"\\\", as a professor who inherits a Louisiana restaurant. Reid is the founder and president\\\"\", \"score\": 19.828125}, {\"long_text\": \"\\\"Tony Reid\\\" | \\\"Tony Reid Charles Anthony \\\"\\\"Tony\\\"\\\" Reid (born 9 April 1962) is a Barbados-born American former cricketer. A right-handed batsman and right-arm medium pace bowler, he played for the United States national cricket team from 2000 until 2005. He was the first man to take a wicket for the USA in a One Day International (ODI). Born in Barbados in 1962, Reid made his List A debut when the USA took part in the 2000–01 Red Stripe Bowl, playing three of the team's four group matches in Jamaica. His debut against the Jamaicans was inauspicious as he went for 50 from\\\"\", \"score\": 19.34375}, {\"long_text\": \"\\\"Martin Reid\\\" | \\\"Martin Reid Martin \\\"\\\"Marty\\\"\\\" Reid (12 January 1964) is a Northern Irish actor and comedian, and is part of the Hole in the Wall Gang, a Belfast comedy troupe. He has played the role of staunch loyalist Uncle Andy in the satirical BBC comedy \\\"\\\"Give My Head Peace\\\"\\\" since 1997, which was created by and starred the Hole in the Wall Gang. After the success of \\\"\\\"Give My Head Peace\\\"\\\" the Gang created a sketch show entitled \\\"\\\"Dry Your Eyes\\\"\\\" in 2006, in which Reid played various characters, most notably the Linfield fan Derek and Jonjo 1 of the McDowell\\\"\", \"score\": 19.171875}, {\"long_text\": \"\\\"Tim Reid (politician)\\\" | \\\"served, for one term, as a part-time Commissioner of the Ontario Securities Commission. From 1989-1998, Reid was the President of the 170,000-member Canadian Chamber of Commerce, Canada's largest and most representative national business association. In this position, he played a role in the public debate over the federal budget deficit, and the potential economic impact of the 1995 Quebec referendum on separation. Reid served on many boards of directors, including VIA Rail Canada from 2000–2006, and as an Alumni Governor on the Governing Council of the University of Toronto from 2002 to 2011. In 1962, Reid met and married Julyan\\\"\", \"score\": 19.015625}]}\n\n[[ ## thought_1 ## ]]\nThe passages indicate that Tim Reid is an American actor, while there is no clear information about Devon Martinus's nationality. I should refine my search to find more details about Devon Martinus's nationality.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Devon Martinus nationality\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Devon Martinus nationality\", \"passages_this_hop\": [{\"long_text\": \"\\\"Devon Martinus\\\" | \\\"Devon Martinus Devon Roy Martinus (born 28 January 1993 in Bredasdorp, South Africa) is a South African rugby union player for in the Currie Cup and in the Rugby Challenge. His regular position is prop. Marthinus made his mark in the 2012 Varsity Shield competition for university side , playing in all eight of their matches in the competition to help them finish in third position. After the 2012 Varsity Shield, Marthinus moved to Johannesburg to join the , making four appearances for the s in the 2012 Under-21 Provincial Championship. He was included in their senior squad for the\\\"\", \"score\": 24.90625}, {\"long_text\": \"\\\"Devon Martinus\\\" | \\\"season. Devon Martinus Devon Roy Martinus (born 28 January 1993 in Bredasdorp, South Africa) is a South African rugby union player for in the Currie Cup and in the Rugby Challenge. His regular position is prop. Marthinus made his mark in the 2012 Varsity Shield competition for university side , playing in all eight of their matches in the competition to help them finish in third position. After the 2012 Varsity Shield, Marthinus moved to Johannesburg to join the , making four appearances for the s in the 2012 Under-21 Provincial Championship. He was included in their senior squad for\\\"\", \"score\": 24.4375}, {\"long_text\": \"\\\"Devon (rapper)\\\" | \\\"Devon (rapper) Devon Martin, better known as Devon, is a Canadian rapper who rose to prominence in 1990 for his song titled \\\"\\\"Mr. Metro\\\"\\\", a controversial single about police racism. \\\"\\\"Mr. Metro\\\"\\\" also subsequently remained as an additional alias of the artist. Born in England but raised in the Toronto suburb of Malton, Ontario, Devon formed his first band, Shock Waves, at the age of 14 years, releasing an independent single in 1977. Later he was a member of the reggae band 20th Century Rebels, and served as a backing musician for Bong Conga Nistas, Messenjah, Judy Mowatt and Lillian\\\"\", \"score\": 21.78125}, {\"long_text\": \"\\\"Devon Martinus\\\" | \\\"rugby for , playing six times in the 2014 Varsity Cup competition and also helping them retain their Varsity Cup status by beating in their relegation play-off match. He represented the for a third consecutive season in the 2014 Under-21 Provincial Championship, making three appearances. However, he failed to break through into the first team and he joined Potchefstroom-based side the on loan prior to the 2015 Vodacom Cup. He immediately established himself as their first-choice loosehead prop for the competition and made his Leopards debut in their season-opening match against the . He joined Kimberley-based side for the 2016\\\"\", \"score\": 21.625}, {\"long_text\": \"\\\"Devon Martinus\\\" | \\\"2013 Vodacom Cup competition and made his first class debut in their second match of the season, coming off their bench in a 22–27 defeat to near-neighbours the . He made his first start in their next match against their trans-Jukskei River rivals , again ending on the losing side as the Blue Bulls ran out 54–26 winners. He made one more appearance – again in a loss as the beat them 30–19 in Welkom. His performances didn't go unnoticed by the South African Under-20 selectors, however, and he was included in the squad that played at the 2013 IRB\\\"\", \"score\": 20.6875}]}\n\n[[ ## thought_2 ## ]]\nBased on the retrieved passages, Devon Martinus is a South African rugby player. Tim Reid, on the other hand, is an American actor. Therefore, they do not share the same nationality.\n\n[[ ## tool_name_2 ## ]]\nfinish\n\n[[ ## tool_args_2 ## ]]\n{}\n\n[[ ## observation_2 ## ]]\nCompleted.",
+        "reasoning": "Tim Reid is an American actor, while Devon Martinus is a South African rugby player. They do not share the same nationality.",
+        "answer": "no"
+      },
+      {
+        "question": "What nationality is the performer of song Hummingbird (1955 Song)?",
+        "answer": "America"
+      },
+      {
+        "question": "Who died later, Chuck Turner or Mohamed Abdelaziz (Sahrawi Politician)?",
+        "answer": "Chuck Turner"
+      },
+      {
+        "question": "When is the director of film Three Men And A Little Lady 's birthday?",
+        "answer": "May 9, 1943"
+      },
+      {
+        "question": "Where was the place of burial of the performer of song There Is So Much World To See?",
+        "answer": "Graceland"
+      },
+      {
+        "question": "Which film has the director who died later, Aaranya Kandam or One Hundred Nails?",
+        "answer": "One Hundred Nails"
+      },
+      {
+        "question": "When was the director of film Mr. Moto Takes A Chance born?",
+        "answer": "December 13, 1903"
+      },
+      {
+        "question": "Are the movies Shadows of the West and The Matchmaker (1934 film), from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "When was the director of film Sword Of Honour (1939 Film) born?",
+        "answer": "11 November 1887"
+      },
+      {
+        "question": "Are director of film Cosmonaut (Film) and director of film The Scientific Cardplayer from the same country?",
+        "answer": "yes"
+      },
+      {
+        "question": "Do both films The Falcon (Film) and Valentin The Good have the directors from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Were Dallin Malmgren and A.B.M. Fazle Karim Chowdhury of the same nationality?",
+        "answer": "no"
+      },
+      {
+        "question": "Do both directors of films Paper Bullets and Karakolda Ayna Var share the same nationality?",
+        "answer": "no"
+      },
+      {
+        "question": "When did the director of film The First Mass die?",
+        "answer": "23 November 1982"
+      },
+      {
+        "question": "Are director of film The Monster Squad and director of film The Cup (2011 film) from the same country?",
+        "answer": "no"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

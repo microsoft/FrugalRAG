@@ -1,0 +1,187 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Gulfstream International Airlines later became a regional carrier based out of what airport?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Gulfstream International Airlines later became a regional carrier based out of what airport?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Gulfstream International Airlines later became a regional carrier based out of what airport?\", \"passages_this_hop\": [{\"long_text\": \"Gulfstream International Airlines | Gulfstream International Airlines was a United States airline that operated from 1988 to 2010. The airline primary operated codeshare flights for major airlines. In December 2010, the airline went bankrupt and its assets were sold. Silver Airways launched as a new regional carrier with assets from Gulfstream.\", \"score\": 23.5}, {\"long_text\": \"Birmingham European Airways | Birmingham European Airways was originally established in 1983 (as Birmingham Executive Airways). The airline as its name implies was based at Birmingham International Airport (BHX/EGBB) in the UK and operated services geared towards business travellers. The airline began operations on 6 June 1983 with three Jetstream 31 aircraft, flying services from Birmingham to Copenhagen, Zurich and Milan. A Saab 340 was introduced in February 1985, but it suffered severe reliability problems in the airline's service, and was retired at the end of the year. To replace the Saab, Birmingham Executive chose the Gulfstream I, operating a wet-leased aircraft from September 1986, with the airline receiving the first of its own Gulfstreams, fitted out as 24-seat airliners in February 1987. Birmingham European Airways later introduced a number of BAC 1-11 aircraft into its fleet.\", \"score\": 19.984375}, {\"long_text\": \"Gulf Air Transport | Gulf Air Transport (ICAO: GAT) was a small charter airline headquartered at the Acadiana Regional Airport (ARA), a former U.S. Navy military airbase located in New Iberia, Louisiana, United States. The company flew piston, turboprop and jet aircraft types, and conducted flight operations from 1979 until 1990.\", \"score\": 19.78125}]}\n\n[[ ## thought_0 ## ]]\nI will now analyze the search results to find the relevant information.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What airport was Gulfstream International Airlines based out of according to the search results?\", \"trajectory_id\": \"Gulfstream International Airlines later became a regional carrier based out of what airport?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What airport was Gulfstream International Airlines based out of according to the search results?\", \"passages_this_hop\": [{\"long_text\": \"2001 Avjet Aspen crash | On March 29, 2001, a chartered Gulfstream III business jet, operated by Avjet Corporation, crashed into the ground while on instrument approach to Aspen–Pitkin County Airport, Colorado. All three crew members and fifteen passengers on board perished.\", \"score\": 20.8125}, {\"long_text\": \"2012 Katanga Express Gulfstream IV crash | On 12 February 2012, a Katanga Express Gulfstream IV business jet crashed into a ravine about 20 metres from Kavumu Airport as it was attempting to land. Both pilots and 2 passengers were killed along with 2 farmers on the ground whilst five survivors sustained injuries, including Finance Minister Augustin Matata Ponyo.\", \"score\": 20.296875}, {\"long_text\": \"Silver Airways | Silver Airways Corp., operating as Silver Airways, is a United States airline with its headquarters in Fort Lauderdale-Hollywood International Airport in unincorporated Broward County, Florida, near Fort Lauderdale. It was founded in 2010 with assets from the former Gulfstream International Airlines, and currently operates around 170 daily scheduled flights to 10 cities in Florida and 8 destinations in the Bahamas, with hubs at Fort Lauderdale, Orlando and Tampa.\", \"score\": 19.9375}]}\n\n[[ ## thought_1 ## ]]\nI will now extract the relevant information from the search results.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"What airport is Silver Airways based out of?\", \"trajectory_id\": \"Gulfstream International Airlines later became a regional carrier based out of what airport?\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"What airport is Silver Airways based out of?\", \"passages_this_hop\": [{\"long_text\": \"Silver Air (Czech Republic) | Silver Air is a small Czech airline headquartered in Prague and based at Prague Ruzyně Airport with focus operations at Marina di Campo Airport on the Italian island Elba.\", \"score\": 26.203125}, {\"long_text\": \"Silverjet | Silverjet was a British all-business class airline headquartered at London Luton Airport, Luton, Bedfordshire, England, that, prior to the suspension of operations on 30 May 2008, operated services to Newark Liberty International Airport and Dubai International Airport. A proposed rescue package fell through on 13 June when staff were laid off and it was announced that the airline's assets would be sold.\", \"score\": 25.28125}, {\"long_text\": \"Silver Air (Djibouti) | Silver Air was a charter airline based in Djibouti city, the capital of Djibouti. It ceased operations in 2009.\", \"score\": 24.8125}]}\n\n[[ ## thought_2 ## ]]\nI will now extract the relevant information from the search results.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"What airport is Silver Airways based out of?\", \"trajectory_id\": \"Gulfstream International Airlines later became a regional carrier based out of what airport?\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"What airport is Silver Airways based out of?\", \"passages_this_hop\": [{\"long_text\": \"Silver City Airways | Silver City Airways was a private, British independent airline formed in 1946. The name \\\"Silver City\\\" was derived from the eponymous Australian mining town at Broken Hill, where \\\"The Zinc Corporation\\\" was headquartered. Silver City's first commercial flight departed London Heathrow for Sydney via Johannesburg in late 1946. The following year, Silver City leased its first Bristol Freighter, moved its base to Blackbushe and participated in the airlift of Hindu and Muslim refugees between Pakistan and India. In 1948, control of Silver City passed from the Zinc Corporation to British Aviation Services. In July of that year, the airline inaugurated the world's first air ferry service across the English Channel between Lympne Airport and Le Touquet Airport. In 1948–49, Silver City participated in the Berlin Airlift. In 1949, it established a French sister airline.\", \"score\": 24.53125}, {\"long_text\": \"Greenbrier Valley Airport | Greenbrier Valley Airport (IATA: KLWB, ICAO: LWB) is a public airport three miles (5 km) north of Lewisburg in Greenbrier County, West Virginia, United States. It has one runway and is owned by the Greenbrier County Airport Authority. Silver Airways (\\\"United Express\\\") has scheduled airline flights, subsidized by the Essential Air Service program, to Washington-Dulles International Airport, which replaced Cleveland-Hopkins International Airport in summer 2012. Silver Airways also flies to Atlanta-Hartsfield International Airport as an independent airline, replacing Delta Connection.\", \"score\": 24.25}, {\"long_text\": \"Silver Sky Airlines | Silver Sky Airlines (Silver Sky Líneas Aéreas S.A.) was a failed scheduled airline project to be based in Mendoza, Argentina. It was founded in 2006 and dissolved again in 2008, without having operated a single revenue flight.\", \"score\": 24.046875}]}\n\n[[ ## thought_3 ## ]]\nI will now extract the relevant information from the search results to find the answer to the question.\n\n[[ ## tool_name_3 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_3 ## ]]\n{\"search_query\": \"What airport is Silver Airways based out of?\", \"trajectory_id\": \"Gulfstream International Airlines later became a regional carrier based out of what airport?\"}\n\n[[ ## observation_3 ## ]]\n{\"search_query\": \"What airport is Silver Airways based out of?\", \"passages_this_hop\": [{\"long_text\": \"Flyjet | Flyjet was a charter airline based at London Luton Airport, United Kingdom. It was a subsidiary of Silverjet, which is licensed for worldwide charter operations. It operated from Manchester Airport and Newcastle Airport to Mediterranean holiday destinations, as well as to the Canary Islands.\", \"score\": 23.109375}, {\"long_text\": \"Silver Bay Municipal Airport | Silver Bay Municipal Airport (ICAO: KBFW, FAA LID: BFW) is a city owned public use airport located close to Silver Bay, a city in Lake County, Minnesota, United States. This airport is included in the FAA's National Plan of Integrated Airport Systems 2017-2021, which categorizes it as a \\\"general aviation airport\\\".\", \"score\": 22.828125}, {\"long_text\": \"Jaffrey Airport–Silver Ranch | Jaffrey Airport–Silver Ranch is a public use airport in Cheshire County, New Hampshire, United States. It is owned by the Jaffrey Municipal Airport Development Corp. and is located one nautical mile (1.85 km) southeast of the central business district of Jaffrey, New Hampshire. It is included in the Federal Aviation Administration (FAA) National Plan of Integrated Airport Systems for 2017–2021, in which it is categorized as a general aviation facility.\", \"score\": 22.8125}]}\n\n[[ ## thought_4 ## ]]\nI will now extract the relevant information from the search results to find the answer to the question.\n\n[[ ## tool_name_4 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_4 ## ]]\n{\"search_query\": \"What airport is Silver Airways based out of according to the Greenbrier Valley Airport passage?\", \"trajectory_id\": \"Gulfstream International Airlines later became a regional carrier based out of what airport?\"}\n\n[[ ## observation_4 ## ]]\n{\"search_query\": \"What airport is Silver Airways based out of according to the Greenbrier Valley Airport passage?\", \"passages_this_hop\": [{\"long_text\": \"Silver Springs Airport | Silver Springs Airport (ICAO: KSPZ) is a public use airport located 2 nmi southwest of the central business district of Silver Springs, in Lyon County, Nevada, United States. It is owned by Lyon County and leased to Silver Springs Airport, LLC.\", \"score\": 19.296875}, {\"long_text\": \"Red &amp; White Flying Service Airport | Red & White Flying Service Airport (FAA LID: 01OR) is a private airport located 1 mile south of Silver Lake in Lake County, Oregon, USA.\", \"score\": 18.734375}, {\"long_text\": \"Silver Creek Airport | Silver Creek Airport (IATA: SVK) is a public use airport located in the Stann Creek District, Belize.\", \"score\": 18.71875}]}",
+        "reasoning": "The question asks for the airport that Gulfstream International Airlines was based out of. To answer this question, we need to find information about the airport that Gulfstream International Airlines was based out of. We can start by searching for relevant documents with the original question as the search query.\n\nAfter analyzing the search results, we can see that Gulfstream International Airlines later became a regional carrier based out of Fort Lauderdale-Hollywood International Airport, which is mentioned in the passage about Silver Airways.",
+        "answer": "Fort Lauderdale-Hollywood International Airport"
+      },
+      {
+        "augmented": true,
+        "question": "Where did the younger brother of Titus Davis play college football?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Where did the younger brother of Titus Davis play college football?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Where did the younger brother of Titus Davis play college football?\", \"passages_this_hop\": [{\"long_text\": \"Titus Davis | Titus Davis (born January 3, 1993) is an American football wide receiver who is currently a free agent. He was signed by the San Diego Chargers as an undrafted free agent in 2015. He played college football at Central Michigan. His younger brother, Corey Davis is a wide receiver for the Tennessee Titans.\", \"score\": 24.9375}, {\"long_text\": \"Titus Young | Titus Demetrius Young, Sr. (born August 21, 1989) is a former American football wide receiver. He played in the National Football League from 2011 to 2012. He was selected by the Detroit Lions in the second round of the 2011 NFL Draft. He played college football at Boise State University. He was released in 2013 due to several off-field issues.\", \"score\": 19.328125}, {\"long_text\": \"Titus Adams | Titus Adams (born January 28, 1983) is a former American football defensive end. He was drafted by the New York Jets in the seventh round of the 2006 NFL Draft. He played college football at Nebraska.\", \"score\": 18.171875}]}\n\n[[ ## thought_0 ## ]]\nThe observation suggests that the younger brother of Titus Davis is Corey Davis, who played college football at Central Michigan.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Where did Corey Davis play college football?\", \"trajectory_id\": \"Titus Davis's younger brother\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Where did Corey Davis play college football?\", \"passages_this_hop\": [{\"long_text\": \"Corey Davis (offensive lineman) | Corey Davis (born July 14, 1985) is a former American football offensive lineman. He was originally signed by the Buffalo Bills as an undrafted free agent in 2007. He played college football at James Madison.\", \"score\": 26.875}, {\"long_text\": \"Corey Davis (wide receiver) | Corey Davis (born January 11, 1995) is an American football wide receiver for the Tennessee Titans of the National Football League (NFL). He played college football at Western Michigan, where he became the NCAA's career receiving yards leader. He was drafted by the Titans fifth overall in the 2017 NFL Draft.\", \"score\": 26.828125}, {\"long_text\": \"Trevor Davis | Trevor Lee Davis (born July 4, 1993) is an American football wide receiver for the Green Bay Packers of the National Football League (NFL). He played college football at California. Davis was drafted by the Packers in the fifth round of the 2016 NFL Draft.\", \"score\": 22.953125}]}\n\n[[ ## thought_1 ## ]]\nIt seems that the younger brother of Titus Davis is Corey Davis, but I need to find out where he played college football.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Where did Corey Davis play college football?\", \"trajectory_id\": \"Titus Davis's younger brother\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Where did Corey Davis play college football?\", \"passages_this_hop\": [{\"long_text\": \"Corey Hilliard | Corey Hilliard (born April 26, 1985) is a former American football offensive tackle who played seven years in the National Football League (NFL). He played college football at Oklahoma State, before being drafted by the New England Patriots in the sixth round of the 2007 NFL Draft. Hilliard has also been a member of the Indianapolis Colts, Cleveland Browns, Detroit Lions, and New York Jets.\", \"score\": 22.828125}, {\"long_text\": \"Corey Croom | Corey Vincent Croom (born May 22, 1971) is a former American football running back who played three seasons with the New England Patriots of the National Football League (NFL). He played college football at Ball State University and attended Sandusky High School in Sandusky, Ohio.\", \"score\": 22.578125}, {\"long_text\": \"Corey Liuget | Corey Devon Liuget (born March 18, 1990) is an American football defensive tackle for the Los Angeles Chargers of the National Football League (NFL). He played at Hialeah Senior High in Miami, Florida. He played college football at Illinois.\", \"score\": 22.546875}]}\n\n[[ ## thought_2 ## ]]\nIt seems that the younger brother of Titus Davis is Corey Davis, but I need to find out where he played college football.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"Where did Corey Davis play college football?\", \"trajectory_id\": \"Titus Davis's younger brother\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"Where did Corey Davis play college football?\", \"passages_this_hop\": [{\"long_text\": \"Corey Williams (American football) | Corey Williams (born August 17, 1980) is a former American football defensive tackle. He was drafted by the Green Bay Packers in the sixth round of the 2004 NFL draft. He played college football at Arkansas State.\", \"score\": 22.515625}, {\"long_text\": \"Corey Johnson (American football) | Corey Johnson (born September 23, 1973) is a former American football defensive back in the Arena Football League. He played college football at Georgia.\", \"score\": 22.515625}, {\"long_text\": \"Corey Robinson (offensive tackle) | Corey Robinson (born May 21, 1992) is an American football offensive tackle for the Detroit Lions of the National Football League (NFL). He played college football at South Carolina.\", \"score\": 22.5}]}\n\n[[ ## thought_3 ## ]]\nIt seems that the younger brother of Titus Davis is Corey Davis, and I found a passage mentioning that he played college football at Western Michigan.\n\n[[ ## tool_name_3 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_3 ## ]]\n{\"search_query\": \"What is Corey Davis's college football team?\", \"trajectory_id\": \"Titus Davis's younger brother\"}\n\n[[ ## observation_3 ## ]]\n{\"search_query\": \"What is Corey Davis's college football team?\", \"passages_this_hop\": [{\"long_text\": \"Corey Nelson | Corey Nelson (born April 22, 1992) is an American football inside linebacker for the Denver Broncos of the National Football League (NFL). He was drafted by the Broncos in the seventh round of the 2014 NFL Draft. He played college football at Oklahoma.\", \"score\": 21.890625}, {\"long_text\": \"Corey Miller (American football) | Corey James Miller (born October 25, 1968) is a retired former American football linebacker in the National Football League for the New York Giants and Minnesota Vikings. He played college football at the University of South Carolina and was drafted in the sixth round of the 1991 NFL Draft. Corey has two sons who both attend The University of Alabama. One a player (Christian Miller), the other a strength and conditioning assistant in the weight room (Corey \\\"C.J.\\\" Miller Jr.).\", \"score\": 21.875}, {\"long_text\": \"Corey Clement | Corey Joel Clement (born November 2, 1994) is an American football running back for the Philadelphia Eagles of the National Football League. He played college football at Wisconsin.\", \"score\": 21.859375}]}\n\n[[ ## thought_4 ## ]]\nThe observation suggests that the younger brother of Titus Davis, Corey Davis, played college football at Western Michigan.\n\n[[ ## tool_name_4 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_4 ## ]]\n{\"search_query\": \"What was Corey Davis's role in college?\", \"trajectory_id\": \"Titus Davis's younger brother\"}\n\n[[ ## observation_4 ## ]]\n{\"search_query\": \"What was Corey Davis's role in college?\", \"passages_this_hop\": [{\"long_text\": \"Corey Hawkins (basketball) | Corey Hawkins (born August 10, 1991) is an American professional basketball player for Antwerp Giants of the Basketball League Belgium. He played college basketball with the UC Davis Aggies, and was a three-time all-conference selection in the Big West Conference. As a senior in 2014–15, he was named the Big West Player of the Year.\", \"score\": 20.921875}, {\"long_text\": \"Corey Moore | Corey Moore (born March 20, 1979) is a former American college and professional football player who was a linebacker in the National Football League (NFL) during the early 2000s. He played college football for Virginia Tech, earned unanimous All-American honors, and was recognized as the outstanding college defensive player. A third-round pick in the 2000 NFL Draft, he played professionally for the Buffalo Bills and Miami Dolphins of the NFL.\", \"score\": 20.234375}, {\"long_text\": \"Corey Belser | Corey Belser (born November 22, 1982) is an American former professional basketball player who used to be an assistant coach for the Sioux Falls Skyforce of the NBA Development League. Standing at 6 ft , he played at the swingman position. He played college basketball for the University of San Diego.\", \"score\": 19.875}]}",
+        "reasoning": "The question asks for the college football team of the younger brother of Titus Davis. I searched for relevant documents and found that the younger brother of Titus Davis is Corey Davis. I then searched for information on Corey Davis's college football team and found that he played for Western Michigan.",
+        "answer": "Western Michigan"
+      },
+      {
+        "question": "Where did the star of Redbelt get a scholarship?",
+        "answer": "London Academy of Music",
+        "dspy_uuid": "da4fadaa-eafe-4693-a2ec-b0c100c4a38c",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What Australian sportsman died in a suburb of Adelaide in the City of Burnside and the City of Campbelltown?",
+        "answer": "Ernest Jones",
+        "dspy_uuid": "1e4c39cd-29dd-4e54-a8c4-3a7e3ffa8d93",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The Garand carbine was created by a man with what nationality?",
+        "answer": "Canadian-American",
+        "dspy_uuid": "d44929c6-d1d8-4b77-a2fd-51c58bff5439",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What is the name of this Irish singer-songwriter, musician, venture capitalist, businessman, and philanthropist, who wrote \"Love Is Blindness\" on the piano?",
+        "answer": "Bono",
+        "dspy_uuid": "67decc9a-2ce8-4ec6-b531-01648ad9641d",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What team does the athlete featured on the cover of the FIFA 17 video game play for?",
+        "answer": "Borussia Dortmund",
+        "dspy_uuid": "3940f148-99d2-4f97-bfb0-d1cf6f13d091",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who is the wife of Charlemagne who is a step mother to Pepin the Hunchback?",
+        "answer": "Hildegard",
+        "dspy_uuid": "a3704f8d-4f40-433b-828d-d16d292d9d74",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Jay Simon is best known for her role as a flight attendant in a movie directed by which director ?",
+        "answer": "Clare Kilner",
+        "dspy_uuid": "189b707c-c5cb-4ec0-9956-f2735ef1ce3b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "How many copies were sold of the last UK number-one single that was written by Noddy Holder and Jim Lea?",
+        "answer": "in excess of one million copies",
+        "dspy_uuid": "2ceeb60f-ad1c-4e1b-9ff5-700a6ea1495a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which running back played during the 2017 Kansas City Chiefs season and was released after 9 seasons? ",
+        "answer": "Jamaal RaShaad Jones Charles",
+        "dspy_uuid": "5f23353f-5273-4f20-bf97-0d2a39dc5e31",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Utterby is situated on the road that is in what English region?",
+        "answer": "East Midlands",
+        "dspy_uuid": "0b633cd6-f8e6-4d30-a502-483fb26d88c7",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Were Dorothy Arzner and Richard Wallace both French film directors?",
+        "answer": "no",
+        "dspy_uuid": "0ac3317b-929f-46cb-a909-337af657f553",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which major river is Buford, North Dakota nearest to?",
+        "answer": "the Missouri River",
+        "dspy_uuid": "8f7e44e2-e1fa-4fb8-b418-8fe2d6db3964",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was founded first, Death Cab for Cutie or P.O.D.?",
+        "answer": "P.O.D.",
+        "dspy_uuid": "05baaf9f-2a70-414b-94a8-a339869772ce",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Seiko Holdings Corporation was formerly known as which watch and jewlery shop?",
+        "answer": "K. Hattori",
+        "dspy_uuid": "d23bb6c6-0621-4ea1-8c69-b97f6930e180",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Ryan Blair plays at midfield for which Welsh football club?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Ryan Blair plays at midfield for which Welsh football club?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Ryan Blair plays at midfield for which Welsh football club?\", \"passages_this_hop\": [{\"long_text\": \"Ryan Blair (footballer) | Ryan Blair (born 23 February 1996) is a professional footballer who plays as a midfielder for Premier League club, Swansea City.\", \"score\": 24.078125}, {\"long_text\": \"Ryan Green | Ryan Green (born 20 October 1980) is a Welsh footballer who plays as a defender for English club Hereford. He earned two international caps for Wales in 1998, breaking Ryan Giggs's record as their youngest player, a record which has since been surpassed.\", \"score\": 21.125}, {\"long_text\": \"Ryan Jones (footballer, born 1973) | Ryan Jones (born 23 July 1973) is a Welsh football Midfielderwho played for Sheffield Wednesday and Scunthorpe United. He was capped by Wales on one occasion, in a match against Estonia in 1994. He was a fans favourite at Hillsborough until injury forced him to retire.\", \"score\": 20.65625}]}\n\n[[ ## thought_0 ## ]]\nThe search returned several results, but the passage indicating Ryan Blair's team is the most relevant.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Ryan Blair Swansea City\", \"trajectory_id\": \"SwanseaCity\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Ryan Blair Swansea City\", \"passages_this_hop\": [{\"long_text\": \"Swansea City A.F.C. | Swansea City Association Football Club (Welsh: \\\"Clwb Pêl-droed Dinas Abertawe\\\" ) is a Welsh professional football club based in Swansea, Wales, that plays in the Premier League, the top tier of English football. Swansea City represent England when playing in European competitions, although they have represented Wales in the past. The club was founded in 1912 as Swansea Town and joined the Football League in 1921. The club changed their name in 1969, when they adopted the name Swansea City to reflect Swansea's new status as a city. Swansea have played their home matches at the Liberty Stadium since 2005, having previously played at the Vetch Field since the club was founded.\", \"score\": 17.921875}, {\"long_text\": \"Oliver McBurnie | Oliver McBurnie (born 4 June 1996) is a Scottish professional footballer who plays as a striker for Swansea City.\", \"score\": 17.546875}, {\"long_text\": \"Swansea City A.F.C. league record by opponent | Swansea City ( ; Welsh: \\\"Clwb Pêl-droed Dinas Abertawe\\\" ) is a Welsh football club based in the city of Swansea, which competes in the Premier League. The club was founded in 1912 as Swansea Town, and competed in the Southern Football League until they were elected to The Football League in 1920, as founders of the Third Division. The club changed its name in 1969, when it adopted the name Swansea City to reflect Swansea's new status as a city. In 2010, after winning a Championship Play-off final, Swansea became the first Welsh team to compete in the Premier League.\", \"score\": 17.421875}]}\n\n[[ ## thought_1 ## ]]\nBased on the search results, Ryan Blair plays for Swansea City.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "The search revealed that Ryan Blair is a professional footballer who plays as a midfielder for Swansea City, a Welsh football club.",
+        "answer": "Swansea City"
+      },
+      {
+        "question": "What is the difference in genre between The Fighting Prince of Donegal and The Graveyard Book?",
+        "answer": "children's fantasy novel",
+        "dspy_uuid": "1bee2c65-8e6e-45c0-9b75-c4946a8721ba",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are the bands Flow and Against the Current from the same country?",
+        "answer": "no",
+        "dspy_uuid": "206516fc-68ee-474b-8f55-af6ebecc61bf",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Apan Amar Apan was a film that had music composed by which Indian composer?",
+        "answer": "Rahul Dev Burman",
+        "dspy_uuid": "6fbeb2c9-6e85-4aa4-93cc-0807aebd4ff1",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are Smyrnium and Nymania both types of plant?",
+        "answer": "yes",
+        "dspy_uuid": "1a183eaf-5a99-41b8-90e7-a145cdacda89",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who played the part of the Marquis de Sade in the film for which Martin Childs was nominated for an award at the 74th Academy Awards?",
+        "answer": "Geoffrey Rush",
+        "dspy_uuid": "330f6fa6-907b-4df3-95ad-c3d75b9f1b1b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who did Holly Dunn record \"Daddy's Hands\" for?",
+        "answer": "MTM Records",
+        "dspy_uuid": "04560a9f-d542-49dd-8689-1831d7a06c43",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What year did the war during which Pompiliu Ștefu was executed end?",
+        "answer": "1945",
+        "dspy_uuid": "f45ebef0-2cf7-479a-b757-c8179d4a0f62",
+        "dspy_split": "train"
+      },
+      {
+        "question": "In what army is Mehmetçik slang for a common a common soldier?",
+        "answer": "Ottoman Army",
+        "dspy_uuid": "ddfd1431-77f4-41d4-86cd-cf67aa4b4ff5",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are Norma and Idomeneo both operas by Bellini?",
+        "answer": "no",
+        "dspy_uuid": "cb883dfd-b22d-4dca-a17a-93b3837c7b05",
+        "dspy_split": "train"
+      },
+      {
+        "question": "When was the tour of Thea Gilmore's EP that included a traditional Scottish song?",
+        "answer": "2007 spring",
+        "dspy_uuid": "e5c49733-88e4-4aa9-be4e-f1f9f624eba0",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was founded first, Death Cab for Cutie or P.O.D.?",
+        "answer": "P.O.D.",
+        "dspy_uuid": "63d4cf8a-96d9-49ab-8d74-751dd7bbceb8",
+        "dspy_split": "train"
+      },
+      {
+        "question": "the Central Reserve Police Force, which has been accused of human rights abuses, operates under the aegis of what Government of India agency?",
+        "answer": "Ministry of Home Affairs (MHA)",
+        "dspy_uuid": "c49c128c-0360-4989-9d40-265481047aa6",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What is the same of the city that  is the second largest city municipality in Italy and appeared in The 2010 Giro d'Italia?",
+        "answer": "Verona",
+        "dspy_uuid": "72cf111c-415b-4ed7-a7d3-7c9704238c21",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are both Ceratophyllum and Eucomis a genus of flowering plants?",
+        "answer": "yes",
+        "dspy_uuid": "a6efae54-b3df-4809-a5a0-e6d1592f8d5a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The actor who voiced Shaggy in the \"Scooby-Doo\" franchise also appeared as a radio personality on what radio network?",
+        "answer": "Clear Channel Radio",
+        "dspy_uuid": "59b9f084-b1ec-4900-9bcf-87695671efa4",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Who directed the 1987 romantic drama dance film that is directly parodied by the television film \"Totally Awesome\"?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Who directed the 1987 romantic drama dance film that is directly parodied by the television film \\\"Totally Awesome\\\"?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Who directed the 1987 romantic drama dance film that is directly parodied by the television film \\\"Totally Awesome\\\"?\", \"passages_this_hop\": [{\"long_text\": \"Totally Awesome | Totally Awesome is a television film produced by VH1. \\\"Totally Awesome\\\" directly parodies a number of 1980s movies, including \\\"Dirty Dancing\\\", \\\"Soul Man\\\", \\\"Footloose\\\", \\\"Some Kind of Wonderful\\\", \\\"Sixteen Candles\\\", \\\"Teen Wolf\\\", \\\"Better Off Dead\\\", \\\"Lucas\\\", \\\"Pretty in Pink\\\", and \\\"The Karate Kid\\\".\", \"score\": 19.578125}, {\"long_text\": \"Dirty Dancing | Dirty Dancing is a 1987 American romantic drama dance film written by Eleanor Bergstein, directed by Emile Ardolino and starring Patrick Swayze and Jennifer Grey in the lead roles, and featuring Cynthia Rhodes and Jerry Orbach.\", \"score\": 18.75}, {\"long_text\": \"Dancers (film) | Dancers is a 1987 film directed by Herbert Ross and stars Mikhail Baryshnikov and Julie Kent. The story revolves around a ballet dancer who is planning to make a film version of the ballet \\\"Giselle\\\", and how his romance with a young woman parallels the plotline of the ballet. The film received scathing reviews upon release.\", \"score\": 17.90625}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, it seems that \"Dirty Dancing\" is a 1987 romantic drama dance film which could be the film directly parodied by \"Totally Awesome\". I need to find out who directed \"Dirty Dancing\".\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Who directed the 1987 romantic drama dance film Dirty Dancing?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Who directed the 1987 romantic drama dance film Dirty Dancing?\", \"passages_this_hop\": [{\"long_text\": \"Dirty Dancing (2017 film) | Dirty Dancing is a 2017 American television film directed by Wayne Blair and written by Jessica Sharzer. It is a remake of the 1987 film of the same name. The film stars Abigail Breslin, Colt Prattes, Nicole Scherzinger, Bruce Greenwood, Debra Messing, Sarah Hyland, Tony Roberts, Billy Dee Williams, and J. Quinton Johnson. It aired on May 24, 2017, on ABC. In its original broadcast, the film was seen by 6.61 million viewers with a 1.4 Nielsen rating in the 18-49 age demographic and a 5 share.\", \"score\": 24.96875}, {\"long_text\": \"Dirty Dancing: Havana Nights | Dirty Dancing: Havana Nights (also known as Dirty Dancing 2 or Dirty Dancing 2: Havana Nights) is a 2004 American musical romance film directed by Guy Ferland. The film is a prequel/\\\"re-imagining\\\" of the 1987 blockbuster \\\"Dirty Dancing\\\", reusing the same basic plot, but transplanting it from upstate New York to Cuba on the cusp of the Cuban Revolution.\", \"score\": 24.546875}, {\"long_text\": \"Emile Ardolino | Emile Ardolino (May 9, 1943 – November 20, 1993) was an American film director, choreographer, and producer, best known for his films \\\"Dirty Dancing\\\" (1987) and \\\"Sister Act\\\" (1992).\", \"score\": 23.421875}]}\n\n[[ ## thought_1 ## ]]\nThe search results indicate that Emile Ardolino directed the 1987 film \"Dirty Dancing\". This should be the answer to the original question.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "The AdvancedSearch tool provided information about the 1987 film \"Dirty Dancing\" and its director, Emile Ardolino. The search also confirmed that \"Totally Awesome\" parodied \"Dirty Dancing\". Therefore, Emile Ardolino is the director of the 1987 romantic drama dance film that is directly parodied by the television film \"Totally Awesome\".",
+        "answer": "Emile Ardolino"
+      },
+      {
+        "augmented": true,
+        "question": "When considering the two peaks known as Noijin Kangsang and Masherbrum, which of them has the greatest height related to their respected ranges?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"When considering the two peaks known as Noijin Kangsang and Masherbrum, which of them has the greatest height related to their respected ranges?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"When considering the two peaks known as Noijin Kangsang and Masherbrum, which of them has the greatest height related to their respected ranges?\", \"passages_this_hop\": [{\"long_text\": \"Noijin Kangsang | Noijin Kangsang (, also Norin Kang or Noijinkangsang) is the highest peak of Lhagoi Kangri mountain range in the Tibet Autonomous Region in China. It lies between the Yarlung Tsangpo River (to the north), Yamdrok Lake (to the east) and the Himalayas mountain range (to the south).\", \"score\": 18.84375}, {\"long_text\": \"K6 (mountain) | Surveyed as K6 (Urdu: کے 6‎ ), but also known as Baltistan Peak. This is a notable peak of the Masherbrum Mountains, a subrange of the Karakoram mountain range in Gilgit Baltistan region of Pakistan. Despite being much lower than its sister mountains, the Eight-thousanders and high 7000m peaks such as Masherbrum, it has huge, steep faces, and great relief above the nearby valleys.\", \"score\": 17.5}, {\"long_text\": \"Masherbrum | Masherbrum (Urdu: ‎ ; formerly known as K1) is located in the Ghanche District, Gilgit Baltistan of Pakistan. At 7821 m it is the 22nd highest mountain in the world and the 9th highest in Pakistan. It was the first mapped peak in the Karakoram mountain range, hence the designation \\\"K1\\\".\", \"score\": 17.21875}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, I found information about Noijin Kangsang and Masherbrum. Noijin Kangsang is the highest peak of the Lhagoi Kangri mountain range, while Masherbrum is part of the Masherbrum Mountains, a subrange of the Karakoram mountain range. However, the information does not directly state the relative heights of these peaks within their respective ranges. I need more specific data on their heights relative to their ranges.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"height of Noijin Kangsang relative to Lhagoi Kangri range and height of Masherbrum relative to Masherbrum Mountains range\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"height of Noijin Kangsang relative to Lhagoi Kangri range and height of Masherbrum relative to Masherbrum Mountains range\", \"passages_this_hop\": [{\"long_text\": \"Liankang Kangri | Liangkang Kangri (also known as \\\"Liankang Kangri\\\") is a mountain peak in the Himalayas on the border between Bhutan and China, as well as at the southeastern end of territory claimed by both countries. Liangkang Kangri is 7535 m high. To the south, a ridge leads to the 7570 m Gangkhar Puensum 2 km to the south-southeast . Due to the low saddle height of 234 m , Liangkang Kangri is not regarded as an independent mountain. Westward a ridge leads to the 6680 m high Chumhari Kang. The Liangkanggletscher on the northwest flank and the Namsanggletscher on the eastern flank of Liangkang Kangri form the headwaters of the Lhobrak Chhu, a source river of Kuri Chhu. The glacier on the southwest flank belongs to the catchment area of Angde Chhu.\", \"score\": 18.5625}, {\"long_text\": \"Baltoro Kangri | Baltoro Kangri (Urdu: بلتورو کنگری‎ ; also known as the Golden Throne) is a mountain of the Karakoram mountain range in Gilgit-Baltistan, Pakistan. Baltoro Kangri is the 82nd highest mountain in the world with an elevation of 7312 m . It lies to the south of the Gasherbrums and east of Chogolisa Peak (7,665 m). The huge Baltoro Glacier (which is one of the largest glaciers outside polar regions) rises from the foot of Baltoro Kangri. In the north of Baltoro Kangri is the Abruzzi Glacier.\", \"score\": 18.140625}, {\"long_text\": \"Burji La | Burji La (or Burji Pass) is a natural pass in mountains between Skardu and Deosai National Park in Gilgit Baltistan, Pakistan. Its elevation is 4816 meters. It is famous especially for its beautiful panoramic view of so many mountain peaks, including that of K2, Nanga Parbat, Masherbrum, Chogolisa, Laila Peak, Golden Peak, Gasherbrum I, Gasherbrum II, Gasherbrum IV and a part of Broad Peak mountain.\", \"score\": 17.40625}]}\n\n[[ ## thought_1 ## ]]\nThe search results did not provide the specific heights of Noijin Kangsang and Masherbrum relative to their respective ranges. I will try to refine my search query to get more accurate information.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"exact height of Noijin Kangsang and Masherbrum in their respective ranges\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"exact height of Noijin Kangsang and Masherbrum in their respective ranges\", \"passages_this_hop\": [{\"long_text\": \"Maepongsan (Kangwon) | Maepongsan is a mountain of North Korea. It has an elevation of 1,578 metres\", \"score\": 16.953125}, {\"long_text\": \"Kangchenjunga | Kangchenjunga (Nepali: कञ्चनजङ्घा , \\\"Kañcanajaṅghā\\\"), also spelled Kanchenjunga, is the third highest mountain in the world, and lies partly in Nepal and partly in Sikkim, India. It rises with an elevation of 8586 m in a section of the Himalayas called \\\"Kangchenjunga Himal\\\" that is limited in the west by the Tamur River, in the north by the Lhonak Chu and Jongsang La, and in the east by the Teesta River.\", \"score\": 16.9375}, {\"long_text\": \"Apsarasas Kangri | Apsarasas Kangri is a mountain in the Siachen Karakoram range. With an elevation of 7245 m it is the 96th highest mountain in the world. Apsarasas Kangri is located on the border between Xinjiang, China and the Siachen Glacier region, controlled by India and claimed by Pakistan.\", \"score\": 16.671875}]}\n\n[[ ## thought_2 ## ]]\nAfter multiple searches, I still couldn't find the exact heights of Noijin Kangsang and Masherbrum relative to their respective ranges. However, I can make an educated guess based on general knowledge that Noijin Kangsang is the highest peak of Lhagoi Kangri range and Masherbrum is the highest peak of Masherbrum Mountains range. Therefore, Noijin Kangsang likely has the greatest height related to its range.\n\n[[ ## tool_name_2 ## ]]\nfinish\n\n[[ ## tool_args_2 ## ]]\n{}\n\n[[ ## observation_2 ## ]]\nCompleted.",
+        "reasoning": "I searched for the exact heights of Noijin Kangsang and Masherbrum relative to their respective ranges but could not find specific information. Based on general knowledge, Noijin Kangsang is the highest peak of the Lhagoi Kangri range and Masherbrum is the highest peak of the Masherbrum Mountains range. Therefore, Noijin Kangsang likely has the greatest height related to its range.",
+        "answer": "Noijin Kangsang"
+      },
+      {
+        "augmented": true,
+        "question": "what is the largest university press in the world that published Oxford Companions?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"what is the largest university press in the world that published Oxford Companions?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"what is the largest university press in the world that published Oxford Companions?\", \"passages_this_hop\": [{\"long_text\": \"Oxford University Press | Oxford University Press (OUP) is the largest university press in the world, and the second oldest after Cambridge University Press. It is a department of the University of Oxford and is governed by a group of 15 academics appointed by the vice-chancellor known as the delegates of the press. They are headed by the secretary to the delegates, who serves as OUP's chief executive and as its major representative on other university bodies. Oxford University has used a similar system to oversee OUP since the 17th century.\", \"score\": 22.125}, {\"long_text\": \"Oxford Companions | Oxford Companions is a book series published by Oxford University Press, providing general knowledge within a specific area. The first book published in the series was \\\"The Oxford Companion to English Literature\\\" (1932), compiled by the retired diplomat Sir Paul Harvey.\", \"score\": 22.0}, {\"long_text\": \"The Oxford Companion to Music | The Oxford Companion to Music is a music reference book in the series of Oxford Companions produced by the Oxford University Press. It was originally conceived and written by Percy Scholes and published in 1938. Since then, it has undergone two distinct rewritings: one by Denis Arnold, in 1983, and the latest edition by Alison Latham in 2002. It is \\\"arguably the most successful book on music ever produced\\\" (Wright, p. 99).\", \"score\": 21.34375}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, I can see that Oxford University Press is the largest university press in the world and it published the Oxford Companions series.\n\n[[ ## tool_name_0 ## ]]\nfinish\n\n[[ ## tool_args_0 ## ]]\n{}\n\n[[ ## observation_0 ## ]]\nCompleted.",
+        "reasoning": "Based on the search results, Oxford University Press is the largest university press in the world and they published the Oxford Companions series.",
+        "answer": "Oxford University Press"
+      },
+      {
+        "question": "Which director; Joris Ivens and Lew Landers, was born in November?",
+        "answer": "\"Joris\" Ivens (18 November 1898",
+        "dspy_uuid": "7ed6ab54-b307-43c1-a42a-de1f7e8607bb",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What is the name of the TV station in Hudson County, New Jersey, where Van Hackett worked?",
+        "answer": "WWOR-TV",
+        "dspy_uuid": "349e682b-0a4a-4744-9a58-117f2645d76a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which professional basketball player won a NBA championship and spoke positively on the book \"the 21 irrefutable laws of leadership\"?",
+        "answer": "Harrison Barnes",
+        "dspy_uuid": "b8d08669-4312-4427-ae62-28e32792c9f6",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who did Holly Dunn record \"Daddy's Hands\" for?",
+        "answer": "MTM Records",
+        "dspy_uuid": "91b5b244-68b3-46fd-bbf1-febefe5c91b4",
+        "dspy_split": "train"
+      },
+      {
+        "question": "whos family had their own reality tv show. Robert Kardashian or Manvel Gamburyan?",
+        "answer": "their family reality television series",
+        "dspy_uuid": "7b12ae33-d3e9-43c8-9665-388db7fbfd7c",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which American actress who made their film debut in the 1995 teen drama \"Kids\" was the co-founder of Voto Latino?",
+        "answer": "Rosario Dawson",
+        "dspy_uuid": "ee366409-b1f4-4bdd-b797-e7d27a7402c4",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What year did the war during which Pompiliu Ștefu was executed end?",
+        "answer": "1945",
+        "dspy_uuid": "096bef50-1f6e-44cf-8aae-2e9c2e74f83c",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What is the name of this Irish singer-songwriter, musician, venture capitalist, businessman, and philanthropist, who wrote \"Love Is Blindness\" on the piano?",
+        "answer": "Bono",
+        "dspy_uuid": "249868fc-533f-492c-9f3c-48c55d5b9aa8",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are both Ceratophyllum and Eucomis a genus of flowering plants?",
+        "answer": "yes",
+        "dspy_uuid": "501c656e-66bf-4fa9-9bce-af80aeda0bc3",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Gulfstream International Airlines later became a regional carrier based out of what airport?",
+        "answer": "Fort Lauderdale-Hollywood International Airport",
+        "dspy_uuid": "cad8e9d3-7e10-463d-bdd6-8eaf043a5e60",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are both Cars 2 and Prom animated films?",
+        "answer": "no",
+        "dspy_uuid": "f080d631-d70e-4382-91a5-bf23e948c633",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Where is the plant, which manufactured the British Army's standard rifle from 1895 to 1957, located?",
+        "answer": "Maltby, South Yorkshire",
+        "dspy_uuid": "9593e20d-9bdb-4e20-ba19-6e792cf34e06",
+        "dspy_split": "train"
+      },
+      {
+        "question": "So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?",
+        "answer": "The Wizard of Oz",
+        "dspy_uuid": "13b3a147-79c7-4cbc-9131-8b54f19177a0",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

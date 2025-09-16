@@ -1,0 +1,292 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "in the 1975\u201376, Seattle SuperSonics lost to a team based in which US state ?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"in the 1975\u201376, Seattle SuperSonics lost to a team based in which US state ?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"in the 1975\u201376, Seattle SuperSonics lost to a team based in which US state ?\", \"passages_this_hop\": [{\"long_text\": \"1975\u201376 Seattle SuperSonics season | The 1975\u201376 Seattle SuperSonics season was the 9th season of the Seattle SuperSonics in the National Basketball Association (NBA). The SuperSonics finished the season in second place in the Western Conference with a 43\u201339 record, the same as the previous year and reached the playoffs for a second consecutive season, where they lost to the Phoenix Suns in the Conference Semifinals in six games.\", \"score\": 22.984375}, {\"long_text\": \"1974\u201375 Seattle SuperSonics season | The 1974\u201375 Seattle SuperSonics season was the 8th season of the Seattle SuperSonics in the National Basketball Association (NBA). In their second season with Bill Russell as head coach and with rookies comprising half the roster, the SuperSonics finished the regular season in 4th place in the Western Conference with a 43\u201339 record and reached the playoffs for the first time in franchise history. After defeating the Detroit Pistons in 3 games in the first round in a best-of-three series, the team fell to the future champions Golden State Warriors in six games.\", \"score\": 21.65625}, {\"long_text\": \"1977\u201378 Seattle SuperSonics season | The 1977\u201378 Seattle SuperSonics season was the 11th season of the franchise in the National Basketball Association (NBA). With a disappointing 5\u201317 start, the Sonics replaced coach Bob Hopkins with future Hall of Famer Lenny Wilkens, who led the team to a 47\u201335 finish. After upsetting the defending champions Portland Trail Blazers in the Western Conference Semifinals, the Sonics made their first trip to the NBA Finals, where they lost the series to the Washington Bullets in 7 games.\", \"score\": 20.453125}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages, I understand that the Seattle SuperSonics lost to the Phoenix Suns in the Conference Semifinals in the 1975-76 season. Now, I need to find out in which US state Phoenix is located.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Phoenix Suns location\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Phoenix Suns location\", \"passages_this_hop\": [{\"long_text\": \"Phoenix Suns | The Phoenix Suns are an American professional basketball team based in Phoenix, Arizona. The Suns compete in the National Basketball Association (NBA) as a member team of the league's Western Conference Pacific Division, and are the only team in their division not to be based in California. Since 1992, the Suns have played their home games at Talking Stick Resort Arena in downtown Phoenix.\", \"score\": 25.96875}, {\"long_text\": \"List of Phoenix Suns seasons | The Phoenix Suns are a professional basketball team based in Phoenix, Arizona, United States. They are members of the Pacific Division of the Western Conference in the National Basketball Association (NBA). The Suns began playing in the NBA as an expansion team in the 1968\u201369 NBA season. In their inaugural season, the Suns posted a win\u2013loss record of 16\u201466. They participated in the playoffs only once in their first seven seasons.\", \"score\": 25.0}, {\"long_text\": \"List of Phoenix Suns head coaches | The Phoenix Suns are an American professional basketball team based in Phoenix, Arizona. They are members of the Pacific Division of the Western Conference in the National Basketball Association (NBA). Founded in , the Suns are chronologically the second-oldest team in the Western Conference. The Suns are also chronologically the third-oldest team in the NBA to have never won an NBA Championship while having played in the NBA Finals at least once. The Suns play their home games at the US Airways Center.\", \"score\": 24.53125}]}\n\n[[ ## thought_1 ## ]]\nThe passages indicate that the Phoenix Suns are based in Phoenix, Arizona. Therefore, the team the Seattle SuperSonics lost to in the 1975-76 season was based in the state of Arizona.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Arizona\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Arizona\", \"passages_this_hop\": [{\"long_text\": \"Arizona | Arizona ( ; Navajo: \\\"Hoozdo Hahoodzo\\\" [x\u00f2\u02d0zt\u00f2 x\u0251\u0300x\u00f2\u02d0ts\u00f2] ; O'odham: \\\"Al\u012d \u1e63onak\\\" [\u02e1a\u027ai \u02e1\u0282onak]) is a state in the southwestern region of the United States. It is also part of the Western and the Mountain states. It is the sixth largest and the 14th most populous of the 50 states. Its capital and largest city is Phoenix. Arizona is one of the Four Corners states. It has borders with New Mexico, Utah, Nevada, California, and Mexico, and one point in common with the southwestern corner of Colorado. Arizona's border with Mexico is 389 miles (626 km) long, on the northern border of the Mexican states of Sonora and Baja California.\", \"score\": 27.421875}, {\"long_text\": \"Geography of Arizona | Arizona is a landlocked state situated in the southwestern region of the United States of America. Arizona shares land borders with Utah to the north, the Mexican state of Sonora to the south, New Mexico to the east, and Nevada to the west. Arizona shares water borders with California and the Mexican state of Baja California to the west along the Colorado River. Arizona is also one of the Four Corners states, at which Arizona touches Colorado.\", \"score\": 26.0}, {\"long_text\": \"Arizona (disambiguation) | Arizona is a state in the United States of America.\", \"score\": 25.5}]}\n\n[[ ## thought_2 ## ]]\nThe answer to the question is that the Phoenix Suns, whom the Seattle SuperSonics lost to in the 1975-76 season, are based in the state of Arizona.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"Seattle SuperSonics 1975-76 season opponent state\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"Seattle SuperSonics 1975-76 season opponent state\", \"passages_this_hop\": [{\"long_text\": \"1976\u201377 Seattle SuperSonics season | The 1976-77 NBA season was the SuperSonics' 10th season in the NBA.\", \"score\": 20.625}, {\"long_text\": \"1973\u201374 Seattle SuperSonics season | The 1973\u201374 Seattle SuperSonics season was the 7th season of the Seattle SuperSonics in the National Basketball Association (NBA). Following the resignation of Lenny Wilkens as a head coach after the 1971\u201372 season and a poor campaign in the 1972\u201373 season that saw the departure of general manager Bob Houbregs, the Sonics hired Boston Celtics' stalwart Bill Russell as head coach and general manager. With Russell at the helm, the team finished in 6th place in the Western Conference with a 36\u201346 record. The Sonics' home court, Seattle Center Coliseum, was the venue for the 1974 NBA All-Star Game.\", \"score\": 20.21875}, {\"long_text\": \"1972\u201373 Seattle SuperSonics season | The 1972\u201373 Seattle SuperSonics season was the 8th season of the Seattle SuperSonics in the National Basketball Association (NBA). The team finished the regular season in 6th place in the Western Conference with a 26\u201356 record, 21 wins behind the one obtained in their previous season. Head coach Tom Nissalke was fired by the team in January after a 13\u201332 start and was replaced by his assistant Bucky Buckwalter.\", \"score\": 19.78125}]}",
+        "next_thought": "The passages provided information about the Seattle SuperSonics' performance in the 1975-76 season but did not directly state the name of the team they lost to. However, from the earlier passage, we know that the team was the Phoenix Suns, which is based in Arizona.",
+        "next_tool_name": "advancedsearch",
+        "next_tool_args": {
+          "search_query": "Phoenix Suns 1975-76 season opponent state"
+        }
+      },
+      {
+        "augmented": true,
+        "question": "What's the present day English county of Skelton-in-Cleveland, recorded in the Domesday Book and site of a 12th-century castle?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What's the present day English county of Skelton-in-Cleveland, recorded in the Domesday Book and site of a 12th-century castle?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What's the present day English county of Skelton-in-Cleveland, recorded in the Domesday Book and site of a 12th-century castle?\", \"passages_this_hop\": [{\"long_text\": \"Skelton-in-Cleveland | Skelton-in-Cleveland is a small town in the civil parish of Skelton and Brotton in North Yorkshire, England. The local council, a unitary authority, is Redcar and Cleveland in the North East of England. It is situated at the foot of the Cleveland Hills and about 10 mi east of Middlesbrough. Skelton is made up of North Skelton, Skelton Green and New Skelton. The first real mention of Skelton is in the \\\"Domesday Book\\\", which talks about taxes collected. Skelton Castle was built in the 12th century by the\", \"score\": 22.640625}, {\"long_text\": \"Skelton and Brotton | Skelton and Brotton is a civil parish in the unitary authority of Redcar and Cleveland, England. It consists of the towns of Skelton-in-Cleveland and Brotton, which had a combined population of 18,952 in 2002,reducing to 12,848 at the Census 2011.\", \"score\": 20.0625}, {\"long_text\": \"Langbaurgh West | Langbaurgh West was a division of the Wapentake of Langbaurgh in the North Riding of the ancient County of Yorkshire. The area along with Langbaurgh East forms the Anglo-Saxon baronial Liberty of Cleveland, England (not to be confused with the County of Cleveland of 1974 to 1996) and roughly covers the modern districts of Middlesbrough, the western, urbanised portion of Redcar & Cleveland, the southern portion of Stockton-on-Tees, the northern parts of Hambleton (Great Ayton, Stokesley) and the northern parts of the Borough of Scarborough.\", \"score\": 19.234375}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, I can see that Skelton-in-Cleveland is in the civil parish of Skelton and Brotton in North Yorkshire, England. The local council is Redcar and Cleveland in the North East of England. Now, I need to confirm if this is still the case in the present day.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What is the current English county of Skelton-in-Cleveland?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What is the current English county of Skelton-in-Cleveland?\", \"passages_this_hop\": [{\"long_text\": \"North Skelton | North Skelton is a village in the unitary authority of Redcar and Cleveland and the ceremonial county of North Yorkshire, England.\", \"score\": 22.796875}, {\"long_text\": \"Skelton, Cumbria | Skelton is a small village and civil parish about 7 mi north west of Penrith in the English county of Cumbria. It is on the former route of the B5305 road, which is now about 1 mi to the north.\", \"score\": 21.4375}, {\"long_text\": \"Skelton, East Riding of Yorkshire | Skelton is a hamlet in the East Riding of Yorkshire, England, and a linear settlement on the east bank of the River Ouse. It is situated about 2 mi south-east of Howden and 19 mi south-east from the county town of York. It forms part of the civil parish of Kilpin. Skelton lies within the constituency of Haltemprice and Howden, an area placed as the 10th most affluent in the country in a Barclays Private Clients survey.\", \"score\": 20.671875}]}\n\n[[ ## thought_1 ## ]]\nThe search results indicate that Skelton-in-Cleveland is currently in the unitary authority of Redcar and Cleveland and the ceremonial county of North Yorkshire, England. To finalize the answer, I should check if there has been any change in the English county since the Domesday Book recording.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Has the English county of Skelton-in-Cleveland changed since the Domesday Book?\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Has the English county of Skelton-in-Cleveland changed since the Domesday Book?\", \"passages_this_hop\": [{\"long_text\": \"Old All Saints Church, Skelton-in-Cleveland | Old All Saints Church is a redundant Anglican church in the town of Skelton-in-Cleveland, North Yorkshire, England. It is recorded in the National Heritage List for England as a designated Grade II* listed building, and is in the care of the Churches Conservation Trust.\", \"score\": 19.0625}, {\"long_text\": \"Skelton, York | Skelton is a village and civil parish in the unitary authority of the City of York, in North Yorkshire, England. It is 4 mi north northwest of the city of York, west of Haxby, and on the east bank of the River Ouse. Skelton was in the ancient royal Forest of Galtres and covers 977.3 hectares (3.77 square miles). Skelton was made a conservation area in 1973.\", \"score\": 18.859375}, {\"long_text\": \"North Skelton railway station | North Skelton railway station was opened to freight on 1 August 1875 by the North Eastern Railway and to passengers on 1 July 1902. It served the village of Skelton-in-Cleveland in North Yorkshire, England. It closed to passengers on 15 January 1951, but opened again briefly on 18 June for the summer season before finally closing to passengers on 10 September of the same year. Freight traffic remained until 1 February 1952. In October 1956 the station was reopened to freight as a private siding which was finally closed on 21 January 1964.\", \"score\": 18.625}]}",
+        "next_thought": "Based on the search results, it appears that the English county of Skelton-in-Cleveland has not changed since the Domesday Book. It is still in North Yorkshire, England.",
+        "next_tool_name": "advancedsearch",
+        "next_tool_args": {
+          "search_query": "What is the current English county of Skelton-in-Cleveland?"
+        }
+      },
+      {
+        "question": "Which lasted longer, the Battle of Belleau Wood or the Battle of Leyte?",
+        "answer": "Battle of Leyte",
+        "dspy_uuid": "f79cec80-cd91-4092-b5e7-f90130fbab32",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was the role played in \"Sweet Charity\" by the star of Dear Diary?",
+        "answer": "Nickie",
+        "dspy_uuid": "b97c335f-50f2-417b-8047-f419610e2195",
+        "dspy_split": "train"
+      },
+      {
+        "question": "George Keith was probably the last Earl Marishal at what ruined motte and bailey castle in Aberdeenshire, Scotland?",
+        "answer": "Inverugie Castle",
+        "dspy_uuid": "1b60bc0a-c2a6-41d9-95d4-59b135a75505",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What role does Ghanashyam Nayak play in India's longest running sitcom serial?",
+        "answer": "Natwarlal Prabhashankar Undhaiwala",
+        "dspy_uuid": "e72021fd-cff5-4314-9978-d0f2a7454619",
+        "dspy_split": "train"
+      },
+      {
+        "question": "what song is in the movie directed by Paul Hoen based on the novel \"if I had one wish\"?",
+        "answer": "\"World of Our Own\"",
+        "dspy_uuid": "023ac786-e4ce-4f66-84cc-e0742a7f08b6",
+        "dspy_split": "train"
+      },
+      {
+        "question": "what job\/hobby do Andy Ram and Arnaud Cl\u00e9ment have in common?",
+        "answer": "professional tennis",
+        "dspy_uuid": "7e0af23c-c1c8-45e3-a305-88a5b815261e",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are both Ceratophyllum and Eucomis a genus of flowering plants?",
+        "answer": "yes",
+        "dspy_uuid": "e6b29d59-45db-49bf-b0c0-056d9b8351fe",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who did Holly Dunn record \"Daddy's Hands\" for?",
+        "answer": "MTM Records",
+        "dspy_uuid": "bf6db912-f207-475d-93b2-d62f0458b21d",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which dog originated in the Mountains of Romania, the Ariege Pointer or the Carpathian Shepherd Dog?",
+        "answer": "Carpathian Mountains of Romania.",
+        "dspy_uuid": "c622518f-320b-4ba4-a871-b4cb9d771d59",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who directed the 1987 romantic drama dance film that is directly parodied by the television film \"Totally Awesome\"?",
+        "answer": "Emile Ardolino",
+        "dspy_uuid": "d421e0a4-2f4b-4944-ac37-c3990dd67711",
+        "dspy_split": "train"
+      },
+      {
+        "question": "How many copies were sold of the last UK number-one single that was written by Noddy Holder and Jim Lea?",
+        "answer": "in excess of one million copies",
+        "dspy_uuid": "265207b2-ee87-4ff3-a7c0-74eec1d69157",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Were Dorothy Arzner and Richard Wallace both French film directors?",
+        "answer": "no",
+        "dspy_uuid": "aa993128-2471-45bf-a025-6e38def4a851",
+        "dspy_split": "train"
+      },
+      {
+        "question": "In what army is Mehmet\u00e7ik slang for a common a common soldier?",
+        "answer": "Ottoman Army",
+        "dspy_uuid": "9650facd-1cba-415e-a38c-bf8696c531f2",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What precious metal did both McIntyre Mines and the Kemess Mine dig for?",
+        "answer": "gold",
+        "dspy_uuid": "dce6eaab-947a-4f58-a839-faf0429aae31",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question`.\n\nYou must decide what to do next by providing:\n\n- Thought: reasoning about the current step\n\n- Tool Name: one of the available tools\n\n- Tool Args: A valid JSON with the necessary keys.\n\nRepeat this for a few steps to gather information.\n\nYou do not need to produce a final answer \u2014 just use the tools iteratively.\nMake sure to include all required Tool Args as a valid JSON object.\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!<\/desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "in the 1975\u201376, Seattle SuperSonics lost to a team based in which US state ?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"in the 1975\u201376, Seattle SuperSonics lost to a team based in which US state ?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"in the 1975\u201376, Seattle SuperSonics lost to a team based in which US state ?\", \"passages_this_hop\": [{\"long_text\": \"1975\u201376 Seattle SuperSonics season | The 1975\u201376 Seattle SuperSonics season was the 9th season of the Seattle SuperSonics in the National Basketball Association (NBA). The SuperSonics finished the season in second place in the Western Conference with a 43\u201339 record, the same as the previous year and reached the playoffs for a second consecutive season, where they lost to the Phoenix Suns in the Conference Semifinals in six games.\", \"score\": 22.984375}, {\"long_text\": \"1974\u201375 Seattle SuperSonics season | The 1974\u201375 Seattle SuperSonics season was the 8th season of the Seattle SuperSonics in the National Basketball Association (NBA). In their second season with Bill Russell as head coach and with rookies comprising half the roster, the SuperSonics finished the regular season in 4th place in the Western Conference with a 43\u201339 record and reached the playoffs for the first time in franchise history. After defeating the Detroit Pistons in 3 games in the first round in a best-of-three series, the team fell to the future champions Golden State Warriors in six games.\", \"score\": 21.65625}, {\"long_text\": \"1977\u201378 Seattle SuperSonics season | The 1977\u201378 Seattle SuperSonics season was the 11th season of the franchise in the National Basketball Association (NBA). With a disappointing 5\u201317 start, the Sonics replaced coach Bob Hopkins with future Hall of Famer Lenny Wilkens, who led the team to a 47\u201335 finish. After upsetting the defending champions Portland Trail Blazers in the Western Conference Semifinals, the Sonics made their first trip to the NBA Finals, where they lost the series to the Washington Bullets in 7 games.\", \"score\": 20.453125}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages, I understand that the Seattle SuperSonics lost to the Phoenix Suns in the Conference Semifinals in the 1975-76 season. Now, I need to find out in which US state Phoenix is located.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Phoenix Suns location\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Phoenix Suns location\", \"passages_this_hop\": [{\"long_text\": \"Phoenix Suns | The Phoenix Suns are an American professional basketball team based in Phoenix, Arizona. The Suns compete in the National Basketball Association (NBA) as a member team of the league's Western Conference Pacific Division, and are the only team in their division not to be based in California. Since 1992, the Suns have played their home games at Talking Stick Resort Arena in downtown Phoenix.\", \"score\": 25.96875}, {\"long_text\": \"List of Phoenix Suns seasons | The Phoenix Suns are a professional basketball team based in Phoenix, Arizona, United States. They are members of the Pacific Division of the Western Conference in the National Basketball Association (NBA). The Suns began playing in the NBA as an expansion team in the 1968\u201369 NBA season. In their inaugural season, the Suns posted a win\u2013loss record of 16\u201466. They participated in the playoffs only once in their first seven seasons.\", \"score\": 25.0}, {\"long_text\": \"List of Phoenix Suns head coaches | The Phoenix Suns are an American professional basketball team based in Phoenix, Arizona. They are members of the Pacific Division of the Western Conference in the National Basketball Association (NBA). Founded in , the Suns are chronologically the second-oldest team in the Western Conference. The Suns are also chronologically the third-oldest team in the NBA to have never won an NBA Championship while having played in the NBA Finals at least once. The Suns play their home games at the US Airways Center.\", \"score\": 24.53125}]}\n\n[[ ## thought_1 ## ]]\nThe passages indicate that the Phoenix Suns are based in Phoenix, Arizona. Therefore, the team the Seattle SuperSonics lost to in the 1975-76 season was based in the state of Arizona.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Arizona\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Arizona\", \"passages_this_hop\": [{\"long_text\": \"Arizona | Arizona ( ; Navajo: \\\"Hoozdo Hahoodzo\\\" [x\u00f2\u02d0zt\u00f2 x\u0251\u0300x\u00f2\u02d0ts\u00f2] ; O'odham: \\\"Al\u012d \u1e63onak\\\" [\u02e1a\u027ai \u02e1\u0282onak]) is a state in the southwestern region of the United States. It is also part of the Western and the Mountain states. It is the sixth largest and the 14th most populous of the 50 states. Its capital and largest city is Phoenix. Arizona is one of the Four Corners states. It has borders with New Mexico, Utah, Nevada, California, and Mexico, and one point in common with the southwestern corner of Colorado. Arizona's border with Mexico is 389 miles (626 km) long, on the northern border of the Mexican states of Sonora and Baja California.\", \"score\": 27.421875}, {\"long_text\": \"Geography of Arizona | Arizona is a landlocked state situated in the southwestern region of the United States of America. Arizona shares land borders with Utah to the north, the Mexican state of Sonora to the south, New Mexico to the east, and Nevada to the west. Arizona shares water borders with California and the Mexican state of Baja California to the west along the Colorado River. Arizona is also one of the Four Corners states, at which Arizona touches Colorado.\", \"score\": 26.0}, {\"long_text\": \"Arizona (disambiguation) | Arizona is a state in the United States of America.\", \"score\": 25.5}]}\n\n[[ ## thought_2 ## ]]\nThe answer to the question is that the Phoenix Suns, whom the Seattle SuperSonics lost to in the 1975-76 season, are based in the state of Arizona.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"Seattle SuperSonics 1975-76 season opponent state\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"Seattle SuperSonics 1975-76 season opponent state\", \"passages_this_hop\": [{\"long_text\": \"1976\u201377 Seattle SuperSonics season | The 1976-77 NBA season was the SuperSonics' 10th season in the NBA.\", \"score\": 20.625}, {\"long_text\": \"1973\u201374 Seattle SuperSonics season | The 1973\u201374 Seattle SuperSonics season was the 7th season of the Seattle SuperSonics in the National Basketball Association (NBA). Following the resignation of Lenny Wilkens as a head coach after the 1971\u201372 season and a poor campaign in the 1972\u201373 season that saw the departure of general manager Bob Houbregs, the Sonics hired Boston Celtics' stalwart Bill Russell as head coach and general manager. With Russell at the helm, the team finished in 6th place in the Western Conference with a 36\u201346 record. The Sonics' home court, Seattle Center Coliseum, was the venue for the 1974 NBA All-Star Game.\", \"score\": 20.21875}, {\"long_text\": \"1972\u201373 Seattle SuperSonics season | The 1972\u201373 Seattle SuperSonics season was the 8th season of the Seattle SuperSonics in the National Basketball Association (NBA). The team finished the regular season in 6th place in the Western Conference with a 26\u201356 record, 21 wins behind the one obtained in their previous season. Head coach Tom Nissalke was fired by the team in January after a 13\u201332 start and was replaced by his assistant Bucky Buckwalter.\", \"score\": 19.78125}]}\n\n[[ ## thought_3 ## ]]\nThe passages provided information about the Seattle SuperSonics' performance in the 1975-76 season but did not directly state the name of the team they lost to. However, from the earlier passage, we know that the team was the Phoenix Suns, which is based in Arizona.\n\n[[ ## tool_name_3 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_3 ## ]]\n{\"search_query\": \"Phoenix Suns 1975-76 season opponent state\"}\n\n[[ ## observation_3 ## ]]\n{\"search_query\": \"Phoenix Suns 1975-76 season opponent state\", \"passages_this_hop\": [{\"long_text\": \"1975\u201376 Phoenix Suns season | The 1975\u201376 Phoenix Suns season was the eighth season for the Phoenix Suns of the National Basketball Association. The season included an improbable run to the NBA Finals by a team that had never won a playoff series and made the playoffs only one other season in the franchise's existence. With a regular season record of 42\u201340, the Suns had finished third in the Pacific division standings and improved upon last season's win total by 10 games. The ensuing playoff run took plenty by surprise, including a seven-game series win against the Western Conference's top seed Golden State Warriors, a team that had finished 17 games ahead of the Suns in the divisional standings. The franchise's first Finals appearance pitted them against a 12-time champion in the Boston Celtics, whose roster featured three players from that season's All-Star Game. The 1976 NBA Finals would feature a memorable Game 5 triple-overtime thriller filled with controversies in which the Suns narrowly lost. Returning home for Game 6, the demoralized Suns would lose Game 6 and the series but not before endearing a generation of fans to the Suns franchise and showcasing a basketball from the desert southwest. The team's \\\"Cinderella\\\" season earned them the nickname Sunderella Suns. John MacLeod was head coach and the Suns played their home games at Arizona Veterans Memorial Coliseum.\", \"score\": 25.203125}, {\"long_text\": \"1976\u201377 Phoenix Suns season | The 1976\u201377 Phoenix Suns season was the ninth season for the Phoenix Suns of the National Basketball Association. With injuries limiting the team to only six games with a full roster, the Suns plummeted to the bottom of the Pacific division standings, missing the playoffs after appearing in the Finals just one season prior. The Suns were led by head coach John MacLeod and played all home games in Arizona Veterans Memorial Coliseum.\", \"score\": 21.359375}, {\"long_text\": \"1975\u201376 NBA season | The 1975\u201376 NBA season was the 30th season of the National Basketball Association. The season ended with the Boston Celtics winning the NBA Championship, beating the Phoenix Suns 4 games to 2 in the NBA Finals.\", \"score\": 21.34375}]}\n\n[[ ## thought_4 ## ]]\nFrom the passages, it is clear that the Phoenix Suns, who the Seattle SuperSonics lost to in the 1975-76 season, are based in Arizona. No further search is needed.\n\n[[ ## tool_name_4 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_4 ## ]]\n{\"search_query\": \"Arizona\"}\n\n[[ ## observation_4 ## ]]\n{\"search_query\": \"Arizona\", \"passages_this_hop\": [{\"long_text\": \"Arizona, Atl\u00e1ntida | Arizona (] ) is a municipality in the Honduran department of Atl\u00e1ntida.\", \"score\": 24.484375}, {\"long_text\": \"Arizona, Manitoba | Arizona is a locality in the Rural Municipality of North Norfolk in south central Manitoba, Canada. It is located approximately 66 kilometers (41 miles) east of Brandon, Manitoba, about 377m above sea level in an area which experiences frequent drought.\", \"score\": 24.4375}, {\"long_text\": \"Arizona City, Arizona | Arizona City (name change in process) is a census-designated place (CDP) in Pinal County, Arizona, United States. The population was 10,475 at the 2010 census. From time to time, most recently in 2007, attempts have been made to incorporate as a municipality, but they have so far always been defeated at the ballot box, except for the first effort in the early 1980s, which succeeded at the ballot box but was overturned in court because there were not enough residents at that time to incorporate.\", \"score\": 24.4375}]}",
+        "reasoning": "The Seattle SuperSonics lost to the Phoenix Suns in the 1975-76 season, and the Phoenix Suns are based in Phoenix, Arizona. Therefore, the team the Seattle SuperSonics lost to in the 1975-76 season was based in the state of Arizona.",
+        "answer": "Arizona"
+      },
+      {
+        "augmented": true,
+        "question": "What's the present day English county of Skelton-in-Cleveland, recorded in the Domesday Book and site of a 12th-century castle?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What's the present day English county of Skelton-in-Cleveland, recorded in the Domesday Book and site of a 12th-century castle?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What's the present day English county of Skelton-in-Cleveland, recorded in the Domesday Book and site of a 12th-century castle?\", \"passages_this_hop\": [{\"long_text\": \"Skelton-in-Cleveland | Skelton-in-Cleveland is a small town in the civil parish of Skelton and Brotton in North Yorkshire, England. The local council, a unitary authority, is Redcar and Cleveland in the North East of England. It is situated at the foot of the Cleveland Hills and about 10 mi east of Middlesbrough. Skelton is made up of North Skelton, Skelton Green and New Skelton. The first real mention of Skelton is in the \\\"Domesday Book\\\", which talks about taxes collected. Skelton Castle was built in the 12th century by the\", \"score\": 22.640625}, {\"long_text\": \"Skelton and Brotton | Skelton and Brotton is a civil parish in the unitary authority of Redcar and Cleveland, England. It consists of the towns of Skelton-in-Cleveland and Brotton, which had a combined population of 18,952 in 2002,reducing to 12,848 at the Census 2011.\", \"score\": 20.0625}, {\"long_text\": \"Langbaurgh West | Langbaurgh West was a division of the Wapentake of Langbaurgh in the North Riding of the ancient County of Yorkshire. The area along with Langbaurgh East forms the Anglo-Saxon baronial Liberty of Cleveland, England (not to be confused with the County of Cleveland of 1974 to 1996) and roughly covers the modern districts of Middlesbrough, the western, urbanised portion of Redcar & Cleveland, the southern portion of Stockton-on-Tees, the northern parts of Hambleton (Great Ayton, Stokesley) and the northern parts of the Borough of Scarborough.\", \"score\": 19.234375}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, I can see that Skelton-in-Cleveland is in the civil parish of Skelton and Brotton in North Yorkshire, England. The local council is Redcar and Cleveland in the North East of England. Now, I need to confirm if this is still the case in the present day.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What is the current English county of Skelton-in-Cleveland?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What is the current English county of Skelton-in-Cleveland?\", \"passages_this_hop\": [{\"long_text\": \"North Skelton | North Skelton is a village in the unitary authority of Redcar and Cleveland and the ceremonial county of North Yorkshire, England.\", \"score\": 22.796875}, {\"long_text\": \"Skelton, Cumbria | Skelton is a small village and civil parish about 7 mi north west of Penrith in the English county of Cumbria. It is on the former route of the B5305 road, which is now about 1 mi to the north.\", \"score\": 21.4375}, {\"long_text\": \"Skelton, East Riding of Yorkshire | Skelton is a hamlet in the East Riding of Yorkshire, England, and a linear settlement on the east bank of the River Ouse. It is situated about 2 mi south-east of Howden and 19 mi south-east from the county town of York. It forms part of the civil parish of Kilpin. Skelton lies within the constituency of Haltemprice and Howden, an area placed as the 10th most affluent in the country in a Barclays Private Clients survey.\", \"score\": 20.671875}]}\n\n[[ ## thought_1 ## ]]\nThe search results indicate that Skelton-in-Cleveland is currently in the unitary authority of Redcar and Cleveland and the ceremonial county of North Yorkshire, England. To finalize the answer, I should check if there has been any change in the English county since the Domesday Book recording.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Has the English county of Skelton-in-Cleveland changed since the Domesday Book?\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Has the English county of Skelton-in-Cleveland changed since the Domesday Book?\", \"passages_this_hop\": [{\"long_text\": \"Old All Saints Church, Skelton-in-Cleveland | Old All Saints Church is a redundant Anglican church in the town of Skelton-in-Cleveland, North Yorkshire, England. It is recorded in the National Heritage List for England as a designated Grade II* listed building, and is in the care of the Churches Conservation Trust.\", \"score\": 19.0625}, {\"long_text\": \"Skelton, York | Skelton is a village and civil parish in the unitary authority of the City of York, in North Yorkshire, England. It is 4 mi north northwest of the city of York, west of Haxby, and on the east bank of the River Ouse. Skelton was in the ancient royal Forest of Galtres and covers 977.3 hectares (3.77 square miles). Skelton was made a conservation area in 1973.\", \"score\": 18.859375}, {\"long_text\": \"North Skelton railway station | North Skelton railway station was opened to freight on 1 August 1875 by the North Eastern Railway and to passengers on 1 July 1902. It served the village of Skelton-in-Cleveland in North Yorkshire, England. It closed to passengers on 15 January 1951, but opened again briefly on 18 June for the summer season before finally closing to passengers on 10 September of the same year. Freight traffic remained until 1 February 1952. In October 1956 the station was reopened to freight as a private siding which was finally closed on 21 January 1964.\", \"score\": 18.625}]}\n\n[[ ## thought_2 ## ]]\nBased on the search results, it appears that the English county of Skelton-in-Cleveland has not changed since the Domesday Book. It is still in North Yorkshire, England.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"What is the current English county of Skelton-in-Cleveland?\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"What is the current English county of Skelton-in-Cleveland?\", \"passages_this_hop\": [{\"long_text\": \"Hutton in the Forest | Hutton in the Forest is a Grade I listed country house near the village of Skelton in the historic county of Cumberland, which now forms part of the modern county of Cumbria, England. It has belonged to the Fletcher-Vane family, latterly the Barons Inglewood, since 1605.\", \"score\": 20.265625}, {\"long_text\": \"Skelton, North Yorkshire | Skelton is a small hamlet located in the Richmondshire district of North Yorkshire, England. It is located within the Yorkshire Dales National Park near the larger village of Marske in Swaledale. It currently has a church, public house and a village shop.\", \"score\": 20.21875}, {\"long_text\": \"Laithes | Laithes is a hamlet in the parish of Skelton, in the Eden District, in the English county of Cumbria.\", \"score\": 20.203125}]}\n\n[[ ## thought_3 ## ]]\nThe search results consistently point to Skelton-in-Cleveland being in North Yorkshire, England. However, I need to verify if there have been any changes in the administrative divisions or if the county remains the same.\n\n[[ ## tool_name_3 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_3 ## ]]\n{\"search_query\": \"Is the current English county of Skelton-in-Cleveland North Yorkshire?\"}\n\n[[ ## observation_3 ## ]]\n{\"search_query\": \"Is the current English county of Skelton-in-Cleveland North Yorkshire?\", \"passages_this_hop\": [{\"long_text\": \"Redcar and Cleveland | The borough of Redcar & Cleveland is a unitary authority area in the Tees Valley region of North Yorkshire in the North East of England, consisting of Redcar, Saltburn-by-the-Sea, Guisborough, and small towns such as Brotton, Eston, Skelton and Loftus. It had a resident population of 135,200 in 2011. It is represented in Parliament by Anna Turley (Labour) for the Redcar constituency and by Simon Clarke (Conservative Party) for the Middlesbrough South and East Cleveland constituency.\", \"score\": 21.96875}, {\"long_text\": \"Brotton | Brotton is a village in the parish of Skelton and Brotton in North Yorkshire, England. The local council, a unitary authority, is Redcar and Cleveland. It is situated approximately 2.5 mi south-east of Saltburn-by-the-Sea, 12 mi east of Middlesbrough and 14 mi north-west of Whitby. In 2002, the village had a population of 5,384.\", \"score\": 21.21875}, {\"long_text\": \"Skelton-on-Ure | Skelton-on-Ure or Skelton is a village and civil parish in the Harrogate district of North Yorkshire, England. It is situated 3 km west of Boroughbridge, near the A1(M) motorway. There is one village pub called The Black Lion, a primary school, and one Village Store including a Post Office counter.\", \"score\": 21.0625}]}\n\n[[ ## thought_4 ## ]]\nThe search results confirm that the current English county of Skelton-in-Cleveland is indeed North Yorkshire. The local council is the unitary authority of Redcar and Cleveland.\n\n[[ ## tool_name_4 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_4 ## ]]\n{\"search_query\": \"Is the current English county of Skelton-in-Cleveland North Yorkshire?\"}\n\n[[ ## observation_4 ## ]]\n{\"search_query\": \"Is the current English county of Skelton-in-Cleveland North Yorkshire?\", \"passages_this_hop\": [{\"long_text\": \"Saltburn, Marske and New Marske | Saltburn, Marske and New Marske is a civil parish in Redcar and Cleveland in north east England. According to the 2001 census it had a population of 18,325 increasing to 19,134 at the 2011 census. The parish includes Saltburn-by-the-Sea, Marske-by-the-Sea and the inland settlement of New Marske. It borders the parishes of Skelton and Brotton, Guisborough and the unparished area of Redcar.\", \"score\": 19.34375}, {\"long_text\": \"Skelton Hall | Skelton Hall is located in North Yorkshire, England. In 1814 Mrs Mary Thompson, the widow of Henry Thompson, came to live in Skelton at The Cottage from where she not only kept an eye on the repairs that she financed at the church, but also on the building of Skelton Lodge (later Hall) which is shown in an 1839 lithograph. The Lodge became The Hall in about 1867, and the Thompson's were succeeded as owners by the Thornton Duesberys.\", \"score\": 19.3125}, {\"long_text\": \"Coatham | Coatham is a place in the borough of Redcar and Cleveland and the ceremonial county of North Yorkshire, England and is now a district of Redcar.\", \"score\": 19.21875}]}",
+        "reasoning": "After conducting multiple searches and verifying the information, it is clear that the current English county of Skelton-in-Cleveland is North Yorkshire. The local council is the unitary authority of Redcar and Cleveland.",
+        "answer": "North Yorkshire"
+      },
+      {
+        "question": "George Keith was probably the last Earl Marishal at what ruined motte and bailey castle in Aberdeenshire, Scotland?",
+        "answer": "Inverugie Castle",
+        "dspy_uuid": "1b60bc0a-c2a6-41d9-95d4-59b135a75505",
+        "dspy_split": "train"
+      },
+      {
+        "question": "what song is in the movie directed by Paul Hoen based on the novel \"if I had one wish\"?",
+        "answer": "\"World of Our Own\"",
+        "dspy_uuid": "023ac786-e4ce-4f66-84cc-e0742a7f08b6",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What precious metal did both McIntyre Mines and the Kemess Mine dig for?",
+        "answer": "gold",
+        "dspy_uuid": "dce6eaab-947a-4f58-a839-faf0429aae31",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was the role played in \"Sweet Charity\" by the star of Dear Diary?",
+        "answer": "Nickie",
+        "dspy_uuid": "b97c335f-50f2-417b-8047-f419610e2195",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who directed the 1987 romantic drama dance film that is directly parodied by the television film \"Totally Awesome\"?",
+        "answer": "Emile Ardolino",
+        "dspy_uuid": "d421e0a4-2f4b-4944-ac37-c3990dd67711",
+        "dspy_split": "train"
+      },
+      {
+        "question": "In what army is Mehmet\u00e7ik slang for a common a common soldier?",
+        "answer": "Ottoman Army",
+        "dspy_uuid": "9650facd-1cba-415e-a38c-bf8696c531f2",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Were Dorothy Arzner and Richard Wallace both French film directors?",
+        "answer": "no",
+        "dspy_uuid": "aa993128-2471-45bf-a025-6e38def4a851",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who did Holly Dunn record \"Daddy's Hands\" for?",
+        "answer": "MTM Records",
+        "dspy_uuid": "bf6db912-f207-475d-93b2-d62f0458b21d",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which lasted longer, the Battle of Belleau Wood or the Battle of Leyte?",
+        "answer": "Battle of Leyte",
+        "dspy_uuid": "f79cec80-cd91-4092-b5e7-f90130fbab32",
+        "dspy_split": "train"
+      },
+      {
+        "question": "what job\/hobby do Andy Ram and Arnaud Cl\u00e9ment have in common?",
+        "answer": "professional tennis",
+        "dspy_uuid": "7e0af23c-c1c8-45e3-a305-88a5b815261e",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are both Ceratophyllum and Eucomis a genus of flowering plants?",
+        "answer": "yes",
+        "dspy_uuid": "e6b29d59-45db-49bf-b0c0-056d9b8351fe",
+        "dspy_split": "train"
+      },
+      {
+        "question": "How many copies were sold of the last UK number-one single that was written by Noddy Holder and Jim Lea?",
+        "answer": "in excess of one million copies",
+        "dspy_uuid": "265207b2-ee87-4ff3-a7c0-74eec1d69157",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which dog originated in the Mountains of Romania, the Ariege Pointer or the Carpathian Shepherd Dog?",
+        "answer": "Carpathian Mountains of Romania.",
+        "dspy_uuid": "c622518f-320b-4ba4-a871-b4cb9d771d59",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What role does Ghanashyam Nayak play in India's longest running sitcom serial?",
+        "answer": "Natwarlal Prabhashankar Undhaiwala",
+        "dspy_uuid": "e72021fd-cff5-4314-9978-d0f2a7454619",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

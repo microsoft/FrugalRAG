@@ -1,0 +1,288 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "The designer of the Holy Trinity Church pioneered the use of what material in church building?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"The designer of the Holy Trinity Church pioneered the use of what material in church building?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"The designer of the Holy Trinity Church pioneered the use of what material in church building?\", \"passages_this_hop\": [{\"long_text\": \"Holy Trinity Platt Church | Holy Trinity Platt Church (also known as Holy Trinity Church, Rusholme), is in Platt Fields Park in Rusholme, Manchester, England. It is an active Anglican parish church in the deanery of Hulme, the archdeaconry of Manchester, and the diocese of Manchester. The church is recorded in the National Heritage List for England as a designated Grade II* listed building. It is the second \\\"pot church\\\" designed by Edmund Sharpe, so-called because the main building material used in the construction of the church is terracotta.\", \"score\": 21.796875}, {\"long_text\": \"Holy Trinity Church, Bradford | Holy Trinity Church, Bradford, was an Anglican parish church located in Leeds Road, Bradford, West Yorkshire, England. It was built in 1864\u201365 to a design by the Lancaster architect E. G. Paley at an estimated cost of \u00a33,565 (equivalent to \u00a3 in 2015 ). The church was constructed in stone, its architectural style being Decorated. It had north and south five-bay aisles, and a southeast tower. In 1871 a broach spire was added, the chancel arch was rebuilt, and the tower was underpinned because of subsidence, the architects being Paley and Austin. The church was demolished in 1966.\", \"score\": 20.953125}, {\"long_text\": \"Holy Trinity Gough Square | Trinity Church was built in the parish of St Bride's in the City of London, on the initiative of the vicar, the Reverend Thomas Dale, who felt that the parish church was inadequate for the size of the population. He first proposed a schoolroom that would double as an occasional chapel, but soon found that it would be practical to build a church, funded by subscriptions, and grants from the Church Commissioners and the Metropolitan fund for the erection of churches. The first stone was laid on 3 October 1837, and the building was consecrated on 21 June the next year. The architect was John Shaw (Junior).\", \"score\": 20.40625}]}",
+        "next_thought": "Based on the search results, the material mentioned in relation to the designer of the Holy Trinity Church is terracotta.",
+        "next_tool_name": "finish",
+        "next_tool_args": {}
+      },
+      {
+        "augmented": true,
+        "question": "ShopBack is affiliated with which Indian electronic payment brand?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"ShopBack is affiliated with which Indian electronic payment brand?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"ShopBack is affiliated with which Indian electronic payment brand?\", \"passages_this_hop\": [{\"long_text\": \"ShopBack | ShopBack is a Singaporean-headed e-commerce startup that utilises the cashback reward program. It allows online shoppers to take a portion of their cash back when they buy products through the service. They also provide discount coupons and voucher codes for online shopping. It is currently affiliated with over 300 merchants from all over the world, including online retail giants Taobao, Zalora, Lazada_Group, Rakuten, Groupon, EBay, Paytm, ShopClues, Jabong.com & Flipkart.\", \"score\": 21.421875}, {\"long_text\": \"Paytm | Paytm is an Indian electronic payment and e-commerce brand based out of Delhi NCR, India. Launched in August 2010, it is a consumer brand of parent company One97 Communications. The name is an acronym for \\\"Payment Through Mobile.\\\" The company employs over 13,000 employees as of January 2017 and has 3 million offline merchants across India. It also operates the Paytm payment gateway and the Paytm Wallet.\", \"score\": 20.125}, {\"long_text\": \"PAYBACK India | Payback (marketed as PAYBACK) is a multi-brand loyalty program in India. PAYBACK partners with outlets and awards points when people shop at those outlets The points can thereafter be redeemed at the PAYBACK website.\", \"score\": 20.015625}]}",
+        "next_thought": "The search results indicate that ShopBack is affiliated with Paytm, an Indian electronic payment brand.",
+        "next_tool_name": "finish",
+        "next_tool_args": {}
+      },
+      {
+        "question": "Which artist started recording\/performing earlier David Donato or Moya Brennan?",
+        "answer": "Moya Brennan",
+        "dspy_uuid": "70161df0-ff5f-4bcc-800a-b70c9e51d1bc",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which band from East London had Steve Marriott as a band member?",
+        "answer": "Small Faces",
+        "dspy_uuid": "8976823b-87c9-40f2-9675-f0fe3bf1c97b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?",
+        "answer": "The Wizard of Oz",
+        "dspy_uuid": "503a0cfe-7c94-4c29-a47f-be2c3c645011",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are the bands Flow and Against the Current from the same country?",
+        "answer": "no",
+        "dspy_uuid": "206516fc-68ee-474b-8f55-af6ebecc61bf",
+        "dspy_split": "train"
+      },
+      {
+        "question": "That Darn Cat! and Never a Dull Moment were both produced by what studio?",
+        "answer": "Walt Disney Productions",
+        "dspy_uuid": "de770711-3a83-4821-a6f5-31a9d0be72ad",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which building, Olympic Tower or Latting Observatory, is no longer erect?",
+        "answer": "Latting Observatory",
+        "dspy_uuid": "9b63d44e-3015-4c5e-99c6-8e873ca1ca28",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which major river is Buford, North Dakota nearest to?",
+        "answer": "the Missouri River",
+        "dspy_uuid": "e58554f6-6205-4b0c-be95-ceabc979e8a4",
+        "dspy_split": "train"
+      },
+      {
+        "question": "In what army is Mehmet\u00e7ik slang for a common a common soldier?",
+        "answer": "Ottoman Army",
+        "dspy_uuid": "ddfd1431-77f4-41d4-86cd-cf67aa4b4ff5",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Apan Amar Apan was a film that had music composed by which Indian composer?",
+        "answer": "Rahul Dev Burman",
+        "dspy_uuid": "6fbeb2c9-6e85-4aa4-93cc-0807aebd4ff1",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Where is the plant, which manufactured the British Army's standard rifle from 1895 to 1957, located?",
+        "answer": "Maltby, South Yorkshire",
+        "dspy_uuid": "78dc097a-2b68-4106-a06a-7b50beb7551f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are both Cars 2 and Prom animated films?",
+        "answer": "no",
+        "dspy_uuid": "9067c140-07bb-4f0e-840e-3d365722fb7b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Utterby is situated on the road that is in what English region?",
+        "answer": "East Midlands",
+        "dspy_uuid": "36cc48a7-c63f-4f6a-a9f5-c097719d1b43",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which American actress who made their film debut in the 1995 teen drama \"Kids\" was the co-founder of Voto Latino?",
+        "answer": "Rosario Dawson",
+        "dspy_uuid": "1062c6ba-68a3-46f0-aa43-9aface51a6ac",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which professional basketball player won a NBA championship and spoke positively on the book \"the 21 irrefutable laws of leadership\"?",
+        "answer": "Harrison Barnes",
+        "dspy_uuid": "c1b271a0-e30b-4c36-bf59-60fe9ea854fc",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!<\/desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.<\/desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "The designer of the Holy Trinity Church pioneered the use of what material in church building?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"The designer of the Holy Trinity Church pioneered the use of what material in church building?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"The designer of the Holy Trinity Church pioneered the use of what material in church building?\", \"passages_this_hop\": [{\"long_text\": \"Holy Trinity Platt Church | Holy Trinity Platt Church (also known as Holy Trinity Church, Rusholme), is in Platt Fields Park in Rusholme, Manchester, England. It is an active Anglican parish church in the deanery of Hulme, the archdeaconry of Manchester, and the diocese of Manchester. The church is recorded in the National Heritage List for England as a designated Grade II* listed building. It is the second \\\"pot church\\\" designed by Edmund Sharpe, so-called because the main building material used in the construction of the church is terracotta.\", \"score\": 21.796875}, {\"long_text\": \"Holy Trinity Church, Bradford | Holy Trinity Church, Bradford, was an Anglican parish church located in Leeds Road, Bradford, West Yorkshire, England. It was built in 1864\u201365 to a design by the Lancaster architect E. G. Paley at an estimated cost of \u00a33,565 (equivalent to \u00a3 in 2015 ). The church was constructed in stone, its architectural style being Decorated. It had north and south five-bay aisles, and a southeast tower. In 1871 a broach spire was added, the chancel arch was rebuilt, and the tower was underpinned because of subsidence, the architects being Paley and Austin. The church was demolished in 1966.\", \"score\": 20.953125}, {\"long_text\": \"Holy Trinity Gough Square | Trinity Church was built in the parish of St Bride's in the City of London, on the initiative of the vicar, the Reverend Thomas Dale, who felt that the parish church was inadequate for the size of the population. He first proposed a schoolroom that would double as an occasional chapel, but soon found that it would be practical to build a church, funded by subscriptions, and grants from the Church Commissioners and the Metropolitan fund for the erection of churches. The first stone was laid on 3 October 1837, and the building was consecrated on 21 June the next year. The architect was John Shaw (Junior).\", \"score\": 20.40625}]}\n\n[[ ## thought_0 ## ]]\nBased on the search results, the material mentioned in relation to the designer of the Holy Trinity Church is terracotta.\n\n[[ ## tool_name_0 ## ]]\nfinish\n\n[[ ## tool_args_0 ## ]]\n{}\n\n[[ ## observation_0 ## ]]\nCompleted.",
+        "reasoning": "The search results indicate that the Holy Trinity Platt Church, designed by Edmund Sharpe, is the church in question. The passage mentions that this church is made of terracotta.",
+        "answer": "Terracotta"
+      },
+      {
+        "augmented": true,
+        "question": "ShopBack is affiliated with which Indian electronic payment brand?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"ShopBack is affiliated with which Indian electronic payment brand?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"ShopBack is affiliated with which Indian electronic payment brand?\", \"passages_this_hop\": [{\"long_text\": \"ShopBack | ShopBack is a Singaporean-headed e-commerce startup that utilises the cashback reward program. It allows online shoppers to take a portion of their cash back when they buy products through the service. They also provide discount coupons and voucher codes for online shopping. It is currently affiliated with over 300 merchants from all over the world, including online retail giants Taobao, Zalora, Lazada_Group, Rakuten, Groupon, EBay, Paytm, ShopClues, Jabong.com & Flipkart.\", \"score\": 21.421875}, {\"long_text\": \"Paytm | Paytm is an Indian electronic payment and e-commerce brand based out of Delhi NCR, India. Launched in August 2010, it is a consumer brand of parent company One97 Communications. The name is an acronym for \\\"Payment Through Mobile.\\\" The company employs over 13,000 employees as of January 2017 and has 3 million offline merchants across India. It also operates the Paytm payment gateway and the Paytm Wallet.\", \"score\": 20.125}, {\"long_text\": \"PAYBACK India | Payback (marketed as PAYBACK) is a multi-brand loyalty program in India. PAYBACK partners with outlets and awards points when people shop at those outlets The points can thereafter be redeemed at the PAYBACK website.\", \"score\": 20.015625}]}\n\n[[ ## thought_0 ## ]]\nThe search results indicate that ShopBack is affiliated with Paytm, an Indian electronic payment brand.\n\n[[ ## tool_name_0 ## ]]\nfinish\n\n[[ ## tool_args_0 ## ]]\n{}\n\n[[ ## observation_0 ## ]]\nCompleted.",
+        "reasoning": "The search results provided information about ShopBack being affiliated with multiple brands, but one of the passages explicitly mentions that ShopBack is affiliated with Paytm, which is an Indian electronic payment brand.",
+        "answer": "Paytm"
+      },
+      {
+        "question": "So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?",
+        "answer": "The Wizard of Oz",
+        "dspy_uuid": "503a0cfe-7c94-4c29-a47f-be2c3c645011",
+        "dspy_split": "train"
+      },
+      {
+        "question": "That Darn Cat! and Never a Dull Moment were both produced by what studio?",
+        "answer": "Walt Disney Productions",
+        "dspy_uuid": "de770711-3a83-4821-a6f5-31a9d0be72ad",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which professional basketball player won a NBA championship and spoke positively on the book \"the 21 irrefutable laws of leadership\"?",
+        "answer": "Harrison Barnes",
+        "dspy_uuid": "c1b271a0-e30b-4c36-bf59-60fe9ea854fc",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which band from East London had Steve Marriott as a band member?",
+        "answer": "Small Faces",
+        "dspy_uuid": "8976823b-87c9-40f2-9675-f0fe3bf1c97b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Where is the plant, which manufactured the British Army's standard rifle from 1895 to 1957, located?",
+        "answer": "Maltby, South Yorkshire",
+        "dspy_uuid": "78dc097a-2b68-4106-a06a-7b50beb7551f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which American actress who made their film debut in the 1995 teen drama \"Kids\" was the co-founder of Voto Latino?",
+        "answer": "Rosario Dawson",
+        "dspy_uuid": "1062c6ba-68a3-46f0-aa43-9aface51a6ac",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Utterby is situated on the road that is in what English region?",
+        "answer": "East Midlands",
+        "dspy_uuid": "36cc48a7-c63f-4f6a-a9f5-c097719d1b43",
+        "dspy_split": "train"
+      },
+      {
+        "question": "In what army is Mehmet\u00e7ik slang for a common a common soldier?",
+        "answer": "Ottoman Army",
+        "dspy_uuid": "ddfd1431-77f4-41d4-86cd-cf67aa4b4ff5",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which artist started recording\/performing earlier David Donato or Moya Brennan?",
+        "answer": "Moya Brennan",
+        "dspy_uuid": "70161df0-ff5f-4bcc-800a-b70c9e51d1bc",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which building, Olympic Tower or Latting Observatory, is no longer erect?",
+        "answer": "Latting Observatory",
+        "dspy_uuid": "9b63d44e-3015-4c5e-99c6-8e873ca1ca28",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which major river is Buford, North Dakota nearest to?",
+        "answer": "the Missouri River",
+        "dspy_uuid": "e58554f6-6205-4b0c-be95-ceabc979e8a4",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are both Cars 2 and Prom animated films?",
+        "answer": "no",
+        "dspy_uuid": "9067c140-07bb-4f0e-840e-3d365722fb7b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Apan Amar Apan was a film that had music composed by which Indian composer?",
+        "answer": "Rahul Dev Burman",
+        "dspy_uuid": "6fbeb2c9-6e85-4aa4-93cc-0807aebd4ff1",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are the bands Flow and Against the Current from the same country?",
+        "answer": "no",
+        "dspy_uuid": "206516fc-68ee-474b-8f55-af6ebecc61bf",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

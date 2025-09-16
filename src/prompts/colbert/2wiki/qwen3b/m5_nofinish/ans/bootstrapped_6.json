@@ -1,0 +1,156 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question`.\n\nYou must decide what to do next by providing:\n\n- Thought: reasoning about the current step\n\n- Tool Name: one of the available tools\n\n- Tool Args: A valid JSON with the necessary keys.\n\nRepeat this for a few steps to gather information.\n\nYou do not need to produce a final answer — just use the tools iteratively.\nMake sure to include all required Tool Args as a valid JSON object.\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Are Samalá River and Itter (Eder) located in the same country?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Are Samalá River and Itter (Eder) located in the same country?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Are Samalá River and Itter (Eder) located in the same country?\", \"passages_this_hop\": [{\"long_text\": \"Sambir | \\\"is situated on what is almost an island formed between two parallel rivers, the one distant from the other by a few kilometers – the Dniester on one side and the Strwiaz on the other – which come together after Sambir in the vicinity of Dolubova. In the pre-historic period the Dniester, at a distance of about three kilometers from Sambor, created a special kind of tributary called Mlinuvka, which, separating completely from the Dniester, falls into the river Strwionz. The Dniester and the Mlinuvka add a natural charm to Sambor. The grant of municipal rights led to people flocking\\\"\", \"score\": 17.734375}, {\"long_text\": \"\\\"Samara River (Dnieper)\\\" | \\\"Samara River (Dnieper) The Samara () is a river in Ukraine, a left tributary of the Dnieper. The city of Dnipro is located near the confluence of Dnieper and Samara. The river has a length of 320 km and a drainage basin of 22,600 km². The water quantities are variable, mainly because the river is fed by the spring thaw. The width of the river varies between 40 and 60 meters, with 300 m being the maximum. The most important tributaries of the Samara are the Vovcha and the Byk. The largest cities on the river are Ternivka and Novomoskovsk.\\\"\", \"score\": 17.546875}, {\"long_text\": \"\\\"Samalá River\\\" | \\\"Samalá River The Samalá is a river in southwestern Guatemala. Its sources are in the Sierra Madre, Valle De Écija range, in the departments of Quetzaltenango and Totonicapán. From there it flows down, past the towns San Carlos Sija in the Valle De Écija, Quetzaltenango, San Cristóbal Totonicapán, Quetzaltenango, El Palmar and Zunil, through the coastal plains of Retalhuleu into the Pacific Ocean. The Samalá river basin covers a territory of and has a population of around 400,000 people. Its proximity to the active Santa Maria and Santiaguito volcano complex, with its recurring lava and lahars flows, leads to a\\\"\", \"score\": 17.234375}, {\"long_text\": \"Eder | \\\"with a teacher from Marienhagen, part of the town of Vöhl, went panning for gold in the sediments of the River Itter. Panning for gold along the Eder is still popular. The river rises from the Ederkopf mountain in the Rothaar mountain range in eastern North Rhine-Westphalia, near the springs of the Lahn and Sieg rivers. However, unlike the Lahn and Sieg, which are both tributaries of the Rhine, the Eder flows east and north, into the river Fulda at Edermünde, south of Kassel. The Fulda then confluences with the Werra River at Hann. Münden to form the Weser River,\\\"\", \"score\": 17.203125}, {\"long_text\": \"\\\"Samarga River\\\" | \\\"is in an extremely remote and mountainous region, with harsh climatic conditions, the accessibility and extraction of the natural resources in this river system is very poor. There are currently four small towns in the area: Edinka, Peretychikha, Samarga and Agzu in the watersheds of the Edinka and Samarga Rivers. According to the 2001 Census, the total population in the riverine watersheds is about 800 people, representing various ethnic groups. Out of this number, 140 belong to the Udege people, an indigenous ethnic group. The present-day Udege population of the basin lives primarily in one village – Agzu – while\\\"\", \"score\": 16.921875}]}\n\n[[ ## thought_0 ## ]]\nThe search results indicate that the Samalá River is located in Guatemala, but no direct information about Itter (Eder) was found. I should refine the search query to specifically look for information about Itter (Eder).\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Itter (Eder) location\", \"trajectory_id\": \"Samalá River and Itter (Eder)\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Itter (Eder) location\", \"passages_this_hop\": [{\"long_text\": \"Itter | \\\"Itter Itter is a municipality in the Kitzbühel District in the Austrian state of Tyrol located 18.60 km west of Kitzbühel, 5 km southeast of Wörgl, and 2.5 km north of Hopfgarten im Brixental. The village lies on a terrace above the Brixental valley and its main source of income is tourism. The small castle of the village, Itter Castle, was a prison for French high personalities during World War II. Two days before the war ended, a battle was fought there against the Waffen SS, the only occasion when American and German forces fought on the same side during\\\"\", \"score\": 23.703125}, {\"long_text\": \"Itter | \\\"the war. Itter Itter is a municipality in the Kitzbühel District in the Austrian state of Tyrol located 18.60 km west of Kitzbühel, 5 km southeast of Wörgl, and 2.5 km north of Hopfgarten im Brixental. The village lies on a terrace above the Brixental valley and its main source of income is tourism. The small castle of the village, Itter Castle, was a prison for French high personalities during World War II. Two days before the war ended, a battle was fought there against the Waffen SS, the only occasion when American and German forces fought on the same\\\"\", \"score\": 23.328125}, {\"long_text\": \"\\\"Düsseldorf-Itter\\\" | \\\"Düsseldorf-Itter Itter is an urban bourough of Düsseldorf. It is located near to the river Rhine, adjacent to Himmelgeist, Holthausen and Reisholz. Its name comes from the small river called the Itter. The first written record of Itter was in the 12th century AD The romanesque church of Itter dates the 12th century. From the 12th to 15th centuries Itter belonged to the convent of Kaiserswerth. From the 15th century Itter was an autonomous parish. In 1908 Itter was incorporated into Benrath and in 1929 into Düsseldorf. The romanesque church of Itter was constructed in the 12th century. It is\\\"\", \"score\": 22.921875}, {\"long_text\": \"Ittre | \\\"Ittre Ittre (Dutch : \\\"\\\"Itter\\\"\\\") is a Walloon municipality located in the Belgian province of Walloon Brabant. On January 1, 2006, Ittre had a total population of 6,064. The total area is 34.92 km² which gives a population density of 174 inhabitants per km². Ittre was the geographical center of Belgium until World War I. Traditions mention the existence of the village of Ittre about the year 640, although the name is first documented in 877. But the site was already occupied in the Roman period and even in the Neolithic era. Its territory, after having belonged to Nivelles Abbey,\\\"\", \"score\": 22.09375}, {\"long_text\": \"\\\"Itter Castle\\\" | \\\"Itter Castle Itter Castle () is a 19th-century castle in Itter, a village in Tyrol, Austria. During World War II, it was turned into a Nazi prison for French VIPs and was the site of an extraordinary instance of the U.S. Army, German Wehrmacht, Austrian Resistance, and the prisoners themselves fighting side-by-side against the \\\"\\\"Waffen-SS\\\"\\\" in the Battle for Castle Itter. The hill castle is located atop a knoll at the entrance to the Brixental valley, about south of Wörgl and west of Kitzbühel. A fortress at the site was first mentioned in a 1241 deed, previous constructions may have\\\"\", \"score\": 21.875}]}\n\n[[ ## thought_1 ## ]]\nThe search results show that Itter (Eder) is a municipality in the Kitzbühel District in the Austrian state of Tyrol. However, the Samalá River is located in Guatemala, which means they are not in the same country.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Samalá River location\", \"trajectory_id\": \"Samalá River and Itter (Eder)\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Samalá River location\", \"passages_this_hop\": [{\"long_text\": \"\\\"Samalá River\\\" | \\\"heightened risk of serious flooding. Samalá River The Samalá is a river in southwestern Guatemala. Its sources are in the Sierra Madre, Valle De Écija range, in the departments of Quetzaltenango and Totonicapán. From there it flows down, past the towns San Carlos Sija in the Valle De Écija, Quetzaltenango, San Cristóbal Totonicapán, Quetzaltenango, El Palmar and Zunil, through the coastal plains of Retalhuleu into the Pacific Ocean. The Samalá river basin covers a territory of and has a population of around 400,000 people. Its proximity to the active Santa Maria and Santiaguito volcano complex, with its recurring lava and\\\"\", \"score\": 27.84375}, {\"long_text\": \"\\\"Asahan River\\\" | \\\"Asahan River Asahan River () is one of the principal rivers in North Sumatra that begins in Porsea, Toba Samosir Regency at the Southeast part of Lake Toba. The river flows toward a north-easterly direction, cutting through the upper course of the deep valley in the Barisan Mountains in Toba Samosir Regency, then flows through the Asahan Regency and eventually empties into the Strait of Malacca The largest city on the Asahan is Tanjungbalai, Asahan with a population of more than 150,000 people. The river houses the Sigura-gura Dam, which supplies power to the North Sumatran Province. Tributaries of the\\\"\", \"score\": 23.5}, {\"long_text\": \"\\\"Palala River\\\" | \\\"Palala River The Palala or Lephalala River, also called the \\\"\\\"Rhooebok-river\\\"\\\" by Thomas Baines, is a river in South Africa. This river's catchment basin is a sub-watershed of the Limpopo River. It is a significant watercourse in the Waterberg area of Limpopo Province. The river drains much of the Lapalala Wilderness area and considerable additional lands that are important habitat for native wildlife in a zone with considerable ongoing bushveld restoration. The predominantly dry deciduous forest community of the upland portion of the Palala River watershed is home to many large African mammals including Blue Wildebeest, Giraffe, White Rhino and\\\"\", \"score\": 23.125}, {\"long_text\": \"Samuha | \\\"Murat river is a tributary of the Euphrates river. Both proposed locations are south of the Kaskian incursion that overtook Hattusa and required the Hittite leadership to move to Samuha. Samuha Šamuḫa (possibly sited at Kasanlı Pıran) was a city of the Hittites, a religious centre and for a few years military capital for the empire. Samuha's faith was syncretistic. Rene Lebrun in 1976 called Samuha the \\\"\\\"religious foyer of the Hittite Empire\\\"\\\". In the treaty between the Hittite king Mursili II and Duppi-Tessub of Amurru (c. 1315 BC), the Hittites swear by the god Abara whose sanctuary was in\\\"\", \"score\": 23.09375}, {\"long_text\": \"Samuha | \\\"Its headwaters are near the city of Sivas, 130 miles (209 km) away. The river flows to the east, south of Hattusa, than heads northward on the east of Hattusa, discharging into the Black Sea. The Euphrates location is reflected in the GPS coordinates above. Hittite records indicate that Samuha was located on a navigable river, which tends to support the Euphrates location. Oliver Gurney notes in the above-cited work that the Halys river is also navigable in sections. He favors the Euphrates location, noting that the Murad Su, the present day Murat River had river traffic in 1866. The\\\"\", \"score\": 23.0}]}\n\n[[ ## thought_2 ## ]]\nThe search results indicate that the Samalá River is located in Guatemala. Now, let's find out the location of the Eder River.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"Eder River location\", \"trajectory_id\": \"Samalá River and Itter (Eder)\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"Eder River location\", \"passages_this_hop\": [{\"long_text\": \"Eder | \\\"Eder The Eder is a long major river in Germany that begins in eastern North Rhine-Westphalia and passes in to Hesse, where it confluences with the River Fulda. The river was first mentioned by the Roman historian Tacitus. In his Annals, he describes the Roman campaign against the Chatti under the command of Germanicus in 15 AD. Forty-five thousand soldiers of the Roman army destroyed the major centre of the Chatti, Mattium, directly after they crossed the \\\"\\\"Adrana\\\"\\\" (Eder). In the Middle Ages, the river was known by the names; Aderna, Adarna, Adrina. On the banks of the Eder, in\\\"\", \"score\": 25.828125}, {\"long_text\": \"Eder | \\\"The most important tributaries of the Eder are (listed first in Eder-kilometres from source to the Fulda): Eder The Eder is a long major river in Germany that begins in eastern North Rhine-Westphalia and passes in to Hesse, where it confluences with the River Fulda. The river was first mentioned by the Roman historian Tacitus. In his Annals, he describes the Roman campaign against the Chatti under the command of Germanicus in 15 AD. Forty-five thousand soldiers of the Roman army destroyed the major centre of the Chatti, Mattium, directly after they crossed the \\\"\\\"Adrana\\\"\\\" (Eder). In the Middle Ages,\\\"\", \"score\": 25.0}, {\"long_text\": \"Eder | \\\"which flows in to the North Sea. The Edersee Dam is situated below the town of Waldeck. It is constructed of rock and concrete, and is high and long. It was completed in 1914; in 2014 its 100th birthday was celebrated. It forms the Edersee lake, which is long and contains 200 million cubic metres of water. This is used to generate hydroelectricity and to regulate water levels for shipping on the Weser river. At low water in late summer, and during dry years, the remnants of three villages (Asel, Bringhausen, and Berich) and a bridge across the original river\\\"\", \"score\": 24.71875}, {\"long_text\": \"\\\"Edersee Dam\\\" | \\\"Edersee Dam The Edersee Dam is a hydroelectric dam spanning the Eder river in northern Hesse, Germany. Constructed between 1908 and 1914, it lies near the small town of Waldeck at the northern edge of the Kellerwald. Breached by Allied bombs during World War II, it was rebuilt during the war, and today generates hydroelectric power and regulates water levels for shipping on the Weser river. At low water in late summers of dry years the remnants of three villages (Asel, Bringhausen, and Berich) and a bridge across the original river bed submerged when the lake was filled in 1914\\\"\", \"score\": 24.359375}, {\"long_text\": \"\\\"Wietze (Aller)\\\" | \\\"Wietze (Aller) The Wietze is a river and a tributary of the River Aller in Lower Saxony, Germany. Its total length including its source river Edder (length 3.4 km) is . The river begins at the confluence of the Edder and Flöth northeast of Hanover near Altwarmbüchen. From there it flows several kilometres to the west through the southern part of Isernhagen to Langenhagen and from there on only in a northern direction to just beyond the village of Wietze, where it merges with the River Aller flowing from the south. In the second half of its course the Wietze\\\"\", \"score\": 23.5625}]}\n\n[[ ## thought_3 ## ]]\nNow we have the information about the Eder River. It flows through Germany, so Itter (Eder) and Samalá River are not in the same country.\n\n[[ ## tool_name_3 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_3 ## ]]\n{\"search_query\": \"Samalá River and Itter (Eder) location\", \"trajectory_id\": \"Samalá River and Itter (Eder)\"}\n\n[[ ## observation_3 ## ]]\n{\"search_query\": \"Samalá River and Itter (Eder) location\", \"passages_this_hop\": [{\"long_text\": \"\\\"Samta, India\\\" | \\\"miles) away from the banks of the river. The majority of the village's population is Hindu. Festivals such as Dol Jatra, Durga Puja, Bengali New Year, Kali Puja, Neel Shashti, Shivaratri, Shitala Puja, Saraswati Puja, Itu Puja, Janmashtami and other Hindu religious festivals are celebrated with great pomp and show. Gajans are also held in the village. Madangopal Jiu Temple, a temple built in the 17th century, is situated in Mellock, a nearby village located south of Samta. It is locally known as Gopaler Mondir (meaning, the temple of Gopala). It was erected by Mukundaprasad Roychowdhury, a member of the\\\"\", \"score\": 17.78125}, {\"long_text\": \"\\\"Samalae'ulu\\\" | \\\"Samalae'ulu Samalae'ulu is a village on the northeast side of Savai'i island in Samoa. The village is part of the electoral constituency (\\\"\\\"Faipule District\\\"\\\") Gaga'emauga I which includes the neighbouring villages of Patamea and the smaller settlement of Mauga which is built around a volcanic crater. The population of Samalae'ulu is 943 (2006 Census), making it one of the more populous villages in Savai'i. During the volcani eruption of Mt Matavanu (1905 - 1911), lava flowed between Samalae'ulu and Saleaula to the west, forcing villagers to move from the coast to its present inland location. The village is situated on\\\"\", \"score\": 17.09375}, {\"long_text\": \"\\\"Samarga River\\\" | \\\"Samarga River The Samarga River is the northernmost river in the Primorsky Krai territory in the far eastern part of Russia. It is the largest coastal river in the northern Sikhote-Alin mountain range at in length. It flows into the Sea of Japan. The river system is a unique and relatively untouched centre of biodiversity in the Eastern Sikhote–Alin mountains because it is in a remote and mountainous region. The river is located in the northeast Primorsky territory of Russia. The northern and western boundaries of the river's watershed form the border between Primorsky territory and Khabarovsk territory. It confluences\\\"\", \"score\": 17.0}, {\"long_text\": \"\\\"Samur River\\\" | \\\"Samur River Samur (; ; ; ) is a river in Russia's Dagestan Republic, partially flowing through Azerbaijan. The Samur river originates in glaciers and mountain springs of the Greater Caucasus mountains. It rises in the northeastern part of Guton Mount at an elevation of . Descending from the mountains for , the river receives its tributary the Khalakhur River flowing down from an elevation of . The length of the river is , its basin . The elevated and midsections of the river from through the territory of Russia, lower sections flow through Azerbaijan making up the Russian-Azerbaijani border.\\\"\", \"score\": 16.75}, {\"long_text\": \"\\\"Samalae'ulu\\\" | \\\"the main island highway about a 40-minutes drive north west from Salelologa ferry terminal and township. Samalae'ulu Samalae'ulu is a village on the northeast side of Savai'i island in Samoa. The village is part of the electoral constituency (\\\"\\\"Faipule District\\\"\\\") Gaga'emauga I which includes the neighbouring villages of Patamea and the smaller settlement of Mauga which is built around a volcanic crater. The population of Samalae'ulu is 943 (2006 Census), making it one of the more populous villages in Savai'i. During the volcani eruption of Mt Matavanu (1905 - 1911), lava flowed between Samalae'ulu and Saleaula to the west, forcing\\\"\", \"score\": 16.734375}]}\n\n[[ ## thought_4 ## ]]\nThe search results indicate that Samalá River is located in Samoa and Itter (Eder) is in Germany. Therefore, these two rivers are not in the same country.\n\n[[ ## tool_name_4 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_4 ## ]]\n{\"search_query\": \"Samalá River and Itter (Eder) location\", \"trajectory_id\": \"Samalá River and Itter (Eder)\"}\n\n[[ ## observation_4 ## ]]\n{\"search_query\": \"Samalá River and Itter (Eder) location\", \"passages_this_hop\": [{\"long_text\": \"\\\"Sampit River (Indonesia)\\\" | \\\"Sampit River (Indonesia) Sampit River or Mentaya River is a river of Central Kalimantan, Borneo, Indonesia. The river takes its name from the town of Sampit which lies on the river not far from the Java Sea. Near the mouth of the river is a noted beach park named \\\"\\\"Pandaran Beach\\\"\\\". The Sampit flows into the Java Sea at . The river flows in the midsouthern area of Borneo island with predominantly tropical rainforest climate (designated as \\\"\\\"Af\\\"\\\" in the Köppen-Geiger climate classification). The annual average temperature in the area is 23°C. The warmest month is July, when the average\\\"\", \"score\": 16.703125}, {\"long_text\": \"\\\"Navesti (river)\\\" | \\\"Navesti (river) The Navesti (also known as Pala or Paala) is a -long-river in southwestern Estonia. It is the largest river by discharge that empties into the Pärnu (in its mouth the discharge is almost equal as Pärnu's). The source of the Navesti is near Imavere (between the villages of Jalametsa and Käsukonna) in Järva County. It flows generally west, and passes through three counties (Järva, Viljandi and Pärnu). Its confluence with the Pärnu is located near Tori in Jõesuu. The basin area of the Navesti is and its average discharge . Before the opening of the primeval Lake Võrtsjärv\\\"\", \"score\": 16.53125}, {\"long_text\": \"\\\"Asahan River\\\" | \\\"Asahan include the Silang, Silau, Nantalu, Masihi, Lauran, and Baru River. Asahan River Asahan River () is one of the principal rivers in North Sumatra that begins in Porsea, Toba Samosir Regency at the Southeast part of Lake Toba. The river flows toward a north-easterly direction, cutting through the upper course of the deep valley in the Barisan Mountains in Toba Samosir Regency, then flows through the Asahan Regency and eventually empties into the Strait of Malacca The largest city on the Asahan is Tanjungbalai, Asahan with a population of more than 150,000 people. The river houses the Sigura-gura Dam,\\\"\", \"score\": 16.484375}, {\"long_text\": \"\\\"Samarga River\\\" | \\\"into the Sea of Japan at Samarga, a small town on the coast of the sea. In the estuary on the sea side, there is a kind of blind creek named the \\\"\\\"Samrga duct\\\"\\\" which extends for about . Numerous small tributaries form a dense and extensive network in the watershed of the river. The major left-hand tributaries of the Samarga River, facing downstream, are: the Perepadnaya River ( long), the Dagdy River (), the Moi River (), the Isimi River (), and the Agzu River (). The Sobu, Zova, Dzolu, Kalashnikov, Takhalo, and Kipreinyi Rivers, among others, are minor\\\"\", \"score\": 16.421875}, {\"long_text\": \"Sampit | \\\"a river of Central Kalimantan in Borneo. The river takes its name from the town of Sampit which is situated on the bank of river not too distant from the Java Sea. The Schwaner mountain range extends with long hill ridges southwards, separating the major river systems of the area, most notably the Bukit Baka hill range which extends down to Sampit Bay. The area between the town of Sampit and the coast was historically heavily forested but has since been reduced due to road construction and development projects. To the north of Sampit, on the road to Pangkalanbun, is\\\"\", \"score\": 16.359375}]}",
+        "reasoning": "The Samalá River is located in Samoa, while Itter (Eder) is in Germany. Based on the geographical locations provided, these two rivers are not in the same country.",
+        "answer": "No"
+      },
+      {
+        "question": "Are the movies Carnival Of Souls and Uvanga, from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Where did the director of film The Right Of The Strongest die?",
+        "answer": "Los Angeles"
+      },
+      {
+        "question": "Do director of film Chicago 10 (Film) and director of film Black Oxen share the same nationality?",
+        "answer": "yes"
+      },
+      {
+        "question": "Did John Agoglia and John E. Toews have the same nationality?",
+        "answer": "yes"
+      },
+      {
+        "question": "When was the director of film Private Hell 36 born?",
+        "answer": "October 26, 1912"
+      },
+      {
+        "question": "Where was the director of film Gaon Hamara Shaher Tumhara born?",
+        "answer": "Lahore"
+      },
+      {
+        "question": "Are director of film Sthree Sahasam and director of film That Malicious Age both from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Do both films, Laali and Gayby, have the directors who are from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Are director of film The Monster Squad and director of film The Cup (2011 film) from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Are the movies Made (2001 Film) and Proud Flesh (Film), from the same country?",
+        "answer": "yes"
+      },
+      {
+        "question": "Which film whose director is younger, Charge It To Me or Danger: Diabolik?",
+        "answer": "Danger: Diabolik"
+      },
+      {
+        "question": "Do both films The Falcon (Film) and Valentin The Good have the directors from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "When did Prince Henry, Duke Of Cumberland And Strathearn's mother die?",
+        "answer": "8 February 1772"
+      },
+      {
+        "question": "Which film came out first, The Love Route or Engal Aasan?",
+        "answer": "The Love Route"
+      },
+      {
+        "question": "When was the director of film Sword Of Honour (1939 Film) born?",
+        "answer": "11 November 1887"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

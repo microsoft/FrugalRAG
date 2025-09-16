@@ -1,0 +1,288 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "the Central Reserve Police Force, which has been accused of human rights abuses, operates under the aegis of what Government of India agency?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"the Central Reserve Police Force, which has been accused of human rights abuses, operates under the aegis of what Government of India agency?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"the Central Reserve Police Force, which has been accused of human rights abuses, operates under the aegis of what Government of India agency?\", \"passages_this_hop\": [{\"long_text\": \"Central Reserve Police Force | The Central Reserve Police Force (CRPF) is the largest of India's Central Armed Police Forces. It functions under the aegis of Ministry of Home Affairs (MHA) of the Government of India. The CRPF's primary role lies in assisting the State\/Union Territories in police operations to maintain law and order and counter insurgency. It came into existence as the Crown Representative's Police on 27 July 1939. After Indian Independence, it became the Central Reserve Police Force on enactment of the CRPF Act on 28 December 1949.\", \"score\": 22.3125}, {\"long_text\": \"Human rights abuses in Jammu and Kashmir | Human rights abuses in the Indian-administered Jammu and Kashmir state are an ongoing issue. The abuses range from mass killings, enforced disappearances, torture, rape and sexual abuse to political repression and suppression of freedom of speech. The Indian Army, Central Reserve Police Force (CRPF), Border Security Personnel (BSF) and various separatist militant groups have been accused and held accountable for committing severe human rights abuses against Kashmiri civilians.\", \"score\": 21.9375}, {\"long_text\": \"Jammu and Kashmir Police | The Jammu and Kashmir Police (Urdu: \u200e ) or JKP, was established in 1873 and is the law enforcement agency, having primary responsibilities in law enforcement and investigation within the twenty two districts of the state of Jammu and Kashmir in India. The department serves an area of 85,806 square miles (222,236 sq km) and a population of 12,548,926 people at the 2011 census. JKP works with the Indian Army, the Central Reserve Police Force, and other Paramilitary forces of India to keep the state secure from incursions from Pakistan. The agency is also involved in the investigation of alleged misconduct by other units of the security forces in the state.\", \"score\": 19.359375}]}",
+        "next_thought": "The search returned passages indicating that the Central Reserve Police Force (CRPF) operates under the aegis of the Ministry of Home Affairs (MHA) of the Government of India.",
+        "next_tool_name": "finish",
+        "next_tool_args": {}
+      },
+      {
+        "augmented": true,
+        "question": "So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?\", \"passages_this_hop\": [{\"long_text\": \"So Long, Scarecrow | So Long, Scarecrow is the second album by the rock band Scarling. Written and recorded in early 2005, and released on October 25, 2005, it is the first Scarling. album to feature drummer Beth Gordon. Its title is a reference to \\\"The Wizard of Oz\\\": in lead vocalist Jessicka's view, the film's Scarecrow is a metaphor for the band itself; the character's initial lack of and search for a brain, she explains, parallels Scarling. 's search for new territory in a predictable and monotonous musical environment.\", \"score\": 21.21875}, {\"long_text\": \"The Scarecrow (2000 film) | The Scarecrow is a 2000 animated musical fantasy film, written and directed by Brian Nissen and Richard Rich, and based on the Nathaniel Hawthorne short story \\\"Feathertop\\\" and the Percy MacKaye play \\\"The Scarecrow\\\". It features the voices of Corey Feldman and Belinda Montgomery.\", \"score\": 20.875}, {\"long_text\": \"The Merry Old Land of Oz | \\\"The Merry Old Land of Oz\\\" is a song from the 1939 film \\\"The Wizard of Oz\\\" and the musical. It is sung by the townspeople of the Emerald City, who are joined at appropriate times by the group of four travelers: Dorothy (with Toto), Scarecrow, Tin Man and Cowardly Lion. It was written by lyricist E.Y. Harburg and composer Harold Arlen. The verse of the song suggests that the people of the city do no actual work, since they \\\"get up at twelve, and start to work at one, take an hour for lunch, and then at two they're done\\\". Their actions contradict that funny sentiment, however, as they are clearly doing plenty of work to \\\"freshen up\\\" the group of four to go see their desired person of the hour. The revelers' laughter is interrupted by the Wicked Witch of the West, who is circling over the city, skywriting with her broom, ordering the citizens to \\\"SURRENDER DOROTHY OR DIE\\\". In the final cut of the film, the words \\\"OR DIE\\\" were dropped from the film as being too strong for the presumably young audience of the time.\", \"score\": 19.859375}]}",
+        "next_thought": "From the passages, I can see that the album 'So Long, Scarecrow' is titled in reference to the 1939 film 'The Wizard of Oz'. The Scarecrow in the film is a metaphor for the band.",
+        "next_tool_name": "finish",
+        "next_tool_args": {}
+      },
+      {
+        "question": "Are both Ceratophyllum and Eucomis a genus of flowering plants?",
+        "answer": "yes",
+        "dspy_uuid": "501c656e-66bf-4fa9-9bce-af80aeda0bc3",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Evolution: A Theory in Crisis is a 1985 book by a biochemist and Senior fellow at Discovery Institute's Center for what?",
+        "answer": "Science and Culture",
+        "dspy_uuid": "52e946b6-ebcd-46bf-8896-508dbef4a22a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What main thoroughfare in Warsaw's borough of Ursyn\u00f3w connects to a 6,500 km international road which coincides with the Trans-Siberian Highway?",
+        "answer": "Jana Roso\u0142a street",
+        "dspy_uuid": "f2fbb8d7-c7db-4679-838f-a940d2f5c173",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What magazine was established in 1988 by Frank Thomas and Keith White and has been associated with the Dirtbag Left?",
+        "answer": "The Baffler",
+        "dspy_uuid": "47d63e19-8cca-4c7a-861b-db92f1b4f6f5",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Konnichiwa was launched in a broadcast that was streamed by the platform that was founded in what city in 2010?",
+        "answer": "London",
+        "dspy_uuid": "50f83cbc-8e93-454d-b639-d84907d256eb",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which city did the writer of Enion spend most of his life?",
+        "answer": "London",
+        "dspy_uuid": "c71f3e5f-d75b-4f41-8bff-871451eb710c",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are both Cars 2 and Prom animated films?",
+        "answer": "no",
+        "dspy_uuid": "f080d631-d70e-4382-91a5-bf23e948c633",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Were Dorothy Arzner and Richard Wallace both French film directors?",
+        "answer": "no",
+        "dspy_uuid": "7f39520b-370c-4b43-a981-b56c415fae39",
+        "dspy_split": "train"
+      },
+      {
+        "question": "In addition to the Austrian passport, what is needed to gain access to 173 countries and territories?",
+        "answer": "national identity card",
+        "dspy_uuid": "544e06dc-e0c6-474f-bd87-4d69ce7f9d36",
+        "dspy_split": "train"
+      },
+      {
+        "question": "That Darn Cat! and Never a Dull Moment were both produced by what studio?",
+        "answer": "Walt Disney Productions",
+        "dspy_uuid": "058e7ea3-0b65-40be-a69d-745fcb7f020a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which of these Asian directors was behind the science fiction adventure film \"Snowpiercer\", Bong Joon-ho or Vincent Kok?",
+        "answer": "Bong",
+        "dspy_uuid": "b99cc9dc-ccd7-4aee-92e9-e78f7d680dc6",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The Garand carbine was created by a man with what nationality?",
+        "answer": "Canadian-American",
+        "dspy_uuid": "4ea3b6dd-07cd-4e7e-b855-2e19bd91324f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The 1925 Saint Mary's Gaels football team represented what private, coeducational college in Moraga, California?",
+        "answer": "Saint Mary's College of California",
+        "dspy_uuid": "bf30f6d6-acef-4d83-ac5f-e5ab4acd8dda",
+        "dspy_split": "train"
+      },
+      {
+        "question": "This group encompassed a federation of Alpine tribes, including the Calucones, for about 6 centuries starting around 500 BC.  ",
+        "answer": "The Raeti",
+        "dspy_uuid": "4d43e876-7f58-446a-837d-b6de2202d00e",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!<\/desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.<\/desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "the Central Reserve Police Force, which has been accused of human rights abuses, operates under the aegis of what Government of India agency?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"the Central Reserve Police Force, which has been accused of human rights abuses, operates under the aegis of what Government of India agency?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"the Central Reserve Police Force, which has been accused of human rights abuses, operates under the aegis of what Government of India agency?\", \"passages_this_hop\": [{\"long_text\": \"Central Reserve Police Force | The Central Reserve Police Force (CRPF) is the largest of India's Central Armed Police Forces. It functions under the aegis of Ministry of Home Affairs (MHA) of the Government of India. The CRPF's primary role lies in assisting the State\/Union Territories in police operations to maintain law and order and counter insurgency. It came into existence as the Crown Representative's Police on 27 July 1939. After Indian Independence, it became the Central Reserve Police Force on enactment of the CRPF Act on 28 December 1949.\", \"score\": 22.3125}, {\"long_text\": \"Human rights abuses in Jammu and Kashmir | Human rights abuses in the Indian-administered Jammu and Kashmir state are an ongoing issue. The abuses range from mass killings, enforced disappearances, torture, rape and sexual abuse to political repression and suppression of freedom of speech. The Indian Army, Central Reserve Police Force (CRPF), Border Security Personnel (BSF) and various separatist militant groups have been accused and held accountable for committing severe human rights abuses against Kashmiri civilians.\", \"score\": 21.9375}, {\"long_text\": \"Jammu and Kashmir Police | The Jammu and Kashmir Police (Urdu: \u200e ) or JKP, was established in 1873 and is the law enforcement agency, having primary responsibilities in law enforcement and investigation within the twenty two districts of the state of Jammu and Kashmir in India. The department serves an area of 85,806 square miles (222,236 sq km) and a population of 12,548,926 people at the 2011 census. JKP works with the Indian Army, the Central Reserve Police Force, and other Paramilitary forces of India to keep the state secure from incursions from Pakistan. The agency is also involved in the investigation of alleged misconduct by other units of the security forces in the state.\", \"score\": 19.359375}]}\n\n[[ ## thought_0 ## ]]\nThe search returned passages indicating that the Central Reserve Police Force (CRPF) operates under the aegis of the Ministry of Home Affairs (MHA) of the Government of India.\n\n[[ ## tool_name_0 ## ]]\nfinish\n\n[[ ## tool_args_0 ## ]]\n{}\n\n[[ ## observation_0 ## ]]\nCompleted.",
+        "reasoning": "The search provided information about the Central Reserve Police Force (CRPF) operating under the aegis of the Ministry of Home Affairs (MHA) of the Government of India.",
+        "answer": "the Ministry of Home Affairs (MHA)"
+      },
+      {
+        "augmented": true,
+        "question": "So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?\", \"passages_this_hop\": [{\"long_text\": \"So Long, Scarecrow | So Long, Scarecrow is the second album by the rock band Scarling. Written and recorded in early 2005, and released on October 25, 2005, it is the first Scarling. album to feature drummer Beth Gordon. Its title is a reference to \\\"The Wizard of Oz\\\": in lead vocalist Jessicka's view, the film's Scarecrow is a metaphor for the band itself; the character's initial lack of and search for a brain, she explains, parallels Scarling. 's search for new territory in a predictable and monotonous musical environment.\", \"score\": 21.21875}, {\"long_text\": \"The Scarecrow (2000 film) | The Scarecrow is a 2000 animated musical fantasy film, written and directed by Brian Nissen and Richard Rich, and based on the Nathaniel Hawthorne short story \\\"Feathertop\\\" and the Percy MacKaye play \\\"The Scarecrow\\\". It features the voices of Corey Feldman and Belinda Montgomery.\", \"score\": 20.875}, {\"long_text\": \"The Merry Old Land of Oz | \\\"The Merry Old Land of Oz\\\" is a song from the 1939 film \\\"The Wizard of Oz\\\" and the musical. It is sung by the townspeople of the Emerald City, who are joined at appropriate times by the group of four travelers: Dorothy (with Toto), Scarecrow, Tin Man and Cowardly Lion. It was written by lyricist E.Y. Harburg and composer Harold Arlen. The verse of the song suggests that the people of the city do no actual work, since they \\\"get up at twelve, and start to work at one, take an hour for lunch, and then at two they're done\\\". Their actions contradict that funny sentiment, however, as they are clearly doing plenty of work to \\\"freshen up\\\" the group of four to go see their desired person of the hour. The revelers' laughter is interrupted by the Wicked Witch of the West, who is circling over the city, skywriting with her broom, ordering the citizens to \\\"SURRENDER DOROTHY OR DIE\\\". In the final cut of the film, the words \\\"OR DIE\\\" were dropped from the film as being too strong for the presumably young audience of the time.\", \"score\": 19.859375}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages, I can see that the album 'So Long, Scarecrow' is titled in reference to the 1939 film 'The Wizard of Oz'. The Scarecrow in the film is a metaphor for the band.\n\n[[ ## tool_name_0 ## ]]\nfinish\n\n[[ ## tool_args_0 ## ]]\n{}\n\n[[ ## observation_0 ## ]]\nCompleted.",
+        "reasoning": "The passage mentions that the album 'So Long, Scarecrow' by Scarling is titled in reference to 'The Wizard of Oz', a 1939 musical fantasy film. The Scarecrow in the film is used as a metaphor for the band, reflecting their journey and search for new territory in a predictable and monotonous musical environment.",
+        "answer": "The Wizard of Oz"
+      },
+      {
+        "question": "What main thoroughfare in Warsaw's borough of Ursyn\u00f3w connects to a 6,500 km international road which coincides with the Trans-Siberian Highway?",
+        "answer": "Jana Roso\u0142a street",
+        "dspy_uuid": "f2fbb8d7-c7db-4679-838f-a940d2f5c173",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Konnichiwa was launched in a broadcast that was streamed by the platform that was founded in what city in 2010?",
+        "answer": "London",
+        "dspy_uuid": "50f83cbc-8e93-454d-b639-d84907d256eb",
+        "dspy_split": "train"
+      },
+      {
+        "question": "This group encompassed a federation of Alpine tribes, including the Calucones, for about 6 centuries starting around 500 BC.  ",
+        "answer": "The Raeti",
+        "dspy_uuid": "4d43e876-7f58-446a-837d-b6de2202d00e",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Evolution: A Theory in Crisis is a 1985 book by a biochemist and Senior fellow at Discovery Institute's Center for what?",
+        "answer": "Science and Culture",
+        "dspy_uuid": "52e946b6-ebcd-46bf-8896-508dbef4a22a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "That Darn Cat! and Never a Dull Moment were both produced by what studio?",
+        "answer": "Walt Disney Productions",
+        "dspy_uuid": "058e7ea3-0b65-40be-a69d-745fcb7f020a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The 1925 Saint Mary's Gaels football team represented what private, coeducational college in Moraga, California?",
+        "answer": "Saint Mary's College of California",
+        "dspy_uuid": "bf30f6d6-acef-4d83-ac5f-e5ab4acd8dda",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The Garand carbine was created by a man with what nationality?",
+        "answer": "Canadian-American",
+        "dspy_uuid": "4ea3b6dd-07cd-4e7e-b855-2e19bd91324f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Were Dorothy Arzner and Richard Wallace both French film directors?",
+        "answer": "no",
+        "dspy_uuid": "7f39520b-370c-4b43-a981-b56c415fae39",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are both Ceratophyllum and Eucomis a genus of flowering plants?",
+        "answer": "yes",
+        "dspy_uuid": "501c656e-66bf-4fa9-9bce-af80aeda0bc3",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which city did the writer of Enion spend most of his life?",
+        "answer": "London",
+        "dspy_uuid": "c71f3e5f-d75b-4f41-8bff-871451eb710c",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are both Cars 2 and Prom animated films?",
+        "answer": "no",
+        "dspy_uuid": "f080d631-d70e-4382-91a5-bf23e948c633",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which of these Asian directors was behind the science fiction adventure film \"Snowpiercer\", Bong Joon-ho or Vincent Kok?",
+        "answer": "Bong",
+        "dspy_uuid": "b99cc9dc-ccd7-4aee-92e9-e78f7d680dc6",
+        "dspy_split": "train"
+      },
+      {
+        "question": "In addition to the Austrian passport, what is needed to gain access to 173 countries and territories?",
+        "answer": "national identity card",
+        "dspy_uuid": "544e06dc-e0c6-474f-bd87-4d69ce7f9d36",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What magazine was established in 1988 by Frank Thomas and Keith White and has been associated with the Dirtbag Left?",
+        "answer": "The Baffler",
+        "dspy_uuid": "47d63e19-8cca-4c7a-861b-db92f1b4f6f5",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

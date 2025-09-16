@@ -1,0 +1,187 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Gulfstream International Airlines later became a regional carrier based out of what airport?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Gulfstream International Airlines later became a regional carrier based out of what airport?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Gulfstream International Airlines later became a regional carrier based out of what airport?\", \"passages_this_hop\": [{\"long_text\": \"Gulfstream International Airlines | Gulfstream International Airlines was a United States airline that operated from 1988 to 2010. The airline primary operated codeshare flights for major airlines. In December 2010, the airline went bankrupt and its assets were sold. Silver Airways launched as a new regional carrier with assets from Gulfstream.\", \"score\": 23.5}, {\"long_text\": \"Birmingham European Airways | Birmingham European Airways was originally established in 1983 (as Birmingham Executive Airways). The airline as its name implies was based at Birmingham International Airport (BHX/EGBB) in the UK and operated services geared towards business travellers. The airline began operations on 6 June 1983 with three Jetstream 31 aircraft, flying services from Birmingham to Copenhagen, Zurich and Milan. A Saab 340 was introduced in February 1985, but it suffered severe reliability problems in the airline's service, and was retired at the end of the year. To replace the Saab, Birmingham Executive chose the Gulfstream I, operating a wet-leased aircraft from September 1986, with the airline receiving the first of its own Gulfstreams, fitted out as 24-seat airliners in February 1987. Birmingham European Airways later introduced a number of BAC 1-11 aircraft into its fleet.\", \"score\": 19.984375}, {\"long_text\": \"Gulf Air Transport | Gulf Air Transport (ICAO: GAT) was a small charter airline headquartered at the Acadiana Regional Airport (ARA), a former U.S. Navy military airbase located in New Iberia, Louisiana, United States. The company flew piston, turboprop and jet aircraft types, and conducted flight operations from 1979 until 1990.\", \"score\": 19.78125}]}\n\n[[ ## thought_0 ## ]]\nThe first passage mentions that Gulfstream International Airlines became a regional carrier after going bankrupt in December 2010. However, it does not specify which airport the regional carrier used. I will need to look further into the passages provided to find the answer.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Gulfstream International Airlines regional carrier airport\", \"trajectory_id\": \"1\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Gulfstream International Airlines regional carrier airport\", \"passages_this_hop\": [{\"long_text\": \"Coldstream Airport | Coldstream Airport (ICAO: YCEM) is a small Australian regional airfield located in the township of Coldstream in Greater Melbourne, Victoria.\", \"score\": 21.40625}, {\"long_text\": \"Texas Gulf Coast Regional Airport | Texas Gulf Coast Regional Airport (IATA: LJN, ICAO: KLBX, FAA LID: LBX) , previously known as Brazoria County Airport, is a county-owned public-use airport located four miles (6 km) southwest of the central business district of Angleton and north of Lake Jackson, both cities in Brazoria County, Texas, United States.\", \"score\": 20.9375}, {\"long_text\": \"Gulfport–Biloxi International Airport | Gulfport–Biloxi International Airport (IATA: GPT, ICAO: KGPT, FAA LID: GPT) is a joint civil–military public-use airport three nautical miles (6 km) northeast of the central business district of Gulfport, a city in Harrison County, Mississippi, United States. It is owned by the Gulfport–Biloxi Regional Airport Authority and serves the Gulf Coast area.\", \"score\": 19.6875}]}\n\n[[ ## thought_1 ## ]]\nThe search results did not provide a clear indication of the specific airport where Gulfstream International Airlines operated as a regional carrier. I will try another search query to refine my search.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Gulfstream International Airlines post-bankruptcy regional carrier location\", \"trajectory_id\": \"2\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Gulfstream International Airlines post-bankruptcy regional carrier location\", \"passages_this_hop\": [{\"long_text\": \"Silver Airways | Silver Airways Corp., operating as Silver Airways, is a United States airline with its headquarters in Fort Lauderdale-Hollywood International Airport in unincorporated Broward County, Florida, near Fort Lauderdale. It was founded in 2010 with assets from the former Gulfstream International Airlines, and currently operates around 170 daily scheduled flights to 10 cities in Florida and 8 destinations in the Bahamas, with hubs at Fort Lauderdale, Orlando and Tampa.\", \"score\": 17.125}, {\"long_text\": \"Lone Star Airlines | Lone Star Airlines was an American regional airline that operated both domestic and international flights. For much of the airline's life its headquarters were located in the Fort Worth Stockyards in Fort Worth, Texas. The airline's largest hub was located at Dallas-Fort Worth International Airport. The airline filed for bankruptcy in August, 1998 and was liquidated in October, 1998.\", \"score\": 16.796875}, {\"long_text\": \"MarkAir | MarkAir (IATA: BF, ICAO: MRK, Call sign: MarkAir) was a regional airline based in Anchorage, Alaska, that became a national air carrier operating passenger jet service in the United States with a hub and corporate headquarters located in Denver, Colorado. After a second bankruptcy in 1995, it ceased operations in October and was later liquidated.\", \"score\": 16.671875}]}\n\n[[ ## thought_2 ## ]]\nBased on the information from the latest search, it appears that Silver Airways, which was formed with assets from Gulfstream International Airlines, operates as a regional carrier. Therefore, the regional carrier likely operates out of the headquarters of Silver Airways, which is located in Fort Lauderdale-Hollywood International Airport in Florida.\n\n[[ ## tool_name_2 ## ]]\nfinish\n\n[[ ## tool_args_2 ## ]]\n{}\n\n[[ ## observation_2 ## ]]\nCompleted.",
+        "reasoning": "After conducting multiple searches, it was found that Silver Airways, which was formed with assets from Gulfstream International Airlines, operates as a regional carrier. The headquarters of Silver Airways is located in Fort Lauderdale-Hollywood International Airport in Florida.",
+        "answer": "Fort Lauderdale-Hollywood International Airport"
+      },
+      {
+        "augmented": true,
+        "question": "George Keith was probably the last Earl Marishal at what ruined motte and bailey castle in Aberdeenshire, Scotland?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"George Keith was probably the last Earl Marishal at what ruined motte and bailey castle in Aberdeenshire, Scotland?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"George Keith was probably the last Earl Marishal at what ruined motte and bailey castle in Aberdeenshire, Scotland?\", \"passages_this_hop\": [{\"long_text\": \"George Keith, 10th Earl Marischal | George Keith, 10th Earl Marischal (1692/3? , probably at Inverugie Castle – 1778, Potsdam) was a Scottish and Prussian army officer and diplomat. Jacobite by persuasion, he was the tenth and last Earl Marischal, having inherited the title from his father the 9th earl in 1712.\", \"score\": 22.671875}, {\"long_text\": \"William Keith, 7th Earl Marischal | William Keith, 7th Earl Marischal (1610 - 1670 or 1671) was a Scottish nobleman and Covenanter. He was the eldest son of William Keith, 6th Earl Marischal. He joined Montrose and twice seized Aberdeen in 1639, including a march with Montrose and 9000 men along the Causey Mounth past Muchalls Castle and through the Portlethen Moss to attack via the Bridge of Dee.\", \"score\": 20.265625}, {\"long_text\": \"William Keith, 6th Earl Marischal | William Keith, 6th Earl Marischal (c. 1585 – 28 October 1635, castle of Dunnottar) was a Scottish lord, Earl Marischal and naval official.\", \"score\": 19.984375}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, it seems that George Keith, 10th Earl Marischal, might have been born at Inverugie Castle. I need to confirm if Inverugie Castle is a ruined motte and bailey castle in Aberdeenshire, Scotland.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Inverugie Castle ruined motte and bailey Aberdeenshire Scotland\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Inverugie Castle ruined motte and bailey Aberdeenshire Scotland\", \"passages_this_hop\": [{\"long_text\": \"Inverugie Castle | Inverugie Castle or Cheyne's Tower is the ruins of a motte-and-bailey castle in Aberdeenshire, Scotland.\", \"score\": 25.640625}, {\"long_text\": \"Ravenscraig Castle, Aberdeenshire | Ravenscraig Castle, also known as the Craig of Inverugie, is a grade B listed ruined 15th-century L-shaped tower-house north-west of Peterhead, Aberdeenshire, Scotland.\", \"score\": 22.46875}, {\"long_text\": \"Lochmaben Castle | Lochmaben Castle is a ruined castle in the town of Lochmaben, the feudal Lordship of Annandale, and the united county of Dumfries and Galloway. It was built by Edward I in the 13th and 14th centuries, and later rebuilt during the reign of James IV of Scotland. An earlier motte-and-bailey castle was built south of the current castle in c. 1160 by the Bruce family, Lords of Annandale.\", \"score\": 20.28125}]}\n\n[[ ## thought_1 ## ]]\nThe search results indicate that Inverugie Castle is indeed a ruined motte and bailey castle located in Aberdeenshire, Scotland. Therefore, it is likely that George Keith, 10th Earl Marischal, was born there.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "The search results indicate that Inverugie Castle is a ruined motte and bailey castle located in Aberdeenshire, Scotland. Since George Keith, 10th Earl Marischal, was probably born there, it can be inferred that he was born at Inverugie Castle.",
+        "answer": "Inverugie Castle"
+      },
+      {
+        "question": "Where did the star of Redbelt get a scholarship?",
+        "answer": "London Academy of Music",
+        "dspy_uuid": "115a0e0d-f2e7-457e-a399-aeac60e9efe8",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What Australian sportsman died in a suburb of Adelaide in the City of Burnside and the City of Campbelltown?",
+        "answer": "Ernest Jones",
+        "dspy_uuid": "3e52ab84-b34d-4cbf-96d9-76b35f3b4263",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The Garand carbine was created by a man with what nationality?",
+        "answer": "Canadian-American",
+        "dspy_uuid": "4ea3b6dd-07cd-4e7e-b855-2e19bd91324f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What is the name of this Irish singer-songwriter, musician, venture capitalist, businessman, and philanthropist, who wrote \"Love Is Blindness\" on the piano?",
+        "answer": "Bono",
+        "dspy_uuid": "249868fc-533f-492c-9f3c-48c55d5b9aa8",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What team does the athlete featured on the cover of the FIFA 17 video game play for?",
+        "answer": "Borussia Dortmund",
+        "dspy_uuid": "90b0f115-e4b8-4377-93a0-193301358d62",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who is the wife of Charlemagne who is a step mother to Pepin the Hunchback?",
+        "answer": "Hildegard",
+        "dspy_uuid": "b3a77db7-824d-433c-aead-73c181185800",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Jay Simon is best known for her role as a flight attendant in a movie directed by which director ?",
+        "answer": "Clare Kilner",
+        "dspy_uuid": "84977272-7aac-4688-9585-6b2512555b74",
+        "dspy_split": "train"
+      },
+      {
+        "question": "How many copies were sold of the last UK number-one single that was written by Noddy Holder and Jim Lea?",
+        "answer": "in excess of one million copies",
+        "dspy_uuid": "e242640d-5178-4acb-985f-5869a133bb66",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which running back played during the 2017 Kansas City Chiefs season and was released after 9 seasons? ",
+        "answer": "Jamaal RaShaad Jones Charles",
+        "dspy_uuid": "a7c7a19b-e8b3-41bb-b7c4-2d53ab12e761",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Utterby is situated on the road that is in what English region?",
+        "answer": "East Midlands",
+        "dspy_uuid": "0d264340-f12d-463f-bef2-25435978ce72",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Were Dorothy Arzner and Richard Wallace both French film directors?",
+        "answer": "no",
+        "dspy_uuid": "7f39520b-370c-4b43-a981-b56c415fae39",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which major river is Buford, North Dakota nearest to?",
+        "answer": "the Missouri River",
+        "dspy_uuid": "d5a5cc34-c386-4cf7-8353-3075e461da4e",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was founded first, Death Cab for Cutie or P.O.D.?",
+        "answer": "P.O.D.",
+        "dspy_uuid": "f7ee82ef-e682-44e3-b3fa-68ba52775cea",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Seiko Holdings Corporation was formerly known as which watch and jewlery shop?",
+        "answer": "K. Hattori",
+        "dspy_uuid": "437f3ea0-7f3e-4857-8243-7c1f5786cdae",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

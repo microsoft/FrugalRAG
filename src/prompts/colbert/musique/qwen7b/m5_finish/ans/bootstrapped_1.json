@@ -1,0 +1,162 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What was the record label of the songwriter of Up on Cripple Creek?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What was the record label of the songwriter of Up on Cripple Creek?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What was the record label of the songwriter of Up on Cripple Creek?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Up on Cripple Creek\\\" | \\\"Up on Cripple Creek \\\"\\\"Up on Cripple Creek\\\"\\\" is the fifth song on The Band's eponymous second album, \\\"\\\"The Band\\\"\\\". It was released as an (edited) single on Capitol 2635 in November 1969 and reached #25 on the \\\"\\\"Billboard\\\"\\\" Hot 100. \\\"\\\"Up on Cripple Creek\\\"\\\" was written by Band guitarist Robbie Robertson, with drummer Levon Helm singing lead vocal. A 1976 live performance of \\\"\\\"Up on Cripple Creek\\\"\\\" appears in the Band's concert film \\\"\\\"The Last Waltz\\\"\\\", as well as on the accompanying soundtrack album. In addition, live performances of the song appear on \\\"\\\"Before the Flood\\\"\\\", which records the\\\"\", \"score\": 22.96875}, {\"long_text\": \"\\\"Up on Cripple Creek\\\" | \\\"stating that the song has a \\\"\\\"New Orleans groove.\\\"\\\" Janovitz also regards the \\\"\\\"non-traditional, funky style\\\"\\\" of Garth Hudson's clavinet playing a precursor of Stevie Wonder's similar keyboard playing on \\\"\\\"Superstition.\\\"\\\" The hip hop duo Gang Starr sampled the rhythm track on their own song \\\"\\\"Beyond Comprehension.\\\"\\\" Up on Cripple Creek \\\"\\\"Up on Cripple Creek\\\"\\\" is the fifth song on The Band's eponymous second album, \\\"\\\"The Band\\\"\\\". It was released as an (edited) single on Capitol 2635 in November 1969 and reached #25 on the \\\"\\\"Billboard\\\"\\\" Hot 100. \\\"\\\"Up on Cripple Creek\\\"\\\" was written by Band guitarist Robbie Robertson, with\\\"\", \"score\": 21.75}, {\"long_text\": \"\\\"Up on Cripple Creek\\\" | \\\"Band's 1974 tour with Bob Dylan, as well as on the 2001 expanded edition of \\\"\\\"Rock of Ages\\\"\\\", originally released in 1972. \\\"\\\"Up on Cripple Creek\\\"\\\" is notable as it is one of the first instances of a Hohner clavinet being played with a wah-wah pedal. The riff can be heard after each chorus of the song. The clavinet, especially in tandem with a wah-wah pedal, was a sound that became famous in the early to mid-1970s, especially in funk music. The Band performed the song on the Ed Sullivan Show in November 1969. Drawing upon the Band's musical roots—the\\\"\", \"score\": 21.234375}, {\"long_text\": \"\\\"Leo Kottke, Peter Lang & John Fahey\\\" | \\\"Lang as well as the label itself. Each guitarist plays four solo pieces. The Fahey tracks are re-recordings of four well-known Fahey songs. Kottke would later re-record \\\"\\\"Cripple Creek\\\"\\\" and \\\"\\\"Ice Miner\\\"\\\" (on \\\"\\\"Mudlark)\\\"\\\". The cover contains the names of the three guitarists in a circle in order that none is listed first. Therefore, various discographies note the title in different manners. The spine, although, reads \\\"\\\"Leo Kottke/Peter Lang/John Fahey\\\"\\\". The back cover contains a comical or absurd biography of each artist as well as a description of Takoma Records: \\\"\\\"Takoma Records is widely ignored as a freckle on the\\\"\", \"score\": 21.15625}, {\"long_text\": \"\\\"Gomez (band)\\\" | \\\"Beale Street and Bonnaroo Festivals in Tennessee, the Jazzfest in New Orleans and Sasquatch Festival in George, WA. A collection of A-side and B-sides and rarities titled \\\"\\\"Five Men in a Hut\\\"\\\" was released on 17 October 2006. The two-disc album consists of released and unreleased tracks recorded under the Hut/Virgin label from 1998-2004. A DVD with music videos and interviews from their time with Hut was also released. In 2007, Gomez recorded a cover of The Band's hit \\\"\\\"Up On Cripple Creek\\\"\\\" for the tribute album \\\"\\\"\\\"\\\". Also their song \\\"\\\"How We Operate\\\"\\\" was played in the final scene\\\"\", \"score\": 21.109375}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages, I understand that the songwriter of \"Up on Cripple Creek\" is Robbie Robertson. Now, I need to find out his record label.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"record label of Robbie Robertson\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"record label of Robbie Robertson\", \"passages_this_hop\": [{\"long_text\": \"\\\"Robbie Robertson (album)\\\" | \\\"mythical place \\\"\\\"that moves around according to [the] clouds that cover [it]\\\"\\\", and imagined himself to be a wanderer who would narrate the events that would take place in this mythical locale. Robertson was signed to EMI Records by then head of A&R and longtime The Band fan Gary Gersh. Preliminary discussions and preproduction for Robertson's first solo album began in autumn 1984. Gersh then moved to Geffen Records, and convinced the label to buy out Robertson's contract with EMI. The first producer Robertson considered for production of the album was fellow Canadian Daniel Lanois. After meeting up with several\\\"\", \"score\": 26.140625}, {\"long_text\": \"\\\"Contact from the Underworld of Redboy\\\" | \\\"by the Hand (Red Alert Mix)\\\"\\\" Contact from the Underworld of Redboy Contact from the Underworld of Redboy is an album by Robbie Robertson that was released in 1998 by Capitol Records. The album is composed of music inspired by Aboriginal Canadian music (including traditional Aboriginal Canadian songs and chants) as well as modern rock, trip hop, and electronica, often integrated together, and features many guest artists. 1. \\\"\\\"The Sound Is Fading\\\"\\\" 2. \\\"\\\"The Code of Handsome Lake\\\"\\\" 3. \\\"\\\"Making a Noise\\\"\\\" 4. \\\"\\\"Unbound\\\"\\\" 5. \\\"\\\"Sacrifice\\\"\\\" 6. \\\"\\\"Rattlebone\\\"\\\" 7. \\\"\\\"Peyote Healing\\\"\\\" 8. \\\"\\\"In the Blood\\\"\\\" 9. \\\"\\\"Stomp Dance (Unity)\\\"\\\" 10.\\\"\", \"score\": 24.859375}, {\"long_text\": \"\\\"Robbie Robertson\\\" | \\\"members of the Hawks once again when they appeared as his backup band at two Woody Guthrie memorial concerts at Carnegie Hall in New York City in January 1968. Three of these performances were later released by Columbia Records on the LP \\\"\\\"A Tribute to Woody Guthrie, Vol. 1\\\"\\\" (1972). Over the course of the \\\"\\\"Basement Tapes\\\"\\\" period, the group had developed a sound of their own, and Grossman went to Los Angeles to shop the group to a major label, securing a contract with Capitol Records. The group went to New York to begin recording songs with music producer\\\"\", \"score\": 24.671875}, {\"long_text\": \"\\\"Contact from the Underworld of Redboy\\\" | \\\"Contact from the Underworld of Redboy Contact from the Underworld of Redboy is an album by Robbie Robertson that was released in 1998 by Capitol Records. The album is composed of music inspired by Aboriginal Canadian music (including traditional Aboriginal Canadian songs and chants) as well as modern rock, trip hop, and electronica, often integrated together, and features many guest artists. 1. \\\"\\\"The Sound Is Fading\\\"\\\" 2. \\\"\\\"The Code of Handsome Lake\\\"\\\" 3. \\\"\\\"Making a Noise\\\"\\\" 4. \\\"\\\"Unbound\\\"\\\" 5. \\\"\\\"Sacrifice\\\"\\\" 6. \\\"\\\"Rattlebone\\\"\\\" 7. \\\"\\\"Peyote Healing\\\"\\\" 8. \\\"\\\"In the Blood\\\"\\\" 9. \\\"\\\"Stomp Dance (Unity)\\\"\\\" 10. \\\"\\\"The Lights\\\"\\\" 11. \\\"\\\"Take Your Partner\\\"\", \"score\": 24.671875}, {\"long_text\": \"\\\"The Big Pink\\\" | \\\"The Big Pink The Big Pink are an English electronic rock band from London, consisting of multi-instrumentalists Robertson \\\"\\\"Robbie\\\"\\\" Furze, Lady Mary Charteris, Nicole Emery and Bradford Lee Conroy. Initially a duo, they signed to independent record label 4AD in 2009 and won the \\\"\\\"NME\\\"\\\" Philip Hall Radar Award for best new act. To date, they have released five singles, with their debut album \\\"\\\"A Brief History of Love\\\"\\\" released in September 2009 and its follow-up, \\\"\\\"Future This\\\"\\\" released in January 2012. Robertson \\\"\\\"Robbie\\\"\\\" Furze and Milo Cordell started working together as The Big Pink in 2008, taking their name\\\"\", \"score\": 24.59375}]}\n\n[[ ## thought_1 ## ]]\nBased on the information found, Robbie Robertson's album \"Contact from the Underworld of Redboy\" was released by Capitol Records. This suggests that Capitol Records might be his record label.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "Robbie Robertson, the songwriter of \"Up on Cripple Creek,\" released his album \"Contact from the Underworld of Redboy\" through Capitol Records. This suggests that Capitol Records could be his record label.",
+        "answer": "Capitol Records"
+      },
+      {
+        "augmented": true,
+        "question": "What is the family of Prince George William of Great Britain's mother",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What is the family of Prince George William of Great Britain's mother\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What is the family of Prince George William of Great Britain's mother\", \"passages_this_hop\": [{\"long_text\": \"\\\"Prince George William of Great Britain\\\" | \\\"Prince George William of Great Britain Prince George William of Great Britain (13 November 1717 – 17 February 1718) was an infant member of the British royal family, second son of King George II and Caroline of Ansbach who, at the time of his birth, were the Prince and Princess of Wales. He died aged 3 months, 4 days. Prince George William was born at St James's Palace, London. His father later, The Prince George, Prince of Wales, son of George I. His mother was Caroline of Ansbach, daughter of Johann Friedrich, Margrave of Brandenburg-Ansbach. Twenty-six days after his birth,\\\"\", \"score\": 24.734375}, {\"long_text\": \"\\\"George I of Great Britain\\\" | \\\"many cultural icons such as the mathematician and philosopher Gottfried Leibniz and the composers George Frideric Händel and Agostino Steffani. Shortly after George's accession to his paternal duchy, Prince William, Duke of Gloucester, who was second-in-line to the English and Scottish thrones, died. By the terms of the English Act of Settlement 1701, George's mother, Sophia, was designated as the heir to the English throne if the then reigning monarch, William III, and his sister-in-law, Anne, died without surviving issue. The succession was so designed because Sophia was the closest Protestant relative of the British royal family. Fifty-six Catholics with\\\"\", \"score\": 23.8125}, {\"long_text\": \"\\\"Prince George William of Great Britain\\\" | \\\"he was baptised at St James's Palace by Bishop of London John Robinson. His godparents were his grandfather the King, the Duke of Newcastle (Lord Chamberlain of the King's Household) and the Duchess of St Albans (First Lady of the Bedchamber to his mother). The baptism was the catalyst for a family quarrel. The infant's parents wanted to call the baby Louis, and suggested the Queen of Prussia and the Duke of York as sponsors. The King chose the names George William, and, supposedly following custom, appointed the Lord Chamberlain, the Duke of Newcastle, as one of the baptismal sponsors\\\"\", \"score\": 23.78125}, {\"long_text\": \"\\\"William I, Elector of Hesse\\\" | \\\"Hanau, while under his mother's regency. The young prince William, together with his two younger brothers, lived with their mother, the landgravine Mary. From 1747 they were supported by Protestant relatives and moved to Denmark. There they lived with Mary's sister, Louise of Great Britain, and her family; Louise died in 1751. On 1 September 1764, William married his first cousin, Wilhelmina Caroline of Denmark and Norway (1747–1820), who was the second surviving daughter of Frederick V of Denmark and Norway. They married at Christiansborg Palace and resided for two decades mostly in Denmark. In 1785 they moved to Kassel\\\"\", \"score\": 23.140625}, {\"long_text\": \"\\\"George I of Greece\\\" | \\\"Until his accession in Greece, he was known as Prince William, the namesake of his grandfathers William, Duke of Schleswig-Holstein-Sonderburg-Glücksburg, and Prince William of Hesse-Kassel. Although he was of royal blood, his family was relatively obscure and lived a comparatively normal life by royal standards. In 1853, however, George's father was designated the heir presumptive to the childless King Frederick VII of Denmark, and the family became princes and princesses of Denmark. George's siblings were Frederick (who succeeded their father as King of Denmark), Alexandra (who became wife of King Edward VII of the United Kingdom and the mother of\\\"\", \"score\": 23.09375}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages, it is clear that Prince George William of Great Britain's mother is Caroline of Ansbach. Now, I need to find out what her family was.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What was the family of Caroline of Ansbach\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What was the family of Caroline of Ansbach\", \"passages_this_hop\": [{\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"Caroline of Ansbach Caroline of Brandenburg-Ansbach (Wilhelmina Charlotte Caroline; 1 March 1683 – 20 November 1737) was Queen of Great Britain as the wife of King George II. Her father, Margrave John Frederick of Brandenburg-Ansbach, belonged to a branch of the House of Hohenzollern and was the ruler of a small German state, the Principality of Ansbach. Caroline was orphaned at a young age and moved to the enlightened court of her guardians, King Frederick I and Queen Sophia Charlotte of Prussia. At the Prussian court, her previously limited education was widened, and she adopted the liberal outlook possessed by\\\"\", \"score\": 25.703125}, {\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"ruler of one of the smallest German states; he died of smallpox at the age of 32, when Caroline was three years old. Caroline and her only full sibling, her younger brother Margrave William Frederick, left Ansbach with their mother, who returned to her native Eisenach. In 1692, Caroline's widowed mother was pushed into an unhappy marriage with the Elector of Saxony, and she and her two children moved to the Saxon court at Dresden. Eleonore Erdmuthe was widowed again two years later, after her unfaithful husband contracted smallpox from his mistress. Eleonore remained in Saxony for another two years,\\\"\", \"score\": 25.59375}, {\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"any embarrassing scenes nor did she take lovers. She preferred her husband's mistresses to be ladies-in-waiting, as that way she believed she could keep a closer eye on them. The succession of her husband's family to the British throne was still insecure, as Queen Anne's half-brother James Stuart contested the Hanoverian claim, and Queen Anne and Caroline's grandmother-in-law Dowager Electress Sophia had fallen out. Anne refused permission for any of the Hanoverians to visit Britain in her lifetime. Caroline wrote to Leibniz, \\\"\\\"I accept the comparison which you draw, though all too flattering, between me and Queen Elizabeth as a\\\"\", \"score\": 25.078125}, {\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"14th, per fess gules and argent; 15th, plain field of gules (for right of regalia); overall an inescutcheon, argent, an eagle displayed gules (for Brandenburg). Caroline's ten pregnancies resulted in eight live births, of whom one died in infancy, and seven lived to adulthood. Caroline of Ansbach Caroline of Brandenburg-Ansbach (Wilhelmina Charlotte Caroline; 1 March 1683 – 20 November 1737) was Queen of Great Britain as the wife of King George II. Her father, Margrave John Frederick of Brandenburg-Ansbach, belonged to a branch of the House of Hohenzollern and was the ruler of a small German state, the Principality of\\\"\", \"score\": 24.8125}, {\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"actions. Caroline had absorbed the liberal opinions of her mentor, Queen Sophia Charlotte of Prussia, and supported clemency for the Jacobites (supporters of the rival Stuart claim to the throne), freedom of the press, and freedom of speech in Parliament. Over the next few years, she and her husband fought a constant battle against their eldest son, Frederick, Prince of Wales, who had been left behind in Germany when they came to England. He joined the family in 1728, by which time he was an adult, had mistresses and debts, and was fond of gambling and practical jokes. He opposed\\\"\", \"score\": 24.75}]}\n\n[[ ## thought_1 ## ]]\nThe family of Caroline of Ansbach was the House of Hohenzollern, specifically a branch of it. She was the Margrave John Frederick of Brandenburg-Ansbach's daughter, who ruled the Principality of Ansbach.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "Caroline of Ansbach, the mother of Prince George William of Great Britain, was a member of the House of Hohenzollern. Specifically, she was the daughter of Margrave John Frederick of Brandenburg-Ansbach, who ruled the Principality of Ansbach.",
+        "answer": "House of Hohenzollern"
+      },
+      {
+        "augmented": true,
+        "question": "When did the institute that gives out the Elliott Cresson Medal award open?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"When did the institute that gives out the Elliott Cresson Medal award open?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"When did the institute that gives out the Elliott Cresson Medal award open?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Elliott Cresson\\\" | \\\"medals were proposed by Cresson in 1850, to be awarded in 1851 to the largest producers in the Pennsylvania colonies of Liberia of coffee, sugar, palm oil, and cotton. The Franklin Institute adopted the award, but no such medals were ever given out. In 1850, Sarah Worthington King Peter wrote to the Franklin Institute about her drawing class of some 20 young women becoming a \\\"\\\"co-operative, but separate branch\\\"\\\" of the Institute. The Franklin Institute established and supervised the Philadelphia School of Design for Women from 1850 to 1853. A group of 17 men were designated the incorporators of the\\\"\", \"score\": 24.421875}, {\"long_text\": \"\\\"Elliott Cresson Medal\\\" | \\\"Elliott Cresson Medal The Elliott Cresson Medal, also known as the Elliott Cresson Gold Medal, was the highest award given by the Franklin Institute. The award was established by Elliott Cresson, life member of the Franklin Institute, with $1,000 granted in 1848. The endowed award was to be \\\"\\\"for some discovery in the Arts and Sciences, or for the invention or improvement of some useful machine, or for some new process or combination of materials in manufactures, or for ingenuity skill or perfection in workmanship.\\\"\\\" The medal was first awarded in 1875, 21 years after Cresson's death. The Franklin Institute\\\"\", \"score\": 23.921875}, {\"long_text\": \"\\\"Elliott Cresson Medal\\\" | \\\"continued awarding the medal on an occasional basis until 1998 when they reorganized their endowed awards under one umbrella, The Benjamin Franklin Awards. A total of 268 Elliott Cresson Medals were given out during the award's lifetime. Elliott Cresson Medal The Elliott Cresson Medal, also known as the Elliott Cresson Gold Medal, was the highest award given by the Franklin Institute. The award was established by Elliott Cresson, life member of the Franklin Institute, with $1,000 granted in 1848. The endowed award was to be \\\"\\\"for some discovery in the Arts and Sciences, or for the invention or improvement of\\\"\", \"score\": 23.40625}, {\"long_text\": \"\\\"Elliott Cresson\\\" | \\\"United States. Slaveholders expected compensation for losing workers. In late 1824, Cresson was nominated and elected to the Franklin Institute, becoming a life member. In 1846, he announced his intention to create a Medal fund. In 1848, Cresson gave $1,000 to establish the Elliott Cresson Medal, a gold medal awarded \\\"\\\"for some discovery in the Arts and Sciences, or for the invention or improvement of some useful machine, or for some new process or combination of materials in manufactures, or for ingenuity skill or perfection in workmanship.\\\"\\\" The medal was first awarded in 1875, to six firms or persons. Silver\\\"\", \"score\": 23.125}, {\"long_text\": \"\\\"Elliott Cresson\\\" | \\\"the award during its lifetime. Elliott Cresson Elliott Cresson (March 2, 1796 – February 20, 1854) was an American philanthropist who gave money to a number of causes after a brief career in the mercantile business. He established the Elliott Cresson Medal of the Franklin Institute in 1848, and helped found and manage the Philadelphia School of Design for Women, today's Moore College of Art and Design. Cresson was a member of the Religious Society of Friends (Quakers) and a strong supporter of the Philadelphia branch of the American Colonization Society, a group fighting slavery that relocated former slaves and\\\"\", \"score\": 22.390625}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages, I can see that the Elliott Cresson Medal was established in 1848 by Elliott Cresson. However, the passage does not explicitly state when the institute that gives out the Elliott Cresson Medal was founded. I need to find more information about the Franklin Institute.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"when was the Franklin Institute founded?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"when was the Franklin Institute founded?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Franklin Institute\\\" | \\\"Franklin Institute The Franklin Institute is a science museum and the center of science education and research in Philadelphia, Pennsylvania. It is named after the American scientist and statesman, Benjamin Franklin, and houses the Benjamin Franklin National Memorial. Founded in 1824, the Franklin Institute is one of the oldest centers of science education and development in the United States. On February 5, 1824, Samuel Vaughan Merrick and William H. Keating founded the Franklin Institute of the State of Pennsylvania for the Promotion of the Mechanic Arts. Begun in 1825, the Institute was an important force in the professionalization of American\\\"\", \"score\": 27.59375}, {\"long_text\": \"\\\"Franklin Institute\\\" | \\\"for Research and Development operated from the Second World War into the 1980s. Many scientists have demonstrated groundbreaking new technology at the Franklin Institute. From September 2 to October 11, 1884, it hosted the International Electrical Exhibition of 1884, the first great electrical exposition in the United States. The world's first public demonstration of an all-electronic television system was later given by Philo Taylor Farnsworth on August 25, 1934. The first female member, Elizabeth Skinner, was elected to membership in 1833. The Franklin Institute was integrated in 1870, when Philadelphia teacher and activist Octavius Catto was admitted as a member.\\\"\", \"score\": 26.4375}, {\"long_text\": \"\\\"Franklin Institute\\\" | \\\"science and technology through the nineteenth century, beginning with early investigations into steam engines and water power. In addition to conducting scientific inquiry it fostered research and education by running schools, publishing the influential \\\"\\\"Journal of The Franklin Institute\\\"\\\", sponsoring exhibitions, and recognizing scientific advancement and invention with medals and awards. In the late twentieth century the Institute's research roles gave way to educating the general public through its museum. The Bartol Research Foundation of the Franklin Institute, founded in 1924 to conduct research in the physical sciences, is now part of the University of Delaware. The Franklin Institute Laboratories\\\"\", \"score\": 26.15625}, {\"long_text\": \"\\\"Franklin College (New Athens, Ohio)\\\" | \\\"Franklin College (New Athens, Ohio) Franklin College (founded 1818) was a college in New Athens, Ohio, founded by abolitionist John Walker (1786-1845), a Presbyterian minister in Pennsylvania and Ohio. The college was called Alma college from 1818 until 1825, when the name was changed to Franklin College. Classes were suspended during the Civil War after most of the student body enlisted for military service, but the college was revived in 1867 with 40 students. The college ceased operation in 1919, and became associated with Muskingum College until 1927. The college building houses the Franklin Museum which showcases the span of\\\"\", \"score\": 25.84375}, {\"long_text\": \"\\\"Franklin Humanities Institute\\\" | \\\"part of a consortium of interdisciplinary research centers and institutes at Duke University. It was formerly located at the John Hope Franklin Center for Interdisciplinary and International Studies at Duke, and is now located in the historic Smith Warehouse on Duke's East Campus. The Franklin Humanities Institute was founded in 1999 by Cathy Davidson, then Vice Provost for interdisciplinary Studies, and Karla FC Holloway, former Dean of the Humanities and Social Sciences. In 2002, the Institute received a three-year grant from the Andrew W. Mellon Foundation for a project entitled \\\"\\\"Making the Humanities Central.\\\"\\\" The grant was renewed for a\\\"\", \"score\": 25.703125}]}\n\n[[ ## thought_1 ## ]]\nThe passage clearly states that the Franklin Institute was founded in 1824. Now I can answer the question directly.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "The Franklin Institute, the institution that gives out the Elliott Cresson Medal, was founded in 1824.",
+        "answer": "1824"
+      },
+      {
+        "question": "What is the record label for the singer of Cast Your Fate to the Wind?",
+        "answer": "Warner Bros."
+      },
+      {
+        "question": "When was the publisher of Crux launched?",
+        "answer": "1998"
+      },
+      {
+        "question": "When was the territory covered by RIBA's Cambridge branch office created?",
+        "answer": "1994"
+      },
+      {
+        "question": "What is the record label for the person who sang Beauty and the Beast with Celine Dion?",
+        "answer": "Capitol Records"
+      },
+      {
+        "question": "What language is used by the director of Thenum Vayambum?",
+        "answer": "Hindi"
+      },
+      {
+        "question": "When did the sports team that Junior Félix played for win their last World Series?",
+        "answer": "1993"
+      },
+      {
+        "question": "Which family is the mother of Anne, Princess Royal and Princess of Orange's a member of?",
+        "answer": "House of Hohenzollern"
+      },
+      {
+        "question": "what language is spoken by the actress who decided not to participate in April 15?",
+        "answer": "Hindi"
+      },
+      {
+        "question": "What is the name of the reservoir fed by the river that the Vyatka connects to?",
+        "answer": "Kuybyshev Reservoir"
+      },
+      {
+        "question": "What year did the company Novair International Airways is part of dissolve?",
+        "answer": "1995"
+      },
+      {
+        "question": "What is the literacy rate in the main city near where Guerra was assassinated?",
+        "answer": "98%"
+      },
+      {
+        "question": "What language was used by the cast member of Black Emanuelle?",
+        "answer": "Italian"
+      },
+      {
+        "question": "Who owns the studio which produced Scooby-Doo and the Ghoul School?",
+        "answer": "Warner Bros."
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

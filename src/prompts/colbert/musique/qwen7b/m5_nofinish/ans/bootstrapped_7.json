@@ -1,0 +1,156 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question`.\n\nYou must decide what to do next by providing:\n\n- Thought: reasoning about the current step\n\n- Tool Name: one of the available tools\n\n- Tool Args: A valid JSON with the necessary keys.\n\nRepeat this for a few steps to gather information.\n\nYou do not need to produce a final answer — just use the tools iteratively.\nMake sure to include all required Tool Args as a valid JSON object.\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "When did the country formerly known as Zaire become independent?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"When did the country formerly known as Zaire become independent?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"When did the country formerly known as Zaire become independent?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Angolan War of Independence\\\" | \\\"to achieve independence, under the leadership of Kwame Nkrumah. Nkrumah organizes, in 1958, the Conference of African Independent States aimed to be the African Bandung. The former Belgian Congo and northern neighbor of Angola becomes independent in 1960, as the Republic of the Congo (known as \\\"\\\"Congo-Léopoldville\\\"\\\" and later \\\"\\\"Congo-Kinshasa\\\"\\\", being renamed \\\"\\\"Republic of Zaire\\\"\\\" in 1971), with Joseph Kasa-Vubu as president and Patrice Lumumba as prime-minister. Immediately after independence, a number of violent disturbances occur leading to the Congo Crisis. The white population becomes a target, with more than 80 000 Belgians residents being forced to flee from the\\\"\", \"score\": 23.09375}, {\"long_text\": \"\\\"Congo Pedicle road\\\" | \\\"became independent in 1964, as Zambia. Any thought that two African neighbours with shared tribal, cultural and historical origins could cooperate even better than neighbouring colonial powers was dispelled not long after. The colonial experience had broken down those connections which might have smoothed travel by Zambians through Zaire and replaced them with a bureaucracy and leadership whose allegiances had greatly changed and who saw how to exploit regulations and authority for their own gains. Under Mobutu, governance deteriorated and corruption flourished in Zaire, and he saw Katanga only as a cash cow and punished it for its separatist tendencies\\\"\", \"score\": 22.921875}, {\"long_text\": \"\\\"Democratic Republic of the Congo\\\" | \\\"Congo and the Republic of Zaire, before returning to its current name the Democratic Republic of the Congo. At the time of independence, the country was named the Republic of Congo-Léopoldville to distinguish it from its neighbour the Republic of the Congo-Brazzaville. With the promulgation of the Luluabourg Constitution on 1 August 1964, the country became the DRC, but was renamed to Zaire (a past name for the Congo River) on 27 October 1971 by President Mobutu Sese Seko as part of his \\\"\\\"Authenticité\\\"\\\" initiative. The word \\\"\\\"Zaire\\\"\\\" is from a Portuguese adaptation of a Kikongo word \\\"\\\"nzere\\\"\\\" (\\\"\\\"river\\\"\\\"), a\\\"\", \"score\": 22.890625}, {\"long_text\": \"Zaire | \\\"Zaire Zaire (), officially the Republic of Zaire (; ), was the name for the Democratic Republic of the Congo that existed between 1971 and 1997 in Central Africa. The country was a one-party totalitarian dictatorship, run by Mobutu Sese Seko and his ruling Popular Movement of the Revolution party. Zaire was established following Mobutu's seizure of power in a military coup in 1965, following five years of political upheaval following independence known as the Congo Crisis. Zaire had a strongly centralist constitution, and foreign assets were nationalised. The period is sometimes referred to as the Second Congolese Republic. A\\\"\", \"score\": 22.765625}, {\"long_text\": \"\\\"Provinces of the Democratic Republic of the Congo\\\" | \\\"provinces. Initially they were named after their capital cities, but in 1947 regional names were adopted. The Belgian Congo became an independent country in 1960, named Republic of the Congo. By 1963, the country was organised into 21 provinces (informally called \\\"\\\"provincettes\\\"\\\") plus the capital city of Léopoldville, similar to the original 22 districts under colonial rule. In 1966, the 21 \\\"\\\"provincettes\\\"\\\" were grouped into eight provinces, and the capital city was renamed Kinshasa. In 1971, the country was renamed Zaire, and three provinces were also renamed. In 1975, the capital city of Kinshasa obtained the status of a province.\\\"\", \"score\": 22.734375}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages retrieved, I can see that the country formerly known as Zaire became independent in 1960. However, to confirm this and provide a precise answer, I should refine my search query to focus on the specific year of independence.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"When did the country formerly known as Zaire gain independence?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"When did the country formerly known as Zaire gain independence?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Jean Schramme\\\" | \\\"independence. As they were rich in copper, cobalt and diamonds, they believed that they would be better off without the rest of Congo. A violent clash between pro-secession and pro-unity movements soon broke out. In 1965, Colonel Mobutu became president and from then on Belgium started protecting his regime against rebellion. Mobutu immediately began to arrest the former government ministers of Congo. In 1971, he changed the name of the country to \\\"\\\"Zaire\\\"\\\". On June 30, 1967, president Moise Tshombe of Katanga's jet aircraft was hijacked to Algiers, before he could return to Congo after his exile in Spain. He\\\"\", \"score\": 22.53125}, {\"long_text\": \"\\\"Air Zaïre\\\" | \\\"airline was also operating Curtiss C-46s and DC-4s equipment, leased from Aerovias Panama Airways to complement the Sabena-leased aircraft. After the Republic of the Congo gained independence from Belgium in 1960, the Belgian national airline Sabena continued to operate routes in the country. Plans for the formation of a Congolese airline were delayed due to the Congo Crisis; however, in January 1961 a protocol was signed with Sabena for the creation of a limited liability company to be named \\\"\\\"Air Congo\\\"\\\". On the company was formed, and incorporated on 28 June with Sabena providing technical assistance and personnel. The Congolese\\\"\", \"score\": 22.53125}, {\"long_text\": \"\\\"Postage stamps and postal history of the Democratic Republic of the Congo\\\" | \\\"1971, the state's name changed to Zaire. The first stamps of Zaire were issued on 18 December 1971. In 1997 the country's name reverted to the Democratic Republic of the Congo. The State of Katanga seceded from the Republic of the Congo and, during its three years of independence, produced its own stamps and issues overprinted on earlier stamps of the Belgian Congo and the Republic of the Congo. For a short period in 1960–61, South Kasai was a secessionist region in the south central area of the country that issued overprinted Belgian Congo stamps. Postage stamps and postal history\\\"\", \"score\": 22.46875}, {\"long_text\": \"Zaire | \\\"Republic of the Congo. He marched unopposed into Kinshasa three days later. Zaire's top-level domain was \\\"\\\".zr\\\"\\\". It has since changed to \\\"\\\".cd\\\"\\\". Zaire Zaire (), officially the Republic of Zaire (; ), was the name for the Democratic Republic of the Congo that existed between 1971 and 1997 in Central Africa. The country was a one-party totalitarian dictatorship, run by Mobutu Sese Seko and his ruling Popular Movement of the Revolution party. Zaire was established following Mobutu's seizure of power in a military coup in 1965, following five years of political upheaval following independence known as the Congo Crisis.\\\"\", \"score\": 22.296875}, {\"long_text\": \"\\\"Republic of the Congo (Léopoldville)\\\" | \\\"and purposes, the Democratic Republic of the Congo had effectively come to an end, but it would be another year before Mobutu officially changed the country's name to Zaire. Republic of the Congo (Léopoldville) The Republic of the Congo () was a sovereign state in Central Africa that was created with the independence of the Belgian Congo in 1960. From 1960 to 1966, the country was often known as Congo-Léopoldville (after its capital) in order to distinguish it from its north-western neighbour, also called the Republic of the Congo or Congo-Brazzaville. With the renaming of Léopoldville as Kinshasa on 1\\\"\", \"score\": 22.046875}]}\n\n[[ ## thought_1 ## ]]\nThe search results indicate that the country formerly known as Zaire gained independence in 1960. However, to provide a more precise and definitive answer, I should further refine the query to directly ask for the year of independence.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"What year did the country formerly known as Zaire gain independence?\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"What year did the country formerly known as Zaire gain independence?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Republic of the Congo (Léopoldville)\\\" | \\\"it was renamed the \\\"\\\"Democratic Republic of the Congo\\\"\\\", and in 1971 it was changed again to \\\"\\\"Republic of Zaïre\\\"\\\". Shortly after independence, the provinces of Katanga (with Moise Tshombe) and South Kasai engaged in secessionist struggles against the new leadership. Subsequent events led to a crisis between President Kasa-Vubu and Prime Minister Lumumba. On 5 September 1960, Kasavubu dismissed Lumumba from office. Lumumba declared Kasa-Vubu's action \\\"\\\"unconstitutional\\\"\\\" and a crisis between the two leaders developed. Lumumba had previously appointed Joseph Mobutu chief of staff of the new Congolese army, the Armee Nationale Congolaise (ANC). Taking advantage of the leadership\\\"\", \"score\": 21.703125}, {\"long_text\": \"\\\"Republic of the Congo (Léopoldville)\\\" | \\\"name changed to Zaire. The period between 1960 and 1965 is referred to as the First Congolese Republic, and the current Democratic Republic of the Congo is the Third Republic. Unrest and rebellion continued to plague the government until 1965, when Lieutenant General Joseph Désiré Mobutu, commander-in-chief of the national army, seized control of the country. Mobutu changed the country's name to the Republic of Zaire in 1971 and remained its president until 1997. Conditions in the Congo improved following the Belgian government's takeover in 1908 of the Congo Free State, which had been a personal possession of the Belgian\\\"\", \"score\": 21.625}, {\"long_text\": \"\\\"Congo River\\\" | \\\"and \\\"\\\"Congo\\\"\\\" is the preferred English name in 19th-century literature, although references to \\\"\\\"Zahir\\\"\\\" or \\\"\\\"Zaire\\\"\\\" as the name used by the inhabitants remained common. The Democratic Republic of the Congo and the Republic of the Congo are named after it, as was the previous Republic of the Congo which had gained independence in 1960 from the Belgian Congo. The Republic of Zaire during 1971–1997 was also named after the river, after its name in French and Portuguese. The Congo's drainage basin covers , an area larger than India. The Congo's discharge at its mouth ranges from , with an\\\"\", \"score\": 21.484375}, {\"long_text\": \"\\\"Guides de la République Démocratique du Congo\\\" | \\\"was not founded until 1937 in Elisabethville. In 1950, the country was visited by Olave Baden-Powell, who met Scouts and Guides in Leopoldville. After the country's independence in 1960, the World Association of Girl Guides and Girl Scouts assisted the Guiding association in its membership application. During the 21st World Conference of WAGGGS in June 1972, the \\\"\\\"Association des Guides du Zaire\\\"\\\" (\\\"\\\"Guides Association of Zaire\\\"\\\") was accepted as an associated member. Only five months later, all youth organizations were banned by the government. Guiding was restarted in 1991 under the name \\\"\\\"Association des Guides du Congo\\\"\\\" and rebuild with\\\"\", \"score\": 21.421875}, {\"long_text\": \"\\\"Democratic Republic of the Congo\\\" | \\\"allowed national infrastructure such as roads to deteriorate to as little as one-quarter of what had existed in 1960. Zaire became a kleptocracy as Mobutu and his associates embezzled government funds. In a campaign to identify himself with African nationalism, starting on 1 June 1966, Mobutu renamed the nation's cities: Léopoldville became Kinshasa [the country was now Democratic Republic of The Congo – Kinshasa], Stanleyville became Kisangani, Elisabethville became Lubumbashi, and Coquilhatville became Mbandaka. This renaming campaign was completed in the 1970s. In 1971, Mobutu renamed the country the \\\"\\\"Republic of Zaire\\\"\\\", its fourth name change in 11 years and\\\"\", \"score\": 21.265625}]}\n\n[[ ## thought_2 ## ]]\nFrom the passages, it seems clear that the country formerly known as Zaire gained independence in 1960. However, to ensure accuracy, I will perform one more refined search specifically asking for the year of independence.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"Year of independence for the country formerly known as Zaire\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"Year of independence for the country formerly known as Zaire\", \"passages_this_hop\": [{\"long_text\": \"\\\"Zaire Province\\\" | \\\"a vassal state of the Kingdom of Portugal. In 1914, the Kongo monarchy was abolished after Portuguese suppression of several revolts. From 1885, Portuguese Angola included the district of Congo, which was split in 1919 into the districts of Cabinda and Zaire, respectively north and south of the Congo/Zaire River. During the 1961–1974 Angolan War of Independence, a large fraction of the Bakongo fled to the Republic of Zaire. Many of these refugees and their offspring returned after the Alvor Agreement recognised Angolan independence. Historical and cultural monuments include: M'Banza Congo (formerly São Salvador do Congo) is the provincial capital.\\\"\", \"score\": 21.90625}, {\"long_text\": \"\\\"Shaba I\\\" | \\\"independence during the Year of Africa. The State of Katanga, led by Moise Tshombe soon announced secession, supported by Belgian business interests, the Belgian military, and indirectly by France. The country was soon plunged into crisis after the assassination of Pan-Africanist leader Patrice Lumumba. After six years of war, power was seized by Joseph Mobutu with help from the U.S. Central Intelligence Agency (CIA) and support from the Western Bloc. Mobutu changed the name of Katanga Province to Shaba Province, after the Swahili word for copper. Mobutu's Zaire maintained good relations with Western powers. Belgium had the largest investments in\\\"\", \"score\": 20.859375}, {\"long_text\": \"Zaire | \\\"60 km upriver from Kinshasa), made public in May 1967. Nationalism, revolution, and authenticity were identified as the major themes of what came to be known as \\\"\\\"Mobutism\\\"\\\". Nationalism implied the achievement of economic and political independence. Revolution, described as a \\\"\\\"truly national revolution, essentially pragmatic\\\"\\\", meant \\\"\\\"the repudiation of both capitalism and communism\\\"\\\". Thus, \\\"\\\"neither right nor left\\\"\\\" became one of the legitimising slogans of the regime, along with \\\"\\\"authenticity\\\"\\\". The concept of authenticity was derived from the MPR's professed doctrine of \\\"\\\"authentic Zairian nationalism and condemnation of regionalism and tribalism\\\"\\\". Mobutu defined it as being conscious of one's\\\"\", \"score\": 20.765625}, {\"long_text\": \"\\\"Stairs Expedition to Katanga\\\" | \\\"by the Belgian government in 1908 in response to the international outcry over the brutality of Leopold's Congo Free State, and were merged in 1910 as the Belgian Congo, but the legacy of the previous separation was a tendency of Katanga to secede. The Belgian Congo administration with its policy of direct rule did nothing to prepare the country for independence in 1960 and within a few years \\\"\\\"Congo\\\"\\\" and \\\"\\\"Katanga\\\"\\\" became such bywords for strife and chaos that the Mobutu regime, in a futile effort to improve its image, changed the names to \\\"\\\"Zaire\\\"\\\" and \\\"\\\"Shaba\\\"\\\" respectively (since reverted).\\\"\", \"score\": 20.75}, {\"long_text\": \"\\\"Constitution of Zaire\\\" | \\\"Constitution of Zaire The Constitution of Zaire (), was promulgated on 15 August 1974, revised on 15 February 1978, and amended on 5 July 1990. Defining state power as an extension of the individual powers of Mobutu Sese Seko, the 1974 constitution codified Zaire as a one-party dictatorship and enshrined the status of Mobutism as the state ideology, together with the dominant position of the ruling Popular Movement of the Revolution (MPR) party. The 1974 constitution was the third in the Congo's post-independence history, replacing earlier constitutions adopted to replace the original basic law of 1960, adopted in 1964 and\\\"\", \"score\": 20.75}]}\n\n[[ ## thought_3 ## ]]\nBased on the previous searches, it appears that the country formerly known as Zaire gained independence in 1960. To finalize this, I will ask for the year of independence directly.\n\n[[ ## tool_name_3 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_3 ## ]]\n{\"search_query\": \"Year of independence for the country formerly known as Zaire\"}\n\n[[ ## observation_3 ## ]]\n{\"search_query\": \"Year of independence for the country formerly known as Zaire\", \"passages_this_hop\": [{\"long_text\": \"\\\"Belgian Congo\\\" | \\\"of shares in the big mining companies that had been held directly by the colonial state. In 1970, on the occasion of the tenth anniversary of independence, King Baudouin paid an official state visit to the Congo. Mobutu's régime became more radical during the 1970s. The \\\"\\\"Mouvement populaire de la Révolution\\\"\\\" (MPR), of which Mobutu was the \\\"\\\"président-fondateur\\\"\\\", firmly established one-party rule. Political repression increased considerably. Mobutu renamed the Congo as the republic of Zaïre. The so-called \\\"\\\"Zaïrisation\\\"\\\" of the country in the mid-1970s led to an exodus of foreign workers and economic disaster. In the 1980s the Mobutu regime\\\"\", \"score\": 20.703125}, {\"long_text\": \"\\\"Congolese nationalism (Democratic Republic of the Congo)\\\" | \\\"the region were divided into ethnic and tribal groups. Congolese nationalism first erupted in 1959 during riots against Belgian colonial rule. Attempts to solidify the country quickly collapsed after independence when Mobutu Sese Seko rebelled against the government of Patrice Lumumba in 1960. After several years in power Mobutu renamed the country Zaire in 1971 and sought to define and forge a united Zairian nation through his policy of authenticity, that included efforts to purge Christianity from Zaire - for it was deemed as colonial. There have been critics of Zairian/Congolese nationalism who believe that it was a manipulative ploy\\\"\", \"score\": 20.296875}, {\"long_text\": \"\\\"History of the Democratic Republic of the Congo\\\" | \\\"people. After an uprising by the Congolese people, Belgium surrendered to the independence of the Congo in 1960. However, the Congo remained unstable because tribal leaders had more power than the central government. Prime Minister Patrice Lumumba tried to restore order with the aid of the Soviet Union as part of the Cold War, causing the United States to support a coup led by Colonel Joseph Mobutu in 1965. Mobutu quickly seized complete power of the Congo and renamed the country Zaire. He sought to Africanize the country, changing his own name to Mobutu Sese Seko, and demanded that African\\\"\", \"score\": 20.28125}, {\"long_text\": \"\\\"Leopold II of Belgium\\\" | \\\"wrongdoing during his time as ruler of his private colony. The entire archive of the Congo Free State was burned and he told his aide that even though the Congo had been taken from him, \\\"\\\"they have no right to know what I did there\\\"\\\". After gaining its independence in the mid-20th century, it was renamed three times: first, as the Republic of the Congo; second as Zaire, the name it retained under Mobutu Sese Seko's dictatorship; and third as the Democratic Republic of the Congo, or DRC. (This is not to be confused with the neighboring Republic of the\\\"\", \"score\": 20.15625}, {\"long_text\": \"\\\"Postage stamps and postal history of the Democratic Republic of the Congo\\\" | \\\"Postage stamps and postal history of the Democratic Republic of the Congo This is a survey of the postage stamps and postal history of the Democratic Republic of the Congo, formerly Zaire and the Belgian Congo. The Congo Free State was established in 1885 as a personal initiative of Leopold II of Belgium, which was formally annexed, becoming the Belgian Congo, in 1907. Both entities issued their own stamps. In 1960, the Belgian Congo became independent as the Republic of the Congo. On 1 August 1964, the state's official name was changed to the Democratic Republic of the Congo. In\\\"\", \"score\": 20.078125}]}\n\n[[ ## thought_4 ## ]]\nThe passages indicate that the country formerly known as Zaire gained independence in 1960. I will now directly ask for the year of independence to confirm this.\n\n[[ ## tool_name_4 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_4 ## ]]\n{\"search_query\": \"Year of independence for the country formerly known as Zaire\"}\n\n[[ ## observation_4 ## ]]\n{\"search_query\": \"Year of independence for the country formerly known as Zaire\", \"passages_this_hop\": [{\"long_text\": \"\\\"History of Angola\\\" | \\\"the country. With the support of the United States, Zaïre and South Africa intervened militarily in favour of the FNLA and UNITA with the intention of taking Luanda before the declaration of independence. In response, Cuba intervened in favor of the MPLA. In the meantime the South Africans and UNITA had come as close as 200 km to the south of the capital, the FNLA and Zairean forces as far as Kifangondo, 30 km to the east. With Cuban support, the MPLA held Luanda and declared independence on November 11, 1975, the day the Portuguese left the country. Agostinho Neto\\\"\", \"score\": 20.0625}, {\"long_text\": \"Zaire | \\\"the head of the Alliance of Democratic Forces for the Liberation of Congo (AFDL) militia, led a popular rebellion against Mobutu. With rebel forces successfully making gains beyond the east, Mobutu fled the country, leaving Kabila's forces in charge as the country restored its name to the Democratic Republic of the Congo the following year. Mobutu died within four months after he fled into exile in Morocco. The state's name, \\\"\\\"Zaire\\\"\\\" was derived from the name of the Congo River, sometimes called \\\"\\\"Zaire\\\"\\\" in Portuguese, adapted from the Kongo word \\\"\\\"nzere\\\"\\\" or \\\"\\\"nzadi\\\"\\\" (\\\"\\\"river that swallows all rivers\\\"\\\"). \\\"\\\"Congo\\\"\\\" seems\\\"\", \"score\": 20.03125}, {\"long_text\": \"\\\"Catholic Church in the Democratic Republic of the Congo\\\" | \\\"sharing the same purpose. As Joseph Cardinal Malula, who was for many years the head of the church in Zaire, put it, \\\"\\\"For our people, the Church was the State, and the State was the Church.\\\"\\\" When independence came in 1960, the bill for church collaboration came due; Catholic personnel were the frequent subjects of attacks by angry Congolese throughout the country, while Protestant missionaries and Kimbanguist personnel were, outside of Bas-Zaïre Region, largely spared. The church's reversal of its role in relation to the state since independence has been striking. Formerly a reliable ally, it has increasingly become the\\\"\", \"score\": 20.03125}, {\"long_text\": \"\\\"Angolan War of Independence\\\" | \\\"Fino is appointed commander of the 3rd Military Region. In the first year of the war 20,000 to 30,000 Angolan civilians were killed by Portuguese forces and between 400,000 and 500,000 refugees went to Zaïre. UPA militants joined pro-independence refugees and continued to launch attacks from across the border in Zaire, creating more refugees and terror among local communities. A UPA patrol took 21 MPLA militants prisoners and then executed them on 9 October 1961 in the Ferreira incident, sparking further violence between the two sides. Holden Roberto merged UPA with the Democratic Party of Angola (PDA) to form the\\\"\", \"score\": 19.96875}, {\"long_text\": \"\\\"History of the Democratic Republic of the Congo\\\" | \\\"President Mobutu renamed the country the Republic of Zaire in 1971 and required citizens to adopt African names and drop their French-language ones. The name comes from Portuguese, adapted from the Kongo word nzere or nzadi (\\\"\\\"river that swallows all rivers\\\"\\\"). Among other changes, Leopoldville became Kinshasa and Katanga Shaba. Relative peace and stability prevailed until 1977 and 1978 when Katangan Front for Congolese National Liberation rebels, based in Angola, launched the Shaba I and II invasions into the southeast Shaba region. These rebels were driven out with the aid of French and Belgian paratroopers plus Moroccan troops. An Inter-African\\\"\", \"score\": 19.953125}]}",
+        "reasoning": "After multiple searches and refining the queries, the information consistently points to the year 1960 as the year when the country formerly known as Zaire gained independence.",
+        "answer": "1960"
+      },
+      {
+        "question": "In which year did the publisher of Roald Dahl's Guide to Railway Safety cease to exist?",
+        "answer": "2001"
+      },
+      {
+        "question": "When did the institution that awards the John Price Wetherill Medal open?",
+        "answer": "1824"
+      },
+      {
+        "question": "What is the name of the airport in the city where the torch event was held in Vietnam?",
+        "answer": "Tân Sơn Nhất International Airport"
+      },
+      {
+        "question": "What is the record label for the person who sang Beauty and the Beast with Celine Dion?",
+        "answer": "Capitol Records"
+      },
+      {
+        "question": "Who published the work that Bosko is present in?",
+        "answer": "Warner Bros."
+      },
+      {
+        "question": "What is the family of the current leader of Saudi Arabia?",
+        "answer": "Al Saud"
+      },
+      {
+        "question": "Who disarmed the combined body of all Estonia military?",
+        "answer": "the Red Army"
+      },
+      {
+        "question": "What is the enrollment at the university where Beneficence is located?",
+        "answer": "22,513 students"
+      },
+      {
+        "question": "When did the person who admitted that Apple was late to the party with writeable CD technology die?",
+        "answer": "2011"
+      },
+      {
+        "question": "In which county is the White Castle that Harold and Kumar visit?",
+        "answer": "Camden County"
+      },
+      {
+        "question": "Who produced the series A-Haunting We Will Go was part of?",
+        "answer": "Warner Bros."
+      },
+      {
+        "question": "Where was the person who wrote the song my kinda party by Jason Aldean born?",
+        "answer": "Jefferson"
+      },
+      {
+        "question": "When did Denmark join the union that has completely surrounded Switzerland and Liechtenstein since 1995?",
+        "answer": "1972"
+      },
+      {
+        "question": "When did the sports team that Junior Félix played for win their last World Series?",
+        "answer": "1993"
+      },
+      {
+        "question": "What year saw the creation of the region where the county of Hertfordshire is located?",
+        "answer": "1994"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

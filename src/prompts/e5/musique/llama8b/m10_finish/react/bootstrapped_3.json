@@ -1,0 +1,238 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What was the record label of the songwriter of Up on Cripple Creek?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What was the record label of the songwriter of Up on Cripple Creek?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What was the record label of the songwriter of Up on Cripple Creek?\", \"passages_this_hop\": [{\"long_text\": \"Up on Cripple Creek\\n' album Recovering with Friends 2018.\", \"score\": 0.7958984375}, {\"long_text\": \"Spike Jones\\nbased on the movie. According to David Wild's review in Rolling Stone Magazine, Elvis Costello's 1989 Album \\\"Spike\\\" was named partly in tribute to Jones.\\nSyndicated radio personality Dr. Demento regularly features Jones' music on his program of comedy and novelty tracks. Jones is mentioned in The Band's song, \\\"Up on Cripple Creek\\\". (The song's protagonist's paramour states of Jones: \\\"I can't take the way he sings, but I love to hear him talk.\\\") Novelist\", \"score\": 0.80078125}, {\"long_text\": \"Cripple Creek\\na traditional folk song\\n- \\\"Up on Cripple Creek\\\" by The Band on their self-titled album \\\"The Band\\\"\\n- \\\"Cripple Creek Ferry\\\" by Neil Young on the album \\\"After the Gold Rush\\\"\\n- \\\"Cripple Creek\\\" by Skip Spence on the album \\\"Oar\\\"\\nFilm.\\n- \\\"Cripple Creek\\\" (film), a 1952 Western film directed by Ray Nazarro\", \"score\": 0.80615234375}, {\"long_text\": \"Bobbie Sue\\nBobbie Sue is the seventh album by The Oak Ridge Boys. It was released on February 10, 1982. Its title song was a #1 country chart hit (on April 3, 1982) and a #12 hit on the Hot 100 singles chart.\\nThe album also featured cover versions of two songs, the 1959 hit \\\"So Fine\\\", a song originally by The Fiestas, and \\\"Up on Cripple Creek\\\", originally by The Band.\\nTrack listing.\\n1. \\\"\", \"score\": 0.8076171875}, {\"long_text\": \"Up on Cripple Creek\\n\\\"Up on Cripple Creek\\\" is the fifth song on The Band's eponymous second album, \\\"The Band\\\". It was released as an (edited) single on Capitol 2635 in November 1969 and reached #25 on the \\\"Billboard\\\" Hot 100. \\\"Up on Cripple Creek\\\" was written by Band guitarist Robbie Robertson, with drummer Levon Helm singing lead vocal.\\nA 1976 live performance of \\\"Up on Cripple Creek\\\" appears in the Band's concert film \\\"The Last Waltz\", \"score\": 0.82373046875}]}",
+        "next_thought": "The passages suggest that the song \"Up on Cripple Creek\" is by The Band, but I need to find the songwriter and their associated record label.",
+        "next_tool_name": "AdvancedSearch",
+        "next_tool_args": {
+          "search_query": "Who is the songwriter of Up on Cripple Creek and what is their record label?",
+          "trajectory_id": "Up on Cripple Creek"
+        }
+      },
+      {
+        "augmented": true,
+        "question": "In what year did France host the finals of the competition featuring Samoa for going on 30 years?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"In what year did France host the finals of the competition featuring Samoa for going on 30 years?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"In what year did France host the finals of the competition featuring Samoa for going on 30 years?\", \"passages_this_hop\": [{\"long_text\": \"History of the Rugby World Cup\\nthe Quarter Finals.\\nThe 2011 tournament was hosted by New Zealand: it saw a repeat of the 1987 World Cup finale standings, as Australia took on Wales in the Bronze final and won 21-18, while New Zealand, by defeating France 8-7 in the final, became the first nation to win on home soil twice. This tournament was notable for the fact that France lost twice in the pool stages, to NZ and Tonga, and yet somehow managed to progress all the way to the Final to\", \"score\": 0.8056640625}, {\"long_text\": \"Rugby football\\nfirst held in New Zealand and Australia in 1987, occurs every four years. It is an international tournament organized by World Rugby. The event is played in the union format and features the top 20 teams from around the world. The current world champions are New Zealand, who won the 2015 Rugby World Cup, which was played in England.\\nThe Rugby League World Cup was the first World Cup of either of the Rugby codes and was first held in France in 1954, and as of 2013 occurs on a 4-year\", \"score\": 0.806640625}, {\"long_text\": \"Rugby union in France\\n, and has been a runner-up on three occasions. France also hosted the 2007 Rugby World Cup.\\nFrance is the world's most populous country in which rugby union has a large and dedicated following, with over 65 million people. It is more than the populations of other popular rugby nations such as New Zealand, Australia, Tonga, Samoa, Fiji, Ireland, Scotland, and Wales combined.\\nGoverning body.\\nF\u00e9d\u00e9ration Fran\u00e7aise de Rugby (FFR) is the rugby union governing body in France;\", \"score\": 0.8076171875}, {\"long_text\": \"Sport in France\\nFrance 2 and Canal+ and the World Cup final between New Zealand and France gathered 15.4 million viewers on TF1, the highest audience on French TV since the start of the year.\\nThe national side is one of the tier 1 national teams. It competes annually in the Six Nations Championship, and won it outright 16 times. France has been to every Rugby World Cup since its inception in 1987, and has been a runner-up on three occasions, most recently in 2011. France hosted the 2007 Rugby World Cup\", \"score\": 0.8115234375}, {\"long_text\": \"List of Rugby World Cup finals\\nThe Rugby World Cup is an international rugby union competition established in 1987. It is contested by the men's national teams of the member unions of the sport's governing body, World Rugby, and takes place every four years. The winners of the first final were New Zealand, who beat France 29\u20139. They are also the current champions, beating Australia 34\u201317 in the 2015 final in London. The next Rugby World Cup in 2019, will be hosted in Japan.\\nThe Rugby\", \"score\": 0.81689453125}]}",
+        "next_thought": "Now, let's look for a specific year when France hosted the finals of the competition featuring Samoa.",
+        "next_tool_name": "AdvancedSearch",
+        "next_tool_args": {
+          "search_query": "What year did France host the finals of the Rugby World Cup featuring Samoa?",
+          "trajectory_id": "the finals of the competition featuring Samoa for going on 30 years"
+        }
+      },
+      {
+        "question": "When was the season of Greys Anatomy when Derek died filmed?",
+        "answer": "filming for the eleventh season would begin on July 25, 2014"
+      },
+      {
+        "question": "When was the publisher of Crux launched?",
+        "answer": "1998"
+      },
+      {
+        "question": "Who is the employer of the person who said the greatest good for the greatest number?",
+        "answer": "New York University"
+      },
+      {
+        "question": "Who produced the series A-Haunting We Will Go was part of?",
+        "answer": "Warner Bros."
+      },
+      {
+        "question": "When did the sports team having Ger\u00f3nimo Berroa win their last world series?",
+        "answer": "1993"
+      },
+      {
+        "question": "Where did the author of Ressurrei\u00e7\u00e3o die?",
+        "answer": "Rio de Janeiro"
+      },
+      {
+        "question": "Who was the first torchbearer in the place where Manuel John Johnson was born?",
+        "answer": "Leong Hong Man"
+      },
+      {
+        "question": "The city where WNZK is located is in what county?",
+        "answer": "Wayne County"
+      },
+      {
+        "question": "What is the record label for the person who sang Beauty and the Beast with Celine Dion?",
+        "answer": "Capitol Records"
+      },
+      {
+        "question": "what language is spoken by the actress who decided not to participate in April 15?",
+        "answer": "Hindi"
+      },
+      {
+        "question": "Who owns the studio which produced Scooby-Doo and the Ghoul School?",
+        "answer": "Warner Bros."
+      },
+      {
+        "question": "When was the baseball team winning the world series in 2015 baseball created?",
+        "answer": "1969"
+      },
+      {
+        "question": "How did the Japanese beat the country whose government disagreed on the language used to describe the torch route?",
+        "answer": "First Sino-Japanese"
+      },
+      {
+        "question": "When was the inception of the record label which released W?",
+        "answer": "2001"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!<\/desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.<\/desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What was the record label of the songwriter of Up on Cripple Creek?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What was the record label of the songwriter of Up on Cripple Creek?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What was the record label of the songwriter of Up on Cripple Creek?\", \"passages_this_hop\": [{\"long_text\": \"Up on Cripple Creek\\n' album Recovering with Friends 2018.\", \"score\": 0.7958984375}, {\"long_text\": \"Spike Jones\\nbased on the movie. According to David Wild's review in Rolling Stone Magazine, Elvis Costello's 1989 Album \\\"Spike\\\" was named partly in tribute to Jones.\\nSyndicated radio personality Dr. Demento regularly features Jones' music on his program of comedy and novelty tracks. Jones is mentioned in The Band's song, \\\"Up on Cripple Creek\\\". (The song's protagonist's paramour states of Jones: \\\"I can't take the way he sings, but I love to hear him talk.\\\") Novelist\", \"score\": 0.80078125}, {\"long_text\": \"Cripple Creek\\na traditional folk song\\n- \\\"Up on Cripple Creek\\\" by The Band on their self-titled album \\\"The Band\\\"\\n- \\\"Cripple Creek Ferry\\\" by Neil Young on the album \\\"After the Gold Rush\\\"\\n- \\\"Cripple Creek\\\" by Skip Spence on the album \\\"Oar\\\"\\nFilm.\\n- \\\"Cripple Creek\\\" (film), a 1952 Western film directed by Ray Nazarro\", \"score\": 0.80615234375}, {\"long_text\": \"Bobbie Sue\\nBobbie Sue is the seventh album by The Oak Ridge Boys. It was released on February 10, 1982. Its title song was a #1 country chart hit (on April 3, 1982) and a #12 hit on the Hot 100 singles chart.\\nThe album also featured cover versions of two songs, the 1959 hit \\\"So Fine\\\", a song originally by The Fiestas, and \\\"Up on Cripple Creek\\\", originally by The Band.\\nTrack listing.\\n1. \\\"\", \"score\": 0.8076171875}, {\"long_text\": \"Up on Cripple Creek\\n\\\"Up on Cripple Creek\\\" is the fifth song on The Band's eponymous second album, \\\"The Band\\\". It was released as an (edited) single on Capitol 2635 in November 1969 and reached #25 on the \\\"Billboard\\\" Hot 100. \\\"Up on Cripple Creek\\\" was written by Band guitarist Robbie Robertson, with drummer Levon Helm singing lead vocal.\\nA 1976 live performance of \\\"Up on Cripple Creek\\\" appears in the Band's concert film \\\"The Last Waltz\", \"score\": 0.82373046875}]}\n\n[[ ## thought_0 ## ]]\nThe passages suggest that the song \"Up on Cripple Creek\" is by The Band, but I need to find the songwriter and their associated record label.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Who is the songwriter of Up on Cripple Creek and what is their record label?\", \"trajectory_id\": \"Up on Cripple Creek\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Who is the songwriter of Up on Cripple Creek and what is their record label?\", \"passages_this_hop\": [{\"long_text\": \"Up on Cripple Creek\\nThe clavinet, especially in tandem with a wah-wah pedal, was a sound that became famous in the early to mid-1970s, especially in funk music.\\nThe Band performed the song on the Ed Sullivan Show in November 1969.\\nLyrics and music.\\nDrawing upon the Band's musical roots\u2014the American South, American rock and roll, and bluegrass\/country\u2014the song is sung from the point of view of a truck driver who goes to Lake Charles, Louisiana, to stay with a local girl\", \"score\": 0.80224609375}, {\"long_text\": \"Gomez (band)\\nTennessee, the Jazzfest in New Orleans and Sasquatch Festival in George, WA.\\nA collection of A-side and B-sides and rarities titled \\\"Five Men in a Hut\\\" was released on 17 October 2006. The two-disc album consists of released and unreleased tracks recorded under the Hut\/Virgin label from 1998-2004. A DVD with music videos and interviews from their time with Hut was also released.\\nIn 2007, Gomez recorded a cover of The Band's hit \\\"Up On Cripple Creek\", \"score\": 0.80224609375}, {\"long_text\": \"Up the Creek (song)\\n\\\"Up the Creek\\\" is a song by American rock band Cheap Trick, released as a single in 1984 from the soundtrack of the 1984 film \\\"Up the Creek\\\". The song was written by Rick Nielsen and Randy Bishop, and produced by Spencer Proffer.\\nBackground.\\nYears after the its release, both Nielsen and drummer Bun E. Carlos have been critical of the song. Nielsen told John Krewson of \\\"The A.V. Club\\\" in 1997: \\\"Now that was a\", \"score\": 0.8037109375}, {\"long_text\": \"Up on the Ridge (song)\\n\\\"Up on the Ridge\\\" is a song co-written and recorded by American country music artist Dierks Bentley. It was released on April 12, 2010 as the lead-off single and title track from his album of the same name. The song was written by Bentley and Angelo Petraglia.\\nContent.\\nThe song is an uptempo bluegrass tune in which the narrator encourages his lover to leave the city behind with him for the night.\\nCritical reception.\\nSam\", \"score\": 0.80419921875}, {\"long_text\": \"ATO Records\\nATO Records (or According to Our Records) is an American independent record label based in New York City. The label was founded in 2000 by Dave Matthews and manager Coran Capshaw, and is run by Jon Salter.\\nATO's roster includes Alabama Shakes, Rodrigo Y Gabriela, Brandi Carlile, Joseph, King Gizzard and the Lizard Wizard, Hurray for the Riff Raff, Benjamin Booker, Lee Ann Womack, SOJA, Okkervil River, Blind Pilot, Old 97's, Drive-By Truckers, Primus\", \"score\": 0.8056640625}]}\n\n[[ ## thought_1 ## ]]\nI will search for information about the songwriter of Up on Cripple Creek and their associated record label.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"What is the record label of the songwriter of Up on Cripple Creek?\", \"trajectory_id\": \"Up on Cripple Creek\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"What is the record label of the songwriter of Up on Cripple Creek?\", \"passages_this_hop\": [{\"long_text\": \"Singer-songwriter\\n.\", \"score\": 0.78564453125}, {\"long_text\": \"Up Around the Bend\\n\\\"Up Around the Bend\\\" is a song recorded by the American band Creedence Clearwater Revival, and written by the band's lead singer, guitarist, and songwriter John Fogerty. The song was composed and recorded only a few days prior to the band's April 1970 European tour and was included on the album \\\"Cosmo's Factory\\\". Released as a single, with \\\"Run Through the Jungle\\\" on the flipside, the double-sided single climbed to number four on the \\\"Billboard\\\"\", \"score\": 0.7861328125}, {\"long_text\": \"John Denver\\nHenry John Deutschendorf Jr. (December 31, 1943\u00a0\u2013 October 12, 1997), known professionally as John Denver, was an American singer-songwriter, record producer, actor, activist, and humanitarian, whose greatest commercial success was as a solo singer. After traveling and living in numerous locations while growing up in his military family, Denver began his music career with folk music groups during the late 1960s. Starting in the 1970s, he was one of the most popular acoustic artists of the decade and\", \"score\": 0.78662109375}, {\"long_text\": \"Up! (album)\\nUp! is the fourth studio album by Canadian singer Shania Twain. It was released on November 19, 2002, by Mercury Nashville. Three versions of the album were released: a pop version (red disc), a country version (green disc), and a version in the style of Indian film music (blue disc); all three discs contain exactly the same track listing and feature distinctly identifiable picture labels (for example, Twain sports a cowboy hat on the green country disc\", \"score\": 0.78662109375}, {\"long_text\": \"Neil Diamond\\nNeil Leslie Diamond (born January 24, 1941) is an American singer-songwriter, musician and actor. With 38 songs in the Top 10 on the \\\"Billboard\\\" Adult Contemporary charts, Diamond has sold more than 100 million records worldwide, making him one of the best-selling musicians of all time. On the Hot 100 and Adult Contemporary charts, he has had ten No.\u00a01 singles: \\\"Cracklin' Rosie\\\", \\\"Song Sung Blue\\\", \\\"Longfellow Serenade\\\", \\\"\", \"score\": 0.78662109375}]}\n\n[[ ## thought_2 ## ]]\nThe passage mentioning Neil Diamond seems relevant, as he is a songwriter, but I need to find out if he wrote \"Up on Cripple Creek\".\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"Did Neil Diamond write Up on Cripple Creek?\", \"trajectory_id\": \"Up on Cripple Creek\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"Did Neil Diamond write Up on Cripple Creek?\", \"passages_this_hop\": [{\"long_text\": \"Robbie Robertson\\nCripple Creek\\\" peaked at #25 in late 1969 in the United States, and would be their only Top 30 hit there. \\\"Rag Mama Rag\\\" reached #16 in the UK in April 1970, the highest chart position of any single by the group in that country. \\\"Whispering Pines\\\", co-written by Richard Manuel, was released as a single in France in 1970, and would become the title of a 2009 book about Canadian contributions to the Americana music genre by Jason Schneider. On November 2\", \"score\": 0.7978515625}, {\"long_text\": \"After the Gold Rush\\nthe original image included Young's friend and CSNY bandmate Graham Nash.\\nSongs on the album were inspired by the Dean Stockwell-Herb Bermann screenplay for the unmade film \\\"After the Gold Rush\\\". Young had read the screenplay and asked Stockwell if he could produce the soundtrack. Tracks that Young recalls as being written specifically for the film are \\\"After the Gold Rush\\\" and \\\"Cripple Creek Ferry.\\\" The script has since been lost, though has been described as \\\"sort of an end-of-the\", \"score\": 0.79833984375}, {\"long_text\": \"Robbie Robertson\\nmember of the Band, and has been inducted to Canada's Walk of Fame, both with the Band and on his own. He is ranked 59th in \\\"Rolling Stone\\\" magazine\u2019s list of the 100 greatest guitarists. As a songwriter, Robertson is credited for writing \\\"The Weight\\\", \\\"The Night They Drove Old Dixie Down\\\", \\\"Up on Cripple Creek\\\", \\\"Broken Arrow\\\", \\\"Somewhere Down the Crazy River\\\", and many others. He has been inducted into the Canadian Songwriters Hall\", \"score\": 0.80078125}, {\"long_text\": \"Sligo Creek\\nin the Takoma Park area. This Scots-influenced guitar tune was later featured as the theme song of \\\"The National Parks\\\", a PBS miniseries directed by Ken Burns.\\n\\\"Sligo Creek\\\" is an Irish traditional reel composed by an American banjo, mandolin, fiddle and guitar player, Danny Noveck, and named after the creek he was living near at the time he composed the melody.\\nThe creek inspired Katherine Paterson to write the Newbery Medal award-winning book Bridge to Terabithia.\\nSee also.\", \"score\": 0.802734375}, {\"long_text\": \"Neil Diamond\\n-written and jointly composed with his guitarist, Richard Bennett, was released as a single from \\\"You Don't Bring Me Flowers\\\", Diamond's album from the previous year.\\nIn 1979, Diamond collapsed on stage in San Francisco and was taken to the hospital, where he endured a 12-hour operation to remove what turned out to be a tumor on his spine.\\\"Juke Magazine\\\", June 9, 1983. He said he had been losing feeling in his right leg \\\"for a number of years but ignored\", \"score\": 0.8046875}]}\n\n[[ ## thought_3 ## ]]\nThe passage mentioning Robbie Robertson seems relevant, as he is credited with writing Up on Cripple Creek.\n\n[[ ## tool_name_3 ## ]]\nfinish\n\n[[ ## tool_args_3 ## ]]\n{}\n\n[[ ## observation_3 ## ]]\nCompleted.",
+        "reasoning": "The songwriter of \"Up on Cripple Creek\" is Robbie Robertson, a member of the Band. To find the record label associated with him, I searched for relevant information about his work. Based on the search results, I found that Robbie Robertson is credited with writing \"Up on Cripple Creek\", and he is a member of the Band, which was signed to Capitol Records.",
+        "answer": "Capitol Records"
+      },
+      {
+        "augmented": true,
+        "question": "In what year did France host the finals of the competition featuring Samoa for going on 30 years?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"In what year did France host the finals of the competition featuring Samoa for going on 30 years?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"In what year did France host the finals of the competition featuring Samoa for going on 30 years?\", \"passages_this_hop\": [{\"long_text\": \"History of the Rugby World Cup\\nthe Quarter Finals.\\nThe 2011 tournament was hosted by New Zealand: it saw a repeat of the 1987 World Cup finale standings, as Australia took on Wales in the Bronze final and won 21-18, while New Zealand, by defeating France 8-7 in the final, became the first nation to win on home soil twice. This tournament was notable for the fact that France lost twice in the pool stages, to NZ and Tonga, and yet somehow managed to progress all the way to the Final to\", \"score\": 0.8056640625}, {\"long_text\": \"Rugby football\\nfirst held in New Zealand and Australia in 1987, occurs every four years. It is an international tournament organized by World Rugby. The event is played in the union format and features the top 20 teams from around the world. The current world champions are New Zealand, who won the 2015 Rugby World Cup, which was played in England.\\nThe Rugby League World Cup was the first World Cup of either of the Rugby codes and was first held in France in 1954, and as of 2013 occurs on a 4-year\", \"score\": 0.806640625}, {\"long_text\": \"Rugby union in France\\n, and has been a runner-up on three occasions. France also hosted the 2007 Rugby World Cup.\\nFrance is the world's most populous country in which rugby union has a large and dedicated following, with over 65 million people. It is more than the populations of other popular rugby nations such as New Zealand, Australia, Tonga, Samoa, Fiji, Ireland, Scotland, and Wales combined.\\nGoverning body.\\nF\u00e9d\u00e9ration Fran\u00e7aise de Rugby (FFR) is the rugby union governing body in France;\", \"score\": 0.8076171875}, {\"long_text\": \"Sport in France\\nFrance 2 and Canal+ and the World Cup final between New Zealand and France gathered 15.4 million viewers on TF1, the highest audience on French TV since the start of the year.\\nThe national side is one of the tier 1 national teams. It competes annually in the Six Nations Championship, and won it outright 16 times. France has been to every Rugby World Cup since its inception in 1987, and has been a runner-up on three occasions, most recently in 2011. France hosted the 2007 Rugby World Cup\", \"score\": 0.8115234375}, {\"long_text\": \"List of Rugby World Cup finals\\nThe Rugby World Cup is an international rugby union competition established in 1987. It is contested by the men's national teams of the member unions of the sport's governing body, World Rugby, and takes place every four years. The winners of the first final were New Zealand, who beat France 29\u20139. They are also the current champions, beating Australia 34\u201317 in the 2015 final in London. The next Rugby World Cup in 2019, will be hosted in Japan.\\nThe Rugby\", \"score\": 0.81689453125}]}\n\n[[ ## thought_0 ## ]]\nNow, let's look for a specific year when France hosted the finals of the competition featuring Samoa.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What year did France host the finals of the Rugby World Cup featuring Samoa?\", \"trajectory_id\": \"the finals of the competition featuring Samoa for going on 30 years\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What year did France host the finals of the Rugby World Cup featuring Samoa?\", \"passages_this_hop\": [{\"long_text\": \"2011 Rugby World Cup\\nThe 2011 Rugby World Cup was the seventh Rugby World Cup, a quadrennial international rugby union competition inaugurated in 1987. The International Rugby Board (IRB) selected New Zealand as the host country in preference to Japan and South Africa at a meeting in Dublin on 17 November 2005. The tournament was won by New Zealand, who defeated France 8\u20137 in the final. The defending champions, South Africa, were eliminated by Australia 11\u20139 in the quarter-finals. The result marked the third time that the\", \"score\": 0.84033203125}, {\"long_text\": \"Records and statistics of the Rugby World Cup\\n1987 and 2007, Canada in 1991 and Samoa (then called Western Samoa) in 1991 and 1995.\\n- The 2015 final between Australia and New Zealand is the highest scoring Rugby World Cup final ever.\\n- After the 2015 final, New Zealand became the first team to win the Rugby World Cup three times, and the first team to have successfully defended its title.\\n- Wales have had the most upsets in the Rugby World Cup, having lost to Samoa both in 1991 and 1999, then losing to\", \"score\": 0.84033203125}, {\"long_text\": \"France at the Rugby World Cup\\nstadium. The semifinals and final were held at Stade de France, Saint-Denis.\\nThe following stadiums were used (finals locations emboldened).\\nHosting 2023 Rugby World Cup.\\nFrance will host the Rugby World Cup for the second time in 2023.\\nPortrayal on screen.\\nFrance can be seen playing South Africa in the feature film \\\"Invictus\\\" based on the 1995 Rugby World Cup.\\nBibliography.\\n- Davies, Gerald (2004) \\\"The History of the Rugby World Cup\\\" (Sanctuary\", \"score\": 0.84033203125}, {\"long_text\": \"Rugby World Cup\\nSouth Africa each twice, and England once. New Zealand are the current champions, having defeated Australia in the final of the 2015 tournament in England.\\nThe tournament is administered by World Rugby, the sport's international governing body. Sixteen teams were invited to participate in the inaugural tournament in 1987, however since 1999 twenty teams have taken part. Japan will host the 2019 Rugby World Cup and France will host in 2023.\\nFormat.\\nFormat Qualification.\\nQualifying tournaments were introduced for the second tournament, where eight\", \"score\": 0.8408203125}, {\"long_text\": \"France at the Rugby World Cup\\nThe France national rugby team have competed in all the Rugby World Cup tournaments. They are one of five teams who have played in the final match, having done so three times (1987, 1999, 2011), losing and finishing second in the tournament each time. They have made it to at least the quarter-finals at every tournament.\\nFrance hosted the 2007 tournament, and co-hosted the 1991 competition with Ireland and the United Kingdom. They also hosted some matches\", \"score\": 0.8486328125}]}\n\n[[ ## thought_1 ## ]]\nNow that we have a specific year when France hosted the finals of the Rugby World Cup featuring Samoa, we can determine the answer to the original question.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "To answer the question, we used the AdvancedSearch tool to find relevant documents. We searched for a specific year when France hosted the finals of the competition featuring Samoa. We then analyzed the search results to determine the correct answer.",
+        "answer": "2007"
+      },
+      {
+        "question": "Who is the employer of the person who said the greatest good for the greatest number?",
+        "answer": "New York University"
+      },
+      {
+        "question": "When did the sports team having Ger\u00f3nimo Berroa win their last world series?",
+        "answer": "1993"
+      },
+      {
+        "question": "When was the inception of the record label which released W?",
+        "answer": "2001"
+      },
+      {
+        "question": "When was the publisher of Crux launched?",
+        "answer": "1998"
+      },
+      {
+        "question": "what language is spoken by the actress who decided not to participate in April 15?",
+        "answer": "Hindi"
+      },
+      {
+        "question": "How did the Japanese beat the country whose government disagreed on the language used to describe the torch route?",
+        "answer": "First Sino-Japanese"
+      },
+      {
+        "question": "When was the baseball team winning the world series in 2015 baseball created?",
+        "answer": "1969"
+      },
+      {
+        "question": "The city where WNZK is located is in what county?",
+        "answer": "Wayne County"
+      },
+      {
+        "question": "When was the season of Greys Anatomy when Derek died filmed?",
+        "answer": "filming for the eleventh season would begin on July 25, 2014"
+      },
+      {
+        "question": "Where did the author of Ressurrei\u00e7\u00e3o die?",
+        "answer": "Rio de Janeiro"
+      },
+      {
+        "question": "Who was the first torchbearer in the place where Manuel John Johnson was born?",
+        "answer": "Leong Hong Man"
+      },
+      {
+        "question": "Who owns the studio which produced Scooby-Doo and the Ghoul School?",
+        "answer": "Warner Bros."
+      },
+      {
+        "question": "What is the record label for the person who sang Beauty and the Beast with Celine Dion?",
+        "answer": "Capitol Records"
+      },
+      {
+        "question": "Who produced the series A-Haunting We Will Go was part of?",
+        "answer": "Warner Bros."
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}
