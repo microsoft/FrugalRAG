@@ -1,0 +1,159 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Are Shahrak-E Shomali and Taqiabad, Mazandaran both located in the same country?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Are Shahrak-E Shomali and Taqiabad, Mazandaran both located in the same country?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Are Shahrak-E Shomali and Taqiabad, Mazandaran both located in the same country?\", \"passages_this_hop\": [{\"long_text\": \"Taqiabad, Abarkuh\\nTaqiabad (, also Romanized as Taqīābād; also known as Takīābād) is a village in Esfandar Rural District, Bahman District, Abarkuh County, Yazd Province, Iran. At the 2006 census, its population was 255, in 66 families.\", \"score\": 0.86376953125}, {\"long_text\": \"Taqiabad, Dughayi\\nTaqiabad (, also Romanized as Taqīābād) is a village in Dughayi Rural District, in the Central District of Quchan County, Razavi Khorasan Province, Iran. At the 2006 census, its existence was noted, but its population was not reported.\", \"score\": 0.8642578125}, {\"long_text\": \"Taqiabad, Chadegan\\nTaqiabad (, also Romanized as Taqīābād) is a village in Chenarud-e Shomali Rural District, Chenarud District, Chadegan County, Isfahan Province, Iran. At the 2006 census, its population was 26, in 5 families.\", \"score\": 0.86572265625}, {\"long_text\": \"Shahrak-e Taqiabad\\nShahrak-e Taqiabad (, also Romanized as Shahrak-e Taqīābād; also known as Ragīāband) is a village in Jolgeh-ye Chah Hashem Rural District, Jolgeh-ye Chah Hashem District, Dalgan County, Sistan and Baluchestan Province, Iran. At the 2006 census, its population was 555, in 108 families.\", \"score\": 0.86767578125}, {\"long_text\": \"Taqiabad, Mazandaran\\nTaqiabad (, also Romanized as Taqīābād) is a village in Goli Jan Rural District, in the Central District of Tonekabon County, Mazandaran Province, Iran. At the 2006 census, its population was 307, in 80 families.\", \"score\": 0.87646484375}]}\n\n[[ ## thought_0 ## ]]\nThe search results indicate that there are multiple locations with the name Taqiabad in different provinces of Iran. To determine if Shahrak-E Shomali and Taqiabad, Mazandaran are in the same country, we need to find more specific information about these locations.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What is the country of Shahrak-E Shomali and what is the country of Taqiabad, Mazandaran?\", \"trajectory_id\": \"the_id_of_the_previous_hop\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What is the country of Shahrak-E Shomali and what is the country of Taqiabad, Mazandaran?\", \"passages_this_hop\": [{\"long_text\": \"Taqiabad, Mashhad\\nTaqiabad (, also Romanized as Taqīābād) is a village in Abravan Rural District, Razaviyeh District, Mashhad County, Razavi Khorasan Province, Iran. At the 2006 census, its population was 1,060, in 268 families.\", \"score\": 0.8466796875}, {\"long_text\": \"Taqiabad-e Kan Kot\\nTaqiabad-e Kan Kot (, also Romanized as Taqīābād-e Kan Kot) is a village in Itivand-e Shomali Rural District, Kakavand District, Delfan County, Lorestan Province, Iran. At the 2006 census, its population was 194, in 32 families.\", \"score\": 0.85009765625}, {\"long_text\": \"Shahrak-e Shomali\\nShahrak-e Shomali (, also Romanized as Shahrak-e Shomālī) is a village in Efzar Rural District, Efzar District, Qir and Karzin County, Fars Province, Iran. At the 2006 census, its population was 1,587, in 337 families.\", \"score\": 0.85302734375}, {\"long_text\": \"Taqiabad, Fariman\\nTaqiabad (, also Romanized as Taqīābād) is a village in Qalandarabad Rural District, Qalandarabad District, Fariman County, Razavi Khorasan Province, Iran. At the 2006 census, its population was 1,685, in 377 families.\", \"score\": 0.85498046875}, {\"long_text\": \"Taherabad, Mazandaran\\nTaherabad (, also Romanized as Ţāherābād) is a village in Rudpey-ye Shomali Rural District, in the Central District of Sari County, Mazandaran Province, Iran. At the 2006 census, its population was 368, in 97 families.\", \"score\": 0.85595703125}]}\n\n[[ ## thought_1 ## ]]\nThe search results indicate that Shahrak-E Shomali is located in Fars Province and Taqiabad, Mazandaran is located in Mazandaran Province. Since these provinces are in the same country, it appears that Shahrak-E Shomali and Taqiabad, Mazandaran are in the same country.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "The question asks if Shahrak-E Shomali and Taqiabad, Mazandaran are in the same country. To determine this, we need to find the countries where these locations are situated. We can use the AdvancedSearch tool to search for relevant documents. After searching, we found that Shahrak-E Shomali is located in Fars Province and Taqiabad, Mazandaran is located in Mazandaran Province. Since these provinces are in the same country, it appears that Shahrak-E Shomali and Taqiabad, Mazandaran are in the same country.",
+        "answer": "yes"
+      },
+      {
+        "augmented": true,
+        "question": "Which film has the director who was born earlier, People To Each Other or Tali-Ihantala 1944?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Which film has the director who was born earlier, People To Each Other or Tali-Ihantala 1944?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Which film has the director who was born earlier, People To Each Other or Tali-Ihantala 1944?\", \"passages_this_hop\": [{\"long_text\": \"The Blue Hills\\nThe Blue Hills () is a 2006 Estonian film directed by Raimo Jõerand. It is a documentary film about the 1944 Battle of Tannenberg Line. Based upon the war diaries of Paul Maitla, the film tells the story of the battle and the young Estonian men who had to choose between two totalitarian powers. The film received special mention at the 10th Tallinn Black Nights Film Festival.\", \"score\": 0.77978515625}, {\"long_text\": \"Tali-Ihantala 1944\\naircraft was decorated with markings similar to that of Major Erich Rudorffer's aircraft in 1944.\\nThe reception for the film was mixed. Most of the criticism was targeted at the lack of main characters and a proper plot.\\nExternal links.\\n- Finnish Film Foundation profile\\n- Movie's home page\", \"score\": 0.7802734375}, {\"long_text\": \"Tali-Ihantala 1944\\nTali-Ihantala 1944 is a 2007 Finnish war film directed by Åke Lindman and Sakari Kirjavainen, based on the Battle of Tali-Ihantala. Filming began during the summer of 2006 and was screened in autumn 2007. Lindman wanted the film to be as real as possible, and only include facts. He also wanted Finns to remember the sacrifices the soldiers made in those battles.\\nThe film received 350,000 euros in production support from the Finnish Film Foundation. The organization created to raise money for the\", \"score\": 0.79150390625}, {\"long_text\": \"People to Each Other\\nPeople to Each Other (German: Menschen untereinander) is a 1926 German silent film directed by Gerhard Lamprecht and starring Alfred Abel, Aud Egede-Nissen and Eduard Rothauser. The film's art direction was by Otto Moldenhauer.\\nCast.\\n- Alfred Abelas Helmuth Köhler\\n- Aud Egede-Nissen as Gertrud Köhler\\n- Eduard Rothauser\\n- Renate Brausewetter\\n- Bertold Reissig\\n- Paul Bildt\\n- Elsa Wagner\\n- Mathilde Sussin\\n- Andreas Bull\\n- Max Maximilian\\n-\", \"score\": 0.8076171875}, {\"long_text\": \"Battle of Tali-Ihantala\\nThe Battle of Tali-Ihantala (June 25 to July 9, 1944) was part of the Finnish-Soviet Continuation War (1941–1944), which occurred during World War II. The battle was fought between Finnish forces—using war materiel provided by Germany—and Soviet forces. To date, it is the largest battle in the history of the Nordic countries.\\nThe battle marked a point in the Soviet offensive when the Finnish forces first prevented the Soviets from making any significant gains.\", \"score\": 0.810546875}]}\n\n[[ ## thought_0 ## ]]\nI will now compare the directors' birth dates to determine which film has the director who was born earlier.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Which director of People To Each Other and Tali-Ihantala 1944 was born earlier?\", \"trajectory_id\": \"people-to-each-other-tali-ihantala-1944\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Which director of People To Each Other and Tali-Ihantala 1944 was born earlier?\", \"passages_this_hop\": [{\"long_text\": \"To (film)\\nTo is a 1964 Danish film that was directed by Palle Kjærulff-Schmidt and was entered into the 15th Berlin International Film Festival.\\nCast.\\n- Yvonne Ingdal as Lone\\n- Jens Østerholm as Niels\\n- Jørgen Bidstrup\\n- Birgit Brüel\\n- Christian Glatved\\n- Kjeld Jacobsen\\n- Peter Steen\\n- Lis Adelvard\", \"score\": 0.77392578125}, {\"long_text\": \"People to Each Other\\nKäthe Haack\\n- Erika Glässner\\n- Margarete Kupfer\\n- Lydia Potechina\\n- Grit Haid\\n- Olga Limburg\\n- Hermine Sterler\\n- Aribert Wäscher\\n- Erich Kaiser-Titz\\n- Karl Platen\\n- Heinrich Schroth\\n- Hugo Flink\\n- Kurt Vespermann\\n- Hans Junkermann\\n- Julia Serda\\n- Hermann Picha\\n- Georg Baselt\\n- Hilde Schewior\\n- Hubert von Meyerinck\\n- Didier Aslan\\n- Albert Paulig\\n- Luise Werckmeister\\n- Maria Forescu\\n- Zehra Achmed\\nBibliography.\", \"score\": 0.775390625}, {\"long_text\": \"Friends, Comrades\\nFriends, Comrades () is a 1990 Finnish drama film directed by Rauni Mollberg. It was screened in the Un Certain Regard section at the 1991 Cannes Film Festival.\\nCast.\\n- Mikk Mikiver as Arno Jurmala\\n- Stina Ekblad as Lisa Jurmala\\n- Hannu Lauri as Jaunkahns\\n- Paavo Liski as Kaakamo\\n- Otto Ševčík as Manfred Horst\\n- Ain Lutsepp as Pavlovski\\n- Aulis Rosendahl as Superintendent Blom\\n- Tapio Aarre-Ahtio as Lisma\\n- Göran Schauman as Director Liljeroos\", \"score\": 0.775390625}, {\"long_text\": \"Person to Person (film)\\nPerson to Person is an American drama film directed and written by Dustin Guy Defa. The film stars Michael Cera, Tavi Gevinson, and Abbi Jacobson.\\nThe film had its world premiere at the Sundance Film Festival on January 20, 2017. It was released on July 28, 2017, by Magnolia Pictures.\\nPlot.\\nDuring a day in New York City, a reporter trains a new employee while covering a story about a possible murder where a watch repairman may have important\", \"score\": 0.78076171875}, {\"long_text\": \"Two People\\nTwo People may refer to:\\n- \\\"Two People\\\" (1924 film), a German silent film by Hanns Schwarz\\n- \\\"Two People\\\" (1930 film), a German film by Erich Waschneck\\n- \\\"Two People\\\" (1952 film), a West German film by Paul May\\n- \\\"Two People\\\" (1973 film), a 1973 American film by Robert Wise\\n- Two People (band), a 1980s UK musical duo\\n- \\\"Two People\\\" (\", \"score\": 0.78515625}]}\n\n[[ ## thought_1 ## ]]\nThe directors of People To Each Other and Tali-Ihantala 1944 are Gerhard Lamprecht and Åke Lindman/Sakari Kirjavainen, respectively. I will now compare their birth dates.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Who was born earlier, Gerhard Lamprecht or Åke Lindman/Sakari Kirjavainen?\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Who was born earlier, Gerhard Lamprecht or Åke Lindman/Sakari Kirjavainen?\", \"passages_this_hop\": [{\"long_text\": \"Martin Lamprecht\\nMartin Lamprecht (born 31 May 1963) is a Swedish modern pentathlete. He competed at the 1984 Summer Olympics.\", \"score\": 0.78271484375}, {\"long_text\": \"Antero Lindman\\nAntero Lindman (born 25 December 1964) is a Finnish racewalker. He competed in the men's 50 kilometres walk at the 1996 Summer Olympics.\", \"score\": 0.79052734375}, {\"long_text\": \"Lindman\\nLindman is a surname. Notable people with the surname include:\\n- Åke Lindman (1928–2009), Finnish film director and actor\\n- Anna Lindman (born 1972), Swedish journalist and television presenter\\n- Arvid Lindman (1862–1936), Swedish politician and Prime Minister of Sweden\\n- Bo Lindman (1899–1992), Swedish modern pentathlete\\n- Carl Axel Magnus Lindman (1856–1928), Swedish botanist and botanical artist\\n- Håkan Lindman (born 1961), Swedish footballer\\n- Hans Lindman (1884–1957)\", \"score\": 0.79443359375}, {\"long_text\": \"Johannes Lamprecht\\nJohannes Lamprecht (surname also spelled Lambrecht) (22 August 1922 – 25 August 2008) was a Zimbabwean sports shooter. He competed for Rhodesia in the trap event at the 1964 Summer Olympics.\", \"score\": 0.80029296875}, {\"long_text\": \"Lamprecht (name)\\nLamprecht is a given name and surname. Notable people with the name include:\\n- Lamprecht, 12th-century German poet\\n- Chris Lamprecht (fl. 1990s), American hacker, first person to be banned from the Internet\\n- Christopher Lamprecht (b. 1985), German football player\\n- Frank Lamprecht (b. 1968), German chess International Master\\n- Gerhard Lamprecht (1897–1974), German director\\n- Karl Gotthard Lamprecht (1856–1915), German historian\\nSee also.\", \"score\": 0.80419921875}]}\n\n[[ ## thought_2 ## ]]\nBased on the information found, I will now determine which film has the director who was born earlier.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"Which film is directed by Åke Lindman/Sakari Kirjavainen or Gerhard Lamprecht?\", \"trajectory_id\": \"people-to-each-other-tali-ihantala-1944\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"Which film is directed by Åke Lindman/Sakari Kirjavainen or Gerhard Lamprecht?\", \"passages_this_hop\": [{\"long_text\": \"Lars-Magnus Lindgren\\nLars-Magnus Lindgren (3 July 1922 – 23 November 2004) was a Swedish film director and screenwriter. His film \\\"Dear John\\\" (1964) was nominated for the Academy Award for Best Foreign Language Film. His other works include \\\"\\\" (\\\"Svarta palmkronor\\\"), a 1968 film, based on the 1944 novel by Peder Sjögren.\", \"score\": 0.7802734375}, {\"long_text\": \"Gerhard Lamprecht\\n- \\\"Nobody Knows\\\" (1920, screenplay)\\n- \\\"The Graveyard of the Living\\\" (1921)\\n- \\\"Flying Shadows\\\" (1922)\\n- \\\"The House Without Laughter\\\" (1923)\\n- \\\"And Yet Luck Came\\\" (1923)\\n- \\\"The Other Woman\\\" (1924)\\n- \\\"Slums of Berlin\\\" (1925)\\n- \\\"The Hanseatics\\\" (1925)\\n- \\\"Children of No Importance\\\" (1926)\\n- \\\"People to Each Other\", \"score\": 0.783203125}, {\"long_text\": \"Virve Laev\\nVirve Laev is an Estonian film editor best known for her work in film documentary drama in the 1970s. \\nShe entered film in 1969 working on the adventure picture \\\"Viimne reliikvia\\\" with director Grigori Kromanov.\\nShe worked on the film \\\"Aeg elada, aeg armastada\\\" in 1976.\", \"score\": 0.78857421875}, {\"long_text\": \"Gerhard Lamprecht\\n1970 and is still considered an important work for German film studies.\\nLamprecht was married with Elisabeth Donath from 1923 until his death in 1974, aged 76. He is buried at the Waldfriedhof Zehlendorf in Berlin.\\nAwards.\\nLamprecht was awarded the Order of Merit of the Federal Republic of Germany. In 1967, he was presented with the German Film Award for lifetime achievement (\\\"Filmband in Gold\\\").\\nSelected filmography.\\n- \\\"The Mirror of the World\\\" (1918, screenplay)\", \"score\": 0.78857421875}, {\"long_text\": \"Gerhard Lamprecht\\nGerhard Lamprecht (6 October 1897 – 4 May 1974) was a German film director, screenwriter and film historian. He directed 63 films between 1920 and 1958. He also wrote for 26 films between 1918 and 1958.\\nLife and career.\\nLamprecht was fascinated by cinema since his childhood and started to work as a film projectionist at age twelve. He studied theatre and art history in Berlin. He also took drama lessons with Paul Bildt and appeared as a stage actor under the name of \\\"Gerhard\", \"score\": 0.791015625}]}\n\n[[ ## thought_3 ## ]]\nBased on the information found, I will now determine which film has the director who was born earlier.\n\n[[ ## tool_name_3 ## ]]\nfinish\n\n[[ ## tool_args_3 ## ]]\n{}\n\n[[ ## observation_3 ## ]]\nCompleted.",
+        "reasoning": "To determine which film has the director who was born earlier, I compared the birth dates of the directors of People To Each Other and Tali-Ihantala 1944. The director of People To Each Other, Gerhard Lamprecht, was born on October 6, 1897. The director of Tali-Ihantala 1944, Åke Lindman/Sakari Kirjavainen, was born in 1928/1964. Based on this information, I determined that the director of People To Each Other was born earlier.",
+        "answer": "People To Each Other"
+      },
+      {
+        "question": "Are Fernand Backes and Tom Carew both from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "What nationality is the director of film Arcade (Film)?",
+        "answer": "America"
+      },
+      {
+        "question": "When is the director of film Three Men And A Little Lady 's birthday?",
+        "answer": "May 9, 1943"
+      },
+      {
+        "question": "Did the movies Find the Woman and Two Is a Family, originate from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "What is the place of birth of the director of film Secrets Of The Underground?",
+        "answer": "London"
+      },
+      {
+        "question": "Who is the mother of the director of film Blind Spot (1932 Film)?",
+        "answer": "Carrie Daumery"
+      },
+      {
+        "question": "Which film has the director who died later, Aaranya Kandam or One Hundred Nails?",
+        "answer": "One Hundred Nails"
+      },
+      {
+        "question": "Where did the director of film Skinner Steps Out die?",
+        "answer": "Hollywood"
+      },
+      {
+        "question": "Are the movies Carnival Of Souls and Uvanga, from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Are director of film Cosmonaut (Film) and director of film The Scientific Cardplayer from the same country?",
+        "answer": "yes"
+      },
+      {
+        "question": "Where was the composer of film Marikkunnilla Njan born?",
+        "answer": "Kulathupuzha"
+      },
+      {
+        "question": "Do both Something Always Happens and The Great Impersonation (1921 film) films have the directors from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "When did the director of film The First Mass die?",
+        "answer": "23 November 1982"
+      },
+      {
+        "question": "Are St. Mary High School (Rutherford, New Jersey) and Mother Teresa High School both located in the same country?",
+        "answer": "no"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

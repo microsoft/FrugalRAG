@@ -1,0 +1,162 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Are Samalá River and Itter (Eder) located in the same country?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Are Samalá River and Itter (Eder) located in the same country?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Are Samalá River and Itter (Eder) located in the same country?\", \"passages_this_hop\": [{\"long_text\": \"Sambir | \\\"is situated on what is almost an island formed between two parallel rivers, the one distant from the other by a few kilometers – the Dniester on one side and the Strwiaz on the other – which come together after Sambir in the vicinity of Dolubova. In the pre-historic period the Dniester, at a distance of about three kilometers from Sambor, created a special kind of tributary called Mlinuvka, which, separating completely from the Dniester, falls into the river Strwionz. The Dniester and the Mlinuvka add a natural charm to Sambor. The grant of municipal rights led to people flocking\\\"\", \"score\": 17.734375}, {\"long_text\": \"\\\"Samara River (Dnieper)\\\" | \\\"Samara River (Dnieper) The Samara () is a river in Ukraine, a left tributary of the Dnieper. The city of Dnipro is located near the confluence of Dnieper and Samara. The river has a length of 320 km and a drainage basin of 22,600 km². The water quantities are variable, mainly because the river is fed by the spring thaw. The width of the river varies between 40 and 60 meters, with 300 m being the maximum. The most important tributaries of the Samara are the Vovcha and the Byk. The largest cities on the river are Ternivka and Novomoskovsk.\\\"\", \"score\": 17.546875}, {\"long_text\": \"\\\"Samalá River\\\" | \\\"Samalá River The Samalá is a river in southwestern Guatemala. Its sources are in the Sierra Madre, Valle De Écija range, in the departments of Quetzaltenango and Totonicapán. From there it flows down, past the towns San Carlos Sija in the Valle De Écija, Quetzaltenango, San Cristóbal Totonicapán, Quetzaltenango, El Palmar and Zunil, through the coastal plains of Retalhuleu into the Pacific Ocean. The Samalá river basin covers a territory of and has a population of around 400,000 people. Its proximity to the active Santa Maria and Santiaguito volcano complex, with its recurring lava and lahars flows, leads to a\\\"\", \"score\": 17.234375}, {\"long_text\": \"Eder | \\\"with a teacher from Marienhagen, part of the town of Vöhl, went panning for gold in the sediments of the River Itter. Panning for gold along the Eder is still popular. The river rises from the Ederkopf mountain in the Rothaar mountain range in eastern North Rhine-Westphalia, near the springs of the Lahn and Sieg rivers. However, unlike the Lahn and Sieg, which are both tributaries of the Rhine, the Eder flows east and north, into the river Fulda at Edermünde, south of Kassel. The Fulda then confluences with the Werra River at Hann. Münden to form the Weser River,\\\"\", \"score\": 17.203125}, {\"long_text\": \"\\\"Samarga River\\\" | \\\"is in an extremely remote and mountainous region, with harsh climatic conditions, the accessibility and extraction of the natural resources in this river system is very poor. There are currently four small towns in the area: Edinka, Peretychikha, Samarga and Agzu in the watersheds of the Edinka and Samarga Rivers. According to the 2001 Census, the total population in the riverine watersheds is about 800 people, representing various ethnic groups. Out of this number, 140 belong to the Udege people, an indigenous ethnic group. The present-day Udege population of the basin lives primarily in one village – Agzu – while\\\"\", \"score\": 16.921875}]}\n\n[[ ## thought_0 ## ]]\nNone of the search results provide information about whether Samalá River and Itter (Eder) are located in the same country. I need to refine my search to focus specifically on their locations.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What country is Samalá River located in? What country is Itter (Eder) located in?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What country is Samalá River located in? What country is Itter (Eder) located in?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Samalá River\\\" | \\\"heightened risk of serious flooding. Samalá River The Samalá is a river in southwestern Guatemala. Its sources are in the Sierra Madre, Valle De Écija range, in the departments of Quetzaltenango and Totonicapán. From there it flows down, past the towns San Carlos Sija in the Valle De Écija, Quetzaltenango, San Cristóbal Totonicapán, Quetzaltenango, El Palmar and Zunil, through the coastal plains of Retalhuleu into the Pacific Ocean. The Samalá river basin covers a territory of and has a population of around 400,000 people. Its proximity to the active Santa Maria and Santiaguito volcano complex, with its recurring lava and\\\"\", \"score\": 20.421875}, {\"long_text\": \"\\\"Samarga River\\\" | \\\"Samarga River The Samarga River is the northernmost river in the Primorsky Krai territory in the far eastern part of Russia. It is the largest coastal river in the northern Sikhote-Alin mountain range at in length. It flows into the Sea of Japan. The river system is a unique and relatively untouched centre of biodiversity in the Eastern Sikhote–Alin mountains because it is in a remote and mountainous region. The river is located in the northeast Primorsky territory of Russia. The northern and western boundaries of the river's watershed form the border between Primorsky territory and Khabarovsk territory. It confluences\\\"\", \"score\": 20.03125}, {\"long_text\": \"\\\"Samarqand Region\\\" | \\\"Samarqand Region Samarqand Region (Samarkand Region) () is one of the regions of Uzbekistan. It is located in the center of the country in the basin of Zarafshan River. It borders with Tajikistan, Navoiy Region, Jizzakh Region and Qashqadaryo Region. It covers an area of 16,773 km². The population is estimated to be around 3,651,700, with some 75% living in rural areas. Samarqand Region was established on January 15, 1938, and is divided into 14 administrative districts. The capital is Samarqand (pop est 368,000 inhabitants). Other major towns include Bulungur, Juma, Ishtikhon, Katta-Kurgan, Urgut, and Oqtosh. The climate is a\\\"\", \"score\": 19.875}, {\"long_text\": \"Samalkha | \\\"parts of country being on G.T road (NH-1), New Delhi to Amtritsar along with Railway Line. coleeges Samalkha Samalkha is a town/tehsil and a municipal committee in Panipat district in the Indian state of Haryana. Industries in the town include cast iron (fodder-cutting machines), nuts and bolts, iron rods (Saria) and bathroom fittings manufacture. Samalkha has an average elevation of . It is situated on GT road, 19 km (11.7 miles) south of Panipat, from the capital Delhi, 136 km (84 miles) south of Ambala and 178 km (110 miles) southwest of Chandigarh, the state capital. India census, Samalkha had\\\"\", \"score\": 19.296875}, {\"long_text\": \"Samatata | \\\"Samatata The Kingdom of Samatata (or \\\"\\\"Samata\\\"\\\") was an ancient kingdom during the Classical period on the Indian subcontinent, located at the mouth of the Brahmaputra river in the south east of Bengal. It was a vassal to the Gupta Empire. Samatata was created following the collapse of the Mauryan Empire, sometime after the death of Emperor Ashoka in 232 BC. They are believed to have been incorporated into the Gupta Empire by Samudragupta, around 335 CE: Not much is known about the kingdom's history, except that it was ruled by Buddhist kings in the late 7th century. The Roman\\\"\", \"score\": 19.1875}]}\n\n[[ ## thought_1 ## ]]\nThe search results indicate that Samalá River is in Guatemala and Itter (Eder) is in Germany. Therefore, they are not located in the same country.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "The search results provided by the AdvancedSearch tool show that Samalá River is located in Guatemala and Itter (Eder) is located in Germany.",
+        "answer": "no"
+      },
+      {
+        "augmented": true,
+        "question": "Did the movies Find the Woman and Two Is a Family, originate from the same country?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Did the movies Find the Woman and Two Is a Family, originate from the same country?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Did the movies Find the Woman and Two Is a Family, originate from the same country?\", \"passages_this_hop\": [{\"long_text\": \"\\\"The Head of the Family (1967 film)\\\" | \\\"centres on two characters, a man and a woman, both architects, who meet some time after WWII and get married. Though deeply in love they come from different backgrounds, and do not share the same outlooks on life. Soon she becomes fascinated with her husband's progressive socialist ideals. After the wedding she abandons her work to dedicate herself to raising their growing family, and he, feeling abandoned by her, begins an amorous relationship with one of his colleagues. Following the various dramas of bringing up the children, who are schooled with the Montessori method, the wife goes to a clinic\\\"\", \"score\": 18.84375}, {\"long_text\": \"\\\"Two Women (2014 film)\\\" | \\\"Two Women (2014 film) Two Women (, \\\"\\\"Dve zhenshchiny\\\"\\\") is a 2014 Russian drama film directed by Vera Glagoleva, starring Ralph Fiennes and Sylvie Testud. It is based on Ivan Turgenev's play \\\"\\\"A Month in the Country\\\"\\\". At the heart of the play lies the love quadrangle. Natalya Petrovna, the wife of the rich landowner Arkady Sergeich Islaev, falls in love with Alexey Nikolayevich Belyaev - a student, teacher Kolya Islaeva. Mikhail Aleksandrovich Rakitin - a friend of the family, has long loved Natalya Petrovna. Verochka - a pupil of Natalya Petrovna also falls in love with Kolya's teacher. Belyaev\\\"\", \"score\": 18.28125}, {\"long_text\": \"\\\"Two Women (2014 film)\\\" | \\\"at worst cliche-ridden pomp. Two Women (2014 film) Two Women (, \\\"\\\"Dve zhenshchiny\\\"\\\") is a 2014 Russian drama film directed by Vera Glagoleva, starring Ralph Fiennes and Sylvie Testud. It is based on Ivan Turgenev's play \\\"\\\"A Month in the Country\\\"\\\". At the heart of the play lies the love quadrangle. Natalya Petrovna, the wife of the rich landowner Arkady Sergeich Islaev, falls in love with Alexey Nikolayevich Belyaev - a student, teacher Kolya Islaeva. Mikhail Aleksandrovich Rakitin - a friend of the family, has long loved Natalya Petrovna. Verochka - a pupil of Natalya Petrovna also falls in love\\\"\", \"score\": 18.25}, {\"long_text\": \"\\\"Two Women\\\" | \\\"Two Women Two Women ( , roughly translated as \\\"\\\"The Woman from Ciociaria\\\"\\\") is a 1960 Italian film directed by Vittorio De Sica. It tells the story of a woman trying to protect her young daughter from the horrors of war. The film stars Sophia Loren, Jean-Paul Belmondo, Raf Vallone, Eleonora Brown, Carlo Ninchi, and Andrea Checchi. The film was adapted by De Sica and Cesare Zavattini from the novel of the same name written by Alberto Moravia. The story is fictional, but based on actual events of July 1943 in Rome and rural Lazio, and during what the Italians\\\"\", \"score\": 17.65625}, {\"long_text\": \"\\\"Instructions Not Included\\\" | \\\"a sweetly effective chemistry in their scenes together ... Unfortunately, the supporting players are all too often encouraged to overplay, with decidedly mixed results.\\\"\\\" In 2016, a French remake of the film titled \\\"\\\"Two Is a Family\\\"\\\" (\\\"\\\"Demain Tout Commence\\\"\\\") was released. The film was directed by Hugo Gélin and stars Omar Sy in the role originally played by Derbez. A Brazilian remake directed by André Moraes, titled \\\"\\\"No Returns Accepted\\\"\\\" (\\\"\\\"Não Se Aceitam Devoluções\\\"\\\"), was released on May 31, 2018. The movie stars Leandro Hassum as the lead character. Instructions Not Included Instructions Not Included (Spanish title: No se\\\"\", \"score\": 17.640625}]}\n\n[[ ## thought_0 ## ]]\nBased on the search results, it seems there are two movies named \"Two Women\". One is a 2014 Russian drama film, while the other is an Italian film from 1960. Further investigation is needed to determine if they originated from the same country.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"did the 1960 italian film two women originate from the same country as the 2014 russian drama film two women?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"did the 1960 italian film two women originate from the same country as the 2014 russian drama film two women?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Two Women\\\" | \\\"won 22 international awards for \\\"\\\"Two Women\\\"\\\". \\\"\\\"La Ciociara\\\"\\\" was remade for television in 1988. It was adapted by Diana Gould, Lidia Ravera, Dino Risi, and Bernardino Zapponi. It was directed by Risi, and starred Loren, Robert Loggia, Leonardo Ferrantini, Dario Ghirardi, and Sydney Penny. An opera, La Ciociara, in a re-write by scenario writer Luca Rossi, with music composed by Marco Tutino, received its premiere at San Francisco Opera, and a European premiere at Teatro Lirico, Cagliari. Two Women Two Women ( , roughly translated as \\\"\\\"The Woman from Ciociaria\\\"\\\") is a 1960 Italian film directed by Vittorio De\\\"\", \"score\": 22.203125}, {\"long_text\": \"\\\"Two Women\\\" | \\\"\\\"\\\"La ciociara\\\"\\\" (\\\"\\\"The Woman From Ciociara\\\"\\\"). It was inspired by Moravia's experiences during World War II. Carlo Ponti bought the film rights along with Marcello Girosi for a reported US$100,000. Sophia Loren was always meant to star and there was some talk that the film might be financed by Paramount, with whom Loren had made a number of movies. Anna Magnani was going to play the lead and Loren was going to be her daughter. George Cukor was going to direct as part of a two-picture deal with Ponti, the other one being \\\"\\\"Heller in Pink Tights\\\"\\\" (1960). The film\\\"\", \"score\": 21.40625}, {\"long_text\": \"\\\"Two Women (novel)\\\" | \\\"Two Women (novel) Two Women (original title in Italian: La Ciociara) is a 1957 Italian-language novel by Alberto Moravia. It tells the story of a woman trying to protect her teenaged daughter from the horrors of war. When both are raped, the daughter suffers a nervous breakdown. A film based on the novel starred Sophia Loren, Jean-Paul Belmondo, Eleonora Brown, Carlo Ninchi and Andrea Checchi. A daughter and her mother fight to survive in Rome during the Second World War. Cesira, a widowed Roman shopkeeper, and Rosetta, a naive teenager of beauty and devout faith. When the German army prepares\\\"\", \"score\": 21.046875}, {\"long_text\": \"\\\"Cinema of Italy\\\" | \\\"\\\"\\\"La Strada\\\"\\\" (1954) and De Sica's 1960 film \\\"\\\"Two Women\\\"\\\" (for which Sophia Loren won the Oscar for Best Actress) are grouped with the genre. Director Pier Paolo Pasolini's first film, \\\"\\\"Accattone\\\"\\\" (1961), shows a strong neorealist influence. Italian neorealist cinema influenced filmmakers around the world, and helped inspire other film movements, such as the French New Wave and the Polish Film School. The Neorealist period is often simply referred to as \\\"\\\"The Golden Age\\\"\\\" of Italian Cinema by critics, filmmakers, and scholars. It has been said that after \\\"\\\"Umberto D.\\\"\\\" nothing more could be added to neorealism. Possibly because\\\"\", \"score\": 21.015625}, {\"long_text\": \"\\\"Two Women\\\" | \\\"French star being used, which lead to the casting of Jean Paul Belmondo, who had leapt to international fame in \\\"\\\"Breathless\\\"\\\" (1960). Belmondo's voice was dubbed into Italian. Joseph E. Levine agreed to buy US release rights after watching only nine minutes of the film. \\\"\\\"I bet Sophia she'd win the Oscar and I nursed that film like a baby\\\"\\\", Levine later said. He showed the film in every city that a member of the Academy jury lived and promoted it assiduously. \\\"\\\"That showed foreign films could get big audiences if promoted with flair\\\"\\\", said Levine. The movie was among\\\"\", \"score\": 20.71875}]}\n\n[[ ## thought_1 ## ]]\nBased on the search results, the 1960 Italian film \"Two Women\" originates from Italy, while the 2014 Russian drama film \"Two Women\" originates from Russia. Therefore, they did not originate from the same country.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "The search results indicate that the 1960 Italian film \"Two Women\" was directed by Vittorio De Sica and stars Sophia Loren. This film is clearly from Italy.\n\nThe 2014 Russian drama film \"Two Women\" is mentioned in the search results, but no director or cast details are provided. However, it is specified as a Russian film.\n\nSince these two films have different origins (Italy and Russia), they do not originate from the same country.",
+        "answer": "no"
+      },
+      {
+        "augmented": true,
+        "question": "Are Puka Q'Asa (Huancavelica) and Horsetooth Mountain both located in the same country?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Are Puka Q'Asa (Huancavelica) and Horsetooth Mountain both located in the same country?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Are Puka Q'Asa (Huancavelica) and Horsetooth Mountain both located in the same country?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Horsetooth Mountain\\\" | \\\"Horsetooth Mountain Horsetooth Mountain is a mountain summit in the foothills of the Front Range of the Rocky Mountains of North America. The peak is located in the Horsetooth Mountain Open Space, west (bearing 265°) of downtown Fort Collins in Larimer County, Colorado, United States. The mountain is easily distinguishable by the large rock formation on its summit known as Horsetooth Rock. The formation is a prominent landmark of the nearby city of Fort Collins and often used as a symbol of that city, appearing in the official city seal. The name comes from its distinctive appearance. The rock was\\\"\", \"score\": 16.703125}, {\"long_text\": \"\\\"Horsetooth Mountain\\\" | \\\"previously on the private property of the Soderburg family. In 1982, it was purchased by the county as an \\\"\\\"open space\\\"\\\" tax acquisition. It is now a popular destination for hikers as well as mountain bikers, with trails leading to the summit. The summit offers hikers a clear view to the southwest of Longs Peak and Mount Meeker, two rugged mountains in Rocky Mountain National Park. Horsetooth Mountain Horsetooth Mountain is a mountain summit in the foothills of the Front Range of the Rocky Mountains of North America. The peak is located in the Horsetooth Mountain Open Space, west (bearing\\\"\", \"score\": 16.59375}, {\"long_text\": \"Pucajirca | \\\"Pucajirca Pucajirca or Pucahirca (possibly from Quechua \\\"\\\"puka\\\"\\\" red, Ancash Quechua \\\"\\\"hirka\\\"\\\" mountain, \\\"\\\"red mountain\\\"\\\") is a mountain in the Cordillera Blanca in the Andes of Peru, about 6,046 m (19,836 ft) high. It is located in the Ancash Region, Pomabamba Province, Pomabamba District (Pucajirca Norte) as well as in the Huaylas Province, Yuracmarca District (Pucajirca Central) north of Rinrijirca. The mountain has three separate and independent summits: Pucajirca Norte (6,046 m), Central (6,014 m) and Oeste (6,039 m). The summit of Pucajirca Norte was first achieved on July 14, 1955 by Nick Clinch and Andrew Kauffman II. Erwin Schneider\\\"\", \"score\": 15.3125}, {\"long_text\": \"\\\"Horsetooth Reservoir\\\" | \\\"the Northern Colorado Water Conservancy District. Horsetooth and Carter Lake serve as the two principal reservoirs for water diverted eastward under the continental divide via the C-BT. The reservoir is a supplementary source of municipal water for Fort Collins, Greeley and other communities in the region, as well as for irrigation in the lower South Platte River basin. The reservoir takes its name from Horsetooth Mountain, a summit in the foothills west of the southern end of the reservoir. The construction of the reservoir inundated the community of Stout. Prior to construction, the majority of the town moved to a\\\"\", \"score\": 15.2265625}, {\"long_text\": \"KDVR | \\\"satellite station, KFCT (virtual channel 22, UHF digital channel 21) in Fort Collins, whose transmitter is located atop Horsetooth Mountain, just outside Fort Collins. KFCT covers areas of northern Colorado, being that area's only full-power television station, that receive a marginal to non-existent signal from KDVR, though there is significant overlap between the coverage areas of both KDVR and KFCT's signals otherwise (including in Fort Collins proper and the nearby cities of Greeley, Windsor and Longmont). KFCT is a straight simulcast of KDVR; on-air references to KFCT are limited to Federal Communications Commission (FCC)-mandated hourly station identifications during newscasts and\\\"\", \"score\": 15.125}]}\n\n[[ ## thought_0 ## ]]\nThe search results indicate that Puka Q'Asa (Huancavelica) is located in Peru, while Horsetooth Mountain is located in Colorado, USA. Thus, they are not located in the same country.\n\n[[ ## tool_name_0 ## ]]\nfinish\n\n[[ ## tool_args_0 ## ]]\n{}\n\n[[ ## observation_0 ## ]]\nCompleted.",
+        "reasoning": "The search results show that Puka Q'Asa (Huancavelica) is located in Peru, while Horsetooth Mountain is located in Colorado, USA. Therefore, they are not in the same country.",
+        "answer": "No"
+      },
+      {
+        "question": "What nationality is the director of film Kadvi Hawa?",
+        "answer": "India"
+      },
+      {
+        "question": "Which film came out first, The Love Route or Engal Aasan?",
+        "answer": "The Love Route"
+      },
+      {
+        "question": "What is the date of death of Helen F. Holt's husband?",
+        "answer": "February 8, 1955"
+      },
+      {
+        "question": "Do both directors of films The Piano Tuner Has Arrived and The Young Philadelphians share the same nationality?",
+        "answer": "no"
+      },
+      {
+        "question": "Do director of film Chicago 10 (Film) and director of film Black Oxen share the same nationality?",
+        "answer": "yes"
+      },
+      {
+        "question": "Are both Qaleh Dokhtar, Kohgiluyeh And Boyer-Ahmad and Bokat located in the same country?",
+        "answer": "yes"
+      },
+      {
+        "question": "Where did Shannon Lee's father study?",
+        "answer": "University of Washington"
+      },
+      {
+        "question": "When was the director of film Sword Of Honour (1939 Film) born?",
+        "answer": "11 November 1887"
+      },
+      {
+        "question": "When is the director of film Three Men And A Little Lady 's birthday?",
+        "answer": "May 9, 1943"
+      },
+      {
+        "question": "Do Rhescuporis Ii and Mcallister Hull share the same nationality?",
+        "answer": "no"
+      },
+      {
+        "question": "Which film has the director who died later, Aaranya Kandam or One Hundred Nails?",
+        "answer": "One Hundred Nails"
+      },
+      {
+        "question": "Are director of film Sthree Sahasam and director of film That Malicious Age both from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Where did the director of film Canyon Of The Fools die?",
+        "answer": "Hollywood"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

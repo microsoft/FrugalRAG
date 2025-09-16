@@ -1,0 +1,187 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Which publication has been published by a greater number of groups, House Beautiful or Smithsonian?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Which publication has been published by a greater number of groups, House Beautiful or Smithsonian?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Which publication has been published by a greater number of groups, House Beautiful or Smithsonian?\", \"passages_this_hop\": [{\"long_text\": \"House & Garden (magazine)\\nHouse &amp; Garden (magazine)\\nHouse & Garden is an American shelter magazine published by Condé Nast Publications that focusses on interior design, entertaining, and gardening.\\nIts US edition ceased in 1993, and after an unsuccessful relaunch was closed again in 2007. Foreign editions of the magazine are still published in the United Kingdom (first published in 1947) and South Africa. A Greek edition was launched in November 2007.\\nHistory.\\nThe magazine was launched in 1901 as a journal devoted to architecture.\", \"score\": 0.79296875}, {\"long_text\": \"Smithsonian (magazine)\\nSmithsonian is the official journal published by the Smithsonian Institution in Washington, D.C. The first issue was published in 1970.\\nHistory.\\nThe history of \\\"Smithsonian\\\" began when Edward K. Thompson, the retired editor of \\\"Life\\\" magazine, was asked by the then-Secretary of the Smithsonian, S. Dillon Ripley, to produce a magazine \\\"about things in which the Smithsonian [Institution] is interested, might be interested or ought to be interested.\\\"\\nThompson would later recall that\", \"score\": 0.79931640625}, {\"long_text\": \"Smithsonian (disambiguation)\\nSmithsonian can refer to:\\n- the Smithsonian Institution, a museum in Washington, D.C.\\n- the Smithsonian Institution Building\\n- \\\"Smithsonian\\\" (magazine), a magazine published by the Institution\\n- Smithsonian Channel, television channel\\n- Smithsonian (Washington Metro), a station of the Washington Metro approximate to the Institution\\n- \\\"The Smithsonian Institution\\\", a novel by Gore Vidal\\n- 3773 Smithsonian, an asteroid\\n- Smithsonian Agreement\\nSee also.\\n- James Smithson\", \"score\": 0.8056640625}, {\"long_text\": \"Beautiful Kitchens\\nBeautiful Kitchens is a monthly interior design magazine about kitchens published by IPC Media. It is edited by Helen Stone.\\nEarly history.\\nThe magazine was launched in 1999 as bi-monthly \\\"25 Beautiful Kitchens\\\", its original editor was John Smigielski. Ysanne Brooks became editor in September 2004 when Smigielski was promoted to the parent publication, \\\"25 Beautiful Homes\\\".\\nThe name of the magazine was shortened to just \\\"Beautiful Kitchens\\\" in February 2008.\", \"score\": 0.80615234375}, {\"long_text\": \"House Beautiful\\nHouse Beautiful is an interior decorating magazine that focuses on decorating and the domestic arts. First published in 1896, it is currently published by the Hearst Corporation, who began publishing it in 1934. It is the oldest still-published magazine in what is known as the \\\"shelter magazine\\\" genre.\\nThe magazine was launched in the UK in the early 1950s, positioned for young 'home-makers'; and it is still sold in the UK where it has a circulation of 118,290\\nEditors.\", \"score\": 0.85888671875}]}\n\n[[ ## thought_0 ## ]]\nNext, I will analyze the passages to determine which publication has been published by a greater number of groups.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Which publication has been published by a greater number of groups, House Beautiful or Smithsonian?\", \"trajectory_id\": \"0\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Which publication has been published by a greater number of groups, House Beautiful or Smithsonian?\", \"passages_this_hop\": [{\"long_text\": \"Washington, D.C.\\nis an educational foundation chartered by Congress in 1846 that maintains most of the nation's official museums and galleries in Washington, D.C. The U.S. government partially funds the Smithsonian and its collections are open to the public free of charge. The Smithsonian's locations had a combined total of 30 million visits in 2013. The most visited museum is the National Museum of Natural History on the National Mall. Other Smithsonian Institution museums and galleries on the mall are: the National Air and Space Museum; the National Museum of African Art; the\", \"score\": 0.787109375}, {\"long_text\": \"Smithsonian Gardens\\nThe Smithsonian Gardens, a division of the Smithsonian Institution, is responsible for the \\\"landscapes, interiorscapes, and horticulture-related collections and exhibits\\\", which serve as an outdoor extension of the Smithsonian's museums and learning spaces in Washington, D.C. Established in 1972 as a groundskeeping and horticulture program, Smithsonian Gardens currently manages 180 acres of gardens on the National Mall, 64,000 square feet of greenhouse production space, and the Archives of American Gardens, a research collection of over 60,000 photographs and archival records\", \"score\": 0.78759765625}, {\"long_text\": \"Hugh Howard (historian)\\nHugh Howard (born 1952) is an American historian, writer, and speaker. He has written over a dozen books about architecture. His book, \\\"Houses of Civil War America\\\", was listed as one of \\\"Southern Living\\\" 's best illustrated books of Fall 2014.\\nCareer.\\nAside from writing books, Howard has also written for numerous publications including, \\\"Smithsonian\\\", \\\"New York Times\\\", \\\"Washington Post\\\", \\\"House Beautiful\\\", \\\"Preservation\", \"score\": 0.78857421875}, {\"long_text\": \"Elizabeth Gordon (editor)\\nElizabeth Gordon (August 8, 1906 – September 3, 2000) was editor of \\\"House Beautiful\\\" magazine from 1941 to 1964. She was remembered as \\\"a missionary of taste to the American homemaker\\\".\\nIn her well-known 1953 essay, \\\"The Threat to the Next America\\\", she criticized International Style modern architecture and associated it with totalitarianism and communism. For this she earned a personal letter of approval from Frank Lloyd Wright, and the two became friends.\", \"score\": 0.7890625}, {\"long_text\": \"Conservation and restoration at the Smithsonian Institution\\nis a freely accessible platform to generate and disseminate vital resources for those working to preserve cultural heritage worldwide. The content of CoOL comes from a variety of sources, including contributions from conservators at the Smithsonian.\", \"score\": 0.78955078125}]}\n\n[[ ## thought_1 ## ]]\nNow that we have analyzed the passages, I will compare the number of groups that have published House Beautiful and Smithsonian to determine which one has been published by a greater number of groups.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"How many groups have published House Beautiful and Smithsonian?\", \"trajectory_id\": \"1\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"How many groups have published House Beautiful and Smithsonian?\", \"passages_this_hop\": [{\"long_text\": \"Buildings of the United States\\nwritten by an individual expert or contributing experts. The series is sponsored by the Society of Architectural Historians, having established its editorial board, consisting of academics and representatives of the National Park Service, the Library of Congress, and the American Institute of Architects. As of 2012, the head of the editorial committee is Professor Emerita at Tulane University, Karen Kingsley, Editor-in-Chief and Managing Editor. The Society also coordinates fundraising for the project.\\nThe series is a planned 60-volume work. Work on the series\", \"score\": 0.80224609375}, {\"long_text\": \"Duo Dickinson\\nnational organization of residential designers, which has grown to over 20 chapters and 1,000 members in seven years. He has recently been awarded the honor of Fellowship in AIA. \\nPublications.\\nDickinson's design work has appeared in over 70 publications including \\\"The New York Times\\\", \\\"Architectural Record\\\" and \\\"House Beautiful\\\". He has written six books, including \\\"Small Houses for the Next Century\\\" and \\\"Expressive Details\\\" for McGraw-Hill and \\\"The House You Build\\\", published by Taunton Press\", \"score\": 0.80322265625}, {\"long_text\": \"Smithsonian Contributions and Studies Series\\nThe Smithsonian Contributions and Studies Series is a collection of serial periodical publications produced by the Smithsonian Institution, detailing advances in various scientific and societal fields to which the Smithsonian Institution has made contributions.\\nHistory.\\nThe Smithsonian Institution began publishing consolidated compilations of quarto-sized papers in 1848, under the name \\\"Smithsonian Contributions to Knowledge\\\". In 1862 octavo-sized papers called \\\"Smithsonian Miscellaneous Collections\\\" were added, followed by the monographic \\\"Bulletin of the United States National Museum\\\" in\", \"score\": 0.80419921875}, {\"long_text\": \"Smithsonian Research Online\\nSmithsonian Research Online is a database of bibliographic citations and full texts of publications by Smithsonian Institution scholars. It is managed by the Smithsonian Institution Libraries. Access to the database is free.\\nThe database contained some 10,000 citations as of 2011. An increasing proportion of the citations includes full texts. \\nPurposes of the database include facilitating discovery of Smithsonian research publications and \\\"assisting in measuring and communicating the magnitude, value, and impact of Smithsonian research.\\\"\", \"score\": 0.80419921875}, {\"long_text\": \"Buildings of the United States\\nwas inspired by Nikolaus Pevsner's \\\"Buildings of England\\\" guidebooks. The Society has overseen the publication of 25 volumes since 1993. The series first 10 volumes were published by Oxford University Press and since 2006, it has been published by the University of Virginia Press. Its first four volumes (1993) on buildings in Alaska, the District of Columbia, Iowa, and Michigan (2nd ed. 2012) received American publishing awards, and its volumes on Colorado (1997) and Louisiana (2004) have also received honors\", \"score\": 0.80810546875}]}\n\n[[ ## thought_2 ## ]]\nBased on the analysis of the passages, I have determined that House Beautiful has been published by a greater number of groups.\n\n[[ ## tool_name_2 ## ]]\nfinish\n\n[[ ## tool_args_2 ## ]]\n{}\n\n[[ ## observation_2 ## ]]\nCompleted.",
+        "reasoning": "I used the AdvancedSearch tool to search for relevant documents with the original question as the search query. I then analyzed the passages to determine which publication has been published by a greater number of groups. After comparing the number of groups that have published House Beautiful and Smithsonian, I determined that House Beautiful has been published by a greater number of groups.",
+        "answer": "House Beautiful"
+      },
+      {
+        "augmented": true,
+        "question": "Are Truckin' Magazine and Girlfriends both publications that offer relationship advice?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Are Truckin' Magazine and Girlfriends both publications that offer relationship advice?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Are Truckin' Magazine and Girlfriends both publications that offer relationship advice?\", \"passages_this_hop\": [{\"long_text\": \"Truckin' Magazine\\nPublications (which stood for Tom and Rose McMullen) family of auto magazines. From 1975 to May 1995, Truckin’ was published by McMullen Publications and McMullen-Yee Publishing. It was purchased by K-III’s Primedia Inc. in June 1995 in a merger worth $55 million. In 2007, Source Interlink Media acquired more than 78 consumer magazines, including Truckin’, and is still the publishing company producing and distributing the magazine.\\nEditors.\\nRobert K. Smith, the production manager with Street Rodder magazine,\", \"score\": 0.8017578125}, {\"long_text\": \"Girlfriends (magazine)\\n\\\" magazine ceased publication in 2006.\\nOne of the major features of the magazine was its annual list on the best cities for a lesbian to live in, which it began publishing in 1994. The magazine also ran an online personals service through its website while it was still in operation.\\nSee also.\\n- LGBT culture in San Francisco\", \"score\": 0.802734375}, {\"long_text\": \"Truckin' Magazine\\nTruckin' Magazine is a sport truck magazine currently published by . The current editor is Jeremy Cook.\\nHistory.\\nIn 1974, then-Publisher of Street Rodder and Street Chopper magazines, Tom McMullen, saw a growing trend in custom vans and pickups cruising around the Southern California street rod shows. Using the popular saying Keep on Truckin' (comics) as a basis, Truckin’ magazine was created. In 1975, the first issue went on sale at newsstands for $1.00 under the TRM\", \"score\": 0.8037109375}, {\"long_text\": \"Girlfriend (magazine)\\nGirlfriend magazine is an Australian teen girls magazine established in December 1988 by Futura Publications.\\nIt is now owned and distributed by Sydney based Pacific Magazines.\\nGirlfriend Model Search.\\nThe Girlfriend Model Search is a modelling competition. In past years, the model search has been sponsored by Priceline, Schwarzkopf, CoverGirl and Rimmel London. with selected 2007 national finalists even being appointed as the faces of \\\"Schwarzkopf LIVE Colour\\\" semi-permanent hair colorant products. \\nFinalists\\nGirlfriend Fiction.\", \"score\": 0.8095703125}, {\"long_text\": \"Girlfriends (magazine)\\nGirlfriends was a women's magazine that provided critical coverage of culture, entertainment and world events from a lesbian perspective. It was founded by Jacob Anderson-Minshall, Diane Anderson-Minshall and Heather Findlay. It also offered relationship, health and travel advice. Published monthly from San Francisco since 1993, it was distributed nationwide by Disticor. It had the same publisher as lesbian erotica magazine \\\"On Our Backs\\\", but distanced itself from its pornographic counterpart by refusing to carry sexual ads. \\\"Girlfriends\", \"score\": 0.814453125}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, I can see that Truckin' Magazine is a sport truck magazine and Girlfriends was a women's magazine that provided relationship advice from a lesbian perspective.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Do Truckin' Magazine and Girlfriends provide relationship advice?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Do Truckin' Magazine and Girlfriends provide relationship advice?\", \"passages_this_hop\": [{\"long_text\": \"Girlfriend\\nA girlfriend is a female friend or acquaintance, often a regular female companion with whom one is platonic, romantically or sexually involved. The analogous male term is \\\"boyfriend\\\".\\nScope.\\nPartners in committed relationships are also sometimes described as a \\\"significant other\\\" or simply \\\"partner\\\", especially if the individuals are cohabiting.\\n\\\"Girlfriend\\\" and \\\"partner\\\" mean different things to different people; the distinctions between the terms are subjective. How the term is used will ultimately be determined by\", \"score\": 0.79150390625}, {\"long_text\": \"Truck Stop Women\\nTruck Stop Women is a 1974 film, directed by Mark L. Lester and partly financed by Phil Gramm.\\nPlot.\\nA mother (Lieux Dressler) runs a brothel for truckers on the New Mexico highways and her stable includes her daughter (Claudia Jennings). The daughter is sick of her mother controlling things and begins working with some men from the \\\"Eastern Mafia\\\" who are attempting to take over their operation.\\nTagline.\\n\\\"No rig was too big for them to handle!\", \"score\": 0.79150390625}, {\"long_text\": \"Trailer Life\\nTrailer Life is a magazine that reviews recreational vehicles, provides articles on tow vehicles and advice on maintenance with a focus on the outdoors, recent trends and popular destinations.\\nHistory.\\n\\\"Trailer Life\\\" was founded in July 1941 as \\\"Western Trailer Life\\\", in California. In 1958, Los Angeles advertising executive Art Rouse purchased the magazine. In 1992, Trailer Life Enterprises became part of the umbrella company Affinity Group Inc., since renamed Good Sam Enterprises.\\nExternal links.\\n- \\\"\", \"score\": 0.7919921875}, {\"long_text\": \"Motoring (TV series)\\nMotoring (usually appended with the current model year, such as \\\"Motoring 2015\\\") is a Canadian television automotive newsmagazine, broadcast by TSN and produced by Bradford Productions. Its debut was in 1988. Its motto is, \\\"bringing you stories about cars and the people who drive them.\\\"\\nThe program provides reviews and features about new automotive vehicles, including results of test drives. There are also tips about auto mechanics.\", \"score\": 0.7939453125}, {\"long_text\": \"Girlfriend (disambiguation)\\nepisode of \\\"Flight of the Conchords\\\"\\nLiterature.\\n- \\\"Girlfriend\\\" (magazine), an Australian magazine for teenage girls\\n- \\\"Girlfriends\\\" (magazine), an American women's magazine\\n- \\\"Girl Friend\\\" (manga), a Japanese manga by Masaya Hokazono and Court Betten\\n- \\\"Girl Friends\\\" (manga), a Japanese yuri manga series by Milk Morinaga\\nMusic.\\n- Girlfriend (band), an Australian pop group\\n- Girl Friends (band), a\", \"score\": 0.7958984375}]}\n\n[[ ## thought_1 ## ]]\nBased on the search results, it seems that both Truckin' Magazine and Girlfriends have been related to providing relationship advice at some point, but it is unclear if they still offer this advice.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Are Truckin' Magazine and Girlfriends still offering relationship advice?\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Are Truckin' Magazine and Girlfriends still offering relationship advice?\", \"passages_this_hop\": [{\"long_text\": \"Women In Trucking Association, Inc\\nindustry. In 2014, the Women In Trucking Association also started a monthly segment on the Dave Nemo Show.\\nIn 2012, \\\"Redefining the Road\\\", became the association's official member publication. Its total readership is approximately 15,000.\\nIn 2015, Women In Trucking then established the “Distinguished Woman in Logistics” award sponsored by TMW Systems and also created the WIT Index. It also held the first \\\"Accelerate!\\\" conference and expo in Dallas, Texas. Mary Aufdemberg also became the new chairwoman of the\", \"score\": 0.796875}, {\"long_text\": \"Today's Trucking\\n) until April 1988 when it became a monthly publication.\\nUntil 2011, the magazine used to be delivered to subscribers only and it had around 29 000 subscribers. But as of 2011, \\\"Today’s Trucking\\\" replaced a sister magazine called \\\"Highway Star\\\" in truck stops. About 40 000 Highway Star magazines were delivered to truck stops across Canada until the magazine was discontinued in 2011. Its last issue was August 2011. As of 2012, \\\"Today’s Trucking\\\" is delivered to truck stops across Canada as\", \"score\": 0.80029296875}, {\"long_text\": \"Judith Newman\\n\\\" commented that she squandered \\\"an opportunity to question the common wisdom that it is \\\"Britney\\\" [Spears] who is insane, not those around her.\\\"\\nNewman has written a regular column for \\\"Ladies Home Journal\\\" (\\\"My Life as a Mom\\\") and has written sex columns for \\\"Mademoiselle\\\" and \\\"American Health.\\\" She wrote a relationship column for the defunct teen girls' magazine \\\"YM\\\", and an etiquette column (\\\"Manner Up\\\") for \\\"Parade\\\".\", \"score\": 0.80078125}, {\"long_text\": \"Nancy Moran\\njoined Four Bitchin' Babes in 2005. The group toured to promote the album, \\\"Diva Nation...Where Music, Laughter & Girlfriends Reign!\\\" (2009).\\nIn addition to performing music, she also teaches songwriting and music business workshops for music organizations such as the Nashville Songwriters Association (NSAI) and TAXI. She co-created the audio recording \\\"The Songwriter's Survival Kit\\\". Moran also provides music career coaching and consulting through her company, Azalea Music Group.\\nShe is married to the\", \"score\": 0.80078125}, {\"long_text\": \"Truckin' Magazine\\nheaded up the inaugural issue of Truckin’. This also included managing editor Steve Stillwell, who in 1985 would run the title into the late ‘90s. Other Editors include Dick DeLoach, Kevin Wilson, Dan Sanchez (2000-2002), Steve Warner (2002-2008), and Dan Ward (2008-2014). Current Editor-in-Chief is Jeremy Cook (2014-Present).\\nFrequency and Sales.\\nIn 1975, the first issue was to be a “one-shot,” a\", \"score\": 0.8056640625}]}\n\n[[ ## thought_2 ## ]]\nBased on the search results, it seems that both Truckin' Magazine and Girlfriends have been related to providing relationship advice at some point, but it is unclear if they still offer this advice.\n\n[[ ## tool_name_2 ## ]]\nfinish\n\n[[ ## tool_args_2 ## ]]\n{}\n\n[[ ## observation_2 ## ]]\nCompleted.",
+        "reasoning": "Based on the search results, it seems that both Truckin' Magazine and Girlfriends have been related to providing relationship advice at some point, but it is unclear if they still offer this advice. Truckin' Magazine is currently a sport truck magazine, and Girlfriends was a women's magazine that provided relationship advice from a lesbian perspective. However, the search results do not provide clear information on whether they still offer relationship advice.",
+        "answer": "no"
+      },
+      {
+        "question": "Apan Amar Apan was a film that had music composed by which Indian composer?",
+        "answer": "Rahul Dev Burman",
+        "dspy_uuid": "81c4f9b1-8b0c-4741-bf77-0224950ee84b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "in the 1975–76, Seattle SuperSonics lost to a team based in which US state ?",
+        "answer": "Arizona",
+        "dspy_uuid": "e0680059-fa08-4b54-b517-388dd50a17fd",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was the name of the man who Carol Kane played the wife of who was a lovable-but-goofy mechanic in a television series?",
+        "answer": "Latka Gravas",
+        "dspy_uuid": "10f04e96-aacb-4bec-9a09-fb4c03b08bac",
+        "dspy_split": "train"
+      },
+      {
+        "question": "In addition to the Austrian passport, what is needed to gain access to 173 countries and territories?",
+        "answer": "national identity card",
+        "dspy_uuid": "2fcaecca-5968-46a2-8427-aa680b1ac40c",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which of these Asian directors was behind the science fiction adventure film \"Snowpiercer\", Bong Joon-ho or Vincent Kok?",
+        "answer": "Bong",
+        "dspy_uuid": "bb1aeeae-6ce0-44f2-9e24-d2f4cbd0d10a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Where did the younger brother of Titus Davis play college football?",
+        "answer": "Western Michigan",
+        "dspy_uuid": "6bdff10c-18f2-4436-8a40-60612454bb19",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are Smyrnium and Nymania both types of plant?",
+        "answer": "yes",
+        "dspy_uuid": "b603bcb5-c5d9-4006-898b-336cd6657f41",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which major river is Buford, North Dakota nearest to?",
+        "answer": "the Missouri River",
+        "dspy_uuid": "dae8c339-5432-4a13-be3c-1b947d524f2e",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Were Dorothy Arzner and Richard Wallace both French film directors?",
+        "answer": "no",
+        "dspy_uuid": "5d5d2c10-8833-423d-b66b-f9e550ceea48",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Konnichiwa was launched in a broadcast that was streamed by the platform that was founded in what city in 2010?",
+        "answer": "London",
+        "dspy_uuid": "c36ae418-ff9d-46ff-82d8-0f76a8e969b6",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which American actress who made their film debut in the 1995 teen drama \"Kids\" was the co-founder of Voto Latino?",
+        "answer": "Rosario Dawson",
+        "dspy_uuid": "75e51aab-20c9-4350-9f14-297caa149a5b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The Garand carbine was created by a man with what nationality?",
+        "answer": "Canadian-American",
+        "dspy_uuid": "1ba688e7-6590-4a62-9814-17d504649902",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What role does Ghanashyam Nayak play in India's longest running sitcom serial?",
+        "answer": "Natwarlal Prabhashankar Undhaiwala",
+        "dspy_uuid": "cf58747d-2fef-4d69-8132-7b4afa19ec0f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who is the wife of Charlemagne who is a step mother to Pepin the Hunchback?",
+        "answer": "Hildegard",
+        "dspy_uuid": "2819fa07-f272-49c3-af83-0d6f2393ddd2",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

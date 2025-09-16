@@ -1,0 +1,285 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "in the 1975\u201376, Seattle SuperSonics lost to a team based in which US state ?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"in the 1975\u201376, Seattle SuperSonics lost to a team based in which US state ?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"in the 1975\u201376, Seattle SuperSonics lost to a team based in which US state ?\", \"passages_this_hop\": [{\"long_text\": \"1975\u201376 Seattle SuperSonics season | The 1975\u201376 Seattle SuperSonics season was the 9th season of the Seattle SuperSonics in the National Basketball Association (NBA). The SuperSonics finished the season in second place in the Western Conference with a 43\u201339 record, the same as the previous year and reached the playoffs for a second consecutive season, where they lost to the Phoenix Suns in the Conference Semifinals in six games.\", \"score\": 22.984375}, {\"long_text\": \"1974\u201375 Seattle SuperSonics season | The 1974\u201375 Seattle SuperSonics season was the 8th season of the Seattle SuperSonics in the National Basketball Association (NBA). In their second season with Bill Russell as head coach and with rookies comprising half the roster, the SuperSonics finished the regular season in 4th place in the Western Conference with a 43\u201339 record and reached the playoffs for the first time in franchise history. After defeating the Detroit Pistons in 3 games in the first round in a best-of-three series, the team fell to the future champions Golden State Warriors in six games.\", \"score\": 21.65625}, {\"long_text\": \"1977\u201378 Seattle SuperSonics season | The 1977\u201378 Seattle SuperSonics season was the 11th season of the franchise in the National Basketball Association (NBA). With a disappointing 5\u201317 start, the Sonics replaced coach Bob Hopkins with future Hall of Famer Lenny Wilkens, who led the team to a 47\u201335 finish. After upsetting the defending champions Portland Trail Blazers in the Western Conference Semifinals, the Sonics made their first trip to the NBA Finals, where they lost the series to the Washington Bullets in 7 games.\", \"score\": 20.453125}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, I found information about the 1975-76 Seattle SuperSonics season. They lost to the Phoenix Suns in the Conference Semifinals. Now, I need to find out which US state Phoenix is located in.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"which US state is Phoenix located in?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"which US state is Phoenix located in?\", \"passages_this_hop\": [{\"long_text\": \"Phoenix, Maryland | Phoenix is an unincorporated community located in Baltimore County in the State of Maryland in the United States of America. It is located at latitude 39\u00b030'59\\\" North, longitude 76\u00b036'59\\\" West. The United States Postal Service has assigned Phoenix the ZIP code 21131.\", \"score\": 26.53125}, {\"long_text\": \"Phoenix, Arizona | Phoenix ( ) is the capital and most populous city of the U.S. state of Arizona. With 1,615,017 people (as of 2016 ), Phoenix is the fifth most populous city nationwide, the most populous state capital in the United States, and the only state capital with a population of more than one million residents.\", \"score\": 26.03125}, {\"long_text\": \"Phoenix, Oregon | Phoenix is a city in Jackson County, Oregon, United States. The population was 4,538 at the 2010 census. Phoenix is a part of the Medford Metropolitan Statistical Area, in the Rogue Valley, and is 3 mi southwest of Medford on Interstate 5.\", \"score\": 25.296875}]}",
+        "next_thought": "The search results show that there are multiple locations named Phoenix, but the most relevant one for the context of the basketball game is Phoenix, Arizona. Therefore, the team the Seattle SuperSonics lost to was based in Arizona.",
+        "next_tool_name": "finish",
+        "next_tool_args": {}
+      },
+      {
+        "question": "The Garand carbine was created by a man with what nationality?",
+        "answer": "Canadian-American",
+        "dspy_uuid": "4ea3b6dd-07cd-4e7e-b855-2e19bd91324f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "George Keith was probably the last Earl Marishal at what ruined motte and bailey castle in Aberdeenshire, Scotland?",
+        "answer": "Inverugie Castle",
+        "dspy_uuid": "2cecab48-9f9e-4aa2-91cb-a74f48d8dcba",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which building, Olympic Tower or Latting Observatory, is no longer erect?",
+        "answer": "Latting Observatory",
+        "dspy_uuid": "6af06248-ee28-48ea-9b1e-ab32839e9c98",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What date did the American actress and singer-songwriter, known for her role as Peggy Bundy, release her first album?",
+        "answer": "April 19, 1994",
+        "dspy_uuid": "3e820b2f-c210-4be3-b45c-953525e72c63",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which artist started recording\/performing earlier David Donato or Moya Brennan?",
+        "answer": "Moya Brennan",
+        "dspy_uuid": "a235a618-8c75-4519-9f9c-97e312c339dd",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which of Adelaide Metro's stations is located at the base of the Mount Lofty Ranges?",
+        "answer": "Belair railway station",
+        "dspy_uuid": "9cd87da6-f856-408c-b27b-2b4deb3a6768",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What Nigerian president appointed the Managing Director of the NPA in 2016?",
+        "answer": "Muhammadu Buhari",
+        "dspy_uuid": "d10467d5-970b-44ef-9551-1dee4808cd37",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Gulfstream International Airlines later became a regional carrier based out of what airport?",
+        "answer": "Fort Lauderdale-Hollywood International Airport",
+        "dspy_uuid": "cad8e9d3-7e10-463d-bdd6-8eaf043a5e60",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Jay Simon is best known for her role as a flight attendant in a movie directed by which director ?",
+        "answer": "Clare Kilner",
+        "dspy_uuid": "84977272-7aac-4688-9585-6b2512555b74",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are both Ceratophyllum and Eucomis a genus of flowering plants?",
+        "answer": "yes",
+        "dspy_uuid": "501c656e-66bf-4fa9-9bce-af80aeda0bc3",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What role does Ghanashyam Nayak play in India's longest running sitcom serial?",
+        "answer": "Natwarlal Prabhashankar Undhaiwala",
+        "dspy_uuid": "2f730fe4-b5ee-4d0f-984e-052102c1a290",
+        "dspy_split": "train"
+      },
+      {
+        "question": "ShopBack is affiliated with which Indian electronic payment brand?",
+        "answer": "Paytm",
+        "dspy_uuid": "92ab0741-65b9-4cce-bfd8-7e6b2876203f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which publication has been published by a greater number of groups, House Beautiful or Smithsonian?",
+        "answer": "House Beautiful",
+        "dspy_uuid": "5214008c-0ece-4acb-8c1b-cc5cea8c957b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was the name of the man who Carol Kane played the wife of who was a lovable-but-goofy mechanic in a television series?",
+        "answer": "Latka Gravas",
+        "dspy_uuid": "13786413-28f9-4cf4-9725-d978a8c5c929",
+        "dspy_split": "train"
+      },
+      {
+        "question": "what is the largest university press in the world that published Oxford Companions?",
+        "answer": "Oxford University Press",
+        "dspy_uuid": "a5666d88-09df-4e77-8fdc-628d273b7a19",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!<\/desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.<\/desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "in the 1975\u201376, Seattle SuperSonics lost to a team based in which US state ?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"in the 1975\u201376, Seattle SuperSonics lost to a team based in which US state ?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"in the 1975\u201376, Seattle SuperSonics lost to a team based in which US state ?\", \"passages_this_hop\": [{\"long_text\": \"1975\u201376 Seattle SuperSonics season | The 1975\u201376 Seattle SuperSonics season was the 9th season of the Seattle SuperSonics in the National Basketball Association (NBA). The SuperSonics finished the season in second place in the Western Conference with a 43\u201339 record, the same as the previous year and reached the playoffs for a second consecutive season, where they lost to the Phoenix Suns in the Conference Semifinals in six games.\", \"score\": 22.984375}, {\"long_text\": \"1974\u201375 Seattle SuperSonics season | The 1974\u201375 Seattle SuperSonics season was the 8th season of the Seattle SuperSonics in the National Basketball Association (NBA). In their second season with Bill Russell as head coach and with rookies comprising half the roster, the SuperSonics finished the regular season in 4th place in the Western Conference with a 43\u201339 record and reached the playoffs for the first time in franchise history. After defeating the Detroit Pistons in 3 games in the first round in a best-of-three series, the team fell to the future champions Golden State Warriors in six games.\", \"score\": 21.65625}, {\"long_text\": \"1977\u201378 Seattle SuperSonics season | The 1977\u201378 Seattle SuperSonics season was the 11th season of the franchise in the National Basketball Association (NBA). With a disappointing 5\u201317 start, the Sonics replaced coach Bob Hopkins with future Hall of Famer Lenny Wilkens, who led the team to a 47\u201335 finish. After upsetting the defending champions Portland Trail Blazers in the Western Conference Semifinals, the Sonics made their first trip to the NBA Finals, where they lost the series to the Washington Bullets in 7 games.\", \"score\": 20.453125}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, I found information about the 1975-76 Seattle SuperSonics season. They lost to the Phoenix Suns in the Conference Semifinals. Now, I need to find out which US state Phoenix is located in.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"which US state is Phoenix located in?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"which US state is Phoenix located in?\", \"passages_this_hop\": [{\"long_text\": \"Phoenix, Maryland | Phoenix is an unincorporated community located in Baltimore County in the State of Maryland in the United States of America. It is located at latitude 39\u00b030'59\\\" North, longitude 76\u00b036'59\\\" West. The United States Postal Service has assigned Phoenix the ZIP code 21131.\", \"score\": 26.53125}, {\"long_text\": \"Phoenix, Arizona | Phoenix ( ) is the capital and most populous city of the U.S. state of Arizona. With 1,615,017 people (as of 2016 ), Phoenix is the fifth most populous city nationwide, the most populous state capital in the United States, and the only state capital with a population of more than one million residents.\", \"score\": 26.03125}, {\"long_text\": \"Phoenix, Oregon | Phoenix is a city in Jackson County, Oregon, United States. The population was 4,538 at the 2010 census. Phoenix is a part of the Medford Metropolitan Statistical Area, in the Rogue Valley, and is 3 mi southwest of Medford on Interstate 5.\", \"score\": 25.296875}]}\n\n[[ ## thought_1 ## ]]\nThe search results show that there are multiple locations named Phoenix, but the most relevant one for the context of the basketball game is Phoenix, Arizona. Therefore, the team the Seattle SuperSonics lost to was based in Arizona.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "The Seattle SuperSonics lost to the Phoenix Suns in the 1975-76 season. Phoenix Suns is a professional basketball team based in Phoenix, Arizona.",
+        "answer": "Arizona"
+      },
+      {
+        "question": "Which artist started recording\/performing earlier David Donato or Moya Brennan?",
+        "answer": "Moya Brennan",
+        "dspy_uuid": "a235a618-8c75-4519-9f9c-97e312c339dd",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which building, Olympic Tower or Latting Observatory, is no longer erect?",
+        "answer": "Latting Observatory",
+        "dspy_uuid": "6af06248-ee28-48ea-9b1e-ab32839e9c98",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which publication has been published by a greater number of groups, House Beautiful or Smithsonian?",
+        "answer": "House Beautiful",
+        "dspy_uuid": "5214008c-0ece-4acb-8c1b-cc5cea8c957b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "George Keith was probably the last Earl Marishal at what ruined motte and bailey castle in Aberdeenshire, Scotland?",
+        "answer": "Inverugie Castle",
+        "dspy_uuid": "2cecab48-9f9e-4aa2-91cb-a74f48d8dcba",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are both Ceratophyllum and Eucomis a genus of flowering plants?",
+        "answer": "yes",
+        "dspy_uuid": "501c656e-66bf-4fa9-9bce-af80aeda0bc3",
+        "dspy_split": "train"
+      },
+      {
+        "question": "what is the largest university press in the world that published Oxford Companions?",
+        "answer": "Oxford University Press",
+        "dspy_uuid": "a5666d88-09df-4e77-8fdc-628d273b7a19",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Jay Simon is best known for her role as a flight attendant in a movie directed by which director ?",
+        "answer": "Clare Kilner",
+        "dspy_uuid": "84977272-7aac-4688-9585-6b2512555b74",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was the name of the man who Carol Kane played the wife of who was a lovable-but-goofy mechanic in a television series?",
+        "answer": "Latka Gravas",
+        "dspy_uuid": "13786413-28f9-4cf4-9725-d978a8c5c929",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Gulfstream International Airlines later became a regional carrier based out of what airport?",
+        "answer": "Fort Lauderdale-Hollywood International Airport",
+        "dspy_uuid": "cad8e9d3-7e10-463d-bdd6-8eaf043a5e60",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The Garand carbine was created by a man with what nationality?",
+        "answer": "Canadian-American",
+        "dspy_uuid": "4ea3b6dd-07cd-4e7e-b855-2e19bd91324f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which of Adelaide Metro's stations is located at the base of the Mount Lofty Ranges?",
+        "answer": "Belair railway station",
+        "dspy_uuid": "9cd87da6-f856-408c-b27b-2b4deb3a6768",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What Nigerian president appointed the Managing Director of the NPA in 2016?",
+        "answer": "Muhammadu Buhari",
+        "dspy_uuid": "d10467d5-970b-44ef-9551-1dee4808cd37",
+        "dspy_split": "train"
+      },
+      {
+        "question": "ShopBack is affiliated with which Indian electronic payment brand?",
+        "answer": "Paytm",
+        "dspy_uuid": "92ab0741-65b9-4cce-bfd8-7e6b2876203f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What role does Ghanashyam Nayak play in India's longest running sitcom serial?",
+        "answer": "Natwarlal Prabhashankar Undhaiwala",
+        "dspy_uuid": "2f730fe4-b5ee-4d0f-984e-052102c1a290",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What date did the American actress and singer-songwriter, known for her role as Peggy Bundy, release her first album?",
+        "answer": "April 19, 1994",
+        "dspy_uuid": "3e820b2f-c210-4be3-b45c-953525e72c63",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "When was the director of film The Vampire'S Ghost born?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"When was the director of film The Vampire'S Ghost born?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"When was the director of film The Vampire'S Ghost born?\", \"passages_this_hop\": [{\"long_text\": \"\\\"The Vampire's Ghost\\\" | \\\"The Vampire's Ghost The Vampire's Ghost is 1945 American horror film directed by Lesley Selander written by Leigh Brackett and John K. Butler. The film stars John Abbott, Charles Gordon, Peggy Stewart, Grant Withers, Emmett Vogan and Adele Mara. The film is based on John William Polidori's short story \\\"\\\"The Vampyre\\\"\\\" and was released on May 21, 1945, by Republic Pictures. Roy Hendrick (Charles Gordon) returns to the village of Bakunda after a short absence to find that there has been a series of strange murders where each victim was bitten the neck and drained of blood. The local Natives\\\"\", \"score\": 23.234375}, {\"long_text\": \"\\\"The Vampire's Ghost\\\" | \\\"said she worked three weeks on the script with another writer. \\\"\\\"They shot the film in ten days and that was two days over schedule (laughing). They fired the cameraman after the second day because he was taking too much time. But uh, it was not the greatest film ever made.\\\"\\\" The success of this and \\\"\\\"The Phantom Creeps\\\"\\\" encouraged Republic to make another two horror films, \\\"\\\"Valley of the Zombies\\\"\\\" and \\\"\\\"The Catman of Paris\\\"\\\". The Vampire's Ghost The Vampire's Ghost is 1945 American horror film directed by Lesley Selander written by Leigh Brackett and John K. Butler. The\\\"\", \"score\": 21.109375}, {\"long_text\": \"\\\"Nieng Arp\\\" | \\\"Nieng Arp Nieng Arp (Khmer:អាប), with an international title of \\\"\\\"Lady Vampire\\\"\\\" and also known as \\\"\\\"Vampire\\\"\\\" and \\\"\\\" Bodyless\\\"\\\", is a 2004 Cambodian horror film. The film is centered upon Khmer folklore beliefs about \\\"\\\"Arp\\\"\\\" or \\\"\\\"Ap\\\"\\\", a mythical popular ghost which is found in Southeast Asia. The film is directed by Kam Chanthy, a khmer-born director who was trained in Thailand. The film has attracted huge attention from khmer audiences and led a new wave of interest in the local film industry, becoming a hit thriller in its release year. In the middle of a long night, a\\\"\", \"score\": 20.9375}, {\"long_text\": \"\\\"Spooks Run Wild\\\" | \\\"the script. The film was originally known as \\\"\\\"Trail of the Vampire\\\"\\\" then \\\"\\\"Ghosts in the Night\\\"\\\". In April 1941 Monogram announced that Lugosi would make two starring vehicles for the studio, \\\"\\\"The Night of Horror\\\"\\\" and \\\"\\\"Kiss of Death\\\"\\\" and would also appear with the Est Side Kids in \\\"\\\"Ghosts in the Night\\\"\\\". At the last minute, with \\\"\\\"Bowery Blitzkrieg\\\"\\\" director Wallace Fox already attached to Columbia's The Lone Star Vigilantes, Katzman hired Russian-born director Phil Rosen, who had just finished filming Monogram's \\\"\\\"The Deadly Game\\\"\\\" to helm the production. Angelo Rossitto was based on the strength of his\\\"\", \"score\": 20.765625}, {\"long_text\": \"\\\"Umbrage (film)\\\" | \\\"Umbrage (film) Umbrage: The First Vampire, also known as A Vampire's Tale, is a 2009 British horror film written and directed by Drew Cullingham as his directorial debut. The film stars Doug Bradley, Rita Ramnani and James Fisher. The film had its first public screening on 31 October 2009, at the London FrightFest Film Festival, and in 2010 was picked up by Lionsgate for 2011 and 2012 DVD distribution. Jacob (Doug Bradley) is an antiques dealer who sets off with his new young and pregnant wife Lauren (Grace Vallorani) and his stepdaughter, Rachel (Rita Ramnani) to a forest homestead in\\\"\", \"score\": 20.6875}]}\n\n[[ ## thought_0 ## ]]\nI will now extract the relevant information about the director of the film The Vampire's Ghost from the searched documents.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Who is the director of the film The Vampire's Ghost?\", \"trajectory_id\": \"The Vampire's Ghost\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Who is the director of the film The Vampire's Ghost?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Mr. Vampire\\\" | \\\"director by Sammo Hung to play the main role. The director had seen Lam before on The Prodigal Son which the director had worked on. The director noted in an interview that \\\"\\\"He seems cold but actually he is with a good heart\\\"\\\" that was why he was suitable for the role. The director had still not settled the actress to play ghost's role. The role ended up going to Wong Siu-fung, who impressed Ricky Lau in her previous film 'Person at the end'. Chin Siu-ho was chosen because he knew Kung Fu and all about action scenes. The Director\\\"\", \"score\": 24.609375}, {\"long_text\": \"\\\"The Ghost Writer (film)\\\" | \\\"The Ghost Writer (film) The Ghost Writer (released as The Ghost in the United Kingdom and Ireland) is a 2010 Franco-German-British political thriller film directed by Roman Polanski. The film is an adaptation of a Robert Harris novel, \\\"\\\"The Ghost\\\"\\\", with the screenplay written by Polanski and Harris. It stars Ewan McGregor, Pierce Brosnan, Kim Cattrall and Olivia Williams. The film was a critical and commercial success and won numerous cinematic awards including Best Director for Polanski at the 60th Berlin International Film Festival and also at the 23rd European Film Awards in 2010. A British ghostwriter (Ewan McGregor) is\\\"\", \"score\": 23.40625}, {\"long_text\": \"\\\"Box of Shadows\\\" | \\\"Eisenberg and Liz Fenning for the leads. Director Mauro Borelli began shooting on June 29, 2009 in Reseda and Sun Valley. Box of Shadows Box of Shadows (aka The Ghostmaker) is an American fantasy thriller film directed by Mauro Borrelli, produced by Ed Polgardy and Scottt Rudolph and written from Borelli and Scott Svatos. The film stars Domiziano Arcangeli, Ford Austin and Naomi Ueno. A group of young college students find an old 15th-century coffin, which is equipped with a part clockwork-mechanical/supernatural contraption that enables contact with spirits and even allows one to experience becoming a ghost for a period\\\"\", \"score\": 23.0625}, {\"long_text\": \"\\\"The Ghost (1963 film)\\\" | \\\"The Ghost (1963 film) The Ghost (Italian title: Lo Spettro) is a 1963 Italian horror film directed by Riccardo Freda, using the pseudonym \\\"\\\"Robert Hampton\\\"\\\". The film stars Barbara Steele and Peter Baldwin. Other titles for the film include The Spectre and Lo Spettro del Dr. Hichcock. In 1910 Scotland, the ailing Dr. Hichcock (Elio Jotta) presides over a seance in which his housekeeper, Catherine (Harriet Medin), is the medium. Hichcock's wife, Margaret (Barbara Steele), is having an affair with Dr. Livingstone (Peter Baldwin). She persuades her lover to murder her husband. During the distribution of Hichcock's estate, Catherine and\\\"\", \"score\": 23.046875}, {\"long_text\": \"\\\"The Ghost (2008 film)\\\" | \\\"The Ghost (2008 film) The Ghost () is a 2008 Russian thriller film directed by Karen Oganesyan. Crime fiction author Anton Prachenko is experiencing a creative crisis. New books are not written, old ones are badly sold. In addition there are problems with his small son and beloved woman which does not help with creating masterpieces. The legendary hired killer nicknamed as \\\"\\\"Ghost\\\"\\\" mercilessly shoots up a car with two people inside before his very eyes and helps Prachenko get out of his crisis in an unusual way. The killer becomes his ideological mastermind, brutally and visually revealing to him\\\"\", \"score\": 23.015625}]}\n\n[[ ## thought_1 ## ]]\nI will now extract the relevant information about the birth date of the director of the film The Vampire's Ghost from the searched documents.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"What is the birth date of Lesley Selander?\", \"trajectory_id\": \"The Vampire's Ghost\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"What is the birth date of Lesley Selander?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Lesley Selander\\\" | \\\"Lesley Selander Lesley Selander (May 26, 1900 – December 5, 1979) was an American film director of Westerns and adventure movies. His career as director, spanning 127 feature films and dozens of TV episodes, lasted from 1936-68. Before that, Selander was assistant director on films such as \\\"\\\"The Cat and the Fiddle\\\"\\\" (1934), \\\"\\\"A Night at the Opera\\\"\\\" (1935), and Fritz Lang's \\\"\\\"Fury\\\"\\\" (1936). To this day Selander remains one of the most prolific directors of feature Westerns in cinema history, having taken the helm for 107 Westerns between his first directorial feature in 1936 and 1967. In 1956 he\\\"\", \"score\": 23.5625}, {\"long_text\": \"\\\"Lesley Selander\\\" | \\\"was nominated for the Directors Guild of America award for Outstanding Directorial Achievement in Television, for his work directing a 1954 episode of Lassie. Lesley Selander Lesley Selander (May 26, 1900 – December 5, 1979) was an American film director of Westerns and adventure movies. His career as director, spanning 127 feature films and dozens of TV episodes, lasted from 1936-68. Before that, Selander was assistant director on films such as \\\"\\\"The Cat and the Fiddle\\\"\\\" (1934), \\\"\\\"A Night at the Opera\\\"\\\" (1935), and Fritz Lang's \\\"\\\"Fury\\\"\\\" (1936). To this day Selander remains one of the most prolific directors of\\\"\", \"score\": 22.921875}, {\"long_text\": \"\\\"Alis Lesley\\\" | \\\"Alis Lesley Alis Lesley (born Alice Lesley, April 20, 1938) is an American former rockabilly singer, once billed as \\\"\\\"the female Elvis Presley.\\\"\\\" Lesley was born in Chicago, Illinois, United States. Her family later moved to Phoenix, Arizona, where she attended Phoenix Junior College. She majored in television and radio, and began singing rockabilly while a student. She was discovered by Kathryn Godfrey, a popular Phoenix television personality and the sister of Arthur Godfrey. With Ms. Godfrey's help, Lesley became a local favorite following her appearances on television station KTVK and in local night clubs. Lesley achieved brief national celebrity\\\"\", \"score\": 20.0}, {\"long_text\": \"\\\"Lesley Rowe\\\" | \\\"Lesley Rowe Lesley Martha Gibson (née Rowe, 21 March 1929 – 5 July 2011) was a New Zealand sprinter who, as Lesley Rowe, won a silver medal representing her country at the 1950 British Empire Games. Rowe was born in the Auckland suburb of Grey Lynn on 21 March 1929, the daughter of Lawrence John Rowe and Clarice Rowe (née Downs). She was educated at Epsom Girls' Grammar School from 1943 to 1946, and was a prefect in her final year. Rowe won the New Zealand national 220 yards sprint title four times: in 1948, 1951, 1952, and 1953. In\\\"\", \"score\": 19.78125}, {\"long_text\": \"\\\"Lesley Garrett\\\" | \\\"Lesley Garrett Lesley Garrett, CBE (born 10 April 1955) is an English soprano singer, musician, broadcaster and media personality. She is noted for being at home in opera and \\\"\\\"crossover music\\\"\\\". Garrett was born in the town of Thorne, near Doncaster, South Yorkshire into a musical family. She attended Thorne Fieldside Infant and Junior Schools and Thorne Grammar School, where she performed in school plays and musicals and passed 10 O-levels and an A-level in music. As she grew up she inherited her family's love of music. Her grandfather Colin Wall was a classical pianist; her father Derek worked as\\\"\", \"score\": 19.609375}]}\n\n[[ ## thought_2 ## ]]\nI have found the birth date of the director of the film The Vampire's Ghost, which is May 26, 1900.\n\n[[ ## tool_name_2 ## ]]\nfinish\n\n[[ ## tool_args_2 ## ]]\n{}\n\n[[ ## observation_2 ## ]]\nCompleted.",
+        "reasoning": "The birth date of the director of the film The Vampire's Ghost was found by searching for relevant documents with the original question as the search query. The director's name is Lesley Selander, and his birth date is May 26, 1900.",
+        "answer": "May 26, 1900"
+      },
+      {
+        "augmented": true,
+        "question": "Do both Something Always Happens and The Great Impersonation (1921 film) films have the directors from the same country?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Do both Something Always Happens and The Great Impersonation (1921 film) films have the directors from the same country?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Do both Something Always Happens and The Great Impersonation (1921 film) films have the directors from the same country?\", \"passages_this_hop\": [{\"long_text\": \"\\\"The Great Impersonation (1935 film)\\\" | \\\"The Great Impersonation (1935 film) The Great Impersonation is a 1935 American drama film directed by Alan Crosland and starring Edmund Lowe, Valerie Hobson and Wera Engels. It was adapted from the novel \\\"\\\"The Great Impersonation\\\"\\\" by E. Phillips Oppenheim. It was made by Universal Pictures with some aesthetic similarities to the Universal Horror films of the 1930s. Two other film versions of the story were made with the same title in 1921 and 1942 respectively. Before the First World War, Sir Everard Dominey, a drunken upper-class Englishman, encounters an old acquaintance the sinister German arms dealer Baron Leopold von\\\"\", \"score\": 18.5}, {\"long_text\": \"\\\"The Great Impersonation (1935 film)\\\" | \\\"is equally certain that it is her genuine husband returning from Africa at long-last. Gradually, doubts begin to emerge whether it is the real Dominey who has come home. The Great Impersonation (1935 film) The Great Impersonation is a 1935 American drama film directed by Alan Crosland and starring Edmund Lowe, Valerie Hobson and Wera Engels. It was adapted from the novel \\\"\\\"The Great Impersonation\\\"\\\" by E. Phillips Oppenheim. It was made by Universal Pictures with some aesthetic similarities to the Universal Horror films of the 1930s. Two other film versions of the story were made with the same title\\\"\", \"score\": 17.8125}, {\"long_text\": \"\\\"The Great Impersonation (1942 film)\\\" | \\\"The Great Impersonation (1942 film) The Great Impersonation is a 1942 American thriller film directed by John Rawlins and starring Ralph Bellamy, Evelyn Ankers and Aubrey Mather. It is an adaptation of the 1920 novel \\\"\\\"The Great Impersonation\\\"\\\" by Edward Phillips Oppenheim with the setting moved from the early 1910s of the novel to the Second World War. It was made by Universal Pictures and was a remake of their 1935 film of the same name. German intelligence believe they have planted an agent inside the British establishment by murdering British aristocrat Sir Edward Dominey in Africa and replacing him\\\"\", \"score\": 17.46875}, {\"long_text\": \"\\\"The Great Impersonation (1942 film)\\\" | \\\"to be reunited with his wife. The Great Impersonation (1942 film) The Great Impersonation is a 1942 American thriller film directed by John Rawlins and starring Ralph Bellamy, Evelyn Ankers and Aubrey Mather. It is an adaptation of the 1920 novel \\\"\\\"The Great Impersonation\\\"\\\" by Edward Phillips Oppenheim with the setting moved from the early 1910s of the novel to the Second World War. It was made by Universal Pictures and was a remake of their 1935 film of the same name. German intelligence believe they have planted an agent inside the British establishment by murdering British aristocrat Sir Edward\\\"\", \"score\": 17.109375}, {\"long_text\": \"\\\"The Great Impersonation (novel)\\\" | \\\"The book has been adapted to film three times. The first was in 1921, starring James Kirkwood as Everard Dominey/Leopold von Ragastein and directed by George Melford. The second was in 1935, starring Edmund Lowe and directed by Alan Crosland. The last was in 1942, and has significant plot and name changes (mostly to set the story in World War II), Ralph Bellamy stars as Edward Dominey/Leopold von Ragastein, and it is directed by John Rawlins. This book features real political figure Kaiser Wilhelm II. The Duke of Worcester is a title that had never actually existed in English gentry.\\\"\", \"score\": 17.09375}]}\n\n[[ ## thought_0 ## ]]\nNow, I will check if the directors of Something Always Happens and The Great Impersonation (1921 film) are from the same country.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Are the directors of Something Always Happens and The Great Impersonation (1921 film) from the same country?\", \"trajectory_id\": \"The Great Impersonation (1921 film)\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Are the directors of Something Always Happens and The Great Impersonation (1921 film) from the same country?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Something Always Happens\\\" | \\\"too displeased, having come to respect Peter. When Peter runs into George outside Hatch's office, he realises who the real traitor is. Peter then reconciles with Cynthia, much to her father's delight. Something Always Happens Something Always Happens is a 1934 British romantic comedy film directed by Michael Powell and starring Ian Hunter and Nancy O'Neil. It was made as a Quota quickie. Peter Middleton is an unemployed car salesman. He rescues hungry street urchin Billy, who has been caught stealing from a street vendor, and takes him under his wing. Peter rents a room. He has no money, but\\\"\", \"score\": 17.40625}, {\"long_text\": \"\\\"Something Always Happens\\\" | \\\"Something Always Happens Something Always Happens is a 1934 British romantic comedy film directed by Michael Powell and starring Ian Hunter and Nancy O'Neil. It was made as a Quota quickie. Peter Middleton is an unemployed car salesman. He rescues hungry street urchin Billy, who has been caught stealing from a street vendor, and takes him under his wing. Peter rents a room. He has no money, but Mrs. Badger, the landlady, is too kindhearted to turn the pair away. When an acquaintance mentions that he has a client who wants to purchase a 1934 Bentley, Peter sees an opportunity\\\"\", \"score\": 17.34375}, {\"long_text\": \"\\\"Something Different (film)\\\" | \\\"Something Different (film) Something Different is a lost 1920 American silent drama film produced and distributed by Realart Pictures, an affiliate of Famous Players-Lasky and Paramount Pictures. It is based on a novel, \\\"\\\"Calderon's Prisoner\\\"\\\", by Alice Duer Miller. The picture was directed by Roy William Neill with some filming being done in Cuba. Some of the cast's passport photos to enter Cuba for this production are found at Flickr. Leo Tover, then 19 years old, later became a well known cinematographer. He took a passport photo to go to Cuba with other members of the film's company. It is\\\"\", \"score\": 17.109375}, {\"long_text\": \"\\\"Something Different (film)\\\" | \\\"they lived happily thereafter. Something Different (film) Something Different is a lost 1920 American silent drama film produced and distributed by Realart Pictures, an affiliate of Famous Players-Lasky and Paramount Pictures. It is based on a novel, \\\"\\\"Calderon's Prisoner\\\"\\\", by Alice Duer Miller. The picture was directed by Roy William Neill with some filming being done in Cuba. Some of the cast's passport photos to enter Cuba for this production are found at Flickr. Leo Tover, then 19 years old, later became a well known cinematographer. He took a passport photo to go to Cuba with other members of the\\\"\", \"score\": 17.0}, {\"long_text\": \"\\\"Coincidence (1921 film)\\\" | \\\"Coincidence (1921 film) Coincidence is a 1921 American silent comedy film starring Robert Harron and June Walker. It was Harron's first starring role after signing a deal with Metro Pictures Corporation, as well as his last film; Harron died of a self-inflicted gunshot wound in September 1920 between completion of filming and the release. It was directed by Chester \\\"\\\"Chet\\\"\\\" Withey and written by Brian Hooker based on a story by Howard E. Morton. The cinematographer was Louis C. Bitzer. According to film historian Anthony Slide, \\\"\\\"With Robert Harron's death, the film industry for the first time had to deal\\\"\", \"score\": 16.453125}]}\n\n[[ ## thought_1 ## ]]\nNow, I will check if the directors of Something Always Happens and The Great Impersonation (1921 film) are from the same country.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "The director of Something Always Happens is Michael Powell, a British director. The director of The Great Impersonation (1921 film) is George Melford, an American director. Since they are from different countries, the answer is no.",
+        "answer": "no"
+      },
+      {
+        "question": "Were Dallin Malmgren and A.B.M. Fazle Karim Chowdhury of the same nationality?",
+        "answer": "no"
+      },
+      {
+        "question": "When did Prince Henry, Duke Of Cumberland And Strathearn's mother die?",
+        "answer": "8 February 1772"
+      },
+      {
+        "question": "Who is younger, Andrea Vaturi or Hamdan Bin Rashid Al Maktoum?",
+        "answer": "Andrea Vaturi"
+      },
+      {
+        "question": "Does Tim Reid have the same nationality as Devon Martinus?",
+        "answer": "no"
+      },
+      {
+        "question": "What nationality is the director of film Arcade (Film)?",
+        "answer": "America"
+      },
+      {
+        "question": "Where was the director of film The Fascist born?",
+        "answer": "Rome"
+      },
+      {
+        "question": "Did John Agoglia and John E. Toews have the same nationality?",
+        "answer": "yes"
+      },
+      {
+        "question": "Who is Rhescuporis I (Odrysian)'s paternal grandfather?",
+        "answer": "Raizdos"
+      },
+      {
+        "question": "What nationality is the director of film Kadvi Hawa?",
+        "answer": "India"
+      },
+      {
+        "question": "Which country the director of film On The Riviera is from?",
+        "answer": "American"
+      },
+      {
+        "question": "Do both directors of films The Piano Tuner Has Arrived and The Young Philadelphians share the same nationality?",
+        "answer": "no"
+      },
+      {
+        "question": "What nationality is the director of film Age Of Consent (Film)?",
+        "answer": "British"
+      },
+      {
+        "question": "Are Shokrab, Kermanshah and Pis-Losap both located in the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Do both Bait (1954 Film) and Dharm Adhikari films have the directors from the same country?",
+        "answer": "no"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Gulfstream International Airlines later became a regional carrier based out of what airport?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Gulfstream International Airlines later became a regional carrier based out of what airport?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Gulfstream International Airlines later became a regional carrier based out of what airport?\", \"passages_this_hop\": [{\"long_text\": \"Gulfstream International Airlines | Gulfstream International Airlines was a United States airline that operated from 1988 to 2010. The airline primary operated codeshare flights for major airlines. In December 2010, the airline went bankrupt and its assets were sold. Silver Airways launched as a new regional carrier with assets from Gulfstream.\", \"score\": 23.5}, {\"long_text\": \"Birmingham European Airways | Birmingham European Airways was originally established in 1983 (as Birmingham Executive Airways). The airline as its name implies was based at Birmingham International Airport (BHX\/EGBB) in the UK and operated services geared towards business travellers. The airline began operations on 6 June 1983 with three Jetstream 31 aircraft, flying services from Birmingham to Copenhagen, Zurich and Milan. A Saab 340 was introduced in February 1985, but it suffered severe reliability problems in the airline's service, and was retired at the end of the year. To replace the Saab, Birmingham Executive chose the Gulfstream I, operating a wet-leased aircraft from September 1986, with the airline receiving the first of its own Gulfstreams, fitted out as 24-seat airliners in February 1987. Birmingham European Airways later introduced a number of BAC 1-11 aircraft into its fleet.\", \"score\": 19.984375}, {\"long_text\": \"Gulf Air Transport | Gulf Air Transport (ICAO: GAT) was a small charter airline headquartered at the Acadiana Regional Airport (ARA), a former U.S. Navy military airbase located in New Iberia, Louisiana, United States. The company flew piston, turboprop and jet aircraft types, and conducted flight operations from 1979 until 1990.\", \"score\": 19.78125}]}\n\n[[ ## thought_0 ## ]]\nThe search results indicate that Gulfstream International Airlines was not a regional carrier based out of Birmingham International Airport. I need to look further for information about the airport where Gulfstream International Airlines operated as a regional carrier.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Gulfstream International Airlines later became a regional carrier based out of what airport?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Gulfstream International Airlines later became a regional carrier based out of what airport?\", \"passages_this_hop\": [{\"long_text\": \"Florida Commuter Airlines | Florida Commuter Airlines was a small U.S. regional airline based out of Palm Beach International Airport that evolved directly from Roberson Air, Inc. which did business as Red Baron Airlines. This happened when Dr. Rudolph P. Scheerer bought out Dr. Clive E. Roberson for a 100% stake in the airline on June 13, 1980. The management structure remained the same except for Dr. Clive E. Roberson. On July 24, 1980, Florida Commuter Airlines received its carrier operating certificate as a commuter and charter operator. It was certified to fly 2 DC-3's and a Piper PA-31 Navajo. On September 9, 1980, and interline agreement was signed with Air Florida. An interline and a bilateral agreement was also signed with Eastern Airlines.\", \"score\": 19.234375}, {\"long_text\": \"Silver Airways | Silver Airways Corp., operating as Silver Airways, is a United States airline with its headquarters in Fort Lauderdale-Hollywood International Airport in unincorporated Broward County, Florida, near Fort Lauderdale. It was founded in 2010 with assets from the former Gulfstream International Airlines, and currently operates around 170 daily scheduled flights to 10 cities in Florida and 8 destinations in the Bahamas, with hubs at Fort Lauderdale, Orlando and Tampa.\", \"score\": 19.171875}, {\"long_text\": \"MidAtlantic Airways | MidAtlantic Airways was a regional airline based at Pittsburgh International Airport in Findlay Township, Pennsylvania, USA. It was a subsidiary of US Airways and operated the Embraer 170 medium-jet aircraft as a US Airways Express carrier. It ceased operations on May 27, 2006.\", \"score\": 19.140625}]}",
+        "next_thought": "Based on the search results, Silver Airways, which took over from Gulfstream International Airlines, operated out of Fort Lauderdale-Hollywood International Airport, indicating that is the airport where Gulfstream International Airlines became a regional carrier.",
+        "next_tool_name": "finish",
+        "next_tool_args": {}
+      },
+      {
+        "augmented": true,
+        "question": "Singwango Secondary School had a sister school in a census-designated place in the town of North Hempstead in what county of New York?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Singwango Secondary School had a sister school in a census-designated place in the town of North Hempstead in what county of New York?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Singwango Secondary School had a sister school in a census-designated place in the town of North Hempstead in what county of New York?\", \"passages_this_hop\": [{\"long_text\": \"Singwango Secondary School | Singwango Secondary School is located in Filabusi, Matabeleland South Province, Zimbabwe. It had a sister school in Carle Place, New York, United States, although Carle Place High School still donates sports equipment and clothes.\", \"score\": 21.4375}, {\"long_text\": \"West Hempstead High School | West Hempstead High School is a public high school located in West Hempstead, Nassau County, New York, U.S.A., and is the only high school operated by the West Hempstead Union Free School District.\", \"score\": 20.703125}, {\"long_text\": \"Great Neck School District | The Great Neck School District is a comprehensive community public school district primarily serving students in Great Neck, New York. It also serves students in some parts of Manhasset and New Hyde Park. It is Union Free School District Number 7 in the Town of North Hempstead, Nassau County, New York, United States, on Long Island.\", \"score\": 20.546875}]}\n\n[[ ## thought_0 ## ]]\nThe search results show that there was a sister school in Carle Place, New York. Now I need to find out which county it is located in.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Carle Place, New York in what county of New York?\", \"trajectory_id\": \"SingwangoSecondarySchool\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Carle Place, New York in what county of New York?\", \"passages_this_hop\": [{\"long_text\": \"Carle Place, New York | Carle Place is a hamlet and census-designated place (CDP) in the Town of North Hempstead in Nassau County, New York, United States. The CDP's population was 4,981 at the 2010 census.\", \"score\": 28.484375}, {\"long_text\": \"Carle Place High School | Carle Place Middle\/High School is a six-year comprehensive public high school located in the hamlet of Carle Place in Nassau County, New York.\", \"score\": 26.5625}, {\"long_text\": \"Carle Place Union Free School District | The Carle Place Union Free School District is a school district that serves all of Carle Place and parts of Westbury and Mineola in central Nassau County, New York.\", \"score\": 26.359375}]}",
+        "next_thought": "The search results indicate that Carle Place is located in Nassau County, New York. Therefore, Singwango Secondary School's sister school in Carle Place, New York, is also in Nassau County, New York.",
+        "next_tool_name": "finish",
+        "next_tool_args": {}
+      },
+      {
+        "question": "Which running back played during the 2017 Kansas City Chiefs season and was released after 9 seasons? ",
+        "answer": "Jamaal RaShaad Jones Charles",
+        "dspy_uuid": "997b8e4d-cf39-4b76-a652-16b32effd11b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What is the name of this Irish singer-songwriter, musician, venture capitalist, businessman, and philanthropist, who wrote \"Love Is Blindness\" on the piano?",
+        "answer": "Bono",
+        "dspy_uuid": "2b96256e-df31-4a37-afc1-2a9279c55517",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Where did the star of Redbelt get a scholarship?",
+        "answer": "London Academy of Music",
+        "dspy_uuid": "2721ccfd-028e-4c83-8249-9452236a2afa",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Seiko Holdings Corporation was formerly known as which watch and jewlery shop?",
+        "answer": "K. Hattori",
+        "dspy_uuid": "82c3da4c-c8c4-45ac-be95-05eb08f79ffb",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What Australian sportsman died in a suburb of Adelaide in the City of Burnside and the City of Campbelltown?",
+        "answer": "Ernest Jones",
+        "dspy_uuid": "5ab33192-8b44-497d-ba4b-fcff64d5716b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Utterby is situated on the road that is in what English region?",
+        "answer": "East Midlands",
+        "dspy_uuid": "36cc48a7-c63f-4f6a-a9f5-c097719d1b43",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Were Dorothy Arzner and Richard Wallace both French film directors?",
+        "answer": "no",
+        "dspy_uuid": "6f6ef4ee-46a6-4830-ae74-fd650934c7a7",
+        "dspy_split": "train"
+      },
+      {
+        "question": "How many copies were sold of the last UK number-one single that was written by Noddy Holder and Jim Lea?",
+        "answer": "in excess of one million copies",
+        "dspy_uuid": "54932a45-25d0-4a77-b6a7-0cc5ff2b9119",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was founded first, Death Cab for Cutie or P.O.D.?",
+        "answer": "P.O.D.",
+        "dspy_uuid": "63d4cf8a-96d9-49ab-8d74-751dd7bbceb8",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What team does the athlete featured on the cover of the FIFA 17 video game play for?",
+        "answer": "Borussia Dortmund",
+        "dspy_uuid": "28ae60ee-149d-4bdd-b91e-231ba1714e0a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which major river is Buford, North Dakota nearest to?",
+        "answer": "the Missouri River",
+        "dspy_uuid": "e58554f6-6205-4b0c-be95-ceabc979e8a4",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Jay Simon is best known for her role as a flight attendant in a movie directed by which director ?",
+        "answer": "Clare Kilner",
+        "dspy_uuid": "26a98808-7ca4-4cca-9ad3-b736d3ebf907",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who is the wife of Charlemagne who is a step mother to Pepin the Hunchback?",
+        "answer": "Hildegard",
+        "dspy_uuid": "ccfebf00-aca5-4a6b-aba3-4b8f88b7cdf2",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The Garand carbine was created by a man with what nationality?",
+        "answer": "Canadian-American",
+        "dspy_uuid": "359eda9d-6936-4b4e-ac59-f6fbf8ea7ece",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!<\/desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.<\/desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Gulfstream International Airlines later became a regional carrier based out of what airport?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Gulfstream International Airlines later became a regional carrier based out of what airport?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Gulfstream International Airlines later became a regional carrier based out of what airport?\", \"passages_this_hop\": [{\"long_text\": \"Gulfstream International Airlines | Gulfstream International Airlines was a United States airline that operated from 1988 to 2010. The airline primary operated codeshare flights for major airlines. In December 2010, the airline went bankrupt and its assets were sold. Silver Airways launched as a new regional carrier with assets from Gulfstream.\", \"score\": 23.5}, {\"long_text\": \"Birmingham European Airways | Birmingham European Airways was originally established in 1983 (as Birmingham Executive Airways). The airline as its name implies was based at Birmingham International Airport (BHX\/EGBB) in the UK and operated services geared towards business travellers. The airline began operations on 6 June 1983 with three Jetstream 31 aircraft, flying services from Birmingham to Copenhagen, Zurich and Milan. A Saab 340 was introduced in February 1985, but it suffered severe reliability problems in the airline's service, and was retired at the end of the year. To replace the Saab, Birmingham Executive chose the Gulfstream I, operating a wet-leased aircraft from September 1986, with the airline receiving the first of its own Gulfstreams, fitted out as 24-seat airliners in February 1987. Birmingham European Airways later introduced a number of BAC 1-11 aircraft into its fleet.\", \"score\": 19.984375}, {\"long_text\": \"Gulf Air Transport | Gulf Air Transport (ICAO: GAT) was a small charter airline headquartered at the Acadiana Regional Airport (ARA), a former U.S. Navy military airbase located in New Iberia, Louisiana, United States. The company flew piston, turboprop and jet aircraft types, and conducted flight operations from 1979 until 1990.\", \"score\": 19.78125}]}\n\n[[ ## thought_0 ## ]]\nThe search results indicate that Gulfstream International Airlines was not a regional carrier based out of Birmingham International Airport. I need to look further for information about the airport where Gulfstream International Airlines operated as a regional carrier.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Gulfstream International Airlines later became a regional carrier based out of what airport?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Gulfstream International Airlines later became a regional carrier based out of what airport?\", \"passages_this_hop\": [{\"long_text\": \"Florida Commuter Airlines | Florida Commuter Airlines was a small U.S. regional airline based out of Palm Beach International Airport that evolved directly from Roberson Air, Inc. which did business as Red Baron Airlines. This happened when Dr. Rudolph P. Scheerer bought out Dr. Clive E. Roberson for a 100% stake in the airline on June 13, 1980. The management structure remained the same except for Dr. Clive E. Roberson. On July 24, 1980, Florida Commuter Airlines received its carrier operating certificate as a commuter and charter operator. It was certified to fly 2 DC-3's and a Piper PA-31 Navajo. On September 9, 1980, and interline agreement was signed with Air Florida. An interline and a bilateral agreement was also signed with Eastern Airlines.\", \"score\": 19.234375}, {\"long_text\": \"Silver Airways | Silver Airways Corp., operating as Silver Airways, is a United States airline with its headquarters in Fort Lauderdale-Hollywood International Airport in unincorporated Broward County, Florida, near Fort Lauderdale. It was founded in 2010 with assets from the former Gulfstream International Airlines, and currently operates around 170 daily scheduled flights to 10 cities in Florida and 8 destinations in the Bahamas, with hubs at Fort Lauderdale, Orlando and Tampa.\", \"score\": 19.171875}, {\"long_text\": \"MidAtlantic Airways | MidAtlantic Airways was a regional airline based at Pittsburgh International Airport in Findlay Township, Pennsylvania, USA. It was a subsidiary of US Airways and operated the Embraer 170 medium-jet aircraft as a US Airways Express carrier. It ceased operations on May 27, 2006.\", \"score\": 19.140625}]}\n\n[[ ## thought_1 ## ]]\nBased on the search results, Silver Airways, which took over from Gulfstream International Airlines, operated out of Fort Lauderdale-Hollywood International Airport, indicating that is the airport where Gulfstream International Airlines became a regional carrier.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "The search results indicate that Gulfstream International Airlines later became a regional carrier, and Silver Airways, which acquired the assets of Gulfstream International Airlines, operated out of Fort Lauderdale-Hollywood International Airport.",
+        "answer": "Fort Lauderdale-Hollywood International Airport"
+      },
+      {
+        "augmented": true,
+        "question": "Singwango Secondary School had a sister school in a census-designated place in the town of North Hempstead in what county of New York?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Singwango Secondary School had a sister school in a census-designated place in the town of North Hempstead in what county of New York?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Singwango Secondary School had a sister school in a census-designated place in the town of North Hempstead in what county of New York?\", \"passages_this_hop\": [{\"long_text\": \"Singwango Secondary School | Singwango Secondary School is located in Filabusi, Matabeleland South Province, Zimbabwe. It had a sister school in Carle Place, New York, United States, although Carle Place High School still donates sports equipment and clothes.\", \"score\": 21.4375}, {\"long_text\": \"West Hempstead High School | West Hempstead High School is a public high school located in West Hempstead, Nassau County, New York, U.S.A., and is the only high school operated by the West Hempstead Union Free School District.\", \"score\": 20.703125}, {\"long_text\": \"Great Neck School District | The Great Neck School District is a comprehensive community public school district primarily serving students in Great Neck, New York. It also serves students in some parts of Manhasset and New Hyde Park. It is Union Free School District Number 7 in the Town of North Hempstead, Nassau County, New York, United States, on Long Island.\", \"score\": 20.546875}]}\n\n[[ ## thought_0 ## ]]\nThe search results show that there was a sister school in Carle Place, New York. Now I need to find out which county it is located in.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Carle Place, New York in what county of New York?\", \"trajectory_id\": \"SingwangoSecondarySchool\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Carle Place, New York in what county of New York?\", \"passages_this_hop\": [{\"long_text\": \"Carle Place, New York | Carle Place is a hamlet and census-designated place (CDP) in the Town of North Hempstead in Nassau County, New York, United States. The CDP's population was 4,981 at the 2010 census.\", \"score\": 28.484375}, {\"long_text\": \"Carle Place High School | Carle Place Middle\/High School is a six-year comprehensive public high school located in the hamlet of Carle Place in Nassau County, New York.\", \"score\": 26.5625}, {\"long_text\": \"Carle Place Union Free School District | The Carle Place Union Free School District is a school district that serves all of Carle Place and parts of Westbury and Mineola in central Nassau County, New York.\", \"score\": 26.359375}]}\n\n[[ ## thought_1 ## ]]\nThe search results indicate that Carle Place is located in Nassau County, New York. Therefore, Singwango Secondary School's sister school in Carle Place, New York, is also in Nassau County, New York.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "The search results indicate that Singwango Secondary School had a sister school in Carle Place, New York. Further investigation shows that Carle Place is located in Nassau County, New York. Therefore, the sister school is also in Nassau County, New York.",
+        "answer": "Nassau County"
+      },
+      {
+        "question": "Where did the star of Redbelt get a scholarship?",
+        "answer": "London Academy of Music",
+        "dspy_uuid": "2721ccfd-028e-4c83-8249-9452236a2afa",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What Australian sportsman died in a suburb of Adelaide in the City of Burnside and the City of Campbelltown?",
+        "answer": "Ernest Jones",
+        "dspy_uuid": "5ab33192-8b44-497d-ba4b-fcff64d5716b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The Garand carbine was created by a man with what nationality?",
+        "answer": "Canadian-American",
+        "dspy_uuid": "359eda9d-6936-4b4e-ac59-f6fbf8ea7ece",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What is the name of this Irish singer-songwriter, musician, venture capitalist, businessman, and philanthropist, who wrote \"Love Is Blindness\" on the piano?",
+        "answer": "Bono",
+        "dspy_uuid": "2b96256e-df31-4a37-afc1-2a9279c55517",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What team does the athlete featured on the cover of the FIFA 17 video game play for?",
+        "answer": "Borussia Dortmund",
+        "dspy_uuid": "28ae60ee-149d-4bdd-b91e-231ba1714e0a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who is the wife of Charlemagne who is a step mother to Pepin the Hunchback?",
+        "answer": "Hildegard",
+        "dspy_uuid": "ccfebf00-aca5-4a6b-aba3-4b8f88b7cdf2",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Jay Simon is best known for her role as a flight attendant in a movie directed by which director ?",
+        "answer": "Clare Kilner",
+        "dspy_uuid": "26a98808-7ca4-4cca-9ad3-b736d3ebf907",
+        "dspy_split": "train"
+      },
+      {
+        "question": "How many copies were sold of the last UK number-one single that was written by Noddy Holder and Jim Lea?",
+        "answer": "in excess of one million copies",
+        "dspy_uuid": "54932a45-25d0-4a77-b6a7-0cc5ff2b9119",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which running back played during the 2017 Kansas City Chiefs season and was released after 9 seasons? ",
+        "answer": "Jamaal RaShaad Jones Charles",
+        "dspy_uuid": "997b8e4d-cf39-4b76-a652-16b32effd11b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Utterby is situated on the road that is in what English region?",
+        "answer": "East Midlands",
+        "dspy_uuid": "36cc48a7-c63f-4f6a-a9f5-c097719d1b43",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Were Dorothy Arzner and Richard Wallace both French film directors?",
+        "answer": "no",
+        "dspy_uuid": "6f6ef4ee-46a6-4830-ae74-fd650934c7a7",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which major river is Buford, North Dakota nearest to?",
+        "answer": "the Missouri River",
+        "dspy_uuid": "e58554f6-6205-4b0c-be95-ceabc979e8a4",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was founded first, Death Cab for Cutie or P.O.D.?",
+        "answer": "P.O.D.",
+        "dspy_uuid": "63d4cf8a-96d9-49ab-8d74-751dd7bbceb8",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Seiko Holdings Corporation was formerly known as which watch and jewlery shop?",
+        "answer": "K. Hattori",
+        "dspy_uuid": "82c3da4c-c8c4-45ac-be95-05eb08f79ffb",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

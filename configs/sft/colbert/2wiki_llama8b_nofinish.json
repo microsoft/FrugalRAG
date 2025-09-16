@@ -1,0 +1,27 @@
+{
+    "model": {
+        "model_name_or_path": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "answer_model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "no_finish": true,
+        "max_iters": 5,
+        "max_tokens": 512,
+        "max_retries": 4
+    },
+    "data": {
+        "dataset_name": "2wiki",
+        "input_file": "../data/frugalrag/sft_data/colbert/2wiki/llama8b/m5_nofinish/train_sft.json",
+        "num_examples": 1000
+    },
+    "paths": {
+        "output_path": "../data/frugalrag/sft/colbert/2wiki/llama8b/m5_nofinish/",
+        "prompt_path": "src/prompts/colbert/2wiki/llama8b/m5_nofinish/ans/bootstrapped_1.json"
+    },
+    "sft": {
+        "epochs": 1,
+        "max_seq_len": 4096,
+        "batch_size": 4,
+        "grad_acc": 2,
+        "warmup": 20,
+        "lr": 2e-5
+    }
+}

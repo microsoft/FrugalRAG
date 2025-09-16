@@ -1,0 +1,27 @@
+{
+    "model": {
+        "model_name_or_path": "Qwen/Qwen2.5-3B-Instruct",
+        "answer_model": "Qwen/Qwen2.5-3B-Instruct",
+        "no_finish": true,
+        "max_iters": 5,
+        "max_tokens": 512,
+        "max_retries": 4
+    },
+    "data": {
+        "dataset_name": "musique",
+        "input_file": "datasets/musique_1000.json",
+        "num_examples": 1000, 
+        "num_prompt_examples": 100,
+        "candidates": 7
+    },
+    "search": {
+        "port": [7502], "search_port": 8000,
+        "ndocs": 5
+    },
+    "paths": {
+        "output_path": "../data/frugalrag/sft_data/colbert/musique/qwen3b/m5_nofinish",
+        "prompt_path": "src/prompts/colbert/musique/qwen3b/m5_nofinish/react/",
+        "prompt_save_path": "src/prompts/colbert/musique/qwen3b/m5_nofinish",
+        "mb_logs": ""
+    }
+}

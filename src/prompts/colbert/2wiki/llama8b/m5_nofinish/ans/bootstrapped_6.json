@@ -1,0 +1,156 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question`.\n\nYou must decide what to do next by providing:\n\n- Thought: reasoning about the current step\n\n- Tool Name: one of the available tools\n\n- Tool Args: A valid JSON with the necessary keys.\n\nRepeat this for a few steps to gather information.\n\nYou do not need to produce a final answer — just use the tools iteratively.\nMake sure to include all required Tool Args as a valid JSON object.\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Are director of film Move (1970 Film) and director of film Méditerranée (1963 Film) from the same country?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Are director of film Move (1970 Film) and director of film Méditerranée (1963 Film) from the same country?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Are director of film Move (1970 Film) and director of film Méditerranée (1963 Film) from the same country?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Move (1970 film)\\\" | \\\"Move (1970 film) Move is a 1970 American comedy film starring Elliott Gould, Paula Prentiss and Geneviève Waïte, and directed by Stuart Rosenberg. The screenplay was written by Joel Lieber and Stanley Hart, adapted from a novel by Lieber. The film covers three days in the life of Hiram Jaffe a would-be playwright who supplements his living as a porn writer and by walking dogs. He and his wife, Dolly, are moving to a new apartment on New York's Upper West Side. Jaffe is beset by problems, including his inability to persuade the moving man to move the couple's furniture,\\\"\", \"score\": 20.328125}, {\"long_text\": \"\\\"Move (1970 film)\\\" | \\\"suicide in May 1971, aged 35. Move (1970 film) Move is a 1970 American comedy film starring Elliott Gould, Paula Prentiss and Geneviève Waïte, and directed by Stuart Rosenberg. The screenplay was written by Joel Lieber and Stanley Hart, adapted from a novel by Lieber. The film covers three days in the life of Hiram Jaffe a would-be playwright who supplements his living as a porn writer and by walking dogs. He and his wife, Dolly, are moving to a new apartment on New York's Upper West Side. Jaffe is beset by problems, including his inability to persuade the moving\\\"\", \"score\": 20.296875}, {\"long_text\": \"\\\"Move On (1903 film)\\\" | \\\"Move On (1903 film) Move On is a 1903 American film directed by Alfred C. Abadie. The film was preserved by the Library of Congress. Filmed in New York's Lower East Side, the scene is a street where several pushcart vendors have gathered to sell their goods. In the foreground are fruit and vegetable carts. An elevated railroad track crosses over the street in the background. As the film progresses, two policemen can be seen heading up the street toward the camera and ordering all of the vendors to move. One of the policemen approaches the camera waving his nightstick,\\\"\", \"score\": 18.859375}, {\"long_text\": \"\\\"Move On (2012 film)\\\" | \\\"winners were even on set during filming. During the shooting of Move On, leading actor Mads Mikkelsen travelled for 49 days, together with director Asger Leth and the entire film crew, from the Netherlands to Macedonia. The trip then culminated with a grand finale in Berlin where Alexandra Maria Lara met up with the team of agents. Move On (2012 film) Move On is an international film project from 2012 directed by Asger Leth in collaboration with Deutsche Telekom AG. The leading actor is Mads Mikkelsen, who is supported by German actress Alexandra Maria Lara and newly discovered Slovak actress\\\"\", \"score\": 18.796875}, {\"long_text\": \"\\\"Move (1970 film)\\\" | \\\"and retreats into fantasy. The film was based on a novel \\\"\\\"Move\\\"\\\" by Joel Fielder which was published in 1968. The \\\"\\\"Chicago Tribune\\\"\\\" called the novel \\\"\\\"largely amusing, sometimes puzzling.\\\"\\\" The \\\"\\\"New York Times\\\"\\\" called it \\\"\\\"very funny\\\"\\\". In February 1968, before the novel had been published, 20th Century Fox announced they had bought the screen rights for $85,000. They called it a \\\"\\\"dirty \\\"\\\"Barefoot in the Park\\\"\\\".\\\"\\\" Stuart Rosenberg was to direct, Pandro Berman to produce and Dustin Hoffman to star. Lieber did the first screenplay. By February 1969 the lead had become Elliott Gould. In March Gould signed\\\"\", \"score\": 18.71875}]}\n\n[[ ## thought_0 ## ]]\nI will try to find more information about the directors of the two films, Stuart Rosenberg and the director of Méditerranée.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Directors of film Move (1970) and Méditerranée (1963)\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Directors of film Move (1970) and Méditerranée (1963)\", \"passages_this_hop\": [{\"long_text\": \"\\\"Move Over, Darling\\\" | \\\"Move Over, Darling Move Over, Darling is a 1963 American comedy film starring Doris Day, James Garner, and Polly Bergen and directed by Michael Gordon. The picture was a remake of a 1940 screwball comedy film, \\\"\\\"My Favorite Wife\\\"\\\", with Irene Dunne, Cary Grant and Gail Patrick. In between these movies, an unfinished version entitled \\\"\\\"Something's Got to Give\\\"\\\" began shooting in 1962, directed by George Cukor and starring Marilyn Monroe (who was fired from production due to her chronic lateness but then later rehired before ultimately passing away prior the film's completion) and Dean Martin. The film was chosen\\\"\", \"score\": 18.421875}, {\"long_text\": \"\\\"Move (1970 film)\\\" | \\\"was a box office failure. Gould later said \\\"\\\"“there were great elements in it” but felt Rosenberg while \\\"\\\"a sweet man and a talented filmmaker... Comedy wasn’t his main field. There was a problem with the script, and I would always defer to the writers, to the director. I didn’t know that I might have gotten involved to develop something that might have fused \\\"\\\"Move\\\"\\\".\\\"\\\" Gould was later offered the lead role in \\\"\\\"Pocket Money\\\"\\\" alongside Paul Newman, but turned it down because he did not want to work with Rosenberg again after his experience making \\\"\\\"Move\\\"\\\". Lieber would commit\\\"\", \"score\": 18.40625}, {\"long_text\": \"\\\"Marilyn (1963 film)\\\" | \\\"Day, James Garner, and Polly Bergen, and re-titled the film to \\\"\\\"Move Over, Darling\\\"\\\". To date, \\\"\\\"Marilyn\\\"\\\" has not been released on either DVD or VHS. Marilyn (1963 film) Marilyn is a 1963 documentary film based on the life of the 1950s actress and sex symbol Marilyn Monroe. The film, directed by Harold Medford, was released by 20th Century Fox, and was narrated by Rock Hudson. Marilyn Monroe rose to fame with the 1953 film noir \\\"\\\"Niagara\\\"\\\", released by 20th Century Fox. Monroe had signed with Fox \\\"\\\"originally\\\"\\\" in 1947, and played bit parts in a few films, starring actors\\\"\", \"score\": 18.265625}, {\"long_text\": \"\\\"Move On (1903 film)\\\" | \\\"and the cart in the foreground begins moving. The film ends with a closeup of the policeman scolding the vendor. Move On (1903 film) Move On is a 1903 American film directed by Alfred C. Abadie. The film was preserved by the Library of Congress. Filmed in New York's Lower East Side, the scene is a street where several pushcart vendors have gathered to sell their goods. In the foreground are fruit and vegetable carts. An elevated railroad track crosses over the street in the background. As the film progresses, two policemen can be seen heading up the street toward\\\"\", \"score\": 18.171875}, {\"long_text\": \"\\\"Night Moves (1975 film)\\\" | \\\"key pictures in the late 1960s and early 1970s (\\\"\\\"Bonnie and Clyde\\\"\\\" (1967), \\\"\\\"Alice's Restaurant\\\"\\\" (1969), \\\"\\\"Little Big Man\\\"\\\" (1970), \\\"\\\"Night Moves\\\"\\\" (1975)) that captured the verve of the counterculture, its subsequent collapse, and the ensuing despair of the post-Watergate era.\\\"\\\" In his monograph, \\\"\\\"The Cinema of Loneliness: Penn, Stone, Kubrick, Scorsese, Spielberg, Altman\\\"\\\", Robert Kolker writes, \\\"\\\"\\\"\\\"Night Moves\\\"\\\" was Penn's point of turning, his last carefully structured work, a strong and bitter film, whose bitterness emerges from an anxiety and from a loneliness that exists as a given, rather than a loneliness fought against, a fight that marks most\\\"\", \"score\": 18.046875}]}\n\n[[ ## thought_1 ## ]]\nI will try to find more information about the director of Méditerranée, Michael Gordon.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Michael Gordon director Méditerranée\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Michael Gordon director Méditerranée\", \"passages_this_hop\": [{\"long_text\": \"\\\"Michael Gordon (film director)\\\" | \\\"back to Hollywood at the end of the 1950s by producer Ross Hunter, who wanted him to direct \\\"\\\"Pillow Talk\\\"\\\", a vehicle for Doris Day and Rock Hudson. Subsequently, Gordon's second creative phase was concerned with light-hearted comedy films. Gordon and his wife Elizabeth Cohn had three children, Jonathan, a graduate of Johns Hopkins University; Jane Gordon-Levitt, graduate of University of California, Berkeley and Susannah. Gordon is the maternal grandfather of American actor, director, screenwriter, producer, and editor Joseph Gordon-Levitt. Gordon died of natural causes on April 29, 1993. Michael Gordon (film director) Michael Gordon (born Irving Kunin Gordon; September\\\"\", \"score\": 19.953125}, {\"long_text\": \"\\\"Michael Gordon (film director)\\\" | \\\"Michael Gordon (film director) Michael Gordon (born Irving Kunin Gordon; September 6, 1909 – April 29, 1993) was an American stage actor and stage and film director. Gordon was born in Baltimore, Maryland, and raised in a middle class Jewish community. He was a member of the Group Theatre (1935–1940), and was blacklisted as a Communist in the McCarthy era. He later joined the faculty of the UCLA Theater Department. Gordon summered at Pine Brook Country Club in Nichols, Connecticut. Pinebrook is best known for becoming the summer home of the Group Theatre. Some of the other artists who summered\\\"\", \"score\": 19.890625}, {\"long_text\": \"\\\"Michael Gordon (film director)\\\" | \\\"there were: Elia Kazan, Harry Morgan, John Garfield, Lee J. Cobb, Will Geer, Clifford Odets, Howard Da Silva and Irwin Shaw. As a result of being blacklisted, Gordon's Hollywood career falls into two phases. In 1940, he started as a dialogue director and went on to direct B-movies. In the late 1940s, he distinguished himself by directing not just action movies but also melodramas and films noir. He also directed the 1950 film, \\\"\\\"Cyrano de Bergerac\\\"\\\", for which José Ferrer won a Best Actor Academy Award. After being blacklisted, he was forced to stop directing films temporarily, but was called\\\"\", \"score\": 19.78125}, {\"long_text\": \"\\\"Bill Morrison (director)\\\" | \\\"(2002), his feature-length collaboration with composer Michael Gordon, was selected by the Library of Congress to its National Film Registry in 2013, becoming the first film of the 21st century selected to the list. It has been hailed by J. Hoberman as \\\"\\\"the most widely acclaimed American avant-garde film of the fin-de-siècle.\\\"\\\" The director Errol Morris reportedly commented while viewing \\\"\\\"Decasia\\\"\\\" that \\\"\\\"This may be the greatest movie ever made\\\"\\\". The film was originally commissioned by the Basel Sinfonietta to be shown on three screens surrounding the audience, behind which 55 musicians performed Michael Gordon's score. In 2011, \\\"\\\"Spark of\\\"\", \"score\": 19.203125}, {\"long_text\": \"\\\"Michael Gordon (composer)\\\" | \\\"New York's Ridge Theater, in collaboration with Laurie Olinder (visual graphics), Bill Morrison (film-maker) and Bob McGrath (director), with whom Gordon has often worked. The opera \\\"\\\"Chaos\\\"\\\", with libretto by Matthew Maguire premiered at The Kitchen in New York in the autumn of 1998 with stage direction by Bob McGrath. The work, which opened to rave reviews and packed houses, is a fast paced science fiction spectacle in 25 short scenes. In 2017 Chinese singer Gong Linna premiered \\\"\\\"Cloud River Mountain,\\\"\\\" written by the three Bang on a Can composers in addition to Lao Luo. They also premiere \\\"\\\"Road Trip,\\\"\\\"\\\"\", \"score\": 18.703125}]}\n\n[[ ## thought_2 ## ]]\nI will try to find more information about the country where the two films, Move (1970) and Méditerranée (1963), were shot.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"Countries where films Move (1970) and Méditerranée (1963) were shot\", \"trajectory_id\": \"Move (1970) and Méditerranée (1963)\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"Countries where films Move (1970) and Méditerranée (1963) were shot\", \"passages_this_hop\": [{\"long_text\": \"Mediterraneo | \\\"Mediterraneo Mediterraneo is a 1991 Italian film that won the Academy Award for Best Foreign Language Film in 1992. The film is set during World War II and regards a group of Italian soldiers who become stranded on a Greek island, and are left behind by the war. The filming took place on the Greek island of Kastellórizo, in the Dodecanese island complex. In 1941, one year after Italy joined Germany against the Allies in World War II, a small group of misfit Italian soldiers is sent to a small Greek island in the Aegean Sea for four months of\\\"\", \"score\": 18.140625}, {\"long_text\": \"\\\"Mediterranea (film)\\\" | \\\"Mediterranea (film) Mediterranea is a 2015 Italian drama film directed and written by Jonas Carpignano. It was screened in the International Critics' Week section at the 2015 Cannes Film Festival. The film stars Koudous Seihon and Alassane Sy as friends who cross the Mediterranean Sea to immigrate to Italy, where they experience unexpected hostility from locals. Ayiva makes the difficult journey from Burkina Faso through Algeria and Libya and eventually reaches Italy. He pays for his passage and sees his compatriots robbed along the way. In southern Italy, he lives in a squatted property while earning some money from orange\\\"\", \"score\": 17.734375}, {\"long_text\": \"\\\"Steve Jobs (film)\\\" | \\\"16, 2015, at Jobs's childhood home in Los Altos, California, with additional scenes shot throughout the San Francisco Bay Area. Production next moved to Berkeley on January 23–24, 2015 (at \\\"\\\"La Méditerranée,\\\"\\\" a restaurant on College Avenue in the Elmwood district). On January 29, 2015, filming continued at Flint Center, De Anza college (the location of the original unveiling of the Macintosh in 1984). In late February, production moved to San Francisco and took place at the Opera House, Louise M. Davies Symphony Hall, and the Civic Center. Filming wrapped on April 10, 2015, after an overnight shoot in the\\\"\", \"score\": 17.65625}, {\"long_text\": \"\\\"Volker Schlöndorff\\\" | \\\"this time he also made his first short film, \\\"\\\"Who Cares?\\\"\\\" about French people living in Frankfurt in 1960. In 1963 he collaborated with filmmaker Jean-Daniel Pollet on the 40-minute documentary \\\"\\\"Méditerranée\\\"\\\". The film has been highly regarded since its initial release, gaining praise from Jean-Luc Godard and consistently appearing in the popular book \\\"\\\"1001 Movies You Must See Before You Die\\\"\\\". Schlöndorff returned to Germany to make his feature film debut \\\"\\\"Young Törless\\\"\\\". Produced by Louis Malle and based on the famous novel \\\"\\\"The Confusions of Young Törless\\\"\\\" by Robert Musil, the film debuted at the 1966 Cannes Film\\\"\", \"score\": 17.375}, {\"long_text\": \"\\\"The Visit (1964 film)\\\" | \\\"The Visit (1964 film) The Visit is a 1964 international co-production film from France, Italy, Germany, and the United States, distributed by 20th Century Fox. It was directed by Bernhard Wicki and produced by Darryl F. Zanuck and Julien Derode, with the film's stars, Ingrid Bergman and Anthony Quinn, as co-producers. The screenplay was by Ben Barzman, adapted by Maurice Valency from Friedrich Dürrenmatt's 1956 play \\\"\\\"Der Besuch der alten Dame\\\"\\\" (literally, \\\"\\\"The Visit of the Old Lady\\\"\\\"). Bergman and Quinn head a cast that includes Irina Demick, Paolo Stoppa, Hans Christian Blech, Romolo Valli, Valentina Cortese, Claude Dauphin, and\\\"\", \"score\": 17.15625}]}\n\n[[ ## thought_3 ## ]]\nI will try to find more information about the countries where the two films, Move (1970) and Méditerranée (1963), were shot.\n\n[[ ## tool_name_3 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_3 ## ]]\n{\"search_query\": \"Countries where films Move (1970) and Méditerranée (1963) were shot\", \"trajectory_id\": \"Méditerranée (1963) and Move (1970)\"}\n\n[[ ## observation_3 ## ]]\n{\"search_query\": \"Countries where films Move (1970) and Méditerranée (1963) were shot\", \"passages_this_hop\": [{\"long_text\": \"\\\"American Made (film)\\\" | \\\"originally titled \\\"\\\"Mena\\\"\\\" and was first featured on The Black List, a website showcasing the best unproduced screenplays, in 2014. Principal photography on the film began on May 27, 2015 in Georgia. Filming locations there include countries Cherokee, Clayton, DeKalb, Fulton, Gwinnett, Morgan and Pickens. On August 20, 2015, Tom Cruise arrived in Medellin, Colombia, and on August 31, in Santa Marta, to scout filming locations for the film. A plane crash on the set of the film in Colombia on September 11, 2015 killed two people and caused serious injuries to another member of the crew. The plane (a\\\"\", \"score\": 16.96875}, {\"long_text\": \"\\\"The World Moves On\\\" | \\\"The World Moves On The World Moves On is a 1934 American drama film directed by John Ford and starring Madeleine Carroll and Franchot Tone that is notable for being the first Hollywood code approved film. The story opens 185 years ago when two families, cotton merchants in England and America, with branches in France and Prussia swear to stand by each other in a belief that a great business firmly established in four countries will be able to withstand even such another calamity as the Napoleonic Wars from which Europe is slowly recovering. Then many years later, along comes\\\"\", \"score\": 16.890625}, {\"long_text\": \"\\\"Alert in the Mediterranean\\\" | \\\"Alert in the Mediterranean Alert in the Mediterranean (French: Alerte en Méditerranée) is a 1938 French thriller film directed by Léo Joannon and starring Pierre Fresnay, Nadine Vogel and Rolf Wanka. It was the fifth most popular film at the French box office in 1938. It also proved a success in Belgium after being released in Brussels in October 1938. The film's sets were designed by the art director Robert Gys. The following year it was remade in Britain as \\\"\\\"Hell's Cargo\\\"\\\" directed by Harold Huth. After meeting in Tangiers three naval officers, British, French and German, are able to\\\"\", \"score\": 16.875}, {\"long_text\": \"Mediterraneo | \\\"created to avoid \\\"\\\"a public debate on collective responsibility, guilt and denial, repentance and pardon\\\"\\\" for the Italian Army's actual historical conduct and behaviour during the Second World War. Mediterraneo Mediterraneo is a 1991 Italian film that won the Academy Award for Best Foreign Language Film in 1992. The film is set during World War II and regards a group of Italian soldiers who become stranded on a Greek island, and are left behind by the war. The filming took place on the Greek island of Kastellórizo, in the Dodecanese island complex. In 1941, one year after Italy joined Germany\\\"\", \"score\": 16.859375}, {\"long_text\": \"\\\"Driving Lessons\\\" | \\\"and Film by the Sea Film Festival. The film debut on 8 September 2006 in the United States in cities Los Angeles and New York. It later moved on to other big cities in the United States throughout the rest of the year. The film also premiered in Italy and Thailand in December 2006. In 2007 the film was released in other countries such as Canada, Portugal, Brazil, Taiwan, New Zealand, Australia, and Singapore. The film was released on 3 July 2007 on DVD in the United States. The film holds a 48% rating on Rotten Tomatoes, with an average\\\"\", \"score\": 16.78125}]}\n\n[[ ## thought_4 ## ]]\nI will try to find more information about the country where the two films, Move (1970) and Méditerranée (1963), were shot.\n\n[[ ## tool_name_4 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_4 ## ]]\n{\"search_query\": \"Countries where films Move (1970) and Méditerranée (1963) were shot\", \"trajectory_id\": \"Méditerranée (1963) and Move (1970)\"}\n\n[[ ## observation_4 ## ]]\n{\"search_query\": \"Countries where films Move (1970) and Méditerranée (1963) were shot\", \"passages_this_hop\": [{\"long_text\": \"\\\"Outside the Law (2010 film)\\\" | \\\"and lasted five months. Approximately 90% of the film was shot in the studio. The team moved between facilities and locations in Paris, Algeria, Tunisia, the Belgian cities Charleroi and Brussels, Germany and the United States, with scenes set at the United Nations Headquarters. The film premiered on 21 May 2010, in competition at the 2010 Cannes Film Festival. French distribution was handled by StudioCanal and the premiere took place on 22 September 2010. It was released in Algeria on 6 October of the same year. In the United States, the film was distributed through Cohen Media Group, which released\\\"\", \"score\": 16.765625}, {\"long_text\": \"\\\"Alert in the Mediterranean\\\" | \\\"overcome their national antipathy and come to the assistance of a neutral ship in distress. Alert in the Mediterranean Alert in the Mediterranean (French: Alerte en Méditerranée) is a 1938 French thriller film directed by Léo Joannon and starring Pierre Fresnay, Nadine Vogel and Rolf Wanka. It was the fifth most popular film at the French box office in 1938. It also proved a success in Belgium after being released in Brussels in October 1938. The film's sets were designed by the art director Robert Gys. The following year it was remade in Britain as \\\"\\\"Hell's Cargo\\\"\\\" directed by Harold\\\"\", \"score\": 16.71875}, {\"long_text\": \"\\\"Figures in a Landscape (film)\\\" | \\\"to film, between June and October 1969. It was shot in Sierra Nevada, Granada, Andalucia, Spain. During pre-production, many of the film's crew were replaced, such as Peter Medak as director and Peter O'Toole as star. At the time of filming, Robert Shaw was a quite well known star, whereas Malcolm McDowell was still relatively unknown as it was made in the period after \\\"\\\"If...\\\"\\\" but before \\\"\\\"A Clockwork Orange\\\"\\\". The helicopter featured, an Aérospatiale Alouette II, \\\"\\\"XZ-2B2\\\"\\\", based at Armilla, Granada, was flown by Gilbert Chomat. The film was quite revolutionary with its use of mystery to the audience;\\\"\", \"score\": 16.6875}, {\"long_text\": \"\\\"Zulu (1964 film)\\\" | \\\"was produced by Baker's company, Diamond Films. It was shot using the Super Technirama 70 cinematographic process, and distributed by Paramount Pictures in all countries excluding the United States, where it was distributed by Embassy Pictures. Most of \\\"\\\"Zulu\\\"\\\" was shot on location in South Africa. The mission depot at Rorke's Drift was recreated beneath the natural Amphitheatre in the Drakensberg Mountains (considerably more precipitous than the real Rorke's Drift, which is little more than two small hills). The set for the British field hospital and supply depot at Rorke's Drift was created near the Tugela River with the Amphitheatre\\\"\", \"score\": 16.640625}, {\"long_text\": \"\\\"From Russia with Love (film)\\\" | \\\"time, at least 70 percent of the film had to have been filmed in Great Britain or the Commonwealth. The Gypsy camp was also to be filmed in an actual camp in Topkapi, but was actually shot in a replica of it in Pinewood. The scene with rats (after the theft of the Lektor) was shot in Spain, as Britain did not allow filming with wild rats, and an attempt to film white rats painted in cocoa in Turkey did not work. Principal photography began on 1 April 1963, and wrapped on 23 August. Ian Fleming spent a week in\\\"\", \"score\": 16.546875}]}",
+        "reasoning": "The directors of the two films, Move (1970) and Méditerranée (1963), are Stuart Rosenberg and Michael Gordon, respectively. However, I was unable to find any information that confirms whether they are from the same country or not.",
+        "answer": "no"
+      },
+      {
+        "question": "Where was the director of film The Fascist born?",
+        "answer": "Rome"
+      },
+      {
+        "question": "Which country the director of film On The Riviera is from?",
+        "answer": "American"
+      },
+      {
+        "question": "What nationality is the director of film Age Of Consent (Film)?",
+        "answer": "British"
+      },
+      {
+        "question": "When was the director of film Private Hell 36 born?",
+        "answer": "October 26, 1912"
+      },
+      {
+        "question": "What is the place of birth of Abdullah Ibn Hasan's father?",
+        "answer": "Medina"
+      },
+      {
+        "question": "What nationality is the director of film Wedding Night In Paradise (1950 Film)?",
+        "answer": "Hungarian"
+      },
+      {
+        "question": "Where was the director of film Gaon Hamara Shaher Tumhara born?",
+        "answer": "Lahore"
+      },
+      {
+        "question": "What is the date of birth of the director of film You'Re My Everything (Film)?",
+        "answer": "August 10, 1896"
+      },
+      {
+        "question": "Are both Lesser Slave Lake and Medeweger See located in the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Are both villages, Beliševo and Datow Naseri, located in the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Did the movies Find the Woman and Two Is a Family, originate from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Do both films The Falcon (Film) and Valentin The Good have the directors from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Does Tim Reid have the same nationality as Devon Martinus?",
+        "answer": "no"
+      },
+      {
+        "question": "Do director of film Chicago 10 (Film) and director of film Black Oxen share the same nationality?",
+        "answer": "yes"
+      },
+      {
+        "question": "Who is the spouse of the director of film Lord Of The Manor (Film)?",
+        "answer": "Chrissie White"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

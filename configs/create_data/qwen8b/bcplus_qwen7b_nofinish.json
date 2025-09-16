@@ -1,0 +1,28 @@
+{
+    "model": {
+        "model_name_or_path": "Qwen/Qwen2.5-7B-Instruct",
+        "answer_model": "Qwen/Qwen2.5-7B-Instruct",
+        "no_finish": true,
+        "max_iters": 20,
+        "max_tokens": 512,
+        "max_retries": 4
+    },
+    "data": {
+        "dataset_name": "bcplus",
+        "input_file": "/mnt/ddn/alta01/t-abjava/BrowseComp-Plus/data/train.jsonl",
+        "num_examples": 1000, 
+        "num_prompt_examples": 50,
+        "candidates": 7
+    },
+    "search": {
+        "port": [7501], "search_port": 8002,
+        "ndocs": 5,
+        "rm": "qwen8b"
+    },
+    "paths": {
+        "output_path": "../data/frugalrag/sft_data/qwen8b/bcplus/qwen7b/m20_nofinish",
+        "prompt_path": "src/prompts/qwen8b/bcplus/qwen7b/m20_nofinish/react/",
+        "prompt_save_path": "src/prompts/qwen8b/bcplus/qwen7b/m20_nofinish",
+        "mb_logs": ""
+    }
+}

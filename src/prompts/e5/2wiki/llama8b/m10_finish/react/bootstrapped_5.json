@@ -1,0 +1,228 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Are director of film Move (1970 Film) and director of film M\u00e9diterran\u00e9e (1963 Film) from the same country?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Are director of film Move (1970 Film) and director of film M\u00e9diterran\u00e9e (1963 Film) from the same country?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Are director of film Move (1970 Film) and director of film M\u00e9diterran\u00e9e (1963 Film) from the same country?\", \"passages_this_hop\": [{\"long_text\": \"Sulejman Meden\u010devi\u0107\\nSulejman Meden\u010devi\u0107 (born 29 October 1963, Derventa, Yugoslavia, present-day Bosnia and Herzegovina) is an internationally recognized cinematographer and producer, winner of Best Cinematography Award at 2005 Valencia Festival of Mediterranean Cinema. He went to the National Film School for Dramatic Arts in Belgrade, Yugoslavia and obtained a master's degree in Cinematography from FAMU (Prague, Czech Republic). He is currently living and working in Los Angeles, California.\", \"score\": 0.7841796875}, {\"long_text\": \"Mediterranea (film)\\nMediterranea is a 2015 Italian drama film directed and written by Jonas Carpignano. It was screened in the International Critics' Week section at the 2015 Cannes Film Festival. The film stars Koudous Seihon and Alassane Sy as friends who cross the Mediterranean Sea to immigrate to Italy, where they experience unexpected hostility from locals.\\nPlot.\\nAyiva makes the difficult journey from Burkina Faso through Algeria and Libya and eventually reaches Italy. He pays for his passage and sees his compatriots robbed along the way. In\", \"score\": 0.78466796875}, {\"long_text\": \"Mediterranea (film)\\n.\\n- Koudous Seihon as Ayiva\\n- Alassane Sy as Abas\\n- Francesco Papasergio as Mommo\\n- Pio Amato as Pio\\n- Vincenzina Siciliano as Marta\", \"score\": 0.78515625}, {\"long_text\": \"Move Me (film)\\nMove Me () is a 2003 Danish comedy film directed by Morten Arnfred.\\nCast.\\n- Birthe Neumann - Sara\\n- Jesper Lohmann - Robert\\n- Ditte Gr\u00e5b\u00f8l - Sus\\n- - Bo\\n- Niels Olsen - Holger\\n- - Jan\\n- - Amalie\\n- Jakob Slot Pedersen - Tim\\n- Klaus Bondam - Henrik\\n- - Anita\\n- Gyrd L\u00f8fqvist - Far\", \"score\": 0.7939453125}, {\"long_text\": \"M\u00e9diterran\u00e9e (1963 film)\\nM\u00e9diterran\u00e9e is a 1963 French experimental film directed by Jean-Daniel Pollet with assistance from Volker Schl\u00f6ndorff. It was written by Philippe Sollers and produced by Barbet Schroeder, with music by Antione Duhamel. The 45 minute film is cited as one of Pollet's most influential films, which according to Jonathan Rosenbaum directly influenced Jean-Luc Goddard's \\\"Contempt\\\", released later the same year. Footage for the film was shot around the Mediterranean, including at a Greek temple, a Sicilian garden,\", \"score\": 0.80859375}]}",
+        "next_thought": "Next, I will extract the relevant information about the directors of the two films and their countries of origin.",
+        "next_tool_name": "AdvancedSearch",
+        "next_tool_args": {
+          "search_query": "Directors of Move (1970 Film) and M\u00e9diterran\u00e9e (1963 Film) and their countries of origin",
+          "trajectory_id": "observation_init"
+        }
+      },
+      {
+        "question": "When was the director of film The Vampire'S Ghost born?",
+        "answer": "May 26, 1900"
+      },
+      {
+        "question": "Where was the composer of film Marikkunnilla Njan born?",
+        "answer": "Kulathupuzha"
+      },
+      {
+        "question": "Were Dallin Malmgren and A.B.M. Fazle Karim Chowdhury of the same nationality?",
+        "answer": "no"
+      },
+      {
+        "question": "When did the director of film The First Mass die?",
+        "answer": "23 November 1982"
+      },
+      {
+        "question": "Are Alsino And The Condor and 1922 (2017 Film) both from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "What nationality is the performer of song Hummingbird (1955 Song)?",
+        "answer": "America"
+      },
+      {
+        "question": "Where did the director of film Skinner Steps Out die?",
+        "answer": "Hollywood"
+      },
+      {
+        "question": "Are both Chapan-E Olya and Cwrt Y Gollen located in the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "What nationality is the director of film Wedding Night In Paradise (1950 Film)?",
+        "answer": "Hungarian"
+      },
+      {
+        "question": "Where was the place of burial of the performer of song There Is So Much World To See?",
+        "answer": "Graceland"
+      },
+      {
+        "question": "Are both Tengboche and Estarm, Kerman located in the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Which film has the director born later, A Yank In Korea or The Tunnel (1933 French-Language Film)?",
+        "answer": "A Yank In Korea"
+      },
+      {
+        "question": "Where did the director of film Canyon Of The Fools die?",
+        "answer": "Hollywood"
+      },
+      {
+        "question": "What nationality is the director of film T-Men?",
+        "answer": "American"
+      },
+      {
+        "question": "Which film has the director who was born earlier, People To Each Other or Tali-Ihantala 1944?",
+        "answer": "People To Each Other"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!<\/desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.<\/desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Are director of film Move (1970 Film) and director of film M\u00e9diterran\u00e9e (1963 Film) from the same country?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Are director of film Move (1970 Film) and director of film M\u00e9diterran\u00e9e (1963 Film) from the same country?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Are director of film Move (1970 Film) and director of film M\u00e9diterran\u00e9e (1963 Film) from the same country?\", \"passages_this_hop\": [{\"long_text\": \"Sulejman Meden\u010devi\u0107\\nSulejman Meden\u010devi\u0107 (born 29 October 1963, Derventa, Yugoslavia, present-day Bosnia and Herzegovina) is an internationally recognized cinematographer and producer, winner of Best Cinematography Award at 2005 Valencia Festival of Mediterranean Cinema. He went to the National Film School for Dramatic Arts in Belgrade, Yugoslavia and obtained a master's degree in Cinematography from FAMU (Prague, Czech Republic). He is currently living and working in Los Angeles, California.\", \"score\": 0.7841796875}, {\"long_text\": \"Mediterranea (film)\\nMediterranea is a 2015 Italian drama film directed and written by Jonas Carpignano. It was screened in the International Critics' Week section at the 2015 Cannes Film Festival. The film stars Koudous Seihon and Alassane Sy as friends who cross the Mediterranean Sea to immigrate to Italy, where they experience unexpected hostility from locals.\\nPlot.\\nAyiva makes the difficult journey from Burkina Faso through Algeria and Libya and eventually reaches Italy. He pays for his passage and sees his compatriots robbed along the way. In\", \"score\": 0.78466796875}, {\"long_text\": \"Mediterranea (film)\\n.\\n- Koudous Seihon as Ayiva\\n- Alassane Sy as Abas\\n- Francesco Papasergio as Mommo\\n- Pio Amato as Pio\\n- Vincenzina Siciliano as Marta\", \"score\": 0.78515625}, {\"long_text\": \"Move Me (film)\\nMove Me () is a 2003 Danish comedy film directed by Morten Arnfred.\\nCast.\\n- Birthe Neumann - Sara\\n- Jesper Lohmann - Robert\\n- Ditte Gr\u00e5b\u00f8l - Sus\\n- - Bo\\n- Niels Olsen - Holger\\n- - Jan\\n- - Amalie\\n- Jakob Slot Pedersen - Tim\\n- Klaus Bondam - Henrik\\n- - Anita\\n- Gyrd L\u00f8fqvist - Far\", \"score\": 0.7939453125}, {\"long_text\": \"M\u00e9diterran\u00e9e (1963 film)\\nM\u00e9diterran\u00e9e is a 1963 French experimental film directed by Jean-Daniel Pollet with assistance from Volker Schl\u00f6ndorff. It was written by Philippe Sollers and produced by Barbet Schroeder, with music by Antione Duhamel. The 45 minute film is cited as one of Pollet's most influential films, which according to Jonathan Rosenbaum directly influenced Jean-Luc Goddard's \\\"Contempt\\\", released later the same year. Footage for the film was shot around the Mediterranean, including at a Greek temple, a Sicilian garden,\", \"score\": 0.80859375}]}\n\n[[ ## thought_0 ## ]]\nNext, I will extract the relevant information about the directors of the two films and their countries of origin.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Directors of Move (1970 Film) and M\u00e9diterran\u00e9e (1963 Film) and their countries of origin\", \"trajectory_id\": \"observation_init\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Directors of Move (1970 Film) and M\u00e9diterran\u00e9e (1963 Film) and their countries of origin\", \"passages_this_hop\": [{\"long_text\": \"Move (2012 film)\\nMove () is a 2012 German comedy film directed by Dietrich Br\u00fcggemann.\\nCast.\\n- Jacob Matschenz - Philipp\\n- Robert Gwisdek - Thomas\\n- Anna Br\u00fcggemann - Dina\\n- Alice Dwyer - Jessica\\n- Katharina Spiering - Wiebke\\n- Aylin Tezel - Maria\\n- Alexander Khuon - Michael\\n- Amelie Kiefer - Swantje\\n- Corinna Harfouch - Mutter\\n- Hans-Heinrich Hardt - Vater\\n- Leslie Malton - Mutter Dina\\n- Herbert Knaup - Vater Dina\", \"score\": 0.78466796875}, {\"long_text\": \"M\u00f6ve\\nM\u00f6ve or Moeve may refer to:\\n- M\u00f6ve 101, an Austrian built microcar\\n- \\\"Move\\\" (1939 ship), a former passenger ship on Lake Zurich, Switzerland\\n- SMS \\\"M\u00f6we\\\", several ships of the German and Austro-Hungarian navies\", \"score\": 0.78515625}, {\"long_text\": \"Mario Cecchi Gori\\nMario Cecchi Gori (; 21 March 1920, in Brescia \u2013 5 November 1993, in Rome) was an Italian film producer and owner of companies. He produced over 200 films, notably with Damiano Damiani, Dino Risi (\\\"The Easy Life\\\", \\\"I Mostri\\\") and Ettore Scola.\\nGabriele Salvatores' film \\\"Mediterraneo\\\" won the Academy Award for Best Foreign Film.\\nWith \\\"Lamerica\\\", directed by Gianni Amelio, he received the Best Film Award at European Film Awards in\", \"score\": 0.78662109375}, {\"long_text\": \"Move (1970 film)\\nMove is a 1970 American comedy film starring Elliott Gould, Paula Prentiss and Genevi\u00e8ve Wa\u00efte, and directed by Stuart Rosenberg. The screenplay was written by Joel Lieber and Stanley Hart, adapted from a novel by Lieber.\\nPlot summary.\\nThe film covers three days in the life of Hiram Jaffe a would-be playwright who supplements his living as a porn writer and by walking dogs. He and his wife, Dolly, are moving to a new apartment on New York's Upper West\", \"score\": 0.787109375}, {\"long_text\": \"List of people from Italy\\nattention on the Italian Neorealist movement in films\\n- Gabriele Salvatores (born 1950), film director and screenwriter; known for his film \\\"Mediterraneo\\\" (1991)\\n- Martin Scorsese (born 1942), film director known for directing films such as Goodfellas (1990) and various other gangster films.\\n- Michele Soavi (born 1957), film director; known for his film \\\"Cemetery Man\\\" (1994)\\n- Silvio Soldini (born 1958), film director, known films we find \\\"Bread\", \"score\": 0.7880859375}]}\n\n[[ ## thought_1 ## ]]\nNext, I will analyze the extracted information to determine if the directors of the two films are from the same country.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Are the directors of Move (1970 Film) and M\u00e9diterran\u00e9e (1963 Film) from the same country?\", \"trajectory_id\": \"observation_0\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Are the directors of Move (1970 Film) and M\u00e9diterran\u00e9e (1963 Film) from the same country?\", \"passages_this_hop\": [{\"long_text\": \"Olhares do Mediterr\u00e2neo - Cinema no Feminino\\nOlhares do Mediterr\u00e2neo - Cinema no Feminino is an international film festival of films made by Mediterranean women directors. The 6th edition of the Festival, in 2019, will take place in Lisbon, Portugal, from October 30 to November 3, at Cinema S\u00e3o Jorge.\\nApart from the films, the Festival offers a diversity of cultural activities that take place during the whole festival at the same venue. A call to submissions for the 7th edition will be held from January 2020 on.\", \"score\": 0.7744140625}, {\"long_text\": \"Giancarlo Bigazzi\\nTake the Heat off Me\\\", \\\"Mama\\\". He was also a film score composer; among his soundtracks \\\"Mery per sempre\\\", \\\"Ragazzi fuori\\\" and the Oscar-winner \\\"Mediterraneo\\\".\\nExternal links.\\n- Giancarlo Bigazzi at Discogs\", \"score\": 0.77490234375}, {\"long_text\": \"Digna Sinke\\nDigna Sinke (born 17 October 1949) is a Dutch film director, producer and screenwriter. She has directed 13 films since 1972. Her 1984 film \\\"De stille Oceaan\\\" was entered into the 34th Berlin International Film Festival.\\nSelected filmography.\\n- \\\"De stille Oceaan\\\" (1984)\\n- \\\"Above the Mountains\\\" (1992)\\n- \\\"Belle van Zuylen \u2013 Madame de Charri\u00e8re\\\" (1993)\", \"score\": 0.77490234375}, {\"long_text\": \"Don't Move\\nDon't Move () is a 2004 Italian film directed by Sergio Castellitto. It stars Pen\u00e9lope Cruz, Claudia Gerini, Elena Perino and the director himself. Both Castellitto and Cruz received critical praise for their performances, as well as several awards, including the prestigious David di Donatello. It was screened in the Un Certain Regard section at the 2004 Cannes Film Festival.\\nPlot.\\nTimoteo (Sergio Castellitto), a surgeon, gets the shocking news that his fifteen-year-old daughter Angela\", \"score\": 0.77685546875}, {\"long_text\": \"Prime Mover (film)\\nPrime Mover is a 2009 Australian\/British comedy-crime love story which stars Michael Dorman, Emily Barclay, Ben Mendelsohn, Gyton Grantley, William McInnes, Anthony Hayes and Andrew S. Gilbert. It is directed by acclaimed film and television director David Caesar of \\\"Mullet\\\" and \\\"Dirty Deeds\\\" fame, in which he also worked with McInnes, Mendelsohn and Gilbert.\\nThe film was released to European audiences in Germany on 8 February 2009 and in Australia on 8 June 2009.\", \"score\": 0.77880859375}]}\n\n[[ ## thought_2 ## ]]\nBased on the extracted information, I will conclude whether the directors of the two films are from the same country.\n\n[[ ## tool_name_2 ## ]]\nfinish\n\n[[ ## tool_args_2 ## ]]\n{}\n\n[[ ## observation_2 ## ]]\nCompleted.",
+        "reasoning": "The directors of Move (1970 Film) and M\u00e9diterran\u00e9e (1963 Film) are from different countries. The director of Move (1970 Film) is Stuart Rosenberg, who is American, and the director of M\u00e9diterran\u00e9e (1963 Film) is Jean-Daniel Pollet, who is French.",
+        "answer": "no"
+      },
+      {
+        "question": "Are Alsino And The Condor and 1922 (2017 Film) both from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Were Dallin Malmgren and A.B.M. Fazle Karim Chowdhury of the same nationality?",
+        "answer": "no"
+      },
+      {
+        "question": "Where did the director of film Canyon Of The Fools die?",
+        "answer": "Hollywood"
+      },
+      {
+        "question": "Where was the composer of film Marikkunnilla Njan born?",
+        "answer": "Kulathupuzha"
+      },
+      {
+        "question": "Where was the place of burial of the performer of song There Is So Much World To See?",
+        "answer": "Graceland"
+      },
+      {
+        "question": "Which film has the director who was born earlier, People To Each Other or Tali-Ihantala 1944?",
+        "answer": "People To Each Other"
+      },
+      {
+        "question": "What nationality is the director of film Wedding Night In Paradise (1950 Film)?",
+        "answer": "Hungarian"
+      },
+      {
+        "question": "What nationality is the director of film T-Men?",
+        "answer": "American"
+      },
+      {
+        "question": "Are both Chapan-E Olya and Cwrt Y Gollen located in the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "When was the director of film The Vampire'S Ghost born?",
+        "answer": "May 26, 1900"
+      },
+      {
+        "question": "What nationality is the performer of song Hummingbird (1955 Song)?",
+        "answer": "America"
+      },
+      {
+        "question": "Where did the director of film Skinner Steps Out die?",
+        "answer": "Hollywood"
+      },
+      {
+        "question": "Which film has the director born later, A Yank In Korea or The Tunnel (1933 French-Language Film)?",
+        "answer": "A Yank In Korea"
+      },
+      {
+        "question": "Are both Tengboche and Estarm, Kerman located in the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "When did the director of film The First Mass die?",
+        "answer": "23 November 1982"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

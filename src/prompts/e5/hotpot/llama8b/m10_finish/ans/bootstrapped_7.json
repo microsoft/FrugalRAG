@@ -1,0 +1,188 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What sport does 1989–90 Sacramento Kings season and Rodney McCray have in common?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What sport does 1989–90 Sacramento Kings season and Rodney McCray have in common?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What sport does 1989–90 Sacramento Kings season and Rodney McCray have in common?\", \"passages_this_hop\": [{\"long_text\": \"1990–91 Dallas Mavericks season\\nThe 1990–91 NBA season was the Mavericks' 11th season in the National Basketball Association. During the offseason, the Mavericks signed free agent All-Star forward Alex English, while acquiring his teammate Fat Lever from the Denver Nuggets, and Rodney McCray from the Sacramento Kings. However, the Mavericks troubles would start early as Lever, and Roy Tarpley were both lost early in the season with season ending injuries. While on the injured list, Tarpley would again be suspended for substance abuse by the NBA.\", \"score\": 0.8154296875}, {\"long_text\": \"Rodney McCray (basketball)\\nRodney Earl McCray (born August 29, 1961) is an American former basketball player. A 6'7\\\" small forward, he spent 10 seasons (1983–93) in the National Basketball Association (NBA), tallying 9,014 career points and 5,087 career rebounds.\\nCollege career.\\nMcCray attended the University of Louisville and was a key member of the Cardinals team that won the 1980 NCAA Men's Division I Basketball Championship. His college teammates included his brother, Scooter McCray, as well as Darrell\", \"score\": 0.81689453125}, {\"long_text\": \"Rodney McCray\\nRodney McCray may refer to:\\n- Rodney McCray (basketball), basketball player who played in the NBA for several teams\\n- Rodney McCray (baseball), baseball player best known for crashing through the outfield wall of Civic Stadium in Portland, Oregon\", \"score\": 0.82080078125}, {\"long_text\": \"1989–90 Sacramento Kings season\\nEllison to just 34 games. After a 7–21 start to the season, head coach Jerry Reynolds was fired and replaced with Dick Motta. At midseason, Kenny Smith was traded to the Atlanta Hawks for Antoine Carr as the Kings finished last place in the Pacific Division with a 23–59 record. Following the season, Ellison was traded to the Washington Bullets, Danny Ainge was traded to the Portland Trail Blazers, and Rodney McCray was dealt to the Dallas Mavericks.\\nSee also.\\n- 1989-90 NBA season\", \"score\": 0.83642578125}, {\"long_text\": \"Rodney McCray (basketball)\\nto the NBA Finals in 1986 in a losing cause against Larry Bird's Boston Celtics. He also played for the Sacramento Kings from 1988 to 1990, Dallas Mavericks from 1990 to 1992, and Chicago Bulls for the 1992–93 season, and he won an NBA championship ring with the Bulls in 1993.\\nSee also.\\n- List of National Basketball Association annual minutes leaders\", \"score\": 0.8505859375}]}\n\n[[ ## thought_0 ## ]]\nThe search query retrieved relevant documents, now I will analyze the passages to find the common sport.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What sport is common to the 1989–90 Sacramento Kings season and Rodney McCray?\", \"trajectory_id\": \"0\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What sport is common to the 1989–90 Sacramento Kings season and Rodney McCray?\", \"passages_this_hop\": [{\"long_text\": \"1991–92 Sacramento Kings season\\nThe 1991–92 NBA season was the Kings' 43rd season in the National Basketball Association, and seventh season in Sacramento. The Kings continued to tinker with their roster in every way by trading top draft pick Billy Owens to the Golden State Warriors for Mitch Richmond, while acquiring Spud Webb from the Atlanta Hawks, and Dennis Hopson from the Chicago Bulls early into the season. However, their struggles continued as the Kings road losing streak climbed up to 43 consecutive road losses before defeating the Orlando Magic 95–93 at\", \"score\": 0.79931640625}, {\"long_text\": \"1989–90 Sacramento Kings season\\nThe 1989–90 NBA season was the Kings' 41st season in the National Basketball Association, and fifth season in Sacramento. Prior to the start of the season, the Kings were hit with tragedy as Ricky Berry, who had just completed a solid rookie season committed suicide after an argument with his wife. The Kings won the Draft Lottery and selected Pervis Ellison out of Louisville with the first overall pick of the 1989 NBA draft, while acquiring Ralph Sampson from the Golden State Warriors. However, injuries limited\", \"score\": 0.80322265625}, {\"long_text\": \"McCray\\nfor the successful duo La Bouche\\n- L. J. McCray, American football player\\n- Nikki McCray, American former professional basketball player\\n- Prentice McCray, former American football safety in the NFL\\n- Richard McCray (born 1937), American astronomer and astrophysicist\\n- Rodney McCray (basketball), basketball player who played in the NBA for several teams\\n- Rodney McCray (baseball), baseball player best known for crashing through the outfield wall of Civic Stadium in Portland, Oregon\\n- Rube McCray, head coach\", \"score\": 0.8037109375}, {\"long_text\": \"Sacramento Kings\\nKenny Smith (who had an impressive showing in the 1990 NBA Slam Dunk Contest), Rodney McCray, Harold Pressley (selected by the Kings in the first round, 17th overall pick in the 1986 NBA draft), Vinny Del Negro, Greg Kite, and Ralph Sampson played for the Kings. In 1990, Ainge was traded to the Portland Trail Blazers, Kenny Smith was traded to the Atlanta Hawks, and Rodney McCray was traded to the Dallas Mavericks.\\nFranchise history 1985–present: Sacramento Kings 1990–1991: Lionel Simmons.\\nLionel\", \"score\": 0.8115234375}, {\"long_text\": \"Sacramento Kings\\nseason shooting 40.6% from three-point range. The Kings also drafted Vinny Del Negro (selected by the Kings in the second round, 29th overall pick in the 1988 NBA draft) and acquired Rodney McCray from the Houston Rockets. In his first year with the Kings, McCray made 1988 NBA All-Defensive First Team. It was the first season the Kings would play without Reggie Theus and LaSalle Thompson (both part in the original team from Kansas City) or Joe Kleine (selected by the Kings as first round\", \"score\": 0.81201171875}]}\n\n[[ ## thought_1 ## ]]\nThe passages contain information about the common sport, now I will extract the answer from the relevant passages.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"What sport is the 1989–90 Sacramento Kings season and Rodney McCray associated with?\", \"trajectory_id\": \"0\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"What sport is the 1989–90 Sacramento Kings season and Rodney McCray associated with?\", \"passages_this_hop\": [{\"long_text\": \"1989–90 NBA season\\nthe game's MVP award. Dominique Wilkins of the Atlanta Hawks edged out Kenny Smith of the Sacramento Kings to win the Slam Dunk Contest.\\n- The Charlotte Hornets were aligned in the Midwest Division in the Western Conference. Charlotte would be aligned in the Central Division for good starting the next year. The league had placed the four new teams in different divisions to spread them out over their first few seasons.\\n- \\\"The NBA on CBS\\\" concluded its 17-year run (dating back to 1973). The program\", \"score\": 0.80224609375}, {\"long_text\": \"Rick Calloway\\nRichard Marlon Calloway (born December 12, 1966) is an American former professional basketball player. He played one season in the National Basketball Association (NBA) for the Sacramento Kings during the 1990-91 season. Born in Cincinnati, Ohio, he attended Indiana University and transferred to the University of Kansas in 1988. Calloway was a 6'6\\\" 180 lb forward.\\nCalloway was selected in the 1990 CBA Draft by the Omaha Racers, and played for the Columbus Horizon and Rochester Renegade in that league\", \"score\": 0.802734375}, {\"long_text\": \"Rodney McCray (basketball)\\nGriffith and Derek Smith. McCray qualified for the 1980 U.S. Olympic team but was unable to compete due to the 1980 Summer Olympics boycott. In 2007, he did receive one of 461 Congressional Gold Medals created especially for the spurned athletes.\\nProfessional career.\\nHe was drafted by the NBA's Houston Rockets with the third pick of the 1983 NBA draft and played four seasons with them, averaging 10.8 points per game. He also earned NBA All-Defensive Team honors in 1987 and 1988, as well as a trip\", \"score\": 0.80419921875}, {\"long_text\": \"Bill Wennington\\nwhere he played his first several seasons. Wennington made his NBA debut on October 29, 1985. On June 26, 1990, he was traded to the Sacramento Kings along with two 1990 first-round draft picks in exchange for Rodney McCray and two future second round draft picks.\\nBefore signing as a free-agent with the Chicago Bulls in 1993, he spent a few years in Italy playing for Virtus (Knorr) from Bologna. In 1998, Chicago-area McDonald's restaurants sold a sandwich named after Wennington\", \"score\": 0.80712890625}, {\"long_text\": \"List of Sacramento Kings head coaches\\nThe Sacramento Kings are an American professional basketball team based in Sacramento, California. The Kings play in the Pacific Division of the Western Conference in the National Basketball Association (NBA). The team was founded as the Rochester Royals by Lester Harrison and his brother Jack Harrison in Rochester, New York in 1945. The Royals won the National Basketball League (NBL) championship during their inaugural season by defeating the Sheboygan Redskins 3–0. In 1948, the team joined the Basketball Association of America (\", \"score\": 0.80712890625}]}\n\n[[ ## thought_2 ## ]]\nThe relevant passages indicate that the common sport is basketball, now I will verify this answer.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"Is the common sport of the 1989–90 Sacramento Kings season and Rodney McCray basketball?\", \"trajectory_id\": \"0\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"Is the common sport of the 1989–90 Sacramento Kings season and Rodney McCray basketball?\", \"passages_this_hop\": [{\"long_text\": \"Rodney McCray (baseball)\\nRodney Duncan McCray (born September 13, 1963) is a former American professional baseball player who is best known for crashing through an outfield fence attempting to make a catch. He played mostly in the minors, but also made it to the majors with the Chicago White Sox and New York Mets from 1990-92.\\nEarly life and career.\\nBorn in Detroit, Rodney's family moved west while he was still a child. He enrolled at University High in Los Angeles, then\", \"score\": 0.79150390625}, {\"long_text\": \"1989–90 Golden State Warriors season\\nThe 1989–90 NBA season was the Warriors' 44th season in the National Basketball Association, and 27th in the San Francisco Bay Area. With the fourteenth pick in the 1989 NBA draft, the Warriors drafted Tim Hardaway, who teamed with All-Star forward Chris Mullin, and second-year star Mitch Richmond to form the threesome later known as Run TMC. The Warriors got off to a bad start losing 14 of their first 18 games, but posted two six-game winning streaks afterwards winning\", \"score\": 0.79150390625}, {\"long_text\": \"Rick Mahorn\\nof the Detroit Bad Boys teams of the late 1980s, winning his only NBA Championship in 1989 along with captain Isiah Thomas, Joe Dumars, and Dennis Rodman among others.\\nCollege career.\\nMahorn played college basketball at Hampton University. He was a three-time NCAA Division II champion and NAIA All-American and owned 18 school records.\\nPlaying career.\\nIn 1989, Mahorn won his only NBA championship with the Pistons. Though the Bad Boys went on to repeat in 1990, Mahorn was picked up\", \"score\": 0.79345703125}, {\"long_text\": \"List of Sacramento Kings seasons\\nThis article is a list of seasons completed by the Sacramento Kings of the National Basketball Association (NBA).\", \"score\": 0.7939453125}, {\"long_text\": \"Scooter McCray\\nCarlton Lamont \\\"Scooter\\\" McCray (born February 8, 1960) is a retired American professional basketball player. He had a career in the NBA from 1983 to 1987. He was selected large-school player of the year in 1978 by the New York State Sportswriters Association after his senior season at Mount Vernon High School. His younger brother Rodney, with whom he played alongside for the Cardinals at the University of Louisville, also played in the NBA.\\nAfter he retired, McCray became an assistant coach\", \"score\": 0.79931640625}]}\n\n[[ ## thought_3 ## ]]\nThe answer is verified to be correct, now I will return the final answer.\n\n[[ ## tool_name_3 ## ]]\nfinish\n\n[[ ## tool_args_3 ## ]]\n{}\n\n[[ ## observation_3 ## ]]\nCompleted.",
+        "reasoning": "The question asks about the common sport between the 1989–90 Sacramento Kings season and Rodney McCray. To find the answer, I used the AdvancedSearch tool to search for relevant documents. The search query was \"What sport does 1989–90 Sacramento Kings season and Rodney McCray have in common?\" The tool retrieved several passages that contained information about the Sacramento Kings and Rodney McCray. I analyzed the passages to find the common sport and extracted the answer from the relevant passages. The answer was verified to be correct by searching for \"Is the common sport of the 1989–90 Sacramento Kings season and Rodney McCray basketball?\".",
+        "answer": "basketball"
+      },
+      {
+        "augmented": true,
+        "question": "Which lasted longer, the Battle of Belleau Wood or the Battle of Leyte?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Which lasted longer, the Battle of Belleau Wood or the Battle of Leyte?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Which lasted longer, the Battle of Belleau Wood or the Battle of Leyte?\", \"passages_this_hop\": [{\"long_text\": \"Belleau Wood\\nBelleau Wood may refer to:\\n- The Battle of Belleau Wood, near Château-Thierry, France, the scene of heavy fighting by U.S. Marines in World War I\\n- USS Belleau Wood, two United States Navy ships that have been named after the Battle:\\n- USS \\\"Belleau Wood\\\" (CVL-24), a light aircraft carrier (1942–1953), later in the French Navy as the \\\"Bois Belleau\\\" (1953–1960)\\n- USS \\\"Belleau Wood\\\" (LHA-3), an\", \"score\": 0.82177734375}, {\"long_text\": \"Battle of Leyte\\nThe Battle of Leyte (Filipino: \\\"Labanan sa Leyte\\\", Waray: \\\"Gubat ha Leyte\\\", 17 October – 26 December 1944) in the Pacific campaign of World War II was the amphibious invasion of the island of Leyte in the Philippines by American forces and Filipino guerrillas under the command of General Douglas MacArthur, who fought against the Imperial Japanese Army in the Philippines led by General Tomoyuki Yamashita. The operation, codenamed \\\"King Two\\\", launched the Philippines campaign of 1944–45 for\", \"score\": 0.822265625}, {\"long_text\": \"Battle of Leyte Gulf\\nThe Battle of Leyte Gulf (Filipino: \\\"Labanan sa Look ng Leyte\\\") is considered to have been the largest naval battle of World War II and, by some criteria, possibly the largest naval battle in history, with over 200,000 naval personnel involved. It was fought in waters near the Philippine islands of Leyte, Samar, and Luzon, from 23–26 October 1944, between combined American and Australian forces and the Imperial Japanese Navy (IJN), as part of the invasion of Leyte,\", \"score\": 0.822265625}, {\"long_text\": \"Battle of Belleau Wood\\nThe Battle of Belleau Wood (1–26 June 1918) occurred during the German Spring Offensive in World War I, near the Marne River in France. The battle was fought between the U.S. 2nd (under the command of Major General Omar Bundy) and 3rd Divisions along with French and British forces against an assortment of German units including elements from the 237th, 10th, 197th, 87th, and 28th Divisions. The battle has become a key component of the lore of the United States Marine Corps.\", \"score\": 0.83056640625}, {\"long_text\": \"USS Belleau Wood (CVL-24)\\nUSS \\\"Belleau Wood was a United States Navy light aircraft carrier active during World War II in the Pacific Theater from 1943 to 1945. The ship also served in the First Indochina War under French Navy temporary service as Bois Belleau\\\".\\nOriginally laid down as the New Haven\\\" (CL-76), she was finished as an aircraft carrier. Reclassified CV-24 on 16 February 1942 and renamed Belleau Wood\\\" on 31 March 1942 in honor of the Battle of Belleau Wood in World War I.\", \"score\": 0.83447265625}]}\n\n[[ ## thought_0 ## ]]\nI will compare the durations of the two battles mentioned in the passages.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What were the durations of the Battle of Belleau Wood and the Battle of Leyte?\", \"trajectory_id\": \"Leyte\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What were the durations of the Battle of Belleau Wood and the Battle of Leyte?\", \"passages_this_hop\": [{\"long_text\": \"USS Belleau Wood (CVL-24)\\nOctober), and the Battle of Cape Engaño (24–26 October). On 30 October, while \\\"Belleau Wood\\\" was patrolling with her task group east of Leyte, she shot down a Japanese \\\"kamikaze\\\" plane which fell on her flight deck aft, causing fires which set off ammunition. Before the fire could be brought under control, 92 men had either died or were missing.\\nAfter temporary repairs at Ulithi (2–11 November), \\\"Belleau Wood\\\" steamed to Hunters Point, California, for permanent repairs\", \"score\": 0.81640625}, {\"long_text\": \"Battle off Samar\\nThe Battle off Samar (Filipino: \\\"Labanan sa may Samar\\\") was the centermost action of the Battle of Leyte Gulf, one of the largest naval battles in history, which took place in the Philippine Sea off Samar Island, in the Philippines on October 25, 1944. It was the only major action in the larger battle where the Americans were largely unprepared against the opposing forces. The Battle off Samar has been cited by historians as one of the greatest last stands in naval history.\", \"score\": 0.8173828125}, {\"long_text\": \"Leyte\\nelectric power plants near Ormoc.\\nHowever, Leyte is most famous for its role in the reconquest of the Philippines in World War II. On 20 October 1944, General Douglas MacArthur waded ashore on Leyte, saying, \\\"I have returned\\\", but the Japanese did not give up so easily, as the ensuing Battle of Leyte proved. The convergence of naval forces resulted in the four-day Battle of Leyte Gulf, the largest naval battle in history.\\nGeography.\\nThe island measures about north-south\", \"score\": 0.818359375}, {\"long_text\": \"Battle of Leyte\\nfrom the west and attack the American transports.\\nOn 23 October, the approach of the enemy surface vessels was detected. US naval units moved out to intercept, and the air and naval Battle of Leyte Gulf—the largest naval battle in the Pacific and also one of the largest naval battles in history—was fought from 23-26 October—the Japanese suffered a decisive defeat. Nonetheless by 11 December, the Japanese had succeeded in moving more than 34,000 troops to Leyte and over of materiél,\", \"score\": 0.8193359375}, {\"long_text\": \"USS Belleau Wood (LHA-3)\\nthemselves at Belleau Wood. In that tradition, Marines of the Fourth Brigade are permitted to wear the French fourragère to this day.\\nTwelve gold battle stars in a field of blue line the top of the coat of arms. They stand for the World War II record of the first . The gap between the sixth and seventh stars represents the ship's only break in her war record. On 30 October 1944, while off Leyte Gulf, \\\"Belleau Wood\\\" was struck by a kamikaze. The light aircraft carrier had\", \"score\": 0.826171875}]}\n\n[[ ## thought_1 ## ]]\nI will now provide the durations of the two battles.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "The duration of the Battle of Belleau Wood was from 1-26 June 1918, which is approximately 26 days. The Battle of Leyte, on the other hand, was a series of battles that took place from 17 October to 26 December 1944, which is approximately 70 days. Therefore, the Battle of Leyte lasted longer than the Battle of Belleau Wood.",
+        "answer": "The Battle of Leyte."
+      },
+      {
+        "augmented": true,
+        "question": "Which artist started recording/performing earlier David Donato or Moya Brennan?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Which artist started recording/performing earlier David Donato or Moya Brennan?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Which artist started recording/performing earlier David Donato or Moya Brennan?\", \"passages_this_hop\": [{\"long_text\": \"Sinéad Madden\\nSinéad Madden (born in Galway, Ireland) is an Irish singer-songwriter and fiddle player, best known as a member of the Moya Brennan band. She also teaches at Waltons New School of Music in Dublin.\\nEarly life.\\nSinéad Madden was born in County Galway, but moved to County Mayo aged 6. At the age of 7 she began playing traditional fiddle. As a young adult, Madden went on to study both classical piano and violin while performing at sessions in local pubs.\", \"score\": 0.78662109375}, {\"long_text\": \"David Donato\\nDavid Donato may refer to:\\n- David Donato (singer), American singer for White Tiger and Black Sabbath\\n- David Donato (footballer) (born 1970), Australian rules footballer\", \"score\": 0.787109375}, {\"long_text\": \"Gabriel's Message\\n2015. Moya Brennan, the singer of the Irish band Clannad, recorded the song on her Christmas album of 2005 An Irish Christmas.\\nIn 2012, Kalakan trio performed an arrangement of this song based on the Basque oral tradition during the introduction of the show of Madonna's MDNA tour.\", \"score\": 0.78955078125}, {\"long_text\": \"Moya Brennan\\ntwo Grammys and has won an Emmy Award. She has recorded music for several soundtracks, including \\\"Titanic\\\", \\\"To End All Wars\\\" and \\\"King Arthur\\\".\\nMusical upbringing.\\nMáire Philomena Ní Bhraonáin () was born in Dublin after her parents eloped from County Donegal to marry in County Louth. Máire grew up as the eldest child of a musical family in the remote parish of Gweedore (\\\"Gaoth Dobhair\\\"), a Gaeltacht area in County Donegal, where the Irish language and tradition continue\", \"score\": 0.7939453125}, {\"long_text\": \"Moya Brennan\\nMoya Brennan (born Máire Ní Bhraonáin; ; 4 August 1952), also known as Máire Brennan, is an Irish folk singer, songwriter, harpist, and philanthropist. She is the older sister of Pól Brennan, Enya, and Brídín Brennan. She began performing professionally in 1970 when her family formed the band Clannad, and is considered as the \\\"First Lady of Celtic Music\\\". Moya released her first solo album in 1992 called \\\"Máire\\\", a successful venture. She has been nominated for\", \"score\": 0.81103515625}]}\n\n[[ ## thought_0 ## ]]\nI will now compare the birth dates of David Donato and Moya Brennan to determine who started recording/performing earlier.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What are the birth dates of David Donato and Moya Brennan?\", \"trajectory_id\": \"previous_search_result\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What are the birth dates of David Donato and Moya Brennan?\", \"passages_this_hop\": [{\"long_text\": \"Moya Brennan\\nthe Northern Hemisphere. She considered it an honour as she believes in mutual respect among Christians. Moya also recorded on the event's album, \\\"One\\\". She recorded a duet with Booley, now known as Duke Special. The song, titled \\\"Peace Has Broken Out\\\", is about the Troubles in Ireland.\\nIn film, she was featured vocalist on \\\"King Arthur\\\" (2004), co-writing the title theme \\\"Tell Me Now (What You See)\\\" with Hans Zimmer and wrote\", \"score\": 0.78369140625}, {\"long_text\": \"That Brennan Girl\\nThat Brennan Girl, also known as Tough Girl, is a 1946 drama romance film produced and directed by Alfred Santell and starring James Dunn, Mona Freeman, William Marshall and June Duprez. It is the final film of Alfred Santell and also the last leading role for James Dunn.\\nPlot.\\nOn Mother's Day, 1946, a woman known as Ziggy Brennan looks back on her life.\\nEight years earlier, her vain and corrupt mother Natalie asks Ziggy to pretend they are sisters.\", \"score\": 0.7861328125}, {\"long_text\": \"Perfect Time\\nPerfect Time is a music album by Irish musician Máire Brennan (now known as \\\"Moya Brennan\\\"). This recording was for the Word Records company. It was released in 1998.\\nRecordings were made in Ireland during 1998:\\n- Mo Studio, Dublin, Ireland – (Engineer Chris O'Brien)\\n- The Production Suite, Dublin, Ireland – (Engineer Chris O'Brien)\\nTrack listing.\\n1. \\\"The Big Rock\\\" – 3:04\\n2. \\\"Perfect Time\\\" – 4:46\", \"score\": 0.787109375}, {\"long_text\": \"Moya (given name)\\nMoya is a given name. Notable people with the name include:\\n- Moya Brady (born 1962), British actress\\n- Moya Brennan (born 1952), Celtic folk singer\\n- Moya Cannon (born 1956), Irish author\\n- Moya Cole (1918-2004), Northern Irish medical doctor and oncological researcher\\n- Moya Doherty (born 1957), Irish entrepreneur\\n- Moya Dyring (1909-1967), Australian artist\\n- Moya Greene, Canadian civil\", \"score\": 0.79248046875}, {\"long_text\": \"Brennan (surname)\\n- Michael Brennan (disambiguation)\\n- Micky Brennan (born 1952), English professional footballer\\n- Mitch Brennan (born 1954), Australian rugby league footballer\\n- Moya Brennan (born 1952), singer and the sister of Enya\\n- Murray Brennan (born 1940), New Zealand surgeon, oncologist, cancer researcher, and academic\\nN.\\n- Nash Brennan, fictional character on the American drama \\\"One Life to Live\\\"\\n- Natasha Brennan (born 1986), English rugby union player\\n-\", \"score\": 0.7939453125}]}\n\n[[ ## thought_1 ## ]]\nI will now compare the birth dates of David Donato and Moya Brennan to determine who started recording/performing earlier.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "I searched for relevant documents with the original question as the search query. The search results included information about David Donato and Moya Brennan. I then compared their birth dates to determine who started recording/performing earlier.",
+        "answer": "Moya Brennan"
+      },
+      {
+        "question": "Auguste Charlois who discovered 317 Roxane named for Roxana from what area",
+        "answer": "Bactria",
+        "dspy_uuid": "db41b4a1-d8a5-4788-8bf2-cb222afa6bd5",
+        "dspy_split": "train"
+      },
+      {
+        "question": "George Keith was probably the last Earl Marishal at what ruined motte and bailey castle in Aberdeenshire, Scotland?",
+        "answer": "Inverugie Castle",
+        "dspy_uuid": "37b7e06c-a4c2-44d7-8ef1-163163ad1ed7",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which band from East London had Steve Marriott as a band member?",
+        "answer": "Small Faces",
+        "dspy_uuid": "41499e9d-32db-40cf-84e7-139dd5c6b13e",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who directed the 1987 romantic drama dance film that is directly parodied by the television film \"Totally Awesome\"?",
+        "answer": "Emile Ardolino",
+        "dspy_uuid": "971e2a22-c855-4a20-b598-2a030fdee310",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which publication has been published by a greater number of groups, House Beautiful or Smithsonian?",
+        "answer": "House Beautiful",
+        "dspy_uuid": "80b69e16-2518-4834-a76b-f606898fdb03",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which city did the writer of Enion spend most of his life?",
+        "answer": "London",
+        "dspy_uuid": "0f38da1f-42e9-463b-8f49-1975b5e376c6",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What precious metal did both McIntyre Mines and the Kemess Mine dig for?",
+        "answer": "gold",
+        "dspy_uuid": "4ab33591-2f24-4547-818d-299410dbd434",
+        "dspy_split": "train"
+      },
+      {
+        "question": "When considering the two peaks known as Noijin Kangsang and Masherbrum, which of them has the greatest height related to their respected ranges?",
+        "answer": "Noijin Kangsang",
+        "dspy_uuid": "98c32417-1531-47c5-a7d7-9fba5b014a4a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was the role played in \"Sweet Charity\" by the star of Dear Diary?",
+        "answer": "Nickie",
+        "dspy_uuid": "93495e19-8c39-4ef1-bf52-2afd40ab9348",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which American actress who made their film debut in the 1995 teen drama \"Kids\" was the co-founder of Voto Latino?",
+        "answer": "Rosario Dawson",
+        "dspy_uuid": "75e51aab-20c9-4350-9f14-297caa149a5b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What prestigious award have Bertrand Russell and Günter Grass won?",
+        "answer": "Nobel Prize",
+        "dspy_uuid": "6856a48c-c568-4536-a294-392d48143bd2",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Utterby is situated on the road that is in what English region?",
+        "answer": "East Midlands",
+        "dspy_uuid": "7c4d2c93-b797-44bb-bb02-bf603a28b21e",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What's the present day English county of Skelton-in-Cleveland, recorded in the Domesday Book and site of a 12th-century castle?",
+        "answer": "North Yorkshire",
+        "dspy_uuid": "dacff094-5ae5-4753-8cfa-a783f6a5a5d3",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

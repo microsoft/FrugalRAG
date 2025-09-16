@@ -1,0 +1,29 @@
+{
+    "model": {
+        "model_name_or_path": "../data/frugalrag/sft/e5/hotpot/qwen3b/m5_0.90/Qwen_Qwen2.5-3B-Instruct",
+        "no_finish": false,
+        "max_iters": 5,
+        "max_tokens": 512,
+        "max_retries": 4
+    },
+    "data": {
+        "dataset_name": "hotpot",
+        "input_file": "datasets/hotpot_1000.json",
+        "num_examples": 1000
+    },
+    "paths": {
+        "output_path": "../data/frugalrag/grpo/e5/hotpot/qwen3b/m5_0.90/",
+        "prompt_path": "src/prompts/e5/hotpot/qwen3b/m5_nofinish/ans/bootstrapped_1.json",
+        "mb_logs": "../data/frugalrag/eval/sft/e5/hotpot/qwen3b/train1000_m5_nofinish/logs.json"
+    },
+    "search": {
+        "search_port": 8001,
+        "rm": "kilt"
+    },
+    "grpo": {
+        "run_name": "e5/hotpot/qwen3b/m5_0.90",
+        "max_steps": 400,
+        "dynamic_threshold": true,
+        "vllm_port": 8000
+    }
+}

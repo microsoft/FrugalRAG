@@ -1,0 +1,290 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What Nigerian president appointed the Managing Director of the NPA in 2016?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What Nigerian president appointed the Managing Director of the NPA in 2016?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What Nigerian president appointed the Managing Director of the NPA in 2016?\", \"passages_this_hop\": [{\"long_text\": \"Hadiza Bala Usman | Hadiza Bala Usman (born January 2, 1976) is a Nigerian activist and politician. She is currently the Managing Director of the Nigerian Ports Authority (NPA) as appointed by President Muhammadu Buhari on Monday 11 July 2016. She was formerly the Chief of Staff for the Kaduna State Governor. Bala Usman is an active member of the All Progressives Congress (APC).\", \"score\": 25.625}, {\"long_text\": \"Ayo Oke | Ayo Oke is the director general of Nigeria's National Intelligence Agency (NIA), appointed by then president Goodluck Jonathan since 7 November 2013.\", \"score\": 19.953125}, {\"long_text\": \"Ado J. G. Muhammad | Dr. Ado Jimada Gana Muhammad (born January 18, 1967) is the Executive Director\/CEO of the Nigeria\u2019s National Primary Health Care Development Agency (NPHCDA), the government organ responsible for developing national primary health care (PHC) policy and supporting states and Local Government Areas (LGAs) to implement them.\", \"score\": 19.90625}]}",
+        "next_thought": "Based on the search results, the Managing Director of the NPA was appointed by President Muhammadu Buhari in 2016.",
+        "next_tool_name": "finish",
+        "next_tool_args": {}
+      },
+      {
+        "augmented": true,
+        "question": "Are Norma and Idomeneo both operas by Bellini?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Are Norma and Idomeneo both operas by Bellini?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Are Norma and Idomeneo both operas by Bellini?\", \"passages_this_hop\": [{\"long_text\": \"Norma (opera) | Norma (] ) is a \\\"tragedia lirica\\\" or opera in two acts by Vincenzo Bellini with libretto by Felice Romani after \\\"Norma, ou L'infanticide\\\" (\\\"Norma, or The Infanticide\\\") by Alexandre Soumet. It was first produced at La Scala in Milan on 26 December 1831.\", \"score\": 21.359375}, {\"long_text\": \"Norma discography | This is a list of recordings of Norma, a two-act opera by Vincenzo Bellini with an Italian-language libretto by Felice Romani. It was first performed on 26 December 1831, at La Scala in Milan.\", \"score\": 20.5}, {\"long_text\": \"Meco all'altar di Venere | \\\"Meco all'altar di Venere\\\" is an aria from the opera \\\"Norma\\\" by Vincenzo Bellini, sung by the character Pollione in act 1, scene 2.\", \"score\": 19.5}]}",
+        "next_thought": "Based on the search results, it seems like both \"Norma\" and \"Idomeneo\" are indeed operas composed by Bellini. However, I need to verify if \"Idomeneo\" is also written by Bellini.",
+        "next_tool_name": "AdvancedSearch",
+        "next_tool_args": {
+          "search_query": "\"Idomeneo\" opera by Bellini"
+        }
+      },
+      {
+        "question": "Are both Ceratophyllum and Eucomis a genus of flowering plants?",
+        "answer": "yes",
+        "dspy_uuid": "a6efae54-b3df-4809-a5a0-e6d1592f8d5a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Evolution: A Theory in Crisis is a 1985 book by a biochemist and Senior fellow at Discovery Institute's Center for what?",
+        "answer": "Science and Culture",
+        "dspy_uuid": "209b2d87-8520-40c5-a213-f8321806b940",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What main thoroughfare in Warsaw's borough of Ursyn\u00f3w connects to a 6,500 km international road which coincides with the Trans-Siberian Highway?",
+        "answer": "Jana Roso\u0142a street",
+        "dspy_uuid": "24ca497f-301e-4cf1-91e1-5a6572e34724",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What magazine was established in 1988 by Frank Thomas and Keith White and has been associated with the Dirtbag Left?",
+        "answer": "The Baffler",
+        "dspy_uuid": "e547ae50-2dcf-408c-b7f6-135445e01515",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Konnichiwa was launched in a broadcast that was streamed by the platform that was founded in what city in 2010?",
+        "answer": "London",
+        "dspy_uuid": "928430ce-da79-4fc1-8cc3-0153a950c612",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which city did the writer of Enion spend most of his life?",
+        "answer": "London",
+        "dspy_uuid": "cb3a4de3-0580-407c-bd75-a767452de2ff",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What animated creatures were the title characters of the film which was based one of the most frequently performed plays written by William Shakespeare early in his career?",
+        "answer": "seals",
+        "dspy_uuid": "b0197163-5d25-4071-8d64-4882a4b5436e",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Were Dorothy Arzner and Richard Wallace both French film directors?",
+        "answer": "no",
+        "dspy_uuid": "6f6ef4ee-46a6-4830-ae74-fd650934c7a7",
+        "dspy_split": "train"
+      },
+      {
+        "question": "In addition to the Austrian passport, what is needed to gain access to 173 countries and territories?",
+        "answer": "national identity card",
+        "dspy_uuid": "4f79dadf-38ce-4675-a630-26124c238c11",
+        "dspy_split": "train"
+      },
+      {
+        "question": "That Darn Cat! and Never a Dull Moment were both produced by what studio?",
+        "answer": "Walt Disney Productions",
+        "dspy_uuid": "de770711-3a83-4821-a6f5-31a9d0be72ad",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which of these Asian directors was behind the science fiction adventure film \"Snowpiercer\", Bong Joon-ho or Vincent Kok?",
+        "answer": "Bong",
+        "dspy_uuid": "cbf07499-e396-4017-90b1-a1d75b9f7138",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The Garand carbine was created by a man with what nationality?",
+        "answer": "Canadian-American",
+        "dspy_uuid": "359eda9d-6936-4b4e-ac59-f6fbf8ea7ece",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The 1925 Saint Mary's Gaels football team represented what private, coeducational college in Moraga, California?",
+        "answer": "Saint Mary's College of California",
+        "dspy_uuid": "7991fbb8-75f3-4dad-9e43-05d8852ee6ac",
+        "dspy_split": "train"
+      },
+      {
+        "question": "This group encompassed a federation of Alpine tribes, including the Calucones, for about 6 centuries starting around 500 BC.  ",
+        "answer": "The Raeti",
+        "dspy_uuid": "b633ffeb-005f-4091-91c6-11fb5eba49e8",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!<\/desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.<\/desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What Nigerian president appointed the Managing Director of the NPA in 2016?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What Nigerian president appointed the Managing Director of the NPA in 2016?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What Nigerian president appointed the Managing Director of the NPA in 2016?\", \"passages_this_hop\": [{\"long_text\": \"Hadiza Bala Usman | Hadiza Bala Usman (born January 2, 1976) is a Nigerian activist and politician. She is currently the Managing Director of the Nigerian Ports Authority (NPA) as appointed by President Muhammadu Buhari on Monday 11 July 2016. She was formerly the Chief of Staff for the Kaduna State Governor. Bala Usman is an active member of the All Progressives Congress (APC).\", \"score\": 25.625}, {\"long_text\": \"Ayo Oke | Ayo Oke is the director general of Nigeria's National Intelligence Agency (NIA), appointed by then president Goodluck Jonathan since 7 November 2013.\", \"score\": 19.953125}, {\"long_text\": \"Ado J. G. Muhammad | Dr. Ado Jimada Gana Muhammad (born January 18, 1967) is the Executive Director\/CEO of the Nigeria\u2019s National Primary Health Care Development Agency (NPHCDA), the government organ responsible for developing national primary health care (PHC) policy and supporting states and Local Government Areas (LGAs) to implement them.\", \"score\": 19.90625}]}\n\n[[ ## thought_0 ## ]]\nBased on the search results, the Managing Director of the NPA was appointed by President Muhammadu Buhari in 2016.\n\n[[ ## tool_name_0 ## ]]\nfinish\n\n[[ ## tool_args_0 ## ]]\n{}\n\n[[ ## observation_0 ## ]]\nCompleted.",
+        "reasoning": "The search returned information about the appointment of the Managing Director of the NPA in 2016. One of the passages mentions that Hadiza Bala Usman was appointed by President Muhammadu Buhari on July 11, 2016, as the Managing Director of the Nigerian Ports Authority (NPA).",
+        "answer": "Muhammadu Buhari"
+      },
+      {
+        "augmented": true,
+        "question": "Are Norma and Idomeneo both operas by Bellini?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Are Norma and Idomeneo both operas by Bellini?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Are Norma and Idomeneo both operas by Bellini?\", \"passages_this_hop\": [{\"long_text\": \"Norma (opera) | Norma (] ) is a \\\"tragedia lirica\\\" or opera in two acts by Vincenzo Bellini with libretto by Felice Romani after \\\"Norma, ou L'infanticide\\\" (\\\"Norma, or The Infanticide\\\") by Alexandre Soumet. It was first produced at La Scala in Milan on 26 December 1831.\", \"score\": 21.359375}, {\"long_text\": \"Norma discography | This is a list of recordings of Norma, a two-act opera by Vincenzo Bellini with an Italian-language libretto by Felice Romani. It was first performed on 26 December 1831, at La Scala in Milan.\", \"score\": 20.5}, {\"long_text\": \"Meco all'altar di Venere | \\\"Meco all'altar di Venere\\\" is an aria from the opera \\\"Norma\\\" by Vincenzo Bellini, sung by the character Pollione in act 1, scene 2.\", \"score\": 19.5}]}\n\n[[ ## thought_0 ## ]]\nBased on the search results, it seems like both \"Norma\" and \"Idomeneo\" are indeed operas composed by Bellini. However, I need to verify if \"Idomeneo\" is also written by Bellini.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"\\\"Idomeneo\\\" opera by Bellini\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"\\\"Idomeneo\\\" opera by Bellini\", \"passages_this_hop\": [{\"long_text\": \"Idomeneo | Idomeneo, re di Creta ossia Ilia e Idamante (Italian for \\\"Idomeneus, King of Crete, or, Ilia and Idamante\\\"; usually referred to simply as Idomeneo, K. 366) is an Italian language opera seria by Wolfgang Amadeus Mozart. The libretto was adapted by Giambattista Varesco from a French text by Antoine Danchet, which had been set to music by Andr\u00e9 Campra as \\\"Idom\u00e9n\u00e9e\\\" in 1712. Mozart and Varesco were commissioned in 1780 by Karl Theodor, Elector of Bavaria for a court carnival. He probably chose the subject, though it might have been Mozart. The work premiered on 29 January 1781 at the Cuvilli\u00e9s Theatre in Munich, Germany.\", \"score\": 22.828125}, {\"long_text\": \"2006 Idomeneo controversy | On September 26, 2006, the Deutsche Oper Berlin announced the cancellation of four performances of Mozart's opera \\\"Idomeneo, re di Creta\\\", planned for November 2006, citing concerns that the production's depictions of the severed head of the Islamic prophet Muhammad raised an \\\"incalculable security risk.\\\" \\\"To avoid endangering its audience and employees, the management has decided against repeating \\\"Idomeneo\\\" in November 2006,\\\" the opera house said in a press release.\", \"score\": 20.234375}, {\"long_text\": \"Lorenzo Quaglio | Lorenzo Quaglio (25 May 1730 \u2013 7 May 1804) was a German stage designer of Italian extraction. He worked mainly in Mannheim and in Munich, where he designed the first production of Mozart's opera \\\"Idomeneo\\\".\", \"score\": 19.4375}]}\n\n[[ ## thought_1 ## ]]\nBoth \"Norma\" and \"Idomeneo\" are operas by different composers. From the search results, it is clear that \"Idomeneo\" is not by Bellini but by Wolfgang Amadeus Mozart.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "The search results indicate that \"Norma\" is indeed an opera by Bellini, while \"Idomeneo\" is an opera by Wolfgang Amadeus Mozart.",
+        "answer": "No"
+      },
+      {
+        "question": "What main thoroughfare in Warsaw's borough of Ursyn\u00f3w connects to a 6,500 km international road which coincides with the Trans-Siberian Highway?",
+        "answer": "Jana Roso\u0142a street",
+        "dspy_uuid": "24ca497f-301e-4cf1-91e1-5a6572e34724",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Konnichiwa was launched in a broadcast that was streamed by the platform that was founded in what city in 2010?",
+        "answer": "London",
+        "dspy_uuid": "928430ce-da79-4fc1-8cc3-0153a950c612",
+        "dspy_split": "train"
+      },
+      {
+        "question": "This group encompassed a federation of Alpine tribes, including the Calucones, for about 6 centuries starting around 500 BC.  ",
+        "answer": "The Raeti",
+        "dspy_uuid": "b633ffeb-005f-4091-91c6-11fb5eba49e8",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Evolution: A Theory in Crisis is a 1985 book by a biochemist and Senior fellow at Discovery Institute's Center for what?",
+        "answer": "Science and Culture",
+        "dspy_uuid": "209b2d87-8520-40c5-a213-f8321806b940",
+        "dspy_split": "train"
+      },
+      {
+        "question": "That Darn Cat! and Never a Dull Moment were both produced by what studio?",
+        "answer": "Walt Disney Productions",
+        "dspy_uuid": "de770711-3a83-4821-a6f5-31a9d0be72ad",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The 1925 Saint Mary's Gaels football team represented what private, coeducational college in Moraga, California?",
+        "answer": "Saint Mary's College of California",
+        "dspy_uuid": "7991fbb8-75f3-4dad-9e43-05d8852ee6ac",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The Garand carbine was created by a man with what nationality?",
+        "answer": "Canadian-American",
+        "dspy_uuid": "359eda9d-6936-4b4e-ac59-f6fbf8ea7ece",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Were Dorothy Arzner and Richard Wallace both French film directors?",
+        "answer": "no",
+        "dspy_uuid": "6f6ef4ee-46a6-4830-ae74-fd650934c7a7",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are both Ceratophyllum and Eucomis a genus of flowering plants?",
+        "answer": "yes",
+        "dspy_uuid": "a6efae54-b3df-4809-a5a0-e6d1592f8d5a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which city did the writer of Enion spend most of his life?",
+        "answer": "London",
+        "dspy_uuid": "cb3a4de3-0580-407c-bd75-a767452de2ff",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What animated creatures were the title characters of the film which was based one of the most frequently performed plays written by William Shakespeare early in his career?",
+        "answer": "seals",
+        "dspy_uuid": "b0197163-5d25-4071-8d64-4882a4b5436e",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which of these Asian directors was behind the science fiction adventure film \"Snowpiercer\", Bong Joon-ho or Vincent Kok?",
+        "answer": "Bong",
+        "dspy_uuid": "cbf07499-e396-4017-90b1-a1d75b9f7138",
+        "dspy_split": "train"
+      },
+      {
+        "question": "In addition to the Austrian passport, what is needed to gain access to 173 countries and territories?",
+        "answer": "national identity card",
+        "dspy_uuid": "4f79dadf-38ce-4675-a630-26124c238c11",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What magazine was established in 1988 by Frank Thomas and Keith White and has been associated with the Dirtbag Left?",
+        "answer": "The Baffler",
+        "dspy_uuid": "e547ae50-2dcf-408c-b7f6-135445e01515",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

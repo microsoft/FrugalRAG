@@ -1,0 +1,187 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Are Norma and Idomeneo both operas by Bellini?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Are Norma and Idomeneo both operas by Bellini?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Are Norma and Idomeneo both operas by Bellini?\", \"passages_this_hop\": [{\"long_text\": \"Norma (opera) | Norma (] ) is a \\\"tragedia lirica\\\" or opera in two acts by Vincenzo Bellini with libretto by Felice Romani after \\\"Norma, ou L'infanticide\\\" (\\\"Norma, or The Infanticide\\\") by Alexandre Soumet. It was first produced at La Scala in Milan on 26 December 1831.\", \"score\": 21.359375}, {\"long_text\": \"Norma discography | This is a list of recordings of Norma, a two-act opera by Vincenzo Bellini with an Italian-language libretto by Felice Romani. It was first performed on 26 December 1831, at La Scala in Milan.\", \"score\": 20.5}, {\"long_text\": \"Meco all'altar di Venere | \\\"Meco all'altar di Venere\\\" is an aria from the opera \\\"Norma\\\" by Vincenzo Bellini, sung by the character Pollione in act 1, scene 2.\", \"score\": 19.5}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, it seems we have found information about Norma, but not directly about Idomeneo. We should check if Idomeneo is also an opera by Bellini.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Is Idomeneo an opera by Bellini?\", \"trajectory_id\": \"the trajectory_id from the previous AdvancedSearch tool\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Is Idomeneo an opera by Bellini?\", \"passages_this_hop\": [{\"long_text\": \"Idomeneo | Idomeneo, re di Creta ossia Ilia e Idamante (Italian for \\\"Idomeneus, King of Crete, or, Ilia and Idamante\\\"; usually referred to simply as Idomeneo, K. 366) is an Italian language opera seria by Wolfgang Amadeus Mozart. The libretto was adapted by Giambattista Varesco from a French text by Antoine Danchet, which had been set to music by André Campra as \\\"Idoménée\\\" in 1712. Mozart and Varesco were commissioned in 1780 by Karl Theodor, Elector of Bavaria for a court carnival. He probably chose the subject, though it might have been Mozart. The work premiered on 29 January 1781 at the Cuvilliés Theatre in Munich, Germany.\", \"score\": 21.84375}, {\"long_text\": \"2006 Idomeneo controversy | On September 26, 2006, the Deutsche Oper Berlin announced the cancellation of four performances of Mozart's opera \\\"Idomeneo, re di Creta\\\", planned for November 2006, citing concerns that the production's depictions of the severed head of the Islamic prophet Muhammad raised an \\\"incalculable security risk.\\\" \\\"To avoid endangering its audience and employees, the management has decided against repeating \\\"Idomeneo\\\" in November 2006,\\\" the opera house said in a press release.\", \"score\": 19.890625}, {\"long_text\": \"Lorenzo Quaglio | Lorenzo Quaglio (25 May 1730 – 7 May 1804) was a German stage designer of Italian extraction. He worked mainly in Mannheim and in Munich, where he designed the first production of Mozart's opera \\\"Idomeneo\\\".\", \"score\": 19.203125}]}\n\n[[ ## thought_1 ## ]]\nFrom the search results, it seems we have found information about both Norma and Idomeneo. We can now answer the original question.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "To determine if Norma and Idomeneo are both operas by Bellini, I first searched for relevant documents with the original question as the search query. The search results provided information about Norma, but not directly about Idomeneo. Therefore, I performed a second search to check if Idomeneo is also an opera by Bellini. The results showed that Idomeneo is actually an opera by Wolfgang Amadeus Mozart, not Vincenzo Bellini.",
+        "answer": "no"
+      },
+      {
+        "augmented": true,
+        "question": "In what army is Mehmetçik slang for a common a common soldier?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"In what army is Mehmetçik slang for a common a common soldier?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"In what army is Mehmetçik slang for a common a common soldier?\", \"passages_this_hop\": [{\"long_text\": \"Bigalı Mehmet Çavuş | Bigalı Mehmet Çavuş (1878–1964), (literally Sergeant Mehmet of Biga) was an Ottoman Army sergeant, who fought during the Gallipoli Campaign of World War I. He is remembered for his bravery, and is considered to be the eponym of the common name \\\"Mehmetçik\\\" used for an Ottoman or a Turkish soldier.\", \"score\": 22.359375}, {\"long_text\": \"Respect to Mehmetçik Monument | The Respect to Mehmetçik Memorial (Turkish: \\\"Mehmetçiğe Saygı Anıtı\\\" ) is a monument in the Gallipoli peninsula, Turkey. Mehmetçik is a common name given to soldiers in a war, just like G.I..\", \"score\": 22.0625}, {\"long_text\": \"Mehmetçik | Mehmetçik (literally: Little Mehmet) is a general term used affectionately to refer soldiers of the Ottoman Army and Turkish Army. It is the Turkish equivalent of \\\"Tommy Atkins\\\" for the British Army, \\\"Doughboy\\\" or G.I. of the United States Army, \\\"Digger\\\" of the Australian Army and the New Zealand Army or Johnny Reb for Confederate soldiers in the American Civil War. Although it is used for especially infantryman (foot soldier), terms such like Piyade Mehmetçik (Infantryman Little Mehmet) and Süvari Mehmetçik (Cavalryman Little Mehmet), Topçu Mehmetçik (Artilleryman Little Mehmet) have rarely been seen.\", \"score\": 21.984375}]}\n\n[[ ## thought_0 ## ]]\nThe observation shows that Mehmetçik is a general term used to refer soldiers in the Ottoman and Turkish armies. I will now try to find the specific army where this term originated.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What Ottoman or Turkish army does Mehmetçik refer to?\", \"trajectory_id\": \"0\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What Ottoman or Turkish army does Mehmetçik refer to?\", \"passages_this_hop\": [{\"long_text\": \"Mehmet Hayri Tarhan | Mehmet Hayri Tarhan (1884; Tirnovadjik (Malko Tarnovo) – December 11, 1934; Ankara) was a military officer of the Ottoman Army and a general of the Turkish Army.\", \"score\": 23.984375}, {\"long_text\": \"Mehmet Atıf Ateşdağlı | Mehmet Atıf Ateşdağlı (1876; Crete - December 3, 1947; Istanbul) was an officer of the Ottoman Army and of the Turkish Army.\", \"score\": 23.578125}, {\"long_text\": \"Mehmet Hulusi Conk | Mehmet Hulusi Conk (1881 in Smyrna (Izmir), Aidin Vilayet – January 10, 1950?) was an officer of the Ottoman Army and the Turkish Army.\", \"score\": 23.578125}]}\n\n[[ ## thought_1 ## ]]\nThe observation shows that Mehmetçik refers to the Ottoman and Turkish armies. I will now try to find the specific Ottoman army where this term originated.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"What Ottoman army does Mehmetçik refer to?\", \"trajectory_id\": \"1\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"What Ottoman army does Mehmetçik refer to?\", \"passages_this_hop\": [{\"long_text\": \"Mehmet Nâzım Bey | Mehmet Nâzım Bey (1886; Kayseri - July 15, 1921; Yumruçal) was an officer of the Ottoman Army and the Turkish Army.\", \"score\": 23.078125}, {\"long_text\": \"Mehmet Emin Koral | Mehmet Emin Koral (1881 in Constantinople (Istanbul) – August 12, 1959 in Istanbul) was an officer of the Ottoman Army and a general of the Turkish Army.\", \"score\": 23.078125}, {\"long_text\": \"Mehmet Emin Çolakoğlu | Mehmet Emin Çolakoğlu (1878 – 6 August 1939) was an officer of the Ottoman Army and the general of the Turkish Army.\", \"score\": 23.078125}]}\n\n[[ ## thought_2 ## ]]\nThe observation shows that Mehmetçik refers to the Ottoman and Turkish armies. I will now try to find the specific Ottoman army where this term originated.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"Which Ottoman army does Mehmetçik refer to?\", \"trajectory_id\": \"1\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"Which Ottoman army does Mehmetçik refer to?\", \"passages_this_hop\": [{\"long_text\": \"Mehmet Suphi Kula | Mehmet Suphi Kula (1881; Monastir (Bitola) – October 19, 1948; Ankara) was an officer of the Ottoman Army and the general of the Turkish Army.\", \"score\": 22.875}, {\"long_text\": \"Ottoman Army (15th-19th centuries) | Ottoman Classical Army was the military structure established by Mehmed II, during his reorganization of the state and the military. This was the major reorganization following Orhan I's standing army paid by salary rather than booty or fiefs. This army was the force during the rise of the Ottoman Empire. The organization was twofold, central (\\\"Kapıkulu\\\") and peripheral (\\\"Eyalet\\\"). This army was forced to disbandment by Sultan Mahmud II on 15 June 1826 by what is known as Auspicious Incident following a century long reform efforts.\", \"score\": 22.71875}, {\"long_text\": \"Mehmet Emin Yazgan | Mehmet Emin Yazgan (1876 in Constantinople (Istanbul) – February 21, 1961 in Istanbul) was an officer of the Ottoman Army and the general of the Turkish Army.\", \"score\": 22.71875}]}\n\n[[ ## thought_3 ## ]]\nIt seems that the observation shows that Mehmetçik refers to the Ottoman and Turkish armies, but the specific Ottoman army where this term originated is still unclear. I will try to find more information about the term's origin.\n\n[[ ## tool_name_3 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_3 ## ]]\n{\"search_query\": \"Origin of the term Mehmetçik\", \"trajectory_id\": \"2\"}\n\n[[ ## observation_3 ## ]]\n{\"search_query\": \"Origin of the term Mehmetçik\", \"passages_this_hop\": [{\"long_text\": \"Mehmetçik Monument | Mehmetçik Monument (Kartaltepe Mehmetçik Monument) is a monumental sculpture featuring a Turkish soldier on Kartaltepe of Polatlı, a rural area of Ankara Province, Turkey. The name of the monument \\\"Mehmetçik\\\" is the diminutive form of the common name Mehmet, which is used to nickname Turkish soldiers.\", \"score\": 23.484375}, {\"long_text\": \"Sedefkar Mehmed Agha | Sedefkar Mehmed Agha Biçakçiu or Sedefqar Mehmeti of Elbasan (Modern Turkish: \\\"Sedefkâr Mehmet Ağa\\\", about 1540 - 1617) is recorded as the Ottoman architect of the Sultan Ahmed Mosque (the \\\"Blue Mosque\\\") in Istanbul. He was of Albanian origin.\", \"score\": 22.71875}, {\"long_text\": \"THK-16 | The THK-16 \\\"Mehmetçik\\\" (Turkish: \\\"Little Mehmet\\\") was an aircraft designed in Turkey in the early 1950s to provide the Turkish Air Force with a domestically designed and built jet trainer. The project was cancelled without the aircraft having been built.\", \"score\": 22.5625}]}\n\n[[ ## thought_4 ## ]]\nIt seems that the observation shows that Mehmetçik refers to the Ottoman and Turkish armies, but the specific Ottoman army where this term originated is still unclear. I will try to find more information about the term's origin.\n\n[[ ## tool_name_4 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_4 ## ]]\n{\"search_query\": \"Origin of the term Mehmetçik\", \"trajectory_id\": \"2\"}\n\n[[ ## observation_4 ## ]]\n{\"search_query\": \"Origin of the term Mehmetçik\", \"passages_this_hop\": [{\"long_text\": \"Basri Dirimlili | Basri Dirimlili (7 June 1929 – 14 September 1997), nicknamed Mehmetcik Basri, was a Turkish football player.\", \"score\": 21.953125}, {\"long_text\": \"Mahomet Sirocco | Şuluk Mehmed Pasha (1525 – 7 October 1571), better known in Europe as Mehmed Siroco or Mahomet Sirocco, and also spelled Sulik, Chulouk, Şolok, Seluk, or Suluc and known with the titles Pasha, Reis, or Bey, was the Ottoman Bey (regional governor) of Alexandria in the mid-16th century. Both the foreign and the Turkish nicknames (and their various spellings) were derived from the name of the southern Mediterranean wind Sirocco, from Greek σιρόκος \\\"sirokos\\\" and the hence derived Levantine Arabic شلوق \\\"shlūq\\\", respectively.\", \"score\": 21.671875}, {\"long_text\": \"Mehmet Nuri Efendi | Mehmet Nuri Efendi (1885 – 7 April 1921) was an Ottoman mufti (Islamic scholar who is an interpreter or expounder of Islamic law) of the town of Bilecik, and is known for his support to the Turkish national movement and subsequent assassination by the Greeks in 1921 during the Greco-Turkish War (1919–22). A tomb was built for him in 1996.\", \"score\": 21.671875}]}",
+        "reasoning": "The term \"Mehmetçik\" is a general term used to refer to soldiers in the Ottoman and Turkish armies. It is believed to have originated from the name of a Turkish soldier, and is often used as a diminutive form of the name Mehmet. The term is commonly used to refer to infantrymen, but can also be used to refer to soldiers in other branches of the military.",
+        "answer": "Ottoman Army"
+      },
+      {
+        "question": "What main thoroughfare in Warsaw's borough of Ursynów connects to a 6,500 km international road which coincides with the Trans-Siberian Highway?",
+        "answer": "Jana Rosoła street",
+        "dspy_uuid": "14656835-9f51-49b6-8716-0c4ec705ecf2",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Konnichiwa was launched in a broadcast that was streamed by the platform that was founded in what city in 2010?",
+        "answer": "London",
+        "dspy_uuid": "8ae8cf5e-ef47-40cd-92ce-54fd88db3adc",
+        "dspy_split": "train"
+      },
+      {
+        "question": "This group encompassed a federation of Alpine tribes, including the Calucones, for about 6 centuries starting around 500 BC.  ",
+        "answer": "The Raeti",
+        "dspy_uuid": "6cc9282d-c890-42ab-bf51-3927af6565f5",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Evolution: A Theory in Crisis is a 1985 book by a biochemist and Senior fellow at Discovery Institute's Center for what?",
+        "answer": "Science and Culture",
+        "dspy_uuid": "3e996376-a2d3-4b18-8a8b-255920216c89",
+        "dspy_split": "train"
+      },
+      {
+        "question": "That Darn Cat! and Never a Dull Moment were both produced by what studio?",
+        "answer": "Walt Disney Productions",
+        "dspy_uuid": "d0006cef-18fd-4ff4-9db1-0f480cfa0444",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The 1925 Saint Mary's Gaels football team represented what private, coeducational college in Moraga, California?",
+        "answer": "Saint Mary's College of California",
+        "dspy_uuid": "cefb7306-ffd8-4daa-9379-a2e2ad6e5733",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The Garand carbine was created by a man with what nationality?",
+        "answer": "Canadian-American",
+        "dspy_uuid": "d44929c6-d1d8-4b77-a2fd-51c58bff5439",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Were Dorothy Arzner and Richard Wallace both French film directors?",
+        "answer": "no",
+        "dspy_uuid": "0ac3317b-929f-46cb-a909-337af657f553",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are both Ceratophyllum and Eucomis a genus of flowering plants?",
+        "answer": "yes",
+        "dspy_uuid": "8bcaa138-0e86-4049-bd85-3c0ad39587e3",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which city did the writer of Enion spend most of his life?",
+        "answer": "London",
+        "dspy_uuid": "9e755ea7-10b1-450b-8678-310a5ad12b65",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What animated creatures were the title characters of the film which was based one of the most frequently performed plays written by William Shakespeare early in his career?",
+        "answer": "seals",
+        "dspy_uuid": "46e0acfe-e72f-45cb-9d60-4f902f4bb068",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which of these Asian directors was behind the science fiction adventure film \"Snowpiercer\", Bong Joon-ho or Vincent Kok?",
+        "answer": "Bong",
+        "dspy_uuid": "f6b4ad66-e379-4f73-9b46-305bd5536e34",
+        "dspy_split": "train"
+      },
+      {
+        "question": "In addition to the Austrian passport, what is needed to gain access to 173 countries and territories?",
+        "answer": "national identity card",
+        "dspy_uuid": "acb7f535-09a6-41f4-9909-e5ef0da141ef",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What magazine was established in 1988 by Frank Thomas and Keith White and has been associated with the Dirtbag Left?",
+        "answer": "The Baffler",
+        "dspy_uuid": "95f29bfc-d7fe-46e1-a389-143eee126afd",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

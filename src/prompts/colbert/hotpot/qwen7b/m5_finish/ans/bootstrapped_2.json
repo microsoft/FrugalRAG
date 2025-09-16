@@ -1,0 +1,188 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "The Garand carbine was created by a man with what nationality?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"The Garand carbine was created by a man with what nationality?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"The Garand carbine was created by a man with what nationality?\", \"passages_this_hop\": [{\"long_text\": \"Garand carbine | The Garand carbine was John Garand's entry during the Light Rifle program that produced the M1 Carbine. The weapon was chambered in the .30 Carbine round and was fed from a magazine inserted from the top right side.\", \"score\": 22.59375}, {\"long_text\": \"John Garand | Jean Cantius Garand ( ; January 1, 1888 – February 16, 1974), also known as John C. Garand, was a Canadian-American designer of firearms who created the M1 Garand, a semi-automatic rifle that was widely used by the U.S. Army and U.S. Marine Corps during both World War II and the Korean War.\", \"score\": 20.265625}, {\"long_text\": \"SKS | The SKS is a Soviet semi-automatic carbine chambered for the 7.62×39mm round, designed in 1943 by Sergei Gavrilovich Simonov. Its complete designation, SKS-45, is an initialism for Samozaryadny Karabin sistemy Simonova, 1945 (Russian: Самозарядный карабин системы Симонова , 1945; Self-loading Carbine of (the) Simonov system, 1945). The SKS-45 was manufactured at Tula Arsenal from 1949-1958 and at Izhevsk Arsenal in just 1953 and 1954, resulting in a total Soviet production of about 2.7 million carbines. In the early 1950s, the Soviets took the SKS carbine out of front-line service and replaced it with the AK-47; however, the SKS remained in second-line service for decades. It is still used as a ceremonial firearm today. The SKS was widely exported, and was also licensed for production by then Eastern Bloc nations, Romania and East Germany, as well as China, where it was designated the \\\"Type 56 Carbine\\\". The East German version was known as the Karabiner S, the Albanian as the Model 561 and North Korean as the \\\"Type 63\\\". The SKS is popular on the civilian surplus market as a hunting and marksmanship semi-automatic rifle in many countries, including the United States, Canada, and New Zealand. Its age and numbers make it relatively inexpensive to purchase, and steel cased 7.62x39mm ammunition is one of the least expensive center fire cartridges currently on the market. The SKS was the second firearm to be chambered for the 7.62×39mm M43 round, with the first being the RPD.\", \"score\": 19.5}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, I found that John Garand created the Garand carbine. The long_text mentions that he was a Canadian-American designer. Therefore, the nationality of the creator is Canadian-American.\n\n[[ ## tool_name_0 ## ]]\nfinish\n\n[[ ## tool_args_0 ## ]]\n{}\n\n[[ ## observation_0 ## ]]\nCompleted.",
+        "reasoning": "The search results indicate that John Garand, the creator of the Garand carbine, was a Canadian-American designer.",
+        "answer": "Canadian-American"
+      },
+      {
+        "augmented": true,
+        "question": "When was the American actor born who played by Travis Schuldt from July 5, 1999 to July 3, 2002?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"When was the American actor born who played by Travis Schuldt from July 5, 1999 to July 3, 2002?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"When was the American actor born who played by Travis Schuldt from July 5, 1999 to July 3, 2002?\", \"passages_this_hop\": [{\"long_text\": \"Ethan Winthrop | Ethan Winthrop is a fictional character on the NBC/DirecTV daytime drama \\\"Passions\\\". Ethan is played by both Travis Schuldt (July 5, 1999—July 3, 2002) and Eric Martsolf (July 8, 2002—August 7, 2008). Rib Hillis temporarily portrayed the role in 2004 when Martsolf was on paternity leave.\", \"score\": 21.875}, {\"long_text\": \"Travis Schuldt | Travis Schuldt (born September 18, 1974) is an American actor. He originated the role of Ethan Winthrop on \\\"Passions\\\", and played the recurring roles of Keith Dudemeister on \\\"Scrubs\\\", Rick/Subway on \\\"Community\\\", and Ben Smith on \\\"It's Always Sunny in Philadelphia\\\".\", \"score\": 21.828125}, {\"long_text\": \"Paul Schulze | Paul Schulze (born June 12, 1962) is an American actor best known for portraying Ryan Chappelle on the Fox series \\\"24\\\" from 2001 to 2004 and Father Phil Intintola on the HBO series \\\"The Sopranos\\\" from 1999 to 2006.\", \"score\": 20.4375}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages, I found that Travis Schuldt played the role of Ethan Winthrop from July 5, 1999 to July 3, 2002. The search also provided his birth date which is September 18, 1974.\n\n[[ ## tool_name_0 ## ]]\nfinish\n\n[[ ## tool_args_0 ## ]]\n{}\n\n[[ ## observation_0 ## ]]\nCompleted.",
+        "reasoning": "The passage mentions that Travis Schuldt played the role of Ethan Winthrop from July 5, 1999 to July 3, 2002, and also provides his birth date, which is September 18, 1974.",
+        "answer": "September 18, 1974"
+      },
+      {
+        "augmented": true,
+        "question": "Which band from East London had Steve Marriott as a band member?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Which band from East London had Steve Marriott as a band member?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Which band from East London had Steve Marriott as a band member?\", \"passages_this_hop\": [{\"long_text\": \"Small Faces | Small Faces were an English rock band from East London. The group was founded in 1965 by members Steve Marriott, Ronnie Lane, Kenney Jones, and Jimmy Winston, although by 1966 Winston was replaced by Ian McLagan as the band's keyboardist.\", \"score\": 24.890625}, {\"long_text\": \"Steve Marriott | Stephen Peter Marriott (30 January 1947 – 20 April 1991) was an English musician, songwriter and frontman of two notable rock and roll bands, spanning over two decades. Marriott is remembered for his powerful singing voice which belied his small stature, and for his aggressive approach as a guitarist in mod rock bands Small Faces (1965–1969 and 1977-1978) and Humble Pie (1969–1975 and 1980–1981). Marriott was inducted posthumously into the Rock and Roll Hall of Fame in 2012 as a member of Small Faces.\", \"score\": 22.71875}, {\"long_text\": \"Majik Mijits | The Legendary Majik Mijits is an album that was recorded by Steve Marriott and Ronnie Lane when they reformed under the name of \\\"Majik Mijits\\\" in 1981 and gave a one-off concert at the Bridgehouse pub in East London. The lineup included Jim Leverton, Mick Green, Mick Weaver, Dave Hynes and Sam Brown.\", \"score\": 22.515625}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, it seems that Steve Marriott was a member of Small Faces, a band from East London.\n\n[[ ## tool_name_0 ## ]]\nfinish\n\n[[ ## tool_args_0 ## ]]\n{}\n\n[[ ## observation_0 ## ]]\nCompleted.",
+        "reasoning": "Based on the search results, Steve Marriott was a member of Small Faces, a band from East London.",
+        "answer": "Small Faces"
+      },
+      {
+        "question": "Are both Ceratophyllum and Eucomis a genus of flowering plants?",
+        "answer": "yes",
+        "dspy_uuid": "501c656e-66bf-4fa9-9bce-af80aeda0bc3",
+        "dspy_split": "train"
+      },
+      {
+        "question": "the Central Reserve Police Force, which has been accused of human rights abuses, operates under the aegis of what Government of India agency?",
+        "answer": "Ministry of Home Affairs (MHA)",
+        "dspy_uuid": "014853f6-97cc-4c12-a552-40126cf7d44b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Is Liverpool found in northern or southern England?",
+        "answer": "northern England",
+        "dspy_uuid": "b10a57e7-cf80-4222-afaf-aa42dc3f6986",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What animated creatures were the title characters of the film which was based one of the most frequently performed plays written by William Shakespeare early in his career?",
+        "answer": "seals",
+        "dspy_uuid": "9e45d333-3634-4d6b-a3db-108b63a2cd8c",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Reggie Grimes played for New England Patriots in 2000, and where did he play college football?",
+        "answer": "Alabama",
+        "dspy_uuid": "d215e808-ddf3-445c-826d-1dae97d5dcdf",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What is the name of the song, originally performed by Taylor Swift, that came before Kendrick Lamar's second number-one single, \"Humble\"?",
+        "answer": "Bad Blood",
+        "dspy_uuid": "6469c135-2c15-4639-b80f-e117b4755106",
+        "dspy_split": "train"
+      },
+      {
+        "question": "what is the largest university press in the world that published Oxford Companions?",
+        "answer": "Oxford University Press",
+        "dspy_uuid": "a5666d88-09df-4e77-8fdc-628d273b7a19",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What precious metal did both McIntyre Mines and the Kemess Mine dig for?",
+        "answer": "gold",
+        "dspy_uuid": "9e598e55-72d3-49f6-8ee2-a92192b50e16",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was founded first, Death Cab for Cutie or P.O.D.?",
+        "answer": "P.O.D.",
+        "dspy_uuid": "f7ee82ef-e682-44e3-b3fa-68ba52775cea",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which dog originated in the Mountains of Romania, the Ariege Pointer or the Carpathian Shepherd Dog?",
+        "answer": "Carpathian Mountains of Romania.",
+        "dspy_uuid": "ae877f7e-8a32-4bdb-84d9-5a8e6fdd2538",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Utterby is situated on the road that is in what English region?",
+        "answer": "East Midlands",
+        "dspy_uuid": "0d264340-f12d-463f-bef2-25435978ce72",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which airport Rapid City Regional Airport and Chattanooga Metropolitan Airport is closer to its local city ?",
+        "answer": "Chattanooga Metropolitan Airport",
+        "dspy_uuid": "5e0b8dfa-8b05-46d8-8b9f-980d5c9ad727",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Where did the younger brother of Titus Davis play college football?",
+        "answer": "Western Michigan",
+        "dspy_uuid": "647a4b89-c017-4b4b-ac22-f9d458a007aa",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

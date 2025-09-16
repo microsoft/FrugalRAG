@@ -1,0 +1,156 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "In which year did the manufacturer of the Nord 1500 Griffon end?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"In which year did the manufacturer of the Nord 1500 Griffon end?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"In which year did the manufacturer of the Nord 1500 Griffon end?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Nord 1500 Griffon\\\" | \\\"Nord 1500 Griffon The Nord 1500 Griffon was an experimental ramjet-powered fighter aircraft designed and built in the mid-1950s by French state-owned aircraft manufacturer Nord Aviation. It was part of a series of competing programs to fill a French Air Force specification for a Mach 2 fighter. Design of the Griffon originated in a late 1940s requirement for a high speed interceptor. Engineers at Arsenal de l'Aéronautique instigated studies into swept and delta wings using supersonic gliders, the Arsenal 1301 and Arsenal 2301. Results from these flight tests favoured the delta configuration, which was incorporated into design studies using a\\\"\", \"score\": 24.171875}, {\"long_text\": \"\\\"Nord 1500 Griffon\\\" | \\\"between the two aircraft were limited to the smaller intake and two-position exhaust nozzle of the Griffon I. After proving the aerodynamic aspects and systems of the Griffon, the 1500-01 was retired in April 1957. Flying continued with the Griffon II after its first flight on 23 January 1957. With Major André Turcat at the controls, the Griffon II reached a top speed of Mach 2.19 () in 1958, thus proving the soundness of the basic design. However, the aircraft met several technical difficulties, such as kinetic heating, due to the lack of temperature-resistant materials, such as Inconel or titanium,\\\"\", \"score\": 24.0}, {\"long_text\": \"\\\"Nord 1500 Griffon\\\" | \\\"variety of powerplants. By this time Arsenal had been privatised as SFECMAS - \\\"\\\"Société Française d'Etude et de Construction de Matériel Aéronautiques Spéciaux\\\"\\\". Powered by a large ramjet with turbojet sustainer, the Griffon was renamed from the SFECMAS 1500 Guépard (Cheetah) after SFECMAS was merged with SNCAN to form Nord Aviation. Two prototypes were ordered initially in a letter dated 24 August 1953, with the final contract, (No. 2003/55) in 1955. Although intended to eventually fulfil a requirement for a light interceptor capable of operation from 1,000m grass runways, the two prototypes were ordered without military equipment for research purposes\\\"\", \"score\": 23.953125}, {\"long_text\": \"\\\"Nord 1500 Griffon\\\" | \\\"the ramjet producing extra thrust at airspeeds above 1,000 km/h (600 mph). To reduce risks in using the relatively new turbo-ramjet powerplant, the first Griffon (Nord 1500-01 Griffon I) was completed with only the 3,800 kgf thrust ATAR 101F turbojet component. First flown by Andre Turcat on 20 September 1955, the Griffon I proved to be underpowered but plans to install the planned ramjet component were never realised. Despite the lack of power the Griffon I still managed to reach M 1.17. Flying with the Griffon I ceased in April 1957 in favour of the ramjet-equipped Griffon II. Visible differences\\\"\", \"score\": 23.03125}, {\"long_text\": \"\\\"André Turcat\\\" | \\\"earning an assignment to EPNER, France's test pilot school. Shortly after graduating, Turcat took over the test campaign of the Nord 1500 Griffon, one of the world's first ramjet-powered aircraft. During this successful program, Turcat flew the Griffon at Mach 2.19, a feat that earned him the prestigious Harmon Trophy in 1958. A few months later (25 February 1959), Turcat broke the world speed record over 100 kilometers with the Griffon, at an average 1,643 km/h (1,021 mph). Turcat left the military after the Griffon program ended and joined state-owned aircraft manufacturer Sud Aviation as the Concorde supersonic transport (SST)\\\"\", \"score\": 22.921875}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, it seems the Nord 1500 Griffon was developed by Nord Aviation. The last mentioned date is April 1957 when the first prototype (Griffon I) was retired. However, we need to confirm if this is the end of the manufacturer's activities related to this project.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"When did Nord Aviation stop manufacturing the Nord 1500 Griffon?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"When did Nord Aviation stop manufacturing the Nord 1500 Griffon?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Nord 1500 Griffon\\\" | \\\"in the parts of the airframe experiencing the highest temperatures. The ramjet was found to work well at high speed, but was unstable at medium speeds. Production of operational versions, dubbed Super Griffon did not take place as it was found that the requirements could be met and exceeded with less complex and cheaper aircraft such as the Dassault Mirage III. A preserved Nord 1500-02 Griffon II aircraft is on display in the French Air and Space Museum, at Le Bourget, near Paris. Nord 1500 Griffon The Nord 1500 Griffon was an experimental ramjet-powered fighter aircraft designed and built in\\\"\", \"score\": 21.640625}, {\"long_text\": \"\\\"Nord Gerfaut\\\" | \\\"release point by SNCAC Martinet, Douglas DC-3 or SNCASE Languedoc transport aircraft, these gliders provided valuable data for the design of the Gerfaut. To utilise this data SFECMAS engineers initiated the 1400,1500 and 1910 interceptor projects with delta wings and different propulsion systems. The 1400 developed into the Gerfaut series,the 1500 became the Nord Griffon, while the 1910, ambitiously specified with two large ramjet engines, was never pursued. Different versions of the Arsenal / SFECMAS 1400 were studied as the:- By the time that construction of prototypes started, the interceptor requirement had overtaken the Gerfaut so the aircraft was designed\\\"\", \"score\": 21.171875}, {\"long_text\": \"\\\"Arsenal 2301\\\" | \\\"tailplane was altered more, moved up the fin and made smaller and delta shaped; the Gerfaut's small delta tailplane was similar but clipped. In its final form the Ars.1301 had an even smaller delta fore-plane. Typically test flights were launched from the Languedoc at about . The Gerfaut first flew on 15 January 1954; in 1955 SFECMAS and SCAN were completely merged, becoming the nationalized Nord Aviation in 1958. The Nord Griffon, another Gaultier delta design, first flew on 1 September 1955; this had no tailplane but a delta fore-plane, similar to that on the final version of the Ars.1301.\\\"\", \"score\": 20.75}, {\"long_text\": \"\\\"Nord Aviation\\\" | \\\"Nord Aviation Nord-Aviation () was a state-owned French aircraft manufacturer. It was created on October 1, 1954 upon the acquisition of SFECMAS (\\\"\\\"Société française d'étude et de construction de matériels aéronautiques spéciaux\\\"\\\") by SNCAN (\\\"\\\"Société nationale de constructions aéronautiques du Nord\\\"\\\"). The name Nord is also used as a generic name to refer to the Pingouin light aircraft. The company was based in the centre of France, on the site of Bourges airport, in the département of Cher. In 1970, Nord Aviation merged with Sud Aviation to create \\\"\\\"Société nationale d'industrie aérospatiale\\\"\\\" (SNIAS), later renamed Aérospatiale and ultimately merged into\\\"\", \"score\": 20.25}, {\"long_text\": \"\\\"Nord 1500 Griffon\\\" | \\\"only. Constructed mainly of light alloys, the Griffon comprised a large tubular fuselage which supported the middle set delta wings, fin with rudder and the forward fuselage, which extended forwards over the turbo-ramjet air intake. The forward fuselage housed the single-seat cockpit and carried small delta canards on either side of the cockpit. The tricycle undercarriage retracted into the wings and the underside of the air intake. The design of the Griffon featured a dual turbojet-ramjet powerplant, with the turbojet enabling unassisted takeoffs (ramjets cannot produce thrust at zero airspeed and thus cannot move an aircraft from a standstill) and\\\"\", \"score\": 20.109375}]}\n\n[[ ## thought_1 ## ]]\nThe information provided does not explicitly state when Nord Aviation stopped manufacturing the Nord 1500 Griffon. However, it mentions that the company was merged with Sud Aviation in 1970 to form Aérospatiale. This might imply that the production of the Nord 1500 Griffon ended around that time, but we should confirm this.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"When did Nord Aviation merge with Sud Aviation?\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"When did Nord Aviation merge with Sud Aviation?\", \"passages_this_hop\": [{\"long_text\": \"SNCAN | \\\"and several of its assets were absorbed by SNCAN; however a further period of rationalization saw SNCAN merge with SFECMAS, the recently-privatized French government Air Arsenal, and renamed “Nord Aviation”, Later, in 1970, Nord merged with Sud Aviation to form Aerospatiale, the French government's primary aircraft manufacturer. Aircraft designed and built by SNCAN include the Pingouin, in 1944; the Norécrin, a 3-seat cabin monoplane trainer, in 1945: the Norélan, a 3-seat trainer, in 1948: and the Noroit, a 2-engine air-sea rescue amphibian/flying-boat, in 1949 In 1947 Nord built a prototype carrier bomber, the Noréclair, and a prototype 2-seat helicopter, the\\\"\", \"score\": 27.15625}, {\"long_text\": \"\\\"Sud Aviation\\\" | \\\"Sud Aviation, at the direction of the French and British governments, formed a consortium with BAC in November 1962 to merge their design and production efforts to create Concorde. The company designed helicopters which went on to be built in large numbers, including the Alouette II (the first production helicopter powered by a gas turbine; first flight in 1955), the Puma (1965) and Gazelle (1967). In 1967 an agreement between the British and French governments arranged for joint production and procurement of the Puma and Gazelle, together with the British Westland Lynx. Sud Aviation merged with Nord Aviation and \\\"\\\"Société\\\"\", \"score\": 27.125}, {\"long_text\": \"\\\"Nord Aviation\\\" | \\\"European aerospace corporation EADS in 2000. \\\"\\\"Data from:Aviafrance SNCAN\\\"\\\" and \\\"\\\"Aviafrance Nord Nord Aviation Nord-Aviation () was a state-owned French aircraft manufacturer. It was created on October 1, 1954 upon the acquisition of SFECMAS (\\\"\\\"Société française d'étude et de construction de matériels aéronautiques spéciaux\\\"\\\") by SNCAN (\\\"\\\"Société nationale de constructions aéronautiques du Nord\\\"\\\"). The name Nord is also used as a generic name to refer to the Pingouin light aircraft. The company was based in the centre of France, on the site of Bourges airport, in the département of Cher. In 1970, Nord Aviation merged with Sud Aviation to create\\\"\", \"score\": 26.109375}, {\"long_text\": \"\\\"Sud Aviation\\\" | \\\"Sud Aviation Sud-Aviation (, \\\"\\\"Southern Aviation\\\"\\\") was a French state-owned aircraft manufacturer, originating from the merger of Sud-Est (SNCASE, or \\\"\\\"Société nationale des constructions aéronautiques du sud-est\\\"\\\") and Sud-Ouest (SNCASO or \\\"\\\"Société nationale des constructions aéronautiques du sud-ouest\\\"\\\") on 1 March 1957. Both companies had been formed from smaller privately owned corporations that had been nationalized into six regional design and manufacturing pools just prior to World War II. From 1960, the firm started on the design of a supersonic transport version of the Caravelle, known as the Super-Caravelle. However, the projected cost of the project was so high that\\\"\", \"score\": 25.546875}, {\"long_text\": \"\\\"Sud Aviation\\\" | \\\"d'études et de réalisation d'engins balistiques\\\"\\\" (SÉREB) in 1970 to form the Aérospatiale company. Aérospatiale formed several large-scale international consortia, for example with British Aerospace and Messerschmitt-Bölkow-Blohm to form Airbus, and ultimately merged into European aerospace company EADS in 2000. In January 2014, EADS was reorganised as Airbus Group. Sud Aviation Sud-Aviation (, \\\"\\\"Southern Aviation\\\"\\\") was a French state-owned aircraft manufacturer, originating from the merger of Sud-Est (SNCASE, or \\\"\\\"Société nationale des constructions aéronautiques du sud-est\\\"\\\") and Sud-Ouest (SNCASO or \\\"\\\"Société nationale des constructions aéronautiques du sud-ouest\\\"\\\") on 1 March 1957. Both companies had been formed from smaller privately owned\\\"\", \"score\": 25.46875}]}\n\n[[ ## thought_2 ## ]]\nBased on the information retrieved, Nord Aviation merged with Sud Aviation in 1970 to form Aerospatiale. This suggests that the production of the Nord 1500 Griffon likely ended around 1970.\n\n[[ ## tool_name_2 ## ]]\nfinish\n\n[[ ## tool_args_2 ## ]]\n{}\n\n[[ ## observation_2 ## ]]\nCompleted.",
+        "reasoning": "Based on the information gathered, Nord Aviation merged with Sud Aviation in 1970 to form Aerospatiale. This suggests that the production of the Nord 1500 Griffon likely ended around 1970.",
+        "answer": "1970"
+      },
+      {
+        "question": "What is the name of the airport in the city where the torch event was held in Vietnam?",
+        "answer": "Tân Sơn Nhất International Airport"
+      },
+      {
+        "question": "Which family is the mother of Anne, Princess Royal and Princess of Orange's a member of?",
+        "answer": "House of Hohenzollern"
+      },
+      {
+        "question": "What language is spoken by the director of Teesri Manzil?",
+        "answer": "Hindi"
+      },
+      {
+        "question": "Where was the place where Chopin's father got a teaching position moved to?",
+        "answer": "Kazimierz Palace"
+      },
+      {
+        "question": "When was the territory covered by RIBA's Cambridge branch office created?",
+        "answer": "1994"
+      },
+      {
+        "question": "When did the organization that gives out the Frank P. Brown Medal open?",
+        "answer": "1824"
+      },
+      {
+        "question": "Jan Šindel's was born in what country?",
+        "answer": "Czech Republic"
+      },
+      {
+        "question": "What language is spoken, written or signed by the actress who removed herself from participation in the relay?",
+        "answer": "Hindi"
+      },
+      {
+        "question": "When did Tito first visit the person who laid claim to Eritrea and Italian Somaliland in a letter to Franklin D. Roosevelt?",
+        "answer": "1954"
+      },
+      {
+        "question": "When did we decide to leave the organization that has completely surrounded Switzerland and Liechtenstein since 1995?",
+        "answer": "23 June 2016"
+      },
+      {
+        "question": "What university is Anthony Marten's college part of?",
+        "answer": "college of the University of Cambridge"
+      },
+      {
+        "question": "How did the Japanese beat the country whose government disagreed on the language used to describe the torch route?",
+        "answer": "First Sino-Japanese"
+      },
+      {
+        "question": "What region is Lewis Croft's city of death located?",
+        "answer": "Bingham County"
+      },
+      {
+        "question": "What language is used by the person after whom the Panizzi lectures are named?",
+        "answer": "Italian"
+      },
+      {
+        "question": "Where did the team that won the MLB World Series in 2007 get Brandon Phillips from?",
+        "answer": "Los Angeles Angels"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

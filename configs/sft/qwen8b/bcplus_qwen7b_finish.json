@@ -1,0 +1,27 @@
+{
+    "model": {
+        "model_name_or_path": "Qwen/Qwen2.5-7B-Instruct",
+        "answer_model": "Qwen/Qwen2.5-7B-Instruct",
+        "no_finish": false,
+        "max_iters": 20,
+        "max_tokens": 512,
+        "max_retries": 4
+    },
+    "data": {
+        "dataset_name": "bcplus",
+        "input_file": "../data/frugalrag/sft_data/qwen8b/bcplus/qwen7b/m20_finish/train_sft.json",
+        "num_examples": 200
+    },
+    "paths": {
+        "output_path": "../data/frugalrag/sft/qwen8b/bcplus/qwen7b/m20_finish/",
+        "prompt_path": ""
+    },
+    "sft": {
+        "epochs": 2,
+        "max_seq_len": 4096,
+        "batch_size": 4,
+        "grad_acc": 2,
+        "warmup": 20,
+        "lr": 2e-5
+    }
+}

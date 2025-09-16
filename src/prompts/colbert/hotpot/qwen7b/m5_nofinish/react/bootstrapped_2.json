@@ -1,0 +1,287 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What was founded first, Death Cab for Cutie or P.O.D.?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What was founded first, Death Cab for Cutie or P.O.D.?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What was founded first, Death Cab for Cutie or P.O.D.?\", \"passages_this_hop\": [{\"long_text\": \"Death Cab for Cutie | Death Cab for Cutie is an American alternative rock band, formed in Bellingham, Washington in 1997. The band comprises Ben Gibbard (vocals, guitar, piano), Nick Harmer (bass), Dave Depper (guitar, keyboards, vocals), Zac Rae (keyboards, guitar), and Jason McGerr (drums). In 2014, founding guitarist and producer Chris Walla announced that he would be departing from the band after recording their eighth studio album, \\\"Kintsugi\\\".\", \"score\": 20.671875}, {\"long_text\": \"Death Cab for Cutie discography | Death Cab for Cutie has released eight studio albums, five extended plays (EPs), a demo tape, a digital album, one live album, fifteen singles, nine music videos, and two DVDs. Death Cab for Cutie is an American indie rock group from Bellingham, Washington and was formed in 1997 by Ben Gibbard as a side project from Pinwheel. After releasing a demo tape, he added guitarist Chris Walla, bassist Nick Harmer, and drummer Nathan Good to the band. Death Cab signed to Barsuk Records and released four extended plays (EPs) and four studio albums through the label. The fourth album, \\\"Transatlanticism\\\", reached number 97 on the \\\"Billboard\\\" 200 and was eventually certified gold in the United States. The group also issued nine singles and a demo tape through Barsuk.\", \"score\": 20.25}, {\"long_text\": \"We Have the Facts and We're Voting Yes | We Have the Facts and We're Voting Yes is the second studio album by indie rock band Death Cab for Cutie, released March 21, 2000, on Barsuk Records. Death Cab for Cutie's first concept album, the album features a story about a ruined relationship. No singles were released for the album.\", \"score\": 19.625}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, I can see that Death Cab for Cutie was formed in 1997. Now I need to find when P.O.D. was founded.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"When was P.O.D. founded?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"When was P.O.D. founded?\", \"passages_this_hop\": [{\"long_text\": \"P.O.D. | Payable on Death (abbreviated P.O.D.) is a Christian nu metal band formed in 1992 and based in San Diego, California. The band's line-up consists of vocalist Sonny Sandoval, drummer Wuv Bernardo, guitarist Marcos Curiel, and bassist Traa Daniels. They have sold over 12 million records worldwide. Over the course of their career, the band has received three Grammy Award nominations, contributed to numerous motion picture soundtracks and toured internationally. With their third studio album, \\\"The Fundamental Elements of Southtown\\\", they achieved their initial mainstream success; the album was certified platinum by the RIAA in 2000. Their following studio album, \\\"Satellite\\\", continued the band's success with the singles, \\\"Alive\\\" and \\\"Youth of the Nation\\\", pushing it to go triple platinum.\", \"score\": 24.25}, {\"long_text\": \"Marcos Curiel | Marcos Curiel (born September 9, 1974) is the guitarist of rock bands P.O.D., The Accident Experiment and Daylight Division. Curiel was born in San Diego California in 1974 and is of Mexican descent. He grew up in the neighboring city of Chula Vista, where he graduated from Bonita Vista High School in 1992. Curiel started P.O.D. that year, along with friend Noah \\\"Wuv\\\" Bernardo. The band started building a strong local fanbase, releasing several albums independently. In 1998 they were signed to a record deal (Atlantic Records) and released their hit albums \\\"The Fundamental Elements of Southtown\\\" (1999) and \\\"Satellite\\\" (2001) including hit singles, \\\"Alive\\\" and \\\"Youth of the Nation\\\". Both albums have had mainstream success, gaining multi Platinum certifications by the RIAA and three Grammy Award nominations. P.O.D. has also contributed to numerous motion picture soundtracks and toured internationally.\", \"score\": 22.765625}, {\"long_text\": \"P.O.V. (magazine) | P.O.V. magazine was a critically acclaimed New York City-based lifestyle magazine targeted at young professional men. The magazine was founded in 1995 by Drew Massey and ceased publication with its February 2000 issue. Its owner, Freedom Communications, citing increased competition as the reason for its closing. At its peak the magazine had an audited circulation of 360,000 and 40 employees.\", \"score\": 22.5625}]}\n\n[[ ## thought_1 ## ]]\nFrom the search results, I found that P.O.D. was formed in 1992. Now I can compare the founding years of both bands to determine which was founded first.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Compare the founding years of Death Cab for Cutie and P.O.D.\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Compare the founding years of Death Cab for Cutie and P.O.D.\", \"passages_this_hop\": [{\"long_text\": \"ITunes Originals \u2013 Death Cab for Cutie | iTunes Originals \u2013 Death Cab for Cutie (2005) is an iTunes Originals release from the band Death Cab for Cutie. It features exclusive live studio versions of songs spanning Death Cab For Cutie's career, including \\\"Underwater!\\\" , \\\"Amputations\\\", and \\\"Soul Meets Body\\\". It includes an interview with Ben Gibbard and Chris Walla and video footage from the recording session.\", \"score\": 18.1875}, {\"long_text\": \"Death Cab for Cutie (song) | \\\"Death Cab for Cutie\\\" is a song composed by Vivian Stanshall and Neil Innes and performed by the Bonzo Dog Doo-Dah Band. It was included on their 1967 album \\\"Gorilla\\\".\", \"score\": 18.109375}, {\"long_text\": \"Former Lives | Former Lives is the debut solo album by Death Cab for Cutie lead singer Ben Gibbard. It was released in October 2012 under Barsuk Records.\", \"score\": 17.96875}]}",
+        "next_thought": "Based on the information gathered, Death Cab for Cutie was founded in 1997 and P.O.D. was founded in 1992. Therefore, P.O.D. was founded first.",
+        "next_tool_name": "advancedsearch",
+        "next_tool_args": {
+          "search_query": "P.O.D. was founded first"
+        }
+      },
+      {
+        "question": "Who played the part of the Marquis de Sade in the film for which Martin Childs was nominated for an award at the 74th Academy Awards?",
+        "answer": "Geoffrey Rush",
+        "dspy_uuid": "acce8314-5392-4a65-a363-5c905291afa1",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The Knicks\u2013Nuggets was the most penalized on-court fight in the NBA since an altercation that occured in what city?",
+        "answer": "Auburn Hills",
+        "dspy_uuid": "4332a33a-a017-4cd4-9e12-bc88b850470a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which major river is Buford, North Dakota nearest to?",
+        "answer": "the Missouri River",
+        "dspy_uuid": "4d933845-0f07-4910-991a-c812277a9133",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What U.S. court presided over both the Slaughter-House Cases and Reed v. Reed?",
+        "answer": "the Supreme Court",
+        "dspy_uuid": "0ecfae1e-a7d6-4f20-bb28-c9099f7d03f7",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Ryan Blair plays at midfield for which Welsh football club?",
+        "answer": "Swansea City",
+        "dspy_uuid": "8371ab7a-de87-46a1-b31c-0cba7be9c8f5",
+        "dspy_split": "train"
+      },
+      {
+        "question": "When considering the two peaks known as Noijin Kangsang and Masherbrum, which of them has the greatest height related to their respected ranges?",
+        "answer": "Noijin Kangsang",
+        "dspy_uuid": "093c2800-31db-4d89-8dbf-da8a1b53246f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What type of person does Prime Minister of Hungary and Viktor Orb\u00e1n have in common?",
+        "answer": "leader",
+        "dspy_uuid": "3a1f21ce-8271-4255-a16a-b691d33b7c11",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who directed the 1987 romantic drama dance film that is directly parodied by the television film \"Totally Awesome\"?",
+        "answer": "Emile Ardolino",
+        "dspy_uuid": "d421e0a4-2f4b-4944-ac37-c3990dd67711",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who did Holly Dunn record \"Daddy's Hands\" for?",
+        "answer": "MTM Records",
+        "dspy_uuid": "bf6db912-f207-475d-93b2-d62f0458b21d",
+        "dspy_split": "train"
+      },
+      {
+        "question": "That Darn Cat! and Never a Dull Moment were both produced by what studio?",
+        "answer": "Walt Disney Productions",
+        "dspy_uuid": "f6fd550a-7108-469f-9c91-1dd146abdd77",
+        "dspy_split": "train"
+      },
+      {
+        "question": "So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?",
+        "answer": "The Wizard of Oz",
+        "dspy_uuid": "3f0eee71-5fe1-468a-8773-52630ebd854f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which band from East London had Steve Marriott as a band member?",
+        "answer": "Small Faces",
+        "dspy_uuid": "5277833f-989a-4959-9c6c-bfbd68e7699a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Eleni Karinte was the first love Monastir student who was born in what year?",
+        "answer": "1881",
+        "dspy_uuid": "72af7f66-876f-45c1-b73b-780e32471a62",
+        "dspy_split": "train"
+      },
+      {
+        "question": "what song is in the movie directed by Paul Hoen based on the novel \"if I had one wish\"?",
+        "answer": "\"World of Our Own\"",
+        "dspy_uuid": "023ac786-e4ce-4f66-84cc-e0742a7f08b6",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What year did the war during which Pompiliu \u0218tefu was executed end?",
+        "answer": "1945",
+        "dspy_uuid": "14ae2151-fdc9-444e-9abc-596d1e6eb753",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question`.\n\nYou must decide what to do next by providing:\n\n- Thought: reasoning about the current step\n\n- Tool Name: one of the available tools\n\n- Tool Args: A valid JSON with the necessary keys.\n\nRepeat this for a few steps to gather information.\n\nYou do not need to produce a final answer \u2014 just use the tools iteratively.\nMake sure to include all required Tool Args as a valid JSON object.\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!<\/desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What was founded first, Death Cab for Cutie or P.O.D.?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What was founded first, Death Cab for Cutie or P.O.D.?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What was founded first, Death Cab for Cutie or P.O.D.?\", \"passages_this_hop\": [{\"long_text\": \"Death Cab for Cutie | Death Cab for Cutie is an American alternative rock band, formed in Bellingham, Washington in 1997. The band comprises Ben Gibbard (vocals, guitar, piano), Nick Harmer (bass), Dave Depper (guitar, keyboards, vocals), Zac Rae (keyboards, guitar), and Jason McGerr (drums). In 2014, founding guitarist and producer Chris Walla announced that he would be departing from the band after recording their eighth studio album, \\\"Kintsugi\\\".\", \"score\": 20.671875}, {\"long_text\": \"Death Cab for Cutie discography | Death Cab for Cutie has released eight studio albums, five extended plays (EPs), a demo tape, a digital album, one live album, fifteen singles, nine music videos, and two DVDs. Death Cab for Cutie is an American indie rock group from Bellingham, Washington and was formed in 1997 by Ben Gibbard as a side project from Pinwheel. After releasing a demo tape, he added guitarist Chris Walla, bassist Nick Harmer, and drummer Nathan Good to the band. Death Cab signed to Barsuk Records and released four extended plays (EPs) and four studio albums through the label. The fourth album, \\\"Transatlanticism\\\", reached number 97 on the \\\"Billboard\\\" 200 and was eventually certified gold in the United States. The group also issued nine singles and a demo tape through Barsuk.\", \"score\": 20.25}, {\"long_text\": \"We Have the Facts and We're Voting Yes | We Have the Facts and We're Voting Yes is the second studio album by indie rock band Death Cab for Cutie, released March 21, 2000, on Barsuk Records. Death Cab for Cutie's first concept album, the album features a story about a ruined relationship. No singles were released for the album.\", \"score\": 19.625}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, I can see that Death Cab for Cutie was formed in 1997. Now I need to find when P.O.D. was founded.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"When was P.O.D. founded?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"When was P.O.D. founded?\", \"passages_this_hop\": [{\"long_text\": \"P.O.D. | Payable on Death (abbreviated P.O.D.) is a Christian nu metal band formed in 1992 and based in San Diego, California. The band's line-up consists of vocalist Sonny Sandoval, drummer Wuv Bernardo, guitarist Marcos Curiel, and bassist Traa Daniels. They have sold over 12 million records worldwide. Over the course of their career, the band has received three Grammy Award nominations, contributed to numerous motion picture soundtracks and toured internationally. With their third studio album, \\\"The Fundamental Elements of Southtown\\\", they achieved their initial mainstream success; the album was certified platinum by the RIAA in 2000. Their following studio album, \\\"Satellite\\\", continued the band's success with the singles, \\\"Alive\\\" and \\\"Youth of the Nation\\\", pushing it to go triple platinum.\", \"score\": 24.25}, {\"long_text\": \"Marcos Curiel | Marcos Curiel (born September 9, 1974) is the guitarist of rock bands P.O.D., The Accident Experiment and Daylight Division. Curiel was born in San Diego California in 1974 and is of Mexican descent. He grew up in the neighboring city of Chula Vista, where he graduated from Bonita Vista High School in 1992. Curiel started P.O.D. that year, along with friend Noah \\\"Wuv\\\" Bernardo. The band started building a strong local fanbase, releasing several albums independently. In 1998 they were signed to a record deal (Atlantic Records) and released their hit albums \\\"The Fundamental Elements of Southtown\\\" (1999) and \\\"Satellite\\\" (2001) including hit singles, \\\"Alive\\\" and \\\"Youth of the Nation\\\". Both albums have had mainstream success, gaining multi Platinum certifications by the RIAA and three Grammy Award nominations. P.O.D. has also contributed to numerous motion picture soundtracks and toured internationally.\", \"score\": 22.765625}, {\"long_text\": \"P.O.V. (magazine) | P.O.V. magazine was a critically acclaimed New York City-based lifestyle magazine targeted at young professional men. The magazine was founded in 1995 by Drew Massey and ceased publication with its February 2000 issue. Its owner, Freedom Communications, citing increased competition as the reason for its closing. At its peak the magazine had an audited circulation of 360,000 and 40 employees.\", \"score\": 22.5625}]}\n\n[[ ## thought_1 ## ]]\nFrom the search results, I found that P.O.D. was formed in 1992. Now I can compare the founding years of both bands to determine which was founded first.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Compare the founding years of Death Cab for Cutie and P.O.D.\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Compare the founding years of Death Cab for Cutie and P.O.D.\", \"passages_this_hop\": [{\"long_text\": \"ITunes Originals \u2013 Death Cab for Cutie | iTunes Originals \u2013 Death Cab for Cutie (2005) is an iTunes Originals release from the band Death Cab for Cutie. It features exclusive live studio versions of songs spanning Death Cab For Cutie's career, including \\\"Underwater!\\\" , \\\"Amputations\\\", and \\\"Soul Meets Body\\\". It includes an interview with Ben Gibbard and Chris Walla and video footage from the recording session.\", \"score\": 18.1875}, {\"long_text\": \"Death Cab for Cutie (song) | \\\"Death Cab for Cutie\\\" is a song composed by Vivian Stanshall and Neil Innes and performed by the Bonzo Dog Doo-Dah Band. It was included on their 1967 album \\\"Gorilla\\\".\", \"score\": 18.109375}, {\"long_text\": \"Former Lives | Former Lives is the debut solo album by Death Cab for Cutie lead singer Ben Gibbard. It was released in October 2012 under Barsuk Records.\", \"score\": 17.96875}]}\n\n[[ ## thought_2 ## ]]\nBased on the information gathered, Death Cab for Cutie was founded in 1997 and P.O.D. was founded in 1992. Therefore, P.O.D. was founded first.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"P.O.D. was founded first\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"P.O.D. was founded first\", \"passages_this_hop\": [{\"long_text\": \"Greatest Hits: The Atlantic Years | Greatest Hits: The Atlantic Years is a greatest hits album by American alternative metal band P.O.D.. It was the first P.O.D. release since the group left Atlantic Records. Released on November 21, 2006, it sold 10,000 copies in its first week. The album included \\\"The Warriors EP\\\" Vol. 1 if purchased at Best Buy stores. Some of such pack-in copies are still available at retail.\", \"score\": 21.8125}, {\"long_text\": \"M.O.D. Technologies | M.O.D. Technologies is an independent record label based in New York City and intended to be the modern evolution of producer and bassist Bill Laswell's Axiom label. It was founded in 2010 by Laswell and RareNoiseRecords founder Giacomo Bruzzo, in part to provide a creative outlet for the group Method of Defiance, which began as a loose collective of musicians and had at that point coalesced to include Dr. Israel, Garrison Hawk, Toshinori Kondo, Bernie Worrell and DJ Krush among its members. The first incarnation of the group debuted at the 2007 Synch Festival in Athens, Greece.\", \"score\": 20.921875}, {\"long_text\": \"Snuff the Punk | Snuff the Punk is the first studio album by alternative metal group, P.O.D. The album was released on January 25, 1994 on Chula Vista, California-based Rescue Records, which was owned by Noah Bernardo, Sr. who happens to be Sonny Sandoval's uncle and Wuv Bernardo's father. It was completely remixed, remastered and re-released with new artwork by indie label Diamante in 1999. The original issue is considered a very desirable collectible by fans.\", \"score\": 20.875}]}\n\n[[ ## thought_3 ## ]]\nBased on the search results, it is clear that P.O.D. was founded before Death Cab for Cutie. I will now formulate the answer.\n\n[[ ## tool_name_3 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_3 ## ]]\n{\"search_query\": \"P.O.D. was founded before Death Cab for Cutie\"}\n\n[[ ## observation_3 ## ]]\n{\"search_query\": \"P.O.D. was founded before Death Cab for Cutie\", \"passages_this_hop\": [{\"long_text\": \"The Sound of Settling | \\\"The Sound of Settling\\\" is a song by indie rock band Death Cab for Cutie, the second single from their fourth studio album, \\\"Transatlanticism\\\", released on 26 December 2003. The song reached number 84 on the UK Singles Chart, was featured on various movie soundtracks, and became the third song by the band to be featured on the television show \\\"The O.C.\\\".\", \"score\": 18.125}, {\"long_text\": \"You Can Play These Songs with Chords | You Can Play These Songs with Chords is an early demo from the rock band Death Cab for Cutie, which at the time consisted entirely of founder Ben Gibbard. This demo was originally released on cassette, and it proved so popular, Gibbard decided to recruit other members to make a full band, which would go on to record \\\"Something About Airplanes\\\", the band's debut studio album.\", \"score\": 18.125}, {\"long_text\": \"Michael Schorr | Michael Schorr is the former drummer of Death Cab for Cutie with whom he recorded \\\"The Photo Album\\\" and two of their EPs \\\"The Forbidden Love E.P.\\\" and \\\"The Stability E.P.\\\". He has also played for The Long Winters. Speaking of Schorr in 2003, Benjamin Gibbard noted that Death Cab for Cutie \\\"parted ways with our last drummer [Michael Schorr] because\u2026 let\u2019s just call them creative differences. It was nothing sinister, evil or violent.\\\"\", \"score\": 17.984375}]}\n\n[[ ## thought_4 ## ]]\nBased on the gathered information, P.O.D. was indeed founded before Death Cab for Cutie. I will now provide the answer to the question.\n\n[[ ## tool_name_4 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_4 ## ]]\n{\"search_query\": \"P.O.D. was founded before Death Cab for Cutie\"}\n\n[[ ## observation_4 ## ]]\n{\"search_query\": \"P.O.D. was founded before Death Cab for Cutie\", \"passages_this_hop\": [{\"long_text\": \"The Postal Service | The Postal Service were an American indie rock band from Seattle, Washington, consisted of vocalist Ben Gibbard (of Death Cab for Cutie), producer Jimmy Tamborello (of Dntel and Headset), with Jenny Lewis (of Rilo Kiley) on background vocals.\", \"score\": 17.1875}, {\"long_text\": \"Codes and Keys | Codes and Keys is the seventh studio album by Death Cab for Cutie, released on May 31, 2011. Ben Gibbard and Nick Harmer have both been quoted as saying that the album will be \\\"a much less guitar-centric album than we've ever made before\\\". The first single, \\\"You Are a Tourist\\\", was made available for online stream on March 28, 2011 on the band's official site and the album was available for streaming in its entirety on May 23, 2011 on NPR. The album debuted on \\\"Billboard\\\" 200 at No. 3, with 102,000 copies sold in its first week. It has sold 283,000 copies in the US as of March 2015. On November 30, 2011, the album received a Nomination in the 54th Grammy Awards for Best Alternative Music Album.\", \"score\": 16.9375}, {\"long_text\": \"Murdered Love | Murdered Love is the eighth studio album by American alternative metal band P.O.D., released on July 10, 2012. It debuted on the \\\"Billboard\\\" 200 at No. 17 with sales of over 16,000 in its first week in the U.S. \\\"Murdered Love\\\" is the follow-up to \\\"When Angels & Serpents Dance\\\" and it sees the band reunited with long-time producer Howard Benson who also produced the band's \\\"The Fundamental Elements of Southtown\\\", \\\"Satellite\\\" and \\\"Payable on Death\\\" albums. Prior to the album's official release, three songs were made available for download; two of which, \\\"Eyez\\\" and a demo version of \\\"On Fire\\\", available for free on the band's website. The album features guest appearances from Hatebreed's Jamey Jasta, Cypress Hill's Sen Dog, and Psycho Realm's Sick Jacken. A deluxe edition of the album, featuring acoustic and bonus tracks, was released on October 22, 2013.\", \"score\": 16.875}]}",
+        "reasoning": "P.O.D. was founded in 1992, while Death Cab for Cutie was founded in 1997. Therefore, P.O.D. was founded first.",
+        "answer": "P.O.D."
+      },
+      {
+        "question": "Ryan Blair plays at midfield for which Welsh football club?",
+        "answer": "Swansea City",
+        "dspy_uuid": "8371ab7a-de87-46a1-b31c-0cba7be9c8f5",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which major river is Buford, North Dakota nearest to?",
+        "answer": "the Missouri River",
+        "dspy_uuid": "4d933845-0f07-4910-991a-c812277a9133",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Eleni Karinte was the first love Monastir student who was born in what year?",
+        "answer": "1881",
+        "dspy_uuid": "72af7f66-876f-45c1-b73b-780e32471a62",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The Knicks\u2013Nuggets was the most penalized on-court fight in the NBA since an altercation that occured in what city?",
+        "answer": "Auburn Hills",
+        "dspy_uuid": "4332a33a-a017-4cd4-9e12-bc88b850470a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "That Darn Cat! and Never a Dull Moment were both produced by what studio?",
+        "answer": "Walt Disney Productions",
+        "dspy_uuid": "f6fd550a-7108-469f-9c91-1dd146abdd77",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What year did the war during which Pompiliu \u0218tefu was executed end?",
+        "answer": "1945",
+        "dspy_uuid": "14ae2151-fdc9-444e-9abc-596d1e6eb753",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who did Holly Dunn record \"Daddy's Hands\" for?",
+        "answer": "MTM Records",
+        "dspy_uuid": "bf6db912-f207-475d-93b2-d62f0458b21d",
+        "dspy_split": "train"
+      },
+      {
+        "question": "what song is in the movie directed by Paul Hoen based on the novel \"if I had one wish\"?",
+        "answer": "\"World of Our Own\"",
+        "dspy_uuid": "023ac786-e4ce-4f66-84cc-e0742a7f08b6",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who directed the 1987 romantic drama dance film that is directly parodied by the television film \"Totally Awesome\"?",
+        "answer": "Emile Ardolino",
+        "dspy_uuid": "d421e0a4-2f4b-4944-ac37-c3990dd67711",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who played the part of the Marquis de Sade in the film for which Martin Childs was nominated for an award at the 74th Academy Awards?",
+        "answer": "Geoffrey Rush",
+        "dspy_uuid": "acce8314-5392-4a65-a363-5c905291afa1",
+        "dspy_split": "train"
+      },
+      {
+        "question": "When considering the two peaks known as Noijin Kangsang and Masherbrum, which of them has the greatest height related to their respected ranges?",
+        "answer": "Noijin Kangsang",
+        "dspy_uuid": "093c2800-31db-4d89-8dbf-da8a1b53246f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What type of person does Prime Minister of Hungary and Viktor Orb\u00e1n have in common?",
+        "answer": "leader",
+        "dspy_uuid": "3a1f21ce-8271-4255-a16a-b691d33b7c11",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which band from East London had Steve Marriott as a band member?",
+        "answer": "Small Faces",
+        "dspy_uuid": "5277833f-989a-4959-9c6c-bfbd68e7699a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?",
+        "answer": "The Wizard of Oz",
+        "dspy_uuid": "3f0eee71-5fe1-468a-8773-52630ebd854f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What U.S. court presided over both the Slaughter-House Cases and Reed v. Reed?",
+        "answer": "the Supreme Court",
+        "dspy_uuid": "0ecfae1e-a7d6-4f20-bb28-c9099f7d03f7",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

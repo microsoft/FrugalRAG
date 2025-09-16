@@ -1,0 +1,159 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Which family is the mother of Anne, Princess Royal and Princess of Orange's a member of?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Which family is the mother of Anne, Princess Royal and Princess of Orange's a member of?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Which family is the mother of Anne, Princess Royal and Princess of Orange's a member of?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Anne, Princess Royal and Princess of Orange\\\" | \\\"Anne, Princess Royal and Princess of Orange Anne, Princess Royal and Princess of Orange (2 November 1709 – 12 January 1759) was the second child and eldest daughter of King George II of Great Britain and his consort Caroline of Ansbach. She was the spouse of William IV, Prince of Orange, the first hereditary stadtholder of all seven provinces of the Northern Netherlands. She was Regent of the Netherlands from 1751 until her death in 1759, exercising extensive powers on behalf of her son William V. She was known as an Anglophile, due to her English upbringing and family connections,\\\"\", \"score\": 24.515625}, {\"long_text\": \"\\\"Anne, Princess Royal and Princess of Orange\\\" | \\\"argent of five points, each bearing a cross gules\\\"\\\". On 30 August 1727, as a child of the sovereign, Anne's difference changed to a \\\"\\\"label argent of three points, each bearing a cross gules\\\"\\\". Anne, Princess Royal and Princess of Orange Anne, Princess Royal and Princess of Orange (2 November 1709 – 12 January 1759) was the second child and eldest daughter of King George II of Great Britain and his consort Caroline of Ansbach. She was the spouse of William IV, Prince of Orange, the first hereditary stadtholder of all seven provinces of the Northern Netherlands. She was Regent\\\"\", \"score\": 23.734375}, {\"long_text\": \"\\\"Anne, Princess Royal and Princess of Orange\\\" | \\\"in 1765, Anne's daughter, Carolina, was made regent until William V would reach the age of eighteen in 1766. The princess took drawing and painting lessons from Herman van der Mijn and made a self-portrait in 1740 that is in the collection of the House of Orange-Nassau Historic Collections Trust. She also made a portrait of Mijn himself while he was at work making portraits of other family members. Princess Anne, Maryland, is named for her. On 31 January 1719, as a grandchild of the sovereign, Anne was granted use of the arms of the realm, differenced by a \\\"\\\"label\\\"\", \"score\": 23.203125}, {\"long_text\": \"\\\"Anne, Princess Royal and Princess of Orange\\\" | \\\"but was unable to convince the Dutch Republic to enter the Seven Years' War on the side of the British. Princess Anne was the second daughter of a British sovereign to hold the title Princess Royal. In the Netherlands she was sometimes known as Anna van Hannover. Anne was born at Herrenhausen Palace, Hanover, five years before her paternal grandfather, Elector George Louis, succeeded to the thrones of Great Britain and Ireland as George I. She was christened shortly after her birth at Herrenhausen Palace. She was named after her paternal grandfather's second cousin Anne, Queen of Great Britain. She\\\"\", \"score\": 22.78125}, {\"long_text\": \"\\\"Anne, Princess Royal and Princess of Orange\\\" | \\\"child would be in succession to the thrones of Britain and Ireland it should be born in Great Britain. However, this decision caused conflict with her husband and her father, who both commanded her to return to Holland after a brief stay. By April 1735, it was clear that Anne was not with child after all. In 1736, she did become pregnant, but the child (a daughter) was stillborn. Anne was not well liked by the people of the Netherlands and did not get on well with her mother-in-law. She was perceived as haughty, with a belief in British superiority\\\"\", \"score\": 22.390625}]}\n\n[[ ## thought_0 ## ]]\nThe search results indicate that Anne, Princess Royal and Princess of Orange was the daughter of King George II of Great Britain and Caroline of Ansbach. To find out which family Caroline of Ansbach belongs to, I need to look up more information about her.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Who was Caroline of Ansbach a part of?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Who was Caroline of Ansbach a part of?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"Caroline of Ansbach Caroline of Brandenburg-Ansbach (Wilhelmina Charlotte Caroline; 1 March 1683 – 20 November 1737) was Queen of Great Britain as the wife of King George II. Her father, Margrave John Frederick of Brandenburg-Ansbach, belonged to a branch of the House of Hohenzollern and was the ruler of a small German state, the Principality of Ansbach. Caroline was orphaned at a young age and moved to the enlightened court of her guardians, King Frederick I and Queen Sophia Charlotte of Prussia. At the Prussian court, her previously limited education was widened, and she adopted the liberal outlook possessed by\\\"\", \"score\": 25.65625}, {\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"King and her husband for the sake of public unity. Caroline wanted to regain her three eldest daughters, who remained in the care of the King, and thought the reconciliation would lead to their return, but negotiations came to nothing. George Augustus came to believe that Walpole had tricked him into the reconciliation as part of a scheme to gain power. The prince was isolated politically when Walpole's Whigs joined the government, and Leicester House played host to literary figures and wits, such as John Arbuthnot and Jonathan Swift, rather than politicians. Arbuthnot told Swift that Caroline had enjoyed his\\\"\", \"score\": 25.59375}, {\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"In 1717, her husband was expelled from court after a family row. Caroline came to be associated with Robert Walpole, an opposition politician who was a former government minister. Walpole rejoined the government in 1720, and Caroline's husband and King George I reconciled publicly, on Walpole's advice. Over the next few years, Walpole rose to become the leading minister. Caroline became queen and electress consort upon her husband's accession in 1727. Her eldest son, Frederick, became Prince of Wales. He was a focus for the opposition, like his father before him, and Caroline's relationship with him was strained. As princess\\\"\", \"score\": 24.640625}, {\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"14th, per fess gules and argent; 15th, plain field of gules (for right of regalia); overall an inescutcheon, argent, an eagle displayed gules (for Brandenburg). Caroline's ten pregnancies resulted in eight live births, of whom one died in infancy, and seven lived to adulthood. Caroline of Ansbach Caroline of Brandenburg-Ansbach (Wilhelmina Charlotte Caroline; 1 March 1683 – 20 November 1737) was Queen of Great Britain as the wife of King George II. Her father, Margrave John Frederick of Brandenburg-Ansbach, belonged to a branch of the House of Hohenzollern and was the ruler of a small German state, the Principality of\\\"\", \"score\": 24.640625}, {\"long_text\": \"\\\"Caroline of Ansbach\\\" | \\\"early Georgian era from utter grossness.\\\"\\\" Although modern historians tend to believe that Hervey, Wilkins and Arkell have overestimated her importance, it is nevertheless probable that Caroline of Ansbach was one of the most influential consorts in British history. Caroline County in the British Colony of Virginia was named in her honour when it was formed in 1727. The royal coat of arms of the United Kingdom are impaled with those of her father, John Frederick, Margrave of Brandenburg-Ansbach. The arms of her father were quarterly of fifteen, 1st, per fess gules and argent, within a bordure counter-changed of the\\\"\", \"score\": 24.484375}]}\n\n[[ ## thought_1 ## ]]\nThe search results reveal that Caroline of Ansbach's father, Margrave John Frederick of Brandenburg-Ansbach, belonged to a branch of the House of Hohenzollern and was the ruler of a small German state, the Principality of Ansbach. Therefore, Caroline of Ansbach was a part of the House of Hohenzollern.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "Based on the search results, Caroline of Ansbach was a part of the House of Hohenzollern. Since she was the mother of Anne, Princess Royal and Princess of Orange, Anne is also a member of the House of Hohenzollern.",
+        "answer": "House of Hohenzollern"
+      },
+      {
+        "augmented": true,
+        "question": "When did the institute that gives out the Elliott Cresson Medal award open?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"When did the institute that gives out the Elliott Cresson Medal award open?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"When did the institute that gives out the Elliott Cresson Medal award open?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Elliott Cresson\\\" | \\\"medals were proposed by Cresson in 1850, to be awarded in 1851 to the largest producers in the Pennsylvania colonies of Liberia of coffee, sugar, palm oil, and cotton. The Franklin Institute adopted the award, but no such medals were ever given out. In 1850, Sarah Worthington King Peter wrote to the Franklin Institute about her drawing class of some 20 young women becoming a \\\"\\\"co-operative, but separate branch\\\"\\\" of the Institute. The Franklin Institute established and supervised the Philadelphia School of Design for Women from 1850 to 1853. A group of 17 men were designated the incorporators of the\\\"\", \"score\": 24.421875}, {\"long_text\": \"\\\"Elliott Cresson Medal\\\" | \\\"Elliott Cresson Medal The Elliott Cresson Medal, also known as the Elliott Cresson Gold Medal, was the highest award given by the Franklin Institute. The award was established by Elliott Cresson, life member of the Franklin Institute, with $1,000 granted in 1848. The endowed award was to be \\\"\\\"for some discovery in the Arts and Sciences, or for the invention or improvement of some useful machine, or for some new process or combination of materials in manufactures, or for ingenuity skill or perfection in workmanship.\\\"\\\" The medal was first awarded in 1875, 21 years after Cresson's death. The Franklin Institute\\\"\", \"score\": 23.921875}, {\"long_text\": \"\\\"Elliott Cresson Medal\\\" | \\\"continued awarding the medal on an occasional basis until 1998 when they reorganized their endowed awards under one umbrella, The Benjamin Franklin Awards. A total of 268 Elliott Cresson Medals were given out during the award's lifetime. Elliott Cresson Medal The Elliott Cresson Medal, also known as the Elliott Cresson Gold Medal, was the highest award given by the Franklin Institute. The award was established by Elliott Cresson, life member of the Franklin Institute, with $1,000 granted in 1848. The endowed award was to be \\\"\\\"for some discovery in the Arts and Sciences, or for the invention or improvement of\\\"\", \"score\": 23.40625}, {\"long_text\": \"\\\"Elliott Cresson\\\" | \\\"United States. Slaveholders expected compensation for losing workers. In late 1824, Cresson was nominated and elected to the Franklin Institute, becoming a life member. In 1846, he announced his intention to create a Medal fund. In 1848, Cresson gave $1,000 to establish the Elliott Cresson Medal, a gold medal awarded \\\"\\\"for some discovery in the Arts and Sciences, or for the invention or improvement of some useful machine, or for some new process or combination of materials in manufactures, or for ingenuity skill or perfection in workmanship.\\\"\\\" The medal was first awarded in 1875, to six firms or persons. Silver\\\"\", \"score\": 23.125}, {\"long_text\": \"\\\"Elliott Cresson\\\" | \\\"the award during its lifetime. Elliott Cresson Elliott Cresson (March 2, 1796 – February 20, 1854) was an American philanthropist who gave money to a number of causes after a brief career in the mercantile business. He established the Elliott Cresson Medal of the Franklin Institute in 1848, and helped found and manage the Philadelphia School of Design for Women, today's Moore College of Art and Design. Cresson was a member of the Religious Society of Friends (Quakers) and a strong supporter of the Philadelphia branch of the American Colonization Society, a group fighting slavery that relocated former slaves and\\\"\", \"score\": 22.390625}]}\n\n[[ ## thought_0 ## ]]\nThe search results indicate that the Elliott Cresson Medal was established by Elliott Cresson in 1848. Now I need to find out when the Franklin Institute, which awarded the Elliott Cresson Medal, opened.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"when did the franklin institute open?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"when did the franklin institute open?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Franklin Institute\\\" | \\\"for Research and Development operated from the Second World War into the 1980s. Many scientists have demonstrated groundbreaking new technology at the Franklin Institute. From September 2 to October 11, 1884, it hosted the International Electrical Exhibition of 1884, the first great electrical exposition in the United States. The world's first public demonstration of an all-electronic television system was later given by Philo Taylor Farnsworth on August 25, 1934. The first female member, Elizabeth Skinner, was elected to membership in 1833. The Franklin Institute was integrated in 1870, when Philadelphia teacher and activist Octavius Catto was admitted as a member.\\\"\", \"score\": 25.765625}, {\"long_text\": \"\\\"Franklin Institute\\\" | \\\"The Institute's original building at 15 South 7th Street, now the home of the Atwater Kent Museum, eventually proved too small for the Institute's research, educational programs, and library. The Institute moved into its current home on the Benjamin Franklin Parkway, near the intersection with 20th Street, in 1934. The new facility was intended from the start to educate visitors through hand-on interactions with exhibits: \\\"\\\"Visitors to this museum would be encouraged to touch, handle, and operate the exhibits in order to learn how things work.\\\"\\\" Funds to build the new Institute and Franklin Memorial came from the Poor Richard\\\"\", \"score\": 25.390625}, {\"long_text\": \"\\\"Franklin Institute\\\" | \\\"Franklin Institute The Franklin Institute is a science museum and the center of science education and research in Philadelphia, Pennsylvania. It is named after the American scientist and statesman, Benjamin Franklin, and houses the Benjamin Franklin National Memorial. Founded in 1824, the Franklin Institute is one of the oldest centers of science education and development in the United States. On February 5, 1824, Samuel Vaughan Merrick and William H. Keating founded the Franklin Institute of the State of Pennsylvania for the Promotion of the Mechanic Arts. Begun in 1825, the Institute was an important force in the professionalization of American\\\"\", \"score\": 24.921875}, {\"long_text\": \"\\\"Franklin Institute\\\" | \\\"museum. On December 30, 2005, Congress authorized the Institute to receive up to $10,000,000 in matching grants for the rehabilitation of the memorial and for the development of related exhibits. In the fall of 2008, the Benjamin Franklin National Memorial was re-opened after a summer-long restoration that included multimedia enhancements. Philadelphia's most famous citizen is now featured in \\\"\\\"Benjamin Franklin Forever\\\"\\\" - an hourly 3.5-minute multimedia presentation utilizing the entire rotunda. Also noteworthy is the Franklin Institute's Frankliniana Collection, some of which is on rotating display in the Pendulum Staircase. Highlights include Franklin's 1777 Nini Medallion, the scale model of\\\"\", \"score\": 24.921875}, {\"long_text\": \"\\\"University of Maryland Rehabilitation & Orthopaedic Institute\\\" | \\\"Franklin Street with its adjacent to the west Maryland Theater of Beaux Arts/Classical Revival styled architecture constructed and opened in 1903, in the middle of the newly central theatre/entertainment district of North Howard Street, in the southwest corner of the Mount Vernon-Belvedere neighborhood, adjacent to the old first downtown campus of the newly founded (1876) Johns Hopkins University. The \\\"\\\"rathskeller\\\"\\\" in the basement of the hotel (later also known as the \\\"\\\"marble bar\\\"\\\") was the site of the first \\\"\\\"jazz band\\\"\\\" music in the town led by John Ridgley when it opened in 1903. It was listed on the National\\\"\", \"score\": 24.71875}]}\n\n[[ ## thought_1 ## ]]\nNow that I have found the opening date of the Franklin Institute, I can determine the year the Elliott Cresson Medal was established.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "Based on the search results, the Franklin Institute was founded in 1824. The Elliott Cresson Medal was established in 1848 by Elliott Cresson. Therefore, the Franklin Institute that awards the Elliott Cresson Medal opened in 1824.",
+        "answer": "1824"
+      },
+      {
+        "question": "What university is Anthony Marten's college part of?",
+        "answer": "college of the University of Cambridge"
+      },
+      {
+        "question": "When did the sports team that Junior Félix played for win their last World Series?",
+        "answer": "1993"
+      },
+      {
+        "question": "In what era did The Presbyterian Church in the country whose government disagreed on the language used to describe the torch route experience a large growth in members?",
+        "answer": "era of Guomindang"
+      },
+      {
+        "question": "When was the territory covered by RIBA's Cambridge branch office created?",
+        "answer": "1994"
+      },
+      {
+        "question": "What year did the council which was seated in 1949 adopt the convention of cybercrime in?",
+        "answer": "2001"
+      },
+      {
+        "question": "In what year did France host the finals of the competition featuring Samoa for going on 30 years?",
+        "answer": "2007"
+      },
+      {
+        "question": "In which year did the SS.11 manufacturer end?",
+        "answer": "1970"
+      },
+      {
+        "question": "When was the inception of the record label which released W?",
+        "answer": "2001"
+      },
+      {
+        "question": "Where was the person who wrote the song my kinda party by Jason Aldean born?",
+        "answer": "Jefferson"
+      },
+      {
+        "question": "What year saw the creation of the region where the county of Hertfordshire is located?",
+        "answer": "1994"
+      },
+      {
+        "question": "When was the last time the team that beat the Patriots in the Super Bowl was 0-5?",
+        "answer": "October 6"
+      },
+      {
+        "question": "What record label does the singer in 4 non blondes sign?",
+        "answer": "Custard Records"
+      },
+      {
+        "question": "Where did the team that won the MLB World Series in 2007 get Brandon Phillips from?",
+        "answer": "Los Angeles Angels"
+      },
+      {
+        "question": "What is the enrollment at the university where Beneficence is located?",
+        "answer": "22,513 students"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question`.\n\nYou must decide what to do next by providing:\n\n- Thought: reasoning about the current step\n\n- Tool Name: one of the available tools\n\n- Tool Args: A valid JSON with the necessary keys.\n\nRepeat this for a few steps to gather information.\n\nYou do not need to produce a final answer — just use the tools iteratively.\nMake sure to include all required Tool Args as a valid JSON object.\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Do both films, Laali and Gayby, have the directors who are from the same country?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Do both films, Laali and Gayby, have the directors who are from the same country?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Do both films, Laali and Gayby, have the directors who are from the same country?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Gaydar (film)\\\" | \\\"Gaydar (film) Gaydar is a 2002 short comedy film directed by Larry LaFond, written by LaFond and by Terry Ray and Larry Lafond. The film stars Terry Ray, Bryan Dattilo (from \\\"\\\"Days of Our Lives\\\"\\\"), Jennifer Echols, and Jim J. Bullock, and also features Charles Nelson Reilly in his last movie appearance. Randy (Terry Ray) has a crush on a fellow office worker, Jack (Bryan Dattilo). Randy’s friend from the next booth over, Frankalina (Jennifer Echols) also has a big crush on Jack, but does not know whether he’s gay or straight. Randy comes across a \\\"\\\"GAYDAR gun\\\"\\\" at a\\\"\", \"score\": 16.15625}, {\"long_text\": \"Gayby | \\\"Gayby Gayby is a 2012 American romantic comedy-drama film directed by Jonathan Lisecki and starring Jenn Harris, Matthew Wilkas, Mike Doyle, Anna Margaret Hollyman, Jack Ferver, and Jonathan Lisecki. It is based on the 2010 short film of the same name. It debuted on March 12, 2012 at the South by Southwest film festival. Jenn (played by Jenn Harris), a yoga instructor, and Matt (played by Matthew Wilkas), a comic book store worker, are best friends from college who are now single and in their 30s. In agreement with a pact they made in their youth, the two decide to\\\"\", \"score\": 16.15625}, {\"long_text\": \"\\\"Gayby Baby\\\" | \\\"Gayby Baby Gayby Baby is a 2015 Australian documentary film directed by Maya Newell that follows four children raised by same-sex parents. \\\"\\\"Gayby Baby\\\"\\\" observes the lives of four children—Gus, Ebony, Matt and Graham—whose parents are either gay or lesbian, and explores the ways in which growing up as a \\\"\\\"gayby\\\"\\\" has affected them. \\\"\\\"Gayby Baby\\\"\\\" was produced over three and a half years. It was conceived and directed by Maya Newell, who was raised by lesbian mothers and felt that, in the same-sex marriage debate in the Australian media, \\\"\\\"no one was actually talking to any kids\\\"\\\". She chose\\\"\", \"score\": 16.078125}, {\"long_text\": \"Gayby | \\\"says, \\\"\\\"You sure do look like your father,\\\"\\\" leaving the true identity of the baby's father unknown. Merlinka festival International Queer Film Festival, Belgrade Serbia - Best Queer Film Gayby Gayby is a 2012 American romantic comedy-drama film directed by Jonathan Lisecki and starring Jenn Harris, Matthew Wilkas, Mike Doyle, Anna Margaret Hollyman, Jack Ferver, and Jonathan Lisecki. It is based on the 2010 short film of the same name. It debuted on March 12, 2012 at the South by Southwest film festival. Jenn (played by Jenn Harris), a yoga instructor, and Matt (played by Matthew Wilkas), a comic book\\\"\", \"score\": 15.8671875}, {\"long_text\": \"\\\"Both (film)\\\" | \\\"Both (film) Both is a 2005 US-Canadian-Peruvian drama film directed by Lisset Barcellos. Starring Jackie Parker, Mike Martinez, Nicole Wilder, Fabrizio Aguilar, Ximena Ameri and Pable Barcellos, the film tells the story of a stunt double with an intersex variation, who discovers her past. The film was welcomed by members of the intersex community. The world premiere took place at San Francisco's Frameline Film Festival and was welcomed by the Intersex Society of North America. An independent film, the story behind \\\"\\\"Both\\\"\\\" is based in part on the experience of the filmmaker herself. Talking with the Hartford Courant, Barcellos commented,\\\"\", \"score\": 15.84375}]}\n\n[[ ## thought_0 ## ]]\nThe search query returned some relevant documents, including information about the directors of the films \"Laali\" and \"Gayby\". However, we still need to determine if the directors are from the same country.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Are the directors of Laali and Gayby from the same country?\", \"trajectory_id\": \"Laali and Gayby\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Are the directors of Laali and Gayby from the same country?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Gianni Amelio\\\" | \\\"1995. In 2006 he released his eighth feature film, \\\"\\\"La stella che non c'è\\\"\\\", featuring Sergio Castellitto. From 2009 to 2012 he has been director of Torino Film Festival, Turin. Amelio came out as gay late in life, shortly before the release of his 2014 documentary \\\"\\\"Happy to be Different\\\"\\\". Gianni Amelio Gianni Amelio (born 20 January 1945) is an Italian film director. Amelio was born in San Pietro di Magisano, province of Catanzaro, Calabria. His father moved to Argentina soon after his birth. He spent his youth and adolescence with his mother and his grandmother. The absence of a\\\"\", \"score\": 16.109375}, {\"long_text\": \"\\\"Eloy de la Iglesia\\\" | \\\"Eloy de la Iglesia Eloy de la Iglesia (January 1, 1944 – March 23, 2006) was a Spanish screenwriter and film director. De la Iglesia was an outspoken gay socialist filmmaker who is relatively unknown outside Spain despite a prolific and successful career in his native country. He is best remembered for having portrayed urban marginality and the world of drugs and juvenile delinquency in the early 1980s. Part of his work is closely related to the phenomenon popularly known in Spain as quinqui films, to which he contributed with several works. His film are an example of commitment to\\\"\", \"score\": 15.7734375}, {\"long_text\": \"\\\"Eloy de la Iglesia\\\" | \\\"malignant tumor. Eloy de la Iglesia Eloy de la Iglesia (January 1, 1944 – March 23, 2006) was a Spanish screenwriter and film director. De la Iglesia was an outspoken gay socialist filmmaker who is relatively unknown outside Spain despite a prolific and successful career in his native country. He is best remembered for having portrayed urban marginality and the world of drugs and juvenile delinquency in the early 1980s. Part of his work is closely related to the phenomenon popularly known in Spain as quinqui films, to which he contributed with several works. His film are an example of\\\"\", \"score\": 15.6875}, {\"long_text\": \"\\\"Grabby Awards\\\" | \\\"internationally.\\\"\\\" The first live show took place in the Music Hall of Man's Country, a gay bathhouse in Chicago's Andersonville neighborhood. The event drew a capacity crowd. Fans, gay \\\"\\\"adult male erotic performers\\\"\\\", directors, other industry people, and national media came from all over the United States to attend. Well-known Chicago performer Honey West and prominent porn director Chi Chi LaRue served as co-hostesses for the evening's festivities. Ferguson, (sometimes referred to as the \\\"\\\"godfather\\\"\\\" of the Grabbys) welcomed the crowd to the first live presentation of the awards. Ferguson was inspired and urged by his porn friend Mickey Skee,\\\"\", \"score\": 15.46875}, {\"long_text\": \"\\\"Chi Chi LaRue\\\" | \\\"Chi Chi LaRue Larry David Paciotti (born November 8, 1959) is an American gay pornographic film director. He appears as the drag-diva persona Chi Chi LaRue (), which is also the directorial credit name of Lawrence David and Taylor Hudson, who directs bisexual, gay, and heterosexual porn films. \\\"\\\"Chi Chi LaRue\\\"\\\" began when Paciotti moved to the Minneapolis-Saint Paul area and began performing in drag as one-half of \\\"\\\"The Weather Gals\\\"\\\", a \\\"\\\"hag drag\\\"\\\" revue. He and a friend moved to California, where LaRue was hired by Catalina Video as an administrative assistant and publicist because of his knowledge of\\\"\", \"score\": 15.2265625}]}\n\n[[ ## thought_1 ## ]]\nWe need to extract the country of origin for the directors of the films \"Laali\" and \"Gayby\" from the search results.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"What is the country of origin for the directors of Laali and Gayby?\", \"trajectory_id\": \"Laali and Gayby\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"What is the country of origin for the directors of Laali and Gayby?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Abdelkader Lagtaâ\\\" | \\\"Abdelkader Lagtaâ Abdelkader Lagtaâ (born in 1948) is a Moroccan film director, known for his work in Morocco and French documentaries. Born in 1948 in Casablanca, Abdelkader Lagtaâ graduated from The National Film School in Lodz in Poland. He directed his first short documentary film, \\\"\\\"Rabi et la peinture abstraite\\\"\\\" in 1984, followed by \\\"\\\"Chaïbia\\\"\\\" in 1984, and \\\"\\\"Kacimi ou le dévoilement\\\"\\\" in 1985. He directed his first feature film, \\\"\\\"Un amour à Casablanca\\\"\\\" in 1991, for which he was also the scriptwriter, editor and producer. When the film was released in Morocco the following year it was a great\\\"\", \"score\": 16.265625}, {\"long_text\": \"\\\"Ladislao Vajda\\\" | \\\"Ladislao Vajda Ladislao Vajda (born Weisz László; 18 August 1906, Budapest – 25 March 1965, Barcelona) was a Hungarian film director who made films in Spain, Portugal, the United Kingdom, Italy and Germany. He was born in Budapest, his father being an actor and screenwriter. Vajda started his career as film editor (even though he also worked as artistic designer and writer) for different directors, such as Billy Wilder and Henry Koster. Eventually, he undertook his first directorial effort in his native country, Hungary. Beforehand World War II he became established in Italy, where he directed two movies: \\\"\\\"La zia\\\"\", \"score\": 16.125}, {\"long_text\": \"\\\"La-Chun Lindsay\\\" | \\\"La-Chun Lindsay La-Chun Lindsay is an American aerospace engineer who was the Managing Director of Wales' largest industrial company, GE Aviation Wales. She was the first woman to hold this position and she campaigned for LGBT rights in Wales. Lindsay was born in the city of Rock Hill in South Carolina. She went to school there and graduated from Clemson University in 1995, with a B.S in Ceramic Engineering.. She worked at SELEE Corporation, where she introduced the use of ceramic foam in metal filtration technology. She then joined General Electric Quartz in 1997 as plant manager. Lindsay held a\\\"\", \"score\": 15.90625}, {\"long_text\": \"\\\"Clemente de la Cerda\\\" | \\\"Clemente de la Cerda Clemente Felipe de La Cerda Martin (13 October 1935 – 13 December 1984) was a film director from Venezuela. He directed one of the highest grossing Venezuelan films, \\\"\\\"Soy un delincuente (I am a criminal)\\\"\\\", in 1976. His movies were notable for their depiction of social problems. Clemente Felipe de La Cerda Martin was born in Chichiriviche, Falcón State, in 1935. Although he had no formal education, he studied at the School of Fine Arts in Caracas. Between 1962 and 1963 he attended the Venezuelan Institute of Film Studies, then directed by the actor Luis Salazar.\\\"\", \"score\": 15.8046875}, {\"long_text\": \"\\\"Julio Medem\\\" | \\\"Julio Medem Julio Medem Lafont Sanjuán Mendizabal (born 21 October 1958) is a Spanish screenwriter and film director. Medem was born on 21 October 1958 in San Sebastián, Basque Country, Spain and showed an interest in movies since childhood, when he would take his father's Super 8 camera and shoot at night, while nobody was paying attention. After college graduation (where he earned degrees in Medicine and General Surgery) he worked as a film critic and later as a screenwriter, assistant director and editor. After a few shorts he directed his first full-length feature, \\\"\\\"Vacas\\\"\\\" ('Cows') for which he won\\\"\", \"score\": 15.703125}]}\n\n[[ ## thought_2 ## ]]\nWe have found the country of origin for the directors of the films 'Laali' and 'Gayby' from the search results. Now, we need to determine if the countries are the same.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"Are the countries of origin for the directors of Laali and Gayby the same?\", \"trajectory_id\": \"Laali and Gayby\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"Are the countries of origin for the directors of Laali and Gayby the same?\", \"passages_this_hop\": [{\"long_text\": \"Turchessa | \\\"Laticauda, distributed in the approximately the same area, and the Barbaresca breed of Sicily, it appears to result from the hybridisation of local breeds with Barbary (or Barbarin) sheep of Maghrebi origin. These may have been brought to the area by the Bourbon king Charles VII of Naples. It has been suggested that the Turchessa is a synonym of the Laticauda, which, however, is a broad-tailed breed. The Turchessa is one of the forty-four autochthonous local sheep breeds of limited distribution officially recognised by the Ministero delle Politiche Agricole Alimentari e Forestali, the Italian ministry of agriculture. A herd-book is\\\"\", \"score\": 14.8515625}, {\"long_text\": \"\\\"Alberto Lattuada\\\" | \\\"Alberto Lattuada Alberto Lattuada (; 13 November 1914 – 3 July 2005) was an Italian film director. Lattuada was born in Vaprio d'Adda, the son of composer Felice Lattuada. He was initially interested in literature, becoming, while still a student, a member of the editorial staff of the antifascist fortnightly \\\"\\\"Camminare...\\\"\\\" (1932) and part of the artists' group \\\"\\\"Corrente di Vita\\\"\\\" (1938). Before entering into the film business, Lattuada's father made him complete his studies as an architect even though he recognized his desire to make movies. In 1940 he started his cinema career as a screenwriter and assistant director\\\"\", \"score\": 14.7265625}, {\"long_text\": \"\\\"Thomas Manby\\\" | \\\"in 1807. Sons-in-law included James Dawes, Baron de Flassans (nephew of Sophie Dawes, Baronne de Feuchères, and first husband of Mary Harcourt), Sir Cavendish Stuart Rumbold, 4th Baronet (second husband of Mary Harcourt), and the French diplomat and politician, Théodore Adolphe Barrot (husband of Georgina Manvers). Manby later moved to London and also had a country house in Christchurch, Dorset. He worked on a chart of the South Pacific which he hoped would prove that the peoples of the region had a common origin, and helped solve the mystery of the disappearance of La Pérouse's ships when he identified medals\\\"\", \"score\": 14.53125}, {\"long_text\": \"\\\"Traditional story\\\" | \\\"origin of the apologue is extremely ancient and comes from the Middle East and its surrounding area (Persia, Asia Minor, Egypt, etc.), which is the Classical fatherland of everything connected with allegory, metaphor and imagination. Veiled truth was often necessary in the Middle East, particularly among the slaves, who dared not reveal their minds too openly. It is noteworthy that the two fathers of apologue in the West were slaves, namely Aesop and Phaedrus. La Fontaine in France; Gay and Dodsley in England; Gellert, Lessing and Hagedorn in Germany; Tomas de Iriarte in Spain, and Krylov in Russia, are leading\\\"\", \"score\": 14.5234375}, {\"long_text\": \"\\\"Alberto Lattuada\\\" | \\\"his family's chapel in the cemetery of Morimondo. Alberto Lattuada Alberto Lattuada (; 13 November 1914 – 3 July 2005) was an Italian film director. Lattuada was born in Vaprio d'Adda, the son of composer Felice Lattuada. He was initially interested in literature, becoming, while still a student, a member of the editorial staff of the antifascist fortnightly \\\"\\\"Camminare...\\\"\\\" (1932) and part of the artists' group \\\"\\\"Corrente di Vita\\\"\\\" (1938). Before entering into the film business, Lattuada's father made him complete his studies as an architect even though he recognized his desire to make movies. In 1940 he started his\\\"\", \"score\": 14.4453125}]}\n\n[[ ## thought_3 ## ]]\nWe have found the country of origin for the directors of the films 'Laali' and 'Gayby' from the search results. Now, we need to determine if the countries are the same.\n\n[[ ## tool_name_3 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_3 ## ]]\n{\"search_query\": \"Are the countries of origin for the directors of Laali and Gayby the same?\", \"trajectory_id\": \"Laali and Gayby\"}\n\n[[ ## observation_3 ## ]]\n{\"search_query\": \"Are the countries of origin for the directors of Laali and Gayby the same?\", \"passages_this_hop\": [{\"long_text\": \"\\\"La Pivellina\\\" | \\\"countries worldwide (including USA, Argentina, France, Italy, Brazil, Germany). The film was selected as the Austrian entry for the Best Foreign Language Film at the 83rd Academy Awards, but it didn't make the final shortlist. La Pivellina La Pivellina (The Little One) is a 2009 Austrian feature film debut directed by Tizza Covi and Rainer Frimmel. The film premiered at the 2009 Cannes Film Festival in the Directors' Fortnight, where it has been awarded the Europa Cinemas Label as Best European Film. Abandoned in a park, the two-year-old girl Asia is found by Patty, a circus woman living with her\\\"\", \"score\": 14.4140625}, {\"long_text\": \"\\\"Jean-François Laguionie\\\" | \\\"Jean-François Laguionie Jean-François Laguionie (born October 10, 1939 in Besançon) is a French animator, film director and producer of animation. Laguionie was originally interested in theatre but his encounter with Paul Grimault gave him the opportunity to learn the techniques of animated film. Though they were very close to each other, Paul Grimault and Jean-François Laguionie rarely worked together (though Grimault produced Laguionie's first three shorts). Jean-François Laguionie then directed several short films, climaxing with the now famous \\\"\\\"La Traversée de l'Atlantique à la rame\\\"\\\" (\\\"\\\"Rowing across the Atlantic\\\"\\\") (1978), which won the César Award for best short animated film\\\"\", \"score\": 14.390625}, {\"long_text\": \"\\\"Rodrigue Jean\\\" | \\\"Rodrigue Jean Rodrigue Jean (born 1957 in Caraquet, New Brunswick) is a Canadian film director and screenwriter of Acadian origin. He studied biology, sociology and literature. He was a dancer and choreographer in the 1980s. He then studied theatre and directing in London and Tokyo. He made his first short film, \\\"\\\"La Déroute\\\"\\\" in 1989, and in the early 1990s he led a video workshop at a London centre for homeless youth. In 1995 he directed the documentary \\\"\\\"La voix des rivières\\\"\\\" and made two short video films, \\\"\\\"La mémoire de l’eau\\\"\\\" in 1996 and \\\"\\\"L'Appel\\\"\\\" in 1998. His first\\\"\", \"score\": 14.375}, {\"long_text\": \"Gayal | \\\"Gayal The gayal (\\\"\\\"Bos frontalis\\\"\\\"), also known as mithun, is a large domestic bovine distributed in Northeast India, Bangladesh, northern Myanmar and in Yunnan, China. There are two major hypotheses on the origin of the gayal: To date neither hypothesis has been proven conclusively. The gayal differs in several important particulars from the gaur: Some domesticated gayals are parti-coloured, while others are completely white. Gayals are essentially inhabitants of hill-forests. In India, semi-domesticated gayals are kept by several ethnic groups living in the hills of Tripura, Mizoram, Assam, Arunachal Pradesh, and Nagaland. They also occur in the Chittagong Hill Tracts.\\\"\", \"score\": 14.3671875}, {\"long_text\": \"\\\"Michael Lah\\\" | \\\"Michael Lah Michael Richard Lah (September 1, 1912 – October 13, 1995) was an American animator of Slovene origin. He is best known for his work at Metro-Goldwyn-Mayer studios, primarily as a member of Tex Avery's animation unit. Lah was born in Illinois. He worked briefly at Walt Disney Studios before joining MGM in the late 1930s. His first work at MGM was in the Harman-Ising unit, working on the very last Happy Harmonies cartoon, \\\"\\\"The Little Bantamweight\\\"\\\" in 1938. He then joined Tex Avery's unit as lead animator, where he remained until the studio closed in 1957, directing a\\\"\", \"score\": 14.1640625}]}\n\n[[ ## thought_4 ## ]]\nWe need to extract the countries of origin for the directors of the films 'Laali' and 'Gayby' from the search results.\n\n[[ ## tool_name_4 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_4 ## ]]\n{\"search_query\": \"What are the countries of origin for the directors of Laali and Gayby?\", \"trajectory_id\": \"Laali and Gayby\"}\n\n[[ ## observation_4 ## ]]\n{\"search_query\": \"What are the countries of origin for the directors of Laali and Gayby?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Laert Vasili\\\" | \\\"Greece and run for more than 400 performances from 2003–2015, in Greece, Cyprus, Bosnia and Herzegovina, Macedonia, Kosovo and in Albania. He has translated several theatrical plays from English into Greek and into Albanian language and also from Greek into Albanian language. He has collaborated with prestigious worldwide known directors such as: Theodoros Terzopoulos, Robert Wilson, Anatoly Vasiliev, Tadashi Suzuki, Dimiter Gotscheff, Andrew Visnevski, Aleksandar Popovski and also with some of the most important directors in Greece like: Antonis Antypas, George Kimoulis, Dimitris Mavrikios, Yiannis Kakleas, Roula Pateraki, Maya Limperopoulou, Sylvia Liouliou etc. He was nominated for Dimitris Horn Prize\\\"\", \"score\": 15.4921875}, {\"long_text\": \"\\\"Vive la France\\\" | \\\"Vive la France Vive la France is a 2013 French comedy film directed by Michaël Youn. Taboulistan is a tiny fictional country, supposedly wedged between Afghanistan, Kyrgyzstan and Tajikistan, virtually unknown to the world. Its only asset is a reputation for inventing tabbouleh. Alas, the Lebanese have stolen the recipe for their country. So two half-brother taboulistani shepherds are sent to France by their president to promote their country. Their method: \\\"\\\"terrorist advertising.\\\"\\\" They seek to destroy the Eiffel Tower using a plane. Following a strike at Paris-Charles de Gaulle airport, they land in Corsica. They meet with Corsican nationalists\\\"\", \"score\": 15.4765625}, {\"long_text\": \"\\\"Magaly Alabau\\\" | \\\"Magaly Alabau Magali Alabau (born 1945) is a Cuban-American poet, theater director, and actor. Born in Cienfuegos, Cuba, she has lived in New York since 1966. She co-founded the Spanish-English ensemble Teatro Dúo/Duo Theatre with Manuel Martín, Jr. and the lesbian theater Medusa's Revenge with Ana María Simo. She began writing poetry after retiring from theater, and published eight books between 1986 and 2015. Alabau was born in 1945 in Cienfuegos, Cuba. Following the Cuban Revolution, she received a government scholarship to study theater at the Escuela Nacional de Arte de Cubanacán (National Art School) in Havana. After three and\\\"\", \"score\": 15.390625}, {\"long_text\": \"\\\"Rahim Burhan\\\" | \\\"Rahim Burhan Rahim Burhan () (born November 24, 1949 in Skopje, FPR Yugoslavia) is a Macedonian theatre director. Burhan became known as the founder and artistic director of the Roma-theatre \\\"\\\"Pralipe\\\"\\\" (engl. 'brotherhood') from Skopje. He grew up in Skopje and studied at the Yugoslavian School of Film. In his theatre productions, he worked on political themes, such as the treatment of minorities in states and violence towards ethnic groups or asylum seekers. In Germany, the theatre 'Pralipe' became known particularly by means of its cooperation with the Theater an der Ruhr from Muelheim, directed by Roberto Ciulli. The cooperation\\\"\", \"score\": 15.296875}, {\"long_text\": \"France | \\\"most important and famous film festivals in the world. Apart from its strong and innovative film tradition, France has also been a gathering spot for artists from across Europe and the world. For this reason, French cinema is sometimes intertwined with the cinema of foreign nations. Directors from nations such as Poland (Roman Polanski, Krzysztof Kieślowski, and Andrzej Żuławski), Argentina (Gaspar Noé and Edgardo Cozarinsky), Russia (Alexandre Alexeieff, Anatole Litvak), Austria (Michael Haneke), and Georgia (Géla Babluani, Otar Iosseliani) are prominent in the ranks of French cinema. Conversely, French directors have had prolific and influential careers in other countries, such\\\"\", \"score\": 15.1796875}]}",
+        "reasoning": "The directors of the films \"Laali\" and \"Gayby\" are from different countries. Gianni Amelio, the director of \"Laali\", is from Italy, while Jonathan Lisecki, the director of \"Gayby\", is from the United States.",
+        "answer": "no"
+      },
+      {
+        "question": "Why did the founder of university University Of Birmingham die?",
+        "answer": "stroke"
+      },
+      {
+        "question": "Are both director of film The Search For John Gissing and director of film Blindfolded (Film) from the same country?",
+        "answer": "yes"
+      },
+      {
+        "question": "Who died later, Chuck Turner or Mohamed Abdelaziz (Sahrawi Politician)?",
+        "answer": "Chuck Turner"
+      },
+      {
+        "question": "Are director of film Cosmonaut (Film) and director of film The Scientific Cardplayer from the same country?",
+        "answer": "yes"
+      },
+      {
+        "question": "Are both Lesser Slave Lake and Medeweger See located in the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Are director of film Sthree Sahasam and director of film That Malicious Age both from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Are Samalá River and Itter (Eder) located in the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Do both directors of films Blücher (film) and The Good Old Soak have the same nationality?",
+        "answer": "no"
+      },
+      {
+        "question": "When did Prince Henry, Duke Of Cumberland And Strathearn's mother die?",
+        "answer": "8 February 1772"
+      },
+      {
+        "question": "Are both Qaleh Dokhtar, Kohgiluyeh And Boyer-Ahmad and Bokat located in the same country?",
+        "answer": "yes"
+      },
+      {
+        "question": "Who is the mother of the director of film Blind Spot (1932 Film)?",
+        "answer": "Carrie Daumery"
+      },
+      {
+        "question": "Do both directors of films The Troublemaker (1964 Film) and Father'S Doing Fine have the same nationality?",
+        "answer": "no"
+      },
+      {
+        "question": "Are Puka Q'Asa (Huancavelica) and Horsetooth Mountain both located in the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Which film has the director born later, A Yank In Korea or The Tunnel (1933 French-Language Film)?",
+        "answer": "A Yank In Korea"
+      },
+      {
+        "question": "Which film came out earlier, Mi Viudo Y Yo or El Siete Machos?",
+        "answer": "El Siete Machos"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

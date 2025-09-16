@@ -1,0 +1,162 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Who is the mother-in-law of Andrew Murray (Scottish Soldier)?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Who is the mother-in-law of Andrew Murray (Scottish Soldier)?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Who is the mother-in-law of Andrew Murray (Scottish Soldier)?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Andrew Murray (minister)\\\" | \\\"Andrew Murray (minister) Andrew Murray (9 May 1828 – 18 January 1917) was a South African writer, teacher and Christian pastor. Murray considered missions to be \\\"\\\"the chief end of the church\\\"\\\". Andrew Murray was the second child of Andrew Murray Sr. (1794–1866), a Dutch Reformed Church missionary sent from Scotland to South Africa. He was born in Graaff Reinet, South Africa. His mother, Maria Susanna Stegmann, was of French Huguenot and German Lutheran descent. Murray was sent to Aberdeen in Scotland for his initial education, together with his elder brother, John. Both remained there until they obtained their master's\\\"\", \"score\": 21.453125}, {\"long_text\": \"\\\"Andrew Murray (Scottish soldier)\\\" | \\\"Andrew Murray (Scottish soldier) Sir Andrew Murray (1298–1338), also known as Sir Andrew Moray, or Sir Andrew de Moray, was a Scottish military and political leader who supported David II of Scotland against Edward Balliol and King Edward III of England during the so-called Second War of Scottish Independence. He held the lordships of Avoch and Petty in north Scotland, and Bothwell in west-central Scotland. In 1326 he married Christina Bruce, a sister of King Robert I of Scotland. Murray was twice chosen as Guardian of Scotland, first in 1332, and again from 1335 on his return to Scotland after\\\"\", \"score\": 21.421875}, {\"long_text\": \"\\\"Andrew Murray (Scottish soldier)\\\" | \\\"Bruce, sister of King Robert I, widow of (1) Gartnait, Earl of Mar, and (2) Sir Christopher Seton. Insofar as his wife was probably beyond child-bearing years, it has been conjectured that his two known sons were from a previous marriage or relationship. When King Robert I died in June 1329 he left his nephew Thomas Randolph, the Earl of Moray as guardian of the infant King David. But Randolph died suddenly in June 1332. A period of turmoil befell the Scots. Domhnall, Earl of Mar was next chosen as Regent in a hasty gathering of the Scottish Nobles at\\\"\", \"score\": 21.40625}, {\"long_text\": \"\\\"Peter Drummond-Murray of Mastrick\\\" | \\\"the Infanta Eulalia of Spain. In June 1954, he married Hon. Barbara Mary Hope, fourth and youngest daughter of Arthur Hope, 2nd Baron Rankeillour. They had five children, one of whom is trade union official Andrew Murray. He worked as a banker and a stockbroker, but his passion was heraldry and history, in particular, the Jacobites who numbered among his ancestors, including William Drummond, 4th Viscount Strathallan. He was also active in charity; he founded a volunteer service to help provide meals on wheels and transport for the housebound. When the nuns at one of Mother Teresa’s Scottish hostels had\\\"\", \"score\": 21.015625}, {\"long_text\": \"\\\"Andrew Murray (Scottish soldier)\\\" | \\\"and there died. He was buried in the chapel of Rosemarkie (Rosmarkyne), but his remains were afterwards removed to Dunfermline Abbey. Andrew Murray (Scottish soldier) Sir Andrew Murray (1298–1338), also known as Sir Andrew Moray, or Sir Andrew de Moray, was a Scottish military and political leader who supported David II of Scotland against Edward Balliol and King Edward III of England during the so-called Second War of Scottish Independence. He held the lordships of Avoch and Petty in north Scotland, and Bothwell in west-central Scotland. In 1326 he married Christina Bruce, a sister of King Robert I of Scotland.\\\"\", \"score\": 20.671875}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, it seems there are two individuals named Andrew Murray, one being a Scottish soldier and the other a Scottish minister. The question specifically asks about the mother-in-law of the Scottish soldier. I need to find more information about his wife, Christina Bruce.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Christina Bruce, wife of Andrew Murray (Scottish soldier)\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Christina Bruce, wife of Andrew Murray (Scottish soldier)\", \"passages_this_hop\": [{\"long_text\": \"\\\"Christina Bruce\\\" | \\\"imprisoned in cages. Christina returned to Scotland in an exchange of prisoners in early 1315. Her first marriage was to Sir Christopher Seton, who was born in 1278 and executed in 1306. She remarried in 1326 to Sir Andrew Murray, the posthumous child (b. 1298) of Sir Andrew Murray, a joint victor of the battle of Stirling Bridge along with William Wallace. Sir Andrew died in 1338. Christina is sometimes thought to have also married Gartnait, son of Donald, Earl of Mar (died 1305). She is never described as a Countess of Mar, however, or even described as \\\"\\\"of Mar\\\"\\\".\\\"\", \"score\": 24.578125}, {\"long_text\": \"\\\"Christina Bruce\\\" | \\\"Moreover, there is no evidence of any familial relationship with Gartnait's son and successor, Donald II. Gartnait was instead likely married to an elder sister of Christina's. In 1335, during the Second War of Scottish Independence, Christina commanded the garrison of Kildrummy Castle and successfully held out against pro-Balliol forces led by David of Strathbogie, prior to their defeat by her husband, Sir Andrew Murray, at the Battle of Culblean. Christina Bruce Christina Bruce (c. 1278 – 1356/1357), also known as Christina de Brus, was a daughter of Marjorie, Countess of Carrick, and her husband, Robert de Brus, \\\"\\\"jure uxoris\\\"\\\"\\\"\", \"score\": 23.8125}, {\"long_text\": \"\\\"Andrew Murray (Scottish soldier)\\\" | \\\"Scottish Parliament at Ayr when the succession to the throne was decided. Murray acceded his father to the lordship of Petty and his uncle, Sir William Murray, to the lordship of Bothwell in Lanarkshire. He appears to have been in receipt of an annuity in 1329-1330. When the treaty of Northampton was signed on 17 March 1328 at Holyrood in Edinburgh, Sir Andrew was among an impressive gathering of Scottish Nobles present to witness the final peace between both countries. A peace which would last only 4 years. In July 1326 at a ceremony at Cambuskenneth Abbey, Murray married Christina\\\"\", \"score\": 21.578125}, {\"long_text\": \"\\\"Kildrummy Castle\\\" | \\\"Mounth. Kildrummy Castle underwent siege numerous times in its history, first in defence of the family of Robert the Bruce in August–September 1306 (leading to the executions of Nigel Bruce and many other Scots), and again in 1335 by David of Strathbogie. On this occasion Christina Bruce held off the attackers until her husband Sir Andrew Murray came to her rescue. In the reign of David II, Walter Maule of Panmure was warden of Kildrummy Castle. In 1374 the castle's heiress Isobel was seized and married by Alexander Stewart, who then laid claim to Kildrummy and the title of \\\"\\\"Earl\\\"\", \"score\": 21.09375}, {\"long_text\": \"\\\"Christina Bruce\\\" | \\\"Christina Bruce Christina Bruce (c. 1278 – 1356/1357), also known as Christina de Brus, was a daughter of Marjorie, Countess of Carrick, and her husband, Robert de Brus, \\\"\\\"jure uxoris\\\"\\\" Earl of Carrick, as well as a sister of Robert the Bruce, King of Scots. It is presumed that she and her siblings were born at Turnberry Castle in Carrick. After his army's defeat at the Battle of Methven on 19 June 1306, Robert Bruce headed west to the mountains. He sent his second wife, Elizabeth, his daughter Marjorie, his sisters Christina and Mary Bruce, as well as Isabella MacDuff,\\\"\", \"score\": 20.796875}]}\n\n[[ ## thought_1 ## ]]\nThe search results indicate that Christina Bruce was the wife of Sir Andrew Murray, the Scottish soldier. From the passages, we learn that she was a daughter of Marjorie, Countess of Carrick, and her husband Robert de Brus, \"jure uxoris\" Earl of Carrick. Therefore, her mother-in-law would be Marjorie, Countess of Carrick.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "The search results indicate that Christina Bruce was the wife of Sir Andrew Murray, the Scottish soldier. From the passages, we learn that she was a daughter of Marjorie, Countess of Carrick, and her husband Robert de Brus, \"jure uxoris\" Earl of Carrick. Therefore, her mother-in-law would be Marjorie, Countess of Carrick.",
+        "answer": "Marjorie, Countess of Carrick"
+      },
+      {
+        "augmented": true,
+        "question": "Does Tim Reid have the same nationality as Devon Martinus?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Does Tim Reid have the same nationality as Devon Martinus?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Does Tim Reid have the same nationality as Devon Martinus?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Christopher Reid\\\" | \\\"Christopher Reid Christopher John Reid, FRSL (born 13 May 1949) is a Hong Kong-born British poet, essayist, cartoonist, and writer. In January 2010 he won the 2009 Costa Book Award for \\\"\\\"A Scattering\\\"\\\", written as a tribute to his late wife, the actress Lucinda Gane. Beside winning the poetry category, Reid became the first poet to take the overall Costa Book of the Year since Seamus Heaney in 1999. He had been nominated for Whitbread Awards in 1996 and in 1997 (Costa Awards under their previous name). A contemporary of Martin Amis, he was educated at Tonbridge School and Exeter\\\"\", \"score\": 18.234375}, {\"long_text\": \"\\\"Tim Reid (politician)\\\" | \\\"Tim Reid (politician) Timothy Escott \\\"\\\"Tim\\\"\\\" Reid (born February 21, 1936), is a former Canadian politician, who represented the electoral district of Scarborough East in the Legislative Assembly of Ontario from 1967 to 1971. He was a member of the Ontario Liberal Party. Reid was born in Toronto, Ontario. He attended the University of Toronto and graduated with a Bachelor of Arts degree. He was a star athlete for the University of Toronto in athletics and football, setting the league scoring record (68 points) playing halfback for the football team in 1958, and in 1993 he was inducted into the\\\"\", \"score\": 18.109375}, {\"long_text\": \"\\\"Tim Reid\\\" | \\\"Tim Reid Timothy Lee Reid (born December 19, 1944) is an American actor and film director best known for his roles in prime time American television programs, such as Venus Flytrap on \\\"\\\"WKRP in Cincinnati\\\"\\\" (1978–82), Marcel \\\"\\\"Downtown\\\"\\\" Brown on \\\"\\\"Simon & Simon\\\"\\\" (1983–87), Ray Campbell on \\\"\\\"Sister, Sister\\\"\\\" (1994–99) and William Barnett on \\\"\\\"That '70s Show\\\"\\\" (2004–06). Reid starred in a CBS series, \\\"\\\"Frank's Place\\\"\\\", as a professor who inherits a Louisiana restaurant. Reid is the founder and president of Legacy Media Institute, a non-profit organization \\\"\\\"dedicated to bringing together leading professionals in the film and television industry, outstanding\\\"\", \"score\": 18.046875}, {\"long_text\": \"\\\"Dexter Reid\\\" | \\\"Dexter Reid Dexter Devon Reid Jr. (born March 18, 1981) is a former American football safety. He was drafted by the New England Patriots in the fourth round of the 2004 NFL Draft after playing his college football at the University of North Carolina. Reid is a two-time Super Bowl champion, having won a trophy with the Patriots and Indianapolis Colts in 2005 and 2007 respectively. Reid attended Granby High School in Norfolk, Virginia where he was an honorable mention All-USA Today selection, the district \\\"\\\"Player of the Year\\\"\\\" and first-team all-state selection as a senior making 62 tackles, 3\\\"\", \"score\": 17.96875}, {\"long_text\": \"\\\"Tim Reid (politician)\\\" | \\\"Fancott whilst he was at Oxford and she at the London School of Economics. They were married for 50 years until her death in 2012, and had two children. Tim Reid (politician) Timothy Escott \\\"\\\"Tim\\\"\\\" Reid (born February 21, 1936), is a former Canadian politician, who represented the electoral district of Scarborough East in the Legislative Assembly of Ontario from 1967 to 1971. He was a member of the Ontario Liberal Party. Reid was born in Toronto, Ontario. He attended the University of Toronto and graduated with a Bachelor of Arts degree. He was a star athlete for the University\\\"\", \"score\": 17.8125}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, I can see that Tim Reid (politician) is Canadian while Devon Martinus (the actor) is American. However, I need to verify if there is any information suggesting they share the same nationality.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Tim Reid and Devon Martinus nationality\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Tim Reid and Devon Martinus nationality\", \"passages_this_hop\": [{\"long_text\": \"\\\"Tim Reid\\\" | \\\"actors, and young men and women who wish to pursue a career in the entertainment media\\\"\\\". Reid was born in Norfolk, Virginia, and raised in the Crestwood area of Chesapeake, Virginia, formerly Norfolk County, Virginia. He is the son of Augustine (née Wilkins) and William Lee Reid. He earned his Bachelor of Business Administration at Norfolk State College in 1968. Reid also became a member of Alpha Phi Alpha fraternity. After graduation, he was hired by Dupont Corporation, where he worked for three years. Reid's entertainment career also began in 1968. He and insurance salesman Tom Dreesen met at a\\\"\", \"score\": 19.359375}, {\"long_text\": \"\\\"Tim Reid\\\" | \\\"during the ceremony. During the 1980s and 1990s Reid served on the advisory board of the National Student Film Institute. Tim Reid Timothy Lee Reid (born December 19, 1944) is an American actor and film director best known for his roles in prime time American television programs, such as Venus Flytrap on \\\"\\\"WKRP in Cincinnati\\\"\\\" (1978–82), Marcel \\\"\\\"Downtown\\\"\\\" Brown on \\\"\\\"Simon & Simon\\\"\\\" (1983–87), Ray Campbell on \\\"\\\"Sister, Sister\\\"\\\" (1994–99) and William Barnett on \\\"\\\"That '70s Show\\\"\\\" (2004–06). Reid starred in a CBS series, \\\"\\\"Frank's Place\\\"\\\", as a professor who inherits a Louisiana restaurant. Reid is the founder and president\\\"\", \"score\": 19.3125}, {\"long_text\": \"\\\"Martin Reid\\\" | \\\"Martin Reid Martin \\\"\\\"Marty\\\"\\\" Reid (12 January 1964) is a Northern Irish actor and comedian, and is part of the Hole in the Wall Gang, a Belfast comedy troupe. He has played the role of staunch loyalist Uncle Andy in the satirical BBC comedy \\\"\\\"Give My Head Peace\\\"\\\" since 1997, which was created by and starred the Hole in the Wall Gang. After the success of \\\"\\\"Give My Head Peace\\\"\\\" the Gang created a sketch show entitled \\\"\\\"Dry Your Eyes\\\"\\\" in 2006, in which Reid played various characters, most notably the Linfield fan Derek and Jonjo 1 of the McDowell\\\"\", \"score\": 18.84375}, {\"long_text\": \"\\\"Tony Reid\\\" | \\\"Tony Reid Charles Anthony \\\"\\\"Tony\\\"\\\" Reid (born 9 April 1962) is a Barbados-born American former cricketer. A right-handed batsman and right-arm medium pace bowler, he played for the United States national cricket team from 2000 until 2005. He was the first man to take a wicket for the USA in a One Day International (ODI). Born in Barbados in 1962, Reid made his List A debut when the USA took part in the 2000–01 Red Stripe Bowl, playing three of the team's four group matches in Jamaica. His debut against the Jamaicans was inauspicious as he went for 50 from\\\"\", \"score\": 18.734375}, {\"long_text\": \"\\\"Martin Reid\\\" | \\\"brothers. He has also appeared in the 1999 comedy film \\\"\\\"The Most Fertile Man in Ireland\\\"\\\" as a barman. Martin Reid Martin \\\"\\\"Marty\\\"\\\" Reid (12 January 1964) is a Northern Irish actor and comedian, and is part of the Hole in the Wall Gang, a Belfast comedy troupe. He has played the role of staunch loyalist Uncle Andy in the satirical BBC comedy \\\"\\\"Give My Head Peace\\\"\\\" since 1997, which was created by and starred the Hole in the Wall Gang. After the success of \\\"\\\"Give My Head Peace\\\"\\\" the Gang created a sketch show entitled \\\"\\\"Dry Your Eyes\\\"\\\" in\\\"\", \"score\": 18.546875}]}\n\n[[ ## thought_1 ## ]]\nBoth Tim Reid (politician) and Devon Martinus are mentioned to be American based on the search results. There is no information suggesting they share the same nationality.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "Tim Reid (politician) is Canadian while Devon Martinus is American. Both individuals are mentioned to be American based on the search results, and there is no information suggesting they share the same nationality.",
+        "answer": "no"
+      },
+      {
+        "augmented": true,
+        "question": "When was the director of film The Vampire'S Ghost born?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"When was the director of film The Vampire'S Ghost born?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"When was the director of film The Vampire'S Ghost born?\", \"passages_this_hop\": [{\"long_text\": \"\\\"The Vampire's Ghost\\\" | \\\"The Vampire's Ghost The Vampire's Ghost is 1945 American horror film directed by Lesley Selander written by Leigh Brackett and John K. Butler. The film stars John Abbott, Charles Gordon, Peggy Stewart, Grant Withers, Emmett Vogan and Adele Mara. The film is based on John William Polidori's short story \\\"\\\"The Vampyre\\\"\\\" and was released on May 21, 1945, by Republic Pictures. Roy Hendrick (Charles Gordon) returns to the village of Bakunda after a short absence to find that there has been a series of strange murders where each victim was bitten the neck and drained of blood. The local Natives\\\"\", \"score\": 23.234375}, {\"long_text\": \"\\\"The Vampire's Ghost\\\" | \\\"said she worked three weeks on the script with another writer. \\\"\\\"They shot the film in ten days and that was two days over schedule (laughing). They fired the cameraman after the second day because he was taking too much time. But uh, it was not the greatest film ever made.\\\"\\\" The success of this and \\\"\\\"The Phantom Creeps\\\"\\\" encouraged Republic to make another two horror films, \\\"\\\"Valley of the Zombies\\\"\\\" and \\\"\\\"The Catman of Paris\\\"\\\". The Vampire's Ghost The Vampire's Ghost is 1945 American horror film directed by Lesley Selander written by Leigh Brackett and John K. Butler. The\\\"\", \"score\": 21.109375}, {\"long_text\": \"\\\"Nieng Arp\\\" | \\\"Nieng Arp Nieng Arp (Khmer:អាប), with an international title of \\\"\\\"Lady Vampire\\\"\\\" and also known as \\\"\\\"Vampire\\\"\\\" and \\\"\\\" Bodyless\\\"\\\", is a 2004 Cambodian horror film. The film is centered upon Khmer folklore beliefs about \\\"\\\"Arp\\\"\\\" or \\\"\\\"Ap\\\"\\\", a mythical popular ghost which is found in Southeast Asia. The film is directed by Kam Chanthy, a khmer-born director who was trained in Thailand. The film has attracted huge attention from khmer audiences and led a new wave of interest in the local film industry, becoming a hit thriller in its release year. In the middle of a long night, a\\\"\", \"score\": 20.9375}, {\"long_text\": \"\\\"Spooks Run Wild\\\" | \\\"the script. The film was originally known as \\\"\\\"Trail of the Vampire\\\"\\\" then \\\"\\\"Ghosts in the Night\\\"\\\". In April 1941 Monogram announced that Lugosi would make two starring vehicles for the studio, \\\"\\\"The Night of Horror\\\"\\\" and \\\"\\\"Kiss of Death\\\"\\\" and would also appear with the Est Side Kids in \\\"\\\"Ghosts in the Night\\\"\\\". At the last minute, with \\\"\\\"Bowery Blitzkrieg\\\"\\\" director Wallace Fox already attached to Columbia's The Lone Star Vigilantes, Katzman hired Russian-born director Phil Rosen, who had just finished filming Monogram's \\\"\\\"The Deadly Game\\\"\\\" to helm the production. Angelo Rossitto was based on the strength of his\\\"\", \"score\": 20.765625}, {\"long_text\": \"\\\"Umbrage (film)\\\" | \\\"Umbrage (film) Umbrage: The First Vampire, also known as A Vampire's Tale, is a 2009 British horror film written and directed by Drew Cullingham as his directorial debut. The film stars Doug Bradley, Rita Ramnani and James Fisher. The film had its first public screening on 31 October 2009, at the London FrightFest Film Festival, and in 2010 was picked up by Lionsgate for 2011 and 2012 DVD distribution. Jacob (Doug Bradley) is an antiques dealer who sets off with his new young and pregnant wife Lauren (Grace Vallorani) and his stepdaughter, Rachel (Rita Ramnani) to a forest homestead in\\\"\", \"score\": 20.6875}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages, I can see that the film \"The Vampire's Ghost\" was directed by Lesley Selander. Now, I need to find out when he was born.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Lesley Selander birth year\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Lesley Selander birth year\", \"passages_this_hop\": [{\"long_text\": \"\\\"Lesley Selander\\\" | \\\"Lesley Selander Lesley Selander (May 26, 1900 – December 5, 1979) was an American film director of Westerns and adventure movies. His career as director, spanning 127 feature films and dozens of TV episodes, lasted from 1936-68. Before that, Selander was assistant director on films such as \\\"\\\"The Cat and the Fiddle\\\"\\\" (1934), \\\"\\\"A Night at the Opera\\\"\\\" (1935), and Fritz Lang's \\\"\\\"Fury\\\"\\\" (1936). To this day Selander remains one of the most prolific directors of feature Westerns in cinema history, having taken the helm for 107 Westerns between his first directorial feature in 1936 and 1967. In 1956 he\\\"\", \"score\": 24.015625}, {\"long_text\": \"\\\"Lesley Selander\\\" | \\\"was nominated for the Directors Guild of America award for Outstanding Directorial Achievement in Television, for his work directing a 1954 episode of Lassie. Lesley Selander Lesley Selander (May 26, 1900 – December 5, 1979) was an American film director of Westerns and adventure movies. His career as director, spanning 127 feature films and dozens of TV episodes, lasted from 1936-68. Before that, Selander was assistant director on films such as \\\"\\\"The Cat and the Fiddle\\\"\\\" (1934), \\\"\\\"A Night at the Opera\\\"\\\" (1935), and Fritz Lang's \\\"\\\"Fury\\\"\\\" (1936). To this day Selander remains one of the most prolific directors of\\\"\", \"score\": 23.46875}, {\"long_text\": \"\\\"Alis Lesley\\\" | \\\"Alis Lesley Alis Lesley (born Alice Lesley, April 20, 1938) is an American former rockabilly singer, once billed as \\\"\\\"the female Elvis Presley.\\\"\\\" Lesley was born in Chicago, Illinois, United States. Her family later moved to Phoenix, Arizona, where she attended Phoenix Junior College. She majored in television and radio, and began singing rockabilly while a student. She was discovered by Kathryn Godfrey, a popular Phoenix television personality and the sister of Arthur Godfrey. With Ms. Godfrey's help, Lesley became a local favorite following her appearances on television station KTVK and in local night clubs. Lesley achieved brief national celebrity\\\"\", \"score\": 20.234375}, {\"long_text\": \"\\\"Lesley Rowe\\\" | \\\"Lesley Rowe Lesley Martha Gibson (née Rowe, 21 March 1929 – 5 July 2011) was a New Zealand sprinter who, as Lesley Rowe, won a silver medal representing her country at the 1950 British Empire Games. Rowe was born in the Auckland suburb of Grey Lynn on 21 March 1929, the daughter of Lawrence John Rowe and Clarice Rowe (née Downs). She was educated at Epsom Girls' Grammar School from 1943 to 1946, and was a prefect in her final year. Rowe won the New Zealand national 220 yards sprint title four times: in 1948, 1951, 1952, and 1953. In\\\"\", \"score\": 20.203125}, {\"long_text\": \"\\\"Lesley Williams\\\" | \\\"Lesley Williams Lesley Williams, AM (1932-2016) was a scientist and academic at the University of Queensland and pioneer in the field of human cytogenetics. Lesley Merle Williams was born December 23, 1932 in Mackay, Queensland. She attended Newmarket State School and the Central Practising School, as well as Brisbane State High School. Lesley was co-captain of Brisbane State High School in 1950. She finished second in the state of Queensland in the senior exams of 1950, winning a scholarship to undertake study at the University of Queensland. Williams graduated with her B.Sc. with First Class Honours in 1956. She continued\\\"\", \"score\": 19.828125}]}\n\n[[ ## thought_1 ## ]]\nThe passage mentions that Lesley Selander was born on May 26, 1900. This answers the question about the director's birth year.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "Lesley Selander, the director of the film \"The Vampire's Ghost,\" was born on May 26, 1900.",
+        "answer": "May 26, 1900"
+      },
+      {
+        "question": "Are both director of film The Search For John Gissing and director of film Blindfolded (Film) from the same country?",
+        "answer": "yes"
+      },
+      {
+        "question": "Are Shokrab, Kermanshah and Pis-Losap both located in the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Do Rhescuporis Ii and Mcallister Hull share the same nationality?",
+        "answer": "no"
+      },
+      {
+        "question": "Which film has the director who died later, Aaranya Kandam or One Hundred Nails?",
+        "answer": "One Hundred Nails"
+      },
+      {
+        "question": "When is William Marshall (1796–1872)'s father's birthday?",
+        "answer": "27 July 1765"
+      },
+      {
+        "question": "Which country the performer of song Soldier (Neil Young Song) is from?",
+        "answer": "Canadian"
+      },
+      {
+        "question": "Where was the director of film Rubber Racketeers born?",
+        "answer": "Portland, Oregon"
+      },
+      {
+        "question": "When was the director of film Mr. Moto Takes A Chance born?",
+        "answer": "December 13, 1903"
+      },
+      {
+        "question": "Where did the director of film Canyon Of The Fools die?",
+        "answer": "Hollywood"
+      },
+      {
+        "question": "Do both directors of films Paper Bullets and Karakolda Ayna Var share the same nationality?",
+        "answer": "no"
+      },
+      {
+        "question": "What is the date of birth of Mina Gerhardsen's father?",
+        "answer": "13 June 1946"
+      },
+      {
+        "question": "Are director of film Sthree Sahasam and director of film That Malicious Age both from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Where was the composer of film Pancha Thanthram born?",
+        "answer": "Paravoor"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

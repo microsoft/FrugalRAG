@@ -1,0 +1,234 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What year was the end of the manufacturer of the Hudson Wasp?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What year was the end of the manufacturer of the Hudson Wasp?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What year was the end of the manufacturer of the Hudson Wasp?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Hudson Wasp\\\" | \\\"1951 which dominated NASCAR from 1952 to 1954. The Super Wasp was also offered with an aluminum \\\"\\\"twin H\\\"\\\" manifold and twin 2-barrel carburetors. Super Wasp performance with the \\\"\\\"twin H\\\"\\\" induction matched the performance of the big 2-barrel equipped, but heavier, Hudson Hornet. Wasp model year production saw 21,876 units in 1953 and 17,792 units in 1954, its final year before the Hudson merger with Nash-Kelvinator Corporation. For 1955 the Wasp became a product of the newly formed American Motors Corporation (AMC). Following the end of 1954 model year production, Hudson's Detroit manufacturing facility was closed and assembly of\\\"\", \"score\": 24.28125}, {\"long_text\": \"\\\"Hudson Wasp\\\" | \\\"Hudson Wasp The Hudson Wasp is an automobile that was built and marketed by the Hudson Motor Car Company of Detroit, Michigan, from the 1952 through the 1956 model years. After Hudson merged with Nash Motors, the Wasp was then built by American Motors Corporation in Kenosha, Wisconsin, and marketed under its Hudson marque for model years 1955 and 1956. The Hudson Wasp can be classified by two distinct model year generations: from 1952 to 1954 when it used Hudson's existing short-wheelbase platform, and in 1955 and 1956 when it was built on the full-sized Nash platform, with completely different\\\"\", \"score\": 23.71875}, {\"long_text\": \"\\\"Hudson Wasp\\\" | \\\"Hudson's new look was unique. However, the plan to build a better Hudson identity failed; the car's garish design failed to excite buyers. The Wasp was available only as a four-door sedan and its sales fell to 2,519 units in its final year of production. In 1957, AMC stripped Hudson of eleven of its fifteen models, including the Wasp. The Wasp was assembled in Australia from complete knock down (CKD) kits. Hudson Wasp The Hudson Wasp is an automobile that was built and marketed by the Hudson Motor Car Company of Detroit, Michigan, from the 1952 through the 1956 model\\\"\", \"score\": 22.8125}, {\"long_text\": \"\\\"Hudson Wasp\\\" | \\\"designs for each of these two model years. The Wasp (Series 58) was introduced by Hudson for the 1952 model year as an upgraded version of the Hudson Pacemaker, replacing the Hudson Super Custom models from 1951. The Wasp was available in two- and four-door sedan, convertible, and a 2-door hardtop designated the Hollywood. The Wasp was built on Hudson's shorter wheelbase, using the company's unitized, \\\"\\\"mono-bilt\\\"\\\" step-down chassis design with an overall length of . Hudson's mono-built unitized structure used a perimeter frame which provided a rigid structure, low center of gravity, and side-impact protection for passengers. The base\\\"\", \"score\": 22.328125}, {\"long_text\": \"\\\"Hudson Motor Car Company\\\" | \\\"Custom and Super, which featured a lowered profile and slightly updated styling. With a wider front track than Nash used, Hudson was the better handling car, and was powered by the famed Hornet Six with the optional high-compression cylinder head and dual-carburetor manifold (\\\"\\\"Twin-H Power\\\"\\\"); the Twin H would disappear at the end of the 1956 model year. The Wasp used the L-head Jet Six engine (up to ) and this model (in sedan version) was Hudson's top seller. For 1955, for the first time Hudson offered a V8 engine, a Packard-designed and -built engine rated at purchased by Hudson\\\"\", \"score\": 21.90625}]}",
+        "next_thought": "From the search results, I can see that the Hudson Wasp was manufactured until 1954, and the information mentions that it was the final year before the Hudson merger with Nash-Kelvinator Corporation. Therefore, the end of the manufacturer of the Hudson Wasp was in 1954.",
+        "next_tool_name": "finish",
+        "next_tool_args": {}
+      },
+      {
+        "augmented": true,
+        "question": "What is the enrollment at the university where Beneficence is located?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What is the enrollment at the university where Beneficence is located?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What is the enrollment at the university where Beneficence is located?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Beneficence (statue)\\\" | \\\"the university is named. \\\"\\\"Beneficence\\\"\\\" has a sister statue located in the Boston Gardens Park in Boston, Massachusetts, which holds a dish instead of a box. Some students believe that one way to find one's true love is to sit under \\\"\\\"Benny\\\"\\\" and kiss him or her with closed eyes. If \\\"\\\"Benny\\\"\\\"s wings flap, then the love is true; if no flapping occurs, then the love is not meant to be. Another myth suggests that the severed heads of each of the five Ball Brothers rest in individual urns on the top of the respective pillar; however, all five brothers\\\"\", \"score\": 20.828125}, {\"long_text\": \"\\\"Beneficence (statue)\\\" | \\\"Beneficence (statue) Beneficence is a bronze statue on the campus of Ball State University, located in Muncie, Indiana. The statue is referred to as Benny by students. In 1927 the Muncie Chamber of Commerce proposed the building of a memorial to express gratitude on behalf of Muncie and Ball State University for the Ball Brothers' extensive generosity to the community. The monetary value of the Balls' philanthropies in Muncie totaled $7 million by the time of the monument's completion in 1937. The Chamber commissioned renowned sculptor Daniel Chester French, who sculpted the statue of Abraham Lincoln in the Lincoln Memorial\\\"\", \"score\": 20.359375}, {\"long_text\": \"\\\"Beneficence (statue)\\\" | \\\"are buried at Beech Grove Cemetery in Muncie. Another legend states that a female student is not officially a coed until she is kissed by a male student beneath the statue. Another campus myth states if a virgin were to ever cross \\\"\\\"Benny\\\"\\\"s path she would come to life and fly away. Beneficence (statue) Beneficence is a bronze statue on the campus of Ball State University, located in Muncie, Indiana. The statue is referred to as Benny by students. In 1927 the Muncie Chamber of Commerce proposed the building of a memorial to express gratitude on behalf of Muncie and\\\"\", \"score\": 20.1875}, {\"long_text\": \"\\\"Ball State University\\\" | \\\"Enrollment that year reached 1,151: 723 women and 428 men. As an expression of the many gifts from the Ball family since 1917, sculptor Daniel Chester French was commissioned by Muncie's chamber of commerce to cast a bronze fountain figure to commemorate the 20th anniversary of the Ball brothers' gift to the state. His creation, the statue \\\"\\\"Beneficence,\\\"\\\" still stands today between the Administration Building and Lucina Hall where Talley Avenue ends at University Avenue. Ball State, like the rest of nation was affected by the onset of World War II. There were a number of dramatic changes on Ball\\\"\", \"score\": 19.6875}, {\"long_text\": \"\\\"History of Ball State University\\\" | \\\"the many gifts the Ball family gave the university since 1917, sculptor Daniel Chester French was commissioned by the Muncie Chamber of Commerce to cast a bronze fountain figure to commemorate the 20th anniversary of the Ball Brother's gift to the state. His creation, the statue Beneficence, still stands today between the Administration Building and Lucina Hall where Talley Street dead ends into University Avenue. The school grew steadily until the 1940s when World War II broke out and many would-be Ball State students opted to join the war effort by enlisting in the military. by 1944 enrollment had dropped\\\"\", \"score\": 18.15625}]}",
+        "next_thought": "From the passages, I can determine that the university where Beneficence is located is Ball State University in Muncie, Indiana. Now, I need to find the enrollment at Ball State University.",
+        "next_tool_name": "AdvancedSearch",
+        "next_tool_args": {
+          "search_query": "enrollment at Ball State University"
+        }
+      },
+      {
+        "question": "Who did the members of Kassetten's performers collaborate with?",
+        "answer": "the Birthday Party"
+      },
+      {
+        "question": "In which year did the manufacturer of the Nord 1500 Griffon end?",
+        "answer": "1970"
+      },
+      {
+        "question": "Who was the founder of Titus Lucretius Tricipitinus' country of citizenship?",
+        "answer": "L. Junius Brutus"
+      },
+      {
+        "question": "What year did the company Novair International Airways is part of dissolve?",
+        "answer": "1995"
+      },
+      {
+        "question": "In what year did the South Korean car manufacturer that purchased the factor in 1995 dissolve?",
+        "answer": "1999"
+      },
+      {
+        "question": "Where was the person who wrote the song my kinda party by Jason Aldean born?",
+        "answer": "Jefferson"
+      },
+      {
+        "question": "Which family is the mother of Anne, Princess Royal and Princess of Orange's a member of?",
+        "answer": "House of Hohenzollern"
+      },
+      {
+        "question": "How did the Japanese beat the country whose government disagreed on the language used to describe the torch route?",
+        "answer": "First Sino-Japanese"
+      },
+      {
+        "question": "Where did the team that won the MLB World Series in 2007 get Brandon Phillips from?",
+        "answer": "Los Angeles Angels"
+      },
+      {
+        "question": "When did the distributer of Poptropica start?",
+        "answer": "1998"
+      },
+      {
+        "question": "When did the institution that awards the John Price Wetherill Medal open?",
+        "answer": "1824"
+      },
+      {
+        "question": "What year did the council which was seated in 1949 adopt the convention of cybercrime in?",
+        "answer": "2001"
+      },
+      {
+        "question": "When did the army that introduced tanks to battlefields in WWI start wearing khaki?",
+        "answer": "early 1900s"
+      },
+      {
+        "question": "In what era did The Presbyterian Church in the country whose government disagreed on the language used to describe the torch route experience a large growth in members?",
+        "answer": "era of Guomindang"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!<\/desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.<\/desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What year was the end of the manufacturer of the Hudson Wasp?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What year was the end of the manufacturer of the Hudson Wasp?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What year was the end of the manufacturer of the Hudson Wasp?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Hudson Wasp\\\" | \\\"1951 which dominated NASCAR from 1952 to 1954. The Super Wasp was also offered with an aluminum \\\"\\\"twin H\\\"\\\" manifold and twin 2-barrel carburetors. Super Wasp performance with the \\\"\\\"twin H\\\"\\\" induction matched the performance of the big 2-barrel equipped, but heavier, Hudson Hornet. Wasp model year production saw 21,876 units in 1953 and 17,792 units in 1954, its final year before the Hudson merger with Nash-Kelvinator Corporation. For 1955 the Wasp became a product of the newly formed American Motors Corporation (AMC). Following the end of 1954 model year production, Hudson's Detroit manufacturing facility was closed and assembly of\\\"\", \"score\": 24.28125}, {\"long_text\": \"\\\"Hudson Wasp\\\" | \\\"Hudson Wasp The Hudson Wasp is an automobile that was built and marketed by the Hudson Motor Car Company of Detroit, Michigan, from the 1952 through the 1956 model years. After Hudson merged with Nash Motors, the Wasp was then built by American Motors Corporation in Kenosha, Wisconsin, and marketed under its Hudson marque for model years 1955 and 1956. The Hudson Wasp can be classified by two distinct model year generations: from 1952 to 1954 when it used Hudson's existing short-wheelbase platform, and in 1955 and 1956 when it was built on the full-sized Nash platform, with completely different\\\"\", \"score\": 23.71875}, {\"long_text\": \"\\\"Hudson Wasp\\\" | \\\"Hudson's new look was unique. However, the plan to build a better Hudson identity failed; the car's garish design failed to excite buyers. The Wasp was available only as a four-door sedan and its sales fell to 2,519 units in its final year of production. In 1957, AMC stripped Hudson of eleven of its fifteen models, including the Wasp. The Wasp was assembled in Australia from complete knock down (CKD) kits. Hudson Wasp The Hudson Wasp is an automobile that was built and marketed by the Hudson Motor Car Company of Detroit, Michigan, from the 1952 through the 1956 model\\\"\", \"score\": 22.8125}, {\"long_text\": \"\\\"Hudson Wasp\\\" | \\\"designs for each of these two model years. The Wasp (Series 58) was introduced by Hudson for the 1952 model year as an upgraded version of the Hudson Pacemaker, replacing the Hudson Super Custom models from 1951. The Wasp was available in two- and four-door sedan, convertible, and a 2-door hardtop designated the Hollywood. The Wasp was built on Hudson's shorter wheelbase, using the company's unitized, \\\"\\\"mono-bilt\\\"\\\" step-down chassis design with an overall length of . Hudson's mono-built unitized structure used a perimeter frame which provided a rigid structure, low center of gravity, and side-impact protection for passengers. The base\\\"\", \"score\": 22.328125}, {\"long_text\": \"\\\"Hudson Motor Car Company\\\" | \\\"Custom and Super, which featured a lowered profile and slightly updated styling. With a wider front track than Nash used, Hudson was the better handling car, and was powered by the famed Hornet Six with the optional high-compression cylinder head and dual-carburetor manifold (\\\"\\\"Twin-H Power\\\"\\\"); the Twin H would disappear at the end of the 1956 model year. The Wasp used the L-head Jet Six engine (up to ) and this model (in sedan version) was Hudson's top seller. For 1955, for the first time Hudson offered a V8 engine, a Packard-designed and -built engine rated at purchased by Hudson\\\"\", \"score\": 21.90625}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, I can see that the Hudson Wasp was manufactured until 1954, and the information mentions that it was the final year before the Hudson merger with Nash-Kelvinator Corporation. Therefore, the end of the manufacturer of the Hudson Wasp was in 1954.\n\n[[ ## tool_name_0 ## ]]\nfinish\n\n[[ ## tool_args_0 ## ]]\n{}\n\n[[ ## observation_0 ## ]]\nCompleted.",
+        "reasoning": "The search results indicate that the Hudson Wasp was manufactured until 1954, which was its final year of production before the Hudson merger with Nash-Kelvinator Corporation.",
+        "answer": "1954"
+      },
+      {
+        "augmented": true,
+        "question": "What is the enrollment at the university where Beneficence is located?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What is the enrollment at the university where Beneficence is located?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What is the enrollment at the university where Beneficence is located?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Beneficence (statue)\\\" | \\\"the university is named. \\\"\\\"Beneficence\\\"\\\" has a sister statue located in the Boston Gardens Park in Boston, Massachusetts, which holds a dish instead of a box. Some students believe that one way to find one's true love is to sit under \\\"\\\"Benny\\\"\\\" and kiss him or her with closed eyes. If \\\"\\\"Benny\\\"\\\"s wings flap, then the love is true; if no flapping occurs, then the love is not meant to be. Another myth suggests that the severed heads of each of the five Ball Brothers rest in individual urns on the top of the respective pillar; however, all five brothers\\\"\", \"score\": 20.828125}, {\"long_text\": \"\\\"Beneficence (statue)\\\" | \\\"Beneficence (statue) Beneficence is a bronze statue on the campus of Ball State University, located in Muncie, Indiana. The statue is referred to as Benny by students. In 1927 the Muncie Chamber of Commerce proposed the building of a memorial to express gratitude on behalf of Muncie and Ball State University for the Ball Brothers' extensive generosity to the community. The monetary value of the Balls' philanthropies in Muncie totaled $7 million by the time of the monument's completion in 1937. The Chamber commissioned renowned sculptor Daniel Chester French, who sculpted the statue of Abraham Lincoln in the Lincoln Memorial\\\"\", \"score\": 20.359375}, {\"long_text\": \"\\\"Beneficence (statue)\\\" | \\\"are buried at Beech Grove Cemetery in Muncie. Another legend states that a female student is not officially a coed until she is kissed by a male student beneath the statue. Another campus myth states if a virgin were to ever cross \\\"\\\"Benny\\\"\\\"s path she would come to life and fly away. Beneficence (statue) Beneficence is a bronze statue on the campus of Ball State University, located in Muncie, Indiana. The statue is referred to as Benny by students. In 1927 the Muncie Chamber of Commerce proposed the building of a memorial to express gratitude on behalf of Muncie and\\\"\", \"score\": 20.1875}, {\"long_text\": \"\\\"Ball State University\\\" | \\\"Enrollment that year reached 1,151: 723 women and 428 men. As an expression of the many gifts from the Ball family since 1917, sculptor Daniel Chester French was commissioned by Muncie's chamber of commerce to cast a bronze fountain figure to commemorate the 20th anniversary of the Ball brothers' gift to the state. His creation, the statue \\\"\\\"Beneficence,\\\"\\\" still stands today between the Administration Building and Lucina Hall where Talley Avenue ends at University Avenue. Ball State, like the rest of nation was affected by the onset of World War II. There were a number of dramatic changes on Ball\\\"\", \"score\": 19.6875}, {\"long_text\": \"\\\"History of Ball State University\\\" | \\\"the many gifts the Ball family gave the university since 1917, sculptor Daniel Chester French was commissioned by the Muncie Chamber of Commerce to cast a bronze fountain figure to commemorate the 20th anniversary of the Ball Brother's gift to the state. His creation, the statue Beneficence, still stands today between the Administration Building and Lucina Hall where Talley Street dead ends into University Avenue. The school grew steadily until the 1940s when World War II broke out and many would-be Ball State students opted to join the war effort by enlisting in the military. by 1944 enrollment had dropped\\\"\", \"score\": 18.15625}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages, I can determine that the university where Beneficence is located is Ball State University in Muncie, Indiana. Now, I need to find the enrollment at Ball State University.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"enrollment at Ball State University\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"enrollment at Ball State University\", \"passages_this_hop\": [{\"long_text\": \"\\\"Ball State University\\\" | \\\"is classified by the Carnegie Classification of Institutions of Higher Education as a doctoral university: higher research activity. The university is composed of eight academic colleges. , total enrollment was 22,513 students, including 17,004 undergraduates and 5,509 postgraduates. The university offers about 190 undergraduate majors and 130 minor areas of study and more than 140 master's, doctoral, certificate, and specialist degrees. There are more than 400 student organizations and clubs on campus, including 34 fraternities and sororities. Ball State athletic teams compete in Division I of the NCAA and are known as the Ball State Cardinals. The university is a\\\"\", \"score\": 27.640625}, {\"long_text\": \"\\\"Ball State University\\\" | \\\"United States, and around the world. Out-of-state students make up about 20 percent of enrollment, and ethnic minorities comprise about 16 percent. The university enrolls more than 500 international students. As of the 2016\u20132017 school year, Ball State University's student population primarily consisted of Indiana residents (79.8 percent) with 20.2 percent being nonresidents. 59.5 percent of the student body is female. The university is selective, admitting 60 percent of applicants. For the 2016\u20132017 academic year, annual undergraduate tuition is $7,698 for in-state students and $23,472 for out-of-state students. Including technology, recreation, Health Center, and room and board fees, annual undergraduate\\\"\", \"score\": 26.890625}, {\"long_text\": \"\\\"History of Ball State University\\\" | \\\"of the state teachers college system, but left the governance of the Ball State campus under the Indiana State Teachers College Board of Trustees, based in Terre Haute, Indiana. During this action, the school was renamed Ball State Teachers College. The following year enrollment increased to 1,118 with 747 female and 371 male students. In 1935, the school added the Arts Building for art, music and dance instruction (Which now houses Ball State Art Museum, The Department Of Geology and classes in many other disciplines). Enrollment that year reached 1,151 with 723 women and 428 men. As an expression of\\\"\", \"score\": 26.6875}, {\"long_text\": \"\\\"History of Ball State University\\\" | \\\"1950, the school's enrollment was 3,144 with 1,507 women and 1,637 men. That same year, radio station WBST-FM started broadcasting from the basement of the Administration Building. In 1961, Ball State became independent of Indiana State via the creation of the Ball State College Board of Trustees, so that Ball State was no longer governed remotely by the Indiana State College Board of Trustees. Also in 1961, the name of Ball State was changed to Ball State College. In 1965, in recognition of the school growth beyond merely being a school to educate public school teachers, the Indiana General Assembly\\\"\", \"score\": 26.53125}, {\"long_text\": \"\\\"Ball State University\\\" | \\\"State's campus during World War II. In 1939 Ball State began its Civilian Pilot Training program which had popular enrollment. This program allowed students and local resident to learn to fly, instructed by the Muncie Aviation Company. By the fall of 1941 Ball State reached its peek enrollment to this point of 1,588 students. When the United States ended the war, Ball State like many other college campuses, saw a decline in male enrollment. At this time Ball State partnered with the United States Military and established two training programs on campus, the Army Specialized Training Program and Navy V-1\\\"\", \"score\": 26.484375}]}\n\n[[ ## thought_1 ## ]]\nThe search results provide information about the current enrollment at Ball State University, which is 22,513 students in total.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "I found that Beneficence is located at Ball State University in Muncie, Indiana. From the advanced search results, I determined that the current enrollment at Ball State University is 22,513 students in total.",
+        "answer": "22,513 students"
+      },
+      {
+        "question": "Who was the founder of Titus Lucretius Tricipitinus' country of citizenship?",
+        "answer": "L. Junius Brutus"
+      },
+      {
+        "question": "In what year did the South Korean car manufacturer that purchased the factor in 1995 dissolve?",
+        "answer": "1999"
+      },
+      {
+        "question": "In what era did The Presbyterian Church in the country whose government disagreed on the language used to describe the torch route experience a large growth in members?",
+        "answer": "era of Guomindang"
+      },
+      {
+        "question": "In which year did the manufacturer of the Nord 1500 Griffon end?",
+        "answer": "1970"
+      },
+      {
+        "question": "When did the distributer of Poptropica start?",
+        "answer": "1998"
+      },
+      {
+        "question": "When did the army that introduced tanks to battlefields in WWI start wearing khaki?",
+        "answer": "early 1900s"
+      },
+      {
+        "question": "What year did the council which was seated in 1949 adopt the convention of cybercrime in?",
+        "answer": "2001"
+      },
+      {
+        "question": "How did the Japanese beat the country whose government disagreed on the language used to describe the torch route?",
+        "answer": "First Sino-Japanese"
+      },
+      {
+        "question": "Who did the members of Kassetten's performers collaborate with?",
+        "answer": "the Birthday Party"
+      },
+      {
+        "question": "Where was the person who wrote the song my kinda party by Jason Aldean born?",
+        "answer": "Jefferson"
+      },
+      {
+        "question": "Which family is the mother of Anne, Princess Royal and Princess of Orange's a member of?",
+        "answer": "House of Hohenzollern"
+      },
+      {
+        "question": "When did the institution that awards the John Price Wetherill Medal open?",
+        "answer": "1824"
+      },
+      {
+        "question": "Where did the team that won the MLB World Series in 2007 get Brandon Phillips from?",
+        "answer": "Los Angeles Angels"
+      },
+      {
+        "question": "What year did the company Novair International Airways is part of dissolve?",
+        "answer": "1995"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

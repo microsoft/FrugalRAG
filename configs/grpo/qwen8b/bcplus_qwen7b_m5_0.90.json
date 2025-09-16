@@ -1,0 +1,30 @@
+{
+    "model": {
+        "model_name_or_path": "../data/frugalrag/sft/qwen8b/bcplus/qwen7b/m10_0.90/Qwen_Qwen2.5-7B-Instruct",
+        "no_finish": false,
+        "max_iters": 5,
+        "max_tokens": 512,
+        "max_retries": 4
+    },
+    "data": {
+        "dataset_name": "bcplus",
+        "input_file": "/mnt/ddn/alta01/t-abjava/BrowseComp-Plus/data/train.jsonl",
+        "num_examples": 1000
+    },
+    "paths": {
+        "output_path": "../data/frugalrag/grpo/qwen8b/bcplus/qwen7b/m10_0.90/",
+        "prompt_path": "src/prompts/qwen8b/bcplus/qwen7b/m5_nofinish/ans/bootstrapped_1.json",
+        "mb_logs": "../data/frugalrag/eval/sft/qwen8b/bcplus/qwen7b/train1000_m5_0.90/logs.json"
+    },
+    "search": {
+        "search_port": 8001,
+        "rm": "qwen8b",
+        "ndocs": 5
+    },
+    "grpo": {
+        "run_name": "qwen8b/bcplus/qwen7b/m10_0.90",
+        "max_steps": 400,
+        "dynamic_threshold": true,
+        "vllm_port": 8000
+    }
+}

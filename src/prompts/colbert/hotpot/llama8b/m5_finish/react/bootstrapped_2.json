@@ -1,0 +1,297 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?\", \"passages_this_hop\": [{\"long_text\": \"So Long, Scarecrow | So Long, Scarecrow is the second album by the rock band Scarling. Written and recorded in early 2005, and released on October 25, 2005, it is the first Scarling. album to feature drummer Beth Gordon. Its title is a reference to \\\"The Wizard of Oz\\\": in lead vocalist Jessicka's view, the film's Scarecrow is a metaphor for the band itself; the character's initial lack of and search for a brain, she explains, parallels Scarling. 's search for new territory in a predictable and monotonous musical environment.\", \"score\": 21.21875}, {\"long_text\": \"The Scarecrow (2000 film) | The Scarecrow is a 2000 animated musical fantasy film, written and directed by Brian Nissen and Richard Rich, and based on the Nathaniel Hawthorne short story \\\"Feathertop\\\" and the Percy MacKaye play \\\"The Scarecrow\\\". It features the voices of Corey Feldman and Belinda Montgomery.\", \"score\": 20.875}, {\"long_text\": \"The Merry Old Land of Oz | \\\"The Merry Old Land of Oz\\\" is a song from the 1939 film \\\"The Wizard of Oz\\\" and the musical. It is sung by the townspeople of the Emerald City, who are joined at appropriate times by the group of four travelers: Dorothy (with Toto), Scarecrow, Tin Man and Cowardly Lion. It was written by lyricist E.Y. Harburg and composer Harold Arlen. The verse of the song suggests that the people of the city do no actual work, since they \\\"get up at twelve, and start to work at one, take an hour for lunch, and then at two they're done\\\". Their actions contradict that funny sentiment, however, as they are clearly doing plenty of work to \\\"freshen up\\\" the group of four to go see their desired person of the hour. The revelers' laughter is interrupted by the Wicked Witch of the West, who is circling over the city, skywriting with her broom, ordering the citizens to \\\"SURRENDER DOROTHY OR DIE\\\". In the final cut of the film, the words \\\"OR DIE\\\" were dropped from the film as being too strong for the presumably young audience of the time.\", \"score\": 19.859375}]}",
+        "next_thought": "The search results include multiple mentions of the Scarecrow from The Wizard of Oz, which seems relevant to the question. I will now try to find a connection between the Scarecrow and a 1939 musical fantasy film.",
+        "next_tool_name": "AdvancedSearch",
+        "next_tool_args": {
+          "search_query": "The Scarecrow is featured in which 1939 musical fantasy film?",
+          "trajectory_id": "So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?"
+        }
+      },
+      {
+        "augmented": true,
+        "question": "Which artist started recording\/performing earlier David Donato or Moya Brennan?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Which artist started recording\/performing earlier David Donato or Moya Brennan?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Which artist started recording\/performing earlier David Donato or Moya Brennan?\", \"passages_this_hop\": [{\"long_text\": \"Moya Brennan | Moya Brennan, born M\u00e1ire N\u00ed Bhraon\u00e1in (] ), also known as M\u00e1ire Brennan (born 4 August 1952), is an Irish folk singer, songwriter, harpist, and philanthropist. She is the older sister of Enya and Br\u00edd\u00edn Brennan. She began performing professionally in 1970 when her family formed the band Clannad, and is considered as the \\\"First Lady of Celtic Music\\\". Moya released her first solo album in 1992 called \\\"M\u00e1ire\\\", a successful venture. She has been nominated for two Grammys and has won an Emmy Award. She has recorded music for several soundtracks, including \\\"Titanic\\\", \\\"To End All Wars\\\" and \\\"King Arthur\\\".\", \"score\": 18.640625}, {\"long_text\": \"David Donato | David Tom Donato is an American singer known for his involvement in Black Sabbath. He recorded several demos with the band and rehearsed throughout 1984 and 1985. Contrary to reports, Donato was not fired after an interview with \\\"Kerrang! \\\" magazine as many have falsely reported. The band fell apart soon thereafter, with Tony Iommi forming an entirely new Black Sabbath the following year.\", \"score\": 18.59375}, {\"long_text\": \"\u00d3r\u00f3 \u2013 A Live Session | \u00d3r\u00f3 \u2013 A Live Session is a music album by Irish musician M\u00e1ire Brennan, now known as \\\"Moya Brennan\\\". Just before the start of the German tour, Moya and her band recorded a \\\"live session\\\" album to have available for fans on the tour. She's tried to recreate some of the live feel with the band in the studio covering many of the songs she plays (and was about to play) in concert. The album will become more widely available subsequently, but originally was released in 2005.\", \"score\": 18.578125}]}\n\n[[ ## thought_0 ## ]]\nNext, I will analyze the passages to find the correct answer to the question.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What is the birthdate of Moya Brennan and David Donato?\", \"trajectory_id\": \"Moya Brennan and David Donato\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What is the birthdate of Moya Brennan and David Donato?\", \"passages_this_hop\": [{\"long_text\": \"David Donato (footballer) | David Donato (born 7 September 1970) is a former Australian rules footballer who played with Fitzroy in the Australian Football League (AFL).\", \"score\": 19.46875}, {\"long_text\": \"Donatas Motiej\u016bnas | Donatas Motiej\u016bnas (] ; born September 20, 1990) is a Lithuanian professional basketball player for the Shandong Golden Stars of the Chinese Basketball Association (CBA). He was drafted 20th overall in the 2011 NBA draft by the Minnesota Timberwolves before going on to win the 2012 Polish Basketball League championship with Asseco Prokom Gdynia. After spending four seasons with the Houston Rockets from 2012 to 2016, Motiej\u016bnas joined the Pelicans in January 2017.\", \"score\": 18.546875}, {\"long_text\": \"Davide Donati | Davide Donati (born 25 April, 1994) is an Italian aerobic gymnast. Along with his partner Michela Castoldi, Donati is the 2016 Aerobic Gymnastics World Champion and the silver European Games silver medalist in the Mixed Pairs category. He was also a member of the silver medalist Italian group at the 2016 World Championships.\", \"score\": 18.171875}]}\n\n[[ ## thought_1 ## ]]\nNext, I will compare the birthdates of Moya Brennan and David Donato to determine who started recording\/performing earlier.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Who has the earlier birthdate, Moya Brennan or David Donato?\", \"trajectory_id\": \"Moya Brennan and David Donato\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Who has the earlier birthdate, Moya Brennan or David Donato?\", \"passages_this_hop\": [{\"long_text\": \"Donal Moynihan | Donal Moynihan (born 2 October 1941) is a former Irish Fianna F\u00e1il politician who was a Teachta D\u00e1la (TD) for the Cork North\u2013West constituency from 1982 to 1989 and from 1992 to 2007.\", \"score\": 16.515625}, {\"long_text\": \"Daniele Donato | Daniele Donato-Briones (n\u00e9e Donato; born August 20, 1986) is an American television personality. She was a contestant on \\\"Big Brother 8\\\", and \\\"Big Brother 13\\\" along with her father Dick Donato, placing second and eighth, respectively. Donato is now married to Big Brother 13 cast member Dominic Briones, whom she began a relationship with shortly after the 13th season ended.\", \"score\": 16.453125}, {\"long_text\": \"Donal Brennan | Donal Brennan (born 1986) is a Gaelic footballer from County Laois.\", \"score\": 16.28125}]}",
+        "next_thought": "I have determined that Moya Brennan started recording\/performing earlier than David Donato.",
+        "next_tool_name": "finish",
+        "next_tool_args": {}
+      },
+      {
+        "augmented": true,
+        "question": "What is the name of the TV station in Hudson County, New Jersey, where Van Hackett worked?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What is the name of the TV station in Hudson County, New Jersey, where Van Hackett worked?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What is the name of the TV station in Hudson County, New Jersey, where Van Hackett worked?\", \"passages_this_hop\": [{\"long_text\": \"Van Hackett | Van Hackett was a weekend news anchor for KTRK-TV in Houston, Texas from 1980 to 1987. He also co-anchored the station's \\\"Live at Five\\\" newscast for a few years before being moved to the weekends. Prior to joining KTRK-TV, Hackett was the assistant news director for WPTV-TV in West Palm Beach, Florida from 1973 until 1976. He later left KTRK-TV during the summer of 1987 and joined 1010 WINS Radio in New York City, New York for a few years before joining WWOR-TV in Secaucus, New Jersey as well as anchoring at WVIT-TV in New Britain, Connecticut until his resignation in 1993.\", \"score\": 21.6875}, {\"long_text\": \"Hackettstown station | Hackettstown is a New Jersey Transit station in Hackettstown, New Jersey. The station is located at the intersection of Valentine Street and Beatty Street and is the western terminus of the Morristown Line and the Montclair-Boonton Line, which both provide service to Hoboken Terminal or to Pennsylvania Station in Midtown Manhattan via Midtown Direct. Hackettstown Station is the only active New Jersey Transit station in Warren County. The line from Hackettstown \u2013 Dover is diesel powered, requiring a transfer at Dover, Montclair State University or Newark Broad Street to an electrified train to New York Penn Station. Proposals exist of an extension of the Montclair-Boonton Line, including an extension to Washington and possibly Phillipsburg further along the Washington Secondary.\", \"score\": 19.234375}, {\"long_text\": \"WRNJ | WRNJ Radio (1510 AM) is a radio station in Hackettstown, New Jersey broadcasting an Adult Contemporary format. The station is currently owned locally by WRNJ Radio, Inc. and features programing from ABC Radio.\", \"score\": 18.34375}]}\n\n[[ ## thought_0 ## ]]\nThe search query found some relevant documents, but none of them mention Van Hackett working at a TV station in Hudson County, New Jersey. I will try to extract the name of the TV station from the passages.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What TV station did Van Hackett work at in Hudson County, New Jersey?\", \"trajectory_id\": \"1\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What TV station did Van Hackett work at in Hudson County, New Jersey?\", \"passages_this_hop\": [{\"long_text\": \"Chris Hackett (artist) | Chris Hackett, born April 15, 1972 in New York City, is an artist, television presenter, writer, fabricator, alternative engineer, and instructor. He is a co-founder of the Madagascar Institute, an art combine located in Brooklyn, NY, contributing editor for Popular Science Magazine, and was the host of the Science Channel's television show \\\"Stuck with Hackett\\\". A 2012 New York Times article entitled \\\"\\\"Building a better apocalypse\\\"\\\" described him as \\\"something like a fabricator in chief for the Kings County D.I.Y. art set.\\\"\", \"score\": 17.109375}, {\"long_text\": \"Mims Hackett | Mims Hackett (born September 28, 1941) is an American Democratic Party politician, who served in the New Jersey General Assembly from 2002\u20132007, where he represented 27th Legislative District, which covers the western portion of Essex County.\", \"score\": 17.046875}, {\"long_text\": \"New Jersey Network | The New Jersey Network (NJN) was a network of public television and radio stations serving the U.S. state of New Jersey. NJN was a member of the Public Broadcasting Service (PBS) for television and the National Public Radio (NPR) for radio, broadcasting their programming as well as producing and broadcasting their own programming, mostly relating to issues in New Jersey. With studios in both Trenton and Newark, NJN's television network covered all of New Jersey, plus parts of Pennsylvania, New York, Connecticut and Delaware; the radio network primarily served several areas of New Jersey that were not covered by Philadelphia and New York City public radio stations.\", \"score\": 16.984375}]}\n\n[[ ## thought_1 ## ]]\nThe search query still did not find any relevant documents. I will try to refine the search query to get more accurate results.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"TV stations in Hudson County, New Jersey\", \"trajectory_id\": \"2\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"TV stations in Hudson County, New Jersey\", \"passages_this_hop\": [{\"long_text\": \"Hudson Generating Station | Hudson Generating Station is a power plant operated by PSEG Fossil LLC, a subsidiary of Public Service Enterprise Group (PSEG). It is located in Jersey City in Hudson County, New Jersey, United States. The site has been in operation since 1906, but as of 2011 only one unit is currently in operation at the facility - Unit 2, which runs primarily on coal to generate electricity and is also capable of burning natural gas as a secondary fuel. Unit 2 is also equipped with several back-end technology emission controls. The generating station will be retired on June 1, 2017.\", \"score\": 22.609375}, {\"long_text\": \"Transfer Station (Hudson County) | Transfer Station is the name of a section of Hudson County, New Jersey, which radiates from the intersection where Paterson Plank Road crosses Summit Avenue at 7th Street, and where the borders of Jersey City Heights, North Bergen, and Union City meet at one point, which is a few blocks to the southwest of the station, at the intersection of Secaucus Road and Kennedy Boulevard.\", \"score\": 21.8125}, {\"long_text\": \"WZCR | WZCR (93.5 FM, \\\"Oldies 93.5\\\") is an oldies radio station licensed to Hudson, New York, and serving Columbia and Greene counties as well as the upper Hudson Valley, the southern Capital District, and Berkshire County, Massachusetts. The station is owned by iHeartMedia and broadcasts from a tower located near the Hudson River in Hudson.\", \"score\": 21.796875}]}\n\n[[ ## thought_2 ## ]]\nThe search query still did not find any relevant documents. I will try to find TV stations in Hudson County, New Jersey and then try to find if Van Hackett worked at any of them.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"TV stations in Hudson County, New Jersey where Van Hackett worked\", \"trajectory_id\": \"3\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"TV stations in Hudson County, New Jersey where Van Hackett worked\", \"passages_this_hop\": [{\"long_text\": \"Van Wagenen House | The Van Wagenen House, also known as \\\"Apple Tree House\\\" is located near Bergen Square in Jersey City, Hudson County, New Jersey, United States. The house was added to the National Register of Historic Places on August 16, 2006.\", \"score\": 17.4375}, {\"long_text\": \"Brick Church station | Brick Church is a New Jersey Transit station in East Orange, Essex County, New Jersey, United States, along the Morris and Essex Line. Service is available from this station east to Hoboken Terminal, New York Penn Station and west to Dover and Hackettstown.\", \"score\": 17.046875}, {\"long_text\": \"MCTV 26 | Mercer County Television (MCTV) channel 26 is an Educational-access television station in West Windsor, New Jersey, United States, owned and operated by Mercer County Community College (MCCC). The Student television station is transmitted to all of Mercer County, New Jersey, via cable TV channel 26 on the Comcast, Cablevision, reaching an excess of 90,000 households. In January 2009, MCTV became available on Verizon FiOS channel 20 in Mercer County. Tony Bruzaitis is the station's director of operations, while Professor Steve Voorhees is the director of student programming. David Valentino is the station's chief engineer.\", \"score\": 16.953125}]}",
+        "next_thought": "The search query still did not find any relevant documents. I will try to find TV stations in Hudson County, New Jersey and then try to find if Van Hackett worked at any of them.",
+        "next_tool_name": "AdvancedSearch",
+        "next_tool_args": {
+          "search_query": "TV stations in Hudson County, New Jersey where Van Hackett worked",
+          "trajectory_id": "4"
+        }
+      },
+      {
+        "question": "Who directed the 1987 romantic drama dance film that is directly parodied by the television film \"Totally Awesome\"?",
+        "answer": "Emile Ardolino",
+        "dspy_uuid": "4f57161f-0b34-4c76-a77f-93e723d4ab0b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which dog originated in the Mountains of Romania, the Ariege Pointer or the Carpathian Shepherd Dog?",
+        "answer": "Carpathian Mountains of Romania.",
+        "dspy_uuid": "91c46a04-7f0e-41a1-a7d0-47ac96a37815",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are Truckin' Magazine and Girlfriends both publications that offer relationship advice?",
+        "answer": "no",
+        "dspy_uuid": "a5487599-ac3f-4880-a3cd-ab9ee4f4ec53",
+        "dspy_split": "train"
+      },
+      {
+        "question": "How many copies were sold of the last UK number-one single that was written by Noddy Holder and Jim Lea?",
+        "answer": "in excess of one million copies",
+        "dspy_uuid": "2ceeb60f-ad1c-4e1b-9ff5-700a6ea1495a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was the role played in \"Sweet Charity\" by the star of Dear Diary?",
+        "answer": "Nickie",
+        "dspy_uuid": "82765131-e72f-473f-b1e2-9188286c8c33",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which of these Asian directors was behind the science fiction adventure film \"Snowpiercer\", Bong Joon-ho or Vincent Kok?",
+        "answer": "Bong",
+        "dspy_uuid": "f6b4ad66-e379-4f73-9b46-305bd5536e34",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are the bands Flow and Against the Current from the same country?",
+        "answer": "no",
+        "dspy_uuid": "b8fb3930-c33f-4118-a292-b707fb49b02c",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What main thoroughfare in Warsaw's borough of Ursyn\u00f3w connects to a 6,500 km international road which coincides with the Trans-Siberian Highway?",
+        "answer": "Jana Roso\u0142a street",
+        "dspy_uuid": "14656835-9f51-49b6-8716-0c4ec705ecf2",
+        "dspy_split": "train"
+      },
+      {
+        "question": "When considering the two peaks known as Noijin Kangsang and Masherbrum, which of them has the greatest height related to their respected ranges?",
+        "answer": "Noijin Kangsang",
+        "dspy_uuid": "abcb949d-1bad-49ed-a6c7-5838d861b931",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Kyle Moran was born in the town on what river?",
+        "answer": "Castletown",
+        "dspy_uuid": "72d3c895-2e2f-45bf-8cf9-d014b7bc2a31",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Juan Carlos Moreno Rojo plays for a team that plays in which league ?",
+        "answer": "Segunda Divisi\u00f3n B \u2013 Group 1",
+        "dspy_uuid": "ef163392-a7e2-4b42-b202-38fadfe71db1",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Singwango Secondary School had a sister school in a census-designated place in the town of North Hempstead in what county of New York?",
+        "answer": "Nassau County",
+        "dspy_uuid": "3681d720-d7de-479b-9413-195d8781dc18",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which genre of Italian film was the first to use CGI?",
+        "answer": "horror movies",
+        "dspy_uuid": "f6be303e-4982-441a-ae5a-424bae35ffbd",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!<\/desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.<\/desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?\", \"passages_this_hop\": [{\"long_text\": \"So Long, Scarecrow | So Long, Scarecrow is the second album by the rock band Scarling. Written and recorded in early 2005, and released on October 25, 2005, it is the first Scarling. album to feature drummer Beth Gordon. Its title is a reference to \\\"The Wizard of Oz\\\": in lead vocalist Jessicka's view, the film's Scarecrow is a metaphor for the band itself; the character's initial lack of and search for a brain, she explains, parallels Scarling. 's search for new territory in a predictable and monotonous musical environment.\", \"score\": 21.21875}, {\"long_text\": \"The Scarecrow (2000 film) | The Scarecrow is a 2000 animated musical fantasy film, written and directed by Brian Nissen and Richard Rich, and based on the Nathaniel Hawthorne short story \\\"Feathertop\\\" and the Percy MacKaye play \\\"The Scarecrow\\\". It features the voices of Corey Feldman and Belinda Montgomery.\", \"score\": 20.875}, {\"long_text\": \"The Merry Old Land of Oz | \\\"The Merry Old Land of Oz\\\" is a song from the 1939 film \\\"The Wizard of Oz\\\" and the musical. It is sung by the townspeople of the Emerald City, who are joined at appropriate times by the group of four travelers: Dorothy (with Toto), Scarecrow, Tin Man and Cowardly Lion. It was written by lyricist E.Y. Harburg and composer Harold Arlen. The verse of the song suggests that the people of the city do no actual work, since they \\\"get up at twelve, and start to work at one, take an hour for lunch, and then at two they're done\\\". Their actions contradict that funny sentiment, however, as they are clearly doing plenty of work to \\\"freshen up\\\" the group of four to go see their desired person of the hour. The revelers' laughter is interrupted by the Wicked Witch of the West, who is circling over the city, skywriting with her broom, ordering the citizens to \\\"SURRENDER DOROTHY OR DIE\\\". In the final cut of the film, the words \\\"OR DIE\\\" were dropped from the film as being too strong for the presumably young audience of the time.\", \"score\": 19.859375}]}\n\n[[ ## thought_0 ## ]]\nThe search results include multiple mentions of the Scarecrow from The Wizard of Oz, which seems relevant to the question. I will now try to find a connection between the Scarecrow and a 1939 musical fantasy film.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"The Scarecrow is featured in which 1939 musical fantasy film?\", \"trajectory_id\": \"So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"The Scarecrow is featured in which 1939 musical fantasy film?\", \"passages_this_hop\": [{\"long_text\": \"The Wizard of Oz in Concert: Dreams Come True | The Wizard of Oz in Concert: Dreams Come True was a 1995 television musical performance based on the 1939 film \\\"The Wizard of Oz\\\" (starring Judy Garland). The book and score of the film were performed on stage at Lincoln Center to benefit the Children's Defense Fund. The concert featured guest performers including Jackson Browne as the Scarecrow, Roger Daltrey as the Tin Man, Natalie Cole as Glinda, Joel Grey as the Wizard (a role he reprised in \\\"Wicked\\\"), Jewel as Dorothy, Nathan Lane as the Cowardly Lion, Debra Winger as the Wicked Witch, and Lucie Arnaz as Aunt Em. The Boys Choir of Harlem appeared as the Munchkins, and Ry Cooder and David Sanborn performed as musicians.\", \"score\": 22.484375}, {\"long_text\": \"His Majesty, the Scarecrow of Oz | His Majesty, the Scarecrow of Oz is a 1914 American silent fantasy adventure film directed by J. Farrell MacDonald and written and produced by L. Frank Baum. It stars Violet MacMillan, Frank Moore, Vivian Reed, Todd Wright, Pierre Couderc, and Fred Woodward.\", \"score\": 22.453125}, {\"long_text\": \"The Scarecrow (2013 film) | The Scarecrow is a 2013 animated short film and advertisement by the American restaurant chain Chipotle Mexican Grill. The film features Fiona Apple singing a cover version of \\\"Pure Imagination\\\", originally performed by Gene Wilder as Willy Wonka in the 1971 film \\\"Willy Wonka & the Chocolate Factory\\\".\", \"score\": 21.84375}]}\n\n[[ ## thought_1 ## ]]\nThe search results indicate that the Scarecrow is featured in The Wizard of Oz, a 1939 musical fantasy film. I will now try to confirm this connection.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Is the Scarecrow featured in The Wizard of Oz?\", \"trajectory_id\": \"So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Is the Scarecrow featured in The Wizard of Oz?\", \"passages_this_hop\": [{\"long_text\": \"Scarecrow (Oz) | The Scarecrow is a character in the fictional Land of Oz created by American author L. Frank Baum and illustrator W.W. Denslow. In his first appearance, the Scarecrow reveals that he lacks a brain and desires above all else to have one. In reality, he is only two days old and merely ignorant. Throughout the course of the novel, he demonstrates that he already has the brains he seeks and is later recognized as \\\"the wisest man in all of Oz,\\\" although he continues to credit the Wizard for them. He is, however, wise enough to know his own limitations and all too happy to hand the rulership of Oz, passed to him by the Wizard, to Princess Ozma, to become one of her trusted advisors, though he typically spends more time playing games than advising.\", \"score\": 25.96875}, {\"long_text\": \"The Wizard of Oz (1925 film) | The Wizard of Oz is a 1925 American silent film directed by Larry Semon, who also appears in a lead role\u2014that of a farmhand disguised as a Scarecrow. The only completed 1920s adaptation of L. Frank Baum's novel \\\"The Wonderful Wizard of Oz\\\", this film features Oliver Hardy as the Tin Woodman. Dorothy is portrayed by Dorothy Dwan.\", \"score\": 25.21875}, {\"long_text\": \"The Scarecrow of Oz | The Scarecrow of Oz is the ninth book set in the Land of Oz written by L. Frank Baum. Published on July 16, 1915, it was Baum's personal favorite of the Oz books and tells of Cap'n Bill and Trot journeying to Oz and, with the help of the Scarecrow, overthrowing the cruel King Krewl of Jinxland. Cap'n Bill and Trot (Mayre Griffiths) had previously appeared in two other novels by Baum, \\\"The Sea Fairies\\\" and \\\"Sky Island\\\".\", \"score\": 24.140625}]}\n\n[[ ## thought_2 ## ]]\nThe connection between the Scarecrow and The Wizard of Oz seems confirmed. I will now try to answer the original question.\n\n[[ ## tool_name_2 ## ]]\nfinish\n\n[[ ## tool_args_2 ## ]]\n{}\n\n[[ ## observation_2 ## ]]\nCompleted.",
+        "reasoning": "The question asks about a 1939 musical fantasy film, and the search results indicate that the Scarecrow is featured in The Wizard of Oz, which is a 1939 musical fantasy film. This suggests that the film is the one being referred to in the title \"So Long, Scarecrow\".",
+        "answer": "The Wizard of Oz"
+      },
+      {
+        "augmented": true,
+        "question": "Which artist started recording\/performing earlier David Donato or Moya Brennan?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Which artist started recording\/performing earlier David Donato or Moya Brennan?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Which artist started recording\/performing earlier David Donato or Moya Brennan?\", \"passages_this_hop\": [{\"long_text\": \"Moya Brennan | Moya Brennan, born M\u00e1ire N\u00ed Bhraon\u00e1in (] ), also known as M\u00e1ire Brennan (born 4 August 1952), is an Irish folk singer, songwriter, harpist, and philanthropist. She is the older sister of Enya and Br\u00edd\u00edn Brennan. She began performing professionally in 1970 when her family formed the band Clannad, and is considered as the \\\"First Lady of Celtic Music\\\". Moya released her first solo album in 1992 called \\\"M\u00e1ire\\\", a successful venture. She has been nominated for two Grammys and has won an Emmy Award. She has recorded music for several soundtracks, including \\\"Titanic\\\", \\\"To End All Wars\\\" and \\\"King Arthur\\\".\", \"score\": 18.640625}, {\"long_text\": \"David Donato | David Tom Donato is an American singer known for his involvement in Black Sabbath. He recorded several demos with the band and rehearsed throughout 1984 and 1985. Contrary to reports, Donato was not fired after an interview with \\\"Kerrang! \\\" magazine as many have falsely reported. The band fell apart soon thereafter, with Tony Iommi forming an entirely new Black Sabbath the following year.\", \"score\": 18.59375}, {\"long_text\": \"\u00d3r\u00f3 \u2013 A Live Session | \u00d3r\u00f3 \u2013 A Live Session is a music album by Irish musician M\u00e1ire Brennan, now known as \\\"Moya Brennan\\\". Just before the start of the German tour, Moya and her band recorded a \\\"live session\\\" album to have available for fans on the tour. She's tried to recreate some of the live feel with the band in the studio covering many of the songs she plays (and was about to play) in concert. The album will become more widely available subsequently, but originally was released in 2005.\", \"score\": 18.578125}]}\n\n[[ ## thought_0 ## ]]\nNext, I will analyze the passages to find the correct answer to the question.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What is the birthdate of Moya Brennan and David Donato?\", \"trajectory_id\": \"Moya Brennan and David Donato\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What is the birthdate of Moya Brennan and David Donato?\", \"passages_this_hop\": [{\"long_text\": \"David Donato (footballer) | David Donato (born 7 September 1970) is a former Australian rules footballer who played with Fitzroy in the Australian Football League (AFL).\", \"score\": 19.46875}, {\"long_text\": \"Donatas Motiej\u016bnas | Donatas Motiej\u016bnas (] ; born September 20, 1990) is a Lithuanian professional basketball player for the Shandong Golden Stars of the Chinese Basketball Association (CBA). He was drafted 20th overall in the 2011 NBA draft by the Minnesota Timberwolves before going on to win the 2012 Polish Basketball League championship with Asseco Prokom Gdynia. After spending four seasons with the Houston Rockets from 2012 to 2016, Motiej\u016bnas joined the Pelicans in January 2017.\", \"score\": 18.546875}, {\"long_text\": \"Davide Donati | Davide Donati (born 25 April, 1994) is an Italian aerobic gymnast. Along with his partner Michela Castoldi, Donati is the 2016 Aerobic Gymnastics World Champion and the silver European Games silver medalist in the Mixed Pairs category. He was also a member of the silver medalist Italian group at the 2016 World Championships.\", \"score\": 18.171875}]}\n\n[[ ## thought_1 ## ]]\nNext, I will compare the birthdates of Moya Brennan and David Donato to determine who started recording\/performing earlier.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Who has the earlier birthdate, Moya Brennan or David Donato?\", \"trajectory_id\": \"Moya Brennan and David Donato\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Who has the earlier birthdate, Moya Brennan or David Donato?\", \"passages_this_hop\": [{\"long_text\": \"Donal Moynihan | Donal Moynihan (born 2 October 1941) is a former Irish Fianna F\u00e1il politician who was a Teachta D\u00e1la (TD) for the Cork North\u2013West constituency from 1982 to 1989 and from 1992 to 2007.\", \"score\": 16.515625}, {\"long_text\": \"Daniele Donato | Daniele Donato-Briones (n\u00e9e Donato; born August 20, 1986) is an American television personality. She was a contestant on \\\"Big Brother 8\\\", and \\\"Big Brother 13\\\" along with her father Dick Donato, placing second and eighth, respectively. Donato is now married to Big Brother 13 cast member Dominic Briones, whom she began a relationship with shortly after the 13th season ended.\", \"score\": 16.453125}, {\"long_text\": \"Donal Brennan | Donal Brennan (born 1986) is a Gaelic footballer from County Laois.\", \"score\": 16.28125}]}\n\n[[ ## thought_2 ## ]]\nI have determined that Moya Brennan started recording\/performing earlier than David Donato.\n\n[[ ## tool_name_2 ## ]]\nfinish\n\n[[ ## tool_args_2 ## ]]\n{}\n\n[[ ## observation_2 ## ]]\nCompleted.",
+        "reasoning": "I used the AdvancedSearch tool to find relevant documents with the original question as the search query. I then analyzed the passages to find the correct answer to the question. Next, I compared the birthdates of Moya Brennan and David Donato to determine who started recording\/performing earlier.",
+        "answer": "Moya Brennan"
+      },
+      {
+        "augmented": true,
+        "question": "What is the name of the TV station in Hudson County, New Jersey, where Van Hackett worked?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What is the name of the TV station in Hudson County, New Jersey, where Van Hackett worked?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What is the name of the TV station in Hudson County, New Jersey, where Van Hackett worked?\", \"passages_this_hop\": [{\"long_text\": \"Van Hackett | Van Hackett was a weekend news anchor for KTRK-TV in Houston, Texas from 1980 to 1987. He also co-anchored the station's \\\"Live at Five\\\" newscast for a few years before being moved to the weekends. Prior to joining KTRK-TV, Hackett was the assistant news director for WPTV-TV in West Palm Beach, Florida from 1973 until 1976. He later left KTRK-TV during the summer of 1987 and joined 1010 WINS Radio in New York City, New York for a few years before joining WWOR-TV in Secaucus, New Jersey as well as anchoring at WVIT-TV in New Britain, Connecticut until his resignation in 1993.\", \"score\": 21.6875}, {\"long_text\": \"Hackettstown station | Hackettstown is a New Jersey Transit station in Hackettstown, New Jersey. The station is located at the intersection of Valentine Street and Beatty Street and is the western terminus of the Morristown Line and the Montclair-Boonton Line, which both provide service to Hoboken Terminal or to Pennsylvania Station in Midtown Manhattan via Midtown Direct. Hackettstown Station is the only active New Jersey Transit station in Warren County. The line from Hackettstown \u2013 Dover is diesel powered, requiring a transfer at Dover, Montclair State University or Newark Broad Street to an electrified train to New York Penn Station. Proposals exist of an extension of the Montclair-Boonton Line, including an extension to Washington and possibly Phillipsburg further along the Washington Secondary.\", \"score\": 19.234375}, {\"long_text\": \"WRNJ | WRNJ Radio (1510 AM) is a radio station in Hackettstown, New Jersey broadcasting an Adult Contemporary format. The station is currently owned locally by WRNJ Radio, Inc. and features programing from ABC Radio.\", \"score\": 18.34375}]}\n\n[[ ## thought_0 ## ]]\nThe search query found some relevant documents, but none of them mention Van Hackett working at a TV station in Hudson County, New Jersey. I will try to extract the name of the TV station from the passages.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What TV station did Van Hackett work at in Hudson County, New Jersey?\", \"trajectory_id\": \"1\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What TV station did Van Hackett work at in Hudson County, New Jersey?\", \"passages_this_hop\": [{\"long_text\": \"Chris Hackett (artist) | Chris Hackett, born April 15, 1972 in New York City, is an artist, television presenter, writer, fabricator, alternative engineer, and instructor. He is a co-founder of the Madagascar Institute, an art combine located in Brooklyn, NY, contributing editor for Popular Science Magazine, and was the host of the Science Channel's television show \\\"Stuck with Hackett\\\". A 2012 New York Times article entitled \\\"\\\"Building a better apocalypse\\\"\\\" described him as \\\"something like a fabricator in chief for the Kings County D.I.Y. art set.\\\"\", \"score\": 17.109375}, {\"long_text\": \"Mims Hackett | Mims Hackett (born September 28, 1941) is an American Democratic Party politician, who served in the New Jersey General Assembly from 2002\u20132007, where he represented 27th Legislative District, which covers the western portion of Essex County.\", \"score\": 17.046875}, {\"long_text\": \"New Jersey Network | The New Jersey Network (NJN) was a network of public television and radio stations serving the U.S. state of New Jersey. NJN was a member of the Public Broadcasting Service (PBS) for television and the National Public Radio (NPR) for radio, broadcasting their programming as well as producing and broadcasting their own programming, mostly relating to issues in New Jersey. With studios in both Trenton and Newark, NJN's television network covered all of New Jersey, plus parts of Pennsylvania, New York, Connecticut and Delaware; the radio network primarily served several areas of New Jersey that were not covered by Philadelphia and New York City public radio stations.\", \"score\": 16.984375}]}\n\n[[ ## thought_1 ## ]]\nThe search query still did not find any relevant documents. I will try to refine the search query to get more accurate results.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"TV stations in Hudson County, New Jersey\", \"trajectory_id\": \"2\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"TV stations in Hudson County, New Jersey\", \"passages_this_hop\": [{\"long_text\": \"Hudson Generating Station | Hudson Generating Station is a power plant operated by PSEG Fossil LLC, a subsidiary of Public Service Enterprise Group (PSEG). It is located in Jersey City in Hudson County, New Jersey, United States. The site has been in operation since 1906, but as of 2011 only one unit is currently in operation at the facility - Unit 2, which runs primarily on coal to generate electricity and is also capable of burning natural gas as a secondary fuel. Unit 2 is also equipped with several back-end technology emission controls. The generating station will be retired on June 1, 2017.\", \"score\": 22.609375}, {\"long_text\": \"Transfer Station (Hudson County) | Transfer Station is the name of a section of Hudson County, New Jersey, which radiates from the intersection where Paterson Plank Road crosses Summit Avenue at 7th Street, and where the borders of Jersey City Heights, North Bergen, and Union City meet at one point, which is a few blocks to the southwest of the station, at the intersection of Secaucus Road and Kennedy Boulevard.\", \"score\": 21.8125}, {\"long_text\": \"WZCR | WZCR (93.5 FM, \\\"Oldies 93.5\\\") is an oldies radio station licensed to Hudson, New York, and serving Columbia and Greene counties as well as the upper Hudson Valley, the southern Capital District, and Berkshire County, Massachusetts. The station is owned by iHeartMedia and broadcasts from a tower located near the Hudson River in Hudson.\", \"score\": 21.796875}]}\n\n[[ ## thought_2 ## ]]\nThe search query still did not find any relevant documents. I will try to find TV stations in Hudson County, New Jersey and then try to find if Van Hackett worked at any of them.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"TV stations in Hudson County, New Jersey where Van Hackett worked\", \"trajectory_id\": \"3\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"TV stations in Hudson County, New Jersey where Van Hackett worked\", \"passages_this_hop\": [{\"long_text\": \"Van Wagenen House | The Van Wagenen House, also known as \\\"Apple Tree House\\\" is located near Bergen Square in Jersey City, Hudson County, New Jersey, United States. The house was added to the National Register of Historic Places on August 16, 2006.\", \"score\": 17.4375}, {\"long_text\": \"Brick Church station | Brick Church is a New Jersey Transit station in East Orange, Essex County, New Jersey, United States, along the Morris and Essex Line. Service is available from this station east to Hoboken Terminal, New York Penn Station and west to Dover and Hackettstown.\", \"score\": 17.046875}, {\"long_text\": \"MCTV 26 | Mercer County Television (MCTV) channel 26 is an Educational-access television station in West Windsor, New Jersey, United States, owned and operated by Mercer County Community College (MCCC). The Student television station is transmitted to all of Mercer County, New Jersey, via cable TV channel 26 on the Comcast, Cablevision, reaching an excess of 90,000 households. In January 2009, MCTV became available on Verizon FiOS channel 20 in Mercer County. Tony Bruzaitis is the station's director of operations, while Professor Steve Voorhees is the director of student programming. David Valentino is the station's chief engineer.\", \"score\": 16.953125}]}\n\n[[ ## thought_3 ## ]]\nThe search query still did not find any relevant documents. I will try to find TV stations in Hudson County, New Jersey and then try to find if Van Hackett worked at any of them.\n\n[[ ## tool_name_3 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_3 ## ]]\n{\"search_query\": \"TV stations in Hudson County, New Jersey where Van Hackett worked\", \"trajectory_id\": \"4\"}\n\n[[ ## observation_3 ## ]]\n{\"search_query\": \"TV stations in Hudson County, New Jersey where Van Hackett worked\", \"passages_this_hop\": [{\"long_text\": \"WWPS-LP | WWPS-LP was an affiliate of Cornerstone Television in Kinnelon, New Jersey. The station broadcast to Morris County, New Jersey on VHF channel 9.\", \"score\": 16.765625}, {\"long_text\": \"1710 AM | While 1710 kHz appears on many radios, it is unused even by TIS stations, exception being TIS (WQFG689) licensed with a waiver to the Hudson County, New Jersey. This is because aeronautical radio navigation may use 1708 kHz. It has also been a popular frequency with both Part 15 and North American MW pirate radio station operators especially in the Midwest and east coast of the United States.\", \"score\": 16.65625}, {\"long_text\": \"Hackettstown Airport | Hackettstown Airport (FAA LID: N05) is a public-use airport located in the Beattystown area of Mansfield Township, Warren County, New Jersey, United States, three nautical miles (5.56 km) southwest of the central business district of Hackettstown. The airport is privately owned. Although most U.S. airports use the same three-letter location identifier for the FAA and IATA, this airport is assigned N05 by the FAA but has no designation from the IATA\", \"score\": 16.53125}]}\n\n[[ ## thought_4 ## ]]\nI will try to find a TV station in Hudson County, New Jersey where Van Hackett worked, and then try to find information about that station.\n\n[[ ## tool_name_4 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_4 ## ]]\n{\"search_query\": \"TV stations in Hudson County, New Jersey where Van Hackett worked\", \"trajectory_id\": \"5\"}\n\n[[ ## observation_4 ## ]]\n{\"search_query\": \"TV stations in Hudson County, New Jersey where Van Hackett worked\", \"passages_this_hop\": [{\"long_text\": \"Van Houten-Hillman House | Van Houten-Hillman House, is located in Elmwood Park, Bergen County, New Jersey, United States. The house was added to the National Register of Historic Places on January 9, 1983.\", \"score\": 16.484375}, {\"long_text\": \"Grace Church Van Vorst | The Grace Church Van Vorst, is located in Jersey City, Hudson County, New Jersey, United States. The church was added to the National Register of Historic Places on August 1, 1979. The church was built in 1853 and was named after the former Van Vorst Township. The church is an English Gothic-style Episcopal church which was designed by Detlef Lienau. The building is constructed with brownstone and has a slate roof. The church was expanded in 1864 with the addition of two bays to the west and a baptistry added midway on the south side of the building. The 57-foot high square tower was added in 1912. Adjacent to the church is a rectory that was also designed by Lienau in a similar style to the church.\", \"score\": 16.453125}, {\"long_text\": \"Van Vorst Township, New Jersey | Van Vorst was a township that existed in Hudson County, New Jersey, United States, from 1841 to 1851, that is now a neighborhood in Jersey City. The township was located on the Hudson River, to the west and north of the original territory of Jersey City and across from Manhattan.\", \"score\": 16.453125}]}",
+        "reasoning": "I searched for TV stations in Hudson County, New Jersey where Van Hackett worked, but I couldn't find any relevant information. However, I found a TV station called WWOR-TV, which is located in Secaucus, New Jersey, and is part of Hudson County.",
+        "answer": "WWOR-TV"
+      },
+      {
+        "question": "Are Truckin' Magazine and Girlfriends both publications that offer relationship advice?",
+        "answer": "no",
+        "dspy_uuid": "a5487599-ac3f-4880-a3cd-ab9ee4f4ec53",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was the role played in \"Sweet Charity\" by the star of Dear Diary?",
+        "answer": "Nickie",
+        "dspy_uuid": "82765131-e72f-473f-b1e2-9188286c8c33",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which genre of Italian film was the first to use CGI?",
+        "answer": "horror movies",
+        "dspy_uuid": "f6be303e-4982-441a-ae5a-424bae35ffbd",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which dog originated in the Mountains of Romania, the Ariege Pointer or the Carpathian Shepherd Dog?",
+        "answer": "Carpathian Mountains of Romania.",
+        "dspy_uuid": "91c46a04-7f0e-41a1-a7d0-47ac96a37815",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Singwango Secondary School had a sister school in a census-designated place in the town of North Hempstead in what county of New York?",
+        "answer": "Nassau County",
+        "dspy_uuid": "3681d720-d7de-479b-9413-195d8781dc18",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Juan Carlos Moreno Rojo plays for a team that plays in which league ?",
+        "answer": "Segunda Divisi\u00f3n B \u2013 Group 1",
+        "dspy_uuid": "ef163392-a7e2-4b42-b202-38fadfe71db1",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What main thoroughfare in Warsaw's borough of Ursyn\u00f3w connects to a 6,500 km international road which coincides with the Trans-Siberian Highway?",
+        "answer": "Jana Roso\u0142a street",
+        "dspy_uuid": "14656835-9f51-49b6-8716-0c4ec705ecf2",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who directed the 1987 romantic drama dance film that is directly parodied by the television film \"Totally Awesome\"?",
+        "answer": "Emile Ardolino",
+        "dspy_uuid": "4f57161f-0b34-4c76-a77f-93e723d4ab0b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which of these Asian directors was behind the science fiction adventure film \"Snowpiercer\", Bong Joon-ho or Vincent Kok?",
+        "answer": "Bong",
+        "dspy_uuid": "f6b4ad66-e379-4f73-9b46-305bd5536e34",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are the bands Flow and Against the Current from the same country?",
+        "answer": "no",
+        "dspy_uuid": "b8fb3930-c33f-4118-a292-b707fb49b02c",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Kyle Moran was born in the town on what river?",
+        "answer": "Castletown",
+        "dspy_uuid": "72d3c895-2e2f-45bf-8cf9-d014b7bc2a31",
+        "dspy_split": "train"
+      },
+      {
+        "question": "When considering the two peaks known as Noijin Kangsang and Masherbrum, which of them has the greatest height related to their respected ranges?",
+        "answer": "Noijin Kangsang",
+        "dspy_uuid": "abcb949d-1bad-49ed-a6c7-5838d861b931",
+        "dspy_split": "train"
+      },
+      {
+        "question": "How many copies were sold of the last UK number-one single that was written by Noddy Holder and Jim Lea?",
+        "answer": "in excess of one million copies",
+        "dspy_uuid": "2ceeb60f-ad1c-4e1b-9ff5-700a6ea1495a",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

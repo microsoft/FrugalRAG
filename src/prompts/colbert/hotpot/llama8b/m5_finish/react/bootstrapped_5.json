@@ -1,0 +1,300 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What's the present day English county of Skelton-in-Cleveland, recorded in the Domesday Book and site of a 12th-century castle?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What's the present day English county of Skelton-in-Cleveland, recorded in the Domesday Book and site of a 12th-century castle?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What's the present day English county of Skelton-in-Cleveland, recorded in the Domesday Book and site of a 12th-century castle?\", \"passages_this_hop\": [{\"long_text\": \"Skelton-in-Cleveland | Skelton-in-Cleveland is a small town in the civil parish of Skelton and Brotton in North Yorkshire, England. The local council, a unitary authority, is Redcar and Cleveland in the North East of England. It is situated at the foot of the Cleveland Hills and about 10 mi east of Middlesbrough. Skelton is made up of North Skelton, Skelton Green and New Skelton. The first real mention of Skelton is in the \\\"Domesday Book\\\", which talks about taxes collected. Skelton Castle was built in the 12th century by the\", \"score\": 22.640625}, {\"long_text\": \"Skelton and Brotton | Skelton and Brotton is a civil parish in the unitary authority of Redcar and Cleveland, England. It consists of the towns of Skelton-in-Cleveland and Brotton, which had a combined population of 18,952 in 2002,reducing to 12,848 at the Census 2011.\", \"score\": 20.0625}, {\"long_text\": \"Langbaurgh West | Langbaurgh West was a division of the Wapentake of Langbaurgh in the North Riding of the ancient County of Yorkshire. The area along with Langbaurgh East forms the Anglo-Saxon baronial Liberty of Cleveland, England (not to be confused with the County of Cleveland of 1974 to 1996) and roughly covers the modern districts of Middlesbrough, the western, urbanised portion of Redcar & Cleveland, the southern portion of Stockton-on-Tees, the northern parts of Hambleton (Great Ayton, Stokesley) and the northern parts of the Borough of Scarborough.\", \"score\": 19.234375}]}\n\n[[ ## thought_0 ## ]]\nNow that we have the relevant documents, let's analyze the passages and find the answer to the question.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What is the present day English county of Skelton-in-Cleveland, recorded in the Domesday Book and site of a 12th-century castle?\", \"trajectory_id\": \"search for county information\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What is the present day English county of Skelton-in-Cleveland, recorded in the Domesday Book and site of a 12th-century castle?\", \"passages_this_hop\": [{\"long_text\": \"Hutton in the Forest | Hutton in the Forest is a Grade I listed country house near the village of Skelton in the historic county of Cumberland, which now forms part of the modern county of Cumbria, England. It has belonged to the Fletcher-Vane family, latterly the Barons Inglewood, since 1605.\", \"score\": 19.484375}, {\"long_text\": \"Guton | Guton was a settlement in the county of Norfolk in England mentioned in the Domesday Book as Guthetuna. It is described as being held by Osbert from Tihel le Breton. It had a Mill and 14 Beehives. It was considered a small town with 40 households (which at the time of the survey was a large settlement). Lestan a freeman was deprived of it on the Norman conquest.\", \"score\": 19.21875}, {\"long_text\": \"Skelton Castle | Skelton Castle can refer to either a ruined medieval castle or an 18th-century Gothic style country house that replaced it. The site of both buildings is the village of Skelton, in North Yorkshire, England. The house is Grade I listed.\", \"score\": 19.15625}]}\n\n[[ ## thought_1 ## ]]\nThe passage about Skelton Castle mentions that it is located in North Yorkshire, England. Let's try to find the county information.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"What county is Skelton-in-Cleveland located in, according to the Domesday Book?\", \"trajectory_id\": \"search for county information\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"What county is Skelton-in-Cleveland located in, according to the Domesday Book?\", \"passages_this_hop\": [{\"long_text\": \"North Skelton | North Skelton is a village in the unitary authority of Redcar and Cleveland and the ceremonial county of North Yorkshire, England.\", \"score\": 22.046875}, {\"long_text\": \"Old All Saints Church, Skelton-in-Cleveland | Old All Saints Church is a redundant Anglican church in the town of Skelton-in-Cleveland, North Yorkshire, England. It is recorded in the National Heritage List for England as a designated Grade II* listed building, and is in the care of the Churches Conservation Trust.\", \"score\": 20.453125}, {\"long_text\": \"Redcar and Cleveland | The borough of Redcar & Cleveland is a unitary authority area in the Tees Valley region of North Yorkshire in the North East of England, consisting of Redcar, Saltburn-by-the-Sea, Guisborough, and small towns such as Brotton, Eston, Skelton and Loftus. It had a resident population of 135,200 in 2011. It is represented in Parliament by Anna Turley (Labour) for the Redcar constituency and by Simon Clarke (Conservative Party) for the Middlesbrough South and East Cleveland constituency.\", \"score\": 19.75}]}\n\n[[ ## thought_2 ## ]]\nWe have found the relevant county information, now let's extract the answer to the question.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"What is the county of Skelton-in-Cleveland, according to the Domesday Book?\", \"trajectory_id\": \"extract county information\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"What is the county of Skelton-in-Cleveland, according to the Domesday Book?\", \"passages_this_hop\": [{\"long_text\": \"Skelton, East Riding of Yorkshire | Skelton is a hamlet in the East Riding of Yorkshire, England, and a linear settlement on the east bank of the River Ouse. It is situated about 2 mi south-east of Howden and 19 mi south-east from the county town of York. It forms part of the civil parish of Kilpin. Skelton lies within the constituency of Haltemprice and Howden, an area placed as the 10th most affluent in the country in a Barclays Private Clients survey.\", \"score\": 19.9375}, {\"long_text\": \"Skelton, Cumbria | Skelton is a small village and civil parish about 7 mi north west of Penrith in the English county of Cumbria. It is on the former route of the B5305 road, which is now about 1 mi to the north.\", \"score\": 19.65625}, {\"long_text\": \"Skelton Township, Carlton County, Minnesota | Skelton Township is a township in Carlton County, Minnesota, United States. The population was 372 as of the 2000 census. Skelton Township was named for John and Harry E. Skelton, two brothers who were both employed as county officials.\", \"score\": 19.609375}]}\n\n[[ ## thought_3 ## ]]\nWe have found a passage that mentions Skelton-in-Cleveland, now let's extract the county information from the passage.\n\n[[ ## tool_name_3 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_3 ## ]]\n{\"search_query\": \"What county is Skelton-in-Cleveland located in, according to the passage?\", \"trajectory_id\": \"extract county information\"}\n\n[[ ## observation_3 ## ]]\n{\"search_query\": \"What county is Skelton-in-Cleveland located in, according to the passage?\", \"passages_this_hop\": [{\"long_text\": \"Skelton, Illinois | Skelton is an unincorporated community in Logan County, Illinois, United States. Skelton is located on Illinois Route 10, east of Lincoln.\", \"score\": 19.40625}, {\"long_text\": \"Skelton, West Virginia | Skelton is an unincorporated community in Raleigh County, West Virginia, United States. Skelton is located on U.S. Route 19 2 mi north of downtown Beckley. Skelton has a post office with ZIP code 25919.\", \"score\": 19.3125}, {\"long_text\": \"Skelton, Indiana | Skelton was an unincorporated community in Montgomery Township, Gibson County, Indiana. The town is now completely inside the grounds of the Gibson Generating Station. No part of the town exists as most of what was Skelton is in Gibson Lake.\", \"score\": 19.28125}]}",
+        "next_thought": "We have found multiple passages that mention Skelton-in-Cleveland, now let's extract the county information from the passage that mentions the 12th-century castle.",
+        "next_tool_name": "AdvancedSearch",
+        "next_tool_args": {
+          "search_query": "What county is Skelton-in-Cleveland located in, according to the passage that mentions the 12th-century castle?",
+          "trajectory_id": "extract county information"
+        }
+      },
+      {
+        "augmented": true,
+        "question": "Who directed the 1987 romantic drama dance film that is directly parodied by the television film \"Totally Awesome\"?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Who directed the 1987 romantic drama dance film that is directly parodied by the television film \\\"Totally Awesome\\\"?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Who directed the 1987 romantic drama dance film that is directly parodied by the television film \\\"Totally Awesome\\\"?\", \"passages_this_hop\": [{\"long_text\": \"Totally Awesome | Totally Awesome is a television film produced by VH1. \\\"Totally Awesome\\\" directly parodies a number of 1980s movies, including \\\"Dirty Dancing\\\", \\\"Soul Man\\\", \\\"Footloose\\\", \\\"Some Kind of Wonderful\\\", \\\"Sixteen Candles\\\", \\\"Teen Wolf\\\", \\\"Better Off Dead\\\", \\\"Lucas\\\", \\\"Pretty in Pink\\\", and \\\"The Karate Kid\\\".\", \"score\": 19.578125}, {\"long_text\": \"Dirty Dancing | Dirty Dancing is a 1987 American romantic drama dance film written by Eleanor Bergstein, directed by Emile Ardolino and starring Patrick Swayze and Jennifer Grey in the lead roles, and featuring Cynthia Rhodes and Jerry Orbach.\", \"score\": 18.75}, {\"long_text\": \"Dancers (film) | Dancers is a 1987 film directed by Herbert Ross and stars Mikhail Baryshnikov and Julie Kent. The story revolves around a ballet dancer who is planning to make a film version of the ballet \\\"Giselle\\\", and how his romance with a young woman parallels the plotline of the ballet. The film received scathing reviews upon release.\", \"score\": 17.90625}]}",
+        "next_thought": "It seems like the search query was successful, but we still need to find the answer to the original question. We can see that the passage about \"Dirty Dancing\" might be relevant.",
+        "next_tool_name": "AdvancedSearch",
+        "next_tool_args": {
+          "search_query": "Who directed the film \"Dirty Dancing\"?",
+          "trajectory_id": "the id of the current trajectory"
+        }
+      },
+      {
+        "augmented": true,
+        "question": "Which major river is Buford, North Dakota nearest to?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Which major river is Buford, North Dakota nearest to?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Which major river is Buford, North Dakota nearest to?\", \"passages_this_hop\": [{\"long_text\": \"Buford, North Dakota | Buford is an unincorporated community in Williams County, North Dakota, United States. It is the nearest community to the Fort Union Trading Post National Historic Site. It is named for the nearby historic Fort Buford at the confluence of the Missouri and Yellowstone Rivers.\", \"score\": 24.859375}, {\"long_text\": \"Fort Buford | Fort Buford was a United States Army Post at the confluence of the Missouri and Yellowstone Rivers in Dakota Territory, present day North Dakota, and the site of Sitting Bull's surrender in 1881.\", \"score\": 22.125}, {\"long_text\": \"Playford River (Northern Territory) | Playford River is a river in the Northern Territory of Australia and has a length of 406 km. The river originates near the base of Mount Morgan then flows in a southerly direction before veering west and eventually dicharging into Lake De Burgh. The Playford has three tributaries: Buchanan Creek, Desert Creek and Eastern Creek\u2014as well as a number of permanent waterholes. These include Tobacco waterhole, Ibis waterhole, Upper and Lower Amazon Lagoon and Xmas hole.\", \"score\": 18.390625}]}\n\n[[ ## thought_0 ## ]]\nNext, I will try to extract the name of the river mentioned in the passage that is most relevant to Buford, North Dakota.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What are the names of the rivers mentioned in the passages about Buford, North Dakota?\", \"trajectory_id\": \" Buford, North Dakota\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What are the names of the rivers mentioned in the passages about Buford, North Dakota?\", \"passages_this_hop\": [{\"long_text\": \"Double Ditch | Double Ditch, also known as the Double Ditch State Historic Site, Burgois Site, 32BL8, Bourgois Site, and Double Ditch Earth Lodge Village Site, is an archaeological site located along the Missouri River north of Bismarck, North Dakota, United States. It earns its name from the two visible earth mounds that outline the site, but archaeological survey found that there are four ditches total.\", \"score\": 18.984375}, {\"long_text\": \"Bad River (South Dakota) | The Bad River (Dakota: \\\"wakp\u00e1-\u0161i\u010da\\\"; \\\"lake-bad\\\") is a tributary of the Missouri River, approximately 161 mi long, in central South Dakota in the United States.\", \"score\": 18.5625}, {\"long_text\": \"Park River (North Dakota) | The Park River is a river in North Dakota. Park River is a tributary of the Red River of the North. The name likely comes from brush corrals built by Native Americans on the banks of the river, called \\\"buffalo parks\\\" by early explorers. The corrals were used in a form of hunting in which buffalo would be driven into them and over the steep river banks in order to kill or injure them.\", \"score\": 18.46875}]}\n\n[[ ## thought_1 ## ]]\nI will try to identify the river that is nearest to Buford, North Dakota based on the information extracted from the passages.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Which river is nearest to Buford, North Dakota?\", \"trajectory_id\": \"Buford, North Dakota\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Which river is nearest to Buford, North Dakota?\", \"passages_this_hop\": [{\"long_text\": \"Harker Park Lake | Harker Park Lake is located on the northwest face of Burro Mountain in Rio Blanco County, Colorado, United States. It is 7.6 km south of the very small town of Buford, Colorado, and 200 km west of the city of Boulder. The lake is in the watershed of the White River and is entirely surrounded by the White River National Forest. The headwaters for the lake extend to the top of Burro Mountain at 3,092 m (10,143 ft). Water from Harker Park Lake drains into Sterry Lake, which in turn is the source for Sawmill Creek, a tributary of the South Fork of the White River. The nearest road, New Castle Buford Road, is 1.5 km west of the lake and 109 m (360 ft) lower in elevation.\", \"score\": 20.59375}, {\"long_text\": \"Buford, Arkansas | Buford is an unincorporated community in Baxter County, Arkansas, United States. It is the location of (or is the nearest community to) Buford School Building, which is located on AR 126 and is listed on the National Register of Historic Places.\", \"score\": 19.15625}, {\"long_text\": \"Red Willow Lake, North Dakota | Red Willow Lake is a naturally formed lake located in Griggs County, North Dakota. The nearest town is Binford.\", \"score\": 19.078125}]}\n\n[[ ## thought_2 ## ]]\nI will try to extract the name of the river that is nearest to Buford, North Dakota based on the information extracted from the passages.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"Which river is nearest to Buford, North Dakota?\", \"trajectory_id\": \"Buford, North Dakota\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"Which river is nearest to Buford, North Dakota?\", \"passages_this_hop\": [{\"long_text\": \"Burfordville, Missouri | Burfordville is an unincorporated community in western Cape Girardeau County, Missouri, United States, on the banks of the Whitewater River. It is located five miles west of Jackson on Route 34. Bufordville is part of the Cape Girardeau\u2013Jackson, MO-IL Metropolitan Statistical Area.\", \"score\": 18.515625}, {\"long_text\": \"PhinDeli Town Buford, Wyoming | PhinDeli Town Buford, originally known as Buford, is an unincorporated community in Albany County, Wyoming, United States. It is located between Laramie and Cheyenne on Interstate 80. At 8000 ft of elevation, this is the highest populated settlement along the First Transcontinental Railroad (today's Overland Route), and on the transcontinental Interstate 80. The town was originally named Buford (in honor of Major General John Buford), a Union cavalry officer during the American Civil War. In 2013, the town was sold to a Vietnamese owner, who re-branded it as \\\"PhinDeli Town Buford\\\". The postal addresses, however, still bears the town's original name of \\\"Buford\\\". In 2013, the population of the town was 1.\", \"score\": 18.265625}, {\"long_text\": \"Rumford, South Dakota | Rumford is an unincorporated community in Fall River County, South Dakota, United States. It is located on South Dakota Highway 471 19 mi southeast of Edgemont. Rumford is not tracked by the Census Bureau and shares a ZIP code (57735) with Edgemont and other surrounding towns and rural areas.\", \"score\": 18.25}]}\n\n[[ ## thought_3 ## ]]\nI will compare the information about the rivers mentioned in the passages to determine which one is nearest to Buford, North Dakota.\n\n[[ ## tool_name_3 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_3 ## ]]\n{\"search_query\": \"Which river is nearest to Buford, North Dakota, based on the information about the rivers mentioned in the passages?\", \"trajectory_id\": \"Buford, North Dakota\"}\n\n[[ ## observation_3 ## ]]\n{\"search_query\": \"Which river is nearest to Buford, North Dakota, based on the information about the rivers mentioned in the passages?\", \"passages_this_hop\": [{\"long_text\": \"Forest River (North Dakota) | The Forest River is an 81.0 mi tributary of the Red River of the North in eastern North Dakota in the United States. It rises in Walsh County and flows southeast and east, past the towns of Fordville and Minto, and forms a confluence with the Red approximately 40 mi north of Grand Forks.\", \"score\": 18.765625}, {\"long_text\": \"Goose River (North Dakota) | Goose River is a 179 mi tributary of the Red River of the North in North Dakota in the United States. Via the Red River, Lake Winnipeg, and the Nelson River, it is part of the watershed of Hudson Bay. The Goose River is crossed by the Northwood Bridge, listed on the National Register of Historic Places.\", \"score\": 18.71875}, {\"long_text\": \"Maple River (North Dakota) | The Maple River is a tributary of the Sheyenne River, about 198 mi long, in the Red River Valley of eastern North Dakota in the United States. Via the Sheyenne River, the Red River of the North, Lake Winnipeg and the Nelson River, the Maple is part of the watershed of Hudson Bay.\", \"score\": 18.71875}]}",
+        "next_thought": "Based on the information about the rivers mentioned in the passages, I will now try to determine which one is nearest to Buford, North Dakota.",
+        "next_tool_name": "AdvancedSearch",
+        "next_tool_args": {
+          "search_query": "Which river is nearest to Buford, North Dakota, based on the information about the rivers mentioned in the passages?",
+          "trajectory_id": "Buford, North Dakota"
+        }
+      },
+      {
+        "question": "What precious metal did both McIntyre Mines and the Kemess Mine dig for?",
+        "answer": "gold",
+        "dspy_uuid": "f8a3b31d-b473-43ff-901f-62f2c0c4f6f3",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Singwango Secondary School had a sister school in a census-designated place in the town of North Hempstead in what county of New York?",
+        "answer": "Nassau County",
+        "dspy_uuid": "3681d720-d7de-479b-9413-195d8781dc18",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which movie in a collaboration between Malcom X and Alex Haley also was nominated for an Oscar",
+        "answer": "The Autobiography of Malcolm X",
+        "dspy_uuid": "7cde8396-808f-455e-b9da-d93c74182f52",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which building, Olympic Tower or Latting Observatory, is no longer erect?",
+        "answer": "Latting Observatory",
+        "dspy_uuid": "ace43c89-aedd-4496-9fc5-28318c0b493a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Rectrix Aviation's jet charter business involves what service?",
+        "answer": "renting an entire aircraft",
+        "dspy_uuid": "f38e0c1a-5298-4ddd-8bba-1b3e79d7278b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "That Darn Cat! and Never a Dull Moment were both produced by what studio?",
+        "answer": "Walt Disney Productions",
+        "dspy_uuid": "d0006cef-18fd-4ff4-9db1-0f480cfa0444",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Is Liverpool found in northern or southern England?",
+        "answer": "northern England",
+        "dspy_uuid": "c2aaf4b6-523c-4816-9ff3-54cc1b8e9706",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What is the name of this Irish singer-songwriter, musician, venture capitalist, businessman, and philanthropist, who wrote \"Love Is Blindness\" on the piano?",
+        "answer": "Bono",
+        "dspy_uuid": "67decc9a-2ce8-4ec6-b531-01648ad9641d",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Where did the younger brother of Titus Davis play college football?",
+        "answer": "Western Michigan",
+        "dspy_uuid": "7fca3424-411d-4099-8a34-991042119928",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which of these Asian directors was behind the science fiction adventure film \"Snowpiercer\", Bong Joon-ho or Vincent Kok?",
+        "answer": "Bong",
+        "dspy_uuid": "f6b4ad66-e379-4f73-9b46-305bd5536e34",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What main thoroughfare in Warsaw's borough of Ursyn\u00f3w connects to a 6,500 km international road which coincides with the Trans-Siberian Highway?",
+        "answer": "Jana Roso\u0142a street",
+        "dspy_uuid": "14656835-9f51-49b6-8716-0c4ec705ecf2",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which lasted longer, the Battle of Belleau Wood or the Battle of Leyte?",
+        "answer": "Battle of Leyte",
+        "dspy_uuid": "9606b663-9248-49c5-8b64-72d54cacbcb9",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What sport does 1989\u201390 Sacramento Kings season and Rodney McCray have in common?",
+        "answer": "basketball",
+        "dspy_uuid": "3872288f-a118-4bb7-b76f-671a4baaad2f",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!<\/desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.<\/desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What's the present day English county of Skelton-in-Cleveland, recorded in the Domesday Book and site of a 12th-century castle?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What's the present day English county of Skelton-in-Cleveland, recorded in the Domesday Book and site of a 12th-century castle?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What's the present day English county of Skelton-in-Cleveland, recorded in the Domesday Book and site of a 12th-century castle?\", \"passages_this_hop\": [{\"long_text\": \"Skelton-in-Cleveland | Skelton-in-Cleveland is a small town in the civil parish of Skelton and Brotton in North Yorkshire, England. The local council, a unitary authority, is Redcar and Cleveland in the North East of England. It is situated at the foot of the Cleveland Hills and about 10 mi east of Middlesbrough. Skelton is made up of North Skelton, Skelton Green and New Skelton. The first real mention of Skelton is in the \\\"Domesday Book\\\", which talks about taxes collected. Skelton Castle was built in the 12th century by the\", \"score\": 22.640625}, {\"long_text\": \"Skelton and Brotton | Skelton and Brotton is a civil parish in the unitary authority of Redcar and Cleveland, England. It consists of the towns of Skelton-in-Cleveland and Brotton, which had a combined population of 18,952 in 2002,reducing to 12,848 at the Census 2011.\", \"score\": 20.0625}, {\"long_text\": \"Langbaurgh West | Langbaurgh West was a division of the Wapentake of Langbaurgh in the North Riding of the ancient County of Yorkshire. The area along with Langbaurgh East forms the Anglo-Saxon baronial Liberty of Cleveland, England (not to be confused with the County of Cleveland of 1974 to 1996) and roughly covers the modern districts of Middlesbrough, the western, urbanised portion of Redcar & Cleveland, the southern portion of Stockton-on-Tees, the northern parts of Hambleton (Great Ayton, Stokesley) and the northern parts of the Borough of Scarborough.\", \"score\": 19.234375}]}\n\n[[ ## thought_0 ## ]]\nNow that we have the relevant documents, let's analyze the passages and find the answer to the question.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What is the present day English county of Skelton-in-Cleveland, recorded in the Domesday Book and site of a 12th-century castle?\", \"trajectory_id\": \"search for county information\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What is the present day English county of Skelton-in-Cleveland, recorded in the Domesday Book and site of a 12th-century castle?\", \"passages_this_hop\": [{\"long_text\": \"Hutton in the Forest | Hutton in the Forest is a Grade I listed country house near the village of Skelton in the historic county of Cumberland, which now forms part of the modern county of Cumbria, England. It has belonged to the Fletcher-Vane family, latterly the Barons Inglewood, since 1605.\", \"score\": 19.484375}, {\"long_text\": \"Guton | Guton was a settlement in the county of Norfolk in England mentioned in the Domesday Book as Guthetuna. It is described as being held by Osbert from Tihel le Breton. It had a Mill and 14 Beehives. It was considered a small town with 40 households (which at the time of the survey was a large settlement). Lestan a freeman was deprived of it on the Norman conquest.\", \"score\": 19.21875}, {\"long_text\": \"Skelton Castle | Skelton Castle can refer to either a ruined medieval castle or an 18th-century Gothic style country house that replaced it. The site of both buildings is the village of Skelton, in North Yorkshire, England. The house is Grade I listed.\", \"score\": 19.15625}]}\n\n[[ ## thought_1 ## ]]\nThe passage about Skelton Castle mentions that it is located in North Yorkshire, England. Let's try to find the county information.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"What county is Skelton-in-Cleveland located in, according to the Domesday Book?\", \"trajectory_id\": \"search for county information\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"What county is Skelton-in-Cleveland located in, according to the Domesday Book?\", \"passages_this_hop\": [{\"long_text\": \"North Skelton | North Skelton is a village in the unitary authority of Redcar and Cleveland and the ceremonial county of North Yorkshire, England.\", \"score\": 22.046875}, {\"long_text\": \"Old All Saints Church, Skelton-in-Cleveland | Old All Saints Church is a redundant Anglican church in the town of Skelton-in-Cleveland, North Yorkshire, England. It is recorded in the National Heritage List for England as a designated Grade II* listed building, and is in the care of the Churches Conservation Trust.\", \"score\": 20.453125}, {\"long_text\": \"Redcar and Cleveland | The borough of Redcar & Cleveland is a unitary authority area in the Tees Valley region of North Yorkshire in the North East of England, consisting of Redcar, Saltburn-by-the-Sea, Guisborough, and small towns such as Brotton, Eston, Skelton and Loftus. It had a resident population of 135,200 in 2011. It is represented in Parliament by Anna Turley (Labour) for the Redcar constituency and by Simon Clarke (Conservative Party) for the Middlesbrough South and East Cleveland constituency.\", \"score\": 19.75}]}\n\n[[ ## thought_2 ## ]]\nWe have found the relevant county information, now let's extract the answer to the question.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"What is the county of Skelton-in-Cleveland, according to the Domesday Book?\", \"trajectory_id\": \"extract county information\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"What is the county of Skelton-in-Cleveland, according to the Domesday Book?\", \"passages_this_hop\": [{\"long_text\": \"Skelton, East Riding of Yorkshire | Skelton is a hamlet in the East Riding of Yorkshire, England, and a linear settlement on the east bank of the River Ouse. It is situated about 2 mi south-east of Howden and 19 mi south-east from the county town of York. It forms part of the civil parish of Kilpin. Skelton lies within the constituency of Haltemprice and Howden, an area placed as the 10th most affluent in the country in a Barclays Private Clients survey.\", \"score\": 19.9375}, {\"long_text\": \"Skelton, Cumbria | Skelton is a small village and civil parish about 7 mi north west of Penrith in the English county of Cumbria. It is on the former route of the B5305 road, which is now about 1 mi to the north.\", \"score\": 19.65625}, {\"long_text\": \"Skelton Township, Carlton County, Minnesota | Skelton Township is a township in Carlton County, Minnesota, United States. The population was 372 as of the 2000 census. Skelton Township was named for John and Harry E. Skelton, two brothers who were both employed as county officials.\", \"score\": 19.609375}]}\n\n[[ ## thought_3 ## ]]\nWe have found a passage that mentions Skelton-in-Cleveland, now let's extract the county information from the passage.\n\n[[ ## tool_name_3 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_3 ## ]]\n{\"search_query\": \"What county is Skelton-in-Cleveland located in, according to the passage?\", \"trajectory_id\": \"extract county information\"}\n\n[[ ## observation_3 ## ]]\n{\"search_query\": \"What county is Skelton-in-Cleveland located in, according to the passage?\", \"passages_this_hop\": [{\"long_text\": \"Skelton, Illinois | Skelton is an unincorporated community in Logan County, Illinois, United States. Skelton is located on Illinois Route 10, east of Lincoln.\", \"score\": 19.40625}, {\"long_text\": \"Skelton, West Virginia | Skelton is an unincorporated community in Raleigh County, West Virginia, United States. Skelton is located on U.S. Route 19 2 mi north of downtown Beckley. Skelton has a post office with ZIP code 25919.\", \"score\": 19.3125}, {\"long_text\": \"Skelton, Indiana | Skelton was an unincorporated community in Montgomery Township, Gibson County, Indiana. The town is now completely inside the grounds of the Gibson Generating Station. No part of the town exists as most of what was Skelton is in Gibson Lake.\", \"score\": 19.28125}]}\n\n[[ ## thought_4 ## ]]\nWe have found multiple passages that mention Skelton-in-Cleveland, now let's extract the county information from the passage that mentions the 12th-century castle.\n\n[[ ## tool_name_4 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_4 ## ]]\n{\"search_query\": \"What county is Skelton-in-Cleveland located in, according to the passage that mentions the 12th-century castle?\", \"trajectory_id\": \"extract county information\"}\n\n[[ ## observation_4 ## ]]\n{\"search_query\": \"What county is Skelton-in-Cleveland located in, according to the passage that mentions the 12th-century castle?\", \"passages_this_hop\": [{\"long_text\": \"Skelton Hall | Skelton Hall is located in North Yorkshire, England. In 1814 Mrs Mary Thompson, the widow of Henry Thompson, came to live in Skelton at The Cottage from where she not only kept an eye on the repairs that she financed at the church, but also on the building of Skelton Lodge (later Hall) which is shown in an 1839 lithograph. The Lodge became The Hall in about 1867, and the Thompson's were succeeded as owners by the Thornton Duesberys.\", \"score\": 18.34375}, {\"long_text\": \"Sketrick Castle | Sketrick Castle is a castle situated on Sketrick Island near Whiterock, County Down, Northern Ireland. The castle is estimated to date back to the 12th century. Sketrick Castle tower-house and the passage to spring are State Care Historic Monuments in the townland of Sketrick Island, in Borough of Ards, at grid ref: J5245 6252.\", \"score\": 18.28125}, {\"long_text\": \"Grelton, Ohio | Grelton is an unincorporated community on the borders of Monroe and Richfield Townships in Henry County, Ohio, United States. Although it is unincorporated, it has a post office, with the ZIP code of 43523. It is located on County Road 7 approximately two miles south of U.S. Route 6.\", \"score\": 18.0}]}",
+        "reasoning": "The question asks for the present day English county of Skelton-in-Cleveland, recorded in the Domesday Book and site of a 12th-century castle. To answer this question, I will search for relevant documents with the original question as the search query. After analyzing the passages, I will extract the county information from the passage that mentions the 12th-century castle.",
+        "answer": "North Yorkshire"
+      },
+      {
+        "augmented": true,
+        "question": "Who directed the 1987 romantic drama dance film that is directly parodied by the television film \"Totally Awesome\"?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Who directed the 1987 romantic drama dance film that is directly parodied by the television film \\\"Totally Awesome\\\"?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Who directed the 1987 romantic drama dance film that is directly parodied by the television film \\\"Totally Awesome\\\"?\", \"passages_this_hop\": [{\"long_text\": \"Totally Awesome | Totally Awesome is a television film produced by VH1. \\\"Totally Awesome\\\" directly parodies a number of 1980s movies, including \\\"Dirty Dancing\\\", \\\"Soul Man\\\", \\\"Footloose\\\", \\\"Some Kind of Wonderful\\\", \\\"Sixteen Candles\\\", \\\"Teen Wolf\\\", \\\"Better Off Dead\\\", \\\"Lucas\\\", \\\"Pretty in Pink\\\", and \\\"The Karate Kid\\\".\", \"score\": 19.578125}, {\"long_text\": \"Dirty Dancing | Dirty Dancing is a 1987 American romantic drama dance film written by Eleanor Bergstein, directed by Emile Ardolino and starring Patrick Swayze and Jennifer Grey in the lead roles, and featuring Cynthia Rhodes and Jerry Orbach.\", \"score\": 18.75}, {\"long_text\": \"Dancers (film) | Dancers is a 1987 film directed by Herbert Ross and stars Mikhail Baryshnikov and Julie Kent. The story revolves around a ballet dancer who is planning to make a film version of the ballet \\\"Giselle\\\", and how his romance with a young woman parallels the plotline of the ballet. The film received scathing reviews upon release.\", \"score\": 17.90625}]}\n\n[[ ## thought_0 ## ]]\nIt seems like the search query was successful, but we still need to find the answer to the original question. We can see that the passage about \"Dirty Dancing\" might be relevant.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Who directed the film \\\"Dirty Dancing\\\"?\", \"trajectory_id\": \"the id of the current trajectory\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Who directed the film \\\"Dirty Dancing\\\"?\", \"passages_this_hop\": [{\"long_text\": \"Dirty Dancing (2017 film) | Dirty Dancing is a 2017 American television film directed by Wayne Blair and written by Jessica Sharzer. It is a remake of the 1987 film of the same name. The film stars Abigail Breslin, Colt Prattes, Nicole Scherzinger, Bruce Greenwood, Debra Messing, Sarah Hyland, Tony Roberts, Billy Dee Williams, and J. Quinton Johnson. It aired on May 24, 2017, on ABC. In its original broadcast, the film was seen by 6.61 million viewers with a 1.4 Nielsen rating in the 18-49 age demographic and a 5 share.\", \"score\": 27.6875}, {\"long_text\": \"Dirty Dancing: Havana Nights | Dirty Dancing: Havana Nights (also known as Dirty Dancing 2 or Dirty Dancing 2: Havana Nights) is a 2004 American musical romance film directed by Guy Ferland. The film is a prequel\/\\\"re-imagining\\\" of the 1987 blockbuster \\\"Dirty Dancing\\\", reusing the same basic plot, but transplanting it from upstate New York to Cuba on the cusp of the Cuban Revolution.\", \"score\": 26.6875}, {\"long_text\": \"Emile Ardolino | Emile Ardolino (May 9, 1943 \u2013 November 20, 1993) was an American film director, choreographer, and producer, best known for his films \\\"Dirty Dancing\\\" (1987) and \\\"Sister Act\\\" (1992).\", \"score\": 26.25}]}\n\n[[ ## thought_1 ## ]]\nWe can see that the passage about Emile Ardolino might be relevant, and it directly answers the original question.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "The original question was searched using the AdvancedSearch tool, and the most relevant passage was found to be the one about Emile Ardolino. This passage directly answers the original question, stating that Emile Ardolino directed the 1987 romantic drama dance film \"Dirty Dancing\".",
+        "answer": "Emile Ardolino"
+      },
+      {
+        "augmented": true,
+        "question": "Which major river is Buford, North Dakota nearest to?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Which major river is Buford, North Dakota nearest to?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Which major river is Buford, North Dakota nearest to?\", \"passages_this_hop\": [{\"long_text\": \"Buford, North Dakota | Buford is an unincorporated community in Williams County, North Dakota, United States. It is the nearest community to the Fort Union Trading Post National Historic Site. It is named for the nearby historic Fort Buford at the confluence of the Missouri and Yellowstone Rivers.\", \"score\": 24.859375}, {\"long_text\": \"Fort Buford | Fort Buford was a United States Army Post at the confluence of the Missouri and Yellowstone Rivers in Dakota Territory, present day North Dakota, and the site of Sitting Bull's surrender in 1881.\", \"score\": 22.125}, {\"long_text\": \"Playford River (Northern Territory) | Playford River is a river in the Northern Territory of Australia and has a length of 406 km. The river originates near the base of Mount Morgan then flows in a southerly direction before veering west and eventually dicharging into Lake De Burgh. The Playford has three tributaries: Buchanan Creek, Desert Creek and Eastern Creek\u2014as well as a number of permanent waterholes. These include Tobacco waterhole, Ibis waterhole, Upper and Lower Amazon Lagoon and Xmas hole.\", \"score\": 18.390625}]}\n\n[[ ## thought_0 ## ]]\nNext, I will try to extract the name of the river mentioned in the passage that is most relevant to Buford, North Dakota.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What are the names of the rivers mentioned in the passages about Buford, North Dakota?\", \"trajectory_id\": \" Buford, North Dakota\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What are the names of the rivers mentioned in the passages about Buford, North Dakota?\", \"passages_this_hop\": [{\"long_text\": \"Double Ditch | Double Ditch, also known as the Double Ditch State Historic Site, Burgois Site, 32BL8, Bourgois Site, and Double Ditch Earth Lodge Village Site, is an archaeological site located along the Missouri River north of Bismarck, North Dakota, United States. It earns its name from the two visible earth mounds that outline the site, but archaeological survey found that there are four ditches total.\", \"score\": 18.984375}, {\"long_text\": \"Bad River (South Dakota) | The Bad River (Dakota: \\\"wakp\u00e1-\u0161i\u010da\\\"; \\\"lake-bad\\\") is a tributary of the Missouri River, approximately 161 mi long, in central South Dakota in the United States.\", \"score\": 18.5625}, {\"long_text\": \"Park River (North Dakota) | The Park River is a river in North Dakota. Park River is a tributary of the Red River of the North. The name likely comes from brush corrals built by Native Americans on the banks of the river, called \\\"buffalo parks\\\" by early explorers. The corrals were used in a form of hunting in which buffalo would be driven into them and over the steep river banks in order to kill or injure them.\", \"score\": 18.46875}]}\n\n[[ ## thought_1 ## ]]\nI will try to identify the river that is nearest to Buford, North Dakota based on the information extracted from the passages.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Which river is nearest to Buford, North Dakota?\", \"trajectory_id\": \"Buford, North Dakota\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Which river is nearest to Buford, North Dakota?\", \"passages_this_hop\": [{\"long_text\": \"Harker Park Lake | Harker Park Lake is located on the northwest face of Burro Mountain in Rio Blanco County, Colorado, United States. It is 7.6 km south of the very small town of Buford, Colorado, and 200 km west of the city of Boulder. The lake is in the watershed of the White River and is entirely surrounded by the White River National Forest. The headwaters for the lake extend to the top of Burro Mountain at 3,092 m (10,143 ft). Water from Harker Park Lake drains into Sterry Lake, which in turn is the source for Sawmill Creek, a tributary of the South Fork of the White River. The nearest road, New Castle Buford Road, is 1.5 km west of the lake and 109 m (360 ft) lower in elevation.\", \"score\": 20.59375}, {\"long_text\": \"Buford, Arkansas | Buford is an unincorporated community in Baxter County, Arkansas, United States. It is the location of (or is the nearest community to) Buford School Building, which is located on AR 126 and is listed on the National Register of Historic Places.\", \"score\": 19.15625}, {\"long_text\": \"Red Willow Lake, North Dakota | Red Willow Lake is a naturally formed lake located in Griggs County, North Dakota. The nearest town is Binford.\", \"score\": 19.078125}]}\n\n[[ ## thought_2 ## ]]\nI will try to extract the name of the river that is nearest to Buford, North Dakota based on the information extracted from the passages.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"Which river is nearest to Buford, North Dakota?\", \"trajectory_id\": \"Buford, North Dakota\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"Which river is nearest to Buford, North Dakota?\", \"passages_this_hop\": [{\"long_text\": \"Burfordville, Missouri | Burfordville is an unincorporated community in western Cape Girardeau County, Missouri, United States, on the banks of the Whitewater River. It is located five miles west of Jackson on Route 34. Bufordville is part of the Cape Girardeau\u2013Jackson, MO-IL Metropolitan Statistical Area.\", \"score\": 18.515625}, {\"long_text\": \"PhinDeli Town Buford, Wyoming | PhinDeli Town Buford, originally known as Buford, is an unincorporated community in Albany County, Wyoming, United States. It is located between Laramie and Cheyenne on Interstate 80. At 8000 ft of elevation, this is the highest populated settlement along the First Transcontinental Railroad (today's Overland Route), and on the transcontinental Interstate 80. The town was originally named Buford (in honor of Major General John Buford), a Union cavalry officer during the American Civil War. In 2013, the town was sold to a Vietnamese owner, who re-branded it as \\\"PhinDeli Town Buford\\\". The postal addresses, however, still bears the town's original name of \\\"Buford\\\". In 2013, the population of the town was 1.\", \"score\": 18.265625}, {\"long_text\": \"Rumford, South Dakota | Rumford is an unincorporated community in Fall River County, South Dakota, United States. It is located on South Dakota Highway 471 19 mi southeast of Edgemont. Rumford is not tracked by the Census Bureau and shares a ZIP code (57735) with Edgemont and other surrounding towns and rural areas.\", \"score\": 18.25}]}\n\n[[ ## thought_3 ## ]]\nI will compare the information about the rivers mentioned in the passages to determine which one is nearest to Buford, North Dakota.\n\n[[ ## tool_name_3 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_3 ## ]]\n{\"search_query\": \"Which river is nearest to Buford, North Dakota, based on the information about the rivers mentioned in the passages?\", \"trajectory_id\": \"Buford, North Dakota\"}\n\n[[ ## observation_3 ## ]]\n{\"search_query\": \"Which river is nearest to Buford, North Dakota, based on the information about the rivers mentioned in the passages?\", \"passages_this_hop\": [{\"long_text\": \"Forest River (North Dakota) | The Forest River is an 81.0 mi tributary of the Red River of the North in eastern North Dakota in the United States. It rises in Walsh County and flows southeast and east, past the towns of Fordville and Minto, and forms a confluence with the Red approximately 40 mi north of Grand Forks.\", \"score\": 18.765625}, {\"long_text\": \"Goose River (North Dakota) | Goose River is a 179 mi tributary of the Red River of the North in North Dakota in the United States. Via the Red River, Lake Winnipeg, and the Nelson River, it is part of the watershed of Hudson Bay. The Goose River is crossed by the Northwood Bridge, listed on the National Register of Historic Places.\", \"score\": 18.71875}, {\"long_text\": \"Maple River (North Dakota) | The Maple River is a tributary of the Sheyenne River, about 198 mi long, in the Red River Valley of eastern North Dakota in the United States. Via the Sheyenne River, the Red River of the North, Lake Winnipeg and the Nelson River, the Maple is part of the watershed of Hudson Bay.\", \"score\": 18.71875}]}\n\n[[ ## thought_4 ## ]]\nBased on the information about the rivers mentioned in the passages, I will now try to determine which one is nearest to Buford, North Dakota.\n\n[[ ## tool_name_4 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_4 ## ]]\n{\"search_query\": \"Which river is nearest to Buford, North Dakota, based on the information about the rivers mentioned in the passages?\", \"trajectory_id\": \"Buford, North Dakota\"}\n\n[[ ## observation_4 ## ]]\n{\"search_query\": \"Which river is nearest to Buford, North Dakota, based on the information about the rivers mentioned in the passages?\", \"passages_this_hop\": [{\"long_text\": \"Green River (North Dakota) | The Green River is a tributary of the Heart River, approximately 20 mi (32 km) long, in western North Dakota in the United States.\", \"score\": 18.453125}, {\"long_text\": \"Tongue River (North Dakota) | The Tongue River is a 90.4 mi tributary of the Pembina River in northeastern North Dakota in the United States. It drains an area of the prairie country near the Canada\u2013US border in the extreme northeast corner of the state in the watershed of the Red River.\", \"score\": 18.4375}, {\"long_text\": \"Cannonball River | The Cannonball River (Lakota: '\u00cd\u014bya\u014bwaka\u011fapi Wakp\u00e1' ) is a tributary of the Missouri River, approximately 135 mi (217 km) long, in southwestern North Dakota in the United States.\", \"score\": 18.4375}]}",
+        "reasoning": "The question is asking about the river that is nearest to Buford, North Dakota. To answer this, I need to analyze the information about the rivers mentioned in the passages. I will compare the information about the rivers to determine which one is nearest to Buford, North Dakota.",
+        "answer": "Missouri River"
+      },
+      {
+        "question": "Which movie in a collaboration between Malcom X and Alex Haley also was nominated for an Oscar",
+        "answer": "The Autobiography of Malcolm X",
+        "dspy_uuid": "7cde8396-808f-455e-b9da-d93c74182f52",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Rectrix Aviation's jet charter business involves what service?",
+        "answer": "renting an entire aircraft",
+        "dspy_uuid": "f38e0c1a-5298-4ddd-8bba-1b3e79d7278b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What sport does 1989\u201390 Sacramento Kings season and Rodney McCray have in common?",
+        "answer": "basketball",
+        "dspy_uuid": "3872288f-a118-4bb7-b76f-671a4baaad2f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Singwango Secondary School had a sister school in a census-designated place in the town of North Hempstead in what county of New York?",
+        "answer": "Nassau County",
+        "dspy_uuid": "3681d720-d7de-479b-9413-195d8781dc18",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which lasted longer, the Battle of Belleau Wood or the Battle of Leyte?",
+        "answer": "Battle of Leyte",
+        "dspy_uuid": "9606b663-9248-49c5-8b64-72d54cacbcb9",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What main thoroughfare in Warsaw's borough of Ursyn\u00f3w connects to a 6,500 km international road which coincides with the Trans-Siberian Highway?",
+        "answer": "Jana Roso\u0142a street",
+        "dspy_uuid": "14656835-9f51-49b6-8716-0c4ec705ecf2",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What is the name of this Irish singer-songwriter, musician, venture capitalist, businessman, and philanthropist, who wrote \"Love Is Blindness\" on the piano?",
+        "answer": "Bono",
+        "dspy_uuid": "67decc9a-2ce8-4ec6-b531-01648ad9641d",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What precious metal did both McIntyre Mines and the Kemess Mine dig for?",
+        "answer": "gold",
+        "dspy_uuid": "f8a3b31d-b473-43ff-901f-62f2c0c4f6f3",
+        "dspy_split": "train"
+      },
+      {
+        "question": "That Darn Cat! and Never a Dull Moment were both produced by what studio?",
+        "answer": "Walt Disney Productions",
+        "dspy_uuid": "d0006cef-18fd-4ff4-9db1-0f480cfa0444",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Is Liverpool found in northern or southern England?",
+        "answer": "northern England",
+        "dspy_uuid": "c2aaf4b6-523c-4816-9ff3-54cc1b8e9706",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which of these Asian directors was behind the science fiction adventure film \"Snowpiercer\", Bong Joon-ho or Vincent Kok?",
+        "answer": "Bong",
+        "dspy_uuid": "f6b4ad66-e379-4f73-9b46-305bd5536e34",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Where did the younger brother of Titus Davis play college football?",
+        "answer": "Western Michigan",
+        "dspy_uuid": "7fca3424-411d-4099-8a34-991042119928",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which building, Olympic Tower or Latting Observatory, is no longer erect?",
+        "answer": "Latting Observatory",
+        "dspy_uuid": "ace43c89-aedd-4496-9fc5-28318c0b493a",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

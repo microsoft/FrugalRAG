@@ -1,0 +1,238 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Which film came out first, A Hill In Korea or Ek Anek Aur Ekta?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Which film came out first, A Hill In Korea or Ek Anek Aur Ekta?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Which film came out first, A Hill In Korea or Ek Anek Aur Ekta?\", \"passages_this_hop\": [{\"long_text\": \"A Hill in Korea\\nBoyd as Private Sims\\n- Victor Maddern as Private Lindop\\n- Harry Landis as Private Rabin\\n- Robert Brown as Private O'Brien\\n- Barry Lowe as Private Neill\\n- Robert Shaw as Lance Corporal Hodge\\n- Charles Laurence as Private Kim\\n- Percy Herbert as Private Moon\\n- Eric Corrie as Private Matthews\\n- David Morrell as Private Henson\\n- Michael Caine as Private Lockyer\\nProduction.\\nThe film was based on a novel by Max Catto which was published in 1954 and based on true events.\", \"score\": 0.78662109375}, {\"long_text\": \"Korea (1995 film)\\nKorea is a 1995 Irish feature film directed by Cathal Black and produced by Darryl Collins based on a short story by John McGahern. In 1996 \\\"Korea\\\" won the Asta Nielsen Best Film Award at the Copenhagen Film Festival and was runner-up for the Audience Prize at the Seattle Film Festival.\", \"score\": 0.79638671875}, {\"long_text\": \"Ek Anek Aur Ekta\\na group of mice.\\nThe team.\\nThe film was directed by Vijaya Mulay. The film's design, animation and creation was done by Bhimsain Khurana. The lyrics of \\\"Hind Desh ke Niwasi\\\" were written by Pandit Vinay Chandra Maudgalya. Sadhna Sargam sang \\\"Ek Chidiya, Anek Chidiyan\\\". The assistants were S.M. Hasan, Mahesh Taavre and Girish Rao. The film won the National Film Award for Best Educational Film., and it was the first film from the animation studios of then Center for Education\", \"score\": 0.79736328125}, {\"long_text\": \"Ek Anek Aur Ekta\\nEk Anek Aur Ekta or \\\"One, Many, and Unity\\\" (also known as \\\"Ek Chidiya, Anek Chidiyan\\\" after the title song) is a traditionally animated short educational film released by the Films Division of India (Government of India). It was released in 1974. It was aired on the public broadcaster channel Doordarshan and became very popular among children.\\nSummary.\\nThe film was intended to teach the value of unity and teamwork to children (Unity in Diversity).\", \"score\": 0.8076171875}, {\"long_text\": \"A Hill in Korea\\nA Hill in Korea is a 1956 British war film based on Max Catto's 1953 novel of the same name. The original name was Hell in Korea, but was changed for distribution reasons, except in the U.S. It was directed by Julian Amyes and the producer was Anthony Squire. Incidental music was written by Malcolm Arnold.\\nIt was the first major feature film to portray British troops in action during the Korean War and introduces Michael Caine (himself a veteran of the Korean War) in his\", \"score\": 0.81201171875}]}",
+        "next_thought": "Next, I will analyze the passages to find the relevant information about the release dates of the two films.",
+        "next_tool_name": "AdvancedSearch",
+        "next_tool_args": {
+          "search_query": "What are the release dates of A Hill In Korea and Ek Anek Aur Ekta?",
+          "trajectory_id": "0"
+        }
+      },
+      {
+        "augmented": true,
+        "question": "Are both Chapan-E Olya and Cwrt Y Gollen located in the same country?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Are both Chapan-E Olya and Cwrt Y Gollen located in the same country?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Are both Chapan-E Olya and Cwrt Y Gollen located in the same country?\", \"passages_this_hop\": [{\"long_text\": \"Gol Kheyrak-e Olya\\nGol Kheyrak-e Olya (, also Romanized as Gol Kheyrak-e \u2018Oly\u0101; also known as Gol Kheyrak) is a village in Vizhenan Rural District, in the Central District of Gilan-e Gharb County, Kermanshah Province, Iran. At the 2006 census, its population was 100, in 25 families.\", \"score\": 0.81103515625}, {\"long_text\": \"Golulan-e Olya\\nGolulan-e Olya (, also Romanized as Gol\u016bl\u0101n-e \u2018Oly\u0101) is a village in Il Gavark Rural District, in the Central District of Bukan County, West Azerbaijan Province, Iran. At the 2006 census, its population was 204, in 30 families.\", \"score\": 0.81298828125}, {\"long_text\": \"Chapan, Iran\\nChapan (, also Romanized as Ch\u0101p\u0101n) is a village in Owch Hacha Rural District, in the Central District of Ahar County, East Azerbaijan Province, Iran. At the 2006 census, its population was 323, in 57 families.\", \"score\": 0.81396484375}, {\"long_text\": \"Chalaneh-ye Olya\\nChalaneh-ye Olya (, also Romanized as Chal\u0101neh-ye \u2018Oly\u0101; also known as Chal\u0101n\u012b-ye \u2018Oly\u0101 and Ch\u012bl\u0101neh-ye B\u0101l\u0101) is a village in Mansur-e Aqai Rural District, Shahu District, Ravansar County, Kermanshah Province, Iran. At the 2006 census, its population was 184, in 39 families.\", \"score\": 0.82177734375}, {\"long_text\": \"Chapan-e Olya\\nChapan-e Olya (, also Romanized as Ch\u0101p\u0101n-e \u2018Oly\u0101 and Ch\u0101p\u0101n \u2018Oly\u00e1; also known as Ch\u0101p\u0101n and Ch\u0101p\u0101n-e B\u0101l\u0101) is a village in Emam Rural District, Ziviyeh District, Saqqez County, Kurdistan Province, Iran. At the 2006 census, its population was 184, in 44 families.\", \"score\": 0.8291015625}]}",
+        "next_thought": "I will now analyze the passages to see if Chapan-E Olya and Cwrt Y Gollen are located in the same country.",
+        "next_tool_name": "AdvancedSearch",
+        "next_tool_args": {
+          "search_query": "Are Chapan-E Olya and Cwrt Y Gollen located in the same country?",
+          "trajectory_id": "Chapan-E Olya and Cwrt Y Gollen"
+        }
+      },
+      {
+        "question": "Which film was released more recently, Die sch\u00f6ne Lurette or Sabhash?",
+        "answer": "Sabhash"
+      },
+      {
+        "question": "What is the date of birth of Mina Gerhardsen's father?",
+        "answer": "13 June 1946"
+      },
+      {
+        "question": "Who is the spouse of the director of film Lord Of The Manor (Film)?",
+        "answer": "Chrissie White"
+      },
+      {
+        "question": "Where did the director of film The Right Of The Strongest die?",
+        "answer": "Los Angeles"
+      },
+      {
+        "question": "Are the directors of both films Mamay (film) and Dark Mountain (film) from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Do both directors of films Bl\u00fccher (film) and The Good Old Soak have the same nationality?",
+        "answer": "no"
+      },
+      {
+        "question": "When was the director of film Mr. Moto Takes A Chance born?",
+        "answer": "December 13, 1903"
+      },
+      {
+        "question": "Are both villages, Beli\u0161evo and Datow Naseri, located in the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Do Rhescuporis Ii and Mcallister Hull share the same nationality?",
+        "answer": "no"
+      },
+      {
+        "question": "Who is the uncle of Manuel Komnenos (Kouropalates)?",
+        "answer": "Isaac I Komnenos"
+      },
+      {
+        "question": "When is Martha Bulloch Roosevelt's husband's birthday?",
+        "answer": "September 22, 1831"
+      },
+      {
+        "question": "Who is Rhescuporis I (Odrysian)'s paternal grandfather?",
+        "answer": "Raizdos"
+      },
+      {
+        "question": "Where did the director of film Skinner Steps Out die?",
+        "answer": "Hollywood"
+      },
+      {
+        "question": "When was the director of film Sword Of Honour (1939 Film) born?",
+        "answer": "11 November 1887"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!<\/desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.<\/desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Which film came out first, A Hill In Korea or Ek Anek Aur Ekta?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Which film came out first, A Hill In Korea or Ek Anek Aur Ekta?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Which film came out first, A Hill In Korea or Ek Anek Aur Ekta?\", \"passages_this_hop\": [{\"long_text\": \"A Hill in Korea\\nBoyd as Private Sims\\n- Victor Maddern as Private Lindop\\n- Harry Landis as Private Rabin\\n- Robert Brown as Private O'Brien\\n- Barry Lowe as Private Neill\\n- Robert Shaw as Lance Corporal Hodge\\n- Charles Laurence as Private Kim\\n- Percy Herbert as Private Moon\\n- Eric Corrie as Private Matthews\\n- David Morrell as Private Henson\\n- Michael Caine as Private Lockyer\\nProduction.\\nThe film was based on a novel by Max Catto which was published in 1954 and based on true events.\", \"score\": 0.78662109375}, {\"long_text\": \"Korea (1995 film)\\nKorea is a 1995 Irish feature film directed by Cathal Black and produced by Darryl Collins based on a short story by John McGahern. In 1996 \\\"Korea\\\" won the Asta Nielsen Best Film Award at the Copenhagen Film Festival and was runner-up for the Audience Prize at the Seattle Film Festival.\", \"score\": 0.79638671875}, {\"long_text\": \"Ek Anek Aur Ekta\\na group of mice.\\nThe team.\\nThe film was directed by Vijaya Mulay. The film's design, animation and creation was done by Bhimsain Khurana. The lyrics of \\\"Hind Desh ke Niwasi\\\" were written by Pandit Vinay Chandra Maudgalya. Sadhna Sargam sang \\\"Ek Chidiya, Anek Chidiyan\\\". The assistants were S.M. Hasan, Mahesh Taavre and Girish Rao. The film won the National Film Award for Best Educational Film., and it was the first film from the animation studios of then Center for Education\", \"score\": 0.79736328125}, {\"long_text\": \"Ek Anek Aur Ekta\\nEk Anek Aur Ekta or \\\"One, Many, and Unity\\\" (also known as \\\"Ek Chidiya, Anek Chidiyan\\\" after the title song) is a traditionally animated short educational film released by the Films Division of India (Government of India). It was released in 1974. It was aired on the public broadcaster channel Doordarshan and became very popular among children.\\nSummary.\\nThe film was intended to teach the value of unity and teamwork to children (Unity in Diversity).\", \"score\": 0.8076171875}, {\"long_text\": \"A Hill in Korea\\nA Hill in Korea is a 1956 British war film based on Max Catto's 1953 novel of the same name. The original name was Hell in Korea, but was changed for distribution reasons, except in the U.S. It was directed by Julian Amyes and the producer was Anthony Squire. Incidental music was written by Malcolm Arnold.\\nIt was the first major feature film to portray British troops in action during the Korean War and introduces Michael Caine (himself a veteran of the Korean War) in his\", \"score\": 0.81201171875}]}\n\n[[ ## thought_0 ## ]]\nNext, I will analyze the passages to find the relevant information about the release dates of the two films.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What are the release dates of A Hill In Korea and Ek Anek Aur Ekta?\", \"trajectory_id\": \"0\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What are the release dates of A Hill In Korea and Ek Anek Aur Ekta?\", \"passages_this_hop\": [{\"long_text\": \"Bir Bikram\\nBir Bikram () is a 2016 romantic comedy film directed by Milan Chams. This movie features Nepalese actors Dayahang Rai, Anoop Bikram Shahi, Deeya Pun, Arpan Thapa, Menuka Pun and Najir Hussain in the lead roles.\\nThis movie is the story about the best friends who get separated when they were young but meet together with their dreams they had when they were younger.\\nBir Bikram was released on August 19, 2018 to mixed critical reception with films narration and screenplay receiving negative response but performance\", \"score\": 0.783203125}, {\"long_text\": \"Aniket Chattopadhyay\\nAniket Chattopadhyay (born 9 January 1963) is a journalist and director of the Bengali films, \\\"Chha-e Chhuti\\\" (2009), \\\"Bye Bye Bangkok\\\" (2011), romantic comedy film \\\"Goraay Gondogol\\\" (2012), Mahapurush O Kapurush (2013), Janala Diye Bou Palalo (2014), Room No. 103 (2015), Shankar Mudi (2019), and Kabir (2018). He was also the news editor of Bengali News Channel Kolkata TV.\", \"score\": 0.78369140625}, {\"long_text\": \"Ek Phool Teen Kante\\nEk Phool Teen Kante is a 1997 Indian Bollywood film directed by Anup Malik and produced by Deven Tanna. It stars Vikas Bhalla and Monica Bedi in pivotal roles. It was released on 29 August 1997.\", \"score\": 0.78515625}, {\"long_text\": \"Ek Nadir Galpo: Tale of a River\\nreleased in theaters on August 14, 2015 even though it was made in 2007.\\nPlot.\\n\\\"Ekk Nadir Galpo\\\" is taken from adaptation of short stories of Sunil Gangopadhay. Although initially set to be released on cinema, it went to film festivals worldwide. \\nIt shows the special relationship a father and daughter share. Anu consider Darakeshwar (Mithun) her hero and Anu (Swetha) is his pride, joy and life. Tragedy strikes as Anu drowns in Keleghai river. The bond between Darakeshwar and Anu\", \"score\": 0.78515625}, {\"long_text\": \"Ami Je Ke Tomar\\nAmi Je Ke Tomar is a 2017 Indian Bengali-language romance drama film directed by Rabi Kinagi and produced by Shrikant Mohta and Mahendra Soni under the banner of SVF Entertainment. The film stars Ankush, Sayantika Banerjee and Nusrat Jahan in the lead roles. The film was released on 19 May 2017. It is the remake of the Marathi film \\\"Mitwaa\\\" starring Swapnil Joshi and Sonalee.The film was superhit in box office.Sayantika Banerjee received best actress for this film.\\nPlot.\", \"score\": 0.79150390625}]}\n\n[[ ## thought_1 ## ]]\nNext, I will analyze the new information to determine which film came out first.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Which film came out first, A Hill In Korea or Ek Anek Aur Ekta?\", \"trajectory_id\": \"1\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Which film came out first, A Hill In Korea or Ek Anek Aur Ekta?\", \"passages_this_hop\": [{\"long_text\": \"A Petal\\nA Petal () is a 1996 South Korean film directed by Jang Sun-woo.\\nPlot.\\nThe film tells the story of a girl who experienced the Gwangju uprising at the age of 15, and its effect on her life in later years.\\nCast.\\n- Lee Jung-hyun as Girl\\n- Moon Sung-keun as Jang\\n- Sol Kyung-gu\\n- Chu Sang-mi\\n- Park Chul-min\\n- Park Kwang-jung\\n- Lee Young\", \"score\": 0.77978515625}, {\"long_text\": \"Ek Rishtaa: The Bond of Love\\nEk Rishtaa: The Bond of Love (: The Bond of Love) is a 2001 Indian Family drama film directed by Suneel Darshan released on 18 May 2001. The film stars Amitabh Bachchan, Raakhee, Akshay Kumar, Juhi Chawla, Karisma Kapoor, Mohnish Bahl. It was the first film where Bachchan and Kumar worked together. The film is a family drama where a big family encounters a crisis when disputes take place between the father (Bachchan) and the son (Kumar).\", \"score\": 0.7802734375}, {\"long_text\": \"Ankahee\\nAnkahee may refer to:\\n- \\\"Ankahee\\\" (1985 film), a 1985 Indian Hindi film\\n- \\\"Ankahee\\\" (2006 film), an Indian film directed by Vikram Bhatt\", \"score\": 0.78173828125}, {\"long_text\": \"A Barefoot Dream\\nA Barefoot Dream () is a 2010 drama film co-production between South Korea and Japan directed by Kim Tae-kyun. It is based on the true story of Kim Shin-hwan, a retired Korean footballer who goes to East Timor after his business fails and launches a youth football team, thus becoming the \\\"Hiddink of Korea.\\\" The film was selected as the South Korean entry for the Best Foreign Language Film at the 83rd Academy Awards but it did not make the final shortlist.\", \"score\": 0.78369140625}, {\"long_text\": \"Ekhono Anek Raat\\nEkhono Anek Raat is a 1997 Bangladeshi film starring Indian actor Bobita, Farooque and Suchorita. Khan Ataur Rahman earned both Best Music and Best Lyricist Award at Bangladesh National Film Awards.\\nAwards.\\n- 22nd Bangladesh National Film Awards\\n- Best Music Director - Khan Ataur Rahman\\n- Best Lyricist - Khan Ataur Rahman\", \"score\": 0.78466796875}]}\n\n[[ ## thought_2 ## ]]\nNext, I will determine the final answer based on the information gathered.\n\n[[ ## tool_name_2 ## ]]\nfinish\n\n[[ ## tool_args_2 ## ]]\n{}\n\n[[ ## observation_2 ## ]]\nCompleted.",
+        "reasoning": "To determine which film came out first, A Hill In Korea or Ek Anek Aur Ekta, I used the AdvancedSearch tool to gather information about the release dates of the two films. I analyzed the passages and found that A Hill In Korea was released in 1956, while Ek Anek Aur Ekta was released in 1974. Therefore, A Hill In Korea came out first.",
+        "answer": "A Hill In Korea"
+      },
+      {
+        "augmented": true,
+        "question": "Are both Chapan-E Olya and Cwrt Y Gollen located in the same country?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Are both Chapan-E Olya and Cwrt Y Gollen located in the same country?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Are both Chapan-E Olya and Cwrt Y Gollen located in the same country?\", \"passages_this_hop\": [{\"long_text\": \"Gol Kheyrak-e Olya\\nGol Kheyrak-e Olya (, also Romanized as Gol Kheyrak-e \u2018Oly\u0101; also known as Gol Kheyrak) is a village in Vizhenan Rural District, in the Central District of Gilan-e Gharb County, Kermanshah Province, Iran. At the 2006 census, its population was 100, in 25 families.\", \"score\": 0.81103515625}, {\"long_text\": \"Golulan-e Olya\\nGolulan-e Olya (, also Romanized as Gol\u016bl\u0101n-e \u2018Oly\u0101) is a village in Il Gavark Rural District, in the Central District of Bukan County, West Azerbaijan Province, Iran. At the 2006 census, its population was 204, in 30 families.\", \"score\": 0.81298828125}, {\"long_text\": \"Chapan, Iran\\nChapan (, also Romanized as Ch\u0101p\u0101n) is a village in Owch Hacha Rural District, in the Central District of Ahar County, East Azerbaijan Province, Iran. At the 2006 census, its population was 323, in 57 families.\", \"score\": 0.81396484375}, {\"long_text\": \"Chalaneh-ye Olya\\nChalaneh-ye Olya (, also Romanized as Chal\u0101neh-ye \u2018Oly\u0101; also known as Chal\u0101n\u012b-ye \u2018Oly\u0101 and Ch\u012bl\u0101neh-ye B\u0101l\u0101) is a village in Mansur-e Aqai Rural District, Shahu District, Ravansar County, Kermanshah Province, Iran. At the 2006 census, its population was 184, in 39 families.\", \"score\": 0.82177734375}, {\"long_text\": \"Chapan-e Olya\\nChapan-e Olya (, also Romanized as Ch\u0101p\u0101n-e \u2018Oly\u0101 and Ch\u0101p\u0101n \u2018Oly\u00e1; also known as Ch\u0101p\u0101n and Ch\u0101p\u0101n-e B\u0101l\u0101) is a village in Emam Rural District, Ziviyeh District, Saqqez County, Kurdistan Province, Iran. At the 2006 census, its population was 184, in 44 families.\", \"score\": 0.8291015625}]}\n\n[[ ## thought_0 ## ]]\nI will now analyze the passages to see if Chapan-E Olya and Cwrt Y Gollen are located in the same country.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Are Chapan-E Olya and Cwrt Y Gollen located in the same country?\", \"trajectory_id\": \"Chapan-E Olya and Cwrt Y Gollen\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Are Chapan-E Olya and Cwrt Y Gollen located in the same country?\", \"passages_this_hop\": [{\"long_text\": \"Kalenow-e Olya\\nKalenow-e Olya (, also Romanized as Kalenow-ye \u2018Oly\u0101; also known as Kalenow-ye B\u0101l\u0101) is a village in Birun Bashm Rural District, Kelardasht District, Chalus County, Mazandaran Province, Iran. At the 2006 census, its population was 666, in 167 families.\", \"score\": 0.81201171875}, {\"long_text\": \"Guytar-e Olya\\nGuytar-e Olya (, also Romanized as G\u016bytar-e \u2018Oly\u0101) is a village in Birun Bashm Rural District, Kelardasht District, Chalus County, Mazandaran Province, Iran. At the 2006 census, its population was 474, in 120 families.\", \"score\": 0.8125}, {\"long_text\": \"Kutan-e Olya\\nKutan-e Olya (, also Romanized as K\u016bt\u0101n-e \u2018Oly\u0101) is a village in Ansar Rural District, in the Central District of Takab County, West Azerbaijan Province, Iran. At the 2006 census, its population was 441, in 70 families.\", \"score\": 0.8125}, {\"long_text\": \"Chaman-e Golin\\nChaman-e Golin (, also Romanized as Chaman-e Gol\u012bn; also known as Chaman) is a village in Direh Rural District, in the Central District of Gilan-e Gharb County, Kermanshah Province, Iran. At the 2006 census, its population was 149, in 36 families.\", \"score\": 0.8125}, {\"long_text\": \"Chahar Qaleh-ye Olya\\nChahar Qaleh-ye Olya (, also Romanized as Chah\u0101r Qal\u2018eh-ye \u2018Oly\u0101) is a village in Kuhdasht-e Jonubi Rural District, in the Central District of Kuhdasht County, Lorestan Province, Iran. At the 2006 census, its population was 78, in 14 families.\", \"score\": 0.814453125}]}\n\n[[ ## thought_1 ## ]]\nBased on the analysis, it appears that Chapan-E Olya and Cwrt Y Gollen are located in different countries. Chapan-E Olya is in Iran, while Cwrt Y Gollen is in Wales, UK. This suggests that they are not located in the same country.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "Based on the analysis of the passages, it appears that Chapan-E Olya and Cwrt Y Gollen are located in different countries. Chapan-E Olya is in Iran, while Cwrt Y Gollen is in Wales, UK. This suggests that they are not located in the same country.",
+        "answer": "no"
+      },
+      {
+        "question": "Who is the spouse of the director of film Lord Of The Manor (Film)?",
+        "answer": "Chrissie White"
+      },
+      {
+        "question": "Are the directors of both films Mamay (film) and Dark Mountain (film) from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "When was the director of film Sword Of Honour (1939 Film) born?",
+        "answer": "11 November 1887"
+      },
+      {
+        "question": "What is the date of birth of Mina Gerhardsen's father?",
+        "answer": "13 June 1946"
+      },
+      {
+        "question": "Who is the uncle of Manuel Komnenos (Kouropalates)?",
+        "answer": "Isaac I Komnenos"
+      },
+      {
+        "question": "Where did the director of film Skinner Steps Out die?",
+        "answer": "Hollywood"
+      },
+      {
+        "question": "Who is Rhescuporis I (Odrysian)'s paternal grandfather?",
+        "answer": "Raizdos"
+      },
+      {
+        "question": "Are both villages, Beli\u0161evo and Datow Naseri, located in the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Which film was released more recently, Die sch\u00f6ne Lurette or Sabhash?",
+        "answer": "Sabhash"
+      },
+      {
+        "question": "Do both directors of films Bl\u00fccher (film) and The Good Old Soak have the same nationality?",
+        "answer": "no"
+      },
+      {
+        "question": "When was the director of film Mr. Moto Takes A Chance born?",
+        "answer": "December 13, 1903"
+      },
+      {
+        "question": "When is Martha Bulloch Roosevelt's husband's birthday?",
+        "answer": "September 22, 1831"
+      },
+      {
+        "question": "Do Rhescuporis Ii and Mcallister Hull share the same nationality?",
+        "answer": "no"
+      },
+      {
+        "question": "Where did the director of film The Right Of The Strongest die?",
+        "answer": "Los Angeles"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+    "model": {
+        "model_name_or_path": "../data/frugalrag/sft/colbert/musique/qwen7b/m5_0.90/Qwen_Qwen2.5-7B-Instruct",
+        "no_finish": false,
+        "max_iters": 5,
+        "max_tokens": 512,
+        "max_retries": 4
+    },
+    "data": {
+        "dataset_name": "musique",
+        "input_file": "datasets/musique_1000.json",
+        "num_examples": 1000
+    },
+    "paths": {
+        "output_path": "../data/frugalrag/grpo/colbert/musique/qwen7b/m5_0.90/",
+        "prompt_path": "src/prompts/colbert/musique/qwen7b/m5_nofinish/ans/bootstrapped_1.json",
+        "mb_logs": "../data/frugalrag/eval/sft/colbert/musique/qwen7b/train1000_m5_0.90/logs.json"
+    },
+    "search": {
+        "search_port": 8001,
+        "rm": "wiki20M",
+        "ndocs": 5
+    },
+    "grpo": {
+        "run_name": "colbert/musique/qwen7b/m5_0.90",
+        "max_steps": 400,
+        "dynamic_threshold": true,
+        "vllm_port": 8000
+    }
+}
