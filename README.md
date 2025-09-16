@@ -1,6 +1,6 @@
 # FrugalRAG
 
-**A novel Retrieval-Augmented-Generation framework for answering complex multi-hop question answering on a large corpus, focusing on inference-time efficiency.**
+**A novel Retrieval-Augmented-Generation framework for answering complex multi-hop questions on a large corpus, focusing on inference-time efficiency.**
 
 [![arXiv](https://img.shields.io/badge/arXiv-2507.07634-b31b1b.svg)](https://arxiv.org/abs/2507.07634)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
