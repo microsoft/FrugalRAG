@@ -292,7 +292,7 @@ torch==2.4.1
 tornado @ file:///croot/tornado_1718740109488/work
 tqdm==4.66.5
 traitlets @ file:///croot/traitlets_1718227057033/work
-transformers==4.44.2
+transformers==4.53.0
 triton==3.0.0
 trl==0.11.4
 typeguard==4.4.1
