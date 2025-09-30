@@ -1,0 +1,156 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Which film has the director who was born earlier, People To Each Other or Tali-Ihantala 1944?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Which film has the director who was born earlier, People To Each Other or Tali-Ihantala 1944?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Which film has the director who was born earlier, People To Each Other or Tali-Ihantala 1944?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Tali-Ihantala 1944\\\"\\nTali-Ihantala 1944 Tali-Ihantala 1944 is a 2007 Finnish war film directed by Åke Lindman and Sakari Kirjavainen, based on the Battle of Tali-Ihantala. Filming began during the summer of 2006 and was screened in autumn 2007. Lindman wanted the film to be as real as possible, and only include facts. He also wanted Finns to remember the sacrifices the soldiers made in those battles. The film received 350,000 euros in production support from the Finnish Film Foundation. The organization created to raise money for the movie was led by Admiral Jan Klenberg and was protected by former Finnish President Mauno\", \"score\": 0.8212890625}, {\"long_text\": \"\\\"Tali-Ihantala 1944\\\"\\ntargeted at the lack of main characters and a proper plot. Tali-Ihantala 1944 Tali-Ihantala 1944 is a 2007 Finnish war film directed by Åke Lindman and Sakari Kirjavainen, based on the Battle of Tali-Ihantala. Filming began during the summer of 2006 and was screened in autumn 2007. Lindman wanted the film to be as real as possible, and only include facts. He also wanted Finns to remember the sacrifices the soldiers made in those battles. The film received 350,000 euros in production support from the Finnish Film Foundation. The organization created to raise money for the movie was led by\", \"score\": 0.82080078125}, {\"long_text\": \"Tirru\\nTirru S. Thirunavukarasu (born 2 June 1966), better known mononymously as Tirru, is an Indian cinematographer from Tamil Nadu. He received the National Film Award for Best Cinematography for his work in \\\"\\\"24\\\"\\\" (2017). Born in Mullukuruchi a village, he became interested in photography whilst studying science in college. He assisted his cousin, a dentist by profession, in the latter's passion for nature photography. He is married to an architect in Chennai and they have two children. Tirru's films are predominantly in the Tamil, Malayalam and Hindi languages. He had initially worked as an associate to cinematographer P. C. Sreeram.\", \"score\": 0.80126953125}, {\"long_text\": \"Vallal\\nVallal Vallal is an Indian Tamil film released in 1997. This movie is directed by Raj Kapoor. This is a comedy and a family subject movie. This movie is starring Sathyaraj, Meena, Manorama, Goundamani, Senthil & Sangeetha in the lead. This movie has the village concept. It looked like director Raj Kapoor had the potential plot to build up on his story-line. The film was remade in Telugu as \\\"\\\"Rayudu\\\"\\\" with Mohan Babu playing the lead role. This movie is about Sathyaraj who loves Roja one-sided and she marries her uncle. Once Manivannan & Roja's husband get into a fight.\", \"score\": 0.79345703125}, {\"long_text\": \"\\\"Lasse Pöysti\\\"\\nLasse Pöysti Lasse Erik Pöysti (born 24 January 1927) is a Finnish actor, director, theatre manager and writer. He was born in Sortavala. Pöysti began his career as a child actor, becoming known to the Finnish public as Olli Suominen in the \\\"\\\"Suominen family\\\"\\\" films. The first of these films as \\\"\\\"Suomisen perhe\\\"\\\" (1941). Pöysti was 14 years old at the time of the film. Pöysti matriculated in 1945 in the Helsinki Normal Lyceum. From 1967 to 1974, Pöysti served as manager of the Lilla Teatern, with his current ex-wife Birgitta Ulfsson, and also acted in many roles in Swedish.\", \"score\": 0.79296875}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages, I can see that \"People To Each Other\" and \"Tali-Ihantala 1944\" are both films, but their directors are not mentioned directly. I need to find more information about their directors' birth dates.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"director of People To Each Other and Tali-Ihantala 1944 birth date\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"director of People To Each Other and Tali-Ihantala 1944 birth date\", \"passages_this_hop\": [{\"long_text\": \"\\\"Eppu Nuotio\\\"\\nNuotio became a Goodwill Ambassador for UNICEF. She has expressed her concern about sufficiency of potable water in developing countries. In 2008 she made her first trip to Africa to visit people in need. Eppu Nuotio is married to the Finnish stage director Kurt Nuotio (born 1939). His native language is Swedish. They have three children. The Nuotio family lives on a small island called Hiittinen in the south-western archipelago of Finland ca 130 kilometers west of Helsinki. Eppu Nuotio Eppu Nuotio (born Eija-Riitta Silvennoinen, 13 February 1962 in Iisalmi, Finland) is a Finnish actress, author, screenwriter, playwright and columnist.\", \"score\": 0.8125}, {\"long_text\": \"\\\"Auli Mantila\\\"\\nIn recent years, she has mostly worked as a producer and a consultant for a number of short subjects and documentaries. In 2011, Arts Council of Finland nominated Mantila as Artist Professor of Film Art for the period of 2012–2016. Mantila has stated that her work as a director has helped her to get to know more of human nature. Through her work, she also aims to help people put their best foot forward. Auli Mantila Auli Mantila (born 27 May 1964) is a Finnish film director, writer, producer and actress. Mantila is best known for having directed the films\", \"score\": 0.8037109375}, {\"long_text\": \"\\\"Auli Mantila\\\"\\nAuli Mantila Auli Mantila (born 27 May 1964) is a Finnish film director, writer, producer and actress. Mantila is best known for having directed the films \\\"\\\"Neitoperho\\\"\\\" (1997), \\\"\\\"Pelon maantiede\\\"\\\" (2000) and \\\"\\\"Ystäväni Henry\\\"\\\" (2004). In addition, she has appeared as an actress in Juho Kuosmanen's film \\\"\\\"Taulukauppiaat\\\"\\\" (2010). In October 2008, she won a Prix Europa trophy for best drama series for directing a television series \\\"\\\"Hopeanuolet.\\\"\\\" Mantila's first novel \\\"\\\"Varpunen\\\"\\\" was published in 2005. She has also written and directed for Finnish radio. Originally Auli Mantila studied to become a class teacher, but soon switched to art education.\", \"score\": 0.7978515625}, {\"long_text\": \"\\\"Artur Talvik\\\"\\nArtur Talvik Artur Talvik (born 13 June 1964) is an Estonian politician, film director, film producer, and screenwriter. He is a member of the Riigikogu and a former member of the Estonian Free Party. Talvik is the son of and , a television director and television journalist, respectively. He graduated from the Estonian Academy of Music and Theatre in 1988 and starting in 1992, was an actor at Nukuteater. He later became a prolific filmmaker, directing and producing movies all throughout the 1990s and 2000s, most notably \\\"\\\"Vene metalli ja US $ suudlus\\\"\\\", \\\"\\\"Ööliblika jõulud\\\"\\\", \\\"\\\"Ūdensbumba resnajam runcim\\\"\\\" (Estonian: Veepomm\", \"score\": 0.79541015625}, {\"long_text\": \"\\\"Heikki Nousiainen\\\"\\nHeikki Nousiainen Heikki Nousiainen (born 19 June 1945 in Helsinki, Finland) is a Finnish film and television actor. Nousiainen made his acting debut in the television movie Henrik ja Perinlla in 1967. He entered film in 1971, as both a director and an actor in \\\"\\\"Saatanan radikaalit\\\"\\\" and has made over 40 Finnish film and TV appearances to date. He has worked with Finnish director Timo Koivusalo on a number of films such as \\\"\\\"Sibelius\\\"\\\" in 2003 and \\\"\\\"Kaksipäisen kotkan varjossa\\\"\\\" (2005), as well as in other Finnish movies and TV series. In 2006 he starred in 3 different films.\", \"score\": 0.79541015625}]}\n\n[[ ## thought_1 ## ]]\nThe search results provide information about directors, but not specifically about the directors of \"People To Each Other\" and \"Tali-Ihantala 1944\". I need to refine my search query to target these specific directors.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"director of People To Each Other and Tali-Ihantala 1944\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"director of People To Each Other and Tali-Ihantala 1944\", \"passages_this_hop\": [{\"long_text\": \"\\\"Elmo Nüganen\\\"\\nElmo Nüganen Elmo Nüganen (born 15 February 1962 in Jõhvi) is an Estonian theatre director, film director and actor. He has been the artistic director of the Tallinn City Theatre since 1992. He was a graduate of the Estonian Academy of Music and Theatre in 1988 and then a professor at the academy in 1998-2002 and 2008-2012. He directed the war films \\\"\\\"Names in Marble\\\"\\\" from 2002 and \\\"\\\"1944\\\"\\\" from 2015. \\\"\\\"1944\\\"\\\" had the highest opening-week audience numbers in Estonian film history and became the country's submission for the Academy Awards. Nüganen has received multiple awards for his work in\", \"score\": 0.806640625}, {\"long_text\": \"\\\"Ville-Veikko Salminen\\\"\\nVille-Veikko Salminen Ville-Veikko Salminen (23 August 1937, Turku - 16 January 2006) was a Finnish film, television, stage actor and director. He was one of the founders of the acting companies for both Yleisradio and Mainostelevisio. He is best remembered for his roles in the films of Spede Pasanen, often playing a handsome, suave womanizer - but also had an extensive career in films and TV outside his films. Salminen was the son of famed Finnish filmmaker Ville Salminen and brother of cinematographer Timo Salminen. Salminen was briefly married to Laila Kinnunen, one of the most famous Finnish singers of\", \"score\": 0.802734375}, {\"long_text\": \"\\\"Ville-Veikko Salminen\\\"\\nthe 1950s and 1960s. Ville-Veikko Salminen Ville-Veikko Salminen (23 August 1937, Turku - 16 January 2006) was a Finnish film, television, stage actor and director. He was one of the founders of the acting companies for both Yleisradio and Mainostelevisio. He is best remembered for his roles in the films of Spede Pasanen, often playing a handsome, suave womanizer - but also had an extensive career in films and TV outside his films. Salminen was the son of famed Finnish filmmaker Ville Salminen and brother of cinematographer Timo Salminen. Salminen was briefly married to Laila Kinnunen, one of the most\", \"score\": 0.802734375}, {\"long_text\": \"\\\"Tali Rights\\\"\\nof the board from 2008 to 2012) and the director Ori Inbar who initiated the struggle for recognizing the director as author (chairman of the board until 2005) . The shareholders of TALI are the artists themselves, with each screenwriter and director, veteran and newcomer alike, holding an equal share. TALI manages the public performance rights, leasing rights, broadcast rights and public access rights, as well as the rights to collect blank media levies with regard to the screenplays and directed works of its members. TALI collects royalties for the use of its members' works within the State of Israel\", \"score\": 0.80224609375}, {\"long_text\": \"\\\"Valentin Vaala\\\"\\ndirecting and one for screenwriting. One of the directing awards was given jointly for \\\"\\\"Dynamiittityttö\\\"\\\" and \\\"\\\"Linnaisten vihreä kamari\\\"\\\" in 1945, the others were for \\\"\\\"Loviisa, Niskavuoren nuori emäntä\\\"\\\" (1946) and \\\"\\\"Omena putoaa\\\"\\\" (1952). He earned the lone screenwriting award with \\\"\\\"Ihmiset suviyössä\\\"\\\" (1946). Valentin Vaala Valentin Vaala (born Valentin Ivanoff) (13 October 1909 in Helsinki – 21 November 1976 in Helsinki) was a Finnish film director, screenwriter and editor. His career spanned several decades, from 1929 to 1973, and has been called one of the most significant, in both quality and popularity, in the history of Finnish cinema. As\", \"score\": 0.80224609375}]}\n\n[[ ## thought_2 ## ]]\nFrom the search results, I can see that the director of 'Tali-Ihantala 1944' is Åke Lindman and Sakari Kirjavainen, while the director of 'People To Each Other' is Elmo Nüganen. Now, I need to find the birth dates of these directors to determine who was born earlier.\n\n[[ ## tool_name_2 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_2 ## ]]\n{\"search_query\": \"birth date of Åke Lindman and Sakari Kirjavainen, Elmo Nüganen\"}\n\n[[ ## observation_2 ## ]]\n{\"search_query\": \"birth date of Åke Lindman and Sakari Kirjavainen, Elmo Nüganen\", \"passages_this_hop\": [{\"long_text\": \"\\\"Elmo Nüganen\\\"\\ntheatre, including the Estonian Annual Theatre Award for Best Director in 1992, 1995, 2000, 2007 and 2010, and the Estonian National Cultural Award in 1996, 1999 and 2009. Nüganen is married to actress Anne Reemann. They have three daughters, Saara, Maria-Netti and Sonja. Elmo Nüganen Elmo Nüganen (born 15 February 1962 in Jõhvi) is an Estonian theatre director, film director and actor. He has been the artistic director of the Tallinn City Theatre since 1992. He was a graduate of the Estonian Academy of Music and Theatre in 1988 and then a professor at the academy in 1998-2002 and 2008-2012.\", \"score\": 0.82958984375}, {\"long_text\": \"\\\"Åke Lindman\\\"\\nÅke Lindman Åke Leonard Lindman (11 January 1928 in Helsinki – 3 March 2009), born Åke Leonard Järvinen, was a Finnish director and actor. In his youth Lindman was a football player, playing defence for the Finnish national team during the Olympics in Helsinki 1952. He represented the football club HIFK in the Finnish league. In the 1960s, the British Football League club Swindon Town F.C. wanted to sign him, but he turned them down to focus on his acting career. Åke Lindman's breakthrough as an actor came with his role as the stubborn soldier Lehto in Edvin Laine's movie\", \"score\": 0.8193359375}, {\"long_text\": \"\\\"Eric Carlberg\\\"\\nEric Carlberg Gustaf Eric Carlberg (5 April 1880 – 14 August 1963) was a Swedish Army officer, diplomat, sport shooter, fencer, and modern pentathlete who competed at the 1906, 1908, 1912 and 1924 Olympics alongside his twin brother Vilhelm. Eric and Vilhelm were the youngest of four children of a veterinarian, who died when they were 12 years old. The twins became military officers in 1901 and retired in the rank of major. In 1911 they became physical education instructors. In 1924 Eric married Elsa Lindell and was stationed for three years in Iran as part of the newly established\", \"score\": 0.8115234375}, {\"long_text\": \"\\\"Åke Lindman\\\"\\n\\\"\\\"The Unknown Soldier\\\"\\\" from 1955. Later, he would also achieve fame as captain Torsten Jansson in the Swedish soap opera \\\"\\\"Rederiet\\\"\\\". Lindman also found success as the director of, amongst others, the TV-series \\\"\\\"Stormskärs Maja\\\"\\\" and the movie \\\"\\\"Framom främsta linjen\\\"\\\", a movie about the Finland-Swedish infantry regiment 61 during the defence of the Karelian Isthmus in 1944. His last film was the war movie \\\"\\\"Tali-Ihantala 1944\\\"\\\". Lindman won two Jussi Awards, one for best director in 1988 and a Lifetime Achievement award in 2008. Åke Lindman Åke Leonard Lindman (11 January 1928 in Helsinki – 3 March 2009), born\", \"score\": 0.81005859375}, {\"long_text\": \"\\\"Arvid Lindman\\\"\\n1911 and from 1928 to 1930, spanned the introduction of parliamentarianism and universal suffrage. Lindman married Annie Almström in 1888, with whom he had three children. He was a cousin of Alex Lindman. Arvid Lindman was born in Österbybruk, Sweden, the son of managing director Achates Lindman and Ebba Dahlgren. His career as a naval officer 1882–92 reached its peak in 1907 when he was appointed as Rear Admiral in the naval reserve. During his political career following this he became known primarily as \\\"\\\"the Admiral\\\"\\\". Lindman was CEO of Iggesunds Bruk from 1892 to 1903 and of Strömbacka bruks\", \"score\": 0.8095703125}]}\n\n[[ ## thought_3 ## ]]\nI have found the birth dates of the directors: Åke Lindman was born on 11 January 1928 and Sakari Kirjavainen is not mentioned. For Elmo Nüganen, the birth date is 15 February 1962. Now, I can determine which director was born earlier.\n\n[[ ## tool_name_3 ## ]]\nfinish\n\n[[ ## tool_args_3 ## ]]\n{}\n\n[[ ## observation_3 ## ]]\nCompleted.",
+        "reasoning": "The birth date of Åke Lindman is 11 January 1928 and the birth date of Elmo Nüganen is 15 February 1962. Therefore, Åke Lindman was born earlier.",
+        "answer": "People To Each Other"
+      },
+      {
+        "question": "Which country the performer of song Miss Brown To You is from?",
+        "answer": "American"
+      },
+      {
+        "question": "What is the date of birth of the director of film You'Re My Everything (Film)?",
+        "answer": "August 10, 1896"
+      },
+      {
+        "question": "Are Samalá River and Itter (Eder) located in the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Which film came out first, A Hill In Korea or Ek Anek Aur Ekta?",
+        "answer": "A Hill In Korea"
+      },
+      {
+        "question": "What nationality is the director of film Arcade (Film)?",
+        "answer": "America"
+      },
+      {
+        "question": "Are both businesses, Vakıfbank and Infopro Sdn Bhd, located in the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Are both villages, Beliševo and Datow Naseri, located in the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Are the directors of both films Mamay (film) and Dark Mountain (film) from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Who is the uncle of Manuel Komnenos (Kouropalates)?",
+        "answer": "Isaac I Komnenos"
+      },
+      {
+        "question": "Where was the director of film Rubber Racketeers born?",
+        "answer": "Portland, Oregon"
+      },
+      {
+        "question": "Do both directors of films The Troublemaker (1964 Film) and Father'S Doing Fine have the same nationality?",
+        "answer": "no"
+      },
+      {
+        "question": "What nationality is the director of film Wedding Night In Paradise (1950 Film)?",
+        "answer": "Hungarian"
+      },
+      {
+        "question": "Did the movies Find the Woman and Two Is a Family, originate from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Are Fernand Backes and Tom Carew both from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Are the movies Made (2001 Film) and Proud Flesh (Film), from the same country?",
+        "answer": "yes"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

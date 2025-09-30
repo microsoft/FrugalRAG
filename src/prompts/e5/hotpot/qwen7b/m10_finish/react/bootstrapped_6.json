@@ -1,0 +1,287 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What was founded first, Death Cab for Cutie or P.O.D.?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What was founded first, Death Cab for Cutie or P.O.D.?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What was founded first, Death Cab for Cutie or P.O.D.?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Death Cab for Cutie\\\"\\nwas in turn taken from an invented pulp fiction crime magazine, devised by the English academic Richard Hoggart in his 1957 study of working class culture, \\\"\\\"The Uses of Literacy\\\"\\\". In a 2011 interview, Gibbard stated, \\\"\\\"The name was never supposed to be something that someone was going to reference 15 years on. So yeah, I would absolutely go back and give it a more obvious name.\\\"\\\" Current members Former members Timeline Studio albums Grammy Award MTV Video Music Award Death Cab for Cutie Death Cab for Cutie is an American alternative rock band, formed in Bellingham, Washington, in 1997.\", \"score\": 0.8447265625}, {\"long_text\": \"\\\"Death Cab for Cutie discography\\\"\\nDeath Cab for Cutie discography Death Cab for Cutie has released nine studio albums, five extended plays (EPs), a demo tape, a digital album, one live album, fifteen singles, nine music videos, and two DVDs. Death Cab for Cutie is an American indie rock group from Bellingham, Washington and was formed in 1997 by Ben Gibbard as a side project from Pinwheel. After releasing a demo tape, he added guitarist Chris Walla, bassist Nick Harmer, and drummer Nathan Good to the band. Death Cab signed to Barsuk Records and released four extended plays (EPs) and four studio albums through the\", \"score\": 0.8359375}, {\"long_text\": \"\\\"Death Cab for Cutie discography\\\"\\nDeath Cab for Cutie recorded with The Postal Service, \u00a1All-Time Quarterback! or other side projects. Death Cab for Cutie discography Death Cab for Cutie has released nine studio albums, five extended plays (EPs), a demo tape, a digital album, one live album, fifteen singles, nine music videos, and two DVDs. Death Cab for Cutie is an American indie rock group from Bellingham, Washington and was formed in 1997 by Ben Gibbard as a side project from Pinwheel. After releasing a demo tape, he added guitarist Chris Walla, bassist Nick Harmer, and drummer Nathan Good to the band. Death Cab signed\", \"score\": 0.8359375}, {\"long_text\": \"\\\"Death Cab for Cutie\\\"\\nDeath Cab for Cutie Death Cab for Cutie is an American alternative rock band, formed in Bellingham, Washington, in 1997. The band is composed of Ben Gibbard (vocals, guitar, piano), Nick Harmer (bass), Dave Depper (guitar, keyboards, vocals), Zac Rae (keyboards, guitar), and Jason McGerr (drums). The band was originally a solo project by Gibbard. Upon getting a record deal, he expanded the project into a complete band, which released a debut album, \\\"\\\"Something About Airplanes\\\"\\\", in 1998. The group's fourth album, 2003's \\\"\\\"Transatlanticism\\\"\\\", broke into the mainstream both critically and commercially, with songs from the album featured in numerous\", \"score\": 0.83349609375}, {\"long_text\": \"\\\"Death Cab for Cutie\\\"\\nperformed by their group the Bonzo Dog Doo-Dah Band. See \\\"\\\"Name\\\"\\\" section. Death Cab for Cutie began in 1997 as a solo project by Ben Gibbard when he was a guitarist for the band Pinwheel. He recorded under the name All-Time Quarterback. As Death Cab for Cutie, he released a cassette titled \\\"\\\"You Can Play These Songs with Chords\\\"\\\" during the same year. The release was surprisingly successful, and he decided to expand the project into a band, hiring Chris Walla (who worked on the cassette) on guitar, Nick Harmer on bass guitar, and Nathan Good on drums. Death Cab\", \"score\": 0.828125}]}",
+        "next_thought": "From the search results, I found that Death Cab for Cutie was formed in 1997. However, I need to find information about P.O.D.'s formation date to compare them.",
+        "next_tool_name": "AdvancedSearch",
+        "next_tool_args": {
+          "search_query": "formation date of P.O.D."
+        }
+      },
+      {
+        "question": "Who played the part of the Marquis de Sade in the film for which Martin Childs was nominated for an award at the 74th Academy Awards?",
+        "answer": "Geoffrey Rush",
+        "dspy_uuid": "3c27ce61-2da7-435c-920f-6056cbe6aecb",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The Knicks\u2013Nuggets was the most penalized on-court fight in the NBA since an altercation that occured in what city?",
+        "answer": "Auburn Hills",
+        "dspy_uuid": "96e0b50f-9d6e-4ffb-a8c2-f97e6b5fcbbb",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which major river is Buford, North Dakota nearest to?",
+        "answer": "the Missouri River",
+        "dspy_uuid": "a51a9428-1277-4d4a-854c-90dfbe935353",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What U.S. court presided over both the Slaughter-House Cases and Reed v. Reed?",
+        "answer": "the Supreme Court",
+        "dspy_uuid": "80f79300-8e38-40fc-bf8c-ea9c50cd7443",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Ryan Blair plays at midfield for which Welsh football club?",
+        "answer": "Swansea City",
+        "dspy_uuid": "7f12ae56-dea4-46bb-86a1-4bd45307ed4f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "When considering the two peaks known as Noijin Kangsang and Masherbrum, which of them has the greatest height related to their respected ranges?",
+        "answer": "Noijin Kangsang",
+        "dspy_uuid": "e36b9590-1907-412e-842d-04896473cf8a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What type of person does Prime Minister of Hungary and Viktor Orb\u00e1n have in common?",
+        "answer": "leader",
+        "dspy_uuid": "69db666d-8de7-4562-b52b-8c65cbc22a3b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who directed the 1987 romantic drama dance film that is directly parodied by the television film \"Totally Awesome\"?",
+        "answer": "Emile Ardolino",
+        "dspy_uuid": "9697ac9d-8f90-4cc9-8d23-2d5d55a7ec5e",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who did Holly Dunn record \"Daddy's Hands\" for?",
+        "answer": "MTM Records",
+        "dspy_uuid": "85abc8dc-7599-4da1-a412-73c813a969a2",
+        "dspy_split": "train"
+      },
+      {
+        "question": "That Darn Cat! and Never a Dull Moment were both produced by what studio?",
+        "answer": "Walt Disney Productions",
+        "dspy_uuid": "5ff958f7-e3f9-40d2-bcc9-50852bf0929d",
+        "dspy_split": "train"
+      },
+      {
+        "question": "So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?",
+        "answer": "The Wizard of Oz",
+        "dspy_uuid": "9f673c9a-10ab-419d-a262-d232ca1bb345",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which band from East London had Steve Marriott as a band member?",
+        "answer": "Small Faces",
+        "dspy_uuid": "0bc109a6-2ca4-4367-b247-4ce3024d5bf9",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Eleni Karinte was the first love Monastir student who was born in what year?",
+        "answer": "1881",
+        "dspy_uuid": "88846f6c-7d8e-48b5-8b80-2f5241fc8584",
+        "dspy_split": "train"
+      },
+      {
+        "question": "what song is in the movie directed by Paul Hoen based on the novel \"if I had one wish\"?",
+        "answer": "\"World of Our Own\"",
+        "dspy_uuid": "b62992fe-d9b5-4519-be31-8104d146012d",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What year did the war during which Pompiliu \u0218tefu was executed end?",
+        "answer": "1945",
+        "dspy_uuid": "6a54da30-6b43-4692-9d5e-f058c9e0a28d",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!<\/desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.<\/desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What was founded first, Death Cab for Cutie or P.O.D.?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What was founded first, Death Cab for Cutie or P.O.D.?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What was founded first, Death Cab for Cutie or P.O.D.?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Death Cab for Cutie\\\"\\nwas in turn taken from an invented pulp fiction crime magazine, devised by the English academic Richard Hoggart in his 1957 study of working class culture, \\\"\\\"The Uses of Literacy\\\"\\\". In a 2011 interview, Gibbard stated, \\\"\\\"The name was never supposed to be something that someone was going to reference 15 years on. So yeah, I would absolutely go back and give it a more obvious name.\\\"\\\" Current members Former members Timeline Studio albums Grammy Award MTV Video Music Award Death Cab for Cutie Death Cab for Cutie is an American alternative rock band, formed in Bellingham, Washington, in 1997.\", \"score\": 0.8447265625}, {\"long_text\": \"\\\"Death Cab for Cutie discography\\\"\\nDeath Cab for Cutie discography Death Cab for Cutie has released nine studio albums, five extended plays (EPs), a demo tape, a digital album, one live album, fifteen singles, nine music videos, and two DVDs. Death Cab for Cutie is an American indie rock group from Bellingham, Washington and was formed in 1997 by Ben Gibbard as a side project from Pinwheel. After releasing a demo tape, he added guitarist Chris Walla, bassist Nick Harmer, and drummer Nathan Good to the band. Death Cab signed to Barsuk Records and released four extended plays (EPs) and four studio albums through the\", \"score\": 0.8359375}, {\"long_text\": \"\\\"Death Cab for Cutie discography\\\"\\nDeath Cab for Cutie recorded with The Postal Service, \u00a1All-Time Quarterback! or other side projects. Death Cab for Cutie discography Death Cab for Cutie has released nine studio albums, five extended plays (EPs), a demo tape, a digital album, one live album, fifteen singles, nine music videos, and two DVDs. Death Cab for Cutie is an American indie rock group from Bellingham, Washington and was formed in 1997 by Ben Gibbard as a side project from Pinwheel. After releasing a demo tape, he added guitarist Chris Walla, bassist Nick Harmer, and drummer Nathan Good to the band. Death Cab signed\", \"score\": 0.8359375}, {\"long_text\": \"\\\"Death Cab for Cutie\\\"\\nDeath Cab for Cutie Death Cab for Cutie is an American alternative rock band, formed in Bellingham, Washington, in 1997. The band is composed of Ben Gibbard (vocals, guitar, piano), Nick Harmer (bass), Dave Depper (guitar, keyboards, vocals), Zac Rae (keyboards, guitar), and Jason McGerr (drums). The band was originally a solo project by Gibbard. Upon getting a record deal, he expanded the project into a complete band, which released a debut album, \\\"\\\"Something About Airplanes\\\"\\\", in 1998. The group's fourth album, 2003's \\\"\\\"Transatlanticism\\\"\\\", broke into the mainstream both critically and commercially, with songs from the album featured in numerous\", \"score\": 0.83349609375}, {\"long_text\": \"\\\"Death Cab for Cutie\\\"\\nperformed by their group the Bonzo Dog Doo-Dah Band. See \\\"\\\"Name\\\"\\\" section. Death Cab for Cutie began in 1997 as a solo project by Ben Gibbard when he was a guitarist for the band Pinwheel. He recorded under the name All-Time Quarterback. As Death Cab for Cutie, he released a cassette titled \\\"\\\"You Can Play These Songs with Chords\\\"\\\" during the same year. The release was surprisingly successful, and he decided to expand the project into a band, hiring Chris Walla (who worked on the cassette) on guitar, Nick Harmer on bass guitar, and Nathan Good on drums. Death Cab\", \"score\": 0.828125}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, I found that Death Cab for Cutie was formed in 1997. However, I need to find information about P.O.D.'s formation date to compare them.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"formation date of P.O.D.\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"formation date of P.O.D.\", \"passages_this_hop\": [{\"long_text\": \"P.O.D.\\nP.O.D. Payable on Death (abbreviated P.O.D.) is an American Christian nu metal band formed in 1992 and based in San Diego, California. The band's line-up consists of vocalist Sonny Sandoval, drummer and rhythm guitarist Wuv Bernardo, lead guitarist Marcos Curiel, and bassist Traa Daniels. They have sold over 12 million records worldwide. Over the course of their career, the band has received three Grammy Award nominations, contributed to numerous motion picture soundtracks and toured internationally. With their third studio album, \\\"\\\"The Fundamental Elements of Southtown\\\"\\\", they achieved their initial mainstream success; the album was certified platinum by the RIAA in\", \"score\": 0.82421875}, {\"long_text\": \"\\\"P.O.P (band)\\\"\\nP.O.P (band) P.O.P (; Abbreviation for: Puzzle Of POP; stylized as POP) is a South Korean girl group formed by DWM Entertainment in 2017. The group debuted on July 26, 2017, with the \\\"\\\"Puzzle Of POP\\\"\\\". On August 1, it was revealed by DWM Entertainment that Yeonha would be taking a break from group activities due to her busy schedule and was in a poor condition. Yeonha, at the time, was being tested for Myasthenia gravis (a neuromuscular disease). On October 24, it was revealed by Ministry Health officials that Yeonha had terminated her contract with DWM Entertainment due to\", \"score\": 0.8203125}, {\"long_text\": \"\\\"Sonny Sandoval\\\"\\nSonny Sandoval Paul Joshua \\\"\\\"Sonny\\\"\\\" Sandoval (born May 16, 1974) is an American singer and rapper. He is best known as co-founder and the lead vocalist of the rock band P.O.D. Over the course of their career, the band has received three Grammy Award nominations, contributed to numerous motion picture soundtracks and toured internationally. They have sold over 12 million records worldwide. With their third studio album, \\\"\\\"The Fundamental Elements of Southtown\\\"\\\", they achieved their initial mainstream success; the album was certified platinum by the RIAA in 2000. Sandoval was born in San Diego, California. He grew up in the\", \"score\": 0.8193359375}, {\"long_text\": \"\\\"L.A.P.I.D.A. (LPD)\\\"\\nL.A.P.I.D.A. (LPD) LPD formerly known as L.A.P.I.D.A. (LPD), is a band from Monterrey, Mexico which started on 6 January 1999, formed by three young brothers, Juan Ramon Lopez Ibarra, Jorge Luis Lopez Ibarra, Jose Antonio Lopez Ibarra at the ages of 15, 13, 10. Significantly they started appearances with bands such as Arlequin, Plomo, CARAJO (A.N.I.M.A.L.), La flor de lingo, IRA, Disgorge, Pulsion, among others, into Monterrey and Guadalupe counties to play their music. Later they were at the first year of being played. They were recommended by two man headers for a public forum at mercado fundadores place located\", \"score\": 0.81689453125}, {\"long_text\": \"P.O.D.\\n24-7 Spyz, and Steel Pulse. Current members Former members Touring musicians Former touring musicians Timeline American Music Awards Echo Awards San Diego Music Awards \\\"\\\"Note: Album- and single-specific awards and nominations are listed under their respective articles.\\\"\\\" P.O.D. Payable on Death (abbreviated P.O.D.) is an American Christian nu metal band formed in 1992 and based in San Diego, California. The band's line-up consists of vocalist Sonny Sandoval, drummer and rhythm guitarist Wuv Bernardo, lead guitarist Marcos Curiel, and bassist Traa Daniels. They have sold over 12 million records worldwide. Over the course of their career, the band has received three\", \"score\": 0.81689453125}]}\n\n[[ ## thought_1 ## ]]\nBased on the search results, P.O.D. was formed in 1992, while Death Cab for Cutie was formed in 1997. Therefore, P.O.D. was founded first.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "P.O.D., an American Christian nu metal band, was formed in 1992. Death Cab for Cutie, an American alternative rock band, was formed in 1997. Therefore, P.O.D. was founded first.",
+        "answer": "P.O.D."
+      },
+      {
+        "question": "Ryan Blair plays at midfield for which Welsh football club?",
+        "answer": "Swansea City",
+        "dspy_uuid": "7f12ae56-dea4-46bb-86a1-4bd45307ed4f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which major river is Buford, North Dakota nearest to?",
+        "answer": "the Missouri River",
+        "dspy_uuid": "a51a9428-1277-4d4a-854c-90dfbe935353",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Eleni Karinte was the first love Monastir student who was born in what year?",
+        "answer": "1881",
+        "dspy_uuid": "88846f6c-7d8e-48b5-8b80-2f5241fc8584",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The Knicks\u2013Nuggets was the most penalized on-court fight in the NBA since an altercation that occured in what city?",
+        "answer": "Auburn Hills",
+        "dspy_uuid": "96e0b50f-9d6e-4ffb-a8c2-f97e6b5fcbbb",
+        "dspy_split": "train"
+      },
+      {
+        "question": "That Darn Cat! and Never a Dull Moment were both produced by what studio?",
+        "answer": "Walt Disney Productions",
+        "dspy_uuid": "5ff958f7-e3f9-40d2-bcc9-50852bf0929d",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What year did the war during which Pompiliu \u0218tefu was executed end?",
+        "answer": "1945",
+        "dspy_uuid": "6a54da30-6b43-4692-9d5e-f058c9e0a28d",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who did Holly Dunn record \"Daddy's Hands\" for?",
+        "answer": "MTM Records",
+        "dspy_uuid": "85abc8dc-7599-4da1-a412-73c813a969a2",
+        "dspy_split": "train"
+      },
+      {
+        "question": "what song is in the movie directed by Paul Hoen based on the novel \"if I had one wish\"?",
+        "answer": "\"World of Our Own\"",
+        "dspy_uuid": "b62992fe-d9b5-4519-be31-8104d146012d",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who directed the 1987 romantic drama dance film that is directly parodied by the television film \"Totally Awesome\"?",
+        "answer": "Emile Ardolino",
+        "dspy_uuid": "9697ac9d-8f90-4cc9-8d23-2d5d55a7ec5e",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who played the part of the Marquis de Sade in the film for which Martin Childs was nominated for an award at the 74th Academy Awards?",
+        "answer": "Geoffrey Rush",
+        "dspy_uuid": "3c27ce61-2da7-435c-920f-6056cbe6aecb",
+        "dspy_split": "train"
+      },
+      {
+        "question": "When considering the two peaks known as Noijin Kangsang and Masherbrum, which of them has the greatest height related to their respected ranges?",
+        "answer": "Noijin Kangsang",
+        "dspy_uuid": "e36b9590-1907-412e-842d-04896473cf8a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What type of person does Prime Minister of Hungary and Viktor Orb\u00e1n have in common?",
+        "answer": "leader",
+        "dspy_uuid": "69db666d-8de7-4562-b52b-8c65cbc22a3b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which band from East London had Steve Marriott as a band member?",
+        "answer": "Small Faces",
+        "dspy_uuid": "0bc109a6-2ca4-4367-b247-4ce3024d5bf9",
+        "dspy_split": "train"
+      },
+      {
+        "question": "So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?",
+        "answer": "The Wizard of Oz",
+        "dspy_uuid": "9f673c9a-10ab-419d-a262-d232ca1bb345",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What U.S. court presided over both the Slaughter-House Cases and Reed v. Reed?",
+        "answer": "the Supreme Court",
+        "dspy_uuid": "80f79300-8e38-40fc-bf8c-ea9c50cd7443",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

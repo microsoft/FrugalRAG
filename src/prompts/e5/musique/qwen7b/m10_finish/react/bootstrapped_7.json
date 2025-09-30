@@ -1,0 +1,225 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "In which year did the publisher of Roald Dahl's Guide to Railway Safety cease to exist?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"In which year did the publisher of Roald Dahl's Guide to Railway Safety cease to exist?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"In which year did the publisher of Roald Dahl's Guide to Railway Safety cease to exist?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Roald Dahl's Guide to Railway Safety\\\"\\nRoald Dahl's Guide to Railway Safety Roald Dahl's Guide to Railway Safety was published in 1991 by the British Railways Board. The British Railways Board had asked Roald Dahl to write the text of the booklet, and Quentin Blake to illustrate it, to help young people enjoy using the railways safely. The booklet is structured as a conversation with children. In the introduction, Dahl laments that adults are always telling children what to do and what not to do, and says he would not have agreed to write the booklet, which tells children what to do, if not for the\", \"score\": 0.88623046875}, {\"long_text\": \"\\\"Roald Dahl's Guide to Railway Safety\\\"\\nto pupils in 1991, often alongside video presentations of railway safety films, such as \\\"\\\"Robbie\\\"\\\". Roald Dahl's Guide to Railway Safety Roald Dahl's Guide to Railway Safety was published in 1991 by the British Railways Board. The British Railways Board had asked Roald Dahl to write the text of the booklet, and Quentin Blake to illustrate it, to help young people enjoy using the railways safely. The booklet is structured as a conversation with children. In the introduction, Dahl laments that adults are always telling children what to do and what not to do, and says he would not have\", \"score\": 0.8798828125}, {\"long_text\": \"\\\"Roald Dahl's Guide to Railway Safety\\\"\\nimportance of what he is about to discuss. He then goes on to list the \\\"\\\"dreaded DOs and DON'Ts\\\"\\\" of railway safety \u2013 such as not to ride a bicycle or skateboard on a station platform, stand on platform edges, walk along rail tracks, or open train doors while the train is moving. Many of the rules of safety given in the booklet are accompanied by humorous or sobering Blake illustrations. Some of the DOs and DON'Ts also include anecdotes from Dahl\u2014sometimes personal, sometimes statistical\u2014reinforcing why they are important rules to follow. The booklet was distributed in UK primary schools\", \"score\": 0.84814453125}, {\"long_text\": \"\\\"Roald Dahl bibliography\\\"\\nIn 1982 Dahl published the first of three editions of poems\u2014all aimed at children. The following year he edited a book of ghost stories. He also wrote several works of non-fiction, including three autobiographies, a cookery book, a safety leaflet for the British railways and a book on measles, which was about the death of his daughter Olivia from measles encephalitis. As at 2015, Dahl's works have been translated into 59 languages and have sold more than 200 million books worldwide. His awards for contribution to literature include the 1983 World Fantasy Award for Life Achievement, and the British Book\", \"score\": 0.82666015625}, {\"long_text\": \"\\\"Railway Gazette International\\\"\\nRailway Gazette International Railway Gazette International is a monthly business journal covering the railway, metro, light rail and tram industries worldwide. Available by annual subscription, the magazine is read in over 140 countries by transport professionals and decision makers, railway managers, engineers, consultants and suppliers to the rail industry. A mix of technical, commercial and geographical feature articles, plus the regular monthly news pages, cover developments in all aspects of the rail industry, including infrastructure, operations, rolling stock and signalling. \\\"\\\"Railway Gazette International\\\"\\\" traces its history to May 1835 as \\\"\\\"The Railway Magazine\\\"\\\", when it was founded by Effingham Wilson.\", \"score\": 0.826171875}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages, I can see that Roald Dahl's Guide to Railway Safety was published in 1991 by the British Railways Board. However, I need to find out the year when the British Railways Board ceased to exist.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"when did the British Railways Board cease to exist\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"when did the British Railways Board cease to exist\", \"passages_this_hop\": [{\"long_text\": \"\\\"British Railways Board\\\"\\nBritish Railways Board The British Railways Board (BRB) was a nationalised industry in the United Kingdom that operated from 1963 to 2001. Until 1997 it was responsible for most railway services in Great Britain, trading under the brand name British Railways and, from 1965, British Rail. It did not operate railways in Northern Ireland, where railways were the responsibility of the Government of Northern Ireland. It is a statutory corporation, which when operating consisted of a chairman and nine to fifteen other members appointed by the Secretary of State for Transport. The Board, now reduced to a minimum membership of\", \"score\": 0.8837890625}, {\"long_text\": \"\\\"British Railways Board\\\"\\na chairman and one other member, continues to exist to hold the French law benefits and obligations of the Channel Tunnel Rail Usage Contract. The BRB was created on 1 January 1963 under the Transport Act 1962 by Harold Macmillan's Conservative government to inherit the railway responsibilities of the British Transport Commission, which was dissolved at the same time. Initially, and for the majority of its history, the BRB operated under the structure inherited from the BTC Railway Executive. Operations were divided into five regions - Eastern, London Midland, Western, Southern and Scottish (later rebranded ScotRail). A North Eastern Region\", \"score\": 0.87646484375}, {\"long_text\": \"\\\"British Rail\\\"\\nBritish Rail British Railways (BR), which from 1965 traded as British Rail, was the state-owned company that operated most of the overground rail transport in Great Britain between 1948 and 1997. It was formed from the nationalisation of the \\\"\\\"Big Four\\\"\\\" British railway companies and lasted until the gradual privatisation of British Rail, in stages between 1994 and 1997. Originally a trading brand of the Railway Executive of the British Transport Commission, it became an independent statutory corporation in 1962 designated as the British Railways Board. The period of nationalisation saw sweeping changes in the national railway network. A process\", \"score\": 0.87060546875}, {\"long_text\": \"\\\"British Rail\\\"\\nnumbers grew after restoring many services reduced during the war, and in 1959 the government stepped in, limiting the amount the BTC could spend without ministerial authority. A White Paper proposing reorganisation was published in the following year, and a new structure was brought into effect by the Transport Act 1962. This abolished the Commission and replaced it by several separate Boards. These included a British Railways Board, which took over on 1 January 1963. Following semi-secret discussions on railway finances by the government-appointed Stedeford Committee in 1961, one of its members, Dr Richard Beeching, was offered the post of\", \"score\": 0.8701171875}, {\"long_text\": \"\\\"BRB (Residuary) Limited\\\"\\nBRB (Residuary) Limited BRB (Residuary) Limited (BRBR) was the successor to the British Railways Board. It was created in 2001 as a private company limited by shares, with 100% of the issued share capital owned by the Secretary of State for Transport. As part of the Public Bodies Act 2011, the company was abolished in 2013. Starting in 1994, as part of the Railways Act 1993, British Rail was divided up and privatised. By November 1997, British Rail had been divested of all its operating railway functions. However, the British Railways Board (BRB) remained in existence to discharge residual functions,\", \"score\": 0.8681640625}]}",
+        "next_thought": "The British Railways Board ceased to exist in 2001. Now, I need to provide the answer to the original question.",
+        "next_tool_name": "finish",
+        "next_tool_args": {}
+      },
+      {
+        "question": "Who was the founder of Titus Lucretius Tricipitinus' country of citizenship?",
+        "answer": "L. Junius Brutus"
+      },
+      {
+        "question": "The alma mater of Mushtaq Minhas is an example of what kind of university?",
+        "answer": "private university"
+      },
+      {
+        "question": "What years did the person who said \"I think, therefore I am\" live?",
+        "answer": "1596-1650"
+      },
+      {
+        "question": "Who was thee first president of the association that wrote the code of ethics for psychology?",
+        "answer": "G. Stanley Hall"
+      },
+      {
+        "question": "What type of university is the college Kyeon Mi-ri attended?",
+        "answer": "private university"
+      },
+      {
+        "question": "Where did Peter and Paul Fortress' designer die?",
+        "answer": "Saint Petersburg"
+      },
+      {
+        "question": "What is the name of the reservoir fed by the river that the Vyatka connects to?",
+        "answer": "Kuybyshev Reservoir"
+      },
+      {
+        "question": "What university is Anthony Marten's college part of?",
+        "answer": "college of the University of Cambridge"
+      },
+      {
+        "question": "Who is the child of the host of the gathering where Fr\u00e9d\u00e9ric was introduced to George Sand?",
+        "answer": "Cosima Wagner"
+      },
+      {
+        "question": "When was the publisher of Crux launched?",
+        "answer": "1998"
+      },
+      {
+        "question": "Who was president of the united states immediately following the first global war after which indoor toilets became common in America?",
+        "answer": "Thomas Woodrow Wilson"
+      },
+      {
+        "question": "Who disarmed the combined body of all Estonia military?",
+        "answer": "the Red Army"
+      },
+      {
+        "question": "What record label does the singer in 4 non blondes sign?",
+        "answer": "Custard Records"
+      },
+      {
+        "question": "In what year did France host the finals of the competition featuring Samoa for going on 30 years?",
+        "answer": "2007"
+      },
+      {
+        "question": "In what era did The Presbyterian Church in the country whose government disagreed on the language used to describe the torch route experience a large growth in members?",
+        "answer": "era of Guomindang"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!<\/desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.<\/desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "In which year did the publisher of Roald Dahl's Guide to Railway Safety cease to exist?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"In which year did the publisher of Roald Dahl's Guide to Railway Safety cease to exist?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"In which year did the publisher of Roald Dahl's Guide to Railway Safety cease to exist?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Roald Dahl's Guide to Railway Safety\\\"\\nRoald Dahl's Guide to Railway Safety Roald Dahl's Guide to Railway Safety was published in 1991 by the British Railways Board. The British Railways Board had asked Roald Dahl to write the text of the booklet, and Quentin Blake to illustrate it, to help young people enjoy using the railways safely. The booklet is structured as a conversation with children. In the introduction, Dahl laments that adults are always telling children what to do and what not to do, and says he would not have agreed to write the booklet, which tells children what to do, if not for the\", \"score\": 0.88623046875}, {\"long_text\": \"\\\"Roald Dahl's Guide to Railway Safety\\\"\\nto pupils in 1991, often alongside video presentations of railway safety films, such as \\\"\\\"Robbie\\\"\\\". Roald Dahl's Guide to Railway Safety Roald Dahl's Guide to Railway Safety was published in 1991 by the British Railways Board. The British Railways Board had asked Roald Dahl to write the text of the booklet, and Quentin Blake to illustrate it, to help young people enjoy using the railways safely. The booklet is structured as a conversation with children. In the introduction, Dahl laments that adults are always telling children what to do and what not to do, and says he would not have\", \"score\": 0.8798828125}, {\"long_text\": \"\\\"Roald Dahl's Guide to Railway Safety\\\"\\nimportance of what he is about to discuss. He then goes on to list the \\\"\\\"dreaded DOs and DON'Ts\\\"\\\" of railway safety \u2013 such as not to ride a bicycle or skateboard on a station platform, stand on platform edges, walk along rail tracks, or open train doors while the train is moving. Many of the rules of safety given in the booklet are accompanied by humorous or sobering Blake illustrations. Some of the DOs and DON'Ts also include anecdotes from Dahl\u2014sometimes personal, sometimes statistical\u2014reinforcing why they are important rules to follow. The booklet was distributed in UK primary schools\", \"score\": 0.84814453125}, {\"long_text\": \"\\\"Roald Dahl bibliography\\\"\\nIn 1982 Dahl published the first of three editions of poems\u2014all aimed at children. The following year he edited a book of ghost stories. He also wrote several works of non-fiction, including three autobiographies, a cookery book, a safety leaflet for the British railways and a book on measles, which was about the death of his daughter Olivia from measles encephalitis. As at 2015, Dahl's works have been translated into 59 languages and have sold more than 200 million books worldwide. His awards for contribution to literature include the 1983 World Fantasy Award for Life Achievement, and the British Book\", \"score\": 0.82666015625}, {\"long_text\": \"\\\"Railway Gazette International\\\"\\nRailway Gazette International Railway Gazette International is a monthly business journal covering the railway, metro, light rail and tram industries worldwide. Available by annual subscription, the magazine is read in over 140 countries by transport professionals and decision makers, railway managers, engineers, consultants and suppliers to the rail industry. A mix of technical, commercial and geographical feature articles, plus the regular monthly news pages, cover developments in all aspects of the rail industry, including infrastructure, operations, rolling stock and signalling. \\\"\\\"Railway Gazette International\\\"\\\" traces its history to May 1835 as \\\"\\\"The Railway Magazine\\\"\\\", when it was founded by Effingham Wilson.\", \"score\": 0.826171875}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages, I can see that Roald Dahl's Guide to Railway Safety was published in 1991 by the British Railways Board. However, I need to find out the year when the British Railways Board ceased to exist.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"when did the British Railways Board cease to exist\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"when did the British Railways Board cease to exist\", \"passages_this_hop\": [{\"long_text\": \"\\\"British Railways Board\\\"\\nBritish Railways Board The British Railways Board (BRB) was a nationalised industry in the United Kingdom that operated from 1963 to 2001. Until 1997 it was responsible for most railway services in Great Britain, trading under the brand name British Railways and, from 1965, British Rail. It did not operate railways in Northern Ireland, where railways were the responsibility of the Government of Northern Ireland. It is a statutory corporation, which when operating consisted of a chairman and nine to fifteen other members appointed by the Secretary of State for Transport. The Board, now reduced to a minimum membership of\", \"score\": 0.8837890625}, {\"long_text\": \"\\\"British Railways Board\\\"\\na chairman and one other member, continues to exist to hold the French law benefits and obligations of the Channel Tunnel Rail Usage Contract. The BRB was created on 1 January 1963 under the Transport Act 1962 by Harold Macmillan's Conservative government to inherit the railway responsibilities of the British Transport Commission, which was dissolved at the same time. Initially, and for the majority of its history, the BRB operated under the structure inherited from the BTC Railway Executive. Operations were divided into five regions - Eastern, London Midland, Western, Southern and Scottish (later rebranded ScotRail). A North Eastern Region\", \"score\": 0.87646484375}, {\"long_text\": \"\\\"British Rail\\\"\\nBritish Rail British Railways (BR), which from 1965 traded as British Rail, was the state-owned company that operated most of the overground rail transport in Great Britain between 1948 and 1997. It was formed from the nationalisation of the \\\"\\\"Big Four\\\"\\\" British railway companies and lasted until the gradual privatisation of British Rail, in stages between 1994 and 1997. Originally a trading brand of the Railway Executive of the British Transport Commission, it became an independent statutory corporation in 1962 designated as the British Railways Board. The period of nationalisation saw sweeping changes in the national railway network. A process\", \"score\": 0.87060546875}, {\"long_text\": \"\\\"British Rail\\\"\\nnumbers grew after restoring many services reduced during the war, and in 1959 the government stepped in, limiting the amount the BTC could spend without ministerial authority. A White Paper proposing reorganisation was published in the following year, and a new structure was brought into effect by the Transport Act 1962. This abolished the Commission and replaced it by several separate Boards. These included a British Railways Board, which took over on 1 January 1963. Following semi-secret discussions on railway finances by the government-appointed Stedeford Committee in 1961, one of its members, Dr Richard Beeching, was offered the post of\", \"score\": 0.8701171875}, {\"long_text\": \"\\\"BRB (Residuary) Limited\\\"\\nBRB (Residuary) Limited BRB (Residuary) Limited (BRBR) was the successor to the British Railways Board. It was created in 2001 as a private company limited by shares, with 100% of the issued share capital owned by the Secretary of State for Transport. As part of the Public Bodies Act 2011, the company was abolished in 2013. Starting in 1994, as part of the Railways Act 1993, British Rail was divided up and privatised. By November 1997, British Rail had been divested of all its operating railway functions. However, the British Railways Board (BRB) remained in existence to discharge residual functions,\", \"score\": 0.8681640625}]}\n\n[[ ## thought_1 ## ]]\nThe British Railways Board ceased to exist in 2001. Now, I need to provide the answer to the original question.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "The British Railways Board, which published Roald Dahl's Guide to Railway Safety in 1991, ceased to exist in 2001.",
+        "answer": "2001"
+      },
+      {
+        "question": "What type of university is the college Kyeon Mi-ri attended?",
+        "answer": "private university"
+      },
+      {
+        "question": "What years did the person who said \"I think, therefore I am\" live?",
+        "answer": "1596-1650"
+      },
+      {
+        "question": "What record label does the singer in 4 non blondes sign?",
+        "answer": "Custard Records"
+      },
+      {
+        "question": "The alma mater of Mushtaq Minhas is an example of what kind of university?",
+        "answer": "private university"
+      },
+      {
+        "question": "When was the publisher of Crux launched?",
+        "answer": "1998"
+      },
+      {
+        "question": "In what era did The Presbyterian Church in the country whose government disagreed on the language used to describe the torch route experience a large growth in members?",
+        "answer": "era of Guomindang"
+      },
+      {
+        "question": "Who is the child of the host of the gathering where Fr\u00e9d\u00e9ric was introduced to George Sand?",
+        "answer": "Cosima Wagner"
+      },
+      {
+        "question": "In what year did France host the finals of the competition featuring Samoa for going on 30 years?",
+        "answer": "2007"
+      },
+      {
+        "question": "What university is Anthony Marten's college part of?",
+        "answer": "college of the University of Cambridge"
+      },
+      {
+        "question": "Who was the founder of Titus Lucretius Tricipitinus' country of citizenship?",
+        "answer": "L. Junius Brutus"
+      },
+      {
+        "question": "Where did Peter and Paul Fortress' designer die?",
+        "answer": "Saint Petersburg"
+      },
+      {
+        "question": "What is the name of the reservoir fed by the river that the Vyatka connects to?",
+        "answer": "Kuybyshev Reservoir"
+      },
+      {
+        "question": "Who disarmed the combined body of all Estonia military?",
+        "answer": "the Red Army"
+      },
+      {
+        "question": "Who was president of the united states immediately following the first global war after which indoor toilets became common in America?",
+        "answer": "Thomas Woodrow Wilson"
+      },
+      {
+        "question": "Who was thee first president of the association that wrote the code of ethics for psychology?",
+        "answer": "G. Stanley Hall"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

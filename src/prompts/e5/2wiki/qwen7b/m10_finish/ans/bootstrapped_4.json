@@ -1,0 +1,156 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What is the date of death of Helen F. Holt's husband?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"What is the date of death of Helen F. Holt's husband?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"What is the date of death of Helen F. Holt's husband?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Helen F. Holt\\\"\\nHelen F. Holt Helen Louise Froelich Holt (August 16, 1913 – July 12, 2015) was an American scientist, educator, and politician. She served as the Secretary of State of West Virginia from 1957 to 1959 and also served in the West Virginia House of Delegates from 1955 to 1957. Holt was the first woman to hold a statewide-office in the state of West Virginia. She later worked with the Federal Housing Administration and its successor, the Department of Housing and Urban Development, to improve long-term care facilities for the elderly. Helen Holt was married to Senator Rush D. Holt, Sr.\", \"score\": 0.85791015625}, {\"long_text\": \"\\\"Helen F. Holt\\\"\\nFebruary 8, 1955. At the time of his death, Rush was serving in the first month of a term in the West Virginia House of Delegates. Holt has three children, including the Congressman from New Jersey's 12th congressional district, Rush D. Holt, Jr.. Holt never remarried and in 2013, she was a resident of Washington, D.C.. She received an honorary degree from West Virginia University in 2013 and turned 100 in August of that year. Holt died in Boca Raton, Florida of heart failure on July 12, 2015, aged 101, a month shy of her 102nd birthday. Helen F. Holt\", \"score\": 0.84716796875}, {\"long_text\": \"\\\"Helen F. Holt\\\"\\nserved in the Federal Housing Administration's successor, the Department of Housing and Urban Development until the 1980s. While Holt did not consider herself a feminist and was critical of \\\"\\\"women's lib,\\\"\\\" she nevertheless served on the boards of various women's clubs and organizations, helped advance the careers of other women, and was a role model for women leaders. Holt married the former U.S. Senator Rush D. Holt, Sr. on June 19, 1941. Rush was the youngest person ever elected to the Senate at the age of 29 in 1934. She remained married to him until his death from cancer on\", \"score\": 0.84228515625}, {\"long_text\": \"\\\"Helen F. Holt\\\"\\nfrom 1941 until his death in 1955 and was the mother of New Jersey U.S. Representative Rush D. Holt, Jr. Holt was born Helen Louise Froelich on August 16, 1913 in rural Gridley, Illinois, the daughter of Gridley Mayor William E. and Edna M. (\\\"\\\"née\\\"\\\" Gingerich) Froelich. Her parents were second generation immigrants from Germany. They were especially patriotic Americans, and her father served as mayor in their small town for more than 20 years. Holt was valedictorian of her high school and the only woman from her class who went on to college. She studied at Stephens College and\", \"score\": 0.833984375}, {\"long_text\": \"\\\"Henry Holt (American football)\\\"\\nalso served for a time as the president of the Central Hanover Safe Deposit Company. In later years, he was the vice president in charge of Hanover Bank's Madison Avenue and 42nd Street branches before retiring in 1946. Holt was also active in the International Grenfell Association, the New York Women's League for Animals, the 42nd Street Property Owners and Merchants Association, and the Near East College Association. Holt was married to Margaret Sumner Carson in 1919. They had three children, Margaret Carson Holt (born September 1920), Mary Bowen Holt (born April 1924), and Susanna Aspinwall Holt (born April 1924).\", \"score\": 0.83251953125}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, it appears that Helen F. Holt was married to Senator Rush D. Holt, Sr., and he passed away in 1955. I need to find the specific date of his death.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"date of death of Rush D. Holt, Sr.\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"date of death of Rush D. Holt, Sr.\", \"passages_this_hop\": [{\"long_text\": \"\\\"Rush Holt Sr.\\\"\\ncancer while in office on February 8, 1955 at age 49. He was interred in Macpelah Cemetery in Weston, West Virginia. Holt's widow, Helen F. Holt (1913–2015), filled Holt's unexpired term in the West Virginia House of Delegates (1955–1957). She was then appointed Secretary of State, serving from 1957 to 1959, becoming the first woman to hold high office in West Virginia. His son, Rush D. Holt Jr., later served as a U.S. Representative from New Jersey. Rush Holt Sr. Rush Dew Holt Sr. (June 19, 1905 – February 8, 1955) was an American politician who was a United States\", \"score\": 0.8544921875}, {\"long_text\": \"\\\"Rush Holt Sr.\\\"\\nRush Holt Sr. Rush Dew Holt Sr. (June 19, 1905 – February 8, 1955) was an American politician who was a United States Senator from West Virginia (1935–1941) and a member of the West Virginia House of Delegates (1931–1935, 1942–1950, 1954–1955). Holt was born in Weston, Lewis County, West Virginia, on June 19, 1905. His parents were Chilela (née Dew) and Dr. Matthew Samuel Holt, a small-town physician and horse trader. Matthew Holt was an atheist, who shifted his political support from the Republican Party to William Jennings Bryan in the 1890s, and then to Socialist candidate Eugene Debs; Matthew\", \"score\": 0.84375}, {\"long_text\": \"\\\"Rush Holt Jr.\\\"\\n(1957–1959). Holt Sr. was the youngest person ever to be popularly elected to the U.S. Senate, at age 29. He died of cancer when Rush was six years old. Holt graduated from the Landon School in Bethesda, Maryland, in 1966, then later graduated Phi Beta Kappa with a BS in physics from Carleton College in 1970, and later received his MS and PhD degrees in physics from New York University in 1981. The title of his doctoral dissertation was \\\"\\\"Calcium absorption lines and solar activity: a systematic program of observations.\\\"\\\" Holt was a faculty member at Swarthmore College from 1980\", \"score\": 0.841796875}, {\"long_text\": \"\\\"Rush Holt Sr.\\\"\\nreceived a high level of media attention during his Senate years and was the subject of hundreds of political cartoons from across America. Holt unsuccessfully sought the Democratic gubernatorial nomination in 1944 and the Democratic nomination for United States Senator in 1948. He switched to the Republican Party in 1949, and was an unsuccessful Republican candidate for election to the Eighty-second Congress in 1950. In 1952, Holt again ran for governor, and earned 48% of the vote. In 1954, he was elected to the West Virginia House of Delegates. Holt's political career ended where it started, and he died of\", \"score\": 0.83447265625}, {\"long_text\": \"\\\"USS Holt (DE-706)\\\"\\nUSS Holt (DE-706) USS \\\"\\\"Holt\\\"\\\" (DE-706) was a of the United States Navy. She was named after William Mack Holt. \\\"\\\"Holt\\\"\\\"s keel was laid down on 28 November 1943 at the Defoe Shipbuilding Company of Bay City, Michigan, as one of a series of \\\"\\\"Buckley\\\"\\\"-class destroyer escorts ordered from Defoe. After completing 13 ships, Defoe received a contract modification to complete the rest with 5-inch guns, which became known as the \\\"\\\"Rudderow\\\"\\\" class. Launched on 15 February 1944, she was sponsored by Mrs. Robert Holt, mother of Lt.(jg) Holt. She was commissioned at New Orleans, Louisiana on 9 June 1944,\", \"score\": 0.8310546875}]}\n\n[[ ## thought_1 ## ]]\nThe search results indicate that Rush D. Holt, Sr. died on February 8, 1955. This is the date of death I am looking for.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "The search results provided information about Helen F. Holt's husband, Rush D. Holt, Sr., indicating that he died on February 8, 1955.",
+        "answer": "February 8, 1955"
+      },
+      {
+        "question": "Do both films The Falcon (Film) and Valentin The Good have the directors from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "When is the director of film The Virginian (1923 Film) 's birthday?",
+        "answer": "February 22, 1893"
+      },
+      {
+        "question": "When did the director of film The First Mass die?",
+        "answer": "23 November 1982"
+      },
+      {
+        "question": "Who died later, Chuck Turner or Mohamed Abdelaziz (Sahrawi Politician)?",
+        "answer": "Chuck Turner"
+      },
+      {
+        "question": "Which country the performer of song Miss Brown To You is from?",
+        "answer": "American"
+      },
+      {
+        "question": "Are director of film Cosmonaut (Film) and director of film The Scientific Cardplayer from the same country?",
+        "answer": "yes"
+      },
+      {
+        "question": "Are both Lesser Slave Lake and Medeweger See located in the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "What is the date of birth of the director of film You'Re My Everything (Film)?",
+        "answer": "August 10, 1896"
+      },
+      {
+        "question": "Which country the performer of song Soldier (Neil Young Song) is from?",
+        "answer": "Canadian"
+      },
+      {
+        "question": "When is the director of film Three Men And A Little Lady 's birthday?",
+        "answer": "May 9, 1943"
+      },
+      {
+        "question": "What nationality is the director of film Age Of Consent (Film)?",
+        "answer": "British"
+      },
+      {
+        "question": "Do both films, Laali and Gayby, have the directors who are from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Do director of film Chicago 10 (Film) and director of film Black Oxen share the same nationality?",
+        "answer": "yes"
+      },
+      {
+        "question": "What nationality is the director of film Kadvi Hawa?",
+        "answer": "India"
+      },
+      {
+        "question": "Were Dallin Malmgren and A.B.M. Fazle Karim Chowdhury of the same nationality?",
+        "answer": "no"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "The 1925 Saint Mary's Gaels football team represented what private, coeducational college in Moraga, California?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"The 1925 Saint Mary's Gaels football team represented what private, coeducational college in Moraga, California?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"The 1925 Saint Mary's Gaels football team represented what private, coeducational college in Moraga, California?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Saint Mary's Gaels football\\\"\\nSaint Mary's Gaels football The Saint Mary's Gaels football program was the intercollegiate American football team for Saint Mary's College of California, located in Moraga, California, east of Oakland. The team competed in NCAA Division I-AA as an independent from 1993 through 2003. The school's first football team was fielded in 1892, and it was nationally prominent in the 1930s and 1940s, winning the Cotton Bowl in 1939 and losing in the Sugar Bowl in 1946. That 1945 team won its first seven games and was ranked seventh in the AP poll entering the bowl game. Many home games of\", \"score\": 0.8818359375}, {\"long_text\": \"\\\"Saint Mary's College of California\\\"\\nSaint Mary's College of California Saint Mary's College of California is a private, coeducational college located in Moraga, California, United States, a small suburban community about east of Oakland and east of San Francisco. It has a campus in the Moraga hills. It is affiliated with the Roman Catholic Church and administered by the De La Salle Christian Brothers. The college was ranked tied for 9th in the \\\"\\\"U.S. News & World Report\\\"\\\" 'Regional Universities' (West) rankings for 2017. St. Mary's College began in 1863 as a diocesan college for boys established by the Most Rev. Joseph Alemany, a member\", \"score\": 0.8623046875}, {\"long_text\": \"\\\"Saint Mary's Gaels\\\"\\nSaint Mary's Gaels The Saint Mary's Gaels are the athletic teams that compete at Saint Mary's College of California in Moraga, California. The nickname applies to the college's intercollegiate NCAA Division I teams and to the school's club sports teams. Most varsity teams compete in the West Coast Conference. \\\"\\\"\\\"\\\"The Gaels are an ethno-linguistic group which spread from Ireland to Scotland and the Isle of Man. Their language is of the Gaelic (Goidelic) family, a division of Insular Celtic languages. The word in English was adopted in 1810 from Scottish Gaelic Gaidheal (compare Irish Gaedhealg and Old Irish Goídeleg) to\", \"score\": 0.8583984375}, {\"long_text\": \"\\\"Saint Mary's College of California\\\"\\n100 years unless otherwise noted). Saint Mary's College of California Saint Mary's College of California is a private, coeducational college located in Moraga, California, United States, a small suburban community about east of Oakland and east of San Francisco. It has a campus in the Moraga hills. It is affiliated with the Roman Catholic Church and administered by the De La Salle Christian Brothers. The college was ranked tied for 9th in the \\\"\\\"U.S. News & World Report\\\"\\\" 'Regional Universities' (West) rankings for 2017. St. Mary's College began in 1863 as a diocesan college for boys established by the Most\", \"score\": 0.8564453125}, {\"long_text\": \"\\\"1925 Saint Mary's Saints football team\\\"\\nkey players on the team included \\\"\\\"Ducky\\\"\\\" Grant (captain), Jimmy Underhill (halfback/end), Red Strader (fullback), Dutch Conlan (quarterback), Boyd \\\"\\\"Cowboy\\\"\\\" Smith (halfback), and Pat O'Rourke (end). 1925 Saint Mary's Saints football team The 1925 Saint Mary's Saints football team was an American football team that represented Saint Mary's College of California during the 1925 college football season. In their fifth season under head coach Slip Madigan, the Gaels compiled an 8–2 record (3–0 against conference opponents), won the inaugural Far Western Conference championship, and outscored opponents by a combined total of 313 to 72. Center Larry Bettencourt was selected by\", \"score\": 0.8544921875}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, I can see that the 1925 Saint Mary's Gaels football team represented Saint Mary's College of California, which is located in Moraga, California. This matches the information provided in the question.\n\n[[ ## tool_name_0 ## ]]\nfinish\n\n[[ ## tool_args_0 ## ]]\n{}\n\n[[ ## observation_0 ## ]]\nCompleted.",
+        "reasoning": "The search results indicate that the 1925 Saint Mary's Gaels football team represented Saint Mary's College of California, which is a private, coeducational college located in Moraga, California.",
+        "answer": "Saint Mary's College of California"
+      },
+      {
+        "augmented": true,
+        "question": "Are both Cars 2 and Prom animated films?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Are both Cars 2 and Prom animated films?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Are both Cars 2 and Prom animated films?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Cars 2\\\"\\nCars 2 Cars 2 is a 2011 American computer-animated action-adventure comedy film produced by Pixar Animation Studios for Walt Disney Pictures. It is the sequel to 2006's \\\"\\\"Cars\\\"\\\", and features the voices of Owen Wilson, Larry the Cable Guy, Michael Caine, Emily Mortimer, John Turturro, and Eddie Izzard. In the film, race car Lightning McQueen and tow truck Mater head to Japan and Europe to compete in the World Grand Prix, but Mater becomes sidetracked with international espionage. The film was directed by John Lasseter, written by Ben Queen, and produced by Denise Ream. With Lasseter's exit from Pixar in\", \"score\": 0.84716796875}, {\"long_text\": \"\\\"Cars 2\\\"\\nCars 2 Cars 2 is a 2011 American computer-animated action-adventure comedy film produced by Pixar Animation Studios for Walt Disney Pictures. It is the sequel to 2006's \\\"\\\"Cars\\\"\\\", and features the voices of Owen Wilson, Larry the Cable Guy, Michael Caine, Emily Mortimer, John Turturro, and Eddie Izzard. In the film, race car Lightning McQueen and tow truck Mater head to Japan and Europe to compete in the World Grand Prix, but Mater becomes sidetracked with international espionage. The film was directed by John Lasseter, written by Ben Queen, and produced by Denise Ream. With Lasseter's exit from Pixar in\", \"score\": 0.84716796875}, {\"long_text\": \"\\\"Cars (film)\\\"\\nreleased on August 9, 2013, which was followed by its own sequel, \\\"\\\"\\\"\\\", released on July 18, 2014. A series of short animated films titled \\\"\\\"Cars Toons\\\"\\\" debuted in 2008 on Disney Channel and Disney XD. A second sequel, \\\"\\\"Cars 3\\\"\\\", was released on June 16, 2017. In a world populated by anthropomorphic talking vehicles, the last race of the Piston Cup championship ends in a three-way tie between retiring veteran Strip \\\"\\\"The King\\\"\\\" Weathers, infamous runner-up Chick Hicks and rookie Lightning McQueen. The tiebreaker race is scheduled for one week later at the Los Angeles International Speedway in California.\", \"score\": 0.83203125}, {\"long_text\": \"\\\"Cars 2\\\"\\n29, 2014. A V.smile version was also released. A stand-alone sequel, titled \\\"\\\"Cars 3\\\"\\\", was released on June 16, 2017. Directed by Brian Fee, the film focuses on Lightning McQueen, now a veteran racer, who after being overshadowed by a new wave of rookies, gets help from a young race car, Cruz Ramirez, to instruct him for the increasingly high-tech world and defeat new rival Jackson Storm. An animated feature film spin-off called \\\"\\\"Planes\\\"\\\", produced by DisneyToon Studios, was released on August 9, 2013. A sequel to \\\"\\\"Planes\\\"\\\", titled \\\"\\\"\\\"\\\", was later released the following year on July 18, 2014.\", \"score\": 0.81787109375}, {\"long_text\": \"\\\"Cars 2\\\"\\n2018, it marks the final film directed by him. \\\"\\\"Cars 2\\\"\\\" was released in the United States on June 24, 2011. The film was presented in Disney Digital 3D and IMAX 3D, as well as traditional two-dimensional and IMAX formats. The film was first announced in 2008, alongside \\\"\\\"Up\\\"\\\", and \\\"\\\"Brave\\\"\\\", and it is the 12th animated film from the studio. It received mixed reviews from critics and grossed $562 million worldwide. A sequel, \\\"\\\"Cars 3\\\"\\\", was released on June 16, 2017. Finn McMissile, a British spy, infiltrates the world's largest untapped oil reserves owned by a group of lemon\", \"score\": 0.81201171875}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages, I can see that \"Cars 2\" is indeed an animated film. Now I need to find information about \"Prom\".\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Is Prom an animated film?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Is Prom an animated film?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Prom (film)\\\"\\nand during the actual prom scene of the film. The soundtrack was released under Disney's Hollywood Records label, three days before the film's premiere date. Prom (film) Prom is a 2011 American teen romance comedy-drama film directed by Joe Nussbaum written by Katie Wech and produced by Ted Griffin and Justin Springer. It was released on April 29, 2011, by Walt Disney Pictures. The film was the first major production shot with Arriflex's Alexa HD cameras to be released in theatres. It's time for the annual prom. Nova Prescott (Aimee Teegarden) is on the prom committee with her friends Mei\", \"score\": 0.84521484375}, {\"long_text\": \"\\\"Prom (film)\\\"\\nProm (film) Prom is a 2011 American teen romance comedy-drama film directed by Joe Nussbaum written by Katie Wech and produced by Ted Griffin and Justin Springer. It was released on April 29, 2011, by Walt Disney Pictures. The film was the first major production shot with Arriflex's Alexa HD cameras to be released in theatres. It's time for the annual prom. Nova Prescott (Aimee Teegarden) is on the prom committee with her friends Mei Kwan (Yin Chang), Ali Gomez (Janelle Ortiz), Brandon Roberts (Jonathan Keltz) and Rolo Banus (Joe Adler). They made all of the decorations and are finally\", \"score\": 0.837890625}, {\"long_text\": \"\\\"F the Prom\\\"\\nF the Prom F the Prom (also known as F*&% the Prom) is a 2017 American teen comedy direct-to-video film directed and produced by Benny Fine and written by Fine Brothers and Molly Prather. The film stars Danielle Campbell, Joel Courtney, Madelaine Petsch, Cameron Palatas, Meg DeLacy, Nicholle Tom, Richard Karn, Jill Cimorelli, Luke Bilyk, Brendan Calton, Michael Chey, Adan Allende, Diamond White, Cheri Oteri and Ian Ziering. It released online and on-demand on December 5, 2017. Maddy Datner and her best friend Cole Reed attend their first day of high school at Charles Adams High. Cole is subjected to\", \"score\": 0.828125}, {\"long_text\": \"\\\"Prom (film)\\\"\\nwill give its intended tween audience a lot to squeal about.\\\"\\\" The film was released by Walt Disney Studios Home Entertainment on Blu-ray Disc, DVD, and movie download on August 30, 2011. The release will be produced in two different physical packages: a 2-disc combo pack (Blu-ray Disc and DVD) and a 1-disc DVD. The film will also be released as a movie download option, in both standard definition and high definition. All versions of the release will include the \\\"\\\"Bloopers\\\"\\\" and \\\"\\\"Putting on \\\"\\\"Prom\\\"\\\"\\\"\\\" extras, while the Blu-ray Disc combo pack will additionally include a bonus short called \\\"\\\"Last\", \"score\": 0.82568359375}, {\"long_text\": \"\\\"Prom (film)\\\"\\nreviews\\\"\\\". \\\"\\\"Salon\\\"\\\" film critic Andre O'Heir gave the film a negative review, calling it \\\"\\\"a would-be tween-oriented hit so scrubbed and sanitized and not worthy of paying attention to that it can barely be said to exist at all\\\"\\\". Another film critic, Claudia Puig of \\\"\\\"USA Today\\\"\\\", notes that \\\"\\\"Prom\\\"\\\"s \\\"\\\"entertainment quotient comes up deficient\\\"\\\". Conversely, \\\"\\\"Boxoffice Magazine\\\"\\\" film critic Pete Hammond offers a more positive review of the film, calling it a \\\"\\\"highly entertaining original movie that's funny, touching, and real\\\"\\\", while mixed reviewers note that it is a \\\"\\\"predictable but painless pastiche of high school drama cliches that\", \"score\": 0.81689453125}]}\n\n[[ ## thought_1 ## ]]\nFrom the passages, I can see that \"Prom\" is not an animated film. It is a live-action teen romance comedy-drama film.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "\"Cars 2\" is an animated film. However, \"Prom\" is a live-action teen romance comedy-drama film, not an animated film.",
+        "answer": "No"
+      },
+      {
+        "question": "What team does the athlete featured on the cover of the FIFA 17 video game play for?",
+        "answer": "Borussia Dortmund",
+        "dspy_uuid": "c93abc9b-6247-49b6-a208-a80616773a19",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who is the wife of Charlemagne who is a step mother to Pepin the Hunchback?",
+        "answer": "Hildegard",
+        "dspy_uuid": "bb9d6ccf-b5f2-4806-a3fb-f16205f434f4",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The Knicks–Nuggets was the most penalized on-court fight in the NBA since an altercation that occured in what city?",
+        "answer": "Auburn Hills",
+        "dspy_uuid": "96e0b50f-9d6e-4ffb-a8c2-f97e6b5fcbbb",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Evolution: A Theory in Crisis is a 1985 book by a biochemist and Senior fellow at Discovery Institute's Center for what?",
+        "answer": "Science and Culture",
+        "dspy_uuid": "79e869a1-8693-44a9-803b-e7718d67eca3",
+        "dspy_split": "train"
+      },
+      {
+        "question": "In addition to the Austrian passport, what is needed to gain access to 173 countries and territories?",
+        "answer": "national identity card",
+        "dspy_uuid": "229800f3-9901-41a7-bfec-a2719221c858",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which American actress who made their film debut in the 1995 teen drama \"Kids\" was the co-founder of Voto Latino?",
+        "answer": "Rosario Dawson",
+        "dspy_uuid": "bf687a1c-d836-40c8-b406-755ca6313aa2",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What is the name of the TV station in Hudson County, New Jersey, where Van Hackett worked?",
+        "answer": "WWOR-TV",
+        "dspy_uuid": "bef0d32d-35c7-4874-9930-76710980ca18",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Where did the younger brother of Titus Davis play college football?",
+        "answer": "Western Michigan",
+        "dspy_uuid": "8d578860-9cb6-4a46-9324-e1be7de75cad",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Reggie Grimes played for New England Patriots in 2000, and where did he play college football?",
+        "answer": "Alabama",
+        "dspy_uuid": "3b65a0d3-6d25-4ce4-9456-9634559860b7",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The Garand carbine was created by a man with what nationality?",
+        "answer": "Canadian-American",
+        "dspy_uuid": "65f79f94-f8a0-4267-a8e0-8e3ff54d0ce3",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which lasted longer, the Battle of Belleau Wood or the Battle of Leyte?",
+        "answer": "Battle of Leyte",
+        "dspy_uuid": "7f83642d-921e-4f2a-8d6d-12d9d75ace0a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which genre of Italian film was the first to use CGI?",
+        "answer": "horror movies",
+        "dspy_uuid": "4e5582d8-7351-40ac-b049-e61df5af049e",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Gulfstream International Airlines later became a regional carrier based out of what airport?",
+        "answer": "Fort Lauderdale-Hollywood International Airport",
+        "dspy_uuid": "eb29c180-22ee-4d8d-868d-62909166080f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "When was the American actor born who played by Travis Schuldt from July 5, 1999 to July 3, 2002?",
+        "answer": "September 18, 1974",
+        "dspy_uuid": "86b3c62c-8e22-4373-bba4-0523d1613e6e",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

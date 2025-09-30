@@ -1,0 +1,285 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "The 1925 Saint Mary's Gaels football team represented what private, coeducational college in Moraga, California?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"The 1925 Saint Mary's Gaels football team represented what private, coeducational college in Moraga, California?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"The 1925 Saint Mary's Gaels football team represented what private, coeducational college in Moraga, California?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Saint Mary's Gaels football\\\"\\nSaint Mary's Gaels football The Saint Mary's Gaels football program was the intercollegiate American football team for Saint Mary's College of California, located in Moraga, California, east of Oakland. The team competed in NCAA Division I-AA as an independent from 1993 through 2003. The school's first football team was fielded in 1892, and it was nationally prominent in the 1930s and 1940s, winning the Cotton Bowl in 1939 and losing in the Sugar Bowl in 1946. That 1945 team won its first seven games and was ranked seventh in the AP poll entering the bowl game. Many home games of\", \"score\": 0.8818359375}, {\"long_text\": \"\\\"Saint Mary's College of California\\\"\\nSaint Mary's College of California Saint Mary's College of California is a private, coeducational college located in Moraga, California, United States, a small suburban community about east of Oakland and east of San Francisco. It has a campus in the Moraga hills. It is affiliated with the Roman Catholic Church and administered by the De La Salle Christian Brothers. The college was ranked tied for 9th in the \\\"\\\"U.S. News & World Report\\\"\\\" 'Regional Universities' (West) rankings for 2017. St. Mary's College began in 1863 as a diocesan college for boys established by the Most Rev. Joseph Alemany, a member\", \"score\": 0.8623046875}, {\"long_text\": \"\\\"Saint Mary's Gaels\\\"\\nSaint Mary's Gaels The Saint Mary's Gaels are the athletic teams that compete at Saint Mary's College of California in Moraga, California. The nickname applies to the college's intercollegiate NCAA Division I teams and to the school's club sports teams. Most varsity teams compete in the West Coast Conference. \\\"\\\"\\\"\\\"The Gaels are an ethno-linguistic group which spread from Ireland to Scotland and the Isle of Man. Their language is of the Gaelic (Goidelic) family, a division of Insular Celtic languages. The word in English was adopted in 1810 from Scottish Gaelic Gaidheal (compare Irish Gaedhealg and Old Irish Go\u00eddeleg) to\", \"score\": 0.8583984375}, {\"long_text\": \"\\\"Saint Mary's College of California\\\"\\n100 years unless otherwise noted). Saint Mary's College of California Saint Mary's College of California is a private, coeducational college located in Moraga, California, United States, a small suburban community about east of Oakland and east of San Francisco. It has a campus in the Moraga hills. It is affiliated with the Roman Catholic Church and administered by the De La Salle Christian Brothers. The college was ranked tied for 9th in the \\\"\\\"U.S. News & World Report\\\"\\\" 'Regional Universities' (West) rankings for 2017. St. Mary's College began in 1863 as a diocesan college for boys established by the Most\", \"score\": 0.8564453125}, {\"long_text\": \"\\\"1925 Saint Mary's Saints football team\\\"\\nkey players on the team included \\\"\\\"Ducky\\\"\\\" Grant (captain), Jimmy Underhill (halfback\/end), Red Strader (fullback), Dutch Conlan (quarterback), Boyd \\\"\\\"Cowboy\\\"\\\" Smith (halfback), and Pat O'Rourke (end). 1925 Saint Mary's Saints football team The 1925 Saint Mary's Saints football team was an American football team that represented Saint Mary's College of California during the 1925 college football season. In their fifth season under head coach Slip Madigan, the Gaels compiled an 8\u20132 record (3\u20130 against conference opponents), won the inaugural Far Western Conference championship, and outscored opponents by a combined total of 313 to 72. Center Larry Bettencourt was selected by\", \"score\": 0.8544921875}]}",
+        "next_thought": "From the search results, it appears that the 1925 Saint Mary's Gaels football team represented Saint Mary's College of California, a private, coeducational college located in Moraga, California.",
+        "next_tool_name": "finish",
+        "next_tool_args": {}
+      },
+      {
+        "question": "Are Norma and Idomeneo both operas by Bellini?",
+        "answer": "no",
+        "dspy_uuid": "1b83d7e6-7864-4419-8497-9f3177678d8b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The designer of the Holy Trinity Church pioneered the use of what material in church building?",
+        "answer": "terracotta",
+        "dspy_uuid": "0c028117-b6aa-4a25-bac5-a49a77f5b353",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What main thoroughfare in Warsaw's borough of Ursyn\u00f3w connects to a 6,500 km international road which coincides with the Trans-Siberian Highway?",
+        "answer": "Jana Roso\u0142a street",
+        "dspy_uuid": "85ceda91-7d5e-4644-9085-548f5ce7b120",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Apan Amar Apan was a film that had music composed by which Indian composer?",
+        "answer": "Rahul Dev Burman",
+        "dspy_uuid": "698b6e2f-4646-4b95-8ad7-4d4f0c216ba2",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What team does the athlete featured on the cover of the FIFA 17 video game play for?",
+        "answer": "Borussia Dortmund",
+        "dspy_uuid": "c93abc9b-6247-49b6-a208-a80616773a19",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Gulfstream International Airlines later became a regional carrier based out of what airport?",
+        "answer": "Fort Lauderdale-Hollywood International Airport",
+        "dspy_uuid": "eb29c180-22ee-4d8d-868d-62909166080f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was the name of the band that starred Belinda Carlisle and released the album, Germicide in 1977?",
+        "answer": "The Go-Go's",
+        "dspy_uuid": "a05de775-7dac-4b04-b650-64cd97f2a8c0",
+        "dspy_split": "train"
+      },
+      {
+        "question": "in the 1975\u201376, Seattle SuperSonics lost to a team based in which US state ?",
+        "answer": "Arizona",
+        "dspy_uuid": "2e531e38-56ad-4ead-a833-1dec1ae96496",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What type of person does Prime Minister of Hungary and Viktor Orb\u00e1n have in common?",
+        "answer": "leader",
+        "dspy_uuid": "69db666d-8de7-4562-b52b-8c65cbc22a3b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which genre of Italian film was the first to use CGI?",
+        "answer": "horror movies",
+        "dspy_uuid": "4e5582d8-7351-40ac-b049-e61df5af049e",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What sport does 1989\u201390 Sacramento Kings season and Rodney McCray have in common?",
+        "answer": "basketball",
+        "dspy_uuid": "41005496-7258-4e3a-8eb1-8187bd1d4e43",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are Truckin' Magazine and Girlfriends both publications that offer relationship advice?",
+        "answer": "no",
+        "dspy_uuid": "9ae0a0d5-47e6-452d-9fca-3ae8e8f61cfc",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Where did the younger brother of Titus Davis play college football?",
+        "answer": "Western Michigan",
+        "dspy_uuid": "8d578860-9cb6-4a46-9324-e1be7de75cad",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What is the name of the TV station in Hudson County, New Jersey, where Van Hackett worked?",
+        "answer": "WWOR-TV",
+        "dspy_uuid": "bef0d32d-35c7-4874-9930-76710980ca18",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What prestigious award have Bertrand Russell and G\u00fcnter Grass won?",
+        "answer": "Nobel Prize",
+        "dspy_uuid": "824c0bb4-bfd5-4fbc-9588-f3e087d0f659",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!<\/desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.<\/desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "The 1925 Saint Mary's Gaels football team represented what private, coeducational college in Moraga, California?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"The 1925 Saint Mary's Gaels football team represented what private, coeducational college in Moraga, California?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"The 1925 Saint Mary's Gaels football team represented what private, coeducational college in Moraga, California?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Saint Mary's Gaels football\\\"\\nSaint Mary's Gaels football The Saint Mary's Gaels football program was the intercollegiate American football team for Saint Mary's College of California, located in Moraga, California, east of Oakland. The team competed in NCAA Division I-AA as an independent from 1993 through 2003. The school's first football team was fielded in 1892, and it was nationally prominent in the 1930s and 1940s, winning the Cotton Bowl in 1939 and losing in the Sugar Bowl in 1946. That 1945 team won its first seven games and was ranked seventh in the AP poll entering the bowl game. Many home games of\", \"score\": 0.8818359375}, {\"long_text\": \"\\\"Saint Mary's College of California\\\"\\nSaint Mary's College of California Saint Mary's College of California is a private, coeducational college located in Moraga, California, United States, a small suburban community about east of Oakland and east of San Francisco. It has a campus in the Moraga hills. It is affiliated with the Roman Catholic Church and administered by the De La Salle Christian Brothers. The college was ranked tied for 9th in the \\\"\\\"U.S. News & World Report\\\"\\\" 'Regional Universities' (West) rankings for 2017. St. Mary's College began in 1863 as a diocesan college for boys established by the Most Rev. Joseph Alemany, a member\", \"score\": 0.8623046875}, {\"long_text\": \"\\\"Saint Mary's Gaels\\\"\\nSaint Mary's Gaels The Saint Mary's Gaels are the athletic teams that compete at Saint Mary's College of California in Moraga, California. The nickname applies to the college's intercollegiate NCAA Division I teams and to the school's club sports teams. Most varsity teams compete in the West Coast Conference. \\\"\\\"\\\"\\\"The Gaels are an ethno-linguistic group which spread from Ireland to Scotland and the Isle of Man. Their language is of the Gaelic (Goidelic) family, a division of Insular Celtic languages. The word in English was adopted in 1810 from Scottish Gaelic Gaidheal (compare Irish Gaedhealg and Old Irish Go\u00eddeleg) to\", \"score\": 0.8583984375}, {\"long_text\": \"\\\"Saint Mary's College of California\\\"\\n100 years unless otherwise noted). Saint Mary's College of California Saint Mary's College of California is a private, coeducational college located in Moraga, California, United States, a small suburban community about east of Oakland and east of San Francisco. It has a campus in the Moraga hills. It is affiliated with the Roman Catholic Church and administered by the De La Salle Christian Brothers. The college was ranked tied for 9th in the \\\"\\\"U.S. News & World Report\\\"\\\" 'Regional Universities' (West) rankings for 2017. St. Mary's College began in 1863 as a diocesan college for boys established by the Most\", \"score\": 0.8564453125}, {\"long_text\": \"\\\"1925 Saint Mary's Saints football team\\\"\\nkey players on the team included \\\"\\\"Ducky\\\"\\\" Grant (captain), Jimmy Underhill (halfback\/end), Red Strader (fullback), Dutch Conlan (quarterback), Boyd \\\"\\\"Cowboy\\\"\\\" Smith (halfback), and Pat O'Rourke (end). 1925 Saint Mary's Saints football team The 1925 Saint Mary's Saints football team was an American football team that represented Saint Mary's College of California during the 1925 college football season. In their fifth season under head coach Slip Madigan, the Gaels compiled an 8\u20132 record (3\u20130 against conference opponents), won the inaugural Far Western Conference championship, and outscored opponents by a combined total of 313 to 72. Center Larry Bettencourt was selected by\", \"score\": 0.8544921875}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, it appears that the 1925 Saint Mary's Gaels football team represented Saint Mary's College of California, a private, coeducational college located in Moraga, California.\n\n[[ ## tool_name_0 ## ]]\nfinish\n\n[[ ## tool_args_0 ## ]]\n{}\n\n[[ ## observation_0 ## ]]\nCompleted.",
+        "reasoning": "The search results indicate that the 1925 Saint Mary's Gaels football team represented Saint Mary's College of California, a private, coeducational college located in Moraga, California.",
+        "answer": "Saint Mary's College of California"
+      },
+      {
+        "question": "What team does the athlete featured on the cover of the FIFA 17 video game play for?",
+        "answer": "Borussia Dortmund",
+        "dspy_uuid": "c93abc9b-6247-49b6-a208-a80616773a19",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What main thoroughfare in Warsaw's borough of Ursyn\u00f3w connects to a 6,500 km international road which coincides with the Trans-Siberian Highway?",
+        "answer": "Jana Roso\u0142a street",
+        "dspy_uuid": "85ceda91-7d5e-4644-9085-548f5ce7b120",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Where did the younger brother of Titus Davis play college football?",
+        "answer": "Western Michigan",
+        "dspy_uuid": "8d578860-9cb6-4a46-9324-e1be7de75cad",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The designer of the Holy Trinity Church pioneered the use of what material in church building?",
+        "answer": "terracotta",
+        "dspy_uuid": "0c028117-b6aa-4a25-bac5-a49a77f5b353",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which genre of Italian film was the first to use CGI?",
+        "answer": "horror movies",
+        "dspy_uuid": "4e5582d8-7351-40ac-b049-e61df5af049e",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What prestigious award have Bertrand Russell and G\u00fcnter Grass won?",
+        "answer": "Nobel Prize",
+        "dspy_uuid": "824c0bb4-bfd5-4fbc-9588-f3e087d0f659",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What type of person does Prime Minister of Hungary and Viktor Orb\u00e1n have in common?",
+        "answer": "leader",
+        "dspy_uuid": "69db666d-8de7-4562-b52b-8c65cbc22a3b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What is the name of the TV station in Hudson County, New Jersey, where Van Hackett worked?",
+        "answer": "WWOR-TV",
+        "dspy_uuid": "bef0d32d-35c7-4874-9930-76710980ca18",
+        "dspy_split": "train"
+      },
+      {
+        "question": "in the 1975\u201376, Seattle SuperSonics lost to a team based in which US state ?",
+        "answer": "Arizona",
+        "dspy_uuid": "2e531e38-56ad-4ead-a833-1dec1ae96496",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are Norma and Idomeneo both operas by Bellini?",
+        "answer": "no",
+        "dspy_uuid": "1b83d7e6-7864-4419-8497-9f3177678d8b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Gulfstream International Airlines later became a regional carrier based out of what airport?",
+        "answer": "Fort Lauderdale-Hollywood International Airport",
+        "dspy_uuid": "eb29c180-22ee-4d8d-868d-62909166080f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was the name of the band that starred Belinda Carlisle and released the album, Germicide in 1977?",
+        "answer": "The Go-Go's",
+        "dspy_uuid": "a05de775-7dac-4b04-b650-64cd97f2a8c0",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are Truckin' Magazine and Girlfriends both publications that offer relationship advice?",
+        "answer": "no",
+        "dspy_uuid": "9ae0a0d5-47e6-452d-9fca-3ae8e8f61cfc",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What sport does 1989\u201390 Sacramento Kings season and Rodney McCray have in common?",
+        "answer": "basketball",
+        "dspy_uuid": "41005496-7258-4e3a-8eb1-8187bd1d4e43",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Apan Amar Apan was a film that had music composed by which Indian composer?",
+        "answer": "Rahul Dev Burman",
+        "dspy_uuid": "698b6e2f-4646-4b95-8ad7-4d4f0c216ba2",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}
