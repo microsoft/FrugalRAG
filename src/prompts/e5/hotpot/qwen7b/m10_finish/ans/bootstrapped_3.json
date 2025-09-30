@@ -1,0 +1,186 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "In what army is Mehmetçik slang for a common a common soldier?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"In what army is Mehmetçik slang for a common a common soldier?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"In what army is Mehmetçik slang for a common a common soldier?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Mehmetçik Monument\\\"\\nbase. It is created by Prof. Sait Rüstem and made of copper-coated concrete. It was constructed by TEKTA Eng. Consulting Cons. & Trade Ltd. Co. Mehmetçik Monument Mehmetçik Monument (Kartaltepe Mehmetçik Monument) is a monumental sculpture featuring a Turkish soldier on Kartaltepe of Polatlı, a rural area of Ankara Province, Turkey. The name of the monument \\\"\\\"Mehmetçik\\\"\\\" is the diminutive form of the common name Mehmet, which is used to nickname Turkish soldiers. The sculpture is situated on top of the Kartaltepe hill just west of Polatlı and west of Ankara at . It is to the south of the\", \"score\": 0.85546875}, {\"long_text\": \"\\\"Mehmetçik Monument\\\"\\nMehmetçik Monument Mehmetçik Monument (Kartaltepe Mehmetçik Monument) is a monumental sculpture featuring a Turkish soldier on Kartaltepe of Polatlı, a rural area of Ankara Province, Turkey. The name of the monument \\\"\\\"Mehmetçik\\\"\\\" is the diminutive form of the common name Mehmet, which is used to nickname Turkish soldiers. The sculpture is situated on top of the Kartaltepe hill just west of Polatlı and west of Ankara at . It is to the south of the Turkish state highway , which connects west Anatolia to Ankara. Turkish high speed train railway route passes through a tunnel under Kartaltepe. Gordion the historical\", \"score\": 0.8505859375}, {\"long_text\": \"\\\"Respect to Mehmetçik Monument\\\"\\nRespect to Mehmetçik Monument The Respect to Mehmetçik Memorial () is a monument in the Gallipoli peninsula, Turkey. Mehmetçik is a common name given to soldiers in a war, just like G.I.. The monument is located in the Eceabat district of Çanakkale Province in the southern end of Albayrak heights in the Gallipoli Historical National Park which is facing the Anzac Cove The monument has been created by the Turkish sculptor Tankut Öktem (1941–2007) in 1997. The monument is a sculpture of a Turkish soldier carrying an Australian officer. The sculpture is based on an event in the Dardanelles Campaign\", \"score\": 0.84228515625}, {\"long_text\": \"\\\"Bigalı Mehmet Çavuş\\\"\\nBigalı Mehmet Çavuş Bigalı Mehmet Çavuş (1878–3 February 1964), (literally Sergeant Mehmet of Biga) was an Ottoman Army sergeant, who fought during the Gallipoli Campaign of World War I. He is remembered as a hero, and is considered to be the eponym of the common name \\\"\\\"Mehmetçik\\\"\\\" used for an Ottoman or a Turkish soldier. He was born in Plovdiv, Bulgaria in 1878. During the Russo-Turkish War (which saw Russians taking Plovdiv on 16 January 1878), Mehmet's family emigrated to Anatolia, and settled in Bahçeli village of Biga, Çanakkale in the Ottoman Empire. He participated in the Balkan Wars. Sgt.\", \"score\": 0.8408203125}, {\"long_text\": \"\\\"Bigalı Mehmet Çavuş\\\"\\nBigalı Mehmet Çavuş Bigalı Mehmet Çavuş (1878–3 February 1964), (literally Sergeant Mehmet of Biga) was an Ottoman Army sergeant, who fought during the Gallipoli Campaign of World War I. He is remembered as a hero, and is considered to be the eponym of the common name \\\"\\\"Mehmetçik\\\"\\\" used for an Ottoman or a Turkish soldier. He was born in Plovdiv, Bulgaria in 1878. During the Russo-Turkish War (which saw Russians taking Plovdiv on 16 January 1878), Mehmet's family emigrated to Anatolia, and settled in Bahçeli village of Biga, Çanakkale in the Ottoman Empire. He participated in the Balkan Wars. Sgt.\", \"score\": 0.8408203125}]}\n\n[[ ## thought_0 ## ]]\nThe passages mention \"Mehmetçik\" being used as a nickname for Turkish soldiers, but not specifically tied to a particular army. I need to refine my search to find the specific army context.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"What army does Mehmetçik refer to as a common soldier?\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"What army does Mehmetçik refer to as a common soldier?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Ottoman military band\\\"\\nof the pieces performed by them are newer compositions. Today, the \\\"\\\"Armed Forces Mehter Unit\\\"\\\" (\\\"\\\"Mehter Bölüğü\\\"\\\") is the traditional band of the Turkish Armed Forces and it performs regularly at the Military Museum (Askeri Müze) in Istanbul as well as during certain state ceremonies. There is also the Ministry of Culture Istanbul Historical Music Ensemble. \\\"\\\"Mehter\\\"\\\" (Modern Turkish) or \\\"\\\"Mehteran\\\"\\\" (Ottoman Turkish مهتران literally \\\"\\\"pre-eminences\\\"\\\") was the type of military ensemble within the Ottoman army which played martial tunes during military campaigns. The mehteran was usually associated with the Janissary corps of the Army, usually composed of Christian converts\", \"score\": 0.82958984375}, {\"long_text\": \"\\\"Mehmed Namık Pasha\\\"\\nMehmed Namık Pasha Mehmed Emin Namık Pasha (1804 – 1892) was a prominent Ottoman statesman and military reformer, who is considered to be one of the founding fathers of the modern Ottoman Army. He served under five Sultans and acted as counsellor to at least four of them. He founded the \\\"\\\"Mekteb-i Harbiye\\\"\\\" (The Ottoman Military Academy), was twice Viceroy of the province of Bagdad, was the first ambassador of the Sublime Porte at Saint-James's Court, was appointed \\\"\\\"Serasker\\\"\\\" (Supreme Commander of the Ottoman Army), he served as Minister of War, became a Cabinet minister, and was conferred the title\", \"score\": 0.82373046875}, {\"long_text\": \"\\\"Ottoman Army (1861–1922)\\\"\\nwere considered as officers without having received military training or worked through ranks. It is also true that this group may have training on leadership (viziers, governors, etc.) and management generalists (medicine, engineering, etc.). The Academy was formed in 1834 by Mehmed Namık Pasha and Marshal Ahmed Fevzi Pasha as the \\\"\\\"Mekteb-i Harbiye\\\"\\\" (\\\"\\\"War School\\\"\\\"), and the first class of officers graduated in 1841. Its formation was a part of the military reforms within the Ottoman Empire as it recognized the need for more educated officer s to modernize its army. The Ottoman Armed Forces College was founded in 1848.\", \"score\": 0.8232421875}, {\"long_text\": \"\\\"Respect to Mehmetçik Monument\\\"\\nof the World War I in which a Turkish soldier, after raising a white flag, carried a wounded Australian officer to Australian lines and returned to his lines before resuming the clash. There is also an inscription of a statement made by Lord Richard Casey then a lieutenant and the staff captain with the 3rd Brigade in the Australian army, during a visit to Turkey about his respect to Turkish army. Respect to Mehmetçik Monument The Respect to Mehmetçik Memorial () is a monument in the Gallipoli peninsula, Turkey. Mehmetçik is a common name given to soldiers in a war,\", \"score\": 0.8232421875}, {\"long_text\": \"\\\"Turkish Armed Forces Medal of Distinguished Courage and Self-Sacrifice\\\"\\nTurkish Armed Forces Medal of Distinguished Courage and Self-Sacrifice Turkish Armed Forces Medal of Distinguished Courage and Self-Sacrifice () is one of the highest medals that can be bestowed upon an individual by the Turkish Armed Forces (TAF) and was created on July 3, 1975. Silver laurels encircling the gold medal that has an engraving of the Mehmetçik, the legendary and symbolic Turkish soldier, on top. Made of three pieces Made of three pieces During war or peace, it is bestowed on individuals or regiments who have accomplished their missions with great courage and self-sacrifice while risking their lives. The\", \"score\": 0.82275390625}]}\n\n[[ ## thought_1 ## ]]\nFrom the passages, it seems \"Mehmetçik\" is commonly used to refer to soldiers in the Ottoman Army. I should confirm this by refining the search query.\n\n[[ ## tool_name_1 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_1 ## ]]\n{\"search_query\": \"Does Mehmetçik refer to soldiers in the Ottoman Army?\"}\n\n[[ ## observation_1 ## ]]\n{\"search_query\": \"Does Mehmetçik refer to soldiers in the Ottoman Army?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Ottoman Army (1861–1922)\\\"\\nArmy and five years for the Navy. During the course of the World War, these remained largely theoretical. In the Ottoman Army, the commissioned officers which receive training relating to their specific military occupational specialty or function in the military called mektepli (translated as educated) officers. There were also commissioned officers who did not receive training, but were put through serving at the ranks at specific periods of time. These commissioned officers were called alaylı. The Ottoman Empire tried to replace alaylı with mektepli officers. A majority of the officers were alaylı. Princes (by birth) and important statesmen (by position)\", \"score\": 0.841796875}, {\"long_text\": \"\\\"Ottoman Army (15th-19th centuries)\\\"\\nto pitch the tents ahead, a corps to bake the bread. The cebeci corps carried and distributed weapons and ammunition. The janissary corps had its own internal medical auxiliaries: Muslim and Jewish surgeons who would travel with the corps during campaigns and had organized methods of moving the wounded and the sick to traveling hospitals behind the lines. Ottoman military bands are thought to be the oldest variety of military marching band in the world. Though they are often known by the Persian-derived word mehter in the West, that word, properly speaking, refers only to a single musician in the\", \"score\": 0.8330078125}, {\"long_text\": \"\\\"Bigalı Mehmet Çavuş\\\"\\nOttoman soldiers, and only 12 left were capable to keep up with any fight. Lieutenant colonel Mustafa Kemal, commander of the 19th Division at Haraptepe, sent a report to Cevat Pasha, commander of the Dardanelles fortifications, and asked him to award Sgt. Mehmet with a medal. Vice Commander-in-chief Enver Pasha visited Sgt. Mehmet at the military hospital in Çanakkale, and decorated him with the Ottoman War Medal. Sgt. Mehmet served sixteen years in the army. Later, he lived a modest life in Bahçeli village of Biga in Çanakkale Province; refusing financial assistance as he had fought for his country and\", \"score\": 0.830078125}, {\"long_text\": \"\\\"Ottoman Army (15th-19th centuries)\\\"\\nforcing them to pay taxes or land so that the treasury could obtain the money it needed to maintain the Kapikulu army. The janissaries comprised infantry units that formed the Ottoman sultan's household troops and bodyguard. The first janissary units comprised war captives and slaves. After the 1380s Sultan Mehmet I filled their ranks with the results of taxation in human form called \\\"\\\"devshirme\\\"\\\": the Sultan's men conscripted a number of non-Muslim, usually Christian, boysat first at random, later, by strict selectionto be trained. Initially they favored Greeks, Albanians (who also supplied many gendarmes), usually selecting about one in five\", \"score\": 0.82958984375}, {\"long_text\": \"\\\"Ottoman Military College\\\"\\nOttoman Military College The Ottoman Military College or Imperial Military Staff College or Ottoman Army War College ( or \\\"\\\"Erkân-ı Harbiye Mektebi\\\"\\\"), was a two-year military staff college of the Ottoman Empire. It was located in Istanbul. Its mission was to educate staff officers for the Ottoman Army. 1st class (graduated in July 1849) 2nd class (graduated in 1851) 3rd class (graduated in 1852) 4th class (graduated in 1853) 5th class (graduated in 1854) 6th class (graduated in 1855) 7th class (graduated in 1856) 8th class (graduated in 1857) 9th class (graduated in 1858) 46th class (graduated on March 20,\", \"score\": 0.82958984375}]}\n\n[[ ## thought_2 ## ]]\nBased on the information gathered, \"Mehmetçik\" is indeed a term used to refer to soldiers in the Ottoman Army. I will now finalize the answer.\n\n[[ ## tool_name_2 ## ]]\nfinish\n\n[[ ## tool_args_2 ## ]]\n{}\n\n[[ ## observation_2 ## ]]\nCompleted.",
+        "reasoning": "\"Mehmetçik\" is a term used to refer to soldiers in the Ottoman Army. This is evident from various sources mentioning the term in relation to Ottoman soldiers and the history of the Ottoman military.",
+        "answer": "The Ottoman Army"
+      },
+      {
+        "question": "Which artist started recording/performing earlier David Donato or Moya Brennan?",
+        "answer": "Moya Brennan",
+        "dspy_uuid": "1bfbbe14-79c1-47f4-9460-c968fd0cbfd3",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which building, Olympic Tower or Latting Observatory, is no longer erect?",
+        "answer": "Latting Observatory",
+        "dspy_uuid": "24c66f5b-1424-4c47-a8e3-9b7f1511a903",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which publication has been published by a greater number of groups, House Beautiful or Smithsonian?",
+        "answer": "House Beautiful",
+        "dspy_uuid": "3d166eba-9056-4c08-84d6-139d9f6f817c",
+        "dspy_split": "train"
+      },
+      {
+        "question": "George Keith was probably the last Earl Marishal at what ruined motte and bailey castle in Aberdeenshire, Scotland?",
+        "answer": "Inverugie Castle",
+        "dspy_uuid": "98a3f25c-b47f-4a48-a05d-9335249fafaf",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Are both Ceratophyllum and Eucomis a genus of flowering plants?",
+        "answer": "yes",
+        "dspy_uuid": "daa4fb23-6f40-4071-a31f-ade1165f5895",
+        "dspy_split": "train"
+      },
+      {
+        "question": "what is the largest university press in the world that published Oxford Companions?",
+        "answer": "Oxford University Press",
+        "dspy_uuid": "b4c04c9b-9615-454c-94fd-4519c1df5d23",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Jay Simon is best known for her role as a flight attendant in a movie directed by which director ?",
+        "answer": "Clare Kilner",
+        "dspy_uuid": "428e2ffc-a0d9-45af-9173-26c2e9a688e0",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was the name of the man who Carol Kane played the wife of who was a lovable-but-goofy mechanic in a television series?",
+        "answer": "Latka Gravas",
+        "dspy_uuid": "7ba73262-1f60-4df6-b87f-c1dd36a1aee5",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Gulfstream International Airlines later became a regional carrier based out of what airport?",
+        "answer": "Fort Lauderdale-Hollywood International Airport",
+        "dspy_uuid": "eb29c180-22ee-4d8d-868d-62909166080f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The Garand carbine was created by a man with what nationality?",
+        "answer": "Canadian-American",
+        "dspy_uuid": "65f79f94-f8a0-4267-a8e0-8e3ff54d0ce3",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which of Adelaide Metro's stations is located at the base of the Mount Lofty Ranges?",
+        "answer": "Belair railway station",
+        "dspy_uuid": "4ea77c5d-b144-4881-a3d5-8eb6470812d5",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What Nigerian president appointed the Managing Director of the NPA in 2016?",
+        "answer": "Muhammadu Buhari",
+        "dspy_uuid": "cae9cca8-4fe0-4041-970a-ea21ea74421f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "ShopBack is affiliated with which Indian electronic payment brand?",
+        "answer": "Paytm",
+        "dspy_uuid": "b3f2d00a-0a44-4df5-b9af-56688b53f6f8",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What role does Ghanashyam Nayak play in India's longest running sitcom serial?",
+        "answer": "Natwarlal Prabhashankar Undhaiwala",
+        "dspy_uuid": "0df48211-920f-48f3-9753-1ffac545c548",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What date did the American actress and singer-songwriter, known for her role as Peggy Bundy, release her first album?",
+        "answer": "April 19, 1994",
+        "dspy_uuid": "978bbaaf-a0ba-4e49-a816-b00155837c03",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

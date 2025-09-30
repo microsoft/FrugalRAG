@@ -1,0 +1,159 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!</desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.</desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Are Shahrak-E Shomali and Taqiabad, Mazandaran both located in the same country?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Are Shahrak-E Shomali and Taqiabad, Mazandaran both located in the same country?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Are Shahrak-E Shomali and Taqiabad, Mazandaran both located in the same country?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Taq-e Gara\\\"\\nTaq-e Gara Taq-e Gara or some times Taq-e Shirin is a stone structure in Iran which is Belonging to the Sasanian Empire. It is built in the Patagh Pass in the heights where is known as the Gate of Zagros in Kermanshah Province of Iran. This structure is located in the way from Kermanshah to Sarpol-e Zahab, on the 15th kilometer from Sarpol-e Zahab; beside of an ancient paving which connect Iranian Plateau to Mesopotamia. Due to changes of the path, now it is located below the road slope. There are conflicting views as to the time of its construction.\", \"score\": 0.7978515625}, {\"long_text\": \"\\\"Taqi Arani\\\"\\nTaqi Arani Taghi Arani, (, September 5, 1903 in Tabriz, Iran – February 4, 1940 in Tehran, Iran), was a professor of chemistry, left-wing Iranian political activist, and the founder and editor of the Marxist magazine \\\"\\\"Donya\\\"\\\". He moved to Tehran with his family when he was 4 years old. In 1920, he graduated from Dar ul-Funun School in Tehran and pursued his studies in Germany studying Chemistry at Berlin Institute of Technology. While studying in Germany, he began to study politics as well. Upon finishing his studies, he returned to Iran in 1928 and started \\\"\\\"Donya\\\"\\\" Magazine (\\\"\\\"The World\\\"\\\").\", \"score\": 0.79345703125}, {\"long_text\": \"\\\"Abbasabad, Khoda Afarin\\\"\\nاو آز انسانیله گئتدی (amma insanliqimiz da o az insanilə getdi) ترکی اولموش قدغن ، دیوانیمیزدان دا خبر یوخ (Türki olmoş qədəğən, divanimizdan da xəbər yox) شهریارین دیلی ده وای دئیه ، دیوانیله گئتدی (Şəhryarin dili də vay diyə divanilə getdi) Abbasabad, Khoda Afarin Abbasabad (, also Romanized as Abbāsābād and Abasabad) is a village in Minjavan-e Gharbi Rural District, Minjavan District, Khoda Afarin County, East Azerbaijan Province, Iran. At the 2006 census, its population was 60, in 13 families. According to the village elders, one of whom died in 1991 at an age of over 100 years, the village\", \"score\": 0.79150390625}, {\"long_text\": \"Bagistan\\nBagistan Bagistan, also written as Bogustan, Bog-i Ston and Baghistan, is a village located in the Bostonlyk district of the Tashkent province of Uzbekistan, in the southeast of the Charvak Reservoir at 960 m a.s.l. of western extremity of the Koksu Ridge (West Tien Shan). Practically Bog-i Ston nestles among verdure ashore Pskem River where it flows into the Charvak Reservoir. \\\"\\\"Bog-i Ston\\\"\\\" is Tajik for \\\"\\\"Land of orchards\\\"\\\". The population of the village is 2,000 people. A great majority of population is ethnic Tajiks. The local population lives owing to natural economy: agrarian production, cattle breeding and fruit collection.\", \"score\": 0.79150390625}, {\"long_text\": \"\\\"Mohammad-Taqi Bahjat Foumani\\\"\\nMohammad-Taqi Bahjat Foumani Grand Ayatollah Mohammad Taqi Bahjat Foumani () (24 August 1916 – 17 May 2009) was an Iranian Twelver Shia Marja'. Mohammad Taqi was born on 24 August 1916 in the Fouman, Gilan province in the north of Iran. Mohammad's mother died when he was at an early age and he lived with father. Bahjat's father sold cookies to gain as income. He started his primary education from Fouman. At the age 14, he went to Karbala and Najaf, Iraq for continuing his education in advance level. After returning to Iran on 1945, he resided in the Qom.\", \"score\": 0.791015625}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages retrieved, none directly mention Shahrak-E Shomali and Taqiabad, Mazandaran. I need to refine my search to specifically look for information related to these two locations.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"Shahrak-E Shomali and Taqiabad, Mazandaran location\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"Shahrak-E Shomali and Taqiabad, Mazandaran location\", \"passages_this_hop\": [{\"long_text\": \"\\\"Sari, Iran\\\"\\nSari, Iran Sari (( ) ; also Romanized as Sārī; also known as Shahr-i-Tajan and Shari-i-Tajan) is the provincial capital of Mazandaran and former capital of Iran (for a short period), located in the north of Iran, between the northern slopes of the Alborz Mountains and southern coast of the Caspian Sea. Sari is the largest and most populous city of Mazandaran. The \\\"\\\"Mazandaran Sea\\\"\\\" provides a beautiful coastline to the north of Sari; north-east of the city lies \\\"\\\"Neka\\\"\\\". \\\"\\\"Qa'emshahr\\\"\\\" (formerly known as Shahi) is to its south-west, \\\"\\\"Juybar\\\"\\\" is to its north-west, and \\\"\\\"Kiasar\\\"\\\", \\\"\\\"Damghan\\\"\\\", and \\\"\\\"Semnan\\\"\\\" are\", \"score\": 0.80615234375}, {\"long_text\": \"Qaramalik\\nQaramalik Qaramalik (Azerbaijani: Qərəməlik, Persian: قره مَلیک) is a historical neighbourhood in west of Tabriz, Iranian Azerbaijan. Qaramalik is surrounded by Aji Chay river from north, Ravasan and Tabriz railway station in south and Hokmavar and Sham Qazan in east. Qaramalik used to be a village near Tabriz, however after the destruction of the walls of the city in late nineteenth century and then expansion of the city, it became part of Tabriz and is now a part of district 6 of Tabriz municipality. During 1960s and 1970s Qaramalik changed rapidly from a village with agriculture economy into an industrial\", \"score\": 0.80322265625}, {\"long_text\": \"\\\"Mazandaran Province\\\"\\nseveral Caucasian languages, reflecting the history of the region and its peoples. In the early 20th century, Reza Shah connected northern Elbourz to the southern slopes by constructing seven new roads and railways, the provinces of Mazandaran and Gilan became known as Shomal by all Iranians (meaning \\\"\\\"the North\\\"\\\" in Persian). Mazandaran is a Caspian province in the north of Iran. Located on the southern coast of the Caspian Sea, it is bordered clockwise by Russia (across the sea), Golestan, Semnan, Tehran, Alborz, Qazvin, and Gilan provinces. Sari is the largest city and the capital of Mazandaran province. Mazandaran Province\", \"score\": 0.79736328125}, {\"long_text\": \"\\\"Taq Bostan\\\"\\nTaq Bostan Taq-e Bostan (, ) means \\\"\\\"Arch of the Garden\\\"\\\" or \\\"\\\"Arch made by stone\\\"\\\" is a site with a series of large rock reliefs from the era of Sassanid Empire of Persia (Iran), carved around the 4th century AD. This example of Persian Sassanid art is located 5 km from the city center of Kermanshah. It is located in the heart of the Zagros mountains, where it has endured almost 1,700 years of wind and rain. Originally, several sources were visible next to and below the reliefs and arches, some of which are now covered. Sources next to\", \"score\": 0.796875}, {\"long_text\": \"\\\"Sari, Iran\\\"\\nmoved to Teheran to study journalism and work as a journalist at newspapers like Kayhan. Today Mina Assadi lives in exile in Stockholm, Sweden. Mohsen Emadi (born 29 October 1976 in Sari) is another Persian poet and translator. Sari, Iran Sari (( ) ; also Romanized as Sārī; also known as Shahr-i-Tajan and Shari-i-Tajan) is the provincial capital of Mazandaran and former capital of Iran (for a short period), located in the north of Iran, between the northern slopes of the Alborz Mountains and southern coast of the Caspian Sea. Sari is the largest and most populous city of Mazandaran.\", \"score\": 0.79638671875}]}\n\n[[ ## thought_1 ## ]]\nBoth Shahrak-E Shomali and Taqiabad are mentioned in the context of being in Mazandaran province, Iran. Therefore, they are likely in the same country.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "Shahrak-E Shomali and Taqiabad are both mentioned in the context of being in Mazandaran province, Iran. Therefore, they are likely in the same country.",
+        "answer": "yes"
+      },
+      {
+        "augmented": true,
+        "question": "Which film came out first, A Hill In Korea or Ek Anek Aur Ekta?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Which film came out first, A Hill In Korea or Ek Anek Aur Ekta?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Which film came out first, A Hill In Korea or Ek Anek Aur Ekta?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Ek Anek Aur Ekta\\\"\\na group of children playing in a garden with one of them asking his elder sister, \\\"\\\"Didi, yeh anek kya hota hai?\\\"\\\", or in English, \\\"\\\"Sis, what do you mean by Many?\\\"\\\". The rest of the film is the sister's reply, using a metaphorical story of how a group of birds escape a bird catcher by uniting to recruit their friends, a group of mice. The film was directed by Vijaya Mulay. The film's design, animation and creation was done by Bhimsain Khurana. The lyrics of \\\"\\\"Hind Desh ke Niwasi\\\"\\\" were written by Pandit Vinay Chandra Maudgalya. Sadhna Sargam sang\", \"score\": 0.8037109375}, {\"long_text\": \"\\\"Ek Anek Aur Ekta\\\"\\nEk Anek Aur Ekta Ek Anek Aur Ekta or \\\"\\\"One, Many, and Unity\\\"\\\" (also known as \\\"\\\"Ek Chidiya, Anek Chidiyan\\\"\\\" after the title song) is a traditionally animated short educational film released by the Films Division of India (Government of India). It was released in 1974. It was aired on the public broadcaster channel Doordarshan and became very popular among children. The film was intended to teach the value of unity and teamwork to children (Unity in Diversity). It also contains the message of how India is stronger if its citizens stand united, regardless of cultural differences. It begins with\", \"score\": 0.80078125}, {\"long_text\": \"\\\"Ek Anek Aur Ekta\\\"\\n\\\"\\\"Ek Chidiya, Anek Chidiyan\\\"\\\". The assistants were S.M. Hasan, Mahesh Taavre and Girish Rao. The film won the National Film Award for Best Educational Film., and it was the first film from the animation studios of then Center for Education Technology. The film also won the Best Children's Film award in Japan. The film is considered to be one of India's greatest examples of animation story-telling, and well remembered by the 80s generation as a classic illustration of \\\"\\\"Anekta mein Ekta\\\"\\\". Ek Anek Aur Ekta Ek Anek Aur Ekta or \\\"\\\"One, Many, and Unity\\\"\\\" (also known as \\\"\\\"Ek Chidiya, Anek\", \"score\": 0.79296875}, {\"long_text\": \"\\\"A Hill in Korea\\\"\\nand up a winding path towards an isolated temple located on a hill, with only a steep cliff to its rear. On the way, Wyatt throws away the only radio because he cannot be bothered to carry it up the hill. Then they run into an enemy patrol on the path. They ambush the Chinese, and continue up to the temple. With the Chinese knowing now exactly where they are, Butler must keep his troops together, and fend off the enemy attacks. A Hill in Korea A Hill in Korea is a 1956 British war film based on Max Catto's\", \"score\": 0.78857421875}, {\"long_text\": \"\\\"A Hill in Korea\\\"\\nA Hill in Korea A Hill in Korea is a 1956 British war film based on Max Catto's 1953 novel of the same name. The original name was Hell in Korea, but was changed for distribution reasons, except in the U.S. It was directed by Julian Amyes and the producer was Anthony Squire. Incidental music was written by Malcolm Arnold. It was the first major feature film to portray British troops in action during the Korean War and introduces Michael Caine (himself a veteran of the Korean War) in his first credited film role. During the retreat of 1951, a\", \"score\": 0.78662109375}]}\n\n[[ ## thought_0 ## ]]\nFrom the search results, I found information about both films. \"A Hill in Korea\" is a 1956 British war film, while \"Ek Anek Aur Ekta\" was released in 1974. Therefore, \"A Hill in Korea\" came out first.\n\n[[ ## tool_name_0 ## ]]\nfinish\n\n[[ ## tool_args_0 ## ]]\n{}\n\n[[ ## observation_0 ## ]]\nCompleted.",
+        "reasoning": "The search results provided information that \"A Hill in Korea\" is a 1956 British war film, while \"Ek Anek Aur Ekta\" was released in 1974. This indicates that \"A Hill in Korea\" came out first.",
+        "answer": "\"A Hill in Korea\""
+      },
+      {
+        "question": "Are Fernand Backes and Tom Carew both from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "What nationality is the director of film Arcade (Film)?",
+        "answer": "America"
+      },
+      {
+        "question": "When is the director of film Three Men And A Little Lady 's birthday?",
+        "answer": "May 9, 1943"
+      },
+      {
+        "question": "Did the movies Find the Woman and Two Is a Family, originate from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "What is the place of birth of the director of film Secrets Of The Underground?",
+        "answer": "London"
+      },
+      {
+        "question": "Who is the mother of the director of film Blind Spot (1932 Film)?",
+        "answer": "Carrie Daumery"
+      },
+      {
+        "question": "Which film has the director who died later, Aaranya Kandam or One Hundred Nails?",
+        "answer": "One Hundred Nails"
+      },
+      {
+        "question": "Where did the director of film Skinner Steps Out die?",
+        "answer": "Hollywood"
+      },
+      {
+        "question": "Are the movies Carnival Of Souls and Uvanga, from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "Are director of film Cosmonaut (Film) and director of film The Scientific Cardplayer from the same country?",
+        "answer": "yes"
+      },
+      {
+        "question": "Where was the composer of film Marikkunnilla Njan born?",
+        "answer": "Kulathupuzha"
+      },
+      {
+        "question": "Do both Something Always Happens and The Great Impersonation (1921 film) films have the directors from the same country?",
+        "answer": "no"
+      },
+      {
+        "question": "When did the director of film The First Mass die?",
+        "answer": "23 November 1982"
+      },
+      {
+        "question": "Are St. Mary High School (Rutherford, New Jersey) and Mother Teresa High School both located in the same country?",
+        "answer": "no"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}

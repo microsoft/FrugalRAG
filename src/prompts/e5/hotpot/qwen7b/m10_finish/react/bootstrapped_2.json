@@ -1,0 +1,285 @@
+{
+  "react": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Who directed the 1987 romantic drama dance film that is directly parodied by the television film \"Totally Awesome\"?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Who directed the 1987 romantic drama dance film that is directly parodied by the television film \\\"Totally Awesome\\\"?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Who directed the 1987 romantic drama dance film that is directly parodied by the television film \\\"Totally Awesome\\\"?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Totally Awesome\\\"\\nTotally Awesome Totally Awesome is a television film produced by VH1. \\\"\\\"Totally Awesome\\\"\\\" directly parodies a number of 1980s movies, including \\\"\\\"Dirty Dancing\\\"\\\", \\\"\\\"Soul Man\\\"\\\", \\\"\\\"Footloose\\\"\\\", \\\"\\\"Some Kind of Wonderful\\\"\\\", \\\"\\\"Sixteen Candles\\\"\\\", \\\"\\\"Teen Wolf\\\"\\\", \\\"\\\"Better Off Dead\\\"\\\", \\\"\\\"Lucas\\\"\\\", \\\"\\\"Pretty in Pink\\\"\\\", and \\\"\\\"The Karate Kid\\\"\\\". The film premiered on November 4, 2006, on VH1, and was broadcast to promote the film's DVD release on November 7. Ben Stein introduces the film as a long-lost film from the 1980s, so a lot of the jokes are now outdated in 2006. As the Gunderson family sets out on a cross-country road trip\", \"score\": 0.83251953125}, {\"long_text\": \"\\\"Totally Awesome\\\"\\nstruggles to adjust to their new life, reclusive genius Max continues working on a highly advanced home computer that soon draws the attention of the CIA. Totally Awesome Totally Awesome is a television film produced by VH1. \\\"\\\"Totally Awesome\\\"\\\" directly parodies a number of 1980s movies, including \\\"\\\"Dirty Dancing\\\"\\\", \\\"\\\"Soul Man\\\"\\\", \\\"\\\"Footloose\\\"\\\", \\\"\\\"Some Kind of Wonderful\\\"\\\", \\\"\\\"Sixteen Candles\\\"\\\", \\\"\\\"Teen Wolf\\\"\\\", \\\"\\\"Better Off Dead\\\"\\\", \\\"\\\"Lucas\\\"\\\", \\\"\\\"Pretty in Pink\\\"\\\", and \\\"\\\"The Karate Kid\\\"\\\". The film premiered on November 4, 2006, on VH1, and was broadcast to promote the film's DVD release on November 7. Ben Stein introduces the film as a long-lost\", \"score\": 0.828125}, {\"long_text\": \"\\\"Full House\\\"\\nFull House Full House is an American television sitcom created by Jeff Franklin for ABC. The show chronicles the events of widowed father Danny Tanner who enlists his brother-in-law Jesse Katsopolis and best friend Joey Gladstone to help raise his three daughters, oldest D.J., middle child Stephanie and youngest Michelle in his San Francisco home. It aired from September 22, 1987, to May 23, 1995, broadcasting eight seasons and 192 episodes. While never a critical favorite, the series was consistently in the Nielsen Top 30 (from 1988 onward) and gained even more popularity in syndicated reruns and also aired internationally.\", \"score\": 0.8037109375}, {\"long_text\": \"\\\"Love at Stake\\\"\\nLove at Stake Love at Stake is a 1987 American comedy film, directed by John C. Moffitt, based on a screenplay by Lanier Laney and Terry Sweeny. It stars Patrick Cassidy and Kelly Preston, with Barbara Carrera, Bud Cort, Dave Thomas, and Stuart Pankin. Joyce Brothers makes a cameo appearance as herself. The film is an obvious spoof of the infamous Salem witch trials, moving in the Mel Brooks comedy vein in \\\"\\\"Blazing Saddles\\\"\\\", moving in the anarchic comedy films genre that was popularized in that time by the Monty Python films and from the Zucker, Abrahams and Zucker films.\", \"score\": 0.79541015625}, {\"long_text\": \"\\\"Dancin': It's On!\\\"\\nDancin': It's On! Dancin': It's On! is a 2015 American musical romance film directed by David Winters. The film stars Witney Carson, Chehon Wespi-Tschopp, Gary Daniels and David Winters. It was released on October 30, 2015. Jennifer Gabriella August, a girl from Beverly Hills, California, falls in love with Ken, a boy who works at her father's hotel in Panama City, Florida. The two compete in a dancing competition after becoming romantically involved. \\\"\\\"Dancin': It's On!\\\"\\\" won three awards at the 2015 WideScreen Film & Music Video Festival in the categories of \\\"\\\"Best Director\\\"\\\", \\\"\\\"Best Editing\\\"\\\", and \\\"\\\"Best Music Score\\\"\\\".\", \"score\": 0.79150390625}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages, I can see that \"Totally Awesome\" parodies \"Dirty Dancing\". Therefore, the director of the 1987 romantic drama dance film \"Dirty Dancing\" is likely the person I need to find.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"director of Dirty Dancing 1987\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"director of Dirty Dancing 1987\", \"passages_this_hop\": [{\"long_text\": \"\\\"Dirty Dancing\\\"\\nDirty Dancing Dirty Dancing is a 1987 American romantic drama dance film written by Eleanor Bergstein and directed by Emile Ardolino. It stars Jennifer Grey as Frances \\\"\\\"Baby\\\"\\\" Houseman, a young woman who falls in love with dance instructor Johnny Castle (Patrick Swayze) at her family's resort. The film was based on screenwriter Eleanor Bergstein's own childhood. She originally wrote a screenplay for the Michael Douglas film \\\"\\\"It's My Turn\\\"\\\", but ultimately ended up conceiving a story for a film which became \\\"\\\"Dirty Dancing\\\"\\\". She finished the script in 1985, but management changes at MGM put the film in development\", \"score\": 0.87451171875}, {\"long_text\": \"\\\"Dirty Dancing\\\"\\nhell. The production company was changed to Vestron Pictures with Emile Ardolino as director and Linda Gottlieb as producer. Filming took place in Lake Lure, North Carolina and Mountain Lake, Virginia, with the the film's score composed by John Morris and dance choreography by Kenny Ortega. \\\"\\\"Dirty Dancing\\\"\\\" premiered at the 1987 Cannes Film Festival on May 12, 1987 and was released on August 21, 1987 in the United States, earning over $214 million worldwide. It was the first film to sell more than a million copies for home video, and its soundtrack created by Jimmy Ienner generating two multi-platinum\", \"score\": 0.85986328125}, {\"long_text\": \"\\\"Emile Ardolino\\\"\\nEmile Ardolino Emile Ardolino (May 9, 1943 \u2013 November 20, 1993) was an American film director, choreographer, and producer, best known for his films \\\"\\\"Dirty Dancing\\\"\\\" (1987) and \\\"\\\"Sister Act\\\"\\\" (1992). Ardolino was born in Maspeth, a neighborhood of Queens, the son of Italian immigrants Ester (Pesiri) and Emilio Ardolino. He began his career as an actor in off-Broadway productions, but soon moved to the production side of the business. In 1967, he founded Compton-Ardolino Films with Gardner Compton. In the 1970s and 1980s, Ardolino worked for PBS. His profiles of dancers and choreographers for their \\\"\\\"Dance in America\\\"\\\" and\", \"score\": 0.859375}, {\"long_text\": \"\\\"Dirty Dancing\\\"\\nAbigail Breslin, Colt Prattes, Debra Messing, Sarah Hyland, Nicole Scherzinger, Billy Dee Williams & Shane Harper. It aired on May 24, 2017. It received negative reviews from a majority of critics. Dirty Dancing Dirty Dancing is a 1987 American romantic drama dance film written by Eleanor Bergstein and directed by Emile Ardolino. It stars Jennifer Grey as Frances \\\"\\\"Baby\\\"\\\" Houseman, a young woman who falls in love with dance instructor Johnny Castle (Patrick Swayze) at her family's resort. The film was based on screenwriter Eleanor Bergstein's own childhood. She originally wrote a screenplay for the Michael Douglas film \\\"\\\"It's My\", \"score\": 0.85791015625}, {\"long_text\": \"\\\"Dirty Dancing (2017 film)\\\"\\nFrances is married and has a daughter. Frances takes a weekly dance lesson; she and Johnny encourage each other to continue dancing. In January 2011, Lionsgate announced that Kenny Ortega, the choreographer of the 1987 film \\\"\\\"Dirty Dancing\\\"\\\", would direct its remake; however, the project was shelved the following year. In December 2015, ABC and Lionsgate Television announced a three-hour remake of the movie which will not be live and would be in the same vein as \\\"\\\"\\\"\\\", a remake of the 1975 film of the same name. The remake was directed by Wayne Blair and the screenplay was written\", \"score\": 0.8564453125}]}",
+        "next_thought": "The director of the 1987 romantic drama dance film \"Dirty Dancing\" is Emile Ardolino. This is the answer to the question.",
+        "next_tool_name": "finish",
+        "next_tool_args": {}
+      },
+      {
+        "question": "So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?",
+        "answer": "The Wizard of Oz",
+        "dspy_uuid": "9f673c9a-10ab-419d-a262-d232ca1bb345",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who played the part of the Marquis de Sade in the film for which Martin Childs was nominated for an award at the 74th Academy Awards?",
+        "answer": "Geoffrey Rush",
+        "dspy_uuid": "3c27ce61-2da7-435c-920f-6056cbe6aecb",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which director; Joris Ivens and Lew Landers, was born in November?",
+        "answer": "\"Joris\" Ivens (18 November 1898",
+        "dspy_uuid": "c534a6e6-6806-4aa3-955b-7970ae84f223",
+        "dspy_split": "train"
+      },
+      {
+        "question": "the Central Reserve Police Force, which has been accused of human rights abuses, operates under the aegis of what Government of India agency?",
+        "answer": "Ministry of Home Affairs (MHA)",
+        "dspy_uuid": "52937c5b-490a-431c-9624-dbc755a3521c",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Auguste Charlois who discovered 317 Roxane named for Roxana from what area",
+        "answer": "Bactria",
+        "dspy_uuid": "575da84c-cc86-4189-9564-fe3b0054fe04",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What year did the war during which Pompiliu \u0218tefu was executed end?",
+        "answer": "1945",
+        "dspy_uuid": "6a54da30-6b43-4692-9d5e-f058c9e0a28d",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What Australian sportsman died in a suburb of Adelaide in the City of Burnside and the City of Campbelltown?",
+        "answer": "Ernest Jones",
+        "dspy_uuid": "4d15dc31-2570-4827-a088-0463ff83c066",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Gulfstream International Airlines later became a regional carrier based out of what airport?",
+        "answer": "Fort Lauderdale-Hollywood International Airport",
+        "dspy_uuid": "eb29c180-22ee-4d8d-868d-62909166080f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which city did the writer of Enion spend most of his life?",
+        "answer": "London",
+        "dspy_uuid": "1afb52cb-047b-4ed2-8314-59c980a2c24b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was the role played in \"Sweet Charity\" by the star of Dear Diary?",
+        "answer": "Nickie",
+        "dspy_uuid": "d46e6ce8-6ece-47fd-827d-693ae08a6c18",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Ellis, Idaho is located on what major north-south highway?",
+        "answer": "U.S. Route 93",
+        "dspy_uuid": "aa12ffc7-d08c-46f7-9f01-bb1eed3c6a81",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What Nigerian president appointed the Managing Director of the NPA in 2016?",
+        "answer": "Muhammadu Buhari",
+        "dspy_uuid": "cae9cca8-4fe0-4041-970a-ea21ea74421f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who is the wife of Charlemagne who is a step mother to Pepin the Hunchback?",
+        "answer": "Hildegard",
+        "dspy_uuid": "bb9d6ccf-b5f2-4806-a3fb-f16205f434f4",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The actor who voiced Shaggy in the \"Scooby-Doo\" franchise also appeared as a radio personality on what radio network?",
+        "answer": "Clear Channel Radio",
+        "dspy_uuid": "d6a05057-d8d8-4029-8032-e747a1f8bd76",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which professional basketball player won a NBA championship and spoke positively on the book \"the 21 irrefutable laws of leadership\"?",
+        "answer": "Harrison Barnes",
+        "dspy_uuid": "05ee6f90-db18-441a-8722-dc460ca39c5a",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.\n\nYou will be given `question` and your goal is to finish with `answer`.\n\nTo do this, you will interleave Thought, Tool Name, and Tool Args, and receive a resulting Observation.\n\nThought can reason about the current situation, and Tool Name can be the following types:\n\n(1) AdvancedSearch, whose description is <desc>Searches documents using a search_query.  Arguments:  - \"search_query\": an optimized search query for dense passage retrieval.  IMPORTANT: YOU MUST always PROVIDE \"search_query\" in the arguments!<\/desc>. It takes arguments {'search_query': 'str', 'trajectory_id': 'Union[str, NoneType]'} in JSON format.\n(2) finish, whose description is <desc>Signals that the final outputs, i.e. `answer`, are now available and marks the task as complete.<\/desc>. It takes arguments {} in JSON format.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Next Thought:",
+          "description": "${next_thought}"
+        },
+        {
+          "prefix": "Next Tool Name:",
+          "description": "${next_tool_name}"
+        },
+        {
+          "prefix": "Next Tool Args:",
+          "description": "${next_tool_args}"
+        }
+      ]
+    }
+  },
+  "extract": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Who directed the 1987 romantic drama dance film that is directly parodied by the television film \"Totally Awesome\"?",
+        "trajectory": "[[ ## tool_name_init ## ]]\nAdvancedSearch\n\n[[ ## tool_args_init ## ]]\n{\"search_query\": \"Who directed the 1987 romantic drama dance film that is directly parodied by the television film \\\"Totally Awesome\\\"?\"}\n\n[[ ## thought_init ## ]]\nI will start by searching for relevant documents with the original question as the search query.\n\n[[ ## observation_init ## ]]\n{\"search_query\": \"Who directed the 1987 romantic drama dance film that is directly parodied by the television film \\\"Totally Awesome\\\"?\", \"passages_this_hop\": [{\"long_text\": \"\\\"Totally Awesome\\\"\\nTotally Awesome Totally Awesome is a television film produced by VH1. \\\"\\\"Totally Awesome\\\"\\\" directly parodies a number of 1980s movies, including \\\"\\\"Dirty Dancing\\\"\\\", \\\"\\\"Soul Man\\\"\\\", \\\"\\\"Footloose\\\"\\\", \\\"\\\"Some Kind of Wonderful\\\"\\\", \\\"\\\"Sixteen Candles\\\"\\\", \\\"\\\"Teen Wolf\\\"\\\", \\\"\\\"Better Off Dead\\\"\\\", \\\"\\\"Lucas\\\"\\\", \\\"\\\"Pretty in Pink\\\"\\\", and \\\"\\\"The Karate Kid\\\"\\\". The film premiered on November 4, 2006, on VH1, and was broadcast to promote the film's DVD release on November 7. Ben Stein introduces the film as a long-lost film from the 1980s, so a lot of the jokes are now outdated in 2006. As the Gunderson family sets out on a cross-country road trip\", \"score\": 0.83251953125}, {\"long_text\": \"\\\"Totally Awesome\\\"\\nstruggles to adjust to their new life, reclusive genius Max continues working on a highly advanced home computer that soon draws the attention of the CIA. Totally Awesome Totally Awesome is a television film produced by VH1. \\\"\\\"Totally Awesome\\\"\\\" directly parodies a number of 1980s movies, including \\\"\\\"Dirty Dancing\\\"\\\", \\\"\\\"Soul Man\\\"\\\", \\\"\\\"Footloose\\\"\\\", \\\"\\\"Some Kind of Wonderful\\\"\\\", \\\"\\\"Sixteen Candles\\\"\\\", \\\"\\\"Teen Wolf\\\"\\\", \\\"\\\"Better Off Dead\\\"\\\", \\\"\\\"Lucas\\\"\\\", \\\"\\\"Pretty in Pink\\\"\\\", and \\\"\\\"The Karate Kid\\\"\\\". The film premiered on November 4, 2006, on VH1, and was broadcast to promote the film's DVD release on November 7. Ben Stein introduces the film as a long-lost\", \"score\": 0.828125}, {\"long_text\": \"\\\"Full House\\\"\\nFull House Full House is an American television sitcom created by Jeff Franklin for ABC. The show chronicles the events of widowed father Danny Tanner who enlists his brother-in-law Jesse Katsopolis and best friend Joey Gladstone to help raise his three daughters, oldest D.J., middle child Stephanie and youngest Michelle in his San Francisco home. It aired from September 22, 1987, to May 23, 1995, broadcasting eight seasons and 192 episodes. While never a critical favorite, the series was consistently in the Nielsen Top 30 (from 1988 onward) and gained even more popularity in syndicated reruns and also aired internationally.\", \"score\": 0.8037109375}, {\"long_text\": \"\\\"Love at Stake\\\"\\nLove at Stake Love at Stake is a 1987 American comedy film, directed by John C. Moffitt, based on a screenplay by Lanier Laney and Terry Sweeny. It stars Patrick Cassidy and Kelly Preston, with Barbara Carrera, Bud Cort, Dave Thomas, and Stuart Pankin. Joyce Brothers makes a cameo appearance as herself. The film is an obvious spoof of the infamous Salem witch trials, moving in the Mel Brooks comedy vein in \\\"\\\"Blazing Saddles\\\"\\\", moving in the anarchic comedy films genre that was popularized in that time by the Monty Python films and from the Zucker, Abrahams and Zucker films.\", \"score\": 0.79541015625}, {\"long_text\": \"\\\"Dancin': It's On!\\\"\\nDancin': It's On! Dancin': It's On! is a 2015 American musical romance film directed by David Winters. The film stars Witney Carson, Chehon Wespi-Tschopp, Gary Daniels and David Winters. It was released on October 30, 2015. Jennifer Gabriella August, a girl from Beverly Hills, California, falls in love with Ken, a boy who works at her father's hotel in Panama City, Florida. The two compete in a dancing competition after becoming romantically involved. \\\"\\\"Dancin': It's On!\\\"\\\" won three awards at the 2015 WideScreen Film & Music Video Festival in the categories of \\\"\\\"Best Director\\\"\\\", \\\"\\\"Best Editing\\\"\\\", and \\\"\\\"Best Music Score\\\"\\\".\", \"score\": 0.79150390625}]}\n\n[[ ## thought_0 ## ]]\nFrom the passages, I can see that \"Totally Awesome\" parodies \"Dirty Dancing\". Therefore, the director of the 1987 romantic drama dance film \"Dirty Dancing\" is likely the person I need to find.\n\n[[ ## tool_name_0 ## ]]\nAdvancedSearch\n\n[[ ## tool_args_0 ## ]]\n{\"search_query\": \"director of Dirty Dancing 1987\"}\n\n[[ ## observation_0 ## ]]\n{\"search_query\": \"director of Dirty Dancing 1987\", \"passages_this_hop\": [{\"long_text\": \"\\\"Dirty Dancing\\\"\\nDirty Dancing Dirty Dancing is a 1987 American romantic drama dance film written by Eleanor Bergstein and directed by Emile Ardolino. It stars Jennifer Grey as Frances \\\"\\\"Baby\\\"\\\" Houseman, a young woman who falls in love with dance instructor Johnny Castle (Patrick Swayze) at her family's resort. The film was based on screenwriter Eleanor Bergstein's own childhood. She originally wrote a screenplay for the Michael Douglas film \\\"\\\"It's My Turn\\\"\\\", but ultimately ended up conceiving a story for a film which became \\\"\\\"Dirty Dancing\\\"\\\". She finished the script in 1985, but management changes at MGM put the film in development\", \"score\": 0.87451171875}, {\"long_text\": \"\\\"Dirty Dancing\\\"\\nhell. The production company was changed to Vestron Pictures with Emile Ardolino as director and Linda Gottlieb as producer. Filming took place in Lake Lure, North Carolina and Mountain Lake, Virginia, with the the film's score composed by John Morris and dance choreography by Kenny Ortega. \\\"\\\"Dirty Dancing\\\"\\\" premiered at the 1987 Cannes Film Festival on May 12, 1987 and was released on August 21, 1987 in the United States, earning over $214 million worldwide. It was the first film to sell more than a million copies for home video, and its soundtrack created by Jimmy Ienner generating two multi-platinum\", \"score\": 0.85986328125}, {\"long_text\": \"\\\"Emile Ardolino\\\"\\nEmile Ardolino Emile Ardolino (May 9, 1943 \u2013 November 20, 1993) was an American film director, choreographer, and producer, best known for his films \\\"\\\"Dirty Dancing\\\"\\\" (1987) and \\\"\\\"Sister Act\\\"\\\" (1992). Ardolino was born in Maspeth, a neighborhood of Queens, the son of Italian immigrants Ester (Pesiri) and Emilio Ardolino. He began his career as an actor in off-Broadway productions, but soon moved to the production side of the business. In 1967, he founded Compton-Ardolino Films with Gardner Compton. In the 1970s and 1980s, Ardolino worked for PBS. His profiles of dancers and choreographers for their \\\"\\\"Dance in America\\\"\\\" and\", \"score\": 0.859375}, {\"long_text\": \"\\\"Dirty Dancing\\\"\\nAbigail Breslin, Colt Prattes, Debra Messing, Sarah Hyland, Nicole Scherzinger, Billy Dee Williams & Shane Harper. It aired on May 24, 2017. It received negative reviews from a majority of critics. Dirty Dancing Dirty Dancing is a 1987 American romantic drama dance film written by Eleanor Bergstein and directed by Emile Ardolino. It stars Jennifer Grey as Frances \\\"\\\"Baby\\\"\\\" Houseman, a young woman who falls in love with dance instructor Johnny Castle (Patrick Swayze) at her family's resort. The film was based on screenwriter Eleanor Bergstein's own childhood. She originally wrote a screenplay for the Michael Douglas film \\\"\\\"It's My\", \"score\": 0.85791015625}, {\"long_text\": \"\\\"Dirty Dancing (2017 film)\\\"\\nFrances is married and has a daughter. Frances takes a weekly dance lesson; she and Johnny encourage each other to continue dancing. In January 2011, Lionsgate announced that Kenny Ortega, the choreographer of the 1987 film \\\"\\\"Dirty Dancing\\\"\\\", would direct its remake; however, the project was shelved the following year. In December 2015, ABC and Lionsgate Television announced a three-hour remake of the movie which will not be live and would be in the same vein as \\\"\\\"\\\"\\\", a remake of the 1975 film of the same name. The remake was directed by Wayne Blair and the screenplay was written\", \"score\": 0.8564453125}]}\n\n[[ ## thought_1 ## ]]\nThe director of the 1987 romantic drama dance film \"Dirty Dancing\" is Emile Ardolino. This is the answer to the question.\n\n[[ ## tool_name_1 ## ]]\nfinish\n\n[[ ## tool_args_1 ## ]]\n{}\n\n[[ ## observation_1 ## ]]\nCompleted.",
+        "reasoning": "The passage mentions that \"Totally Awesome\" parodies \"Dirty Dancing\", a 1987 American romantic drama dance film. Further searching reveals that \"Dirty Dancing\" was directed by Emile Ardolino.",
+        "answer": "Emile Ardolino"
+      },
+      {
+        "question": "Auguste Charlois who discovered 317 Roxane named for Roxana from what area",
+        "answer": "Bactria",
+        "dspy_uuid": "575da84c-cc86-4189-9564-fe3b0054fe04",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which director; Joris Ivens and Lew Landers, was born in November?",
+        "answer": "\"Joris\" Ivens (18 November 1898",
+        "dspy_uuid": "c534a6e6-6806-4aa3-955b-7970ae84f223",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who is the wife of Charlemagne who is a step mother to Pepin the Hunchback?",
+        "answer": "Hildegard",
+        "dspy_uuid": "bb9d6ccf-b5f2-4806-a3fb-f16205f434f4",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Who played the part of the Marquis de Sade in the film for which Martin Childs was nominated for an award at the 74th Academy Awards?",
+        "answer": "Geoffrey Rush",
+        "dspy_uuid": "3c27ce61-2da7-435c-920f-6056cbe6aecb",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What was the role played in \"Sweet Charity\" by the star of Dear Diary?",
+        "answer": "Nickie",
+        "dspy_uuid": "d46e6ce8-6ece-47fd-827d-693ae08a6c18",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which professional basketball player won a NBA championship and spoke positively on the book \"the 21 irrefutable laws of leadership\"?",
+        "answer": "Harrison Barnes",
+        "dspy_uuid": "05ee6f90-db18-441a-8722-dc460ca39c5a",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Which city did the writer of Enion spend most of his life?",
+        "answer": "London",
+        "dspy_uuid": "1afb52cb-047b-4ed2-8314-59c980a2c24b",
+        "dspy_split": "train"
+      },
+      {
+        "question": "The actor who voiced Shaggy in the \"Scooby-Doo\" franchise also appeared as a radio personality on what radio network?",
+        "answer": "Clear Channel Radio",
+        "dspy_uuid": "d6a05057-d8d8-4029-8032-e747a1f8bd76",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Gulfstream International Airlines later became a regional carrier based out of what airport?",
+        "answer": "Fort Lauderdale-Hollywood International Airport",
+        "dspy_uuid": "eb29c180-22ee-4d8d-868d-62909166080f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "So Long, Scarecrow is titled in reference to which 1939 musical fantasy film?",
+        "answer": "The Wizard of Oz",
+        "dspy_uuid": "9f673c9a-10ab-419d-a262-d232ca1bb345",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What year did the war during which Pompiliu \u0218tefu was executed end?",
+        "answer": "1945",
+        "dspy_uuid": "6a54da30-6b43-4692-9d5e-f058c9e0a28d",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What Australian sportsman died in a suburb of Adelaide in the City of Burnside and the City of Campbelltown?",
+        "answer": "Ernest Jones",
+        "dspy_uuid": "4d15dc31-2570-4827-a088-0463ff83c066",
+        "dspy_split": "train"
+      },
+      {
+        "question": "What Nigerian president appointed the Managing Director of the NPA in 2016?",
+        "answer": "Muhammadu Buhari",
+        "dspy_uuid": "cae9cca8-4fe0-4041-970a-ea21ea74421f",
+        "dspy_split": "train"
+      },
+      {
+        "question": "Ellis, Idaho is located on what major north-south highway?",
+        "answer": "U.S. Route 93",
+        "dspy_uuid": "aa12ffc7-d08c-46f7-9f01-bb1eed3c6a81",
+        "dspy_split": "train"
+      },
+      {
+        "question": "the Central Reserve Police Force, which has been accused of human rights abuses, operates under the aegis of what Government of India agency?",
+        "answer": "Ministry of Home Affairs (MHA)",
+        "dspy_uuid": "52937c5b-490a-431c-9624-dbc755a3521c",
+        "dspy_split": "train"
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10.15",
+      "dspy": "2.5.43",
+      "cloudpickle": "3.1.1"
+    }
+  }
+}
